@@ -1,4 +1,5 @@
 ﻿namespace FmgLib.MauiMarkup;
+
 public static class PageExtensions
 {
     public static T BackgroundImageSourceFmg<T>(this T self, ImageSource backgroundImageSource) where T : Page

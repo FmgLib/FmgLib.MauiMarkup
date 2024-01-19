@@ -1,0 +1,30 @@
+﻿namespace FmgLib.MauiMarkup;
+
+
+
+public static partial class PolyBezierSegmentExtension
+{
+    public static Microsoft.Maui.Controls.Shapes.PolyBezierSegment Points(this Microsoft.Maui.Controls.Shapes.PolyBezierSegment self,
+        IList<Point> points)
+    {
+        foreach (var item in points)
+            self.Points.Add(item);
+        return self;
+    }
+
+    public static Microsoft.Maui.Controls.Shapes.PolyBezierSegment Points(this Microsoft.Maui.Controls.Shapes.PolyBezierSegment self,
+        params Point[] points)
+    {
+        foreach (var item in points)
+            self.Points.Add(item);
+        return self;
+    }
+    
+    public static Microsoft.Maui.Controls.Shapes.PolyBezierSegment Points(this Microsoft.Maui.Controls.Shapes.PolyBezierSegment self, Func<PropertyContext<PointCollection>, IPropertyBuilder<PointCollection>> configure)
+    {
+        var context = new PropertyContext<PointCollection>(self, Microsoft.Maui.Controls.Shapes.PolyBezierSegment.PointsProperty);
+        configure(context).Build();
+        return self;
+    }
+    
+}

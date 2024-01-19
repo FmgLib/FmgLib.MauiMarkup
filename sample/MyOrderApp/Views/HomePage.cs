@@ -249,11 +249,11 @@ public partial class HomePage : BasePage<HomePageViewModel>
                 ),
 
                 new FlexLayout()
-                .ItemsSource(BindingContext.Categories)
+                .ItemsSources(BindingContext.Categories)
                 .Assign(out var flex)
                 .Wrap(FlexWrap.Wrap)
                 .FlexBasis(FlexBasis.Auto)
-                .ItemTemplate(new DataTemplate(() => 
+                .ItemTemplates(new DataTemplate(() => 
                     new Frame()
                     .CornerRadius(15)
                     .BorderColor(Colors.LightGray)

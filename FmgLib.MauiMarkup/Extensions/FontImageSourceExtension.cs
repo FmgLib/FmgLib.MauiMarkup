@@ -2,7 +2,7 @@
 
 public static partial class FontImageSourceExtension
 {
-    public static T Color<T>(this T self,
+    public static T ColorFmg<T>(this T self,
         Color color)
         where T : FontImageSource
     {
@@ -10,7 +10,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static T Color<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T ColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : FontImageSource
     {
         var context = new PropertyContext<Color>(self, FontImageSource.ColorProperty);
@@ -18,7 +18,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static SettersContext<T> Color<T>(this SettersContext<T> self,
+    public static SettersContext<T> ColorFmg<T>(this SettersContext<T> self,
         Color color)
         where T : FontImageSource
     {
@@ -26,7 +26,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static SettersContext<T> Color<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> ColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : FontImageSource
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, FontImageSource.ColorProperty);
@@ -34,7 +34,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static T FontFamily<T>(this T self,
+    public static T FontFamilyFmg<T>(this T self,
         string fontFamily)
         where T : FontImageSource
     {
@@ -42,7 +42,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static T FontFamily<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T FontFamilyFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : FontImageSource
     {
         var context = new PropertyContext<string>(self, FontImageSource.FontFamilyProperty);
@@ -50,7 +50,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self,
         string fontFamily)
         where T : FontImageSource
     {
@@ -58,7 +58,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : FontImageSource
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, FontImageSource.FontFamilyProperty);
@@ -66,7 +66,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static T Glyph<T>(this T self,
+    public static T GlyphFmg<T>(this T self,
         string glyph)
         where T : FontImageSource
     {
@@ -74,7 +74,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static T Glyph<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T GlyphFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : FontImageSource
     {
         var context = new PropertyContext<string>(self, FontImageSource.GlyphProperty);
@@ -82,7 +82,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static SettersContext<T> Glyph<T>(this SettersContext<T> self,
+    public static SettersContext<T> GlyphFmg<T>(this SettersContext<T> self,
         string glyph)
         where T : FontImageSource
     {
@@ -90,7 +90,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static SettersContext<T> Glyph<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> GlyphFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : FontImageSource
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, FontImageSource.GlyphProperty);
@@ -98,7 +98,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static T Size<T>(this T self,
+    public static T SizeFmg<T>(this T self,
         double size)
         where T : FontImageSource
     {
@@ -106,7 +106,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static T Size<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T SizeFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : FontImageSource
     {
         var context = new PropertyContext<double>(self, FontImageSource.SizeProperty);
@@ -114,7 +114,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static SettersContext<T> Size<T>(this SettersContext<T> self,
+    public static SettersContext<T> SizeFmg<T>(this SettersContext<T> self,
         double size)
         where T : FontImageSource
     {
@@ -122,7 +122,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static SettersContext<T> Size<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> SizeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : FontImageSource
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, FontImageSource.SizeProperty);
@@ -130,7 +130,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static T FontAutoScalingEnabled<T>(this T self,
+    public static T FontAutoScalingEnabledFmg<T>(this T self,
         bool fontAutoScalingEnabled)
         where T : FontImageSource
     {
@@ -138,7 +138,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static T FontAutoScalingEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T FontAutoScalingEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : FontImageSource
     {
         var context = new PropertyContext<bool>(self, FontImageSource.FontAutoScalingEnabledProperty);
@@ -146,7 +146,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self,
         bool fontAutoScalingEnabled)
         where T : FontImageSource
     {
@@ -154,7 +154,7 @@ public static partial class FontImageSourceExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : FontImageSource
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, FontImageSource.FontAutoScalingEnabledProperty);

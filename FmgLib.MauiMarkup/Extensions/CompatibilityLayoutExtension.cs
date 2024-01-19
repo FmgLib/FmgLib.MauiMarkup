@@ -3,7 +3,7 @@
 
 public static partial class CompatibilityLayoutExtension
 {
-    public static T IsClippedToBounds<T>(this T self,
+    public static T IsClippedToBoundsFmg<T>(this T self,
         bool isClippedToBounds)
         where T : Microsoft.Maui.Controls.Compatibility.Layout
     {
@@ -11,7 +11,7 @@ public static partial class CompatibilityLayoutExtension
         return self;
     }
     
-    public static T IsClippedToBounds<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsClippedToBoundsFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Microsoft.Maui.Controls.Compatibility.Layout
     {
         var context = new PropertyContext<bool>(self, Microsoft.Maui.Controls.Compatibility.Layout.IsClippedToBoundsProperty);
@@ -19,7 +19,7 @@ public static partial class CompatibilityLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> IsClippedToBounds<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsClippedToBoundsFmg<T>(this SettersContext<T> self,
         bool isClippedToBounds)
         where T : Microsoft.Maui.Controls.Compatibility.Layout
     {
@@ -27,7 +27,7 @@ public static partial class CompatibilityLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> IsClippedToBounds<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsClippedToBoundsFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Microsoft.Maui.Controls.Compatibility.Layout
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Microsoft.Maui.Controls.Compatibility.Layout.IsClippedToBoundsProperty);
@@ -35,7 +35,7 @@ public static partial class CompatibilityLayoutExtension
         return self;
     }
     
-    public static T Padding<T>(this T self,
+    public static T PaddingFmg<T>(this T self,
         Thickness padding)
         where T : Microsoft.Maui.Controls.Compatibility.Layout
     {
@@ -43,7 +43,7 @@ public static partial class CompatibilityLayoutExtension
         return self;
     }
     
-    public static T Padding<T>(this T self, Func<PropertyContext<Thickness>, IPropertyBuilder<Thickness>> configure)
+    public static T PaddingFmg<T>(this T self, Func<PropertyContext<Thickness>, IPropertyBuilder<Thickness>> configure)
         where T : Microsoft.Maui.Controls.Compatibility.Layout
     {
         var context = new PropertyContext<Thickness>(self, Microsoft.Maui.Controls.Compatibility.Layout.PaddingProperty);
@@ -51,7 +51,7 @@ public static partial class CompatibilityLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> Padding<T>(this SettersContext<T> self,
+    public static SettersContext<T> PaddingFmg<T>(this SettersContext<T> self,
         Thickness padding)
         where T : Microsoft.Maui.Controls.Compatibility.Layout
     {
@@ -59,7 +59,7 @@ public static partial class CompatibilityLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> Padding<T>(this SettersContext<T> self, Func<PropertySettersContext<Thickness>, IPropertySettersBuilder<Thickness>> configure)
+    public static SettersContext<T> PaddingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Thickness>, IPropertySettersBuilder<Thickness>> configure)
         where T : Microsoft.Maui.Controls.Compatibility.Layout
     {
         var context = new PropertySettersContext<Thickness>(self.XamlSetters, Microsoft.Maui.Controls.Compatibility.Layout.PaddingProperty);
@@ -67,7 +67,7 @@ public static partial class CompatibilityLayoutExtension
         return self;
     }
     
-    public static T CascadeInputTransparent<T>(this T self,
+    public static T CascadeInputTransparentFmg<T>(this T self,
         bool cascadeInputTransparent)
         where T : Microsoft.Maui.Controls.Compatibility.Layout
     {
@@ -75,7 +75,7 @@ public static partial class CompatibilityLayoutExtension
         return self;
     }
     
-    public static T CascadeInputTransparent<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T CascadeInputTransparentFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Microsoft.Maui.Controls.Compatibility.Layout
     {
         var context = new PropertyContext<bool>(self, Microsoft.Maui.Controls.Compatibility.Layout.CascadeInputTransparentProperty);
@@ -83,7 +83,7 @@ public static partial class CompatibilityLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> CascadeInputTransparent<T>(this SettersContext<T> self,
+    public static SettersContext<T> CascadeInputTransparentFmg<T>(this SettersContext<T> self,
         bool cascadeInputTransparent)
         where T : Microsoft.Maui.Controls.Compatibility.Layout
     {
@@ -91,7 +91,7 @@ public static partial class CompatibilityLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> CascadeInputTransparent<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> CascadeInputTransparentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Microsoft.Maui.Controls.Compatibility.Layout
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Microsoft.Maui.Controls.Compatibility.Layout.CascadeInputTransparentProperty);
@@ -99,14 +99,14 @@ public static partial class CompatibilityLayoutExtension
         return self;
     }
     
-    public static T OnLayoutChanged<T>(this T self, EventHandler handler)
+    public static T OnLayoutChangedFmg<T>(this T self, EventHandler handler)
         where T : Microsoft.Maui.Controls.Compatibility.Layout
     {
         self.LayoutChanged += handler;
         return self;
     }
     
-    public static T OnLayoutChanged<T>(this T self, Action<T> action)
+    public static T OnLayoutChangedFmg<T>(this T self, Action<T> action)
         where T : Microsoft.Maui.Controls.Compatibility.Layout
     {
         self.LayoutChanged += (o, arg) => action(self);

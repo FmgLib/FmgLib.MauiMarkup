@@ -4,7 +4,7 @@
 
 public static partial class RadialGradientBrushExtension
 {
-    public static T Center<T>(this T self,
+    public static T CenterFmg<T>(this T self,
         Point center)
         where T : RadialGradientBrush
     {
@@ -12,7 +12,7 @@ public static partial class RadialGradientBrushExtension
         return self;
     }
     
-    public static T Center<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
+    public static T CenterFmg<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
         where T : RadialGradientBrush
     {
         var context = new PropertyContext<Point>(self, RadialGradientBrush.CenterProperty);
@@ -20,7 +20,7 @@ public static partial class RadialGradientBrushExtension
         return self;
     }
     
-    public static SettersContext<T> Center<T>(this SettersContext<T> self,
+    public static SettersContext<T> CenterFmg<T>(this SettersContext<T> self,
         Point center)
         where T : RadialGradientBrush
     {
@@ -28,7 +28,7 @@ public static partial class RadialGradientBrushExtension
         return self;
     }
     
-    public static SettersContext<T> Center<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
+    public static SettersContext<T> CenterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
         where T : RadialGradientBrush
     {
         var context = new PropertySettersContext<Point>(self.XamlSetters, RadialGradientBrush.CenterProperty);
@@ -36,7 +36,7 @@ public static partial class RadialGradientBrushExtension
         return self;
     }
     
-    public static T Radius<T>(this T self,
+    public static T RadiusFmg<T>(this T self,
         double radius)
         where T : RadialGradientBrush
     {
@@ -44,7 +44,7 @@ public static partial class RadialGradientBrushExtension
         return self;
     }
     
-    public static T Radius<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T RadiusFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : RadialGradientBrush
     {
         var context = new PropertyContext<double>(self, RadialGradientBrush.RadiusProperty);
@@ -52,7 +52,7 @@ public static partial class RadialGradientBrushExtension
         return self;
     }
     
-    public static SettersContext<T> Radius<T>(this SettersContext<T> self,
+    public static SettersContext<T> RadiusFmg<T>(this SettersContext<T> self,
         double radius)
         where T : RadialGradientBrush
     {
@@ -60,7 +60,7 @@ public static partial class RadialGradientBrushExtension
         return self;
     }
     
-    public static SettersContext<T> Radius<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> RadiusFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : RadialGradientBrush
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, RadialGradientBrush.RadiusProperty);

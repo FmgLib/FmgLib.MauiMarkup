@@ -4,7 +4,7 @@
 
 public static partial class ShellItemExtension
 {
-    public static T CurrentItem<T>(this T self,
+    public static T CurrentItemFmg<T>(this T self,
         ShellSection currentItem)
         where T : ShellItem
     {
@@ -12,7 +12,7 @@ public static partial class ShellItemExtension
         return self;
     }
     
-    public static T CurrentItem<T>(this T self, Func<PropertyContext<ShellSection>, IPropertyBuilder<ShellSection>> configure)
+    public static T CurrentItemFmg<T>(this T self, Func<PropertyContext<ShellSection>, IPropertyBuilder<ShellSection>> configure)
         where T : ShellItem
     {
         var context = new PropertyContext<ShellSection>(self, ShellItem.CurrentItemProperty);
@@ -20,7 +20,7 @@ public static partial class ShellItemExtension
         return self;
     }
     
-    public static SettersContext<T> CurrentItem<T>(this SettersContext<T> self,
+    public static SettersContext<T> CurrentItemFmg<T>(this SettersContext<T> self,
         ShellSection currentItem)
         where T : ShellItem
     {
@@ -28,7 +28,7 @@ public static partial class ShellItemExtension
         return self;
     }
     
-    public static SettersContext<T> CurrentItem<T>(this SettersContext<T> self, Func<PropertySettersContext<ShellSection>, IPropertySettersBuilder<ShellSection>> configure)
+    public static SettersContext<T> CurrentItemFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ShellSection>, IPropertySettersBuilder<ShellSection>> configure)
         where T : ShellItem
     {
         var context = new PropertySettersContext<ShellSection>(self.XamlSetters, ShellItem.CurrentItemProperty);
@@ -36,7 +36,7 @@ public static partial class ShellItemExtension
         return self;
     }
     
-    public static T Items<T>(this T self,
+    public static T ItemsFmg<T>(this T self,
         IList<ShellSection> items)
         where T : ShellItem
     {
@@ -45,7 +45,7 @@ public static partial class ShellItemExtension
         return self;
     }
 
-    public static T Items<T>(this T self,
+    public static T ItemsFmg<T>(this T self,
         params ShellSection[] items)
         where T : ShellItem
     {
@@ -54,7 +54,7 @@ public static partial class ShellItemExtension
         return self;
     }
     
-    public static T Items<T>(this T self, Func<PropertyContext<IList<ShellSection>>, IPropertyBuilder<IList<ShellSection>>> configure)
+    public static T ItemsFmg<T>(this T self, Func<PropertyContext<IList<ShellSection>>, IPropertyBuilder<IList<ShellSection>>> configure)
         where T : ShellItem
     {
         var context = new PropertyContext<IList<ShellSection>>(self, ShellItem.ItemsProperty);

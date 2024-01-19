@@ -2,7 +2,7 @@
 
 public static partial class BackButtonBehaviorExtension
 {
-    public static T Command<T>(this T self,
+    public static T CommandFmg<T>(this T self,
         System.Windows.Input.ICommand command)
         where T : BackButtonBehavior
     {
@@ -10,7 +10,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static T Command<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T CommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : BackButtonBehavior
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, BackButtonBehavior.CommandProperty);
@@ -18,7 +18,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static SettersContext<T> Command<T>(this SettersContext<T> self,
+    public static SettersContext<T> CommandFmg<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand command)
         where T : BackButtonBehavior
     {
@@ -26,7 +26,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static SettersContext<T> Command<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> CommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : BackButtonBehavior
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, BackButtonBehavior.CommandProperty);
@@ -34,7 +34,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static T CommandParameter<T>(this T self,
+    public static T CommandParameterFmg<T>(this T self,
         object commandParameter)
         where T : BackButtonBehavior
     {
@@ -42,7 +42,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static T CommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T CommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : BackButtonBehavior
     {
         var context = new PropertyContext<object>(self, BackButtonBehavior.CommandParameterProperty);
@@ -50,7 +50,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static SettersContext<T> CommandParameter<T>(this SettersContext<T> self,
+    public static SettersContext<T> CommandParameterFmg<T>(this SettersContext<T> self,
         object commandParameter)
         where T : BackButtonBehavior
     {
@@ -58,7 +58,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static SettersContext<T> CommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> CommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : BackButtonBehavior
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, BackButtonBehavior.CommandParameterProperty);
@@ -66,7 +66,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static T IconOverride<T>(this T self,
+    public static T IconOverrideFmg<T>(this T self,
         ImageSource iconOverride)
         where T : BackButtonBehavior
     {
@@ -74,7 +74,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static T IconOverride<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
+    public static T IconOverrideFmg<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
         where T : BackButtonBehavior
     {
         var context = new PropertyContext<ImageSource>(self, BackButtonBehavior.IconOverrideProperty);
@@ -82,7 +82,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static SettersContext<T> IconOverride<T>(this SettersContext<T> self,
+    public static SettersContext<T> IconOverrideFmg<T>(this SettersContext<T> self,
         ImageSource iconOverride)
         where T : BackButtonBehavior
     {
@@ -90,7 +90,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static SettersContext<T> IconOverride<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
+    public static SettersContext<T> IconOverrideFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
         where T : BackButtonBehavior
     {
         var context = new PropertySettersContext<ImageSource>(self.XamlSetters, BackButtonBehavior.IconOverrideProperty);
@@ -98,7 +98,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static T IsEnabled<T>(this T self,
+    public static T IsEnabledFmg<T>(this T self,
         bool isEnabled)
         where T : BackButtonBehavior
     {
@@ -106,7 +106,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static T IsEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : BackButtonBehavior
     {
         var context = new PropertyContext<bool>(self, BackButtonBehavior.IsEnabledProperty);
@@ -114,7 +114,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static SettersContext<T> IsEnabled<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsEnabledFmg<T>(this SettersContext<T> self,
         bool isEnabled)
         where T : BackButtonBehavior
     {
@@ -122,7 +122,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static SettersContext<T> IsEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : BackButtonBehavior
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, BackButtonBehavior.IsEnabledProperty);
@@ -130,7 +130,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static T IsVisible<T>(this T self,
+    public static T IsVisibleFmg<T>(this T self,
         bool isVisible)
         where T : BackButtonBehavior
     {
@@ -138,7 +138,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static T IsVisible<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsVisibleFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : BackButtonBehavior
     {
         var context = new PropertyContext<bool>(self, BackButtonBehavior.IsVisibleProperty);
@@ -146,7 +146,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static SettersContext<T> IsVisible<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsVisibleFmg<T>(this SettersContext<T> self,
         bool isVisible)
         where T : BackButtonBehavior
     {
@@ -154,7 +154,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static SettersContext<T> IsVisible<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsVisibleFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : BackButtonBehavior
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, BackButtonBehavior.IsVisibleProperty);
@@ -162,7 +162,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static T TextOverride<T>(this T self,
+    public static T TextOverrideFmg<T>(this T self,
         string textOverride)
         where T : BackButtonBehavior
     {
@@ -170,7 +170,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static T TextOverride<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T TextOverrideFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : BackButtonBehavior
     {
         var context = new PropertyContext<string>(self, BackButtonBehavior.TextOverrideProperty);
@@ -178,7 +178,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static SettersContext<T> TextOverride<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextOverrideFmg<T>(this SettersContext<T> self,
         string textOverride)
         where T : BackButtonBehavior
     {
@@ -186,7 +186,7 @@ public static partial class BackButtonBehaviorExtension
         return self;
     }
     
-    public static SettersContext<T> TextOverride<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> TextOverrideFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : BackButtonBehavior
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, BackButtonBehavior.TextOverrideProperty);

@@ -9,145 +9,145 @@ public partial class BasketPage : BasePage<BasketPageViewModel>
     public override void Build()
     {
         this
-            .InvokeOnElement(s => s.Loaded += (sender, e) =>
+            .InvokeOnElementFmg(s => s.Loaded += (sender, e) =>
             {
                 BindingContext.GetInfo();
             })
-            .Content(
+            .ContentFmg(
                 new Grid()
-                .RowDefinitions(e => e.Star(05).Star(60).Star(35))
-                .Children(
+                .RowDefinitionsFmg(e => e.Star(05).Star(60).Star(35))
+                .ChildrenFmg(
                     new Label()
-                    .Text("SEPET")
-                    .Margin(0,5)
-                    .FontAttributes(FontAttributes.Bold)
-                    .FontSize(20)
-                    .CenterHorizontally()
-                    .Row(0),
+                    .TextFmg("SEPET")
+                    .MarginFmg(0,5)
+                    .FontAttributesFmg(FontAttributes.Bold)
+                    .FontSizeFmg(20)
+                    .CenterHorizontalFmg()
+                    .RowFmg(0),
 
                     new CollectionView()
-                    .Row(1)
-                    .SelectionMode(SelectionMode.None)
-                    .ItemsLayout(new LinearItemsLayout(ItemsLayoutOrientation.Vertical).ItemSpacing(10))
-                    .Bind(CollectionView.ItemsSourceProperty, nameof(BindingContext.BasketProducts))
-                    .Margin(10,5)
-                    .EmptyView(
+                    .RowFmg(1)
+                    .SelectionModeFmg(SelectionMode.None)
+                    .ItemsLayoutFmg(new LinearItemsLayout(ItemsLayoutOrientation.Vertical).ItemSpacingFmg(10))
+                    .BindFmg(CollectionView.ItemsSourceProperty, nameof(BindingContext.BasketProducts))
+                    .MarginFmg(10,5)
+                    .EmptyViewFmg(
                         new VerticalStackLayout()
-                        .Center()
-                        .Children(
+                        .CenterFmg()
+                        .ChildrenFmg(
                             new Label()
-                            .Text("Sepet Boş!")
-                            .TextColor(Colors.Red)
-                            .FontSize(18)
-                            .FontAttributes(FontAttributes.Bold)
+                            .TextFmg("Sepet Boş!")
+                            .TextColorFmg(Colors.Red)
+                            .FontSizeFmg(18)
+                            .FontAttributesFmg(FontAttributes.Bold)
                         )
                     )
-                    .ItemTemplate(() =>
+                    .ItemTemplateFmg(() =>
                         new Frame()
-                        .CornerRadius(15)
-                        .BorderColor(Colors.DarkGray)
-                        .BackgroundColor(Colors.Transparent)
-                        .Padding(5)
-                        .MinimumWidthRequest(150)
-                        .MinimumHeightRequest(90)
-                        .Content(
+                        .CornerRadiusFmg(15)
+                        .BorderColorFmg(Colors.DarkGray)
+                        .BackgroundColorFmg(Colors.Transparent)
+                        .PaddingFmg(5)
+                        .MinimumWidthRequestFmg(150)
+                        .MinimumHeightRequestFmg(90)
+                        .ContentFmg(
                             new Grid()
-                            .ColumnDefinitions(e => e.Star(3).Star(5).Star(2))
-                            .Padding(new Thickness(10,5))
-                            .Children(
+                            .ColumnDefinitionsFmg(e => e.Star(3).Star(5).Star(2))
+                            .PaddingFmg(new Thickness(10,5))
+                            .ChildrenFmg(
                                 new Image()
-                                .Bind(Image.SourceProperty, "Product.Image")
-                                .SizeRequest(80,80)
-                                .Column(0)
-                                .CenterVertically(),
+                                .BindFmg(Image.SourceProperty, "Product.Image")
+                                .SizeRequestFmg(80,80)
+                                .ColumnFmg(0)
+                                .CenterVerticalFmg(),
 
                                 new VerticalStackLayout()
-                                .Column(1)
-                                .Spacing(10)
-                                .Children(
+                                .ColumnFmg(1)
+                                .SpacingFmg(10)
+                                .ChildrenFmg(
                                     new Label()
-                                    .Bind(Label.TextProperty, "Product.Name")
-                                    .FontSize(11)
-                                    .FontAttributes(FontAttributes.Italic)
-                                    .AlignStart()
-                                    .LineBreakMode(LineBreakMode.TailTruncation),
+                                    .BindFmg(Label.TextProperty, "Product.Name")
+                                    .FontSizeFmg(11)
+                                    .FontAttributesFmg(FontAttributes.Italic)
+                                    .AlignStartFmg()
+                                    .LineBreakModeFmg(LineBreakMode.TailTruncation),
 
                                     new Frame()
-                                    .BorderColor(Colors.DarkGray)
-                                    .HeightRequest(50)
-                                    .WidthRequest(120)
-                                    .AlignStart()
-                                    .Padding(0)
-                                    .Content(
+                                    .BorderColorFmg(Colors.DarkGray)
+                                    .HeightRequestFmg(50)
+                                    .WidthRequestFmg(120)
+                                    .AlignStartFmg()
+                                    .PaddingFmg(0)
+                                    .ContentFmg(
                                         new HorizontalStackLayout()
-                                        .Spacing(8)
-                                        .Center()
-                                        .Children(
+                                        .SpacingFmg(8)
+                                        .CenterFmg()
+                                        .ChildrenFmg(
                                             new Button()
-                                            .Text("-")
-                                            .FontAttributes(FontAttributes.Bold)
-                                            .BorderColor(Colors.DarkGray)
-                                            .BackgroundColor(Colors.Transparent)
-                                            .TextColor(Colors.Black)
-                                            .BorderWidth(2)
-                                            .CornerRadius(25)
-                                            .HeightRequest(35)
-                                            .WidthRequest(35)
-                                            .Padding(0)
-                                            .FontSize(20)
-                                            .Command(BindingContext.RemoveCountCommand)
-                                            .CommandParameter(e => e.Path(".")),
+                                            .TextFmg("-")
+                                            .FontAttributesFmg(FontAttributes.Bold)
+                                            .BorderColorFmg(Colors.DarkGray)
+                                            .BackgroundColorFmg(Colors.Transparent)
+                                            .TextColorFmg(Colors.Black)
+                                            .BorderWidthFmg(2)
+                                            .CornerRadiusFmg(25)
+                                            .HeightRequestFmg(35)
+                                            .WidthRequestFmg(35)
+                                            .PaddingFmg(0)
+                                            .FontSizeFmg(20)
+                                            .CommandFmg(BindingContext.RemoveCountCommand)
+                                            .CommandParameterFmg(e => e.PathFmg(".")),
 
                                             new Label()
-                                            .Bind(Label.TextProperty, "Count")
-                                            .FontAttributes(FontAttributes.Bold)
-                                            .TextCenter()
-                                            .FontSize(18),
+                                            .BindFmg(Label.TextProperty, "Count")
+                                            .FontAttributesFmg(FontAttributes.Bold)
+                                            .TextCenterFmg()
+                                            .FontSizeFmg(18),
 
                                             new Button()
-                                            .Text("+")
-                                            .FontAttributes(FontAttributes.Bold)
-                                            .BorderColor(Colors.DarkGray)
-                                            .BackgroundColor(Colors.Transparent)
-                                            .TextColor(Colors.Black)
-                                            .BorderWidth(2)
-                                            .CornerRadius(25)
-                                            .HeightRequest(35)
-                                            .WidthRequest(35)
-                                            .Padding(0)
-                                            .FontSize(20)
-                                            .Command(BindingContext.AddCountCommand)
-                                            .CommandParameter(e => e.Path("."))
+                                            .TextFmg("+")
+                                            .FontAttributesFmg(FontAttributes.Bold)
+                                            .BorderColorFmg(Colors.DarkGray)
+                                            .BackgroundColorFmg(Colors.Transparent)
+                                            .TextColorFmg(Colors.Black)
+                                            .BorderWidthFmg(2)
+                                            .CornerRadiusFmg(25)
+                                            .HeightRequestFmg(35)
+                                            .WidthRequestFmg(35)
+                                            .PaddingFmg(0)
+                                            .FontSizeFmg(20)
+                                            .CommandFmg(BindingContext.AddCountCommand)
+                                            .CommandParameterFmg(e => e.PathFmg("."))
                                         )
                                     )
                                 ),
                                 new VerticalStackLayout()
-                                .Spacing(20)
-                                .Column(2)
-                                .AlignEnd()
-                                .Children(
+                                .SpacingFmg(20)
+                                .ColumnFmg(2)
+                                .AlignEndFmg()
+                                .ChildrenFmg(
                                     new Image()
-                                    .Source("remove.png")
-                                    .SizeRequest(25,25)
-                                    .BackgroundColor(Colors.Transparent)
-                                    .GestureRecognizers(
+                                    .SourceFmg("remove.png")
+                                    .SizeRequestFmg(25,25)
+                                    .BackgroundColorFmg(Colors.Transparent)
+                                    .GestureRecognizersFmg(
                                         new TapGestureRecognizer()
-                                        .Command(BindingContext.RemoveProductCommand)
-                                        .CommandParameter(e => e.Path("."))
+                                        .CommandFmg(BindingContext.RemoveProductCommand)
+                                        .CommandParameterFmg(e => e.PathFmg("."))
                                     ),
 
                                     new VerticalStackLayout()
-                                    .Spacing(0)
-                                    .Children(
+                                    .SpacingFmg(0)
+                                    .ChildrenFmg(
                                         new Label()
-                                        .Bind(Label.TextProperty, "Product.Price")
-                                        .FontSize(10),
+                                        .BindFmg(Label.TextProperty, "Product.Price")
+                                        .FontSizeFmg(10),
 
                                         new Label()
-                                        .Bind(Label.TextProperty, "TotalPrice")
-                                        .FontAttributes(FontAttributes.Bold)
-                                        .TextCenter()
-                                        .FontSize(18)
+                                        .BindFmg(Label.TextProperty, "TotalPrice")
+                                        .FontAttributesFmg(FontAttributes.Bold)
+                                        .TextCenterFmg()
+                                        .FontSizeFmg(18)
                                     )
                                 )
                             )
@@ -155,58 +155,58 @@ public partial class BasketPage : BasePage<BasketPageViewModel>
                     ),
 
                     new Grid()
-                    .Row(2)
-                    .ColumnDefinitions(e => e.Star(7).Star(3))
-                    .RowDefinitions(e => e.Auto().Auto().Auto().Auto())
-                    .RowSpacing(7)
-                    .AlignBottom()
-                    .Margin(10)
-                    .Children(
+                    .RowFmg(2)
+                    .ColumnDefinitionsFmg(e => e.Star(7).Star(3))
+                    .RowDefinitionsFmg(e => e.Auto().Auto().Auto().Auto())
+                    .RowSpacingFmg(7)
+                    .AlignBottomFmg()
+                    .MarginFmg(10)
+                    .ChildrenFmg(
                         new Label()
-                        .Text("Ürünler Toplamı")
-                        .Column(0)
-                        .Row(0),
+                        .TextFmg("Ürünler Toplamı")
+                        .ColumnFmg(0)
+                        .RowFmg(0),
 
                         new Label()
-                        .Bind(Label.TextProperty, nameof(BindingContext.TotalProductPrice))
-                        .Column(1)
-                        .Row(0)
-                        .AlignEnd(),
+                        .BindFmg(Label.TextProperty, nameof(BindingContext.TotalProductPrice))
+                        .ColumnFmg(1)
+                        .RowFmg(0)
+                        .AlignEndFmg(),
 
                         new Label()
-                        .Text("KDV")
-                        .Column(0)
-                        .Row(1),
+                        .TextFmg("KDV")
+                        .ColumnFmg(0)
+                        .RowFmg(1),
 
                         new Label()
-                        .Bind(Label.TextProperty, nameof(BindingContext.TotalKdv))
-                        .Column(1)
-                        .Row(1)
-                        .AlignEnd(),
+                        .BindFmg(Label.TextProperty, nameof(BindingContext.TotalKdv))
+                        .ColumnFmg(1)
+                        .RowFmg(1)
+                        .AlignEndFmg(),
 
                         new Label()
-                        .Text("TOPLAM")
-                        .FontAttributes(FontAttributes.Bold)
-                        .FontSize(16)
-                        .Column(0)
-                        .Row(2),
+                        .TextFmg("TOPLAM")
+                        .FontAttributesFmg(FontAttributes.Bold)
+                        .FontSizeFmg(16)
+                        .ColumnFmg(0)
+                        .RowFmg(2),
 
                         new Label()
-                        .Bind(Label.TextProperty, nameof(BindingContext.TotalPrice))
-                        .FontAttributes(FontAttributes.Bold)
-                        .FontSize(16)
-                        .Column(1)
-                        .Row(2)
-                        .AlignEnd(),
+                        .BindFmg(Label.TextProperty, nameof(BindingContext.TotalPrice))
+                        .FontAttributesFmg(FontAttributes.Bold)
+                        .FontSizeFmg(16)
+                        .ColumnFmg(1)
+                        .RowFmg(2)
+                        .AlignEndFmg(),
 
                         new Button()
-                        .Text("SİPARİŞ ET")
-                        .WidthRequest(150)
-                        .CenterHorizontally()
-                        .ColumnSpan(2)
-                        .Column(0)
-                        .Row(3)
-                        .Command(BindingContext.CompletedCommand)
+                        .TextFmg("SİPARİŞ ET")
+                        .WidthRequestFmg(150)
+                        .CenterHorizontalFmg()
+                        .ColumnSpanFmg(2)
+                        .ColumnFmg(0)
+                        .RowFmg(3)
+                        .CommandFmg(BindingContext.CompletedCommand)
                     )
                 )
             );

@@ -3,7 +3,7 @@
 
 public static partial class ArcSegmentExtension
 {
-    public static T Point<T>(this T self,
+    public static T PointFmg<T>(this T self,
         Point point)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
@@ -11,7 +11,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static T Point<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
+    public static T PointFmg<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
         var context = new PropertyContext<Point>(self, Microsoft.Maui.Controls.Shapes.ArcSegment.PointProperty);
@@ -19,7 +19,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> Point<T>(this SettersContext<T> self,
+    public static SettersContext<T> PointFmg<T>(this SettersContext<T> self,
         Point point)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
@@ -27,7 +27,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> Point<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
+    public static SettersContext<T> PointFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
         var context = new PropertySettersContext<Point>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.ArcSegment.PointProperty);
@@ -35,7 +35,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static T Size<T>(this T self,
+    public static T SizeFmg<T>(this T self,
         Size size)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
@@ -43,7 +43,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static T Size<T>(this T self, Func<PropertyContext<Size>, IPropertyBuilder<Size>> configure)
+    public static T SizeFmg<T>(this T self, Func<PropertyContext<Size>, IPropertyBuilder<Size>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
         var context = new PropertyContext<Size>(self, Microsoft.Maui.Controls.Shapes.ArcSegment.SizeProperty);
@@ -51,7 +51,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> Size<T>(this SettersContext<T> self,
+    public static SettersContext<T> SizeFmg<T>(this SettersContext<T> self,
         Size size)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
@@ -59,7 +59,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> Size<T>(this SettersContext<T> self, Func<PropertySettersContext<Size>, IPropertySettersBuilder<Size>> configure)
+    public static SettersContext<T> SizeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Size>, IPropertySettersBuilder<Size>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
         var context = new PropertySettersContext<Size>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.ArcSegment.SizeProperty);
@@ -67,7 +67,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static T RotationAngle<T>(this T self,
+    public static T RotationAngleFmg<T>(this T self,
         double rotationAngle)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
@@ -75,7 +75,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static T RotationAngle<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T RotationAngleFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
         var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.Shapes.ArcSegment.RotationAngleProperty);
@@ -83,7 +83,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> RotationAngle<T>(this SettersContext<T> self,
+    public static SettersContext<T> RotationAngleFmg<T>(this SettersContext<T> self,
         double rotationAngle)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
@@ -91,7 +91,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> RotationAngle<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> RotationAngleFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.ArcSegment.RotationAngleProperty);
@@ -99,7 +99,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static T SweepDirection<T>(this T self,
+    public static T SweepDirectionFmg<T>(this T self,
         SweepDirection sweepDirection)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
@@ -107,7 +107,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static T SweepDirection<T>(this T self, Func<PropertyContext<SweepDirection>, IPropertyBuilder<SweepDirection>> configure)
+    public static T SweepDirectionFmg<T>(this T self, Func<PropertyContext<SweepDirection>, IPropertyBuilder<SweepDirection>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
         var context = new PropertyContext<SweepDirection>(self, Microsoft.Maui.Controls.Shapes.ArcSegment.SweepDirectionProperty);
@@ -115,7 +115,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> SweepDirection<T>(this SettersContext<T> self,
+    public static SettersContext<T> SweepDirectionFmg<T>(this SettersContext<T> self,
         SweepDirection sweepDirection)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
@@ -123,7 +123,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> SweepDirection<T>(this SettersContext<T> self, Func<PropertySettersContext<SweepDirection>, IPropertySettersBuilder<SweepDirection>> configure)
+    public static SettersContext<T> SweepDirectionFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<SweepDirection>, IPropertySettersBuilder<SweepDirection>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
         var context = new PropertySettersContext<SweepDirection>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.ArcSegment.SweepDirectionProperty);
@@ -131,7 +131,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static T IsLargeArc<T>(this T self,
+    public static T IsLargeArcFmg<T>(this T self,
         bool isLargeArc)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
@@ -139,7 +139,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static T IsLargeArc<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsLargeArcFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
         var context = new PropertyContext<bool>(self, Microsoft.Maui.Controls.Shapes.ArcSegment.IsLargeArcProperty);
@@ -147,7 +147,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> IsLargeArc<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsLargeArcFmg<T>(this SettersContext<T> self,
         bool isLargeArc)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
@@ -155,7 +155,7 @@ public static partial class ArcSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> IsLargeArc<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsLargeArcFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ArcSegment
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.ArcSegment.IsLargeArcProperty);

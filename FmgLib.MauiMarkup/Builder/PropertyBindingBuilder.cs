@@ -63,43 +63,43 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
         return false;
     }
 
-    public PropertyBindingBuilder<T> Path(string path)
+    public PropertyBindingBuilder<T> PathFmg(string path)
     {
         this.path = path;
         return this;
     }
 
-    public PropertyBindingBuilder<T> StringFormat(string stringFormat)
+    public PropertyBindingBuilder<T> StringFormatFmg(string stringFormat)
     {
         this.stringFormat = stringFormat;
         return this;
     }
 
-    public PropertyBindingBuilder<T> BindingMode(BindingMode bindingMode)
+    public PropertyBindingBuilder<T> BindingModeFmg(BindingMode bindingMode)
     {
         this.bindingMode = bindingMode;
         return this;
     }
 
-    public PropertyBindingBuilder<T> Converter(IValueConverter converter)
+    public PropertyBindingBuilder<T> ConverterFmg(IValueConverter converter)
     {
         this.converter = converter;
         return this;
     }
 
-    public PropertyBindingBuilder<T> Parameter(string converterParameter)
+    public PropertyBindingBuilder<T> ParameterFmg(string converterParameter)
     {
         this.converterParameter = converterParameter;
         return this;
     }
 
-    public PropertyBindingBuilder<T> Source(object source)
+    public PropertyBindingBuilder<T> SourceFmg(object source)
     {
         this.source = source;
         return this;
     }
 
-    public PropertyBindingBuilder<T> Convert<Q>(Func<Q, T> convert)
+    public PropertyBindingBuilder<T> ConvertFmg<Q>(Func<Q, T> convert)
     {
         if (valueConverter == null)
         {
@@ -111,7 +111,7 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyBindingBuilder<T> ConvertBack<Q>(Func<T, Q> convert)
+    public PropertyBindingBuilder<T> ConvertBackFmg<Q>(Func<T, Q> convert)
     {
         if (valueConverter == null)
         {

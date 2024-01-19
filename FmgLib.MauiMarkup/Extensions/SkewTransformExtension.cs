@@ -4,7 +4,7 @@
 
 public static partial class SkewTransformExtension
 {
-    public static T AngleX<T>(this T self,
+    public static T AngleXFmg<T>(this T self,
         double angleX)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
@@ -12,7 +12,7 @@ public static partial class SkewTransformExtension
         return self;
     }
     
-    public static T AngleX<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T AngleXFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
         var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.Shapes.SkewTransform.AngleXProperty);
@@ -20,7 +20,7 @@ public static partial class SkewTransformExtension
         return self;
     }
     
-    public static SettersContext<T> AngleX<T>(this SettersContext<T> self,
+    public static SettersContext<T> AngleXFmg<T>(this SettersContext<T> self,
         double angleX)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
@@ -28,7 +28,7 @@ public static partial class SkewTransformExtension
         return self;
     }
     
-    public static SettersContext<T> AngleX<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> AngleXFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.SkewTransform.AngleXProperty);
@@ -36,7 +36,7 @@ public static partial class SkewTransformExtension
         return self;
     }
     
-    public static T AngleY<T>(this T self,
+    public static T AngleYFmg<T>(this T self,
         double angleY)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
@@ -44,7 +44,7 @@ public static partial class SkewTransformExtension
         return self;
     }
     
-    public static T AngleY<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T AngleYFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
         var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.Shapes.SkewTransform.AngleYProperty);
@@ -52,7 +52,7 @@ public static partial class SkewTransformExtension
         return self;
     }
     
-    public static SettersContext<T> AngleY<T>(this SettersContext<T> self,
+    public static SettersContext<T> AngleYFmg<T>(this SettersContext<T> self,
         double angleY)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
@@ -60,7 +60,7 @@ public static partial class SkewTransformExtension
         return self;
     }
     
-    public static SettersContext<T> AngleY<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> AngleYFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.SkewTransform.AngleYProperty);
@@ -68,7 +68,7 @@ public static partial class SkewTransformExtension
         return self;
     }
     
-    public static T CenterX<T>(this T self,
+    public static T CenterXFmg<T>(this T self,
         double centerX)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
@@ -76,7 +76,7 @@ public static partial class SkewTransformExtension
         return self;
     }
     
-    public static T CenterX<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T CenterXFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
         var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.Shapes.SkewTransform.CenterXProperty);
@@ -84,7 +84,7 @@ public static partial class SkewTransformExtension
         return self;
     }
     
-    public static SettersContext<T> CenterX<T>(this SettersContext<T> self,
+    public static SettersContext<T> CenterXFmg<T>(this SettersContext<T> self,
         double centerX)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
@@ -92,7 +92,7 @@ public static partial class SkewTransformExtension
         return self;
     }
     
-    public static SettersContext<T> CenterX<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> CenterXFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.SkewTransform.CenterXProperty);
@@ -100,7 +100,7 @@ public static partial class SkewTransformExtension
         return self;
     }
     
-    public static T CenterY<T>(this T self,
+    public static T CenterYFmg<T>(this T self,
         double centerY)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
@@ -108,7 +108,7 @@ public static partial class SkewTransformExtension
         return self;
     }
     
-    public static T CenterY<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T CenterYFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
         var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.Shapes.SkewTransform.CenterYProperty);
@@ -116,7 +116,7 @@ public static partial class SkewTransformExtension
         return self;
     }
     
-    public static SettersContext<T> CenterY<T>(this SettersContext<T> self,
+    public static SettersContext<T> CenterYFmg<T>(this SettersContext<T> self,
         double centerY)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
@@ -124,7 +124,7 @@ public static partial class SkewTransformExtension
         return self;
     }
     
-    public static SettersContext<T> CenterY<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> CenterYFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.SkewTransform
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.SkewTransform.CenterYProperty);

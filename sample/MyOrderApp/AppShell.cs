@@ -5,65 +5,65 @@ public partial class AppShell : Shell
     public AppShell(IServiceProvider services)
     {
         this
-            .Items(
+            .ItemsFmg(
                 new FlyoutItem()
-                    .FlyoutItemIsVisible(false)
-                    .Route(nameof(LoadingPage))
-                    .Items(services.GetService<LoadingPage>()),
+                    .FlyoutItemIsVisibleFmg(false)
+                    .RouteFmg(nameof(LoadingPage))
+                    .ItemsFmg(services.GetService<LoadingPage>()),
 
                 new FlyoutItem()
-                    .FlyoutItemIsVisible(false)
-                    .Route(nameof(LoginPage))
-                    .Items(services.GetService<LoginPage>()),
+                    .FlyoutItemIsVisibleFmg(false)
+                    .RouteFmg(nameof(LoginPage))
+                    .ItemsFmg(services.GetService<LoginPage>()),
 
                 new FlyoutItem()
-                    .FlyoutItemIsVisible(false)
-                    .Route(nameof(RegisterPage))
-                    .Items(services.GetService<RegisterPage>()),
+                    .FlyoutItemIsVisibleFmg(false)
+                    .RouteFmg(nameof(RegisterPage))
+                    .ItemsFmg(services.GetService<RegisterPage>()),
 
                 new TabBar()
-                    .FlyoutItemIsVisible(false)
-                    .Route(nameof(LoadingPage))
-                    .Items(
+                    .FlyoutItemIsVisibleFmg(false)
+                    .RouteFmg(nameof(LoadingPage))
+                    .ItemsFmg(
                         new Tab()
-                            .FlyoutDisplayOptions(FlyoutDisplayOptions.AsSingleItem)
-                            .FlyoutItemIsVisible(true)
-                            .Route(nameof(HomePage))
-                            .Title("Anasayfa")
-                            .Icon("home.png")
-                            .Items(services.GetService<HomePage>()),
+                            .FlyoutDisplayOptionsFmg(FlyoutDisplayOptions.AsSingleItem)
+                            .FlyoutItemIsVisibleFmg(true)
+                            .RouteFmg(nameof(HomePage))
+                            .TitleFmg("Anasayfa")
+                            .IconFmg("home.png")
+                            .ItemsFmg(services.GetService<HomePage>()),
 
                         new Tab()
-                            .FlyoutDisplayOptions(FlyoutDisplayOptions.AsSingleItem)
-                            .FlyoutItemIsVisible(true)
-                            .Route(nameof(ProductsPage))
-                            .Title("Ürünler")
-                            .Icon("products.png")
-                            .Items(services.GetService<ProductsPage>()),
+                            .FlyoutDisplayOptionsFmg(FlyoutDisplayOptions.AsSingleItem)
+                            .FlyoutItemIsVisibleFmg(true)
+                            .RouteFmg(nameof(ProductsPage))
+                            .TitleFmg("Ürünler")
+                            .IconFmg("products.png")
+                            .ItemsFmg(services.GetService<ProductsPage>()),
 
                         new Tab()
-                            .FlyoutDisplayOptions(FlyoutDisplayOptions.AsSingleItem)
-                            .FlyoutItemIsVisible(true)
-                            .Route(nameof(CategoriesPage))
-                            .Title("Kategoriler")
-                            .Icon("categories.png")
-                            .Items(services.GetService<CategoriesPage>()),
+                            .FlyoutDisplayOptionsFmg(FlyoutDisplayOptions.AsSingleItem)
+                            .FlyoutItemIsVisibleFmg(true)
+                            .RouteFmg(nameof(CategoriesPage))
+                            .TitleFmg("Kategoriler")
+                            .IconFmg("categories.png")
+                            .ItemsFmg(services.GetService<CategoriesPage>()),
 
                         new Tab()
-                            .FlyoutDisplayOptions(FlyoutDisplayOptions.AsSingleItem)
-                            .FlyoutItemIsVisible(true)
-                            .Route(nameof(FavoritesPage))
-                            .Title("Favoriler")
-                            .Icon("favorites.png")
-                            .Items(services.GetService<FavoritesPage>()),
+                            .FlyoutDisplayOptionsFmg(FlyoutDisplayOptions.AsSingleItem)
+                            .FlyoutItemIsVisibleFmg(true)
+                            .RouteFmg(nameof(FavoritesPage))
+                            .TitleFmg("Favoriler")
+                            .IconFmg("favorites.png")
+                            .ItemsFmg(services.GetService<FavoritesPage>()),
 
                         new Tab()
-                            .FlyoutDisplayOptions(FlyoutDisplayOptions.AsSingleItem)
-                            .FlyoutItemIsVisible(true)
-                            .Route(nameof(BasketPage))
-                            .Title("Sepet")
-                            .Icon("basket.png")
-                            .Items(services.GetService<BasketPage>())
+                            .FlyoutDisplayOptionsFmg(FlyoutDisplayOptions.AsSingleItem)
+                            .FlyoutItemIsVisibleFmg(true)
+                            .RouteFmg(nameof(BasketPage))
+                            .TitleFmg("Sepet")
+                            .IconFmg("basket.png")
+                            .ItemsFmg(services.GetService<BasketPage>())
                     )
             );
 

@@ -4,7 +4,7 @@
 
 public static partial class TextCellExtension
 {
-    public static T Command<T>(this T self,
+    public static T CommandFmg<T>(this T self,
         System.Windows.Input.ICommand command)
         where T : TextCell
     {
@@ -12,7 +12,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static T Command<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T CommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : TextCell
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, TextCell.CommandProperty);
@@ -20,7 +20,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static SettersContext<T> Command<T>(this SettersContext<T> self,
+    public static SettersContext<T> CommandFmg<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand command)
         where T : TextCell
     {
@@ -28,7 +28,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static SettersContext<T> Command<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> CommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : TextCell
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, TextCell.CommandProperty);
@@ -36,7 +36,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static T CommandParameter<T>(this T self,
+    public static T CommandParameterFmg<T>(this T self,
         object commandParameter)
         where T : TextCell
     {
@@ -44,7 +44,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static T CommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T CommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : TextCell
     {
         var context = new PropertyContext<object>(self, TextCell.CommandParameterProperty);
@@ -52,7 +52,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static SettersContext<T> CommandParameter<T>(this SettersContext<T> self,
+    public static SettersContext<T> CommandParameterFmg<T>(this SettersContext<T> self,
         object commandParameter)
         where T : TextCell
     {
@@ -60,7 +60,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static SettersContext<T> CommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> CommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : TextCell
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, TextCell.CommandParameterProperty);
@@ -68,7 +68,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static T Detail<T>(this T self,
+    public static T DetailFmg<T>(this T self,
         string detail)
         where T : TextCell
     {
@@ -76,7 +76,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static T Detail<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T DetailFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : TextCell
     {
         var context = new PropertyContext<string>(self, TextCell.DetailProperty);
@@ -84,7 +84,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static SettersContext<T> Detail<T>(this SettersContext<T> self,
+    public static SettersContext<T> DetailFmg<T>(this SettersContext<T> self,
         string detail)
         where T : TextCell
     {
@@ -92,7 +92,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static SettersContext<T> Detail<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> DetailFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : TextCell
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, TextCell.DetailProperty);
@@ -100,7 +100,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static T DetailColor<T>(this T self,
+    public static T DetailColorFmg<T>(this T self,
         Color detailColor)
         where T : TextCell
     {
@@ -108,7 +108,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static T DetailColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T DetailColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : TextCell
     {
         var context = new PropertyContext<Color>(self, TextCell.DetailColorProperty);
@@ -116,7 +116,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static SettersContext<T> DetailColor<T>(this SettersContext<T> self,
+    public static SettersContext<T> DetailColorFmg<T>(this SettersContext<T> self,
         Color detailColor)
         where T : TextCell
     {
@@ -124,7 +124,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static SettersContext<T> DetailColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> DetailColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : TextCell
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, TextCell.DetailColorProperty);
@@ -132,7 +132,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static T Text<T>(this T self,
+    public static T TextFmg<T>(this T self,
         string text)
         where T : TextCell
     {
@@ -140,7 +140,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static T Text<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T TextFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : TextCell
     {
         var context = new PropertyContext<string>(self, TextCell.TextProperty);
@@ -148,7 +148,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static SettersContext<T> Text<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextFmg<T>(this SettersContext<T> self,
         string text)
         where T : TextCell
     {
@@ -156,7 +156,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static SettersContext<T> Text<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> TextFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : TextCell
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, TextCell.TextProperty);
@@ -164,7 +164,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static T TextColor<T>(this T self,
+    public static T TextColorFmg<T>(this T self,
         Color textColor)
         where T : TextCell
     {
@@ -172,7 +172,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static T TextColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T TextColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : TextCell
     {
         var context = new PropertyContext<Color>(self, TextCell.TextColorProperty);
@@ -180,7 +180,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static SettersContext<T> TextColor<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self,
         Color textColor)
         where T : TextCell
     {
@@ -188,7 +188,7 @@ public static partial class TextCellExtension
         return self;
     }
     
-    public static SettersContext<T> TextColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : TextCell
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, TextCell.TextColorProperty);

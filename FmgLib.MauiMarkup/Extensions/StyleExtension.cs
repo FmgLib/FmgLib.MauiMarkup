@@ -2,7 +2,7 @@
 
 public static class StyleExtension
 {
-    public static VisualStateGroupList GetVisualStateGroupList(this Style self)
+    public static VisualStateGroupList GetVisualStateGroupListFmg(this Style self)
     {
         VisualStateGroupList visualStateGroupList = null;
         Setter setter = self.Setters.FirstOrDefault((Setter e) => e.Property == VisualStateManager.VisualStateGroupsProperty);

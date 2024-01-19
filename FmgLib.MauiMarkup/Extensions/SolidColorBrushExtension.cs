@@ -4,7 +4,7 @@
 
 public static partial class SolidColorBrushExtension
 {
-    public static T Color<T>(this T self,
+    public static T ColorFmg<T>(this T self,
         Color color)
         where T : SolidColorBrush
     {
@@ -12,7 +12,7 @@ public static partial class SolidColorBrushExtension
         return self;
     }
     
-    public static T Color<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T ColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : SolidColorBrush
     {
         var context = new PropertyContext<Color>(self, SolidColorBrush.ColorProperty);
@@ -20,7 +20,7 @@ public static partial class SolidColorBrushExtension
         return self;
     }
     
-    public static SettersContext<T> Color<T>(this SettersContext<T> self,
+    public static SettersContext<T> ColorFmg<T>(this SettersContext<T> self,
         Color color)
         where T : SolidColorBrush
     {
@@ -28,7 +28,7 @@ public static partial class SolidColorBrushExtension
         return self;
     }
     
-    public static SettersContext<T> Color<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> ColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : SolidColorBrush
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, SolidColorBrush.ColorProperty);

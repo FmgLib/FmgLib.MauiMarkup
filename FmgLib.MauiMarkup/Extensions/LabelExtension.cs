@@ -4,7 +4,7 @@
 
 public static partial class LabelExtension
 {
-    public static T TextTransform<T>(this T self,
+    public static T TextTransformFmg<T>(this T self,
         TextTransform textTransform)
         where T : Label
     {
@@ -12,7 +12,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T TextTransform<T>(this T self, Func<PropertyContext<TextTransform>, IPropertyBuilder<TextTransform>> configure)
+    public static T TextTransformFmg<T>(this T self, Func<PropertyContext<TextTransform>, IPropertyBuilder<TextTransform>> configure)
         where T : Label
     {
         var context = new PropertyContext<TextTransform>(self, Label.TextTransformProperty);
@@ -20,7 +20,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> TextTransform<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextTransformFmg<T>(this SettersContext<T> self,
         TextTransform textTransform)
         where T : Label
     {
@@ -28,7 +28,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> TextTransform<T>(this SettersContext<T> self, Func<PropertySettersContext<TextTransform>, IPropertySettersBuilder<TextTransform>> configure)
+    public static SettersContext<T> TextTransformFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextTransform>, IPropertySettersBuilder<TextTransform>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<TextTransform>(self.XamlSetters, Label.TextTransformProperty);
@@ -36,7 +36,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T FormattedText<T>(this T self,
+    public static T FormattedTextFmg<T>(this T self,
         FormattedString formattedText)
         where T : Label
     {
@@ -44,7 +44,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T FormattedText<T>(this T self, Func<PropertyContext<FormattedString>, IPropertyBuilder<FormattedString>> configure)
+    public static T FormattedTextFmg<T>(this T self, Func<PropertyContext<FormattedString>, IPropertyBuilder<FormattedString>> configure)
         where T : Label
     {
         var context = new PropertyContext<FormattedString>(self, Label.FormattedTextProperty);
@@ -52,7 +52,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> FormattedText<T>(this SettersContext<T> self,
+    public static SettersContext<T> FormattedTextFmg<T>(this SettersContext<T> self,
         FormattedString formattedText)
         where T : Label
     {
@@ -60,7 +60,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> FormattedText<T>(this SettersContext<T> self, Func<PropertySettersContext<FormattedString>, IPropertySettersBuilder<FormattedString>> configure)
+    public static SettersContext<T> FormattedTextFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<FormattedString>, IPropertySettersBuilder<FormattedString>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<FormattedString>(self.XamlSetters, Label.FormattedTextProperty);
@@ -68,7 +68,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T HorizontalTextAlignment<T>(this T self,
+    public static T HorizontalTextAlignmentFmg<T>(this T self,
         TextAlignment horizontalTextAlignment)
         where T : Label
     {
@@ -76,7 +76,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T HorizontalTextAlignment<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
+    public static T HorizontalTextAlignmentFmg<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
         where T : Label
     {
         var context = new PropertyContext<TextAlignment>(self, Label.HorizontalTextAlignmentProperty);
@@ -84,7 +84,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalTextAlignment<T>(this SettersContext<T> self,
+    public static SettersContext<T> HorizontalTextAlignmentFmg<T>(this SettersContext<T> self,
         TextAlignment horizontalTextAlignment)
         where T : Label
     {
@@ -92,7 +92,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalTextAlignment<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
+    public static SettersContext<T> HorizontalTextAlignmentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<TextAlignment>(self.XamlSetters, Label.HorizontalTextAlignmentProperty);
@@ -100,7 +100,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T LineBreakMode<T>(this T self,
+    public static T LineBreakModeFmg<T>(this T self,
         LineBreakMode lineBreakMode)
         where T : Label
     {
@@ -108,7 +108,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T LineBreakMode<T>(this T self, Func<PropertyContext<LineBreakMode>, IPropertyBuilder<LineBreakMode>> configure)
+    public static T LineBreakModeFmg<T>(this T self, Func<PropertyContext<LineBreakMode>, IPropertyBuilder<LineBreakMode>> configure)
         where T : Label
     {
         var context = new PropertyContext<LineBreakMode>(self, Label.LineBreakModeProperty);
@@ -116,7 +116,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> LineBreakMode<T>(this SettersContext<T> self,
+    public static SettersContext<T> LineBreakModeFmg<T>(this SettersContext<T> self,
         LineBreakMode lineBreakMode)
         where T : Label
     {
@@ -124,7 +124,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> LineBreakMode<T>(this SettersContext<T> self, Func<PropertySettersContext<LineBreakMode>, IPropertySettersBuilder<LineBreakMode>> configure)
+    public static SettersContext<T> LineBreakModeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<LineBreakMode>, IPropertySettersBuilder<LineBreakMode>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<LineBreakMode>(self.XamlSetters, Label.LineBreakModeProperty);
@@ -132,7 +132,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T Text<T>(this T self,
+    public static T TextFmg<T>(this T self,
         string text)
         where T : Label
     {
@@ -140,7 +140,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T Text<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T TextFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : Label
     {
         var context = new PropertyContext<string>(self, Label.TextProperty);
@@ -148,7 +148,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> Text<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextFmg<T>(this SettersContext<T> self,
         string text)
         where T : Label
     {
@@ -156,7 +156,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> Text<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> TextFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, Label.TextProperty);
@@ -164,7 +164,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T TextColor<T>(this T self,
+    public static T TextColorFmg<T>(this T self,
         Color textColor)
         where T : Label
     {
@@ -172,7 +172,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T TextColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T TextColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : Label
     {
         var context = new PropertyContext<Color>(self, Label.TextColorProperty);
@@ -180,7 +180,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> TextColor<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self,
         Color textColor)
         where T : Label
     {
@@ -188,7 +188,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> TextColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, Label.TextColorProperty);
@@ -196,7 +196,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static Task<bool> AnimateTextColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateTextColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : Label
     {
         Color fromValue = self.TextColor;
@@ -205,7 +205,7 @@ public static partial class LabelExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateTextColorTo", transform, callback, length, easing);
     }
     
-    public static T CharacterSpacing<T>(this T self,
+    public static T CharacterSpacingFmg<T>(this T self,
         double characterSpacing)
         where T : Label
     {
@@ -213,7 +213,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T CharacterSpacing<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T CharacterSpacingFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Label
     {
         var context = new PropertyContext<double>(self, Label.CharacterSpacingProperty);
@@ -221,7 +221,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> CharacterSpacing<T>(this SettersContext<T> self,
+    public static SettersContext<T> CharacterSpacingFmg<T>(this SettersContext<T> self,
         double characterSpacing)
         where T : Label
     {
@@ -229,7 +229,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> CharacterSpacing<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> CharacterSpacingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Label.CharacterSpacingProperty);
@@ -237,7 +237,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static Task<bool> AnimateCharacterSpacingTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateCharacterSpacingToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Label
     {
         double fromValue = self.CharacterSpacing;
@@ -246,7 +246,7 @@ public static partial class LabelExtension
         return Transformations.AnimateAsync<double>(self, "AnimateCharacterSpacingTo", transform, callback, length, easing);
     }
     
-    public static T VerticalTextAlignment<T>(this T self,
+    public static T VerticalTextAlignmentFmg<T>(this T self,
         TextAlignment verticalTextAlignment)
         where T : Label
     {
@@ -254,7 +254,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T VerticalTextAlignment<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
+    public static T VerticalTextAlignmentFmg<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
         where T : Label
     {
         var context = new PropertyContext<TextAlignment>(self, Label.VerticalTextAlignmentProperty);
@@ -262,7 +262,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalTextAlignment<T>(this SettersContext<T> self,
+    public static SettersContext<T> VerticalTextAlignmentFmg<T>(this SettersContext<T> self,
         TextAlignment verticalTextAlignment)
         where T : Label
     {
@@ -270,7 +270,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalTextAlignment<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
+    public static SettersContext<T> VerticalTextAlignmentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<TextAlignment>(self.XamlSetters, Label.VerticalTextAlignmentProperty);
@@ -278,7 +278,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T FontAttributes<T>(this T self,
+    public static T FontAttributesFmg<T>(this T self,
         FontAttributes fontAttributes)
         where T : Label
     {
@@ -286,7 +286,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T FontAttributes<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
+    public static T FontAttributesFmg<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
         where T : Label
     {
         var context = new PropertyContext<FontAttributes>(self, Label.FontAttributesProperty);
@@ -294,7 +294,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self,
         FontAttributes fontAttributes)
         where T : Label
     {
@@ -302,7 +302,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
+    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<FontAttributes>(self.XamlSetters, Label.FontAttributesProperty);
@@ -310,7 +310,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T TextDecorations<T>(this T self,
+    public static T TextDecorationsFmg<T>(this T self,
         TextDecorations textDecorations)
         where T : Label
     {
@@ -318,7 +318,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T TextDecorations<T>(this T self, Func<PropertyContext<TextDecorations>, IPropertyBuilder<TextDecorations>> configure)
+    public static T TextDecorationsFmg<T>(this T self, Func<PropertyContext<TextDecorations>, IPropertyBuilder<TextDecorations>> configure)
         where T : Label
     {
         var context = new PropertyContext<TextDecorations>(self, Label.TextDecorationsProperty);
@@ -326,7 +326,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> TextDecorations<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextDecorationsFmg<T>(this SettersContext<T> self,
         TextDecorations textDecorations)
         where T : Label
     {
@@ -334,7 +334,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> TextDecorations<T>(this SettersContext<T> self, Func<PropertySettersContext<TextDecorations>, IPropertySettersBuilder<TextDecorations>> configure)
+    public static SettersContext<T> TextDecorationsFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextDecorations>, IPropertySettersBuilder<TextDecorations>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<TextDecorations>(self.XamlSetters, Label.TextDecorationsProperty);
@@ -342,7 +342,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T FontFamily<T>(this T self,
+    public static T FontFamilyFmg<T>(this T self,
         string fontFamily)
         where T : Label
     {
@@ -350,7 +350,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T FontFamily<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T FontFamilyFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : Label
     {
         var context = new PropertyContext<string>(self, Label.FontFamilyProperty);
@@ -358,7 +358,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self,
         string fontFamily)
         where T : Label
     {
@@ -366,7 +366,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, Label.FontFamilyProperty);
@@ -374,13 +374,13 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T FontSize<T>(this T self, double fontSize) where T : Label
+    public static T FontSizeFmg<T>(this T self, double fontSize) where T : Label
     {
         self.SetValue(Label.FontSizeProperty, fontSize);
         return self;
     }
     
-    public static T FontSize<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T FontSizeFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Label
     {
         var context = new PropertyContext<double>(self, Label.FontSizeProperty);
@@ -388,7 +388,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> FontSize<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self,
         double fontSize)
         where T : Label
     {
@@ -396,7 +396,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> FontSize<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Label.FontSizeProperty);
@@ -404,7 +404,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static Task<bool> AnimateFontSizeTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateFontSizeToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Label
     {
         double fromValue = self.FontSize;
@@ -413,7 +413,7 @@ public static partial class LabelExtension
         return Transformations.AnimateAsync<double>(self, "AnimateFontSizeTo", transform, callback, length, easing);
     }
     
-    public static T FontAutoScalingEnabled<T>(this T self,
+    public static T FontAutoScalingEnabledFmg<T>(this T self,
         bool fontAutoScalingEnabled)
         where T : Label
     {
@@ -421,7 +421,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T FontAutoScalingEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T FontAutoScalingEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Label
     {
         var context = new PropertyContext<bool>(self, Label.FontAutoScalingEnabledProperty);
@@ -429,7 +429,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self,
         bool fontAutoScalingEnabled)
         where T : Label
     {
@@ -437,7 +437,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Label.FontAutoScalingEnabledProperty);
@@ -445,7 +445,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T LineHeight<T>(this T self,
+    public static T LineHeightFmg<T>(this T self,
         double lineHeight)
         where T : Label
     {
@@ -453,7 +453,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T LineHeight<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T LineHeightFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Label
     {
         var context = new PropertyContext<double>(self, Label.LineHeightProperty);
@@ -461,7 +461,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> LineHeight<T>(this SettersContext<T> self,
+    public static SettersContext<T> LineHeightFmg<T>(this SettersContext<T> self,
         double lineHeight)
         where T : Label
     {
@@ -469,7 +469,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> LineHeight<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> LineHeightFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Label.LineHeightProperty);
@@ -477,7 +477,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static Task<bool> AnimateLineHeightTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateLineHeightToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Label
     {
         double fromValue = self.LineHeight;
@@ -486,7 +486,7 @@ public static partial class LabelExtension
         return Transformations.AnimateAsync<double>(self, "AnimateLineHeightTo", transform, callback, length, easing);
     }
     
-    public static T MaxLines<T>(this T self,
+    public static T MaxLinesFmg<T>(this T self,
         int maxLines)
         where T : Label
     {
@@ -494,7 +494,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T MaxLines<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+    public static T MaxLinesFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
         where T : Label
     {
         var context = new PropertyContext<int>(self, Label.MaxLinesProperty);
@@ -502,7 +502,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> MaxLines<T>(this SettersContext<T> self,
+    public static SettersContext<T> MaxLinesFmg<T>(this SettersContext<T> self,
         int maxLines)
         where T : Label
     {
@@ -510,7 +510,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> MaxLines<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+    public static SettersContext<T> MaxLinesFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, Label.MaxLinesProperty);
@@ -518,7 +518,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T Padding<T>(this T self,
+    public static T PaddingFmg<T>(this T self,
         Thickness padding)
         where T : Label
     {
@@ -526,7 +526,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T Padding<T>(this T self, Func<PropertyContext<Thickness>, IPropertyBuilder<Thickness>> configure)
+    public static T PaddingFmg<T>(this T self, Func<PropertyContext<Thickness>, IPropertyBuilder<Thickness>> configure)
         where T : Label
     {
         var context = new PropertyContext<Thickness>(self, Label.PaddingProperty);
@@ -534,7 +534,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> Padding<T>(this SettersContext<T> self,
+    public static SettersContext<T> PaddingFmg<T>(this SettersContext<T> self,
         Thickness padding)
         where T : Label
     {
@@ -542,7 +542,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> Padding<T>(this SettersContext<T> self, Func<PropertySettersContext<Thickness>, IPropertySettersBuilder<Thickness>> configure)
+    public static SettersContext<T> PaddingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Thickness>, IPropertySettersBuilder<Thickness>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<Thickness>(self.XamlSetters, Label.PaddingProperty);
@@ -550,7 +550,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T TextType<T>(this T self,
+    public static T TextTypeFmg<T>(this T self,
         TextType textType)
         where T : Label
     {
@@ -558,7 +558,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static T TextType<T>(this T self, Func<PropertyContext<TextType>, IPropertyBuilder<TextType>> configure)
+    public static T TextTypeFmg<T>(this T self, Func<PropertyContext<TextType>, IPropertyBuilder<TextType>> configure)
         where T : Label
     {
         var context = new PropertyContext<TextType>(self, Label.TextTypeProperty);
@@ -566,7 +566,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> TextType<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextTypeFmg<T>(this SettersContext<T> self,
         TextType textType)
         where T : Label
     {
@@ -574,7 +574,7 @@ public static partial class LabelExtension
         return self;
     }
     
-    public static SettersContext<T> TextType<T>(this SettersContext<T> self, Func<PropertySettersContext<TextType>, IPropertySettersBuilder<TextType>> configure)
+    public static SettersContext<T> TextTypeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextType>, IPropertySettersBuilder<TextType>> configure)
         where T : Label
     {
         var context = new PropertySettersContext<TextType>(self.XamlSetters, Label.TextTypeProperty);
@@ -583,21 +583,21 @@ public static partial class LabelExtension
     }
     
 
-    public static T TextCenterHorizontal<T>(this T self)
+    public static T TextCenterHorizontalFmg<T>(this T self)
         where T : Label
     {
         self.SetValue(Label.HorizontalTextAlignmentProperty, TextAlignment.Center);
         return self;
     }
 
-    public static T TextCenterVertical<T>(this T self)
+    public static T TextCenterVerticalFmg<T>(this T self)
         where T : Label
     {
         self.SetValue(Label.VerticalTextAlignmentProperty, TextAlignment.Center);
         return self;
     }
 
-    public static T TextCenter<T>(this T self)
+    public static T TextCenterFmg<T>(this T self)
         where T : Label
     {
         self.SetValue(Label.HorizontalTextAlignmentProperty, TextAlignment.Center);
@@ -605,21 +605,21 @@ public static partial class LabelExtension
         return self;
     }
 
-    public static T TextTop<T>(this T self)
+    public static T TextTopFmg<T>(this T self)
         where T : Label
     {
         self.SetValue(Label.VerticalTextAlignmentProperty, TextAlignment.Start);
         return self;
     }
 
-    public static T TextBottom<T>(this T self)
+    public static T TextBottomFmg<T>(this T self)
         where T : Label, Microsoft.Maui.ITextAlignment
     {
         self.SetValue(Label.VerticalTextAlignmentProperty, TextAlignment.End);
         return self;
     }
 
-    public static T TextTopStart<T>(this T self)
+    public static T TextTopStartFmg<T>(this T self)
         where T : Label
     {
         self.SetValue(Label.VerticalTextAlignmentProperty, TextAlignment.Start);
@@ -627,7 +627,7 @@ public static partial class LabelExtension
         return self;
     }
 
-    public static T TextBottomStart<T>(this T self)
+    public static T TextBottomStartFmg<T>(this T self)
         where T : Label
     {
         self.SetValue(Label.VerticalTextAlignmentProperty, TextAlignment.End);
@@ -635,7 +635,7 @@ public static partial class LabelExtension
         return self;
     }
 
-    public static T TextTopEnd<T>(this T self)
+    public static T TextTopEndFmg<T>(this T self)
         where T : Label
     {
         self.SetValue(Label.VerticalTextAlignmentProperty, TextAlignment.Start);
@@ -643,7 +643,7 @@ public static partial class LabelExtension
         return self;
     }
 
-    public static T TextBottomEnd<T>(this T self)
+    public static T TextBottomEndFmg<T>(this T self)
         where T : Label
     {
         self.SetValue(Label.VerticalTextAlignmentProperty, TextAlignment.End);
@@ -651,14 +651,14 @@ public static partial class LabelExtension
         return self;
     }
 
-    public static T TextStart<T>(this T self)
+    public static T TextStartFmg<T>(this T self)
         where T : Label
     {
         self.SetValue(Label.HorizontalTextAlignmentProperty, TextAlignment.Start);
         return self;
     }
 
-    public static T TextEnd<T>(this T self)
+    public static T TextEndFmg<T>(this T self)
         where T : Label
     {
         self.SetValue(Label.HorizontalTextAlignmentProperty, TextAlignment.End);

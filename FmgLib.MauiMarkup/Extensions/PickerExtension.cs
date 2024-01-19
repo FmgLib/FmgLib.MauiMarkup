@@ -4,7 +4,7 @@
 
 public static partial class PickerExtension
 {
-    public static T FontAttributes<T>(this T self,
+    public static T FontAttributesFmg<T>(this T self,
         FontAttributes fontAttributes)
         where T : Picker
     {
@@ -12,7 +12,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T FontAttributes<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
+    public static T FontAttributesFmg<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
         where T : Picker
     {
         var context = new PropertyContext<FontAttributes>(self, Picker.FontAttributesProperty);
@@ -20,7 +20,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self,
         FontAttributes fontAttributes)
         where T : Picker
     {
@@ -28,7 +28,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
+    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
         where T : Picker
     {
         var context = new PropertySettersContext<FontAttributes>(self.XamlSetters, Picker.FontAttributesProperty);
@@ -36,7 +36,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T FontFamily<T>(this T self,
+    public static T FontFamilyFmg<T>(this T self,
         string fontFamily)
         where T : Picker
     {
@@ -44,7 +44,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T FontFamily<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T FontFamilyFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : Picker
     {
         var context = new PropertyContext<string>(self, Picker.FontFamilyProperty);
@@ -52,7 +52,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self,
         string fontFamily)
         where T : Picker
     {
@@ -60,7 +60,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : Picker
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, Picker.FontFamilyProperty);
@@ -68,7 +68,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T FontSize<T>(this T self,
+    public static T FontSizeFmg<T>(this T self,
         double fontSize)
         where T : Picker
     {
@@ -76,7 +76,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T FontSize<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T FontSizeFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Picker
     {
         var context = new PropertyContext<double>(self, Picker.FontSizeProperty);
@@ -84,7 +84,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontSize<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self,
         double fontSize)
         where T : Picker
     {
@@ -92,7 +92,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontSize<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Picker
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Picker.FontSizeProperty);
@@ -100,7 +100,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static Task<bool> AnimateFontSizeTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateFontSizeToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Picker
     {
         double fromValue = self.FontSize;
@@ -109,7 +109,7 @@ public static partial class PickerExtension
         return Transformations.AnimateAsync<double>(self, "AnimateFontSizeTo", transform, callback, length, easing);
     }
     
-    public static T FontAutoScalingEnabled<T>(this T self,
+    public static T FontAutoScalingEnabledFmg<T>(this T self,
         bool fontAutoScalingEnabled)
         where T : Picker
     {
@@ -117,7 +117,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T FontAutoScalingEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T FontAutoScalingEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Picker
     {
         var context = new PropertyContext<bool>(self, Picker.FontAutoScalingEnabledProperty);
@@ -125,7 +125,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self,
         bool fontAutoScalingEnabled)
         where T : Picker
     {
@@ -133,7 +133,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Picker
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Picker.FontAutoScalingEnabledProperty);
@@ -141,7 +141,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T Items<T>(this T self,
+    public static T ItemsFmg<T>(this T self,
         IList<string> items)
         where T : Picker
     {
@@ -150,7 +150,7 @@ public static partial class PickerExtension
         return self;
     }
 
-    public static T Items<T>(this T self,
+    public static T ItemsFmg<T>(this T self,
         params string[] items)
         where T : Picker
     {
@@ -159,7 +159,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T ItemsSource<T>(this T self,
+    public static T ItemsSourceFmg<T>(this T self,
         System.Collections.IList itemsSource)
         where T : Picker
     {
@@ -167,7 +167,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T ItemsSource<T>(this T self, Func<PropertyContext<System.Collections.IList>, IPropertyBuilder<System.Collections.IList>> configure)
+    public static T ItemsSourceFmg<T>(this T self, Func<PropertyContext<System.Collections.IList>, IPropertyBuilder<System.Collections.IList>> configure)
         where T : Picker
     {
         var context = new PropertyContext<System.Collections.IList>(self, Picker.ItemsSourceProperty);
@@ -175,7 +175,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> ItemsSource<T>(this SettersContext<T> self,
+    public static SettersContext<T> ItemsSourceFmg<T>(this SettersContext<T> self,
         System.Collections.IList itemsSource)
         where T : Picker
     {
@@ -183,7 +183,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> ItemsSource<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Collections.IList>, IPropertySettersBuilder<System.Collections.IList>> configure)
+    public static SettersContext<T> ItemsSourceFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Collections.IList>, IPropertySettersBuilder<System.Collections.IList>> configure)
         where T : Picker
     {
         var context = new PropertySettersContext<System.Collections.IList>(self.XamlSetters, Picker.ItemsSourceProperty);
@@ -191,7 +191,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T SelectedIndex<T>(this T self,
+    public static T SelectedIndexFmg<T>(this T self,
         int selectedIndex)
         where T : Picker
     {
@@ -199,7 +199,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T SelectedIndex<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+    public static T SelectedIndexFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
         where T : Picker
     {
         var context = new PropertyContext<int>(self, Picker.SelectedIndexProperty);
@@ -207,7 +207,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> SelectedIndex<T>(this SettersContext<T> self,
+    public static SettersContext<T> SelectedIndexFmg<T>(this SettersContext<T> self,
         int selectedIndex)
         where T : Picker
     {
@@ -215,7 +215,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> SelectedIndex<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+    public static SettersContext<T> SelectedIndexFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
         where T : Picker
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, Picker.SelectedIndexProperty);
@@ -223,7 +223,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T SelectedItem<T>(this T self,
+    public static T SelectedItemFmg<T>(this T self,
         object selectedItem)
         where T : Picker
     {
@@ -231,7 +231,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T SelectedItem<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T SelectedItemFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : Picker
     {
         var context = new PropertyContext<object>(self, Picker.SelectedItemProperty);
@@ -239,7 +239,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> SelectedItem<T>(this SettersContext<T> self,
+    public static SettersContext<T> SelectedItemFmg<T>(this SettersContext<T> self,
         object selectedItem)
         where T : Picker
     {
@@ -247,7 +247,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> SelectedItem<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> SelectedItemFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : Picker
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, Picker.SelectedItemProperty);
@@ -255,7 +255,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T TextColor<T>(this T self,
+    public static T TextColorFmg<T>(this T self,
         Color textColor)
         where T : Picker
     {
@@ -263,7 +263,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T TextColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T TextColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : Picker
     {
         var context = new PropertyContext<Color>(self, Picker.TextColorProperty);
@@ -271,7 +271,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> TextColor<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self,
         Color textColor)
         where T : Picker
     {
@@ -279,7 +279,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> TextColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : Picker
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, Picker.TextColorProperty);
@@ -287,7 +287,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static Task<bool> AnimateTextColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateTextColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : Picker
     {
         Color fromValue = self.TextColor;
@@ -296,7 +296,7 @@ public static partial class PickerExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateTextColorTo", transform, callback, length, easing);
     }
     
-    public static T CharacterSpacing<T>(this T self,
+    public static T CharacterSpacingFmg<T>(this T self,
         double characterSpacing)
         where T : Picker
     {
@@ -304,7 +304,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T CharacterSpacing<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T CharacterSpacingFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Picker
     {
         var context = new PropertyContext<double>(self, Picker.CharacterSpacingProperty);
@@ -312,7 +312,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> CharacterSpacing<T>(this SettersContext<T> self,
+    public static SettersContext<T> CharacterSpacingFmg<T>(this SettersContext<T> self,
         double characterSpacing)
         where T : Picker
     {
@@ -320,7 +320,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> CharacterSpacing<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> CharacterSpacingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Picker
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Picker.CharacterSpacingProperty);
@@ -328,7 +328,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static Task<bool> AnimateCharacterSpacingTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateCharacterSpacingToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Picker
     {
         double fromValue = self.CharacterSpacing;
@@ -337,7 +337,7 @@ public static partial class PickerExtension
         return Transformations.AnimateAsync<double>(self, "AnimateCharacterSpacingTo", transform, callback, length, easing);
     }
     
-    public static T Title<T>(this T self,
+    public static T TitleFmg<T>(this T self,
         string title)
         where T : Picker
     {
@@ -345,7 +345,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T Title<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T TitleFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : Picker
     {
         var context = new PropertyContext<string>(self, Picker.TitleProperty);
@@ -353,7 +353,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> Title<T>(this SettersContext<T> self,
+    public static SettersContext<T> TitleFmg<T>(this SettersContext<T> self,
         string title)
         where T : Picker
     {
@@ -361,7 +361,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> Title<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> TitleFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : Picker
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, Picker.TitleProperty);
@@ -369,7 +369,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T TitleColor<T>(this T self,
+    public static T TitleColorFmg<T>(this T self,
         Color titleColor)
         where T : Picker
     {
@@ -377,7 +377,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T TitleColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T TitleColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : Picker
     {
         var context = new PropertyContext<Color>(self, Picker.TitleColorProperty);
@@ -385,7 +385,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> TitleColor<T>(this SettersContext<T> self,
+    public static SettersContext<T> TitleColorFmg<T>(this SettersContext<T> self,
         Color titleColor)
         where T : Picker
     {
@@ -393,7 +393,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> TitleColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> TitleColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : Picker
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, Picker.TitleColorProperty);
@@ -401,7 +401,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static Task<bool> AnimateTitleColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateTitleColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : Picker
     {
         Color fromValue = self.TitleColor;
@@ -410,7 +410,7 @@ public static partial class PickerExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateTitleColorTo", transform, callback, length, easing);
     }
     
-    public static T HorizontalTextAlignment<T>(this T self,
+    public static T HorizontalTextAlignmentFmg<T>(this T self,
         TextAlignment horizontalTextAlignment)
         where T : Picker
     {
@@ -418,7 +418,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T HorizontalTextAlignment<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
+    public static T HorizontalTextAlignmentFmg<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
         where T : Picker
     {
         var context = new PropertyContext<TextAlignment>(self, Picker.HorizontalTextAlignmentProperty);
@@ -426,7 +426,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalTextAlignment<T>(this SettersContext<T> self,
+    public static SettersContext<T> HorizontalTextAlignmentFmg<T>(this SettersContext<T> self,
         TextAlignment horizontalTextAlignment)
         where T : Picker
     {
@@ -434,7 +434,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalTextAlignment<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
+    public static SettersContext<T> HorizontalTextAlignmentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
         where T : Picker
     {
         var context = new PropertySettersContext<TextAlignment>(self.XamlSetters, Picker.HorizontalTextAlignmentProperty);
@@ -442,7 +442,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T VerticalTextAlignment<T>(this T self,
+    public static T VerticalTextAlignmentFmg<T>(this T self,
         TextAlignment verticalTextAlignment)
         where T : Picker
     {
@@ -450,7 +450,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T VerticalTextAlignment<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
+    public static T VerticalTextAlignmentFmg<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
         where T : Picker
     {
         var context = new PropertyContext<TextAlignment>(self, Picker.VerticalTextAlignmentProperty);
@@ -458,7 +458,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalTextAlignment<T>(this SettersContext<T> self,
+    public static SettersContext<T> VerticalTextAlignmentFmg<T>(this SettersContext<T> self,
         TextAlignment verticalTextAlignment)
         where T : Picker
     {
@@ -466,7 +466,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalTextAlignment<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
+    public static SettersContext<T> VerticalTextAlignmentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
         where T : Picker
     {
         var context = new PropertySettersContext<TextAlignment>(self.XamlSetters, Picker.VerticalTextAlignmentProperty);
@@ -474,7 +474,7 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T ItemDisplayBinding<T>(this T self,
+    public static T ItemDisplayBindingFmg<T>(this T self,
         BindingBase itemDisplayBinding)
         where T : Picker
     {
@@ -482,14 +482,14 @@ public static partial class PickerExtension
         return self;
     }
     
-    public static T OnSelectedIndexChanged<T>(this T self, EventHandler handler)
+    public static T OnSelectedIndexChangedFmg<T>(this T self, EventHandler handler)
         where T : Picker
     {
         self.SelectedIndexChanged += handler;
         return self;
     }
     
-    public static T OnSelectedIndexChanged<T>(this T self, Action<T> action)
+    public static T OnSelectedIndexChangedFmg<T>(this T self, Action<T> action)
         where T : Picker
     {
         self.SelectedIndexChanged += (o, arg) => action(self);
@@ -497,21 +497,21 @@ public static partial class PickerExtension
     }
     
 
-    public static T TextCenterHorizontal<T>(this T self)
+    public static T TextCenterHorizontalFmg<T>(this T self)
         where T : Picker
     {
         self.SetValue(Picker.HorizontalTextAlignmentProperty, TextAlignment.Center);
         return self;
     }
 
-    public static T TextCenterVertical<T>(this T self)
+    public static T TextCenterVerticalFmg<T>(this T self)
         where T : Picker
     {
         self.SetValue(Picker.VerticalTextAlignmentProperty, TextAlignment.Center);
         return self;
     }
 
-    public static T TextCenter<T>(this T self)
+    public static T TextCenterFmg<T>(this T self)
         where T : Picker
     {
         self.SetValue(Picker.HorizontalTextAlignmentProperty, TextAlignment.Center);
@@ -519,21 +519,21 @@ public static partial class PickerExtension
         return self;
     }
 
-    public static T TextTop<T>(this T self)
+    public static T TextTopFmg<T>(this T self)
         where T : Picker
     {
         self.SetValue(Picker.VerticalTextAlignmentProperty, TextAlignment.Start);
         return self;
     }
 
-    public static T TextBottom<T>(this T self)
+    public static T TextBottomFmg<T>(this T self)
         where T : Picker, Microsoft.Maui.ITextAlignment
     {
         self.SetValue(Picker.VerticalTextAlignmentProperty, TextAlignment.End);
         return self;
     }
 
-    public static T TextTopStart<T>(this T self)
+    public static T TextTopStartFmg<T>(this T self)
         where T : Picker
     {
         self.SetValue(Picker.VerticalTextAlignmentProperty, TextAlignment.Start);
@@ -541,7 +541,7 @@ public static partial class PickerExtension
         return self;
     }
 
-    public static T TextBottomStart<T>(this T self)
+    public static T TextBottomStartFmg<T>(this T self)
         where T : Picker
     {
         self.SetValue(Picker.VerticalTextAlignmentProperty, TextAlignment.End);
@@ -549,7 +549,7 @@ public static partial class PickerExtension
         return self;
     }
 
-    public static T TextTopEnd<T>(this T self)
+    public static T TextTopEndFmg<T>(this T self)
         where T : Picker
     {
         self.SetValue(Picker.VerticalTextAlignmentProperty, TextAlignment.Start);
@@ -557,7 +557,7 @@ public static partial class PickerExtension
         return self;
     }
 
-    public static T TextBottomEnd<T>(this T self)
+    public static T TextBottomEndFmg<T>(this T self)
         where T : Picker
     {
         self.SetValue(Picker.VerticalTextAlignmentProperty, TextAlignment.End);
@@ -565,14 +565,14 @@ public static partial class PickerExtension
         return self;
     }
 
-    public static T TextStart<T>(this T self)
+    public static T TextStartFmg<T>(this T self)
         where T : Picker
     {
         self.SetValue(Picker.HorizontalTextAlignmentProperty, TextAlignment.Start);
         return self;
     }
 
-    public static T TextEnd<T>(this T self)
+    public static T TextEndFmg<T>(this T self)
         where T : Picker
     {
         self.SetValue(Picker.HorizontalTextAlignmentProperty, TextAlignment.End);

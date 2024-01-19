@@ -4,7 +4,7 @@
 
 public static partial class SwitchCellExtension
 {
-    public static T OnColor<T>(this T self,
+    public static T OnColorFmg<T>(this T self,
         Color onColor)
         where T : SwitchCell
     {
@@ -12,7 +12,7 @@ public static partial class SwitchCellExtension
         return self;
     }
     
-    public static T OnColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T OnColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : SwitchCell
     {
         var context = new PropertyContext<Color>(self, SwitchCell.OnColorProperty);
@@ -20,7 +20,7 @@ public static partial class SwitchCellExtension
         return self;
     }
     
-    public static SettersContext<T> OnColor<T>(this SettersContext<T> self,
+    public static SettersContext<T> OnColorFmg<T>(this SettersContext<T> self,
         Color onColor)
         where T : SwitchCell
     {
@@ -28,7 +28,7 @@ public static partial class SwitchCellExtension
         return self;
     }
     
-    public static SettersContext<T> OnColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> OnColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : SwitchCell
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, SwitchCell.OnColorProperty);
@@ -36,7 +36,7 @@ public static partial class SwitchCellExtension
         return self;
     }
     
-    public static T On<T>(this T self,
+    public static T OnFmg<T>(this T self,
         bool on)
         where T : SwitchCell
     {
@@ -44,7 +44,7 @@ public static partial class SwitchCellExtension
         return self;
     }
     
-    public static T On<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T OnFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : SwitchCell
     {
         var context = new PropertyContext<bool>(self, SwitchCell.OnProperty);
@@ -52,7 +52,7 @@ public static partial class SwitchCellExtension
         return self;
     }
     
-    public static SettersContext<T> On<T>(this SettersContext<T> self,
+    public static SettersContext<T> OnFmg<T>(this SettersContext<T> self,
         bool on)
         where T : SwitchCell
     {
@@ -60,7 +60,7 @@ public static partial class SwitchCellExtension
         return self;
     }
     
-    public static SettersContext<T> On<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> OnFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : SwitchCell
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, SwitchCell.OnProperty);
@@ -68,7 +68,7 @@ public static partial class SwitchCellExtension
         return self;
     }
     
-    public static T Text<T>(this T self,
+    public static T TextFmg<T>(this T self,
         string text)
         where T : SwitchCell
     {
@@ -76,7 +76,7 @@ public static partial class SwitchCellExtension
         return self;
     }
     
-    public static T Text<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T TextFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : SwitchCell
     {
         var context = new PropertyContext<string>(self, SwitchCell.TextProperty);
@@ -84,7 +84,7 @@ public static partial class SwitchCellExtension
         return self;
     }
     
-    public static SettersContext<T> Text<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextFmg<T>(this SettersContext<T> self,
         string text)
         where T : SwitchCell
     {
@@ -92,7 +92,7 @@ public static partial class SwitchCellExtension
         return self;
     }
     
-    public static SettersContext<T> Text<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> TextFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : SwitchCell
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, SwitchCell.TextProperty);
@@ -100,14 +100,14 @@ public static partial class SwitchCellExtension
         return self;
     }
     
-    public static T OnOnChanged<T>(this T self, EventHandler<ToggledEventArgs> handler)
+    public static T OnOnChangedFmg<T>(this T self, EventHandler<ToggledEventArgs> handler)
         where T : SwitchCell
     {
         self.OnChanged += handler;
         return self;
     }
     
-    public static T OnOnChanged<T>(this T self, Action<T> action)
+    public static T OnOnChangedFmg<T>(this T self, Action<T> action)
         where T : SwitchCell
     {
         self.OnChanged += (o, arg) => action(self);

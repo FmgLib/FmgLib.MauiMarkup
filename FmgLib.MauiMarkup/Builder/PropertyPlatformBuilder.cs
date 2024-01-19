@@ -42,7 +42,7 @@ public sealed class PropertyPlatformBuilder<T> : IPropertyBuilder<T>
         return isSet;
     }
 
-    public PropertyPlatformBuilder<T> Default(T value)
+    public PropertyPlatformBuilder<T> DefaultFmg(T value)
     {
         if (!defaultIsSet)
         {
@@ -53,7 +53,7 @@ public sealed class PropertyPlatformBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyPlatformBuilder<T> Default(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyPlatformBuilder<T> DefaultFmg(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!defaultIsSet)
         {
@@ -64,7 +64,7 @@ public sealed class PropertyPlatformBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyPlatformBuilder<T> OnMacCatalyst(T value)
+    public PropertyPlatformBuilder<T> OnMacCatalystFmg(T value)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.MacCatalyst)
         {
@@ -76,7 +76,7 @@ public sealed class PropertyPlatformBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyPlatformBuilder<T> OnMacCatalyst(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyPlatformBuilder<T> OnMacCatalystFmg(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.MacCatalyst)
         {
@@ -86,7 +86,7 @@ public sealed class PropertyPlatformBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyPlatformBuilder<T> OniOS(T value)
+    public PropertyPlatformBuilder<T> OniOSFmg(T value)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.iOS)
         {
@@ -98,7 +98,7 @@ public sealed class PropertyPlatformBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyPlatformBuilder<T> OniOS(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyPlatformBuilder<T> OniOSFmg(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.iOS)
         {
@@ -108,7 +108,7 @@ public sealed class PropertyPlatformBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyPlatformBuilder<T> OnAndroid(T value)
+    public PropertyPlatformBuilder<T> OnAndroidFmg(T value)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.Android)
         {
@@ -120,7 +120,7 @@ public sealed class PropertyPlatformBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyPlatformBuilder<T> OnAndroid(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyPlatformBuilder<T> OnAndroidFmg(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.Android)
         {
@@ -130,7 +130,7 @@ public sealed class PropertyPlatformBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyPlatformBuilder<T> OnWinUI(T value)
+    public PropertyPlatformBuilder<T> OnWinUIFmg(T value)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.WinUI)
         {
@@ -142,7 +142,7 @@ public sealed class PropertyPlatformBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyPlatformBuilder<T> OnWinUI(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyPlatformBuilder<T> OnWinUIFmg(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.WinUI)
         {
@@ -152,7 +152,7 @@ public sealed class PropertyPlatformBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyPlatformBuilder<T> OnTizen(T value)
+    public PropertyPlatformBuilder<T> OnTizenFmg(T value)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.Tizen)
         {
@@ -164,7 +164,7 @@ public sealed class PropertyPlatformBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyPlatformBuilder<T> OnTizen(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyPlatformBuilder<T> OnTizenFmg(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.Tizen)
         {

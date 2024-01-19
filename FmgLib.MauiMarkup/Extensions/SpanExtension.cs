@@ -4,7 +4,7 @@
 
 public static partial class SpanExtension
 {
-    public static T Style<T>(this T self,
+    public static T StyleFmg<T>(this T self,
         Style style)
         where T : Span
     {
@@ -12,7 +12,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T Style<T>(this T self, Func<PropertyContext<Style>, IPropertyBuilder<Style>> configure)
+    public static T StyleFmg<T>(this T self, Func<PropertyContext<Style>, IPropertyBuilder<Style>> configure)
         where T : Span
     {
         var context = new PropertyContext<Style>(self, Span.StyleProperty);
@@ -20,7 +20,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> Style<T>(this SettersContext<T> self,
+    public static SettersContext<T> StyleFmg<T>(this SettersContext<T> self,
         Style style)
         where T : Span
     {
@@ -28,7 +28,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> Style<T>(this SettersContext<T> self, Func<PropertySettersContext<Style>, IPropertySettersBuilder<Style>> configure)
+    public static SettersContext<T> StyleFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Style>, IPropertySettersBuilder<Style>> configure)
         where T : Span
     {
         var context = new PropertySettersContext<Style>(self.XamlSetters, Span.StyleProperty);
@@ -36,7 +36,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T BackgroundColor<T>(this T self,
+    public static T BackgroundColorFmg<T>(this T self,
         Color backgroundColor)
         where T : Span
     {
@@ -44,7 +44,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T BackgroundColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T BackgroundColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : Span
     {
         var context = new PropertyContext<Color>(self, Span.BackgroundColorProperty);
@@ -52,7 +52,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> BackgroundColor<T>(this SettersContext<T> self,
+    public static SettersContext<T> BackgroundColorFmg<T>(this SettersContext<T> self,
         Color backgroundColor)
         where T : Span
     {
@@ -60,7 +60,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> BackgroundColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> BackgroundColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : Span
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, Span.BackgroundColorProperty);
@@ -68,7 +68,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T TextColor<T>(this T self,
+    public static T TextColorFmg<T>(this T self,
         Color textColor)
         where T : Span
     {
@@ -76,7 +76,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T TextColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T TextColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : Span
     {
         var context = new PropertyContext<Color>(self, Span.TextColorProperty);
@@ -84,7 +84,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> TextColor<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self,
         Color textColor)
         where T : Span
     {
@@ -92,7 +92,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> TextColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : Span
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, Span.TextColorProperty);
@@ -100,7 +100,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T CharacterSpacing<T>(this T self,
+    public static T CharacterSpacingFmg<T>(this T self,
         double characterSpacing)
         where T : Span
     {
@@ -108,7 +108,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T CharacterSpacing<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T CharacterSpacingFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Span
     {
         var context = new PropertyContext<double>(self, Span.CharacterSpacingProperty);
@@ -116,7 +116,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> CharacterSpacing<T>(this SettersContext<T> self,
+    public static SettersContext<T> CharacterSpacingFmg<T>(this SettersContext<T> self,
         double characterSpacing)
         where T : Span
     {
@@ -124,7 +124,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> CharacterSpacing<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> CharacterSpacingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Span
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Span.CharacterSpacingProperty);
@@ -132,7 +132,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T TextTransform<T>(this T self,
+    public static T TextTransformFmg<T>(this T self,
         TextTransform textTransform)
         where T : Span
     {
@@ -140,7 +140,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T TextTransform<T>(this T self, Func<PropertyContext<TextTransform>, IPropertyBuilder<TextTransform>> configure)
+    public static T TextTransformFmg<T>(this T self, Func<PropertyContext<TextTransform>, IPropertyBuilder<TextTransform>> configure)
         where T : Span
     {
         var context = new PropertyContext<TextTransform>(self, Span.TextTransformProperty);
@@ -148,7 +148,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> TextTransform<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextTransformFmg<T>(this SettersContext<T> self,
         TextTransform textTransform)
         where T : Span
     {
@@ -156,7 +156,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> TextTransform<T>(this SettersContext<T> self, Func<PropertySettersContext<TextTransform>, IPropertySettersBuilder<TextTransform>> configure)
+    public static SettersContext<T> TextTransformFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextTransform>, IPropertySettersBuilder<TextTransform>> configure)
         where T : Span
     {
         var context = new PropertySettersContext<TextTransform>(self.XamlSetters, Span.TextTransformProperty);
@@ -164,7 +164,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T Text<T>(this T self,
+    public static T TextFmg<T>(this T self,
         string text)
         where T : Span
     {
@@ -172,7 +172,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T Text<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T TextFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : Span
     {
         var context = new PropertyContext<string>(self, Span.TextProperty);
@@ -180,7 +180,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> Text<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextFmg<T>(this SettersContext<T> self,
         string text)
         where T : Span
     {
@@ -188,7 +188,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> Text<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> TextFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : Span
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, Span.TextProperty);
@@ -196,7 +196,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T FontAttributes<T>(this T self,
+    public static T FontAttributesFmg<T>(this T self,
         FontAttributes fontAttributes)
         where T : Span
     {
@@ -204,7 +204,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T FontAttributes<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
+    public static T FontAttributesFmg<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
         where T : Span
     {
         var context = new PropertyContext<FontAttributes>(self, Span.FontAttributesProperty);
@@ -212,7 +212,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self,
         FontAttributes fontAttributes)
         where T : Span
     {
@@ -220,7 +220,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
+    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
         where T : Span
     {
         var context = new PropertySettersContext<FontAttributes>(self.XamlSetters, Span.FontAttributesProperty);
@@ -228,7 +228,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T FontFamily<T>(this T self,
+    public static T FontFamilyFmg<T>(this T self,
         string fontFamily)
         where T : Span
     {
@@ -236,7 +236,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T FontFamily<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T FontFamilyFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : Span
     {
         var context = new PropertyContext<string>(self, Span.FontFamilyProperty);
@@ -244,7 +244,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self,
         string fontFamily)
         where T : Span
     {
@@ -252,7 +252,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : Span
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, Span.FontFamilyProperty);
@@ -260,7 +260,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T FontSize<T>(this T self,
+    public static T FontSizeFmg<T>(this T self,
         double fontSize)
         where T : Span
     {
@@ -268,7 +268,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T FontSize<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T FontSizeFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Span
     {
         var context = new PropertyContext<double>(self, Span.FontSizeProperty);
@@ -276,7 +276,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> FontSize<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self,
         double fontSize)
         where T : Span
     {
@@ -284,7 +284,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> FontSize<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Span
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Span.FontSizeProperty);
@@ -292,7 +292,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T FontAutoScalingEnabled<T>(this T self,
+    public static T FontAutoScalingEnabledFmg<T>(this T self,
         bool fontAutoScalingEnabled)
         where T : Span
     {
@@ -300,7 +300,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T FontAutoScalingEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T FontAutoScalingEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Span
     {
         var context = new PropertyContext<bool>(self, Span.FontAutoScalingEnabledProperty);
@@ -308,7 +308,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self,
         bool fontAutoScalingEnabled)
         where T : Span
     {
@@ -316,7 +316,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Span
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Span.FontAutoScalingEnabledProperty);
@@ -324,7 +324,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T TextDecorations<T>(this T self,
+    public static T TextDecorationsFmg<T>(this T self,
         TextDecorations textDecorations)
         where T : Span
     {
@@ -332,7 +332,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T TextDecorations<T>(this T self, Func<PropertyContext<TextDecorations>, IPropertyBuilder<TextDecorations>> configure)
+    public static T TextDecorationsFmg<T>(this T self, Func<PropertyContext<TextDecorations>, IPropertyBuilder<TextDecorations>> configure)
         where T : Span
     {
         var context = new PropertyContext<TextDecorations>(self, Span.TextDecorationsProperty);
@@ -340,7 +340,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> TextDecorations<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextDecorationsFmg<T>(this SettersContext<T> self,
         TextDecorations textDecorations)
         where T : Span
     {
@@ -348,7 +348,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> TextDecorations<T>(this SettersContext<T> self, Func<PropertySettersContext<TextDecorations>, IPropertySettersBuilder<TextDecorations>> configure)
+    public static SettersContext<T> TextDecorationsFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextDecorations>, IPropertySettersBuilder<TextDecorations>> configure)
         where T : Span
     {
         var context = new PropertySettersContext<TextDecorations>(self.XamlSetters, Span.TextDecorationsProperty);
@@ -356,7 +356,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T LineHeight<T>(this T self,
+    public static T LineHeightFmg<T>(this T self,
         double lineHeight)
         where T : Span
     {
@@ -364,7 +364,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static T LineHeight<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T LineHeightFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Span
     {
         var context = new PropertyContext<double>(self, Span.LineHeightProperty);
@@ -372,7 +372,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> LineHeight<T>(this SettersContext<T> self,
+    public static SettersContext<T> LineHeightFmg<T>(this SettersContext<T> self,
         double lineHeight)
         where T : Span
     {
@@ -380,7 +380,7 @@ public static partial class SpanExtension
         return self;
     }
     
-    public static SettersContext<T> LineHeight<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> LineHeightFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Span
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Span.LineHeightProperty);

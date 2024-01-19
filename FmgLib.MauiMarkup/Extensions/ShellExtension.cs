@@ -4,7 +4,7 @@
 
 public static partial class ShellExtension
 {
-    public static T FlyoutVerticalScrollMode<T>(this T self,
+    public static T FlyoutVerticalScrollModeFmg<T>(this T self,
         ScrollMode flyoutVerticalScrollMode)
         where T : Shell
     {
@@ -12,7 +12,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutVerticalScrollMode<T>(this T self, Func<PropertyContext<ScrollMode>, IPropertyBuilder<ScrollMode>> configure)
+    public static T FlyoutVerticalScrollModeFmg<T>(this T self, Func<PropertyContext<ScrollMode>, IPropertyBuilder<ScrollMode>> configure)
         where T : Shell
     {
         var context = new PropertyContext<ScrollMode>(self, Shell.FlyoutVerticalScrollModeProperty);
@@ -20,7 +20,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutVerticalScrollMode<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutVerticalScrollModeFmg<T>(this SettersContext<T> self,
         ScrollMode flyoutVerticalScrollMode)
         where T : Shell
     {
@@ -28,7 +28,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutVerticalScrollMode<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollMode>, IPropertySettersBuilder<ScrollMode>> configure)
+    public static SettersContext<T> FlyoutVerticalScrollModeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollMode>, IPropertySettersBuilder<ScrollMode>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<ScrollMode>(self.XamlSetters, Shell.FlyoutVerticalScrollModeProperty);
@@ -36,7 +36,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutIcon<T>(this T self,
+    public static T FlyoutIconFmg<T>(this T self,
         ImageSource flyoutIcon)
         where T : Shell
     {
@@ -44,7 +44,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutIcon<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
+    public static T FlyoutIconFmg<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
         where T : Shell
     {
         var context = new PropertyContext<ImageSource>(self, Shell.FlyoutIconProperty);
@@ -52,7 +52,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutIcon<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutIconFmg<T>(this SettersContext<T> self,
         ImageSource flyoutIcon)
         where T : Shell
     {
@@ -60,7 +60,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutIcon<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
+    public static SettersContext<T> FlyoutIconFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<ImageSource>(self.XamlSetters, Shell.FlyoutIconProperty);
@@ -68,7 +68,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T CurrentItem<T>(this T self,
+    public static T CurrentItemFmg<T>(this T self,
         ShellItem currentItem)
         where T : Shell
     {
@@ -76,7 +76,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T CurrentItem<T>(this T self, Func<PropertyContext<ShellItem>, IPropertyBuilder<ShellItem>> configure)
+    public static T CurrentItemFmg<T>(this T self, Func<PropertyContext<ShellItem>, IPropertyBuilder<ShellItem>> configure)
         where T : Shell
     {
         var context = new PropertyContext<ShellItem>(self, Shell.CurrentItemProperty);
@@ -84,7 +84,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> CurrentItem<T>(this SettersContext<T> self,
+    public static SettersContext<T> CurrentItemFmg<T>(this SettersContext<T> self,
         ShellItem currentItem)
         where T : Shell
     {
@@ -92,7 +92,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> CurrentItem<T>(this SettersContext<T> self, Func<PropertySettersContext<ShellItem>, IPropertySettersBuilder<ShellItem>> configure)
+    public static SettersContext<T> CurrentItemFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ShellItem>, IPropertySettersBuilder<ShellItem>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<ShellItem>(self.XamlSetters, Shell.CurrentItemProperty);
@@ -100,7 +100,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutBackgroundImage<T>(this T self,
+    public static T FlyoutBackgroundImageFmg<T>(this T self,
         ImageSource flyoutBackgroundImage)
         where T : Shell
     {
@@ -108,7 +108,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutBackgroundImage<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
+    public static T FlyoutBackgroundImageFmg<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
         where T : Shell
     {
         var context = new PropertyContext<ImageSource>(self, Shell.FlyoutBackgroundImageProperty);
@@ -116,7 +116,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutBackgroundImage<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutBackgroundImageFmg<T>(this SettersContext<T> self,
         ImageSource flyoutBackgroundImage)
         where T : Shell
     {
@@ -124,7 +124,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutBackgroundImage<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
+    public static SettersContext<T> FlyoutBackgroundImageFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<ImageSource>(self.XamlSetters, Shell.FlyoutBackgroundImageProperty);
@@ -132,7 +132,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutBackgroundImageAspect<T>(this T self,
+    public static T FlyoutBackgroundImageAspectFmg<T>(this T self,
         Aspect flyoutBackgroundImageAspect)
         where T : Shell
     {
@@ -140,7 +140,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutBackgroundImageAspect<T>(this T self, Func<PropertyContext<Aspect>, IPropertyBuilder<Aspect>> configure)
+    public static T FlyoutBackgroundImageAspectFmg<T>(this T self, Func<PropertyContext<Aspect>, IPropertyBuilder<Aspect>> configure)
         where T : Shell
     {
         var context = new PropertyContext<Aspect>(self, Shell.FlyoutBackgroundImageAspectProperty);
@@ -148,7 +148,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutBackgroundImageAspect<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutBackgroundImageAspectFmg<T>(this SettersContext<T> self,
         Aspect flyoutBackgroundImageAspect)
         where T : Shell
     {
@@ -156,7 +156,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutBackgroundImageAspect<T>(this SettersContext<T> self, Func<PropertySettersContext<Aspect>, IPropertySettersBuilder<Aspect>> configure)
+    public static SettersContext<T> FlyoutBackgroundImageAspectFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Aspect>, IPropertySettersBuilder<Aspect>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<Aspect>(self.XamlSetters, Shell.FlyoutBackgroundImageAspectProperty);
@@ -164,7 +164,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutBackgroundColor<T>(this T self,
+    public static T FlyoutBackgroundColorFmg<T>(this T self,
         Color flyoutBackgroundColor)
         where T : Shell
     {
@@ -172,7 +172,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutBackgroundColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T FlyoutBackgroundColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : Shell
     {
         var context = new PropertyContext<Color>(self, Shell.FlyoutBackgroundColorProperty);
@@ -180,7 +180,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutBackgroundColor<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutBackgroundColorFmg<T>(this SettersContext<T> self,
         Color flyoutBackgroundColor)
         where T : Shell
     {
@@ -188,7 +188,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutBackgroundColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> FlyoutBackgroundColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, Shell.FlyoutBackgroundColorProperty);
@@ -196,7 +196,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static Task<bool> AnimateFlyoutBackgroundColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateFlyoutBackgroundColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : Shell
     {
         Color fromValue = self.FlyoutBackgroundColor;
@@ -205,7 +205,7 @@ public static partial class ShellExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateFlyoutBackgroundColorTo", transform, callback, length, easing);
     }
     
-    public static T FlyoutBackground<T>(this T self,
+    public static T FlyoutBackgroundFmg<T>(this T self,
         Brush flyoutBackground)
         where T : Shell
     {
@@ -213,7 +213,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutBackground<T>(this T self, Func<PropertyContext<Brush>, IPropertyBuilder<Brush>> configure)
+    public static T FlyoutBackgroundFmg<T>(this T self, Func<PropertyContext<Brush>, IPropertyBuilder<Brush>> configure)
         where T : Shell
     {
         var context = new PropertyContext<Brush>(self, Shell.FlyoutBackgroundProperty);
@@ -221,7 +221,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutBackground<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutBackgroundFmg<T>(this SettersContext<T> self,
         Brush flyoutBackground)
         where T : Shell
     {
@@ -229,7 +229,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutBackground<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush>, IPropertySettersBuilder<Brush>> configure)
+    public static SettersContext<T> FlyoutBackgroundFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush>, IPropertySettersBuilder<Brush>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<Brush>(self.XamlSetters, Shell.FlyoutBackgroundProperty);
@@ -237,7 +237,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutBackdrop<T>(this T self,
+    public static T FlyoutBackdropFmg<T>(this T self,
         Brush flyoutBackdrop)
         where T : Shell
     {
@@ -245,7 +245,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutBackdrop<T>(this T self, Func<PropertyContext<Brush>, IPropertyBuilder<Brush>> configure)
+    public static T FlyoutBackdropFmg<T>(this T self, Func<PropertyContext<Brush>, IPropertyBuilder<Brush>> configure)
         where T : Shell
     {
         var context = new PropertyContext<Brush>(self, Shell.FlyoutBackdropProperty);
@@ -253,7 +253,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutBackdrop<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutBackdropFmg<T>(this SettersContext<T> self,
         Brush flyoutBackdrop)
         where T : Shell
     {
@@ -261,7 +261,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutBackdrop<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush>, IPropertySettersBuilder<Brush>> configure)
+    public static SettersContext<T> FlyoutBackdropFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush>, IPropertySettersBuilder<Brush>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<Brush>(self.XamlSetters, Shell.FlyoutBackdropProperty);
@@ -269,7 +269,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutWidth<T>(this T self,
+    public static T FlyoutWidthFmg<T>(this T self,
         double flyoutWidth)
         where T : Shell
     {
@@ -277,7 +277,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutWidth<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T FlyoutWidthFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Shell
     {
         var context = new PropertyContext<double>(self, Shell.FlyoutWidthProperty);
@@ -285,7 +285,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutWidth<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutWidthFmg<T>(this SettersContext<T> self,
         double flyoutWidth)
         where T : Shell
     {
@@ -293,7 +293,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutWidth<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> FlyoutWidthFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Shell.FlyoutWidthProperty);
@@ -301,7 +301,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static Task<bool> AnimateFlyoutWidthTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateFlyoutWidthToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Shell
     {
         double fromValue = self.FlyoutWidth;
@@ -310,7 +310,7 @@ public static partial class ShellExtension
         return Transformations.AnimateAsync<double>(self, "AnimateFlyoutWidthTo", transform, callback, length, easing);
     }
     
-    public static T FlyoutHeight<T>(this T self,
+    public static T FlyoutHeightFmg<T>(this T self,
         double flyoutHeight)
         where T : Shell
     {
@@ -318,7 +318,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutHeight<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T FlyoutHeightFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Shell
     {
         var context = new PropertyContext<double>(self, Shell.FlyoutHeightProperty);
@@ -326,7 +326,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutHeight<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutHeightFmg<T>(this SettersContext<T> self,
         double flyoutHeight)
         where T : Shell
     {
@@ -334,7 +334,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutHeight<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> FlyoutHeightFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Shell.FlyoutHeightProperty);
@@ -342,7 +342,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static Task<bool> AnimateFlyoutHeightTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateFlyoutHeightToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Shell
     {
         double fromValue = self.FlyoutHeight;
@@ -351,7 +351,7 @@ public static partial class ShellExtension
         return Transformations.AnimateAsync<double>(self, "AnimateFlyoutHeightTo", transform, callback, length, easing);
     }
     
-    public static T FlyoutBehavior<T>(this T self,
+    public static T FlyoutBehaviorFmg<T>(this T self,
         FlyoutBehavior flyoutBehavior)
         where T : Shell
     {
@@ -359,7 +359,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutBehavior<T>(this T self, Func<PropertyContext<FlyoutBehavior>, IPropertyBuilder<FlyoutBehavior>> configure)
+    public static T FlyoutBehaviorFmg<T>(this T self, Func<PropertyContext<FlyoutBehavior>, IPropertyBuilder<FlyoutBehavior>> configure)
         where T : Shell
     {
         var context = new PropertyContext<FlyoutBehavior>(self, Shell.FlyoutBehaviorProperty);
@@ -367,7 +367,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutBehavior<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutBehaviorFmg<T>(this SettersContext<T> self,
         FlyoutBehavior flyoutBehavior)
         where T : Shell
     {
@@ -375,7 +375,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutBehavior<T>(this SettersContext<T> self, Func<PropertySettersContext<FlyoutBehavior>, IPropertySettersBuilder<FlyoutBehavior>> configure)
+    public static SettersContext<T> FlyoutBehaviorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<FlyoutBehavior>, IPropertySettersBuilder<FlyoutBehavior>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<FlyoutBehavior>(self.XamlSetters, Shell.FlyoutBehaviorProperty);
@@ -383,7 +383,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutHeader<T>(this T self,
+    public static T FlyoutHeaderFmg<T>(this T self,
         object flyoutHeader)
         where T : Shell
     {
@@ -391,7 +391,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutHeader<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T FlyoutHeaderFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : Shell
     {
         var context = new PropertyContext<object>(self, Shell.FlyoutHeaderProperty);
@@ -399,7 +399,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutHeader<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutHeaderFmg<T>(this SettersContext<T> self,
         object flyoutHeader)
         where T : Shell
     {
@@ -407,7 +407,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutHeader<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> FlyoutHeaderFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, Shell.FlyoutHeaderProperty);
@@ -415,7 +415,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutFooter<T>(this T self,
+    public static T FlyoutFooterFmg<T>(this T self,
         object flyoutFooter)
         where T : Shell
     {
@@ -423,7 +423,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutFooter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T FlyoutFooterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : Shell
     {
         var context = new PropertyContext<object>(self, Shell.FlyoutFooterProperty);
@@ -431,7 +431,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutFooter<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutFooterFmg<T>(this SettersContext<T> self,
         object flyoutFooter)
         where T : Shell
     {
@@ -439,7 +439,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutFooter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> FlyoutFooterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, Shell.FlyoutFooterProperty);
@@ -447,7 +447,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutHeaderBehavior<T>(this T self,
+    public static T FlyoutHeaderBehaviorFmg<T>(this T self,
         FlyoutHeaderBehavior flyoutHeaderBehavior)
         where T : Shell
     {
@@ -455,7 +455,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutHeaderBehavior<T>(this T self, Func<PropertyContext<FlyoutHeaderBehavior>, IPropertyBuilder<FlyoutHeaderBehavior>> configure)
+    public static T FlyoutHeaderBehaviorFmg<T>(this T self, Func<PropertyContext<FlyoutHeaderBehavior>, IPropertyBuilder<FlyoutHeaderBehavior>> configure)
         where T : Shell
     {
         var context = new PropertyContext<FlyoutHeaderBehavior>(self, Shell.FlyoutHeaderBehaviorProperty);
@@ -463,7 +463,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutHeaderBehavior<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutHeaderBehaviorFmg<T>(this SettersContext<T> self,
         FlyoutHeaderBehavior flyoutHeaderBehavior)
         where T : Shell
     {
@@ -471,7 +471,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutHeaderBehavior<T>(this SettersContext<T> self, Func<PropertySettersContext<FlyoutHeaderBehavior>, IPropertySettersBuilder<FlyoutHeaderBehavior>> configure)
+    public static SettersContext<T> FlyoutHeaderBehaviorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<FlyoutHeaderBehavior>, IPropertySettersBuilder<FlyoutHeaderBehavior>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<FlyoutHeaderBehavior>(self.XamlSetters, Shell.FlyoutHeaderBehaviorProperty);
@@ -479,7 +479,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutHeaderTemplate<T>(this T self,
+    public static T FlyoutHeaderTemplateFmg<T>(this T self,
         DataTemplate flyoutHeaderTemplate)
         where T : Shell
     {
@@ -487,7 +487,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutHeaderTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T FlyoutHeaderTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : Shell
     {
         var context = new PropertyContext<DataTemplate>(self, Shell.FlyoutHeaderTemplateProperty);
@@ -495,7 +495,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutHeaderTemplate<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutHeaderTemplateFmg<T>(this SettersContext<T> self,
         DataTemplate flyoutHeaderTemplate)
         where T : Shell
     {
@@ -503,7 +503,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutHeaderTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> FlyoutHeaderTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, Shell.FlyoutHeaderTemplateProperty);
@@ -511,14 +511,14 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutHeaderTemplate<T>(this T self, Func<object> loadTemplate)
+    public static T FlyoutHeaderTemplateFmg<T>(this T self, Func<object> loadTemplate)
         where T : Shell
     {
         self.SetValue(Shell.FlyoutHeaderTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static T FlyoutFooterTemplate<T>(this T self,
+    public static T FlyoutFooterTemplateFmg<T>(this T self,
         DataTemplate flyoutFooterTemplate)
         where T : Shell
     {
@@ -526,7 +526,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutFooterTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T FlyoutFooterTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : Shell
     {
         var context = new PropertyContext<DataTemplate>(self, Shell.FlyoutFooterTemplateProperty);
@@ -534,7 +534,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutFooterTemplate<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutFooterTemplateFmg<T>(this SettersContext<T> self,
         DataTemplate flyoutFooterTemplate)
         where T : Shell
     {
@@ -542,7 +542,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutFooterTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> FlyoutFooterTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, Shell.FlyoutFooterTemplateProperty);
@@ -550,14 +550,14 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutFooterTemplate<T>(this T self, Func<object> loadTemplate)
+    public static T FlyoutFooterTemplateFmg<T>(this T self, Func<object> loadTemplate)
         where T : Shell
     {
         self.SetValue(Shell.FlyoutFooterTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static T FlyoutIsPresented<T>(this T self,
+    public static T FlyoutIsPresentedFmg<T>(this T self,
         bool flyoutIsPresented)
         where T : Shell
     {
@@ -565,7 +565,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutIsPresented<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T FlyoutIsPresentedFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Shell
     {
         var context = new PropertyContext<bool>(self, Shell.FlyoutIsPresentedProperty);
@@ -573,7 +573,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutIsPresented<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutIsPresentedFmg<T>(this SettersContext<T> self,
         bool flyoutIsPresented)
         where T : Shell
     {
@@ -581,7 +581,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutIsPresented<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> FlyoutIsPresentedFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Shell.FlyoutIsPresentedProperty);
@@ -589,7 +589,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T Items<T>(this T self,
+    public static T ItemsFmg<T>(this T self,
         IList<ShellItem> items)
         where T : Shell
     {
@@ -598,7 +598,7 @@ public static partial class ShellExtension
         return self;
     }
 
-    public static T Items<T>(this T self,
+    public static T ItemsFmg<T>(this T self,
         params ShellItem[] items)
         where T : Shell
     {
@@ -607,7 +607,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T Items<T>(this T self, Func<PropertyContext<IList<ShellItem>>, IPropertyBuilder<IList<ShellItem>>> configure)
+    public static T ItemsFmg<T>(this T self, Func<PropertyContext<IList<ShellItem>>, IPropertyBuilder<IList<ShellItem>>> configure)
         where T : Shell
     {
         var context = new PropertyContext<IList<ShellItem>>(self, Shell.ItemsProperty);
@@ -615,7 +615,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T ItemTemplate<T>(this T self,
+    public static T ItemTemplateFmg<T>(this T self,
         DataTemplate itemTemplate)
         where T : Shell
     {
@@ -623,7 +623,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T ItemTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T ItemTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : Shell
     {
         var context = new PropertyContext<DataTemplate>(self, Shell.ItemTemplateProperty);
@@ -631,7 +631,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> ItemTemplate<T>(this SettersContext<T> self,
+    public static SettersContext<T> ItemTemplateFmg<T>(this SettersContext<T> self,
         DataTemplate itemTemplate)
         where T : Shell
     {
@@ -639,7 +639,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> ItemTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> ItemTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, Shell.ItemTemplateProperty);
@@ -647,14 +647,14 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T ItemTemplate<T>(this T self, Func<object> loadTemplate)
+    public static T ItemTemplateFmg<T>(this T self, Func<object> loadTemplate)
         where T : Shell
     {
         self.SetValue(Shell.ItemTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static T MenuItemTemplate<T>(this T self,
+    public static T MenuItemTemplateFmg<T>(this T self,
         DataTemplate menuItemTemplate)
         where T : Shell
     {
@@ -662,7 +662,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T MenuItemTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T MenuItemTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : Shell
     {
         var context = new PropertyContext<DataTemplate>(self, Shell.MenuItemTemplateProperty);
@@ -670,7 +670,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> MenuItemTemplate<T>(this SettersContext<T> self,
+    public static SettersContext<T> MenuItemTemplateFmg<T>(this SettersContext<T> self,
         DataTemplate menuItemTemplate)
         where T : Shell
     {
@@ -678,7 +678,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> MenuItemTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> MenuItemTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, Shell.MenuItemTemplateProperty);
@@ -686,14 +686,14 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T MenuItemTemplate<T>(this T self, Func<object> loadTemplate)
+    public static T MenuItemTemplateFmg<T>(this T self, Func<object> loadTemplate)
         where T : Shell
     {
         self.SetValue(Shell.MenuItemTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static T FlyoutContent<T>(this T self,
+    public static T FlyoutContentFmg<T>(this T self,
         object flyoutContent)
         where T : Shell
     {
@@ -701,7 +701,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutContent<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T FlyoutContentFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : Shell
     {
         var context = new PropertyContext<object>(self, Shell.FlyoutContentProperty);
@@ -709,7 +709,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutContent<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutContentFmg<T>(this SettersContext<T> self,
         object flyoutContent)
         where T : Shell
     {
@@ -717,7 +717,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutContent<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> FlyoutContentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, Shell.FlyoutContentProperty);
@@ -725,7 +725,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutContentTemplate<T>(this T self,
+    public static T FlyoutContentTemplateFmg<T>(this T self,
         DataTemplate flyoutContentTemplate)
         where T : Shell
     {
@@ -733,7 +733,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutContentTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T FlyoutContentTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : Shell
     {
         var context = new PropertyContext<DataTemplate>(self, Shell.FlyoutContentTemplateProperty);
@@ -741,7 +741,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutContentTemplate<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutContentTemplateFmg<T>(this SettersContext<T> self,
         DataTemplate flyoutContentTemplate)
         where T : Shell
     {
@@ -749,7 +749,7 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutContentTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> FlyoutContentTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : Shell
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, Shell.FlyoutContentTemplateProperty);
@@ -757,35 +757,35 @@ public static partial class ShellExtension
         return self;
     }
     
-    public static T FlyoutContentTemplate<T>(this T self, Func<object> loadTemplate)
+    public static T FlyoutContentTemplateFmg<T>(this T self, Func<object> loadTemplate)
         where T : Shell
     {
         self.SetValue(Shell.FlyoutContentTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static T OnNavigated<T>(this T self, EventHandler<ShellNavigatedEventArgs> handler)
+    public static T OnNavigatedFmg<T>(this T self, EventHandler<ShellNavigatedEventArgs> handler)
         where T : Shell
     {
         self.Navigated += handler;
         return self;
     }
     
-    public static T OnNavigated<T>(this T self, Action<T> action)
+    public static T OnNavigatedFmg<T>(this T self, Action<T> action)
         where T : Shell
     {
         self.Navigated += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnNavigating<T>(this T self, EventHandler<ShellNavigatingEventArgs> handler)
+    public static T OnNavigatingFmg<T>(this T self, EventHandler<ShellNavigatingEventArgs> handler)
         where T : Shell
     {
         self.Navigating += handler;
         return self;
     }
     
-    public static T OnNavigating<T>(this T self, Action<T> action)
+    public static T OnNavigatingFmg<T>(this T self, Action<T> action)
         where T : Shell
     {
         self.Navigating += (o, arg) => action(self);

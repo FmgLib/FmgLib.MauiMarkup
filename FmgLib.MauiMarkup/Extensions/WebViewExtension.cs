@@ -4,7 +4,7 @@
 
 public static partial class WebViewExtension
 {
-    public static T Cookies<T>(this T self,
+    public static T CookiesFmg<T>(this T self,
         System.Net.CookieContainer cookies)
         where T : WebView
     {
@@ -12,7 +12,7 @@ public static partial class WebViewExtension
         return self;
     }
     
-    public static T Cookies<T>(this T self, Func<PropertyContext<System.Net.CookieContainer>, IPropertyBuilder<System.Net.CookieContainer>> configure)
+    public static T CookiesFmg<T>(this T self, Func<PropertyContext<System.Net.CookieContainer>, IPropertyBuilder<System.Net.CookieContainer>> configure)
         where T : WebView
     {
         var context = new PropertyContext<System.Net.CookieContainer>(self, WebView.CookiesProperty);
@@ -20,7 +20,7 @@ public static partial class WebViewExtension
         return self;
     }
     
-    public static SettersContext<T> Cookies<T>(this SettersContext<T> self,
+    public static SettersContext<T> CookiesFmg<T>(this SettersContext<T> self,
         System.Net.CookieContainer cookies)
         where T : WebView
     {
@@ -28,7 +28,7 @@ public static partial class WebViewExtension
         return self;
     }
     
-    public static SettersContext<T> Cookies<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Net.CookieContainer>, IPropertySettersBuilder<System.Net.CookieContainer>> configure)
+    public static SettersContext<T> CookiesFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Net.CookieContainer>, IPropertySettersBuilder<System.Net.CookieContainer>> configure)
         where T : WebView
     {
         var context = new PropertySettersContext<System.Net.CookieContainer>(self.XamlSetters, WebView.CookiesProperty);
@@ -36,7 +36,7 @@ public static partial class WebViewExtension
         return self;
     }
     
-    public static T Source<T>(this T self,
+    public static T SourceFmg<T>(this T self,
         WebViewSource source)
         where T : WebView
     {
@@ -44,7 +44,7 @@ public static partial class WebViewExtension
         return self;
     }
     
-    public static T Source<T>(this T self, Func<PropertyContext<WebViewSource>, IPropertyBuilder<WebViewSource>> configure)
+    public static T SourceFmg<T>(this T self, Func<PropertyContext<WebViewSource>, IPropertyBuilder<WebViewSource>> configure)
         where T : WebView
     {
         var context = new PropertyContext<WebViewSource>(self, WebView.SourceProperty);
@@ -52,7 +52,7 @@ public static partial class WebViewExtension
         return self;
     }
     
-    public static SettersContext<T> Source<T>(this SettersContext<T> self,
+    public static SettersContext<T> SourceFmg<T>(this SettersContext<T> self,
         WebViewSource source)
         where T : WebView
     {
@@ -60,7 +60,7 @@ public static partial class WebViewExtension
         return self;
     }
     
-    public static SettersContext<T> Source<T>(this SettersContext<T> self, Func<PropertySettersContext<WebViewSource>, IPropertySettersBuilder<WebViewSource>> configure)
+    public static SettersContext<T> SourceFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<WebViewSource>, IPropertySettersBuilder<WebViewSource>> configure)
         where T : WebView
     {
         var context = new PropertySettersContext<WebViewSource>(self.XamlSetters, WebView.SourceProperty);
@@ -68,28 +68,28 @@ public static partial class WebViewExtension
         return self;
     }
     
-    public static T OnNavigated<T>(this T self, EventHandler<WebNavigatedEventArgs> handler)
+    public static T OnNavigatedFmg<T>(this T self, EventHandler<WebNavigatedEventArgs> handler)
         where T : WebView
     {
         self.Navigated += handler;
         return self;
     }
     
-    public static T OnNavigated<T>(this T self, Action<T> action)
+    public static T OnNavigatedFmg<T>(this T self, Action<T> action)
         where T : WebView
     {
         self.Navigated += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnNavigating<T>(this T self, EventHandler<WebNavigatingEventArgs> handler)
+    public static T OnNavigatingFmg<T>(this T self, EventHandler<WebNavigatingEventArgs> handler)
         where T : WebView
     {
         self.Navigating += handler;
         return self;
     }
     
-    public static T OnNavigating<T>(this T self, Action<T> action)
+    public static T OnNavigatingFmg<T>(this T self, Action<T> action)
         where T : WebView
     {
         self.Navigating += (o, arg) => action(self);

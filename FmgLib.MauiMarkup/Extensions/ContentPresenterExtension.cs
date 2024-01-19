@@ -2,7 +2,7 @@
 
 public static partial class ContentPresenterExtension
 {
-    public static T Content<T>(this T self,
+    public static T ContentFmg<T>(this T self,
         View content)
         where T : ContentPresenter
     {
@@ -10,7 +10,7 @@ public static partial class ContentPresenterExtension
         return self;
     }
     
-    public static T Content<T>(this T self, Func<PropertyContext<View>, IPropertyBuilder<View>> configure)
+    public static T ContentFmg<T>(this T self, Func<PropertyContext<View>, IPropertyBuilder<View>> configure)
         where T : ContentPresenter
     {
         var context = new PropertyContext<View>(self, ContentPresenter.ContentProperty);
@@ -18,7 +18,7 @@ public static partial class ContentPresenterExtension
         return self;
     }
     
-    public static SettersContext<T> Content<T>(this SettersContext<T> self,
+    public static SettersContext<T> ContentFmg<T>(this SettersContext<T> self,
         View content)
         where T : ContentPresenter
     {
@@ -26,7 +26,7 @@ public static partial class ContentPresenterExtension
         return self;
     }
     
-    public static SettersContext<T> Content<T>(this SettersContext<T> self, Func<PropertySettersContext<View>, IPropertySettersBuilder<View>> configure)
+    public static SettersContext<T> ContentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<View>, IPropertySettersBuilder<View>> configure)
         where T : ContentPresenter
     {
         var context = new PropertySettersContext<View>(self.XamlSetters, ContentPresenter.ContentProperty);

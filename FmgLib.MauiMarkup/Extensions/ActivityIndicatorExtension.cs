@@ -3,14 +3,14 @@
 
 public static partial class ActivityIndicatorExtension
 {
-    public static T Color<T>(this T self, Color color) where T : ActivityIndicator
+    public static T ColorFmg<T>(this T self, Color color) where T : ActivityIndicator
     {
         self.SetValue(ActivityIndicator.ColorProperty, color);
 
         return self;
     }
     
-    public static T Color<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure) where T : ActivityIndicator
+    public static T ColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure) where T : ActivityIndicator
     {
         var context = new PropertyContext<Color>(self, ActivityIndicator.ColorProperty);
         configure(context).Build();
@@ -18,20 +18,20 @@ public static partial class ActivityIndicatorExtension
         return self;
     }
     
-    public static SettersContext<T> Color<T>(this SettersContext<T> self, Color color) where T : ActivityIndicator
+    public static SettersContext<T> ColorFmg<T>(this SettersContext<T> self, Color color) where T : ActivityIndicator
     {
         self.XamlSetters.Add(new Setter { Property = ActivityIndicator.ColorProperty, Value = color });
         return self;
     }
     
-    public static SettersContext<T> Color<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure) where T : ActivityIndicator
+    public static SettersContext<T> ColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure) where T : ActivityIndicator
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, ActivityIndicator.ColorProperty);
         configure(context).Build();
         return self;
     }
     
-    public static Task<bool> AnimateColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null) where T : ActivityIndicator
+    public static Task<bool> AnimateColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null) where T : ActivityIndicator
     {
         Color fromValue = self.Color;
         var transform = (double t) => Transformations.ColorTransform(fromValue, value, t);
@@ -39,7 +39,7 @@ public static partial class ActivityIndicatorExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateColorTo", transform, callback, length, easing);
     }
     
-    public static T IsRunning<T>(this T self,
+    public static T IsRunningFmg<T>(this T self,
         bool isRunning)
         where T : ActivityIndicator
     {
@@ -47,7 +47,7 @@ public static partial class ActivityIndicatorExtension
         return self;
     }
     
-    public static T IsRunning<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsRunningFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : ActivityIndicator
     {
         var context = new PropertyContext<bool>(self, ActivityIndicator.IsRunningProperty);
@@ -55,7 +55,7 @@ public static partial class ActivityIndicatorExtension
         return self;
     }
     
-    public static SettersContext<T> IsRunning<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsRunningFmg<T>(this SettersContext<T> self,
         bool isRunning)
         where T : ActivityIndicator
     {
@@ -63,7 +63,7 @@ public static partial class ActivityIndicatorExtension
         return self;
     }
     
-    public static SettersContext<T> IsRunning<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsRunningFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : ActivityIndicator
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, ActivityIndicator.IsRunningProperty);

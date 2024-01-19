@@ -2,7 +2,7 @@
 
 public static partial class BaseShellItemExtension
 {
-    public static T FlyoutIcon<T>(this T self,
+    public static T FlyoutIconFmg<T>(this T self,
        ImageSource flyoutIcon)
        where T : BaseShellItem
     {
@@ -10,7 +10,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static T FlyoutIcon<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
+    public static T FlyoutIconFmg<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
         where T : BaseShellItem
     {
         var context = new PropertyContext<ImageSource>(self, BaseShellItem.FlyoutIconProperty);
@@ -18,7 +18,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static SettersContext<T> FlyoutIcon<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutIconFmg<T>(this SettersContext<T> self,
         ImageSource flyoutIcon)
         where T : BaseShellItem
     {
@@ -26,7 +26,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static SettersContext<T> FlyoutIcon<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
+    public static SettersContext<T> FlyoutIconFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
         where T : BaseShellItem
     {
         var context = new PropertySettersContext<ImageSource>(self.XamlSetters, BaseShellItem.FlyoutIconProperty);
@@ -34,7 +34,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static T Icon<T>(this T self,
+    public static T IconFmg<T>(this T self,
         ImageSource icon)
         where T : BaseShellItem
     {
@@ -42,7 +42,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static T Icon<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
+    public static T IconFmg<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
         where T : BaseShellItem
     {
         var context = new PropertyContext<ImageSource>(self, BaseShellItem.IconProperty);
@@ -50,7 +50,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static SettersContext<T> Icon<T>(this SettersContext<T> self,
+    public static SettersContext<T> IconFmg<T>(this SettersContext<T> self,
         ImageSource icon)
         where T : BaseShellItem
     {
@@ -58,7 +58,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static SettersContext<T> Icon<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
+    public static SettersContext<T> IconFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
         where T : BaseShellItem
     {
         var context = new PropertySettersContext<ImageSource>(self.XamlSetters, BaseShellItem.IconProperty);
@@ -66,7 +66,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static T IsEnabled<T>(this T self,
+    public static T IsEnabledFmg<T>(this T self,
         bool isEnabled)
         where T : BaseShellItem
     {
@@ -74,7 +74,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static T IsEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : BaseShellItem
     {
         var context = new PropertyContext<bool>(self, BaseShellItem.IsEnabledProperty);
@@ -82,7 +82,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static SettersContext<T> IsEnabled<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsEnabledFmg<T>(this SettersContext<T> self,
         bool isEnabled)
         where T : BaseShellItem
     {
@@ -90,7 +90,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static SettersContext<T> IsEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : BaseShellItem
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, BaseShellItem.IsEnabledProperty);
@@ -98,7 +98,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static T Route<T>(this T self,
+    public static T RouteFmg<T>(this T self,
         string route)
         where T : BaseShellItem
     {
@@ -106,7 +106,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static T Title<T>(this T self,
+    public static T TitleFmg<T>(this T self,
         string title)
         where T : BaseShellItem
     {
@@ -114,7 +114,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static T Title<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T TitleFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : BaseShellItem
     {
         var context = new PropertyContext<string>(self, BaseShellItem.TitleProperty);
@@ -122,7 +122,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static SettersContext<T> Title<T>(this SettersContext<T> self,
+    public static SettersContext<T> TitleFmg<T>(this SettersContext<T> self,
         string title)
         where T : BaseShellItem
     {
@@ -130,7 +130,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static SettersContext<T> Title<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> TitleFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : BaseShellItem
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, BaseShellItem.TitleProperty);
@@ -138,7 +138,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static T IsVisible<T>(this T self,
+    public static T IsVisibleFmg<T>(this T self,
         bool isVisible)
         where T : BaseShellItem
     {
@@ -146,7 +146,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static T IsVisible<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsVisibleFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : BaseShellItem
     {
         var context = new PropertyContext<bool>(self, BaseShellItem.IsVisibleProperty);
@@ -154,7 +154,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static SettersContext<T> IsVisible<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsVisibleFmg<T>(this SettersContext<T> self,
         bool isVisible)
         where T : BaseShellItem
     {
@@ -162,7 +162,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static SettersContext<T> IsVisible<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsVisibleFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : BaseShellItem
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, BaseShellItem.IsVisibleProperty);
@@ -170,7 +170,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static T FlyoutItemIsVisible<T>(this T self,
+    public static T FlyoutItemIsVisibleFmg<T>(this T self,
         bool flyoutItemIsVisible)
         where T : BaseShellItem
     {
@@ -178,35 +178,35 @@ public static partial class BaseShellItemExtension
         return self;
     }
 
-    public static T OnAppearing<T>(this T self, EventHandler handler)
+    public static T OnAppearingFmg<T>(this T self, EventHandler handler)
         where T : BaseShellItem
     {
         self.Appearing += handler;
         return self;
     }
 
-    public static T OnAppearing<T>(this T self, Action<T> action)
+    public static T OnAppearingFmg<T>(this T self, Action<T> action)
         where T : BaseShellItem
     {
         self.Appearing += (o, arg) => action(self);
         return self;
     }
 
-    public static T OnDisappearing<T>(this T self, EventHandler handler)
+    public static T OnDisappearingFmg<T>(this T self, EventHandler handler)
         where T : BaseShellItem
     {
         self.Disappearing += handler;
         return self;
     }
 
-    public static T OnDisappearing<T>(this T self, Action<T> action)
+    public static T OnDisappearingFmg<T>(this T self, Action<T> action)
         where T : BaseShellItem
     {
         self.Disappearing += (o, arg) => action(self);
         return self;
     }
 
-    public static T ShellItemTemplate<T>(this T self,
+    public static T ShellItemTemplateFmg<T>(this T self,
         DataTemplate shellItemTemplate)
         where T : BaseShellItem
     {
@@ -214,7 +214,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
     
-    public static T ShellItemTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T ShellItemTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : BaseShellItem
     {
         var context = new PropertyContext<DataTemplate>(self, Shell.ItemTemplateProperty);
@@ -222,7 +222,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
     
-    public static SettersContext<T> ShellItemTemplate<T>(this SettersContext<T> self,
+    public static SettersContext<T> ShellItemTemplateFmg<T>(this SettersContext<T> self,
         DataTemplate shellItemTemplate)
         where T : BaseShellItem
     {
@@ -230,7 +230,7 @@ public static partial class BaseShellItemExtension
         return self;
     }
     
-    public static SettersContext<T> ShellItemTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> ShellItemTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : BaseShellItem
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, Shell.ItemTemplateProperty);
@@ -238,14 +238,14 @@ public static partial class BaseShellItemExtension
         return self;
     }
     
-    public static T ShellItemTemplate<T>(this T self, Func<object> loadTemplate)
+    public static T ShellItemTemplateFmg<T>(this T self, Func<object> loadTemplate)
         where T : BaseShellItem
     {
         self.SetValue(Shell.ItemTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static DataTemplate GetShellItemTemplateValue<T>(this T self)
+    public static DataTemplate GetShellItemTemplateValueFmg<T>(this T self)
         where T : BaseShellItem
     {
         return (DataTemplate)self.GetValue(Shell.ItemTemplateProperty);

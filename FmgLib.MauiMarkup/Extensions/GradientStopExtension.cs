@@ -2,7 +2,7 @@
 
 public static partial class GradientStopExtension
 {
-    public static T Color<T>(this T self,
+    public static T ColorFmg<T>(this T self,
         Color color)
         where T : GradientStop
     {
@@ -10,7 +10,7 @@ public static partial class GradientStopExtension
         return self;
     }
     
-    public static T Color<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T ColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : GradientStop
     {
         var context = new PropertyContext<Color>(self, GradientStop.ColorProperty);
@@ -18,7 +18,7 @@ public static partial class GradientStopExtension
         return self;
     }
     
-    public static SettersContext<T> Color<T>(this SettersContext<T> self,
+    public static SettersContext<T> ColorFmg<T>(this SettersContext<T> self,
         Color color)
         where T : GradientStop
     {
@@ -26,7 +26,7 @@ public static partial class GradientStopExtension
         return self;
     }
     
-    public static SettersContext<T> Color<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> ColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : GradientStop
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, GradientStop.ColorProperty);
@@ -34,7 +34,7 @@ public static partial class GradientStopExtension
         return self;
     }
     
-    public static T Offset<T>(this T self,
+    public static T OffsetFmg<T>(this T self,
         float offset)
         where T : GradientStop
     {
@@ -42,7 +42,7 @@ public static partial class GradientStopExtension
         return self;
     }
     
-    public static T Offset<T>(this T self, Func<PropertyContext<float>, IPropertyBuilder<float>> configure)
+    public static T OffsetFmg<T>(this T self, Func<PropertyContext<float>, IPropertyBuilder<float>> configure)
         where T : GradientStop
     {
         var context = new PropertyContext<float>(self, GradientStop.OffsetProperty);
@@ -50,7 +50,7 @@ public static partial class GradientStopExtension
         return self;
     }
     
-    public static SettersContext<T> Offset<T>(this SettersContext<T> self,
+    public static SettersContext<T> OffsetFmg<T>(this SettersContext<T> self,
         float offset)
         where T : GradientStop
     {
@@ -58,7 +58,7 @@ public static partial class GradientStopExtension
         return self;
     }
     
-    public static SettersContext<T> Offset<T>(this SettersContext<T> self, Func<PropertySettersContext<float>, IPropertySettersBuilder<float>> configure)
+    public static SettersContext<T> OffsetFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<float>, IPropertySettersBuilder<float>> configure)
         where T : GradientStop
     {
         var context = new PropertySettersContext<float>(self.XamlSetters, GradientStop.OffsetProperty);

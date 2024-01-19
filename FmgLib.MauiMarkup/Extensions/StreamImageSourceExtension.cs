@@ -4,7 +4,7 @@
 
 public static partial class StreamImageSourceExtension
 {
-    public static T Stream<T>(this T self,
+    public static T StreamFmg<T>(this T self,
         Func<CancellationToken, Task<Stream>> stream)
         where T : StreamImageSource
     {
@@ -12,7 +12,7 @@ public static partial class StreamImageSourceExtension
         return self;
     }
     
-    public static T Stream<T>(this T self, Func<PropertyContext<Func<CancellationToken, Task<Stream>>>, IPropertyBuilder<Func<CancellationToken, Task<Stream>>>> configure)
+    public static T StreamFmg<T>(this T self, Func<PropertyContext<Func<CancellationToken, Task<Stream>>>, IPropertyBuilder<Func<CancellationToken, Task<Stream>>>> configure)
         where T : StreamImageSource
     {
         var context = new PropertyContext<Func<CancellationToken, Task<Stream>>>(self, StreamImageSource.StreamProperty);
@@ -20,7 +20,7 @@ public static partial class StreamImageSourceExtension
         return self;
     }
     
-    public static SettersContext<T> Stream<T>(this SettersContext<T> self,
+    public static SettersContext<T> StreamFmg<T>(this SettersContext<T> self,
         Func<CancellationToken, Task<Stream>> stream)
         where T : StreamImageSource
     {
@@ -28,7 +28,7 @@ public static partial class StreamImageSourceExtension
         return self;
     }
     
-    public static SettersContext<T> Stream<T>(this SettersContext<T> self, Func<PropertySettersContext<Func<CancellationToken, Task<Stream>>>, IPropertySettersBuilder<Func<CancellationToken, Task<Stream>>>> configure)
+    public static SettersContext<T> StreamFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Func<CancellationToken, Task<Stream>>>, IPropertySettersBuilder<Func<CancellationToken, Task<Stream>>>> configure)
         where T : StreamImageSource
     {
         var context = new PropertySettersContext<Func<CancellationToken, Task<Stream>>>(self.XamlSetters, StreamImageSource.StreamProperty);

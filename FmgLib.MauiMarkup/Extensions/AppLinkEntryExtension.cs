@@ -2,7 +2,7 @@
 
 public static partial class AppLinkEntryExtension
 {
-    public static T AppLinkUri<T>(this T self,
+    public static T AppLinkUriFmg<T>(this T self,
         Uri appLinkUri)
         where T : AppLinkEntry
     {
@@ -10,7 +10,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static T AppLinkUri<T>(this T self, Func<PropertyContext<Uri>, IPropertyBuilder<Uri>> configure)
+    public static T AppLinkUriFmg<T>(this T self, Func<PropertyContext<Uri>, IPropertyBuilder<Uri>> configure)
         where T : AppLinkEntry
     {
         var context = new PropertyContext<Uri>(self, AppLinkEntry.AppLinkUriProperty);
@@ -18,7 +18,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static SettersContext<T> AppLinkUri<T>(this SettersContext<T> self,
+    public static SettersContext<T> AppLinkUriFmg<T>(this SettersContext<T> self,
         Uri appLinkUri)
         where T : AppLinkEntry
     {
@@ -26,7 +26,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static SettersContext<T> AppLinkUri<T>(this SettersContext<T> self, Func<PropertySettersContext<Uri>, IPropertySettersBuilder<Uri>> configure)
+    public static SettersContext<T> AppLinkUriFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Uri>, IPropertySettersBuilder<Uri>> configure)
         where T : AppLinkEntry
     {
         var context = new PropertySettersContext<Uri>(self.XamlSetters, AppLinkEntry.AppLinkUriProperty);
@@ -34,7 +34,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static T Description<T>(this T self,
+    public static T DescriptionFmg<T>(this T self,
         string description)
         where T : AppLinkEntry
     {
@@ -42,7 +42,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static T Description<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T DescriptionFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : AppLinkEntry
     {
         var context = new PropertyContext<string>(self, AppLinkEntry.DescriptionProperty);
@@ -50,7 +50,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static SettersContext<T> Description<T>(this SettersContext<T> self,
+    public static SettersContext<T> DescriptionFmg<T>(this SettersContext<T> self,
         string description)
         where T : AppLinkEntry
     {
@@ -58,7 +58,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static SettersContext<T> Description<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> DescriptionFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : AppLinkEntry
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, AppLinkEntry.DescriptionProperty);
@@ -66,7 +66,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static T IsLinkActive<T>(this T self,
+    public static T IsLinkActiveFmg<T>(this T self,
         bool isLinkActive)
         where T : AppLinkEntry
     {
@@ -74,7 +74,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static T IsLinkActive<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsLinkActiveFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : AppLinkEntry
     {
         var context = new PropertyContext<bool>(self, AppLinkEntry.IsLinkActiveProperty);
@@ -82,7 +82,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static SettersContext<T> IsLinkActive<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsLinkActiveFmg<T>(this SettersContext<T> self,
         bool isLinkActive)
         where T : AppLinkEntry
     {
@@ -90,7 +90,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static SettersContext<T> IsLinkActive<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsLinkActiveFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : AppLinkEntry
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, AppLinkEntry.IsLinkActiveProperty);
@@ -98,7 +98,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static T Thumbnail<T>(this T self,
+    public static T ThumbnailFmg<T>(this T self,
         ImageSource thumbnail)
         where T : AppLinkEntry
     {
@@ -106,7 +106,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static T Thumbnail<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
+    public static T ThumbnailFmg<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
         where T : AppLinkEntry
     {
         var context = new PropertyContext<ImageSource>(self, AppLinkEntry.ThumbnailProperty);
@@ -114,7 +114,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static SettersContext<T> Thumbnail<T>(this SettersContext<T> self,
+    public static SettersContext<T> ThumbnailFmg<T>(this SettersContext<T> self,
         ImageSource thumbnail)
         where T : AppLinkEntry
     {
@@ -122,7 +122,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static SettersContext<T> Thumbnail<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
+    public static SettersContext<T> ThumbnailFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
         where T : AppLinkEntry
     {
         var context = new PropertySettersContext<ImageSource>(self.XamlSetters, AppLinkEntry.ThumbnailProperty);
@@ -130,7 +130,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static T Title<T>(this T self,
+    public static T TitleFmg<T>(this T self,
         string title)
         where T : AppLinkEntry
     {
@@ -138,7 +138,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static T Title<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T TitleFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : AppLinkEntry
     {
         var context = new PropertyContext<string>(self, AppLinkEntry.TitleProperty);
@@ -146,7 +146,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static SettersContext<T> Title<T>(this SettersContext<T> self,
+    public static SettersContext<T> TitleFmg<T>(this SettersContext<T> self,
         string title)
         where T : AppLinkEntry
     {
@@ -154,7 +154,7 @@ public static partial class AppLinkEntryExtension
         return self;
     }
     
-    public static SettersContext<T> Title<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> TitleFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : AppLinkEntry
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, AppLinkEntry.TitleProperty);

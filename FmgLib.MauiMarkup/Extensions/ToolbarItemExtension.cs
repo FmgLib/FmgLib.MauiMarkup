@@ -4,7 +4,7 @@
 
 public static partial class ToolbarItemExtension
 {
-    public static T Order<T>(this T self,
+    public static T OrderFmg<T>(this T self,
         ToolbarItemOrder order)
         where T : ToolbarItem
     {
@@ -12,7 +12,7 @@ public static partial class ToolbarItemExtension
         return self;
     }
     
-    public static T Priority<T>(this T self,
+    public static T PriorityFmg<T>(this T self,
         int priority)
         where T : ToolbarItem
     {

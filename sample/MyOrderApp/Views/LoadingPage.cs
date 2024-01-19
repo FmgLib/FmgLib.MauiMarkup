@@ -9,17 +9,17 @@ public partial class LoadingPage : BasePage<LoadingPageViewModel>
     public override void Build()
     {
         this
-            .BackgroundImageSource("background.jpg")
-            .Content(
+            .BackgroundImageSourceFmg("background.jpg")
+            .ContentFmg(
                 new StackLayout()
-                .Center()
-                .Children(
+                .CenterFmg()
+                .ChildrenFmg(
                     new ActivityIndicator()
-                        .IsRunning(true)
-                        .HeightRequest(70)
-                        .WidthRequest(70)
-                        .Center()
-                        .InvokeOnElement(ai => ai.Loaded += (sender, e) =>
+                        .IsRunningFmg(true)
+                        .HeightRequestFmg(70)
+                        .WidthRequestFmg(70)
+                        .CenterFmg()
+                        .InvokeOnElementFmg(ai => ai.Loaded += (sender, e) =>
                         {
                             CheckLogin();
                         })

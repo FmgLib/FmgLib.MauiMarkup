@@ -3,7 +3,7 @@
 
 public static partial class GridItemsLayoutExtension
 {
-    public static T Span<T>(this T self,
+    public static T SpanFmg<T>(this T self,
         int span)
         where T : GridItemsLayout
     {
@@ -11,7 +11,7 @@ public static partial class GridItemsLayoutExtension
         return self;
     }
     
-    public static T Span<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+    public static T SpanFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
         where T : GridItemsLayout
     {
         var context = new PropertyContext<int>(self, GridItemsLayout.SpanProperty);
@@ -19,7 +19,7 @@ public static partial class GridItemsLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> Span<T>(this SettersContext<T> self,
+    public static SettersContext<T> SpanFmg<T>(this SettersContext<T> self,
         int span)
         where T : GridItemsLayout
     {
@@ -27,7 +27,7 @@ public static partial class GridItemsLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> Span<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+    public static SettersContext<T> SpanFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
         where T : GridItemsLayout
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, GridItemsLayout.SpanProperty);
@@ -35,7 +35,7 @@ public static partial class GridItemsLayoutExtension
         return self;
     }
     
-    public static T VerticalItemSpacing<T>(this T self,
+    public static T VerticalItemSpacingFmg<T>(this T self,
         double verticalItemSpacing)
         where T : GridItemsLayout
     {
@@ -43,7 +43,7 @@ public static partial class GridItemsLayoutExtension
         return self;
     }
     
-    public static T VerticalItemSpacing<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T VerticalItemSpacingFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : GridItemsLayout
     {
         var context = new PropertyContext<double>(self, GridItemsLayout.VerticalItemSpacingProperty);
@@ -51,7 +51,7 @@ public static partial class GridItemsLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalItemSpacing<T>(this SettersContext<T> self,
+    public static SettersContext<T> VerticalItemSpacingFmg<T>(this SettersContext<T> self,
         double verticalItemSpacing)
         where T : GridItemsLayout
     {
@@ -59,7 +59,7 @@ public static partial class GridItemsLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalItemSpacing<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> VerticalItemSpacingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : GridItemsLayout
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, GridItemsLayout.VerticalItemSpacingProperty);
@@ -67,7 +67,7 @@ public static partial class GridItemsLayoutExtension
         return self;
     }
     
-    public static T HorizontalItemSpacing<T>(this T self,
+    public static T HorizontalItemSpacingFmg<T>(this T self,
         double horizontalItemSpacing)
         where T : GridItemsLayout
     {
@@ -75,7 +75,7 @@ public static partial class GridItemsLayoutExtension
         return self;
     }
     
-    public static T HorizontalItemSpacing<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T HorizontalItemSpacingFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : GridItemsLayout
     {
         var context = new PropertyContext<double>(self, GridItemsLayout.HorizontalItemSpacingProperty);
@@ -83,7 +83,7 @@ public static partial class GridItemsLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalItemSpacing<T>(this SettersContext<T> self,
+    public static SettersContext<T> HorizontalItemSpacingFmg<T>(this SettersContext<T> self,
         double horizontalItemSpacing)
         where T : GridItemsLayout
     {
@@ -91,7 +91,7 @@ public static partial class GridItemsLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalItemSpacing<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> HorizontalItemSpacingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : GridItemsLayout
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, GridItemsLayout.HorizontalItemSpacingProperty);

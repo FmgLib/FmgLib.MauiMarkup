@@ -4,7 +4,7 @@
 
 public static partial class PolyQuadraticBezierSegmentExtension
 {
-    public static T Points<T>(this T self,
+    public static T PointsFmg<T>(this T self,
         IList<Point> points)
         where T : Microsoft.Maui.Controls.Shapes.PolyQuadraticBezierSegment
     {
@@ -13,7 +13,7 @@ public static partial class PolyQuadraticBezierSegmentExtension
         return self;
     }
 
-    public static T Points<T>(this T self,
+    public static T PointsFmg<T>(this T self,
         params Point[] points)
         where T : Microsoft.Maui.Controls.Shapes.PolyQuadraticBezierSegment
     {
@@ -22,7 +22,7 @@ public static partial class PolyQuadraticBezierSegmentExtension
         return self;
     }
     
-    public static T Points<T>(this T self, Func<PropertyContext<PointCollection>, IPropertyBuilder<PointCollection>> configure)
+    public static T PointsFmg<T>(this T self, Func<PropertyContext<PointCollection>, IPropertyBuilder<PointCollection>> configure)
         where T : Microsoft.Maui.Controls.Shapes.PolyQuadraticBezierSegment
     {
         var context = new PropertyContext<PointCollection>(self, Microsoft.Maui.Controls.Shapes.PolyQuadraticBezierSegment.PointsProperty);

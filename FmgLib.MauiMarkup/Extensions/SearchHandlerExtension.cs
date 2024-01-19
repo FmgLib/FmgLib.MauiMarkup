@@ -4,7 +4,7 @@
 
 public static partial class SearchHandlerExtension
 {
-    public static T Keyboard<T>(this T self,
+    public static T KeyboardFmg<T>(this T self,
         Microsoft.Maui.Keyboard keyboard)
         where T : SearchHandler
     {
@@ -12,7 +12,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T Keyboard<T>(this T self, Func<PropertyContext<Microsoft.Maui.Keyboard>, IPropertyBuilder<Microsoft.Maui.Keyboard>> configure)
+    public static T KeyboardFmg<T>(this T self, Func<PropertyContext<Microsoft.Maui.Keyboard>, IPropertyBuilder<Microsoft.Maui.Keyboard>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<Microsoft.Maui.Keyboard>(self, SearchHandler.KeyboardProperty);
@@ -20,7 +20,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> Keyboard<T>(this SettersContext<T> self,
+    public static SettersContext<T> KeyboardFmg<T>(this SettersContext<T> self,
         Microsoft.Maui.Keyboard keyboard)
         where T : SearchHandler
     {
@@ -28,7 +28,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> Keyboard<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Keyboard>, IPropertySettersBuilder<Microsoft.Maui.Keyboard>> configure)
+    public static SettersContext<T> KeyboardFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Keyboard>, IPropertySettersBuilder<Microsoft.Maui.Keyboard>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<Microsoft.Maui.Keyboard>(self.XamlSetters, SearchHandler.KeyboardProperty);
@@ -36,7 +36,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T HorizontalTextAlignment<T>(this T self,
+    public static T HorizontalTextAlignmentFmg<T>(this T self,
         TextAlignment horizontalTextAlignment)
         where T : SearchHandler
     {
@@ -44,7 +44,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T HorizontalTextAlignment<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
+    public static T HorizontalTextAlignmentFmg<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<TextAlignment>(self, SearchHandler.HorizontalTextAlignmentProperty);
@@ -52,7 +52,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalTextAlignment<T>(this SettersContext<T> self,
+    public static SettersContext<T> HorizontalTextAlignmentFmg<T>(this SettersContext<T> self,
         TextAlignment horizontalTextAlignment)
         where T : SearchHandler
     {
@@ -60,7 +60,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalTextAlignment<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
+    public static SettersContext<T> HorizontalTextAlignmentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<TextAlignment>(self.XamlSetters, SearchHandler.HorizontalTextAlignmentProperty);
@@ -68,7 +68,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T VerticalTextAlignment<T>(this T self,
+    public static T VerticalTextAlignmentFmg<T>(this T self,
         TextAlignment verticalTextAlignment)
         where T : SearchHandler
     {
@@ -76,7 +76,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T VerticalTextAlignment<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
+    public static T VerticalTextAlignmentFmg<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<TextAlignment>(self, SearchHandler.VerticalTextAlignmentProperty);
@@ -84,7 +84,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalTextAlignment<T>(this SettersContext<T> self,
+    public static SettersContext<T> VerticalTextAlignmentFmg<T>(this SettersContext<T> self,
         TextAlignment verticalTextAlignment)
         where T : SearchHandler
     {
@@ -92,7 +92,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalTextAlignment<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
+    public static SettersContext<T> VerticalTextAlignmentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<TextAlignment>(self.XamlSetters, SearchHandler.VerticalTextAlignmentProperty);
@@ -100,7 +100,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T TextColor<T>(this T self,
+    public static T TextColorFmg<T>(this T self,
         Color textColor)
         where T : SearchHandler
     {
@@ -108,7 +108,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T TextColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T TextColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<Color>(self, SearchHandler.TextColorProperty);
@@ -116,7 +116,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> TextColor<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self,
         Color textColor)
         where T : SearchHandler
     {
@@ -124,7 +124,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> TextColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, SearchHandler.TextColorProperty);
@@ -132,7 +132,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T TextTransform<T>(this T self,
+    public static T TextTransformFmg<T>(this T self,
         TextTransform textTransform)
         where T : SearchHandler
     {
@@ -140,7 +140,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T TextTransform<T>(this T self, Func<PropertyContext<TextTransform>, IPropertyBuilder<TextTransform>> configure)
+    public static T TextTransformFmg<T>(this T self, Func<PropertyContext<TextTransform>, IPropertyBuilder<TextTransform>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<TextTransform>(self, SearchHandler.TextTransformProperty);
@@ -148,7 +148,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> TextTransform<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextTransformFmg<T>(this SettersContext<T> self,
         TextTransform textTransform)
         where T : SearchHandler
     {
@@ -156,7 +156,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> TextTransform<T>(this SettersContext<T> self, Func<PropertySettersContext<TextTransform>, IPropertySettersBuilder<TextTransform>> configure)
+    public static SettersContext<T> TextTransformFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextTransform>, IPropertySettersBuilder<TextTransform>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<TextTransform>(self.XamlSetters, SearchHandler.TextTransformProperty);
@@ -164,7 +164,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T CancelButtonColor<T>(this T self,
+    public static T CancelButtonColorFmg<T>(this T self,
         Color cancelButtonColor)
         where T : SearchHandler
     {
@@ -172,7 +172,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T CancelButtonColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T CancelButtonColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<Color>(self, SearchHandler.CancelButtonColorProperty);
@@ -180,7 +180,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> CancelButtonColor<T>(this SettersContext<T> self,
+    public static SettersContext<T> CancelButtonColorFmg<T>(this SettersContext<T> self,
         Color cancelButtonColor)
         where T : SearchHandler
     {
@@ -188,7 +188,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> CancelButtonColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> CancelButtonColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, SearchHandler.CancelButtonColorProperty);
@@ -196,7 +196,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T FontAttributes<T>(this T self,
+    public static T FontAttributesFmg<T>(this T self,
         FontAttributes fontAttributes)
         where T : SearchHandler
     {
@@ -204,7 +204,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T FontAttributes<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
+    public static T FontAttributesFmg<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<FontAttributes>(self, SearchHandler.FontAttributesProperty);
@@ -212,7 +212,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self,
         FontAttributes fontAttributes)
         where T : SearchHandler
     {
@@ -220,7 +220,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
+    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<FontAttributes>(self.XamlSetters, SearchHandler.FontAttributesProperty);
@@ -228,7 +228,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T FontFamily<T>(this T self,
+    public static T FontFamilyFmg<T>(this T self,
         string fontFamily)
         where T : SearchHandler
     {
@@ -236,7 +236,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T FontFamily<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T FontFamilyFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<string>(self, SearchHandler.FontFamilyProperty);
@@ -244,7 +244,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self,
         string fontFamily)
         where T : SearchHandler
     {
@@ -252,7 +252,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, SearchHandler.FontFamilyProperty);
@@ -260,7 +260,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T CharacterSpacing<T>(this T self,
+    public static T CharacterSpacingFmg<T>(this T self,
         double characterSpacing)
         where T : SearchHandler
     {
@@ -268,7 +268,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T CharacterSpacing<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T CharacterSpacingFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<double>(self, SearchHandler.CharacterSpacingProperty);
@@ -276,7 +276,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> CharacterSpacing<T>(this SettersContext<T> self,
+    public static SettersContext<T> CharacterSpacingFmg<T>(this SettersContext<T> self,
         double characterSpacing)
         where T : SearchHandler
     {
@@ -284,7 +284,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> CharacterSpacing<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> CharacterSpacingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, SearchHandler.CharacterSpacingProperty);
@@ -292,7 +292,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T FontSize<T>(this T self,
+    public static T FontSizeFmg<T>(this T self,
         double fontSize)
         where T : SearchHandler
     {
@@ -300,7 +300,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T FontSize<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T FontSizeFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<double>(self, SearchHandler.FontSizeProperty);
@@ -308,7 +308,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> FontSize<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self,
         double fontSize)
         where T : SearchHandler
     {
@@ -316,7 +316,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> FontSize<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, SearchHandler.FontSizeProperty);
@@ -324,7 +324,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T FontAutoScalingEnabled<T>(this T self,
+    public static T FontAutoScalingEnabledFmg<T>(this T self,
         bool fontAutoScalingEnabled)
         where T : SearchHandler
     {
@@ -332,7 +332,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T FontAutoScalingEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T FontAutoScalingEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<bool>(self, SearchHandler.FontAutoScalingEnabledProperty);
@@ -340,7 +340,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self,
         bool fontAutoScalingEnabled)
         where T : SearchHandler
     {
@@ -348,7 +348,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, SearchHandler.FontAutoScalingEnabledProperty);
@@ -356,7 +356,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T PlaceholderColor<T>(this T self,
+    public static T PlaceholderColorFmg<T>(this T self,
         Color placeholderColor)
         where T : SearchHandler
     {
@@ -364,7 +364,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T PlaceholderColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T PlaceholderColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<Color>(self, SearchHandler.PlaceholderColorProperty);
@@ -372,7 +372,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> PlaceholderColor<T>(this SettersContext<T> self,
+    public static SettersContext<T> PlaceholderColorFmg<T>(this SettersContext<T> self,
         Color placeholderColor)
         where T : SearchHandler
     {
@@ -380,7 +380,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> PlaceholderColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> PlaceholderColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, SearchHandler.PlaceholderColorProperty);
@@ -388,7 +388,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T Placeholder<T>(this T self,
+    public static T PlaceholderFmg<T>(this T self,
         string placeholder)
         where T : SearchHandler
     {
@@ -396,7 +396,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T Placeholder<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T PlaceholderFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<string>(self, SearchHandler.PlaceholderProperty);
@@ -404,7 +404,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> Placeholder<T>(this SettersContext<T> self,
+    public static SettersContext<T> PlaceholderFmg<T>(this SettersContext<T> self,
         string placeholder)
         where T : SearchHandler
     {
@@ -412,7 +412,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> Placeholder<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> PlaceholderFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, SearchHandler.PlaceholderProperty);
@@ -420,7 +420,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T BackgroundColor<T>(this T self,
+    public static T BackgroundColorFmg<T>(this T self,
         Color backgroundColor)
         where T : SearchHandler
     {
@@ -428,7 +428,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T BackgroundColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T BackgroundColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<Color>(self, SearchHandler.BackgroundColorProperty);
@@ -436,7 +436,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> BackgroundColor<T>(this SettersContext<T> self,
+    public static SettersContext<T> BackgroundColorFmg<T>(this SettersContext<T> self,
         Color backgroundColor)
         where T : SearchHandler
     {
@@ -444,7 +444,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> BackgroundColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> BackgroundColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, SearchHandler.BackgroundColorProperty);
@@ -452,7 +452,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T AutomationId<T>(this T self,
+    public static T AutomationIdFmg<T>(this T self,
         string automationId)
         where T : SearchHandler
     {
@@ -460,7 +460,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T AutomationId<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T AutomationIdFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<string>(self, SearchHandler.AutomationIdProperty);
@@ -468,7 +468,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> AutomationId<T>(this SettersContext<T> self,
+    public static SettersContext<T> AutomationIdFmg<T>(this SettersContext<T> self,
         string automationId)
         where T : SearchHandler
     {
@@ -476,7 +476,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> AutomationId<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> AutomationIdFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, SearchHandler.AutomationIdProperty);
@@ -484,7 +484,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearIcon<T>(this T self,
+    public static T ClearIconFmg<T>(this T self,
         ImageSource clearIcon)
         where T : SearchHandler
     {
@@ -492,7 +492,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearIcon<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
+    public static T ClearIconFmg<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<ImageSource>(self, SearchHandler.ClearIconProperty);
@@ -500,7 +500,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearIcon<T>(this SettersContext<T> self,
+    public static SettersContext<T> ClearIconFmg<T>(this SettersContext<T> self,
         ImageSource clearIcon)
         where T : SearchHandler
     {
@@ -508,7 +508,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearIcon<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
+    public static SettersContext<T> ClearIconFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<ImageSource>(self.XamlSetters, SearchHandler.ClearIconProperty);
@@ -516,7 +516,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearIconHelpText<T>(this T self,
+    public static T ClearIconHelpTextFmg<T>(this T self,
         string clearIconHelpText)
         where T : SearchHandler
     {
@@ -524,7 +524,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearIconHelpText<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T ClearIconHelpTextFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<string>(self, SearchHandler.ClearIconHelpTextProperty);
@@ -532,7 +532,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearIconHelpText<T>(this SettersContext<T> self,
+    public static SettersContext<T> ClearIconHelpTextFmg<T>(this SettersContext<T> self,
         string clearIconHelpText)
         where T : SearchHandler
     {
@@ -540,7 +540,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearIconHelpText<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> ClearIconHelpTextFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, SearchHandler.ClearIconHelpTextProperty);
@@ -548,7 +548,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearIconName<T>(this T self,
+    public static T ClearIconNameFmg<T>(this T self,
         string clearIconName)
         where T : SearchHandler
     {
@@ -556,7 +556,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearIconName<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T ClearIconNameFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<string>(self, SearchHandler.ClearIconNameProperty);
@@ -564,7 +564,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearIconName<T>(this SettersContext<T> self,
+    public static SettersContext<T> ClearIconNameFmg<T>(this SettersContext<T> self,
         string clearIconName)
         where T : SearchHandler
     {
@@ -572,7 +572,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearIconName<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> ClearIconNameFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, SearchHandler.ClearIconNameProperty);
@@ -580,7 +580,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearPlaceholderCommand<T>(this T self,
+    public static T ClearPlaceholderCommandFmg<T>(this T self,
         System.Windows.Input.ICommand clearPlaceholderCommand)
         where T : SearchHandler
     {
@@ -588,7 +588,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearPlaceholderCommand<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T ClearPlaceholderCommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, SearchHandler.ClearPlaceholderCommandProperty);
@@ -596,7 +596,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearPlaceholderCommand<T>(this SettersContext<T> self,
+    public static SettersContext<T> ClearPlaceholderCommandFmg<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand clearPlaceholderCommand)
         where T : SearchHandler
     {
@@ -604,7 +604,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearPlaceholderCommand<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> ClearPlaceholderCommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, SearchHandler.ClearPlaceholderCommandProperty);
@@ -612,7 +612,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearPlaceholderCommandParameter<T>(this T self,
+    public static T ClearPlaceholderCommandParameterFmg<T>(this T self,
         object clearPlaceholderCommandParameter)
         where T : SearchHandler
     {
@@ -620,7 +620,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearPlaceholderCommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T ClearPlaceholderCommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<object>(self, SearchHandler.ClearPlaceholderCommandParameterProperty);
@@ -628,7 +628,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearPlaceholderCommandParameter<T>(this SettersContext<T> self,
+    public static SettersContext<T> ClearPlaceholderCommandParameterFmg<T>(this SettersContext<T> self,
         object clearPlaceholderCommandParameter)
         where T : SearchHandler
     {
@@ -636,7 +636,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearPlaceholderCommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> ClearPlaceholderCommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, SearchHandler.ClearPlaceholderCommandParameterProperty);
@@ -644,7 +644,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearPlaceholderEnabled<T>(this T self,
+    public static T ClearPlaceholderEnabledFmg<T>(this T self,
         bool clearPlaceholderEnabled)
         where T : SearchHandler
     {
@@ -652,7 +652,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearPlaceholderEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T ClearPlaceholderEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<bool>(self, SearchHandler.ClearPlaceholderEnabledProperty);
@@ -660,7 +660,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearPlaceholderEnabled<T>(this SettersContext<T> self,
+    public static SettersContext<T> ClearPlaceholderEnabledFmg<T>(this SettersContext<T> self,
         bool clearPlaceholderEnabled)
         where T : SearchHandler
     {
@@ -668,7 +668,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearPlaceholderEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> ClearPlaceholderEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, SearchHandler.ClearPlaceholderEnabledProperty);
@@ -676,7 +676,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearPlaceholderHelpText<T>(this T self,
+    public static T ClearPlaceholderHelpTextFmg<T>(this T self,
         string clearPlaceholderHelpText)
         where T : SearchHandler
     {
@@ -684,7 +684,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearPlaceholderHelpText<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T ClearPlaceholderHelpTextFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<string>(self, SearchHandler.ClearPlaceholderHelpTextProperty);
@@ -692,7 +692,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearPlaceholderHelpText<T>(this SettersContext<T> self,
+    public static SettersContext<T> ClearPlaceholderHelpTextFmg<T>(this SettersContext<T> self,
         string clearPlaceholderHelpText)
         where T : SearchHandler
     {
@@ -700,7 +700,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearPlaceholderHelpText<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> ClearPlaceholderHelpTextFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, SearchHandler.ClearPlaceholderHelpTextProperty);
@@ -708,7 +708,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearPlaceholderIcon<T>(this T self,
+    public static T ClearPlaceholderIconFmg<T>(this T self,
         ImageSource clearPlaceholderIcon)
         where T : SearchHandler
     {
@@ -716,7 +716,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearPlaceholderIcon<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
+    public static T ClearPlaceholderIconFmg<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<ImageSource>(self, SearchHandler.ClearPlaceholderIconProperty);
@@ -724,7 +724,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearPlaceholderIcon<T>(this SettersContext<T> self,
+    public static SettersContext<T> ClearPlaceholderIconFmg<T>(this SettersContext<T> self,
         ImageSource clearPlaceholderIcon)
         where T : SearchHandler
     {
@@ -732,7 +732,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearPlaceholderIcon<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
+    public static SettersContext<T> ClearPlaceholderIconFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<ImageSource>(self.XamlSetters, SearchHandler.ClearPlaceholderIconProperty);
@@ -740,7 +740,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearPlaceholderName<T>(this T self,
+    public static T ClearPlaceholderNameFmg<T>(this T self,
         string clearPlaceholderName)
         where T : SearchHandler
     {
@@ -748,7 +748,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ClearPlaceholderName<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T ClearPlaceholderNameFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<string>(self, SearchHandler.ClearPlaceholderNameProperty);
@@ -756,7 +756,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearPlaceholderName<T>(this SettersContext<T> self,
+    public static SettersContext<T> ClearPlaceholderNameFmg<T>(this SettersContext<T> self,
         string clearPlaceholderName)
         where T : SearchHandler
     {
@@ -764,7 +764,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ClearPlaceholderName<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> ClearPlaceholderNameFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, SearchHandler.ClearPlaceholderNameProperty);
@@ -772,7 +772,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T Command<T>(this T self,
+    public static T CommandFmg<T>(this T self,
         System.Windows.Input.ICommand command)
         where T : SearchHandler
     {
@@ -780,7 +780,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T Command<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T CommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, SearchHandler.CommandProperty);
@@ -788,7 +788,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> Command<T>(this SettersContext<T> self,
+    public static SettersContext<T> CommandFmg<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand command)
         where T : SearchHandler
     {
@@ -796,7 +796,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> Command<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> CommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, SearchHandler.CommandProperty);
@@ -804,7 +804,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T CommandParameter<T>(this T self,
+    public static T CommandParameterFmg<T>(this T self,
         object commandParameter)
         where T : SearchHandler
     {
@@ -812,7 +812,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T CommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T CommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<object>(self, SearchHandler.CommandParameterProperty);
@@ -820,7 +820,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> CommandParameter<T>(this SettersContext<T> self,
+    public static SettersContext<T> CommandParameterFmg<T>(this SettersContext<T> self,
         object commandParameter)
         where T : SearchHandler
     {
@@ -828,7 +828,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> CommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> CommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, SearchHandler.CommandParameterProperty);
@@ -836,7 +836,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T DisplayMemberName<T>(this T self,
+    public static T DisplayMemberNameFmg<T>(this T self,
         string displayMemberName)
         where T : SearchHandler
     {
@@ -844,7 +844,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T DisplayMemberName<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T DisplayMemberNameFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<string>(self, SearchHandler.DisplayMemberNameProperty);
@@ -852,7 +852,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> DisplayMemberName<T>(this SettersContext<T> self,
+    public static SettersContext<T> DisplayMemberNameFmg<T>(this SettersContext<T> self,
         string displayMemberName)
         where T : SearchHandler
     {
@@ -860,7 +860,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> DisplayMemberName<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> DisplayMemberNameFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, SearchHandler.DisplayMemberNameProperty);
@@ -868,7 +868,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T IsSearchEnabled<T>(this T self,
+    public static T IsSearchEnabledFmg<T>(this T self,
         bool isSearchEnabled)
         where T : SearchHandler
     {
@@ -876,7 +876,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T IsSearchEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsSearchEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<bool>(self, SearchHandler.IsSearchEnabledProperty);
@@ -884,7 +884,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> IsSearchEnabled<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsSearchEnabledFmg<T>(this SettersContext<T> self,
         bool isSearchEnabled)
         where T : SearchHandler
     {
@@ -892,7 +892,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> IsSearchEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsSearchEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, SearchHandler.IsSearchEnabledProperty);
@@ -900,7 +900,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ItemsSource<T>(this T self,
+    public static T ItemsSourceFmg<T>(this T self,
         System.Collections.IEnumerable itemsSource)
         where T : SearchHandler
     {
@@ -908,7 +908,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ItemsSource<T>(this T self, Func<PropertyContext<System.Collections.IEnumerable>, IPropertyBuilder<System.Collections.IEnumerable>> configure)
+    public static T ItemsSourceFmg<T>(this T self, Func<PropertyContext<System.Collections.IEnumerable>, IPropertyBuilder<System.Collections.IEnumerable>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<System.Collections.IEnumerable>(self, SearchHandler.ItemsSourceProperty);
@@ -916,7 +916,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ItemsSource<T>(this SettersContext<T> self,
+    public static SettersContext<T> ItemsSourceFmg<T>(this SettersContext<T> self,
         System.Collections.IEnumerable itemsSource)
         where T : SearchHandler
     {
@@ -924,7 +924,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ItemsSource<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Collections.IEnumerable>, IPropertySettersBuilder<System.Collections.IEnumerable>> configure)
+    public static SettersContext<T> ItemsSourceFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Collections.IEnumerable>, IPropertySettersBuilder<System.Collections.IEnumerable>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<System.Collections.IEnumerable>(self.XamlSetters, SearchHandler.ItemsSourceProperty);
@@ -932,7 +932,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ItemTemplate<T>(this T self,
+    public static T ItemTemplateFmg<T>(this T self,
         DataTemplate itemTemplate)
         where T : SearchHandler
     {
@@ -940,7 +940,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ItemTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T ItemTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<DataTemplate>(self, SearchHandler.ItemTemplateProperty);
@@ -948,7 +948,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ItemTemplate<T>(this SettersContext<T> self,
+    public static SettersContext<T> ItemTemplateFmg<T>(this SettersContext<T> self,
         DataTemplate itemTemplate)
         where T : SearchHandler
     {
@@ -956,7 +956,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ItemTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> ItemTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, SearchHandler.ItemTemplateProperty);
@@ -964,14 +964,14 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ItemTemplate<T>(this T self, Func<object> loadTemplate)
+    public static T ItemTemplateFmg<T>(this T self, Func<object> loadTemplate)
         where T : SearchHandler
     {
         self.SetValue(SearchHandler.ItemTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static T Query<T>(this T self,
+    public static T QueryFmg<T>(this T self,
         string query)
         where T : SearchHandler
     {
@@ -979,7 +979,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T Query<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T QueryFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<string>(self, SearchHandler.QueryProperty);
@@ -987,7 +987,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> Query<T>(this SettersContext<T> self,
+    public static SettersContext<T> QueryFmg<T>(this SettersContext<T> self,
         string query)
         where T : SearchHandler
     {
@@ -995,7 +995,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> Query<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> QueryFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, SearchHandler.QueryProperty);
@@ -1003,7 +1003,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T QueryIcon<T>(this T self,
+    public static T QueryIconFmg<T>(this T self,
         ImageSource queryIcon)
         where T : SearchHandler
     {
@@ -1011,7 +1011,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T QueryIcon<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
+    public static T QueryIconFmg<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<ImageSource>(self, SearchHandler.QueryIconProperty);
@@ -1019,7 +1019,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> QueryIcon<T>(this SettersContext<T> self,
+    public static SettersContext<T> QueryIconFmg<T>(this SettersContext<T> self,
         ImageSource queryIcon)
         where T : SearchHandler
     {
@@ -1027,7 +1027,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> QueryIcon<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
+    public static SettersContext<T> QueryIconFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<ImageSource>(self.XamlSetters, SearchHandler.QueryIconProperty);
@@ -1035,7 +1035,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T QueryIconHelpText<T>(this T self,
+    public static T QueryIconHelpTextFmg<T>(this T self,
         string queryIconHelpText)
         where T : SearchHandler
     {
@@ -1043,7 +1043,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T QueryIconHelpText<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T QueryIconHelpTextFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<string>(self, SearchHandler.QueryIconHelpTextProperty);
@@ -1051,7 +1051,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> QueryIconHelpText<T>(this SettersContext<T> self,
+    public static SettersContext<T> QueryIconHelpTextFmg<T>(this SettersContext<T> self,
         string queryIconHelpText)
         where T : SearchHandler
     {
@@ -1059,7 +1059,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> QueryIconHelpText<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> QueryIconHelpTextFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, SearchHandler.QueryIconHelpTextProperty);
@@ -1067,7 +1067,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T QueryIconName<T>(this T self,
+    public static T QueryIconNameFmg<T>(this T self,
         string queryIconName)
         where T : SearchHandler
     {
@@ -1075,7 +1075,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T QueryIconName<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T QueryIconNameFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<string>(self, SearchHandler.QueryIconNameProperty);
@@ -1083,7 +1083,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> QueryIconName<T>(this SettersContext<T> self,
+    public static SettersContext<T> QueryIconNameFmg<T>(this SettersContext<T> self,
         string queryIconName)
         where T : SearchHandler
     {
@@ -1091,7 +1091,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> QueryIconName<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> QueryIconNameFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, SearchHandler.QueryIconNameProperty);
@@ -1099,7 +1099,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T SearchBoxVisibility<T>(this T self,
+    public static T SearchBoxVisibilityFmg<T>(this T self,
         SearchBoxVisibility searchBoxVisibility)
         where T : SearchHandler
     {
@@ -1107,7 +1107,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T SearchBoxVisibility<T>(this T self, Func<PropertyContext<SearchBoxVisibility>, IPropertyBuilder<SearchBoxVisibility>> configure)
+    public static T SearchBoxVisibilityFmg<T>(this T self, Func<PropertyContext<SearchBoxVisibility>, IPropertyBuilder<SearchBoxVisibility>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<SearchBoxVisibility>(self, SearchHandler.SearchBoxVisibilityProperty);
@@ -1115,7 +1115,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> SearchBoxVisibility<T>(this SettersContext<T> self,
+    public static SettersContext<T> SearchBoxVisibilityFmg<T>(this SettersContext<T> self,
         SearchBoxVisibility searchBoxVisibility)
         where T : SearchHandler
     {
@@ -1123,7 +1123,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> SearchBoxVisibility<T>(this SettersContext<T> self, Func<PropertySettersContext<SearchBoxVisibility>, IPropertySettersBuilder<SearchBoxVisibility>> configure)
+    public static SettersContext<T> SearchBoxVisibilityFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<SearchBoxVisibility>, IPropertySettersBuilder<SearchBoxVisibility>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<SearchBoxVisibility>(self.XamlSetters, SearchHandler.SearchBoxVisibilityProperty);
@@ -1131,7 +1131,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ShowsResults<T>(this T self,
+    public static T ShowsResultsFmg<T>(this T self,
         bool showsResults)
         where T : SearchHandler
     {
@@ -1139,7 +1139,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T ShowsResults<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T ShowsResultsFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : SearchHandler
     {
         var context = new PropertyContext<bool>(self, SearchHandler.ShowsResultsProperty);
@@ -1147,7 +1147,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ShowsResults<T>(this SettersContext<T> self,
+    public static SettersContext<T> ShowsResultsFmg<T>(this SettersContext<T> self,
         bool showsResults)
         where T : SearchHandler
     {
@@ -1155,7 +1155,7 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static SettersContext<T> ShowsResults<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> ShowsResultsFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : SearchHandler
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, SearchHandler.ShowsResultsProperty);
@@ -1163,42 +1163,42 @@ public static partial class SearchHandlerExtension
         return self;
     }
     
-    public static T OnFocused<T>(this T self, EventHandler<EventArgs> handler)
+    public static T OnFocusedFmg<T>(this T self, EventHandler<EventArgs> handler)
         where T : SearchHandler
     {
         self.Focused += handler;
         return self;
     }
     
-    public static T OnFocused<T>(this T self, Action<T> action)
+    public static T OnFocusedFmg<T>(this T self, Action<T> action)
         where T : SearchHandler
     {
         self.Focused += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnUnfocused<T>(this T self, EventHandler<EventArgs> handler)
+    public static T OnUnfocusedFmg<T>(this T self, EventHandler<EventArgs> handler)
         where T : SearchHandler
     {
         self.Unfocused += handler;
         return self;
     }
     
-    public static T OnUnfocused<T>(this T self, Action<T> action)
+    public static T OnUnfocusedFmg<T>(this T self, Action<T> action)
         where T : SearchHandler
     {
         self.Unfocused += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnFocusChangeRequested<T>(this T self, EventHandler<VisualElement.FocusRequestArgs> handler)
+    public static T OnFocusChangeRequestedFmg<T>(this T self, EventHandler<VisualElement.FocusRequestArgs> handler)
         where T : SearchHandler
     {
         self.FocusChangeRequested += handler;
         return self;
     }
     
-    public static T OnFocusChangeRequested<T>(this T self, Action<T> action)
+    public static T OnFocusChangeRequestedFmg<T>(this T self, Action<T> action)
         where T : SearchHandler
     {
         self.FocusChangeRequested += (o, arg) => action(self);

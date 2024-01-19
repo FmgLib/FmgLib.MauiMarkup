@@ -4,7 +4,7 @@
 
 public static partial class RectangleGeometryExtension
 {
-    public static T Rect<T>(this T self,
+    public static T RectFmg<T>(this T self,
         Rect rect)
         where T : Microsoft.Maui.Controls.Shapes.RectangleGeometry
     {
@@ -12,7 +12,7 @@ public static partial class RectangleGeometryExtension
         return self;
     }
     
-    public static T Rect<T>(this T self, Func<PropertyContext<Rect>, IPropertyBuilder<Rect>> configure)
+    public static T RectFmg<T>(this T self, Func<PropertyContext<Rect>, IPropertyBuilder<Rect>> configure)
         where T : Microsoft.Maui.Controls.Shapes.RectangleGeometry
     {
         var context = new PropertyContext<Rect>(self, Microsoft.Maui.Controls.Shapes.RectangleGeometry.RectProperty);
@@ -20,7 +20,7 @@ public static partial class RectangleGeometryExtension
         return self;
     }
     
-    public static SettersContext<T> Rect<T>(this SettersContext<T> self,
+    public static SettersContext<T> RectFmg<T>(this SettersContext<T> self,
         Rect rect)
         where T : Microsoft.Maui.Controls.Shapes.RectangleGeometry
     {
@@ -28,7 +28,7 @@ public static partial class RectangleGeometryExtension
         return self;
     }
     
-    public static SettersContext<T> Rect<T>(this SettersContext<T> self, Func<PropertySettersContext<Rect>, IPropertySettersBuilder<Rect>> configure)
+    public static SettersContext<T> RectFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Rect>, IPropertySettersBuilder<Rect>> configure)
         where T : Microsoft.Maui.Controls.Shapes.RectangleGeometry
     {
         var context = new PropertySettersContext<Rect>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.RectangleGeometry.RectProperty);

@@ -4,7 +4,7 @@
 
 public static partial class MultiPageOfPageExtension
 {
-    public static T ItemsSource<T>(this T self,
+    public static T ItemsSourceFmg<T>(this T self,
         System.Collections.IEnumerable itemsSource)
         where T : MultiPage<Page>
     {
@@ -12,7 +12,7 @@ public static partial class MultiPageOfPageExtension
         return self;
     }
     
-    public static T ItemsSource<T>(this T self, Func<PropertyContext<System.Collections.IEnumerable>, IPropertyBuilder<System.Collections.IEnumerable>> configure)
+    public static T ItemsSourceFmg<T>(this T self, Func<PropertyContext<System.Collections.IEnumerable>, IPropertyBuilder<System.Collections.IEnumerable>> configure)
         where T : MultiPage<Page>
     {
         var context = new PropertyContext<System.Collections.IEnumerable>(self, MultiPage<Page>.ItemsSourceProperty);
@@ -20,7 +20,7 @@ public static partial class MultiPageOfPageExtension
         return self;
     }
     
-    public static SettersContext<T> ItemsSource<T>(this SettersContext<T> self,
+    public static SettersContext<T> ItemsSourceFmg<T>(this SettersContext<T> self,
         System.Collections.IEnumerable itemsSource)
         where T : MultiPage<Page>
     {
@@ -28,7 +28,7 @@ public static partial class MultiPageOfPageExtension
         return self;
     }
     
-    public static SettersContext<T> ItemsSource<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Collections.IEnumerable>, IPropertySettersBuilder<System.Collections.IEnumerable>> configure)
+    public static SettersContext<T> ItemsSourceFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Collections.IEnumerable>, IPropertySettersBuilder<System.Collections.IEnumerable>> configure)
         where T : MultiPage<Page>
     {
         var context = new PropertySettersContext<System.Collections.IEnumerable>(self.XamlSetters, MultiPage<Page>.ItemsSourceProperty);
@@ -36,7 +36,7 @@ public static partial class MultiPageOfPageExtension
         return self;
     }
     
-    public static T ItemTemplate<T>(this T self,
+    public static T ItemTemplateFmg<T>(this T self,
         DataTemplate itemTemplate)
         where T : MultiPage<Page>
     {
@@ -44,7 +44,7 @@ public static partial class MultiPageOfPageExtension
         return self;
     }
     
-    public static T ItemTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T ItemTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : MultiPage<Page>
     {
         var context = new PropertyContext<DataTemplate>(self, MultiPage<Page>.ItemTemplateProperty);
@@ -52,7 +52,7 @@ public static partial class MultiPageOfPageExtension
         return self;
     }
     
-    public static SettersContext<T> ItemTemplate<T>(this SettersContext<T> self,
+    public static SettersContext<T> ItemTemplateFmg<T>(this SettersContext<T> self,
         DataTemplate itemTemplate)
         where T : MultiPage<Page>
     {
@@ -60,7 +60,7 @@ public static partial class MultiPageOfPageExtension
         return self;
     }
     
-    public static SettersContext<T> ItemTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> ItemTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : MultiPage<Page>
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, MultiPage<Page>.ItemTemplateProperty);
@@ -68,14 +68,14 @@ public static partial class MultiPageOfPageExtension
         return self;
     }
     
-    public static T ItemTemplate<T>(this T self, Func<object> loadTemplate)
+    public static T ItemTemplateFmg<T>(this T self, Func<object> loadTemplate)
         where T : MultiPage<Page>
     {
         self.SetValue(MultiPage<Page>.ItemTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static T SelectedItem<T>(this T self,
+    public static T SelectedItemFmg<T>(this T self,
         object selectedItem)
         where T : MultiPage<Page>
     {
@@ -83,7 +83,7 @@ public static partial class MultiPageOfPageExtension
         return self;
     }
     
-    public static T SelectedItem<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T SelectedItemFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : MultiPage<Page>
     {
         var context = new PropertyContext<object>(self, MultiPage<Page>.SelectedItemProperty);
@@ -91,7 +91,7 @@ public static partial class MultiPageOfPageExtension
         return self;
     }
     
-    public static SettersContext<T> SelectedItem<T>(this SettersContext<T> self,
+    public static SettersContext<T> SelectedItemFmg<T>(this SettersContext<T> self,
         object selectedItem)
         where T : MultiPage<Page>
     {
@@ -99,7 +99,7 @@ public static partial class MultiPageOfPageExtension
         return self;
     }
     
-    public static SettersContext<T> SelectedItem<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> SelectedItemFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : MultiPage<Page>
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, MultiPage<Page>.SelectedItemProperty);
@@ -107,7 +107,7 @@ public static partial class MultiPageOfPageExtension
         return self;
     }
     
-    public static T CurrentPage<T>(this T self,
+    public static T CurrentPageFmg<T>(this T self,
         Page currentPage)
         where T : MultiPage<Page>
     {
@@ -115,7 +115,7 @@ public static partial class MultiPageOfPageExtension
         return self;
     }
     
-    public static T Children<T>(this T self,
+    public static T ChildrenFmg<T>(this T self,
         IList<Page> children)
         where T : MultiPage<Page>
     {
@@ -124,7 +124,7 @@ public static partial class MultiPageOfPageExtension
         return self;
     }
 
-    public static T Children<T>(this T self,
+    public static T ChildrenFmg<T>(this T self,
         params Page[] children)
         where T : MultiPage<Page>
     {
@@ -133,28 +133,28 @@ public static partial class MultiPageOfPageExtension
         return self;
     }
     
-    public static T OnCurrentPageChanged<T>(this T self, EventHandler handler)
+    public static T OnCurrentPageChangedFmg<T>(this T self, EventHandler handler)
         where T : MultiPage<Page>
     {
         self.CurrentPageChanged += handler;
         return self;
     }
     
-    public static T OnCurrentPageChanged<T>(this T self, Action<T> action)
+    public static T OnCurrentPageChangedFmg<T>(this T self, Action<T> action)
         where T : MultiPage<Page>
     {
         self.CurrentPageChanged += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnPagesChanged<T>(this T self, System.Collections.Specialized.NotifyCollectionChangedEventHandler handler)
+    public static T OnPagesChangedFmg<T>(this T self, System.Collections.Specialized.NotifyCollectionChangedEventHandler handler)
         where T : MultiPage<Page>
     {
         self.PagesChanged += handler;
         return self;
     }
     
-    public static T OnPagesChanged<T>(this T self, Action<T> action)
+    public static T OnPagesChangedFmg<T>(this T self, Action<T> action)
         where T : MultiPage<Page>
     {
         self.PagesChanged += (o, arg) => action(self);

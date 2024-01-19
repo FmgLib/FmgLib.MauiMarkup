@@ -4,7 +4,7 @@
 
 public static partial class ShadowExtension
 {
-    public static T Radius<T>(this T self,
+    public static T RadiusFmg<T>(this T self,
         float radius)
         where T : Shadow
     {
@@ -12,7 +12,7 @@ public static partial class ShadowExtension
         return self;
     }
     
-    public static T Radius<T>(this T self, Func<PropertyContext<float>, IPropertyBuilder<float>> configure)
+    public static T RadiusFmg<T>(this T self, Func<PropertyContext<float>, IPropertyBuilder<float>> configure)
         where T : Shadow
     {
         var context = new PropertyContext<float>(self, Shadow.RadiusProperty);
@@ -20,7 +20,7 @@ public static partial class ShadowExtension
         return self;
     }
     
-    public static SettersContext<T> Radius<T>(this SettersContext<T> self,
+    public static SettersContext<T> RadiusFmg<T>(this SettersContext<T> self,
         float radius)
         where T : Shadow
     {
@@ -28,7 +28,7 @@ public static partial class ShadowExtension
         return self;
     }
     
-    public static SettersContext<T> Radius<T>(this SettersContext<T> self, Func<PropertySettersContext<float>, IPropertySettersBuilder<float>> configure)
+    public static SettersContext<T> RadiusFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<float>, IPropertySettersBuilder<float>> configure)
         where T : Shadow
     {
         var context = new PropertySettersContext<float>(self.XamlSetters, Shadow.RadiusProperty);
@@ -36,7 +36,7 @@ public static partial class ShadowExtension
         return self;
     }
     
-    public static T Opacity<T>(this T self,
+    public static T OpacityFmg<T>(this T self,
         float opacity)
         where T : Shadow
     {
@@ -44,7 +44,7 @@ public static partial class ShadowExtension
         return self;
     }
     
-    public static T Opacity<T>(this T self, Func<PropertyContext<float>, IPropertyBuilder<float>> configure)
+    public static T OpacityFmg<T>(this T self, Func<PropertyContext<float>, IPropertyBuilder<float>> configure)
         where T : Shadow
     {
         var context = new PropertyContext<float>(self, Shadow.OpacityProperty);
@@ -52,7 +52,7 @@ public static partial class ShadowExtension
         return self;
     }
     
-    public static SettersContext<T> Opacity<T>(this SettersContext<T> self,
+    public static SettersContext<T> OpacityFmg<T>(this SettersContext<T> self,
         float opacity)
         where T : Shadow
     {
@@ -60,7 +60,7 @@ public static partial class ShadowExtension
         return self;
     }
     
-    public static SettersContext<T> Opacity<T>(this SettersContext<T> self, Func<PropertySettersContext<float>, IPropertySettersBuilder<float>> configure)
+    public static SettersContext<T> OpacityFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<float>, IPropertySettersBuilder<float>> configure)
         where T : Shadow
     {
         var context = new PropertySettersContext<float>(self.XamlSetters, Shadow.OpacityProperty);
@@ -68,7 +68,7 @@ public static partial class ShadowExtension
         return self;
     }
     
-    public static T Brush<T>(this T self,
+    public static T BrushFmg<T>(this T self,
         Brush brush)
         where T : Shadow
     {
@@ -76,7 +76,7 @@ public static partial class ShadowExtension
         return self;
     }
     
-    public static T Brush<T>(this T self, Func<PropertyContext<Brush>, IPropertyBuilder<Brush>> configure)
+    public static T BrushFmg<T>(this T self, Func<PropertyContext<Brush>, IPropertyBuilder<Brush>> configure)
         where T : Shadow
     {
         var context = new PropertyContext<Brush>(self, Shadow.BrushProperty);
@@ -84,7 +84,7 @@ public static partial class ShadowExtension
         return self;
     }
     
-    public static SettersContext<T> Brush<T>(this SettersContext<T> self,
+    public static SettersContext<T> BrushFmg<T>(this SettersContext<T> self,
         Brush brush)
         where T : Shadow
     {
@@ -92,7 +92,7 @@ public static partial class ShadowExtension
         return self;
     }
     
-    public static SettersContext<T> Brush<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush>, IPropertySettersBuilder<Brush>> configure)
+    public static SettersContext<T> BrushFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush>, IPropertySettersBuilder<Brush>> configure)
         where T : Shadow
     {
         var context = new PropertySettersContext<Brush>(self.XamlSetters, Shadow.BrushProperty);
@@ -100,7 +100,7 @@ public static partial class ShadowExtension
         return self;
     }
     
-    public static T Offset<T>(this T self,
+    public static T OffsetFmg<T>(this T self,
         Point offset)
         where T : Shadow
     {
@@ -108,7 +108,7 @@ public static partial class ShadowExtension
         return self;
     }
     
-    public static T Offset<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
+    public static T OffsetFmg<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
         where T : Shadow
     {
         var context = new PropertyContext<Point>(self, Shadow.OffsetProperty);
@@ -116,7 +116,7 @@ public static partial class ShadowExtension
         return self;
     }
     
-    public static SettersContext<T> Offset<T>(this SettersContext<T> self,
+    public static SettersContext<T> OffsetFmg<T>(this SettersContext<T> self,
         Point offset)
         where T : Shadow
     {
@@ -124,7 +124,7 @@ public static partial class ShadowExtension
         return self;
     }
     
-    public static SettersContext<T> Offset<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
+    public static SettersContext<T> OffsetFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
         where T : Shadow
     {
         var context = new PropertySettersContext<Point>(self.XamlSetters, Shadow.OffsetProperty);

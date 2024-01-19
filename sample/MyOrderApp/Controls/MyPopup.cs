@@ -9,30 +9,30 @@ public partial class MyPopup : Popup
         CanBeDismissedByTappingOutsideOfPopup = false;
         Color = Colors.Transparent;
         Content = new Grid()
-            .Children(
+            .ChildrenFmg(
                 new Frame()
-                .CornerRadius(25)
-                .Content(
+                .CornerRadiusFmg(25)
+                .ContentFmg(
                     new VerticalStackLayout()
-                    .FillHorizontally()
-                    .FillVertically()
-                    .Margin(10)
-                    .Children(
+                    .FillHorizontalFmg()
+                    .FillVerticalFmg()
+                    .MarginFmg(10)
+                    .ChildrenFmg(
                         new SKLottieView()
-                        .SKSource(new SKFileLottieImageSource { File = "completed.json" })
-                        .RepeatCount(-1)
-                        .HeightRequest(250)
-                        .WidthRequest(200),
+                        .SKSourceFmg(new SKFileLottieImageSource { File = "completed.json" })
+                        .RepeatCountFmg(-1)
+                        .HeightRequestFmg(250)
+                        .WidthRequestFmg(200),
 
                         new Button()
-                        .Text("Ana Sayfa")
-                        .FontAttributes(FontAttributes.Bold)
-                        .BackgroundColor(Colors.DarkBlue)
-                        .TextColor(Colors.White)
-                        .HeightRequest(35)
-                        .WidthRequest(120)
-                        .Padding(0)
-                        .InvokeOnElement(b => b.Clicked += async (sender, e) =>
+                        .TextFmg("Ana Sayfa")
+                        .FontAttributesFmg(FontAttributes.Bold)
+                        .BackgroundColorFmg(Colors.DarkBlue)
+                        .TextColorFmg(Colors.White)
+                        .HeightRequestFmg(35)
+                        .WidthRequestFmg(120)
+                        .PaddingFmg(0)
+                        .InvokeOnElementFmg(b => b.Clicked += async (sender, e) =>
                         {
                             await CloseAsync();
                         })

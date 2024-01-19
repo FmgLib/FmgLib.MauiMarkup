@@ -4,7 +4,7 @@
 
 public static partial class MultiTriggerExtension
 {
-    public static MultiTrigger Conditions(this MultiTrigger self,
+    public static MultiTrigger ConditionsFmg(this MultiTrigger self,
         IList<Condition> conditions)
     {
         foreach (var item in conditions)
@@ -12,7 +12,7 @@ public static partial class MultiTriggerExtension
         return self;
     }
 
-    public static MultiTrigger Conditions(this MultiTrigger self,
+    public static MultiTrigger ConditionsFmg(this MultiTrigger self,
         params Condition[] conditions)
     {
         foreach (var item in conditions)
@@ -20,7 +20,7 @@ public static partial class MultiTriggerExtension
         return self;
     }
     
-    public static MultiTrigger Setters(this MultiTrigger self,
+    public static MultiTrigger SettersFmg(this MultiTrigger self,
         IList<Setter> setters)
     {
         foreach (var item in setters)
@@ -28,7 +28,7 @@ public static partial class MultiTriggerExtension
         return self;
     }
 
-    public static MultiTrigger Setters(this MultiTrigger self,
+    public static MultiTrigger SettersFmg(this MultiTrigger self,
         params Setter[] setters)
     {
         foreach (var item in setters)

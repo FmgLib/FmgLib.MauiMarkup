@@ -9,94 +9,94 @@ public partial class RegisterPage : BasePage<RegisterPageViewModel>
     public override void Build()
     {
         this
-            .BackgroundImageSource("background.jpg")
-            .Content(
+            .BackgroundImageSourceFmg("background.jpg")
+            .ContentFmg(
                 new VerticalStackLayout()
-                .Children(
+                .ChildrenFmg(
                     new Frame()
-                    .Content(
+                    .ContentFmg(
                         new VerticalStackLayout()
-                        .Children(
+                        .ChildrenFmg(
                             new Entry()
-                            .Placeholder("Ad Soyad Girin.")
-                            .PlaceholderColor(Colors.Gray)
-                            .TextColor(Colors.White)
-                            .Assign(out Entry fullname)
-                            .Bind(Entry.TextProperty, "User.FullName"),
+                            .PlaceholderFmg("Ad Soyad Girin.")
+                            .PlaceholderColorFmg(Colors.Gray)
+                            .TextColorFmg(Colors.White)
+                            .AssignFmg(out Entry fullname)
+                            .BindFmg(Entry.TextProperty, "User.FullName"),
 
                             new Entry()
-                            .Placeholder("Kullanıcı Adı Girin.")
-                            .PlaceholderColor(Colors.Gray)
-                            .TextColor(Colors.White)
-                            .Assign(out Entry username)
-                            .Bind(Entry.TextProperty, "User.Username"),
+                            .PlaceholderFmg("Kullanıcı Adı Girin.")
+                            .PlaceholderColorFmg(Colors.Gray)
+                            .TextColorFmg(Colors.White)
+                            .AssignFmg(out Entry username)
+                            .BindFmg(Entry.TextProperty, "User.Username"),
 
                             new Entry()
-                            .Placeholder("Şifre Girin.")
-                            .PlaceholderColor(Colors.Gray)
-                            .TextColor(Colors.White)
-                            .IsPassword(true)
-                            .Assign(out Entry password)
-                            .Bind(Entry.TextProperty, "User.Password"),
+                            .PlaceholderFmg("Şifre Girin.")
+                            .PlaceholderColorFmg(Colors.Gray)
+                            .TextColorFmg(Colors.White)
+                            .IsPasswordFmg(true)
+                            .AssignFmg(out Entry password)
+                            .BindFmg(Entry.TextProperty, "User.Password"),
 
                             
 
                             new Button()
-                            .Text("KAYDET")
-                            .FontAttributes(FontAttributes.Bold)
-                            .IsEnabled(false)
-                            .Bind(Button.CommandProperty, "RegisterCommand")
-                            .Triggers(
+                            .TextFmg("KAYDET")
+                            .FontAttributesFmg(FontAttributes.Bold)
+                            .IsEnabledFmg(false)
+                            .BindFmg(Button.CommandProperty, "RegisterCommand")
+                            .TriggersFmg(
                                 new MultiTrigger(typeof(Button))
-                                .Conditions(
+                                .ConditionsFmg(
                                     new BindingCondition()
-                                    .Binding(b => b
-                                                    .Path("Text.Length")
-                                                    .Source(username)
-                                                    .Converter(new TextLengthToBoolConverter()))
-                                    .Value(false)
+                                    .BindingFmg(b => b
+                                                    .PathFmg("Text.Length")
+                                                    .SourceFmg(username)
+                                                    .ConverterFmg(new TextLengthToBoolConverter()))
+                                    .ValueFmg(false)
 
                                 )
-                                .Setters(new Setters<Button>(e => e.IsEnabled(false))),
+                                .SettersFmg(new Setters<Button>(e => e.IsEnabledFmg(false))),
 
                                 new MultiTrigger(typeof(Button))
-                                .Conditions(
+                                .ConditionsFmg(
                                     new BindingCondition()
-                                    .Binding(b => b
-                                                    .Path("Text.Length")
-                                                    .Source(password)
-                                                    .Converter(new TextLengthToBoolConverter()))
-                                    .Value(false)
+                                    .BindingFmg(b => b
+                                                    .PathFmg("Text.Length")
+                                                    .SourceFmg(password)
+                                                    .ConverterFmg(new TextLengthToBoolConverter()))
+                                    .ValueFmg(false)
 
                                 )
-                                .Setters(new Setters<Button>(e => e.IsEnabled(false))),
+                                .SettersFmg(new Setters<Button>(e => e.IsEnabledFmg(false))),
 
                                 new MultiTrigger(typeof(Button))
-                                .Conditions(
+                                .ConditionsFmg(
                                     new BindingCondition()
-                                    .Binding(b => b
-                                                    .Path("Text.Length")
-                                                    .Source(username)
-                                                    .Converter(new TextLengthToBoolConverter()))
-                                    .Value(true),
+                                    .BindingFmg(b => b
+                                                    .PathFmg("Text.Length")
+                                                    .SourceFmg(username)
+                                                    .ConverterFmg(new TextLengthToBoolConverter()))
+                                    .ValueFmg(true),
 
                                     new BindingCondition()
-                                    .Binding(b => b
-                                                    .Path("Text.Length")
-                                                    .Source(password)
-                                                    .Converter(new TextLengthToBoolConverter()))
-                                    .Value(true)
+                                    .BindingFmg(b => b
+                                                    .PathFmg("Text.Length")
+                                                    .SourceFmg(password)
+                                                    .ConverterFmg(new TextLengthToBoolConverter()))
+                                    .ValueFmg(true)
                                 )
-                                .Setters(new Setters<Button>(e => e.IsEnabled(true)))
+                                .SettersFmg(new Setters<Button>(e => e.IsEnabledFmg(true)))
                             ),
 
                             new Label()
-                            .Text("Hesabım Var! Giriş Yap.")
-                            .TextColor(Colors.LightGray)
-                            .CenterHorizontally()
-                            .GestureRecognizers(
+                            .TextFmg("Hesabım Var! Giriş Yap.")
+                            .TextColorFmg(Colors.LightGray)
+                            .CenterHorizontalFmg()
+                            .GestureRecognizersFmg(
                                 new TapGestureRecognizer()
-                                .OnTapped(async (e, args) =>
+                                .OnTappedFmg(async (e, args) =>
                                 {
                                     fullname.Text = "";
                                     username.Text = "";
@@ -106,15 +106,15 @@ public partial class RegisterPage : BasePage<RegisterPageViewModel>
                             )
 
                         )
-                        .Spacing(10)
+                        .SpacingFmg(10)
                     )
-                    .CornerRadius(25)
-                    .BorderColor(Colors.DarkBlue)
-                    .BackgroundColor(Colors.DarkBlue)
-                    //.MinimumHeightRequest(250)
-                    .MinimumWidthRequest(300)
+                    .CornerRadiusFmg(25)
+                    .BorderColorFmg(Colors.DarkBlue)
+                    .BackgroundColorFmg(Colors.DarkBlue)
+                    //.MinimumHeightRequestFmg(250)
+                    .MinimumWidthRequestFmg(300)
                 )
-                .Center()
+                .CenterFmg()
             );
     }
 }

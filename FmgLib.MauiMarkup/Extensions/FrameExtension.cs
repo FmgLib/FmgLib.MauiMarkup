@@ -2,7 +2,7 @@
 
 public static partial class FrameExtension
 {
-    public static T HasShadow<T>(this T self,
+    public static T HasShadowFmg<T>(this T self,
         bool hasShadow)
         where T : Frame
     {
@@ -10,7 +10,7 @@ public static partial class FrameExtension
         return self;
     }
     
-    public static T HasShadow<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T HasShadowFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Frame
     {
         var context = new PropertyContext<bool>(self, Frame.HasShadowProperty);
@@ -18,7 +18,7 @@ public static partial class FrameExtension
         return self;
     }
     
-    public static SettersContext<T> HasShadow<T>(this SettersContext<T> self,
+    public static SettersContext<T> HasShadowFmg<T>(this SettersContext<T> self,
         bool hasShadow)
         where T : Frame
     {
@@ -26,7 +26,7 @@ public static partial class FrameExtension
         return self;
     }
     
-    public static SettersContext<T> HasShadow<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> HasShadowFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Frame
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Frame.HasShadowProperty);
@@ -34,7 +34,7 @@ public static partial class FrameExtension
         return self;
     }
     
-    public static T BorderColor<T>(this T self,
+    public static T BorderColorFmg<T>(this T self,
         Color borderColor)
         where T : Frame
     {
@@ -42,7 +42,7 @@ public static partial class FrameExtension
         return self;
     }
     
-    public static T BorderColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T BorderColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : Frame
     {
         var context = new PropertyContext<Color>(self, Frame.BorderColorProperty);
@@ -50,7 +50,7 @@ public static partial class FrameExtension
         return self;
     }
     
-    public static SettersContext<T> BorderColor<T>(this SettersContext<T> self,
+    public static SettersContext<T> BorderColorFmg<T>(this SettersContext<T> self,
         Color borderColor)
         where T : Frame
     {
@@ -58,7 +58,7 @@ public static partial class FrameExtension
         return self;
     }
     
-    public static SettersContext<T> BorderColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> BorderColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : Frame
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, Frame.BorderColorProperty);
@@ -66,7 +66,7 @@ public static partial class FrameExtension
         return self;
     }
     
-    public static Task<bool> AnimateBorderColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateBorderColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : Frame
     {
         Color fromValue = self.BorderColor;
@@ -75,7 +75,7 @@ public static partial class FrameExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateBorderColorTo", transform, callback, length, easing);
     }
     
-    public static T CornerRadius<T>(this T self,
+    public static T CornerRadiusFmg<T>(this T self,
         float cornerRadius)
         where T : Frame
     {
@@ -83,7 +83,7 @@ public static partial class FrameExtension
         return self;
     }
     
-    public static T CornerRadius<T>(this T self, Func<PropertyContext<float>, IPropertyBuilder<float>> configure)
+    public static T CornerRadiusFmg<T>(this T self, Func<PropertyContext<float>, IPropertyBuilder<float>> configure)
         where T : Frame
     {
         var context = new PropertyContext<float>(self, Frame.CornerRadiusProperty);
@@ -91,7 +91,7 @@ public static partial class FrameExtension
         return self;
     }
     
-    public static SettersContext<T> CornerRadius<T>(this SettersContext<T> self,
+    public static SettersContext<T> CornerRadiusFmg<T>(this SettersContext<T> self,
         float cornerRadius)
         where T : Frame
     {
@@ -99,7 +99,7 @@ public static partial class FrameExtension
         return self;
     }
     
-    public static SettersContext<T> CornerRadius<T>(this SettersContext<T> self, Func<PropertySettersContext<float>, IPropertySettersBuilder<float>> configure)
+    public static SettersContext<T> CornerRadiusFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<float>, IPropertySettersBuilder<float>> configure)
         where T : Frame
     {
         var context = new PropertySettersContext<float>(self.XamlSetters, Frame.CornerRadiusProperty);

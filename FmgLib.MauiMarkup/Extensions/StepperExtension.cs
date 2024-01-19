@@ -4,7 +4,7 @@
 
 public static partial class StepperExtension
 {
-    public static T Increment<T>(this T self,
+    public static T IncrementFmg<T>(this T self,
         double increment)
         where T : Stepper
     {
@@ -12,7 +12,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static T Increment<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T IncrementFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Stepper
     {
         var context = new PropertyContext<double>(self, Stepper.IncrementProperty);
@@ -20,7 +20,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static SettersContext<T> Increment<T>(this SettersContext<T> self,
+    public static SettersContext<T> IncrementFmg<T>(this SettersContext<T> self,
         double increment)
         where T : Stepper
     {
@@ -28,7 +28,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static SettersContext<T> Increment<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> IncrementFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Stepper
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Stepper.IncrementProperty);
@@ -36,7 +36,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static Task<bool> AnimateIncrementTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateIncrementToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Stepper
     {
         double fromValue = self.Increment;
@@ -45,7 +45,7 @@ public static partial class StepperExtension
         return Transformations.AnimateAsync<double>(self, "AnimateIncrementTo", transform, callback, length, easing);
     }
     
-    public static T Maximum<T>(this T self,
+    public static T MaximumFmg<T>(this T self,
         double maximum)
         where T : Stepper
     {
@@ -53,7 +53,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static T Maximum<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T MaximumFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Stepper
     {
         var context = new PropertyContext<double>(self, Stepper.MaximumProperty);
@@ -61,7 +61,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static SettersContext<T> Maximum<T>(this SettersContext<T> self,
+    public static SettersContext<T> MaximumFmg<T>(this SettersContext<T> self,
         double maximum)
         where T : Stepper
     {
@@ -69,7 +69,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static SettersContext<T> Maximum<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> MaximumFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Stepper
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Stepper.MaximumProperty);
@@ -77,7 +77,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static Task<bool> AnimateMaximumTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateMaximumToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Stepper
     {
         double fromValue = self.Maximum;
@@ -86,7 +86,7 @@ public static partial class StepperExtension
         return Transformations.AnimateAsync<double>(self, "AnimateMaximumTo", transform, callback, length, easing);
     }
     
-    public static T Minimum<T>(this T self,
+    public static T MinimumFmg<T>(this T self,
         double minimum)
         where T : Stepper
     {
@@ -94,7 +94,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static T Minimum<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T MinimumFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Stepper
     {
         var context = new PropertyContext<double>(self, Stepper.MinimumProperty);
@@ -102,7 +102,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static SettersContext<T> Minimum<T>(this SettersContext<T> self,
+    public static SettersContext<T> MinimumFmg<T>(this SettersContext<T> self,
         double minimum)
         where T : Stepper
     {
@@ -110,7 +110,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static SettersContext<T> Minimum<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> MinimumFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Stepper
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Stepper.MinimumProperty);
@@ -118,7 +118,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static Task<bool> AnimateMinimumTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateMinimumToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Stepper
     {
         double fromValue = self.Minimum;
@@ -127,7 +127,7 @@ public static partial class StepperExtension
         return Transformations.AnimateAsync<double>(self, "AnimateMinimumTo", transform, callback, length, easing);
     }
     
-    public static T Value<T>(this T self,
+    public static T ValueFmg<T>(this T self,
         double value)
         where T : Stepper
     {
@@ -135,7 +135,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static T Value<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T ValueFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Stepper
     {
         var context = new PropertyContext<double>(self, Stepper.ValueProperty);
@@ -143,7 +143,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static SettersContext<T> Value<T>(this SettersContext<T> self,
+    public static SettersContext<T> ValueFmg<T>(this SettersContext<T> self,
         double value)
         where T : Stepper
     {
@@ -151,7 +151,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static SettersContext<T> Value<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> ValueFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Stepper
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Stepper.ValueProperty);
@@ -159,7 +159,7 @@ public static partial class StepperExtension
         return self;
     }
     
-    public static Task<bool> AnimateValueTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateValueToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Stepper
     {
         double fromValue = self.Value;
@@ -168,14 +168,14 @@ public static partial class StepperExtension
         return Transformations.AnimateAsync<double>(self, "AnimateValueTo", transform, callback, length, easing);
     }
     
-    public static T OnValueChanged<T>(this T self, EventHandler<ValueChangedEventArgs> handler)
+    public static T OnValueChangedFmg<T>(this T self, EventHandler<ValueChangedEventArgs> handler)
         where T : Stepper
     {
         self.ValueChanged += handler;
         return self;
     }
     
-    public static T OnValueChanged<T>(this T self, Action<T> action)
+    public static T OnValueChangedFmg<T>(this T self, Action<T> action)
         where T : Stepper
     {
         self.ValueChanged += (o, arg) => action(self);

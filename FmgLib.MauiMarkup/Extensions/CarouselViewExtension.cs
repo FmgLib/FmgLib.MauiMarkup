@@ -3,7 +3,7 @@
 
 public static partial class CarouselViewExtension
 {
-    public static T Loop<T>(this T self,
+    public static T LoopFmg<T>(this T self,
         bool loop)
         where T : CarouselView
     {
@@ -11,7 +11,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T Loop<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T LoopFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : CarouselView
     {
         var context = new PropertyContext<bool>(self, CarouselView.LoopProperty);
@@ -19,7 +19,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> Loop<T>(this SettersContext<T> self,
+    public static SettersContext<T> LoopFmg<T>(this SettersContext<T> self,
         bool loop)
         where T : CarouselView
     {
@@ -27,7 +27,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> Loop<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> LoopFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : CarouselView
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, CarouselView.LoopProperty);
@@ -35,7 +35,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T PeekAreaInsets<T>(this T self,
+    public static T PeekAreaInsetsFmg<T>(this T self,
         Thickness peekAreaInsets)
         where T : CarouselView
     {
@@ -43,7 +43,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T PeekAreaInsets<T>(this T self, Func<PropertyContext<Thickness>, IPropertyBuilder<Thickness>> configure)
+    public static T PeekAreaInsetsFmg<T>(this T self, Func<PropertyContext<Thickness>, IPropertyBuilder<Thickness>> configure)
         where T : CarouselView
     {
         var context = new PropertyContext<Thickness>(self, CarouselView.PeekAreaInsetsProperty);
@@ -51,7 +51,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> PeekAreaInsets<T>(this SettersContext<T> self,
+    public static SettersContext<T> PeekAreaInsetsFmg<T>(this SettersContext<T> self,
         Thickness peekAreaInsets)
         where T : CarouselView
     {
@@ -59,7 +59,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> PeekAreaInsets<T>(this SettersContext<T> self, Func<PropertySettersContext<Thickness>, IPropertySettersBuilder<Thickness>> configure)
+    public static SettersContext<T> PeekAreaInsetsFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Thickness>, IPropertySettersBuilder<Thickness>> configure)
         where T : CarouselView
     {
         var context = new PropertySettersContext<Thickness>(self.XamlSetters, CarouselView.PeekAreaInsetsProperty);
@@ -67,7 +67,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T VisibleViews<T>(this T self,
+    public static T VisibleViewsFmg<T>(this T self,
         IList<View> visibleViews)
         where T : CarouselView
     {
@@ -76,7 +76,7 @@ public static partial class CarouselViewExtension
         return self;
     }
 
-    public static T VisibleViews<T>(this T self,
+    public static T VisibleViewsFmg<T>(this T self,
         params View[] visibleViews)
         where T : CarouselView
     {
@@ -85,7 +85,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T VisibleViews<T>(this T self, Func<PropertyContext<System.Collections.ObjectModel.ObservableCollection<View>>, IPropertyBuilder<System.Collections.ObjectModel.ObservableCollection<View>>> configure)
+    public static T VisibleViewsFmg<T>(this T self, Func<PropertyContext<System.Collections.ObjectModel.ObservableCollection<View>>, IPropertyBuilder<System.Collections.ObjectModel.ObservableCollection<View>>> configure)
         where T : CarouselView
     {
         var context = new PropertyContext<System.Collections.ObjectModel.ObservableCollection<View>>(self, CarouselView.VisibleViewsProperty);
@@ -93,7 +93,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T IsBounceEnabled<T>(this T self,
+    public static T IsBounceEnabledFmg<T>(this T self,
         bool isBounceEnabled)
         where T : CarouselView
     {
@@ -101,7 +101,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T IsBounceEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsBounceEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : CarouselView
     {
         var context = new PropertyContext<bool>(self, CarouselView.IsBounceEnabledProperty);
@@ -109,7 +109,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsBounceEnabled<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsBounceEnabledFmg<T>(this SettersContext<T> self,
         bool isBounceEnabled)
         where T : CarouselView
     {
@@ -117,7 +117,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsBounceEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsBounceEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : CarouselView
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, CarouselView.IsBounceEnabledProperty);
@@ -125,7 +125,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T IsSwipeEnabled<T>(this T self,
+    public static T IsSwipeEnabledFmg<T>(this T self,
         bool isSwipeEnabled)
         where T : CarouselView
     {
@@ -133,7 +133,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T IsSwipeEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsSwipeEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : CarouselView
     {
         var context = new PropertyContext<bool>(self, CarouselView.IsSwipeEnabledProperty);
@@ -141,7 +141,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsSwipeEnabled<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsSwipeEnabledFmg<T>(this SettersContext<T> self,
         bool isSwipeEnabled)
         where T : CarouselView
     {
@@ -149,7 +149,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsSwipeEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsSwipeEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : CarouselView
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, CarouselView.IsSwipeEnabledProperty);
@@ -157,7 +157,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T IsScrollAnimated<T>(this T self,
+    public static T IsScrollAnimatedFmg<T>(this T self,
         bool isScrollAnimated)
         where T : CarouselView
     {
@@ -165,7 +165,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T IsScrollAnimated<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsScrollAnimatedFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : CarouselView
     {
         var context = new PropertyContext<bool>(self, CarouselView.IsScrollAnimatedProperty);
@@ -173,7 +173,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsScrollAnimated<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsScrollAnimatedFmg<T>(this SettersContext<T> self,
         bool isScrollAnimated)
         where T : CarouselView
     {
@@ -181,7 +181,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsScrollAnimated<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsScrollAnimatedFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : CarouselView
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, CarouselView.IsScrollAnimatedProperty);
@@ -189,7 +189,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T CurrentItem<T>(this T self,
+    public static T CurrentItemFmg<T>(this T self,
         object currentItem)
         where T : CarouselView
     {
@@ -197,7 +197,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T CurrentItem<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T CurrentItemFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : CarouselView
     {
         var context = new PropertyContext<object>(self, CarouselView.CurrentItemProperty);
@@ -205,7 +205,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> CurrentItem<T>(this SettersContext<T> self,
+    public static SettersContext<T> CurrentItemFmg<T>(this SettersContext<T> self,
         object currentItem)
         where T : CarouselView
     {
@@ -213,7 +213,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> CurrentItem<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> CurrentItemFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : CarouselView
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, CarouselView.CurrentItemProperty);
@@ -221,7 +221,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T CurrentItemChangedCommand<T>(this T self,
+    public static T CurrentItemChangedCommandFmg<T>(this T self,
         System.Windows.Input.ICommand currentItemChangedCommand)
         where T : CarouselView
     {
@@ -229,7 +229,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T CurrentItemChangedCommand<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T CurrentItemChangedCommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : CarouselView
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, CarouselView.CurrentItemChangedCommandProperty);
@@ -237,7 +237,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> CurrentItemChangedCommand<T>(this SettersContext<T> self,
+    public static SettersContext<T> CurrentItemChangedCommandFmg<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand currentItemChangedCommand)
         where T : CarouselView
     {
@@ -245,7 +245,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> CurrentItemChangedCommand<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> CurrentItemChangedCommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : CarouselView
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, CarouselView.CurrentItemChangedCommandProperty);
@@ -253,7 +253,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T CurrentItemChangedCommandParameter<T>(this T self,
+    public static T CurrentItemChangedCommandParameterFmg<T>(this T self,
         object currentItemChangedCommandParameter)
         where T : CarouselView
     {
@@ -261,7 +261,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T CurrentItemChangedCommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T CurrentItemChangedCommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : CarouselView
     {
         var context = new PropertyContext<object>(self, CarouselView.CurrentItemChangedCommandParameterProperty);
@@ -269,7 +269,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> CurrentItemChangedCommandParameter<T>(this SettersContext<T> self,
+    public static SettersContext<T> CurrentItemChangedCommandParameterFmg<T>(this SettersContext<T> self,
         object currentItemChangedCommandParameter)
         where T : CarouselView
     {
@@ -277,7 +277,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> CurrentItemChangedCommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> CurrentItemChangedCommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : CarouselView
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, CarouselView.CurrentItemChangedCommandParameterProperty);
@@ -285,7 +285,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T Position<T>(this T self,
+    public static T PositionFmg<T>(this T self,
         int position)
         where T : CarouselView
     {
@@ -293,7 +293,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T Position<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+    public static T PositionFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
         where T : CarouselView
     {
         var context = new PropertyContext<int>(self, CarouselView.PositionProperty);
@@ -301,7 +301,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> Position<T>(this SettersContext<T> self,
+    public static SettersContext<T> PositionFmg<T>(this SettersContext<T> self,
         int position)
         where T : CarouselView
     {
@@ -309,7 +309,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> Position<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+    public static SettersContext<T> PositionFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
         where T : CarouselView
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, CarouselView.PositionProperty);
@@ -317,7 +317,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T PositionChangedCommand<T>(this T self,
+    public static T PositionChangedCommandFmg<T>(this T self,
         System.Windows.Input.ICommand positionChangedCommand)
         where T : CarouselView
     {
@@ -325,7 +325,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T PositionChangedCommand<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T PositionChangedCommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : CarouselView
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, CarouselView.PositionChangedCommandProperty);
@@ -333,7 +333,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> PositionChangedCommand<T>(this SettersContext<T> self,
+    public static SettersContext<T> PositionChangedCommandFmg<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand positionChangedCommand)
         where T : CarouselView
     {
@@ -341,7 +341,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> PositionChangedCommand<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> PositionChangedCommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : CarouselView
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, CarouselView.PositionChangedCommandProperty);
@@ -349,7 +349,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T PositionChangedCommandParameter<T>(this T self,
+    public static T PositionChangedCommandParameterFmg<T>(this T self,
         object positionChangedCommandParameter)
         where T : CarouselView
     {
@@ -357,7 +357,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T PositionChangedCommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T PositionChangedCommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : CarouselView
     {
         var context = new PropertyContext<object>(self, CarouselView.PositionChangedCommandParameterProperty);
@@ -365,7 +365,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> PositionChangedCommandParameter<T>(this SettersContext<T> self,
+    public static SettersContext<T> PositionChangedCommandParameterFmg<T>(this SettersContext<T> self,
         object positionChangedCommandParameter)
         where T : CarouselView
     {
@@ -373,7 +373,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> PositionChangedCommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> PositionChangedCommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : CarouselView
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, CarouselView.PositionChangedCommandParameterProperty);
@@ -381,7 +381,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T ItemsLayout<T>(this T self,
+    public static T ItemsLayoutFmg<T>(this T self,
         LinearItemsLayout itemsLayout)
         where T : CarouselView
     {
@@ -389,7 +389,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T ItemsLayout<T>(this T self, Func<PropertyContext<LinearItemsLayout>, IPropertyBuilder<LinearItemsLayout>> configure)
+    public static T ItemsLayoutFmg<T>(this T self, Func<PropertyContext<LinearItemsLayout>, IPropertyBuilder<LinearItemsLayout>> configure)
         where T : CarouselView
     {
         var context = new PropertyContext<LinearItemsLayout>(self, CarouselView.ItemsLayoutProperty);
@@ -397,7 +397,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> ItemsLayout<T>(this SettersContext<T> self,
+    public static SettersContext<T> ItemsLayoutFmg<T>(this SettersContext<T> self,
         LinearItemsLayout itemsLayout)
         where T : CarouselView
     {
@@ -405,7 +405,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static SettersContext<T> ItemsLayout<T>(this SettersContext<T> self, Func<PropertySettersContext<LinearItemsLayout>, IPropertySettersBuilder<LinearItemsLayout>> configure)
+    public static SettersContext<T> ItemsLayoutFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<LinearItemsLayout>, IPropertySettersBuilder<LinearItemsLayout>> configure)
         where T : CarouselView
     {
         var context = new PropertySettersContext<LinearItemsLayout>(self.XamlSetters, CarouselView.ItemsLayoutProperty);
@@ -413,7 +413,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T IndicatorView<T>(this T self,
+    public static T IndicatorViewFmg<T>(this T self,
         IndicatorView indicatorView)
         where T : CarouselView
     {
@@ -421,7 +421,7 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T IsScrolling<T>(this T self,
+    public static T IsScrollingFmg<T>(this T self,
         bool isScrolling)
         where T : CarouselView
     {
@@ -429,28 +429,28 @@ public static partial class CarouselViewExtension
         return self;
     }
     
-    public static T OnCurrentItemChanged<T>(this T self, EventHandler<CurrentItemChangedEventArgs> handler)
+    public static T OnCurrentItemChangedFmg<T>(this T self, EventHandler<CurrentItemChangedEventArgs> handler)
         where T : CarouselView
     {
         self.CurrentItemChanged += handler;
         return self;
     }
     
-    public static T OnCurrentItemChanged<T>(this T self, Action<T> action)
+    public static T OnCurrentItemChangedFmg<T>(this T self, Action<T> action)
         where T : CarouselView
     {
         self.CurrentItemChanged += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnPositionChanged<T>(this T self, EventHandler<PositionChangedEventArgs> handler)
+    public static T OnPositionChangedFmg<T>(this T self, EventHandler<PositionChangedEventArgs> handler)
         where T : CarouselView
     {
         self.PositionChanged += handler;
         return self;
     }
     
-    public static T OnPositionChanged<T>(this T self, Action<T> action)
+    public static T OnPositionChangedFmg<T>(this T self, Action<T> action)
         where T : CarouselView
     {
         self.PositionChanged += (o, arg) => action(self);

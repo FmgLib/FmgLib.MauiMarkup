@@ -4,7 +4,7 @@
 
 public static partial class LinearItemsLayoutExtension
 {
-    public static T ItemSpacing<T>(this T self,
+    public static T ItemSpacingFmg<T>(this T self,
         double itemSpacing)
         where T : LinearItemsLayout
     {
@@ -12,7 +12,7 @@ public static partial class LinearItemsLayoutExtension
         return self;
     }
     
-    public static T ItemSpacing<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T ItemSpacingFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : LinearItemsLayout
     {
         var context = new PropertyContext<double>(self, LinearItemsLayout.ItemSpacingProperty);
@@ -20,7 +20,7 @@ public static partial class LinearItemsLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> ItemSpacing<T>(this SettersContext<T> self,
+    public static SettersContext<T> ItemSpacingFmg<T>(this SettersContext<T> self,
         double itemSpacing)
         where T : LinearItemsLayout
     {
@@ -28,7 +28,7 @@ public static partial class LinearItemsLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> ItemSpacing<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> ItemSpacingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : LinearItemsLayout
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, LinearItemsLayout.ItemSpacingProperty);

@@ -9,98 +9,98 @@ public partial class LoginPage : BasePage<LoginPageViewModel>
     public override void Build()
     {
         this
-            .BackgroundImageSource("background.jpg")
-            .Content(
+            .BackgroundImageSourceFmg("background.jpg")
+            .ContentFmg(
                 new VerticalStackLayout()
-                .Children(
+                .ChildrenFmg(
                     new Frame()
-                    .Content(
+                    .ContentFmg(
                         new VerticalStackLayout()
-                        .Children(
+                        .ChildrenFmg(
                             new Entry()
-                            .Placeholder("Kullanıcı Adı Girin.")
-                            .PlaceholderColor(Colors.Gray)
-                            .TextColor(Colors.White)
-                            .Assign(out Entry username)
-                            .Bind(Entry.TextProperty, "User.Username"),
+                            .PlaceholderFmg("Kullanıcı Adı Girin.")
+                            .PlaceholderColorFmg(Colors.Gray)
+                            .TextColorFmg(Colors.White)
+                            .AssignFmg(out Entry username)
+                            .BindFmg(Entry.TextProperty, "User.Username"),
 
                             new Entry()
-                            .Placeholder("Şifre Girin.")
-                            .PlaceholderColor(Colors.Gray)
-                            .TextColor(Colors.White)
-                            .IsPassword(true)
-                            .Assign(out Entry password)
-                            .Bind(Entry.TextProperty, "User.Password"),
+                            .PlaceholderFmg("Şifre Girin.")
+                            .PlaceholderColorFmg(Colors.Gray)
+                            .TextColorFmg(Colors.White)
+                            .IsPasswordFmg(true)
+                            .AssignFmg(out Entry password)
+                            .BindFmg(Entry.TextProperty, "User.Password"),
 
                             new HorizontalStackLayout() 
-                            .Children(
+                            .ChildrenFmg(
                                 new CheckBox()
-                                .Color(Colors.White)
-                                .CenterVertically()
-                                .Bind(CheckBox.IsCheckedProperty, "IsControl"),
+                                .ColorFmg(Colors.White)
+                                .CenterVerticalFmg()
+                                .BindFmg(CheckBox.IsCheckedProperty, "IsControl"),
 
                                 new Label()
-                                .Text("Beni Hatırla")
-                                .TextColor(Colors.White)
-                                .CenterVertically()
+                                .TextFmg("Beni Hatırla")
+                                .TextColorFmg(Colors.White)
+                                .CenterVerticalFmg()
                             ),
                         
                             new Button()
-                            .Text("GİRİŞ YAP")
-                            .FontAttributes(FontAttributes.Bold)
-                            .IsEnabled(false)
-                            .Bind(Button.CommandProperty, "LoginCommand")
-                            .Triggers(
+                            .TextFmg("GİRİŞ YAP")
+                            .FontAttributesFmg(FontAttributes.Bold)
+                            .IsEnabledFmg(false)
+                            .BindFmg(Button.CommandProperty, "LoginCommand")
+                            .TriggersFmg(
                                 new MultiTrigger(typeof(Button))
-                                .Conditions(
+                                .ConditionsFmg(
                                     new BindingCondition()
-                                    .Binding(b => b
-                                                    .Path("Text.Length")
-                                                    .Source(username)
-                                                    .Converter(new TextLengthToBoolConverter()))
-                                    .Value(false)
+                                    .BindingFmg(b => b
+                                                    .PathFmg("Text.Length")
+                                                    .SourceFmg(username)
+                                                    .ConverterFmg(new TextLengthToBoolConverter()))
+                                    .ValueFmg(false)
 
                                 )
-                                .Setters(new Setters<Button>(e => e.IsEnabled(false))), 
+                                .SettersFmg(new Setters<Button>(e => e.IsEnabledFmg(false))), 
 
                                 new MultiTrigger(typeof(Button))
-                                .Conditions(
+                                .ConditionsFmg(
                                     new BindingCondition()
-                                    .Binding(b => b
-                                                    .Path("Text.Length")
-                                                    .Source(password)
-                                                    .Converter(new TextLengthToBoolConverter()))
-                                    .Value(false)
+                                    .BindingFmg(b => b
+                                                    .PathFmg("Text.Length")
+                                                    .SourceFmg(password)
+                                                    .ConverterFmg(new TextLengthToBoolConverter()))
+                                    .ValueFmg(false)
 
                                 )
-                                .Setters(new Setters<Button>(e => e.IsEnabled(false))), 
+                                .SettersFmg(new Setters<Button>(e => e.IsEnabledFmg(false))), 
                             
                                 new MultiTrigger(typeof(Button))
-                                .Conditions(
+                                .ConditionsFmg(
                                     new BindingCondition()
-                                    .Binding(b => b
-                                                    .Path("Text.Length")
-                                                    .Source(username)
-                                                    .Converter(new TextLengthToBoolConverter()))
-                                    .Value(true),
+                                    .BindingFmg(b => b
+                                                    .PathFmg("Text.Length")
+                                                    .SourceFmg(username)
+                                                    .ConverterFmg(new TextLengthToBoolConverter()))
+                                    .ValueFmg(true),
 
                                     new BindingCondition()
-                                    .Binding(b => b
-                                                    .Path("Text.Length")
-                                                    .Source(password)
-                                                    .Converter(new TextLengthToBoolConverter()))
-                                    .Value(true)
+                                    .BindingFmg(b => b
+                                                    .PathFmg("Text.Length")
+                                                    .SourceFmg(password)
+                                                    .ConverterFmg(new TextLengthToBoolConverter()))
+                                    .ValueFmg(true)
                                 )
-                                .Setters(new Setters<Button>(e => e.IsEnabled(true)))
+                                .SettersFmg(new Setters<Button>(e => e.IsEnabledFmg(true)))
                             ),
 
                             new Label()
-                            .Text("Hesabım Yok! Kayıt Ol.")
-                            .TextColor(Colors.LightGray)
-                            .CenterHorizontally()
-                            .GestureRecognizers(
+                            .TextFmg("Hesabım Yok! Kayıt Ol.")
+                            .TextColorFmg(Colors.LightGray)
+                            .CenterHorizontalFmg()
+                            .GestureRecognizersFmg(
                                 new TapGestureRecognizer()
-                                .OnTapped(async (e, args) =>
+                                .OnTappedFmg(async (e, args) =>
                                 {
                                     username.Text = "";
                                     password.Text = "";
@@ -109,15 +109,15 @@ public partial class LoginPage : BasePage<LoginPageViewModel>
                             )
                             
                         )
-                        .Spacing(10)
+                        .SpacingFmg(10)
                     )
-                    .CornerRadius(25)
-                    .BorderColor(Colors.DarkBlue)
-                    .BackgroundColor(Colors.DarkBlue)
-                    //.MinimumHeightRequest(250)
-                    .MinimumWidthRequest(300)
+                    .CornerRadiusFmg(25)
+                    .BorderColorFmg(Colors.DarkBlue)
+                    .BackgroundColorFmg(Colors.DarkBlue)
+                    //.MinimumHeightRequestFmg(250)
+                    .MinimumWidthRequestFmg(300)
                 )
-                .Center()
+                .CenterFmg()
             );
     }
 }

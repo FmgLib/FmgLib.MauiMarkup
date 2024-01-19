@@ -2,7 +2,7 @@
 
 public static partial class EditorExtension
 {
-    public static T AutoSize<T>(this T self,
+    public static T AutoSizeFmg<T>(this T self,
         EditorAutoSizeOption autoSize)
         where T : Editor
     {
@@ -10,7 +10,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T AutoSize<T>(this T self, Func<PropertyContext<EditorAutoSizeOption>, IPropertyBuilder<EditorAutoSizeOption>> configure)
+    public static T AutoSizeFmg<T>(this T self, Func<PropertyContext<EditorAutoSizeOption>, IPropertyBuilder<EditorAutoSizeOption>> configure)
         where T : Editor
     {
         var context = new PropertyContext<EditorAutoSizeOption>(self, Editor.AutoSizeProperty);
@@ -18,7 +18,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> AutoSize<T>(this SettersContext<T> self,
+    public static SettersContext<T> AutoSizeFmg<T>(this SettersContext<T> self,
         EditorAutoSizeOption autoSize)
         where T : Editor
     {
@@ -26,7 +26,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> AutoSize<T>(this SettersContext<T> self, Func<PropertySettersContext<EditorAutoSizeOption>, IPropertySettersBuilder<EditorAutoSizeOption>> configure)
+    public static SettersContext<T> AutoSizeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<EditorAutoSizeOption>, IPropertySettersBuilder<EditorAutoSizeOption>> configure)
         where T : Editor
     {
         var context = new PropertySettersContext<EditorAutoSizeOption>(self.XamlSetters, Editor.AutoSizeProperty);
@@ -34,7 +34,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T FontAttributes<T>(this T self,
+    public static T FontAttributesFmg<T>(this T self,
         FontAttributes fontAttributes)
         where T : Editor
     {
@@ -42,7 +42,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T FontAttributes<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
+    public static T FontAttributesFmg<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
         where T : Editor
     {
         var context = new PropertyContext<FontAttributes>(self, Editor.FontAttributesProperty);
@@ -50,7 +50,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self,
         FontAttributes fontAttributes)
         where T : Editor
     {
@@ -58,7 +58,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
+    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
         where T : Editor
     {
         var context = new PropertySettersContext<FontAttributes>(self.XamlSetters, Editor.FontAttributesProperty);
@@ -66,7 +66,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T IsTextPredictionEnabled<T>(this T self,
+    public static T IsTextPredictionEnabledFmg<T>(this T self,
         bool isTextPredictionEnabled)
         where T : Editor
     {
@@ -74,7 +74,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T IsTextPredictionEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsTextPredictionEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Editor
     {
         var context = new PropertyContext<bool>(self, Editor.IsTextPredictionEnabledProperty);
@@ -82,7 +82,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> IsTextPredictionEnabled<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsTextPredictionEnabledFmg<T>(this SettersContext<T> self,
         bool isTextPredictionEnabled)
         where T : Editor
     {
@@ -90,7 +90,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> IsTextPredictionEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsTextPredictionEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Editor
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Editor.IsTextPredictionEnabledProperty);
@@ -98,7 +98,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T CursorPosition<T>(this T self,
+    public static T CursorPositionFmg<T>(this T self,
         int cursorPosition)
         where T : Editor
     {
@@ -106,7 +106,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T CursorPosition<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+    public static T CursorPositionFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
         where T : Editor
     {
         var context = new PropertyContext<int>(self, Editor.CursorPositionProperty);
@@ -114,7 +114,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> CursorPosition<T>(this SettersContext<T> self,
+    public static SettersContext<T> CursorPositionFmg<T>(this SettersContext<T> self,
         int cursorPosition)
         where T : Editor
     {
@@ -122,7 +122,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> CursorPosition<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+    public static SettersContext<T> CursorPositionFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
         where T : Editor
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, Editor.CursorPositionProperty);
@@ -130,7 +130,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T SelectionLength<T>(this T self,
+    public static T SelectionLengthFmg<T>(this T self,
         int selectionLength)
         where T : Editor
     {
@@ -138,7 +138,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T SelectionLength<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+    public static T SelectionLengthFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
         where T : Editor
     {
         var context = new PropertyContext<int>(self, Editor.SelectionLengthProperty);
@@ -146,7 +146,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> SelectionLength<T>(this SettersContext<T> self,
+    public static SettersContext<T> SelectionLengthFmg<T>(this SettersContext<T> self,
         int selectionLength)
         where T : Editor
     {
@@ -154,7 +154,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> SelectionLength<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+    public static SettersContext<T> SelectionLengthFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
         where T : Editor
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, Editor.SelectionLengthProperty);
@@ -162,7 +162,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T FontFamily<T>(this T self,
+    public static T FontFamilyFmg<T>(this T self,
         string fontFamily)
         where T : Editor
     {
@@ -170,7 +170,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T FontFamily<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T FontFamilyFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : Editor
     {
         var context = new PropertyContext<string>(self, Editor.FontFamilyProperty);
@@ -178,7 +178,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self,
         string fontFamily)
         where T : Editor
     {
@@ -186,7 +186,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : Editor
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, Editor.FontFamilyProperty);
@@ -194,7 +194,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T FontSize<T>(this T self,
+    public static T FontSizeFmg<T>(this T self,
         double fontSize)
         where T : Editor
     {
@@ -202,7 +202,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T FontSize<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T FontSizeFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Editor
     {
         var context = new PropertyContext<double>(self, Editor.FontSizeProperty);
@@ -210,7 +210,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> FontSize<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self,
         double fontSize)
         where T : Editor
     {
@@ -218,7 +218,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> FontSize<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Editor
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Editor.FontSizeProperty);
@@ -226,7 +226,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static Task<bool> AnimateFontSizeTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateFontSizeToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Editor
     {
         double fromValue = self.FontSize;
@@ -235,7 +235,7 @@ public static partial class EditorExtension
         return Transformations.AnimateAsync<double>(self, "AnimateFontSizeTo", transform, callback, length, easing);
     }
     
-    public static T HorizontalTextAlignment<T>(this T self,
+    public static T HorizontalTextAlignmentFmg<T>(this T self,
         TextAlignment horizontalTextAlignment)
         where T : Editor
     {
@@ -243,7 +243,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T HorizontalTextAlignment<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
+    public static T HorizontalTextAlignmentFmg<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
         where T : Editor
     {
         var context = new PropertyContext<TextAlignment>(self, Editor.HorizontalTextAlignmentProperty);
@@ -251,7 +251,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalTextAlignment<T>(this SettersContext<T> self,
+    public static SettersContext<T> HorizontalTextAlignmentFmg<T>(this SettersContext<T> self,
         TextAlignment horizontalTextAlignment)
         where T : Editor
     {
@@ -259,7 +259,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalTextAlignment<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
+    public static SettersContext<T> HorizontalTextAlignmentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
         where T : Editor
     {
         var context = new PropertySettersContext<TextAlignment>(self.XamlSetters, Editor.HorizontalTextAlignmentProperty);
@@ -267,7 +267,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T VerticalTextAlignment<T>(this T self,
+    public static T VerticalTextAlignmentFmg<T>(this T self,
         TextAlignment verticalTextAlignment)
         where T : Editor
     {
@@ -275,7 +275,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T VerticalTextAlignment<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
+    public static T VerticalTextAlignmentFmg<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
         where T : Editor
     {
         var context = new PropertyContext<TextAlignment>(self, Editor.VerticalTextAlignmentProperty);
@@ -283,7 +283,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalTextAlignment<T>(this SettersContext<T> self,
+    public static SettersContext<T> VerticalTextAlignmentFmg<T>(this SettersContext<T> self,
         TextAlignment verticalTextAlignment)
         where T : Editor
     {
@@ -291,7 +291,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalTextAlignment<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
+    public static SettersContext<T> VerticalTextAlignmentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
         where T : Editor
     {
         var context = new PropertySettersContext<TextAlignment>(self.XamlSetters, Editor.VerticalTextAlignmentProperty);
@@ -299,7 +299,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T FontAutoScalingEnabled<T>(this T self,
+    public static T FontAutoScalingEnabledFmg<T>(this T self,
         bool fontAutoScalingEnabled)
         where T : Editor
     {
@@ -307,7 +307,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T FontAutoScalingEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T FontAutoScalingEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Editor
     {
         var context = new PropertyContext<bool>(self, Editor.FontAutoScalingEnabledProperty);
@@ -315,7 +315,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self,
         bool fontAutoScalingEnabled)
         where T : Editor
     {
@@ -323,7 +323,7 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Editor
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Editor.FontAutoScalingEnabledProperty);
@@ -331,14 +331,14 @@ public static partial class EditorExtension
         return self;
     }
     
-    public static T OnCompleted<T>(this T self, EventHandler handler)
+    public static T OnCompletedFmg<T>(this T self, EventHandler handler)
         where T : Editor
     {
         self.Completed += handler;
         return self;
     }
     
-    public static T OnCompleted<T>(this T self, Action<T> action)
+    public static T OnCompletedFmg<T>(this T self, Action<T> action)
         where T : Editor
     {
         self.Completed += (o, arg) => action(self);
@@ -346,21 +346,21 @@ public static partial class EditorExtension
     }
     
 
-    public static T TextCenterHorizontal<T>(this T self)
+    public static T TextCenterHorizontalFmg<T>(this T self)
         where T : Editor
     {
         self.SetValue(Editor.HorizontalTextAlignmentProperty, TextAlignment.Center);
         return self;
     }
 
-    public static T TextCenterVertical<T>(this T self)
+    public static T TextCenterVerticalFmg<T>(this T self)
         where T : Editor
     {
         self.SetValue(Editor.VerticalTextAlignmentProperty, TextAlignment.Center);
         return self;
     }
 
-    public static T TextCenter<T>(this T self)
+    public static T TextCenterFmg<T>(this T self)
         where T : Editor
     {
         self.SetValue(Editor.HorizontalTextAlignmentProperty, TextAlignment.Center);
@@ -368,21 +368,21 @@ public static partial class EditorExtension
         return self;
     }
 
-    public static T TextTop<T>(this T self)
+    public static T TextTopFmg<T>(this T self)
         where T : Editor
     {
         self.SetValue(Editor.VerticalTextAlignmentProperty, TextAlignment.Start);
         return self;
     }
 
-    public static T TextBottom<T>(this T self)
+    public static T TextBottomFmg<T>(this T self)
         where T : Editor, Microsoft.Maui.ITextAlignment
     {
         self.SetValue(Editor.VerticalTextAlignmentProperty, TextAlignment.End);
         return self;
     }
 
-    public static T TextTopStart<T>(this T self)
+    public static T TextTopStartFmg<T>(this T self)
         where T : Editor
     {
         self.SetValue(Editor.VerticalTextAlignmentProperty, TextAlignment.Start);
@@ -390,7 +390,7 @@ public static partial class EditorExtension
         return self;
     }
 
-    public static T TextBottomStart<T>(this T self)
+    public static T TextBottomStartFmg<T>(this T self)
         where T : Editor
     {
         self.SetValue(Editor.VerticalTextAlignmentProperty, TextAlignment.End);
@@ -398,7 +398,7 @@ public static partial class EditorExtension
         return self;
     }
 
-    public static T TextTopEnd<T>(this T self)
+    public static T TextTopEndFmg<T>(this T self)
         where T : Editor
     {
         self.SetValue(Editor.VerticalTextAlignmentProperty, TextAlignment.Start);
@@ -406,7 +406,7 @@ public static partial class EditorExtension
         return self;
     }
 
-    public static T TextBottomEnd<T>(this T self)
+    public static T TextBottomEndFmg<T>(this T self)
         where T : Editor
     {
         self.SetValue(Editor.VerticalTextAlignmentProperty, TextAlignment.End);
@@ -414,14 +414,14 @@ public static partial class EditorExtension
         return self;
     }
 
-    public static T TextStart<T>(this T self)
+    public static T TextStartFmg<T>(this T self)
         where T : Editor
     {
         self.SetValue(Editor.HorizontalTextAlignmentProperty, TextAlignment.Start);
         return self;
     }
 
-    public static T TextEnd<T>(this T self)
+    public static T TextEndFmg<T>(this T self)
         where T : Editor
     {
         self.SetValue(Editor.HorizontalTextAlignmentProperty, TextAlignment.End);

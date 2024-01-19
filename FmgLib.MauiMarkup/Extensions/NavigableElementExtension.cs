@@ -4,7 +4,7 @@
 
 public static partial class NavigableElementExtension
 {
-    public static T Style<T>(this T self,
+    public static T StyleFmg<T>(this T self,
         Style style)
         where T : NavigableElement
     {
@@ -12,7 +12,7 @@ public static partial class NavigableElementExtension
         return self;
     }
     
-    public static T Style<T>(this T self, Func<PropertyContext<Style>, IPropertyBuilder<Style>> configure)
+    public static T StyleFmg<T>(this T self, Func<PropertyContext<Style>, IPropertyBuilder<Style>> configure)
         where T : NavigableElement
     {
         var context = new PropertyContext<Style>(self, NavigableElement.StyleProperty);
@@ -20,7 +20,7 @@ public static partial class NavigableElementExtension
         return self;
     }
     
-    public static SettersContext<T> Style<T>(this SettersContext<T> self,
+    public static SettersContext<T> StyleFmg<T>(this SettersContext<T> self,
         Style style)
         where T : NavigableElement
     {
@@ -28,7 +28,7 @@ public static partial class NavigableElementExtension
         return self;
     }
     
-    public static SettersContext<T> Style<T>(this SettersContext<T> self, Func<PropertySettersContext<Style>, IPropertySettersBuilder<Style>> configure)
+    public static SettersContext<T> StyleFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Style>, IPropertySettersBuilder<Style>> configure)
         where T : NavigableElement
     {
         var context = new PropertySettersContext<Style>(self.XamlSetters, NavigableElement.StyleProperty);
@@ -36,7 +36,7 @@ public static partial class NavigableElementExtension
         return self;
     }
     
-    public static T StyleClass<T>(this T self,
+    public static T StyleClassFmg<T>(this T self,
         IList<string> styleClass)
         where T : NavigableElement
     {
@@ -45,7 +45,7 @@ public static partial class NavigableElementExtension
         return self;
     }
 
-    public static T StyleClass<T>(this T self,
+    public static T StyleClassFmg<T>(this T self,
         params string[] styleClass)
         where T : NavigableElement
     {
@@ -54,7 +54,7 @@ public static partial class NavigableElementExtension
         return self;
     }
     
-    public static T @class<T>(this T self,
+    public static T @classFmg<T>(this T self,
         IList<string> @class)
         where T : NavigableElement
     {
@@ -63,7 +63,7 @@ public static partial class NavigableElementExtension
         return self;
     }
 
-    public static T @class<T>(this T self,
+    public static T @classFmg<T>(this T self,
         params string[] @class)
         where T : NavigableElement
     {

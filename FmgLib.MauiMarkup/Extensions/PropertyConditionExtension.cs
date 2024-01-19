@@ -4,14 +4,14 @@
 
 public static partial class PropertyConditionExtension
 {
-    public static PropertyCondition Property(this PropertyCondition self,
+    public static PropertyCondition PropertyFmg(this PropertyCondition self,
         BindableProperty property)
     {
         self.Property = property;
         return self;
     }
     
-    public static PropertyCondition Value(this PropertyCondition self,
+    public static PropertyCondition ValueFmg(this PropertyCondition self,
         object value)
     {
         self.Value = value;

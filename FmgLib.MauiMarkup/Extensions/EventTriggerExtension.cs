@@ -2,7 +2,7 @@
 
 public static partial class EventTriggerExtension
 {
-    public static EventTrigger Actions(this EventTrigger self,
+    public static EventTrigger ActionsFmg(this EventTrigger self,
         IList<TriggerAction> actions)
     {
         foreach (var item in actions)
@@ -10,7 +10,7 @@ public static partial class EventTriggerExtension
         return self;
     }
 
-    public static EventTrigger Actions(this EventTrigger self,
+    public static EventTrigger ActionsFmg(this EventTrigger self,
         params TriggerAction[] actions)
     {
         foreach (var item in actions)
@@ -18,7 +18,7 @@ public static partial class EventTriggerExtension
         return self;
     }
     
-    public static EventTrigger Event(this EventTrigger self,
+    public static EventTrigger EventFmg(this EventTrigger self,
         string @event)
     {
         self.Event = @event;

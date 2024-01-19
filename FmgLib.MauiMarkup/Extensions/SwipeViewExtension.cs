@@ -6,7 +6,7 @@ namespace FmgLib.MauiMarkup;
 
 public static partial class SwipeViewExtension
 {
-    public static T Threshold<T>(this T self,
+    public static T ThresholdFmg<T>(this T self,
         double threshold)
         where T : SwipeView
     {
@@ -14,7 +14,7 @@ public static partial class SwipeViewExtension
         return self;
     }
     
-    public static T Threshold<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T ThresholdFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : SwipeView
     {
         var context = new PropertyContext<double>(self, SwipeView.ThresholdProperty);
@@ -22,7 +22,7 @@ public static partial class SwipeViewExtension
         return self;
     }
     
-    public static SettersContext<T> Threshold<T>(this SettersContext<T> self,
+    public static SettersContext<T> ThresholdFmg<T>(this SettersContext<T> self,
         double threshold)
         where T : SwipeView
     {
@@ -30,7 +30,7 @@ public static partial class SwipeViewExtension
         return self;
     }
     
-    public static SettersContext<T> Threshold<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> ThresholdFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : SwipeView
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, SwipeView.ThresholdProperty);
@@ -38,7 +38,7 @@ public static partial class SwipeViewExtension
         return self;
     }
     
-    public static Task<bool> AnimateThresholdTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateThresholdToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : SwipeView
     {
         double fromValue = self.Threshold;
@@ -47,7 +47,7 @@ public static partial class SwipeViewExtension
         return Transformations.AnimateAsync<double>(self, "AnimateThresholdTo", transform, callback, length, easing);
     }
     
-    public static T LeftItems<T>(this T self,
+    public static T LeftItemsFmg<T>(this T self,
         IList<ISwipeItem> leftItems)
         where T : SwipeView
     {
@@ -56,7 +56,7 @@ public static partial class SwipeViewExtension
         return self;
     }
 
-    public static T LeftItems<T>(this T self,
+    public static T LeftItemsFmg<T>(this T self,
         params ISwipeItem[] leftItems)
         where T : SwipeView
     {
@@ -65,7 +65,7 @@ public static partial class SwipeViewExtension
         return self;
     }
     
-    public static T LeftItems<T>(this T self, Func<PropertyContext<SwipeItems>, IPropertyBuilder<SwipeItems>> configure)
+    public static T LeftItemsFmg<T>(this T self, Func<PropertyContext<SwipeItems>, IPropertyBuilder<SwipeItems>> configure)
         where T : SwipeView
     {
         var context = new PropertyContext<SwipeItems>(self, SwipeView.LeftItemsProperty);
@@ -73,7 +73,7 @@ public static partial class SwipeViewExtension
         return self;
     }
     
-    public static T RightItems<T>(this T self,
+    public static T RightItemsFmg<T>(this T self,
         IList<ISwipeItem> rightItems)
         where T : SwipeView
     {
@@ -82,7 +82,7 @@ public static partial class SwipeViewExtension
         return self;
     }
 
-    public static T RightItems<T>(this T self,
+    public static T RightItemsFmg<T>(this T self,
         params ISwipeItem[] rightItems)
         where T : SwipeView
     {
@@ -91,7 +91,7 @@ public static partial class SwipeViewExtension
         return self;
     }
     
-    public static T RightItems<T>(this T self, Func<PropertyContext<SwipeItems>, IPropertyBuilder<SwipeItems>> configure)
+    public static T RightItemsFmg<T>(this T self, Func<PropertyContext<SwipeItems>, IPropertyBuilder<SwipeItems>> configure)
         where T : SwipeView
     {
         var context = new PropertyContext<SwipeItems>(self, SwipeView.RightItemsProperty);
@@ -99,7 +99,7 @@ public static partial class SwipeViewExtension
         return self;
     }
     
-    public static T TopItems<T>(this T self,
+    public static T TopItemsFmg<T>(this T self,
         IList<ISwipeItem> topItems)
         where T : SwipeView
     {
@@ -108,7 +108,7 @@ public static partial class SwipeViewExtension
         return self;
     }
 
-    public static T TopItems<T>(this T self,
+    public static T TopItemsFmg<T>(this T self,
         params ISwipeItem[] topItems)
         where T : SwipeView
     {
@@ -117,7 +117,7 @@ public static partial class SwipeViewExtension
         return self;
     }
     
-    public static T TopItems<T>(this T self, Func<PropertyContext<SwipeItems>, IPropertyBuilder<SwipeItems>> configure)
+    public static T TopItemsFmg<T>(this T self, Func<PropertyContext<SwipeItems>, IPropertyBuilder<SwipeItems>> configure)
         where T : SwipeView
     {
         var context = new PropertyContext<SwipeItems>(self, SwipeView.TopItemsProperty);
@@ -125,7 +125,7 @@ public static partial class SwipeViewExtension
         return self;
     }
     
-    public static T BottomItems<T>(this T self,
+    public static T BottomItemsFmg<T>(this T self,
         IList<ISwipeItem> bottomItems)
         where T : SwipeView
     {
@@ -134,7 +134,7 @@ public static partial class SwipeViewExtension
         return self;
     }
 
-    public static T BottomItems<T>(this T self,
+    public static T BottomItemsFmg<T>(this T self,
         params ISwipeItem[] bottomItems)
         where T : SwipeView
     {
@@ -143,7 +143,7 @@ public static partial class SwipeViewExtension
         return self;
     }
     
-    public static T BottomItems<T>(this T self, Func<PropertyContext<SwipeItems>, IPropertyBuilder<SwipeItems>> configure)
+    public static T BottomItemsFmg<T>(this T self, Func<PropertyContext<SwipeItems>, IPropertyBuilder<SwipeItems>> configure)
         where T : SwipeView
     {
         var context = new PropertyContext<SwipeItems>(self, SwipeView.BottomItemsProperty);
@@ -151,70 +151,70 @@ public static partial class SwipeViewExtension
         return self;
     }
     
-    public static T OnSwipeStarted<T>(this T self, EventHandler<SwipeStartedEventArgs> handler)
+    public static T OnSwipeStartedFmg<T>(this T self, EventHandler<SwipeStartedEventArgs> handler)
         where T : SwipeView
     {
         self.SwipeStarted += handler;
         return self;
     }
     
-    public static T OnSwipeStarted<T>(this T self, Action<T> action)
+    public static T OnSwipeStartedFmg<T>(this T self, Action<T> action)
         where T : SwipeView
     {
         self.SwipeStarted += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnSwipeChanging<T>(this T self, EventHandler<SwipeChangingEventArgs> handler)
+    public static T OnSwipeChangingFmg<T>(this T self, EventHandler<SwipeChangingEventArgs> handler)
         where T : SwipeView
     {
         self.SwipeChanging += handler;
         return self;
     }
     
-    public static T OnSwipeChanging<T>(this T self, Action<T> action)
+    public static T OnSwipeChangingFmg<T>(this T self, Action<T> action)
         where T : SwipeView
     {
         self.SwipeChanging += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnSwipeEnded<T>(this T self, EventHandler<SwipeEndedEventArgs> handler)
+    public static T OnSwipeEndedFmg<T>(this T self, EventHandler<SwipeEndedEventArgs> handler)
         where T : SwipeView
     {
         self.SwipeEnded += handler;
         return self;
     }
     
-    public static T OnSwipeEnded<T>(this T self, Action<T> action)
+    public static T OnSwipeEndedFmg<T>(this T self, Action<T> action)
         where T : SwipeView
     {
         self.SwipeEnded += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnOpenRequested<T>(this T self, EventHandler<OpenRequestedEventArgs> handler)
+    public static T OnOpenRequestedFmg<T>(this T self, EventHandler<OpenRequestedEventArgs> handler)
         where T : SwipeView
     {
         self.OpenRequested += handler;
         return self;
     }
     
-    public static T OnOpenRequested<T>(this T self, Action<T> action)
+    public static T OnOpenRequestedFmg<T>(this T self, Action<T> action)
         where T : SwipeView
     {
         self.OpenRequested += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnCloseRequested<T>(this T self, EventHandler<CloseRequestedEventArgs> handler)
+    public static T OnCloseRequestedFmg<T>(this T self, EventHandler<CloseRequestedEventArgs> handler)
         where T : SwipeView
     {
         self.CloseRequested += handler;
         return self;
     }
     
-    public static T OnCloseRequested<T>(this T self, Action<T> action)
+    public static T OnCloseRequestedFmg<T>(this T self, Action<T> action)
         where T : SwipeView
     {
         self.CloseRequested += (o, arg) => action(self);

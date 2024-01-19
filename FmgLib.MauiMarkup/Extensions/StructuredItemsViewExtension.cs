@@ -4,7 +4,7 @@
 
 public static partial class StructuredItemsViewExtension
 {
-    public static T Header<T>(this T self,
+    public static T HeaderFmg<T>(this T self,
         object header)
         where T : StructuredItemsView
     {
@@ -12,7 +12,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static T Header<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T HeaderFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : StructuredItemsView
     {
         var context = new PropertyContext<object>(self, StructuredItemsView.HeaderProperty);
@@ -20,7 +20,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> Header<T>(this SettersContext<T> self,
+    public static SettersContext<T> HeaderFmg<T>(this SettersContext<T> self,
         object header)
         where T : StructuredItemsView
     {
@@ -28,7 +28,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> Header<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> HeaderFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : StructuredItemsView
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, StructuredItemsView.HeaderProperty);
@@ -36,7 +36,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static T HeaderTemplate<T>(this T self,
+    public static T HeaderTemplateFmg<T>(this T self,
         DataTemplate headerTemplate)
         where T : StructuredItemsView
     {
@@ -44,7 +44,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static T HeaderTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T HeaderTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : StructuredItemsView
     {
         var context = new PropertyContext<DataTemplate>(self, StructuredItemsView.HeaderTemplateProperty);
@@ -52,7 +52,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> HeaderTemplate<T>(this SettersContext<T> self,
+    public static SettersContext<T> HeaderTemplateFmg<T>(this SettersContext<T> self,
         DataTemplate headerTemplate)
         where T : StructuredItemsView
     {
@@ -60,7 +60,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> HeaderTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> HeaderTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : StructuredItemsView
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, StructuredItemsView.HeaderTemplateProperty);
@@ -68,14 +68,14 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static T HeaderTemplate<T>(this T self, Func<object> loadTemplate)
+    public static T HeaderTemplateFmg<T>(this T self, Func<object> loadTemplate)
         where T : StructuredItemsView
     {
         self.SetValue(StructuredItemsView.HeaderTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static T Footer<T>(this T self,
+    public static T FooterFmg<T>(this T self,
         object footer)
         where T : StructuredItemsView
     {
@@ -83,7 +83,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static T Footer<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T FooterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : StructuredItemsView
     {
         var context = new PropertyContext<object>(self, StructuredItemsView.FooterProperty);
@@ -91,7 +91,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> Footer<T>(this SettersContext<T> self,
+    public static SettersContext<T> FooterFmg<T>(this SettersContext<T> self,
         object footer)
         where T : StructuredItemsView
     {
@@ -99,7 +99,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> Footer<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> FooterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : StructuredItemsView
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, StructuredItemsView.FooterProperty);
@@ -107,7 +107,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static T FooterTemplate<T>(this T self,
+    public static T FooterTemplateFmg<T>(this T self,
         DataTemplate footerTemplate)
         where T : StructuredItemsView
     {
@@ -115,7 +115,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static T FooterTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T FooterTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : StructuredItemsView
     {
         var context = new PropertyContext<DataTemplate>(self, StructuredItemsView.FooterTemplateProperty);
@@ -123,7 +123,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> FooterTemplate<T>(this SettersContext<T> self,
+    public static SettersContext<T> FooterTemplateFmg<T>(this SettersContext<T> self,
         DataTemplate footerTemplate)
         where T : StructuredItemsView
     {
@@ -131,7 +131,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> FooterTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> FooterTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : StructuredItemsView
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, StructuredItemsView.FooterTemplateProperty);
@@ -139,14 +139,14 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static T FooterTemplate<T>(this T self, Func<object> loadTemplate)
+    public static T FooterTemplateFmg<T>(this T self, Func<object> loadTemplate)
         where T : StructuredItemsView
     {
         self.SetValue(StructuredItemsView.FooterTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static T ItemsLayout<T>(this T self,
+    public static T ItemsLayoutFmg<T>(this T self,
         IItemsLayout itemsLayout)
         where T : StructuredItemsView
     {
@@ -154,7 +154,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static T ItemsLayout<T>(this T self, Func<PropertyContext<IItemsLayout>, IPropertyBuilder<IItemsLayout>> configure)
+    public static T ItemsLayoutFmg<T>(this T self, Func<PropertyContext<IItemsLayout>, IPropertyBuilder<IItemsLayout>> configure)
         where T : StructuredItemsView
     {
         var context = new PropertyContext<IItemsLayout>(self, StructuredItemsView.ItemsLayoutProperty);
@@ -162,7 +162,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> ItemsLayout<T>(this SettersContext<T> self,
+    public static SettersContext<T> ItemsLayoutFmg<T>(this SettersContext<T> self,
         IItemsLayout itemsLayout)
         where T : StructuredItemsView
     {
@@ -170,7 +170,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> ItemsLayout<T>(this SettersContext<T> self, Func<PropertySettersContext<IItemsLayout>, IPropertySettersBuilder<IItemsLayout>> configure)
+    public static SettersContext<T> ItemsLayoutFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<IItemsLayout>, IPropertySettersBuilder<IItemsLayout>> configure)
         where T : StructuredItemsView
     {
         var context = new PropertySettersContext<IItemsLayout>(self.XamlSetters, StructuredItemsView.ItemsLayoutProperty);
@@ -178,7 +178,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static T ItemSizingStrategy<T>(this T self,
+    public static T ItemSizingStrategyFmg<T>(this T self,
         ItemSizingStrategy itemSizingStrategy)
         where T : StructuredItemsView
     {
@@ -186,7 +186,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static T ItemSizingStrategy<T>(this T self, Func<PropertyContext<ItemSizingStrategy>, IPropertyBuilder<ItemSizingStrategy>> configure)
+    public static T ItemSizingStrategyFmg<T>(this T self, Func<PropertyContext<ItemSizingStrategy>, IPropertyBuilder<ItemSizingStrategy>> configure)
         where T : StructuredItemsView
     {
         var context = new PropertyContext<ItemSizingStrategy>(self, StructuredItemsView.ItemSizingStrategyProperty);
@@ -194,7 +194,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> ItemSizingStrategy<T>(this SettersContext<T> self,
+    public static SettersContext<T> ItemSizingStrategyFmg<T>(this SettersContext<T> self,
         ItemSizingStrategy itemSizingStrategy)
         where T : StructuredItemsView
     {
@@ -202,7 +202,7 @@ public static partial class StructuredItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> ItemSizingStrategy<T>(this SettersContext<T> self, Func<PropertySettersContext<ItemSizingStrategy>, IPropertySettersBuilder<ItemSizingStrategy>> configure)
+    public static SettersContext<T> ItemSizingStrategyFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ItemSizingStrategy>, IPropertySettersBuilder<ItemSizingStrategy>> configure)
         where T : StructuredItemsView
     {
         var context = new PropertySettersContext<ItemSizingStrategy>(self.XamlSetters, StructuredItemsView.ItemSizingStrategyProperty);

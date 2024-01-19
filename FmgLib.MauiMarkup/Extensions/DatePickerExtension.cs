@@ -2,7 +2,7 @@
 
 public static partial class DatePickerExtension
 {
-    public static T Date<T>(this T self,
+    public static T DateFmg<T>(this T self,
         DateTime date)
         where T : DatePicker
     {
@@ -10,7 +10,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T Date<T>(this T self, Func<PropertyContext<DateTime>, IPropertyBuilder<DateTime>> configure)
+    public static T DateFmg<T>(this T self, Func<PropertyContext<DateTime>, IPropertyBuilder<DateTime>> configure)
         where T : DatePicker
     {
         var context = new PropertyContext<DateTime>(self, DatePicker.DateProperty);
@@ -18,7 +18,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> Date<T>(this SettersContext<T> self,
+    public static SettersContext<T> DateFmg<T>(this SettersContext<T> self,
         DateTime date)
         where T : DatePicker
     {
@@ -26,7 +26,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> Date<T>(this SettersContext<T> self, Func<PropertySettersContext<DateTime>, IPropertySettersBuilder<DateTime>> configure)
+    public static SettersContext<T> DateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DateTime>, IPropertySettersBuilder<DateTime>> configure)
         where T : DatePicker
     {
         var context = new PropertySettersContext<DateTime>(self.XamlSetters, DatePicker.DateProperty);
@@ -34,7 +34,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T Format<T>(this T self,
+    public static T FormatFmg<T>(this T self,
         string format)
         where T : DatePicker
     {
@@ -42,7 +42,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T Format<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T FormatFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : DatePicker
     {
         var context = new PropertyContext<string>(self, DatePicker.FormatProperty);
@@ -50,7 +50,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> Format<T>(this SettersContext<T> self,
+    public static SettersContext<T> FormatFmg<T>(this SettersContext<T> self,
         string format)
         where T : DatePicker
     {
@@ -58,7 +58,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> Format<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> FormatFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : DatePicker
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, DatePicker.FormatProperty);
@@ -66,7 +66,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T MaximumDate<T>(this T self,
+    public static T MaximumDateFmg<T>(this T self,
         DateTime maximumDate)
         where T : DatePicker
     {
@@ -74,7 +74,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T MaximumDate<T>(this T self, Func<PropertyContext<DateTime>, IPropertyBuilder<DateTime>> configure)
+    public static T MaximumDateFmg<T>(this T self, Func<PropertyContext<DateTime>, IPropertyBuilder<DateTime>> configure)
         where T : DatePicker
     {
         var context = new PropertyContext<DateTime>(self, DatePicker.MaximumDateProperty);
@@ -82,7 +82,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> MaximumDate<T>(this SettersContext<T> self,
+    public static SettersContext<T> MaximumDateFmg<T>(this SettersContext<T> self,
         DateTime maximumDate)
         where T : DatePicker
     {
@@ -90,7 +90,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> MaximumDate<T>(this SettersContext<T> self, Func<PropertySettersContext<DateTime>, IPropertySettersBuilder<DateTime>> configure)
+    public static SettersContext<T> MaximumDateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DateTime>, IPropertySettersBuilder<DateTime>> configure)
         where T : DatePicker
     {
         var context = new PropertySettersContext<DateTime>(self.XamlSetters, DatePicker.MaximumDateProperty);
@@ -98,7 +98,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T MinimumDate<T>(this T self,
+    public static T MinimumDateFmg<T>(this T self,
         DateTime minimumDate)
         where T : DatePicker
     {
@@ -106,7 +106,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T MinimumDate<T>(this T self, Func<PropertyContext<DateTime>, IPropertyBuilder<DateTime>> configure)
+    public static T MinimumDateFmg<T>(this T self, Func<PropertyContext<DateTime>, IPropertyBuilder<DateTime>> configure)
         where T : DatePicker
     {
         var context = new PropertyContext<DateTime>(self, DatePicker.MinimumDateProperty);
@@ -114,7 +114,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> MinimumDate<T>(this SettersContext<T> self,
+    public static SettersContext<T> MinimumDateFmg<T>(this SettersContext<T> self,
         DateTime minimumDate)
         where T : DatePicker
     {
@@ -122,7 +122,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> MinimumDate<T>(this SettersContext<T> self, Func<PropertySettersContext<DateTime>, IPropertySettersBuilder<DateTime>> configure)
+    public static SettersContext<T> MinimumDateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DateTime>, IPropertySettersBuilder<DateTime>> configure)
         where T : DatePicker
     {
         var context = new PropertySettersContext<DateTime>(self.XamlSetters, DatePicker.MinimumDateProperty);
@@ -130,7 +130,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T TextColor<T>(this T self,
+    public static T TextColorFmg<T>(this T self,
         Color textColor)
         where T : DatePicker
     {
@@ -138,7 +138,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T TextColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T TextColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : DatePicker
     {
         var context = new PropertyContext<Color>(self, DatePicker.TextColorProperty);
@@ -146,7 +146,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> TextColor<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self,
         Color textColor)
         where T : DatePicker
     {
@@ -154,7 +154,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> TextColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : DatePicker
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, DatePicker.TextColorProperty);
@@ -162,7 +162,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static Task<bool> AnimateTextColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateTextColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : DatePicker
     {
         Color fromValue = self.TextColor;
@@ -171,7 +171,7 @@ public static partial class DatePickerExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateTextColorTo", transform, callback, length, easing);
     }
     
-    public static T CharacterSpacing<T>(this T self,
+    public static T CharacterSpacingFmg<T>(this T self,
         double characterSpacing)
         where T : DatePicker
     {
@@ -179,7 +179,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T CharacterSpacing<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T CharacterSpacingFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : DatePicker
     {
         var context = new PropertyContext<double>(self, DatePicker.CharacterSpacingProperty);
@@ -187,7 +187,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> CharacterSpacing<T>(this SettersContext<T> self,
+    public static SettersContext<T> CharacterSpacingFmg<T>(this SettersContext<T> self,
         double characterSpacing)
         where T : DatePicker
     {
@@ -195,7 +195,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> CharacterSpacing<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> CharacterSpacingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : DatePicker
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, DatePicker.CharacterSpacingProperty);
@@ -203,7 +203,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static Task<bool> AnimateCharacterSpacingTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateCharacterSpacingToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : DatePicker
     {
         double fromValue = self.CharacterSpacing;
@@ -212,7 +212,7 @@ public static partial class DatePickerExtension
         return Transformations.AnimateAsync<double>(self, "AnimateCharacterSpacingTo", transform, callback, length, easing);
     }
     
-    public static T FontAttributes<T>(this T self,
+    public static T FontAttributesFmg<T>(this T self,
         FontAttributes fontAttributes)
         where T : DatePicker
     {
@@ -220,7 +220,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T FontAttributes<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
+    public static T FontAttributesFmg<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
         where T : DatePicker
     {
         var context = new PropertyContext<FontAttributes>(self, DatePicker.FontAttributesProperty);
@@ -228,7 +228,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self,
         FontAttributes fontAttributes)
         where T : DatePicker
     {
@@ -236,7 +236,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
+    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
         where T : DatePicker
     {
         var context = new PropertySettersContext<FontAttributes>(self.XamlSetters, DatePicker.FontAttributesProperty);
@@ -244,7 +244,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T FontFamily<T>(this T self,
+    public static T FontFamilyFmg<T>(this T self,
         string fontFamily)
         where T : DatePicker
     {
@@ -252,7 +252,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T FontFamily<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T FontFamilyFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : DatePicker
     {
         var context = new PropertyContext<string>(self, DatePicker.FontFamilyProperty);
@@ -260,7 +260,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self,
         string fontFamily)
         where T : DatePicker
     {
@@ -268,7 +268,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : DatePicker
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, DatePicker.FontFamilyProperty);
@@ -276,7 +276,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T FontSize<T>(this T self,
+    public static T FontSizeFmg<T>(this T self,
         double fontSize)
         where T : DatePicker
     {
@@ -284,7 +284,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T FontSize<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T FontSizeFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : DatePicker
     {
         var context = new PropertyContext<double>(self, DatePicker.FontSizeProperty);
@@ -292,7 +292,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontSize<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self,
         double fontSize)
         where T : DatePicker
     {
@@ -300,7 +300,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontSize<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : DatePicker
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, DatePicker.FontSizeProperty);
@@ -308,7 +308,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static Task<bool> AnimateFontSizeTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateFontSizeToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : DatePicker
     {
         double fromValue = self.FontSize;
@@ -317,7 +317,7 @@ public static partial class DatePickerExtension
         return Transformations.AnimateAsync<double>(self, "AnimateFontSizeTo", transform, callback, length, easing);
     }
     
-    public static T FontAutoScalingEnabled<T>(this T self,
+    public static T FontAutoScalingEnabledFmg<T>(this T self,
         bool fontAutoScalingEnabled)
         where T : DatePicker
     {
@@ -325,7 +325,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T FontAutoScalingEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T FontAutoScalingEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : DatePicker
     {
         var context = new PropertyContext<bool>(self, DatePicker.FontAutoScalingEnabledProperty);
@@ -333,7 +333,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self,
         bool fontAutoScalingEnabled)
         where T : DatePicker
     {
@@ -341,7 +341,7 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : DatePicker
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, DatePicker.FontAutoScalingEnabledProperty);
@@ -349,14 +349,14 @@ public static partial class DatePickerExtension
         return self;
     }
     
-    public static T OnDateSelected<T>(this T self, EventHandler<DateChangedEventArgs> handler)
+    public static T OnDateSelectedFmg<T>(this T self, EventHandler<DateChangedEventArgs> handler)
         where T : DatePicker
     {
         self.DateSelected += handler;
         return self;
     }
     
-    public static T OnDateSelected<T>(this T self, Action<T> action)
+    public static T OnDateSelectedFmg<T>(this T self, Action<T> action)
         where T : DatePicker
     {
         self.DateSelected += (o, arg) => action(self);

@@ -4,7 +4,7 @@
 
 public static partial class SelectableItemsViewExtension
 {
-    public static T SelectedItem<T>(this T self,
+    public static T SelectedItemFmg<T>(this T self,
         object selectedItem)
         where T : SelectableItemsView
     {
@@ -12,7 +12,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static T SelectedItem<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T SelectedItemFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : SelectableItemsView
     {
         var context = new PropertyContext<object>(self, SelectableItemsView.SelectedItemProperty);
@@ -20,7 +20,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> SelectedItem<T>(this SettersContext<T> self,
+    public static SettersContext<T> SelectedItemFmg<T>(this SettersContext<T> self,
         object selectedItem)
         where T : SelectableItemsView
     {
@@ -28,7 +28,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> SelectedItem<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> SelectedItemFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : SelectableItemsView
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, SelectableItemsView.SelectedItemProperty);
@@ -36,7 +36,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static T SelectedItems<T>(this T self,
+    public static T SelectedItemsFmg<T>(this T self,
         IList<object> selectedItems)
         where T : SelectableItemsView
     {
@@ -45,7 +45,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
 
-    public static T SelectedItems<T>(this T self,
+    public static T SelectedItemsFmg<T>(this T self,
         params object[] selectedItems)
         where T : SelectableItemsView
     {
@@ -54,7 +54,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static T SelectedItems<T>(this T self, Func<PropertyContext<IList<object>>, IPropertyBuilder<IList<object>>> configure)
+    public static T SelectedItemsFmg<T>(this T self, Func<PropertyContext<IList<object>>, IPropertyBuilder<IList<object>>> configure)
         where T : SelectableItemsView
     {
         var context = new PropertyContext<IList<object>>(self, SelectableItemsView.SelectedItemsProperty);
@@ -62,7 +62,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static T SelectionChangedCommand<T>(this T self,
+    public static T SelectionChangedCommandFmg<T>(this T self,
         System.Windows.Input.ICommand selectionChangedCommand)
         where T : SelectableItemsView
     {
@@ -70,7 +70,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static T SelectionChangedCommand<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T SelectionChangedCommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : SelectableItemsView
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, SelectableItemsView.SelectionChangedCommandProperty);
@@ -78,7 +78,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> SelectionChangedCommand<T>(this SettersContext<T> self,
+    public static SettersContext<T> SelectionChangedCommandFmg<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand selectionChangedCommand)
         where T : SelectableItemsView
     {
@@ -86,7 +86,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> SelectionChangedCommand<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> SelectionChangedCommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : SelectableItemsView
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, SelectableItemsView.SelectionChangedCommandProperty);
@@ -94,7 +94,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static T SelectionChangedCommandParameter<T>(this T self,
+    public static T SelectionChangedCommandParameterFmg<T>(this T self,
         object selectionChangedCommandParameter)
         where T : SelectableItemsView
     {
@@ -102,7 +102,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static T SelectionChangedCommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T SelectionChangedCommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : SelectableItemsView
     {
         var context = new PropertyContext<object>(self, SelectableItemsView.SelectionChangedCommandParameterProperty);
@@ -110,7 +110,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> SelectionChangedCommandParameter<T>(this SettersContext<T> self,
+    public static SettersContext<T> SelectionChangedCommandParameterFmg<T>(this SettersContext<T> self,
         object selectionChangedCommandParameter)
         where T : SelectableItemsView
     {
@@ -118,7 +118,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> SelectionChangedCommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> SelectionChangedCommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : SelectableItemsView
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, SelectableItemsView.SelectionChangedCommandParameterProperty);
@@ -126,7 +126,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static T SelectionMode<T>(this T self,
+    public static T SelectionModeFmg<T>(this T self,
         SelectionMode selectionMode)
         where T : SelectableItemsView
     {
@@ -134,7 +134,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static T SelectionMode<T>(this T self, Func<PropertyContext<SelectionMode>, IPropertyBuilder<SelectionMode>> configure)
+    public static T SelectionModeFmg<T>(this T self, Func<PropertyContext<SelectionMode>, IPropertyBuilder<SelectionMode>> configure)
         where T : SelectableItemsView
     {
         var context = new PropertyContext<SelectionMode>(self, SelectableItemsView.SelectionModeProperty);
@@ -142,7 +142,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> SelectionMode<T>(this SettersContext<T> self,
+    public static SettersContext<T> SelectionModeFmg<T>(this SettersContext<T> self,
         SelectionMode selectionMode)
         where T : SelectableItemsView
     {
@@ -150,7 +150,7 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> SelectionMode<T>(this SettersContext<T> self, Func<PropertySettersContext<SelectionMode>, IPropertySettersBuilder<SelectionMode>> configure)
+    public static SettersContext<T> SelectionModeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<SelectionMode>, IPropertySettersBuilder<SelectionMode>> configure)
         where T : SelectableItemsView
     {
         var context = new PropertySettersContext<SelectionMode>(self.XamlSetters, SelectableItemsView.SelectionModeProperty);
@@ -158,14 +158,14 @@ public static partial class SelectableItemsViewExtension
         return self;
     }
     
-    public static T OnSelectionChanged<T>(this T self, EventHandler<SelectionChangedEventArgs> handler)
+    public static T OnSelectionChangedFmg<T>(this T self, EventHandler<SelectionChangedEventArgs> handler)
         where T : SelectableItemsView
     {
         self.SelectionChanged += handler;
         return self;
     }
     
-    public static T OnSelectionChanged<T>(this T self, Action<T> action)
+    public static T OnSelectionChangedFmg<T>(this T self, Action<T> action)
         where T : SelectableItemsView
     {
         self.SelectionChanged += (o, arg) => action(self);

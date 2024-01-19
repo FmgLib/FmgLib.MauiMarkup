@@ -2,7 +2,7 @@
 
 public static partial class ElementExtension
 {
-    public static T AutomationId<T>(this T self,
+    public static T AutomationIdFmg<T>(this T self,
         string automationId)
         where T : Element
     {
@@ -10,7 +10,7 @@ public static partial class ElementExtension
         return self;
     }
     
-    public static T AutomationId<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T AutomationIdFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : Element
     {
         var context = new PropertyContext<string>(self, Element.AutomationIdProperty);
@@ -18,7 +18,7 @@ public static partial class ElementExtension
         return self;
     }
     
-    public static SettersContext<T> AutomationId<T>(this SettersContext<T> self,
+    public static SettersContext<T> AutomationIdFmg<T>(this SettersContext<T> self,
         string automationId)
         where T : Element
     {
@@ -26,7 +26,7 @@ public static partial class ElementExtension
         return self;
     }
     
-    public static SettersContext<T> AutomationId<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> AutomationIdFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : Element
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, Element.AutomationIdProperty);
@@ -34,7 +34,7 @@ public static partial class ElementExtension
         return self;
     }
     
-    public static T ClassId<T>(this T self,
+    public static T ClassIdFmg<T>(this T self,
         string classId)
         where T : Element
     {
@@ -42,7 +42,7 @@ public static partial class ElementExtension
         return self;
     }
     
-    public static T ClassId<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T ClassIdFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : Element
     {
         var context = new PropertyContext<string>(self, Element.ClassIdProperty);
@@ -50,7 +50,7 @@ public static partial class ElementExtension
         return self;
     }
     
-    public static SettersContext<T> ClassId<T>(this SettersContext<T> self,
+    public static SettersContext<T> ClassIdFmg<T>(this SettersContext<T> self,
         string classId)
         where T : Element
     {
@@ -58,7 +58,7 @@ public static partial class ElementExtension
         return self;
     }
     
-    public static SettersContext<T> ClassId<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> ClassIdFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : Element
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, Element.ClassIdProperty);
@@ -66,7 +66,7 @@ public static partial class ElementExtension
         return self;
     }
     
-    public static T Effects<T>(this T self,
+    public static T EffectsFmg<T>(this T self,
         IList<Effect> effects)
         where T : Element
     {
@@ -75,7 +75,7 @@ public static partial class ElementExtension
         return self;
     }
 
-    public static T Effects<T>(this T self,
+    public static T EffectsFmg<T>(this T self,
         params Effect[] effects)
         where T : Element
     {
@@ -84,7 +84,7 @@ public static partial class ElementExtension
         return self;
     }
     
-    public static T StyleId<T>(this T self,
+    public static T StyleIdFmg<T>(this T self,
         string styleId)
         where T : Element
     {
@@ -92,7 +92,7 @@ public static partial class ElementExtension
         return self;
     }
     
-    public static T Parent<T>(this T self,
+    public static T ParentFmg<T>(this T self,
         Element parent)
         where T : Element
     {
@@ -100,7 +100,7 @@ public static partial class ElementExtension
         return self;
     }
     
-    public static T EffectControlProvider<T>(this T self,
+    public static T EffectControlProviderFmg<T>(this T self,
         IEffectControlProvider effectControlProvider)
         where T : Element
     {
@@ -108,119 +108,119 @@ public static partial class ElementExtension
         return self;
     }
     
-    public static T OnChildAdded<T>(this T self, EventHandler<ElementEventArgs> handler)
+    public static T OnChildAddedFmg<T>(this T self, EventHandler<ElementEventArgs> handler)
         where T : Element
     {
         self.ChildAdded += handler;
         return self;
     }
     
-    public static T OnChildAdded<T>(this T self, Action<T> action)
+    public static T OnChildAddedFmg<T>(this T self, Action<T> action)
         where T : Element
     {
         self.ChildAdded += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnChildRemoved<T>(this T self, EventHandler<ElementEventArgs> handler)
+    public static T OnChildRemovedFmg<T>(this T self, EventHandler<ElementEventArgs> handler)
         where T : Element
     {
         self.ChildRemoved += handler;
         return self;
     }
     
-    public static T OnChildRemoved<T>(this T self, Action<T> action)
+    public static T OnChildRemovedFmg<T>(this T self, Action<T> action)
         where T : Element
     {
         self.ChildRemoved += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnDescendantAdded<T>(this T self, EventHandler<ElementEventArgs> handler)
+    public static T OnDescendantAddedFmg<T>(this T self, EventHandler<ElementEventArgs> handler)
         where T : Element
     {
         self.DescendantAdded += handler;
         return self;
     }
     
-    public static T OnDescendantAdded<T>(this T self, Action<T> action)
+    public static T OnDescendantAddedFmg<T>(this T self, Action<T> action)
         where T : Element
     {
         self.DescendantAdded += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnDescendantRemoved<T>(this T self, EventHandler<ElementEventArgs> handler)
+    public static T OnDescendantRemovedFmg<T>(this T self, EventHandler<ElementEventArgs> handler)
         where T : Element
     {
         self.DescendantRemoved += handler;
         return self;
     }
     
-    public static T OnDescendantRemoved<T>(this T self, Action<T> action)
+    public static T OnDescendantRemovedFmg<T>(this T self, Action<T> action)
         where T : Element
     {
         self.DescendantRemoved += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnParentChanging<T>(this T self, EventHandler<ParentChangingEventArgs> handler)
+    public static T OnParentChangingFmg<T>(this T self, EventHandler<ParentChangingEventArgs> handler)
         where T : Element
     {
         self.ParentChanging += handler;
         return self;
     }
     
-    public static T OnParentChanging<T>(this T self, Action<T> action)
+    public static T OnParentChangingFmg<T>(this T self, Action<T> action)
         where T : Element
     {
         self.ParentChanging += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnParentChanged<T>(this T self, EventHandler handler)
+    public static T OnParentChangedFmg<T>(this T self, EventHandler handler)
         where T : Element
     {
         self.ParentChanged += handler;
         return self;
     }
     
-    public static T OnParentChanged<T>(this T self, Action<T> action)
+    public static T OnParentChangedFmg<T>(this T self, Action<T> action)
         where T : Element
     {
         self.ParentChanged += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnHandlerChanging<T>(this T self, EventHandler<HandlerChangingEventArgs> handler)
+    public static T OnHandlerChangingFmg<T>(this T self, EventHandler<HandlerChangingEventArgs> handler)
         where T : Element
     {
         self.HandlerChanging += handler;
         return self;
     }
     
-    public static T OnHandlerChanging<T>(this T self, Action<T> action)
+    public static T OnHandlerChangingFmg<T>(this T self, Action<T> action)
         where T : Element
     {
         self.HandlerChanging += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnHandlerChanged<T>(this T self, EventHandler handler)
+    public static T OnHandlerChangedFmg<T>(this T self, EventHandler handler)
         where T : Element
     {
         self.HandlerChanged += handler;
         return self;
     }
     
-    public static T OnHandlerChanged<T>(this T self, Action<T> action)
+    public static T OnHandlerChangedFmg<T>(this T self, Action<T> action)
         where T : Element
     {
         self.HandlerChanged += (o, arg) => action(self);
         return self;
     }
 
-    public static T ContextFlyout<T>(this T self,
+    public static T ContextFlyoutFmg<T>(this T self,
        MenuFlyout contextFlyout)
        where T : Element
     {
@@ -228,7 +228,7 @@ public static partial class ElementExtension
         return self;
     }
 
-    public static T ContextFlyout<T>(this T self, Func<PropertyContext<MenuFlyout>, IPropertyBuilder<MenuFlyout>> configure)
+    public static T ContextFlyoutFmg<T>(this T self, Func<PropertyContext<MenuFlyout>, IPropertyBuilder<MenuFlyout>> configure)
         where T : Element
     {
         var context = new PropertyContext<MenuFlyout>(self, FlyoutBase.ContextFlyoutProperty);
@@ -236,7 +236,7 @@ public static partial class ElementExtension
         return self;
     }
 
-    public static SettersContext<T> ContextFlyout<T>(this SettersContext<T> self,
+    public static SettersContext<T> ContextFlyoutFmg<T>(this SettersContext<T> self,
         MenuFlyout contextFlyout)
         where T : Element
     {
@@ -244,7 +244,7 @@ public static partial class ElementExtension
         return self;
     }
 
-    public static SettersContext<T> ContextFlyout<T>(this SettersContext<T> self, Func<PropertySettersContext<MenuFlyout>, IPropertySettersBuilder<MenuFlyout>> configure)
+    public static SettersContext<T> ContextFlyoutFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<MenuFlyout>, IPropertySettersBuilder<MenuFlyout>> configure)
         where T : Element
     {
         var context = new PropertySettersContext<MenuFlyout>(self.XamlSetters, FlyoutBase.ContextFlyoutProperty);
@@ -252,7 +252,7 @@ public static partial class ElementExtension
         return self;
     }
 
-    public static MenuFlyout GetContextFlyoutValue<T>(this T self)
+    public static MenuFlyout GetContextFlyoutValueFmg<T>(this T self)
         where T : Element
     {
         return (MenuFlyout)self.GetValue(FlyoutBase.ContextFlyoutProperty);

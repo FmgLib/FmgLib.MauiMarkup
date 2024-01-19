@@ -7,8 +7,8 @@ public partial class App : Application
     public App(IServiceProvider services)
     {
         this
-            .Resources(AppStyles.Default)
-            .MainPage(services.GetService<AppShell>());
+            .ResourcesFmg(AppStyles.Default)
+            .MainPageFmg(services.GetService<AppShell>());
 
         TemplateData template = new TemplateData();
     }

@@ -35,19 +35,19 @@ public static class BindableLayoutExtensions
         return view;
     }
 
-    public static TLayout EmptyViewTemplate<TLayout>(this TLayout layout, DataTemplate template) where TLayout : BindableObject, Microsoft.Maui.ILayout
+    public static T EmptyViewTemplatesFmg<T>(this T layout, DataTemplate template) where T : BindableObject, Microsoft.Maui.ILayout
     {
         BindableLayout.SetEmptyViewTemplate(layout, template);
         return layout;
     }
 
-    public static TLayout ItemsSource<TLayout>(this TLayout layout, IEnumerable source) where TLayout : BindableObject, Microsoft.Maui.ILayout
+    public static T ItemsSourcesFmg<T>(this T layout, IEnumerable source) where T : BindableObject, Microsoft.Maui.ILayout
     {
         BindableLayout.SetItemsSource(layout, source);
         return layout;
     }
 
-    public static TLayout ItemTemplate<TLayout>(this TLayout layout, DataTemplate template) where TLayout : BindableObject, Microsoft.Maui.ILayout
+    public static T ItemTemplatesFmg<T>(this T layout, DataTemplate template) where T : BindableObject, Microsoft.Maui.ILayout
     {
         BindableLayout.SetItemTemplate(layout, template);
         return layout;

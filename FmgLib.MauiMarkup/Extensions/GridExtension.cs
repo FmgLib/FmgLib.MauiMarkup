@@ -1,6 +1,6 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-public static class GridExtension
+public static partial class GridExtension
 {
     public static T RowDefinitionsFmg<T>(this T self, Action<RowDefinitionBuilder> configure) where T : Grid
     {
@@ -30,7 +30,6 @@ public static class GridExtension
     {
         self.SetValue(Grid.ColumnSpacingProperty, columnSpacing);
         self.SetValue(Grid.RowSpacingProperty, rowSpacing);
-
         return self;
     }
 
@@ -38,7 +37,6 @@ public static class GridExtension
     {
         self.SetValue(Grid.ColumnSpacingProperty, spacing);
         self.SetValue(Grid.RowSpacingProperty, spacing);
-
         return self;
     }
 
@@ -66,7 +64,6 @@ public static class GridExtension
     {
         PropertyContext<ColumnDefinitionCollection> arg = new PropertyContext<ColumnDefinitionCollection>(self, Grid.ColumnDefinitionsProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -94,14 +91,12 @@ public static class GridExtension
     {
         PropertyContext<RowDefinitionCollection> arg = new PropertyContext<RowDefinitionCollection>(self, Grid.RowDefinitionsProperty);
         configure(arg).Build();
-
         return self;
     }
 
     public static T RowSpacingFmg<T>(this T self, double rowSpacing) where T : Grid
     {
         self.SetValue(Grid.RowSpacingProperty, rowSpacing);
-
         return self;
     }
 
@@ -109,7 +104,6 @@ public static class GridExtension
     {
         PropertyContext<double> arg = new PropertyContext<double>(self, Grid.RowSpacingProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -120,7 +114,6 @@ public static class GridExtension
             Property = Grid.RowSpacingProperty,
             Value = rowSpacing
         });
-
         return self;
     }
 
@@ -128,7 +121,6 @@ public static class GridExtension
     {
         PropertySettersContext<double> arg = new PropertySettersContext<double>(self.XamlSetters, Grid.RowSpacingProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -136,7 +128,6 @@ public static class GridExtension
     {
         T self2 = self;
         double fromValue = self2.RowSpacing;
-
         return Transformations.AnimateAsync(transform: (double t) => Transformations.DoubleTransform(fromValue, value, t), callback: delegate (double actValue)
         {
             self2.RowSpacing = actValue;
@@ -146,7 +137,6 @@ public static class GridExtension
     public static T ColumnSpacingFmg<T>(this T self, double columnSpacing) where T : Grid
     {
         self.SetValue(Grid.ColumnSpacingProperty, columnSpacing);
-
         return self;
     }
 
@@ -154,7 +144,6 @@ public static class GridExtension
     {
         PropertyContext<double> arg = new PropertyContext<double>(self, Grid.ColumnSpacingProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -165,7 +154,6 @@ public static class GridExtension
             Property = Grid.ColumnSpacingProperty,
             Value = columnSpacing
         });
-
         return self;
     }
 
@@ -173,7 +161,6 @@ public static class GridExtension
     {
         PropertySettersContext<double> arg = new PropertySettersContext<double>(self.XamlSetters, Grid.ColumnSpacingProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -181,10 +168,10 @@ public static class GridExtension
     {
         T self2 = self;
         double fromValue = self2.ColumnSpacing;
-
         return Transformations.AnimateAsync(transform: (double t) => Transformations.DoubleTransform(fromValue, value, t), callback: delegate (double actValue)
         {
             self2.ColumnSpacing = actValue;
         }, element: self2, name: "AnimateColumnSpacingTo", length: length, easing: easing);
     }
+
 }

@@ -1,11 +1,10 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-public static class ContentPageExtension
+public static partial class ContentPageExtension
 {
     public static T ContentFmg<T>(this T self, View content) where T : ContentPage
     {
         self.SetValue(ContentPage.ContentProperty, content);
-
         return self;
     }
 
@@ -13,7 +12,6 @@ public static class ContentPageExtension
     {
         PropertyContext<View> arg = new PropertyContext<View>(self, ContentPage.ContentProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -24,7 +22,6 @@ public static class ContentPageExtension
             Property = ContentPage.ContentProperty,
             Value = content
         });
-
         return self;
     }
 
@@ -32,7 +29,7 @@ public static class ContentPageExtension
     {
         PropertySettersContext<View> arg = new PropertySettersContext<View>(self.XamlSetters, ContentPage.ContentProperty);
         configure(arg).Build();
-
         return self;
     }
+
 }

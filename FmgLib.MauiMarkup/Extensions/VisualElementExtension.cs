@@ -1,9 +1,8 @@
 ﻿using Microsoft.Maui.Controls.Shapes;
-using Microsoft.Maui.Controls.Internals;
 
 namespace FmgLib.MauiMarkup;
 
-public static class VisualElementExtension
+public static partial class VisualElementExtension
 {
     public static T SizeRequestFmg<T>(this T self, double widthRequest, double heightRequest) where T : VisualElement
     {
@@ -1239,7 +1238,7 @@ public static class VisualElementExtension
         return self2;
     }
 
-    public static T OnBatchCommittedFmg<T>(this T self, EventHandler<EventArg<VisualElement>> handler) where T : VisualElement
+    public static T OnBatchCommittedFmg<T>(this T self, EventHandler<Microsoft.Maui.Controls.Internals.EventArg<VisualElement>> handler) where T : VisualElement
     {
         self.BatchCommitted += handler;
         return self;
@@ -1587,4 +1586,5 @@ public static class VisualElementExtension
     {
         return (SemanticHeadingLevel)self.GetValue(SemanticProperties.HeadingLevelProperty);
     }
+
 }

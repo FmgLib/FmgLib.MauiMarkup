@@ -2,7 +2,7 @@
 
 namespace FmgLib.MauiMarkup;
 
-public static class BindableObjectExtension
+public static partial class BindableObjectExtension
 {
     public static T BindFmg<T>(this T self, BindableProperty property, string sourcePath, BindingMode mode = BindingMode.Default, IValueConverter converter = null, string converterParameter = null, string stringFormat = null, object source = null) where T : BindableObject
     {
@@ -109,4 +109,5 @@ public static class BindableObjectExtension
         };
         return self2;
     }
+
 }

@@ -42,7 +42,7 @@ public sealed class PropertyIdiomBuilder<T> : IPropertyBuilder<T>
         return isSet;
     }
 
-    public PropertyIdiomBuilder<T> Default(T value)
+    public PropertyIdiomBuilder<T> DefaultFmg(T value)
     {
         if (!defaultIsSet)
         {
@@ -53,7 +53,7 @@ public sealed class PropertyIdiomBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyIdiomBuilder<T> Default(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyIdiomBuilder<T> DefaultFmg(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!defaultIsSet)
         {
@@ -64,7 +64,7 @@ public sealed class PropertyIdiomBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyIdiomBuilder<T> OnPhone(T value)
+    public PropertyIdiomBuilder<T> OnPhoneFmg(T value)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Phone)
         {
@@ -76,7 +76,7 @@ public sealed class PropertyIdiomBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyIdiomBuilder<T> OnPhone(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyIdiomBuilder<T> OnPhoneFmg(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Phone)
         {
@@ -86,7 +86,7 @@ public sealed class PropertyIdiomBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyIdiomBuilder<T> OnTablet(T value)
+    public PropertyIdiomBuilder<T> OnTabletFmg(T value)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Tablet)
         {
@@ -98,7 +98,7 @@ public sealed class PropertyIdiomBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyIdiomBuilder<T> OnTablet(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyIdiomBuilder<T> OnTabletFmg(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Tablet)
         {
@@ -108,7 +108,7 @@ public sealed class PropertyIdiomBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyIdiomBuilder<T> OnDesktop(T value)
+    public PropertyIdiomBuilder<T> OnDesktopFmg(T value)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Desktop)
         {
@@ -120,7 +120,7 @@ public sealed class PropertyIdiomBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyIdiomBuilder<T> OnDesktop(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyIdiomBuilder<T> OnDesktopFmg(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Desktop)
         {
@@ -130,7 +130,7 @@ public sealed class PropertyIdiomBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyIdiomBuilder<T> OnTV(T value)
+    public PropertyIdiomBuilder<T> OnTVFmg(T value)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.TV)
         {
@@ -142,7 +142,7 @@ public sealed class PropertyIdiomBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyIdiomBuilder<T> OnTV(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyIdiomBuilder<T> OnTVFmg(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.TV)
         {
@@ -152,7 +152,7 @@ public sealed class PropertyIdiomBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyIdiomBuilder<T> OnWatch(T value)
+    public PropertyIdiomBuilder<T> OnWatchFmg(T value)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Watch)
         {
@@ -164,7 +164,7 @@ public sealed class PropertyIdiomBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyIdiomBuilder<T> OnWatch(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyIdiomBuilder<T> OnWatchFmg(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Watch)
         {

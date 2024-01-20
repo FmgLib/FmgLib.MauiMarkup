@@ -2,133 +2,82 @@
 
 public static class PropertyContextExtension
 {
+
     public static PropertyBindingBuilder<T> PathFmg<T>(this PropertyContext<T> self, string path)
-    {
-        return new PropertyBindingBuilder<T>(self).Path(path);
-    }
+        => new PropertyBindingBuilder<T>(self).PathFmg(path);
 
     public static PropertyIdiomBuilder<T> OnPhoneFmg<T>(this PropertyContext<T> self, T value)
-    {
-        return new PropertyIdiomBuilder<T>(self).OnPhone(value);
-    }
+        => new PropertyIdiomBuilder<T>(self).OnPhoneFmg(value);
 
     public static PropertyIdiomBuilder<T> OnPhoneFmg<T>(this PropertyContext<T> self, Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
-    {
-        return new PropertyIdiomBuilder<T>(self).OnPhone(configure);
-    }
+        => new PropertyIdiomBuilder<T>(self).OnPhoneFmg(configure);
 
     public static PropertyIdiomBuilder<T> OnTabletFmg<T>(this PropertyContext<T> self, T value)
-    {
-        return new PropertyIdiomBuilder<T>(self).OnTablet(value);
-    }
+        => new PropertyIdiomBuilder<T>(self).OnTabletFmg(value);
 
     public static PropertyIdiomBuilder<T> OnTabletFmg<T>(this PropertyContext<T> self, Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
-    {
-        return new PropertyIdiomBuilder<T>(self).OnTablet(configure);
-    }
+        => new PropertyIdiomBuilder<T>(self).OnTabletFmg(configure);
 
     public static PropertyIdiomBuilder<T> OnDesktopFmg<T>(this PropertyContext<T> self, T value)
-    {
-        return new PropertyIdiomBuilder<T>(self).OnDesktop(value);
-    }
+        => new PropertyIdiomBuilder<T>(self).OnDesktopFmg(value);
 
     public static PropertyIdiomBuilder<T> OnDesktopFmg<T>(this PropertyContext<T> self, Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
-    {
-        return new PropertyIdiomBuilder<T>(self).OnDesktop(configure);
-    }
+        => new PropertyIdiomBuilder<T>(self).OnDesktopFmg(configure);
 
     public static PropertyIdiomBuilder<T> OnTVFmg<T>(this PropertyContext<T> self, T value)
-    {
-        return new PropertyIdiomBuilder<T>(self).OnTV(value);
-    }
+        => new PropertyIdiomBuilder<T>(self).OnTVFmg(value);
 
     public static PropertyIdiomBuilder<T> OnTVFmg<T>(this PropertyContext<T> self, Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
-    {
-        return new PropertyIdiomBuilder<T>(self).OnTV(configure);
-    }
+        => new PropertyIdiomBuilder<T>(self).OnTVFmg(configure);
 
     public static PropertyIdiomBuilder<T> OnWatchFmg<T>(this PropertyContext<T> self, T value)
-    {
-        return new PropertyIdiomBuilder<T>(self).OnWatch(value);
-    }
+        => new PropertyIdiomBuilder<T>(self).OnWatchFmg(value);
 
     public static PropertyIdiomBuilder<T> OnWatchFmg<T>(this PropertyContext<T> self, Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
-    {
-        return new PropertyIdiomBuilder<T>(self).OnWatch(configure);
-    }
+        => new PropertyIdiomBuilder<T>(self).OnWatchFmg(configure);
 
     public static PropertyPlatformBuilder<T> OnMacCatalystFmg<T>(this PropertyContext<T> self, T value)
-    {
-        return new PropertyPlatformBuilder<T>(self).OnMacCatalyst(value);
-    }
+        => new PropertyPlatformBuilder<T>(self).OnMacCatalystFmg(value);
 
     public static PropertyPlatformBuilder<T> OnMacCatalystFmg<T>(this PropertyContext<T> self, Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
-    {
-        return new PropertyPlatformBuilder<T>(self).OnMacCatalyst(configure);
-    }
+        => new PropertyPlatformBuilder<T>(self).OnMacCatalystFmg(configure);
 
     public static PropertyPlatformBuilder<T> OniOSFmg<T>(this PropertyContext<T> self, T value)
-    {
-        return new PropertyPlatformBuilder<T>(self).OniOS(value);
-    }
+        => new PropertyPlatformBuilder<T>(self).OniOSFmg(value);
 
     public static PropertyPlatformBuilder<T> OniOSFmg<T>(this PropertyContext<T> self, Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
-    {
-        return new PropertyPlatformBuilder<T>(self).OniOS(configure);
-    }
+        => new PropertyPlatformBuilder<T>(self).OniOSFmg(configure);
 
     public static PropertyPlatformBuilder<T> OnAndroidFmg<T>(this PropertyContext<T> self, T value)
-    {
-        return new PropertyPlatformBuilder<T>(self).OnAndroid(value);
-    }
+        => new PropertyPlatformBuilder<T>(self).OnAndroidFmg(value);
 
     public static PropertyPlatformBuilder<T> OnAndroidFmg<T>(this PropertyContext<T> self, Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
-    {
-        return new PropertyPlatformBuilder<T>(self).OnAndroid(configure);
-    }
+        => new PropertyPlatformBuilder<T>(self).OnAndroidFmg(configure);
 
     public static PropertyPlatformBuilder<T> OnWinUIFmg<T>(this PropertyContext<T> self, T value)
-    {
-        return new PropertyPlatformBuilder<T>(self).OnWinUI(value);
-    }
+        => new PropertyPlatformBuilder<T>(self).OnWinUIFmg(value);
 
     public static PropertyPlatformBuilder<T> OnWinUIFmg<T>(this PropertyContext<T> self, Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
-    {
-        return new PropertyPlatformBuilder<T>(self).OnWinUI(configure);
-    }
+        => new PropertyPlatformBuilder<T>(self).OnWinUIFmg(configure);
 
     public static PropertyPlatformBuilder<T> OnTizenFmg<T>(this PropertyContext<T> self, T value)
-    {
-        return new PropertyPlatformBuilder<T>(self).OnTizen(value);
-    }
+        => new PropertyPlatformBuilder<T>(self).OnTizenFmg(value);
 
     public static PropertyPlatformBuilder<T> OnTizenFmg<T>(this PropertyContext<T> self, Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
-    {
-        return new PropertyPlatformBuilder<T>(self).OnTizen(configure);
-    }
+        => new PropertyPlatformBuilder<T>(self).OnTizenFmg(configure);
 
     public static PropertyThemeBuilder<T> OnLightFmg<T>(this PropertyContext<T> self, T value)
-    {
-        return new PropertyThemeBuilder<T>(self).OnLight(value);
-    }
+        => new PropertyThemeBuilder<T>(self).OnLightFmg(value);
 
     public static PropertyThemeBuilder<T> OnLightFmg<T>(this PropertyContext<T> self, Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
-    {
-        return new PropertyThemeBuilder<T>(self).OnLight(configure);
-    }
+        => new PropertyThemeBuilder<T>(self).OnLightFmg(configure);
 
     public static PropertyThemeBuilder<T> OnDarkFmg<T>(this PropertyContext<T> self, T value)
-    {
-        return new PropertyThemeBuilder<T>(self).OnDark(value);
-    }
+        => new PropertyThemeBuilder<T>(self).OnDarkFmg(value);
 
     public static PropertyThemeBuilder<T> OnDarkFmg<T>(this PropertyContext<T> self, Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
-    {
-        return new PropertyThemeBuilder<T>(self).OnDark(configure);
-    }
+        => new PropertyThemeBuilder<T>(self).OnDarkFmg(configure);
 
     public static PropertyDynamicResourcesBuilder<T> DynamicResourceFmg<T>(this PropertyContext<T> self, string key)
-    {
-        return new PropertyDynamicResourcesBuilder<T>(self).DynamicResource(key);
-    }
+        => new PropertyDynamicResourcesBuilder<T>(self).DynamicResourceFmg(key);
 }

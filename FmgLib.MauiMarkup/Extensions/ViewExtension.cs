@@ -2,76 +2,66 @@
 
 namespace FmgLib.MauiMarkup;
 
-public static class ViewExtension
+public static partial class ViewExtension
 {
     public static T GridSpanFmg<T>(this T self, int column = 1, int row = 1) where T : View
     {
         self.SetValue(Grid.ColumnSpanProperty, column);
         self.SetValue(Grid.RowSpanProperty, row);
-
         return self;
     }
 
     public static T PaddingFmg<T>(this T self, double horizontalSize, double verticalSize) where T : Border
     {
         self.SetValue(Border.PaddingProperty, new Thickness(horizontalSize, verticalSize));
-
         return self;
     }
 
     public static T PaddingFmg<T>(this T self, double left, double top, double right, double bottom) where T : Border
     {
         self.SetValue(Border.PaddingProperty, new Thickness(left, top, right, bottom));
-
         return self;
     }
 
     public static T PaddingFmg<T>(this T self, object _ = null, double left = 0.0, double top = 0.0, double right = 0.0, double bottom = 0.0) where T : Border
     {
         self.SetValue(Border.PaddingProperty, new Thickness(left, top, right, bottom));
-
         return self;
     }
 
     public static T MarginFmg<T>(this T self, double horizontalSize, double verticalSize) where T : View
     {
         self.SetValue(View.MarginProperty, new Thickness(horizontalSize, verticalSize));
-
         return self;
     }
 
     public static T MarginFmg<T>(this T self, double left, double top, double right, double bottom) where T : View
     {
         self.SetValue(View.MarginProperty, new Thickness(left, top, right, bottom));
-
         return self;
     }
 
     public static T MarginFmg<T>(this T self, object _ = null, double left = 0.0, double top = 0.0, double right = 0.0, double bottom = 0.0) where T : View
     {
         self.SetValue(View.MarginProperty, new Thickness(left, top, right, bottom));
-
         return self;
     }
 
     public static T AbsoluteLayoutBoundsFmg<T>(this T self, double x, double y, double width, double height) where T : View
     {
         self.SetValue(AbsoluteLayout.LayoutBoundsProperty, new Rect(x, y, width, height));
-
         return self;
     }
 
-    public static T CenterHorizontallyFmg<T>(this T self) where T : View
+    public static T CenterHorizontalFmg<T>(this T self) where T : View
     {
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Center);
-
         return self;
     }
 
-    public static T CenterVerticallyFmg<T>(this T self) where T : View
+    public static T CenterVerticalFmg<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Center);
-
         return self;
     }
 
@@ -79,14 +69,12 @@ public static class ViewExtension
     {
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Center);
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Center);
-
         return self;
     }
 
     public static T AlignTopFmg<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Start);
-
         return self;
     }
 
@@ -94,7 +82,6 @@ public static class ViewExtension
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Start);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Start);
-
         return self;
     }
 
@@ -102,14 +89,12 @@ public static class ViewExtension
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Start);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.End);
-
         return self;
     }
 
     public static T AlignBottomFmg<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.End);
-
         return self;
     }
 
@@ -117,7 +102,6 @@ public static class ViewExtension
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.End);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Start);
-
         return self;
     }
 
@@ -125,35 +109,30 @@ public static class ViewExtension
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.End);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.End);
-
         return self;
     }
 
     public static T AlignStartFmg<T>(this T self) where T : View
     {
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Start);
-
         return self;
     }
 
     public static T AlignEndFmg<T>(this T self) where T : View
     {
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.End);
-
         return self;
     }
 
-    public static T FillHorizontallyFmg<T>(this T self) where T : View
+    public static T FillHorizontalFmg<T>(this T self) where T : View
     {
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Fill);
-
         return self;
     }
 
-    public static T FillVerticallyFmg<T>(this T self) where T : View
+    public static T FillVerticalFmg<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Fill);
-
         return self;
     }
 
@@ -161,7 +140,6 @@ public static class ViewExtension
     {
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Fill);
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Fill);
-
         return self;
     }
 
@@ -177,7 +155,6 @@ public static class ViewExtension
             Property = Grid.RowSpanProperty,
             Value = row
         });
-
         return self;
     }
 
@@ -188,7 +165,6 @@ public static class ViewExtension
             Property = Border.PaddingProperty,
             Value = new Thickness(horizontalSize, verticalSize)
         });
-
         return self;
     }
 
@@ -199,7 +175,6 @@ public static class ViewExtension
             Property = Border.PaddingProperty,
             Value = new Thickness(left, top, right, bottom)
         });
-
         return self;
     }
 
@@ -210,7 +185,6 @@ public static class ViewExtension
             Property = Border.PaddingProperty,
             Value = new Thickness(left, top, right, bottom)
         });
-
         return self;
     }
 
@@ -221,7 +195,6 @@ public static class ViewExtension
             Property = View.MarginProperty,
             Value = new Thickness(horizontalSize, verticalSize)
         });
-
         return self;
     }
 
@@ -232,7 +205,6 @@ public static class ViewExtension
             Property = View.MarginProperty,
             Value = new Thickness(left, top, right, bottom)
         });
-
         return self;
     }
 
@@ -243,7 +215,6 @@ public static class ViewExtension
             Property = View.MarginProperty,
             Value = new Thickness(left, top, right, bottom)
         });
-
         return self;
     }
 
@@ -254,29 +225,26 @@ public static class ViewExtension
             Property = AbsoluteLayout.LayoutBoundsProperty,
             Value = new Rect(x, y, width, height)
         });
-
         return self;
     }
 
-    public static SettersContext<T> CenterHorizontallyFmg<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> CenterHorizontalFmg<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
             Property = View.HorizontalOptionsProperty,
             Value = LayoutOptions.Center
         });
-
         return self;
     }
 
-    public static SettersContext<T> CenterVerticallyFmg<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> CenterVerticalFmg<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
             Property = View.VerticalOptionsProperty,
             Value = LayoutOptions.Center
         });
-
         return self;
     }
 
@@ -292,7 +260,6 @@ public static class ViewExtension
             Property = View.VerticalOptionsProperty,
             Value = LayoutOptions.Center
         });
-
         return self;
     }
 
@@ -303,7 +270,6 @@ public static class ViewExtension
             Property = View.VerticalOptionsProperty,
             Value = LayoutOptions.Start
         });
-
         return self;
     }
 
@@ -319,7 +285,6 @@ public static class ViewExtension
             Property = View.HorizontalOptionsProperty,
             Value = LayoutOptions.Start
         });
-
         return self;
     }
 
@@ -335,7 +300,6 @@ public static class ViewExtension
             Property = View.HorizontalOptionsProperty,
             Value = LayoutOptions.End
         });
-
         return self;
     }
 
@@ -346,7 +310,6 @@ public static class ViewExtension
             Property = View.VerticalOptionsProperty,
             Value = LayoutOptions.End
         });
-
         return self;
     }
 
@@ -362,7 +325,6 @@ public static class ViewExtension
             Property = View.HorizontalOptionsProperty,
             Value = LayoutOptions.Start
         });
-
         return self;
     }
 
@@ -378,7 +340,6 @@ public static class ViewExtension
             Property = View.HorizontalOptionsProperty,
             Value = LayoutOptions.End
         });
-
         return self;
     }
 
@@ -389,7 +350,6 @@ public static class ViewExtension
             Property = View.HorizontalOptionsProperty,
             Value = LayoutOptions.Start
         });
-
         return self;
     }
 
@@ -400,7 +360,6 @@ public static class ViewExtension
             Property = View.HorizontalOptionsProperty,
             Value = LayoutOptions.End
         });
-
         return self;
     }
 
@@ -411,7 +370,6 @@ public static class ViewExtension
             Property = View.HorizontalOptionsProperty,
             Value = LayoutOptions.Fill
         });
-
         return self;
     }
 
@@ -422,7 +380,6 @@ public static class ViewExtension
             Property = View.VerticalOptionsProperty,
             Value = LayoutOptions.Fill
         });
-
         return self;
     }
 
@@ -438,7 +395,6 @@ public static class ViewExtension
             Property = View.VerticalOptionsProperty,
             Value = LayoutOptions.Fill
         });
-
         return self;
     }
 
@@ -465,7 +421,6 @@ public static class ViewExtension
     public static T HorizontalOptionsFmg<T>(this T self, LayoutOptions horizontalOptions) where T : View
     {
         self.SetValue(View.HorizontalOptionsProperty, horizontalOptions);
-
         return self;
     }
 
@@ -473,7 +428,6 @@ public static class ViewExtension
     {
         PropertyContext<LayoutOptions> arg = new PropertyContext<LayoutOptions>(self, View.HorizontalOptionsProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -484,7 +438,6 @@ public static class ViewExtension
             Property = View.HorizontalOptionsProperty,
             Value = horizontalOptions
         });
-
         return self;
     }
 
@@ -492,14 +445,12 @@ public static class ViewExtension
     {
         PropertySettersContext<LayoutOptions> arg = new PropertySettersContext<LayoutOptions>(self.XamlSetters, View.HorizontalOptionsProperty);
         configure(arg).Build();
-
         return self;
     }
 
     public static T MarginFmg<T>(this T self, Thickness margin) where T : View
     {
         self.SetValue(View.MarginProperty, margin);
-
         return self;
     }
 
@@ -507,7 +458,6 @@ public static class ViewExtension
     {
         PropertyContext<Thickness> arg = new PropertyContext<Thickness>(self, View.MarginProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -518,7 +468,6 @@ public static class ViewExtension
             Property = View.MarginProperty,
             Value = margin
         });
-
         return self;
     }
 
@@ -526,14 +475,12 @@ public static class ViewExtension
     {
         PropertySettersContext<Thickness> arg = new PropertySettersContext<Thickness>(self.XamlSetters, View.MarginProperty);
         configure(arg).Build();
-
         return self;
     }
 
     public static T VerticalOptionsFmg<T>(this T self, LayoutOptions verticalOptions) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, verticalOptions);
-
         return self;
     }
 
@@ -541,7 +488,6 @@ public static class ViewExtension
     {
         PropertyContext<LayoutOptions> arg = new PropertyContext<LayoutOptions>(self, View.VerticalOptionsProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -552,7 +498,6 @@ public static class ViewExtension
             Property = View.VerticalOptionsProperty,
             Value = verticalOptions
         });
-
         return self;
     }
 
@@ -560,14 +505,12 @@ public static class ViewExtension
     {
         PropertySettersContext<LayoutOptions> arg = new PropertySettersContext<LayoutOptions>(self.XamlSetters, View.VerticalOptionsProperty);
         configure(arg).Build();
-
         return self;
     }
 
     public static T ColumnFmg<T>(this T self, int column) where T : View
     {
         self.SetValue(Grid.ColumnProperty, column);
-
         return self;
     }
 
@@ -575,7 +518,6 @@ public static class ViewExtension
     {
         PropertyContext<int> arg = new PropertyContext<int>(self, Grid.ColumnProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -586,7 +528,6 @@ public static class ViewExtension
             Property = Grid.ColumnProperty,
             Value = column
         });
-
         return self;
     }
 
@@ -594,7 +535,6 @@ public static class ViewExtension
     {
         PropertySettersContext<int> arg = new PropertySettersContext<int>(self.XamlSetters, Grid.ColumnProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -606,7 +546,6 @@ public static class ViewExtension
     public static T RowFmg<T>(this T self, int row) where T : View
     {
         self.SetValue(Grid.RowProperty, row);
-
         return self;
     }
 
@@ -614,7 +553,6 @@ public static class ViewExtension
     {
         PropertyContext<int> arg = new PropertyContext<int>(self, Grid.RowProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -625,7 +563,6 @@ public static class ViewExtension
             Property = Grid.RowProperty,
             Value = row
         });
-
         return self;
     }
 
@@ -633,7 +570,6 @@ public static class ViewExtension
     {
         PropertySettersContext<int> arg = new PropertySettersContext<int>(self.XamlSetters, Grid.RowProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -645,7 +581,6 @@ public static class ViewExtension
     public static T ColumnSpanFmg<T>(this T self, int columnSpan) where T : View
     {
         self.SetValue(Grid.ColumnSpanProperty, columnSpan);
-
         return self;
     }
 
@@ -653,7 +588,6 @@ public static class ViewExtension
     {
         PropertyContext<int> arg = new PropertyContext<int>(self, Grid.ColumnSpanProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -664,7 +598,6 @@ public static class ViewExtension
             Property = Grid.ColumnSpanProperty,
             Value = columnSpan
         });
-
         return self;
     }
 
@@ -672,7 +605,6 @@ public static class ViewExtension
     {
         PropertySettersContext<int> arg = new PropertySettersContext<int>(self.XamlSetters, Grid.ColumnSpanProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -684,7 +616,6 @@ public static class ViewExtension
     public static T RowSpanFmg<T>(this T self, int rowSpan) where T : View
     {
         self.SetValue(Grid.RowSpanProperty, rowSpan);
-
         return self;
     }
 
@@ -692,7 +623,6 @@ public static class ViewExtension
     {
         PropertyContext<int> arg = new PropertyContext<int>(self, Grid.RowSpanProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -703,7 +633,6 @@ public static class ViewExtension
             Property = Grid.RowSpanProperty,
             Value = rowSpan
         });
-
         return self;
     }
 
@@ -711,7 +640,6 @@ public static class ViewExtension
     {
         PropertySettersContext<int> arg = new PropertySettersContext<int>(self.XamlSetters, Grid.RowSpanProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -723,7 +651,6 @@ public static class ViewExtension
     public static T AbsoluteLayoutFlagsFmg<T>(this T self, AbsoluteLayoutFlags absoluteLayoutFlags) where T : View
     {
         self.SetValue(AbsoluteLayout.LayoutFlagsProperty, absoluteLayoutFlags);
-
         return self;
     }
 
@@ -731,7 +658,6 @@ public static class ViewExtension
     {
         PropertyContext<AbsoluteLayoutFlags> arg = new PropertyContext<AbsoluteLayoutFlags>(self, AbsoluteLayout.LayoutFlagsProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -742,7 +668,6 @@ public static class ViewExtension
             Property = AbsoluteLayout.LayoutFlagsProperty,
             Value = absoluteLayoutFlags
         });
-
         return self;
     }
 
@@ -750,7 +675,6 @@ public static class ViewExtension
     {
         PropertySettersContext<AbsoluteLayoutFlags> arg = new PropertySettersContext<AbsoluteLayoutFlags>(self.XamlSetters, AbsoluteLayout.LayoutFlagsProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -762,7 +686,6 @@ public static class ViewExtension
     public static T AbsoluteLayoutBoundsFmg<T>(this T self, Rect absoluteLayoutBounds) where T : View
     {
         self.SetValue(AbsoluteLayout.LayoutBoundsProperty, absoluteLayoutBounds);
-
         return self;
     }
 
@@ -770,7 +693,6 @@ public static class ViewExtension
     {
         PropertyContext<Rect> arg = new PropertyContext<Rect>(self, AbsoluteLayout.LayoutBoundsProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -781,7 +703,6 @@ public static class ViewExtension
             Property = AbsoluteLayout.LayoutBoundsProperty,
             Value = absoluteLayoutBounds
         });
-
         return self;
     }
 
@@ -789,7 +710,6 @@ public static class ViewExtension
     {
         PropertySettersContext<Rect> arg = new PropertySettersContext<Rect>(self.XamlSetters, AbsoluteLayout.LayoutBoundsProperty);
         configure(arg).Build();
-
         return self;
     }
 
@@ -797,4 +717,5 @@ public static class ViewExtension
     {
         return (Rect)self.GetValue(AbsoluteLayout.LayoutBoundsProperty);
     }
+
 }

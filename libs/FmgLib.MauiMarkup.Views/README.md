@@ -43,3 +43,19 @@ public partial class MyPopup : Popup
 }
 
 ```
+
+**Exam(DrawingView):**
+```csharp
+new DrawingView()
+.LineColorFmg(Red)
+.LineWidthFmg(5)
+.ColumnSpanFmg(2)
+.IsMultiLineModeEnabledFmg(true)
+.ShouldClearOnFinishFmg(false)
+.InvokeOnElementFmg(e => e.DrawingLineCompleted += async (sender, e) =>
+{
+     var stream = await e.LastDrawingLine.GetImageStream(400, 200, Gray.AsPaint());
+     drawingImage.Source = ImageSource.FromStream(() => stream);
+})
+.BindFmg(DrawingView.LinesProperty, "Lines")
+```

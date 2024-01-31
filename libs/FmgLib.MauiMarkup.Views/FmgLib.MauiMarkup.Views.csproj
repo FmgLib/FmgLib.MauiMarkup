@@ -11,7 +11,7 @@
 		<PackageId>FmgLib.MauiMarkup.Views</PackageId>
 		<Summary>FmgLib.MauiMarkup.Views with C# Markup classes and fluent helper methods.(CommunityToolkit.Maui)</Summary>
 		<Title>FmgLib.MauiMarkup.Views</Title>
-		<Version>8.0.6.1</Version>
+		<Version>8.0.6.2</Version>
 		<Authors>FmgYazılım</Authors>
 		<Company>Fmg Yazılım</Company>
 		<Copyright>©2024</Copyright>
@@ -20,10 +20,10 @@
 		<UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
 		<Description>C# Code Markup Library for .NET MAUI (CommunityToolkit.Maui)</Description>
 		<PackageIcon>nuget.png</PackageIcon>
-		<AssemblyVersion>8.0.6.1</AssemblyVersion>
-		<AssemblyFileVersion>8.0.6.1</AssemblyFileVersion>
-		<PackageVersion>8.0.6.1</PackageVersion>
-		<FileVersion>8.0.6.1</FileVersion>
+		<AssemblyVersion>8.0.6.2</AssemblyVersion>
+		<AssemblyFileVersion>8.0.6.2</AssemblyFileVersion>
+		<PackageVersion>8.0.6.2</PackageVersion>
+		<FileVersion>8.0.6.2</FileVersion>
 		<PackageTags>xamarin,xamarin.forms,net,maui,netmaui,markup,csharpformarkup,csharp,csharpmarkup,xaml,mobile,android,ios,macos,windows,views</PackageTags>
 		<Configurations>Debug;Release</Configurations>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>

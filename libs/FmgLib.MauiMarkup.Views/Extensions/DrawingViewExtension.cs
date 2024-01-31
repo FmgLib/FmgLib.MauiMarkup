@@ -97,7 +97,7 @@ public static partial class DrawingViewExtension
         return self;
     }
 
-    public static T LinesFmg<T>(this T self, bool lines) where T : DrawingView
+    public static T LinesFmg<T>(this T self, ObservableCollection<IDrawingLine> lines) where T : DrawingView
     {
         self.SetValue(DrawingView.LinesProperty, lines);
         return self;
@@ -110,7 +110,7 @@ public static partial class DrawingViewExtension
         return self;
     }
 
-    public static SettersContext<T> LinesFmg<T>(this SettersContext<T> self, bool lines) where T : DrawingView
+    public static SettersContext<T> LinesFmg<T>(this SettersContext<T> self, ObservableCollection<IDrawingLine> lines) where T : DrawingView
     {
         self.XamlSetters.Add(new Setter
         {

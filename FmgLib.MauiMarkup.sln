@@ -13,9 +13,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup.Views", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup.UraniumUI", "libs\FmgLib.MauiMarkup.UraniumUI\FmgLib.MauiMarkup.UraniumUI.csproj", "{BB17014F-CBC4-4426-80AA-3EE8F3CE80D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FmgLib.MauiMarkup.Core", "libs\FmgLib.MauiMarkup.Core\FmgLib.MauiMarkup.Core.csproj", "{3C5D6DFF-06C2-485F-A234-EDA719A4617B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup.Core", "libs\FmgLib.MauiMarkup.Core\FmgLib.MauiMarkup.Core.csproj", "{3C5D6DFF-06C2-485F-A234-EDA719A4617B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FmgLib.MauiMarkup", "libs\FmgLib.MauiMarkup\FmgLib.MauiMarkup.csproj", "{7FE9B834-EEF6-4D65-8EE8-B085997B1F26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup", "libs\FmgLib.MauiMarkup\FmgLib.MauiMarkup.csproj", "{7FE9B834-EEF6-4D65-8EE8-B085997B1F26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FE0466FD-1CF3-4D08-B3B2-B6E0EB476831}"
+	ProjectSection(SolutionItems) = preProject
+		TODO.txt = TODO.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

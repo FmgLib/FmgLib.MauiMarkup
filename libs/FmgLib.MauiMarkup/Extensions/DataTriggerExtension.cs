@@ -8,7 +8,14 @@ public static partial class DataTriggerExtension
         self.Binding = binding;
         return self;
     }
-    
+
+    public static DataTrigger BindingFmg(this DataTrigger self,
+            Func<Binding, Binding> bindingBuilder)
+    {
+        self.Binding = bindingBuilder(new Binding());
+        return self;
+    }
+
     public static DataTrigger SettersFmg(this DataTrigger self,
         IList<Setter> setters)
     {

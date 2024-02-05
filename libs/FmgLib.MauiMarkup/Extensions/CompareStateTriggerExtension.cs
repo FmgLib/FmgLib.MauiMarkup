@@ -2,6 +2,13 @@
 
 public static partial class CompareStateTriggerExtension
 {
+    public static CompareStateTrigger BindingFmg(this CompareStateTrigger self,
+            Func<Binding, Binding> bindingBuilder)
+    {
+        self.SetValue(CompareStateTrigger.PropertyProperty, bindingBuilder(new Binding()));
+        return self;
+    }
+
     public static CompareStateTrigger PropertyFmg(this CompareStateTrigger self,
         object property)
     {

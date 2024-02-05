@@ -26,7 +26,15 @@ public static partial class VisualStateExtension
             self.Setters.Add(item);
         return self;
     }
-    
+
+    public static T TargetNameFmg<T>(this T self, string targetName)
+            where T : IList<Setter>
+    {
+        foreach (var setter in self)
+            setter.TargetName = targetName;
+        return self;
+    }
+
     public static VisualState StateTriggersFmg(this VisualState self,
         IList<StateTriggerBase> stateTriggers)
     {

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
@@ -11,25 +11,26 @@
 		<PackageId>FmgLib.MauiMarkup</PackageId>
 		<Summary>FmgLib.MauiMarkup with C# Markup classes and fluent helper methods</Summary>
 		<Title>FmgLib.MauiMarkup</Title>
-		<Version>8.0.6.1</Version>
+		<Version>8.0.6.3</Version>
 		<Authors>FmgYazılım</Authors>
 		<Company>Fmg Yazılım</Company>
 		<Copyright>©2024</Copyright>
-		<PackageProjectUrl>https://github.com/gonultasmf/FmgLib.MauiMarkup</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/gonultasmf/FmgLib.MauiMarkup</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/FmgLib/FmgLib.MauiMarkup</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/FmgLib/FmgLib.MauiMarkup</RepositoryUrl>
 		<UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
 		<Description>C# Code Markup Library for .NET MAUI</Description>
 		<PackageIcon>nuget.png</PackageIcon>
-		<AssemblyVersion>8.0.6.1</AssemblyVersion>
-		<AssemblyFileVersion>8.0.6.1</AssemblyFileVersion>
-		<PackageVersion>8.0.6.1</PackageVersion>
-		<FileVersion>8.0.6.1</FileVersion>
+		<AssemblyVersion>8.0.6.3</AssemblyVersion>
+		<AssemblyFileVersion>8.0.6.3</AssemblyFileVersion>
+		<PackageVersion>8.0.6.3</PackageVersion>
+		<FileVersion>8.0.6.3</FileVersion>
 		<PackageTags>xamarin,xamarin.forms,net,maui,netmaui,markup,csharpformarkup,csharp,csharpmarkup,xaml,mobile,android,ios,macos,windows</PackageTags>
 		<Configurations>Debug;Release</Configurations>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="FmgLib.MauiMarkup.Core" Version="8.*" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.6" />
 	</ItemGroup>
 

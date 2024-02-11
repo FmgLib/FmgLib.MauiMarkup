@@ -81,8 +81,4 @@
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.*" />
         <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.86" />
     </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\..\FmgLib.MauiMarkup\FmgLib.MauiMarkup.csproj" />
-    </ItemGroup>
 </Project>

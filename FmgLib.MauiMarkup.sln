@@ -3,11 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34414.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup", "FmgLib.MauiMarkup\FmgLib.MauiMarkup.csproj", "{9FDA086F-68F6-43B4-BF83-6812B2805FFA}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{A4956394-4BE4-4C5A-BDD3-59F439A1FD98}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyOrderApp", "sample\MyOrderApp\MyOrderApp.csproj", "{B89C9075-3B0D-400B-82E7-58CCD1292E57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{8254CDF2-DB64-4ED2-8305-85CB3461710E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup.Views", "libs\FmgLib.MauiMarkup.Views\FmgLib.MauiMarkup.Views.csproj", "{DD768216-F614-4E9E-BF91-CB860FADE8A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup.UraniumUI", "libs\FmgLib.MauiMarkup.UraniumUI\FmgLib.MauiMarkup.UraniumUI.csproj", "{BB17014F-CBC4-4426-80AA-3EE8F3CE80D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup.Core", "libs\FmgLib.MauiMarkup.Core\FmgLib.MauiMarkup.Core.csproj", "{3C5D6DFF-06C2-485F-A234-EDA719A4617B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup", "libs\FmgLib.MauiMarkup\FmgLib.MauiMarkup.csproj", "{7FE9B834-EEF6-4D65-8EE8-B085997B1F26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FE0466FD-1CF3-4D08-B3B2-B6E0EB476831}"
+	ProjectSection(SolutionItems) = preProject
+		TODO.txt = TODO.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,22 +28,38 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9FDA086F-68F6-43B4-BF83-6812B2805FFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9FDA086F-68F6-43B4-BF83-6812B2805FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9FDA086F-68F6-43B4-BF83-6812B2805FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9FDA086F-68F6-43B4-BF83-6812B2805FFA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B89C9075-3B0D-400B-82E7-58CCD1292E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B89C9075-3B0D-400B-82E7-58CCD1292E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B89C9075-3B0D-400B-82E7-58CCD1292E57}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{B89C9075-3B0D-400B-82E7-58CCD1292E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B89C9075-3B0D-400B-82E7-58CCD1292E57}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B89C9075-3B0D-400B-82E7-58CCD1292E57}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DD768216-F614-4E9E-BF91-CB860FADE8A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD768216-F614-4E9E-BF91-CB860FADE8A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD768216-F614-4E9E-BF91-CB860FADE8A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD768216-F614-4E9E-BF91-CB860FADE8A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB17014F-CBC4-4426-80AA-3EE8F3CE80D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB17014F-CBC4-4426-80AA-3EE8F3CE80D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB17014F-CBC4-4426-80AA-3EE8F3CE80D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB17014F-CBC4-4426-80AA-3EE8F3CE80D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C5D6DFF-06C2-485F-A234-EDA719A4617B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C5D6DFF-06C2-485F-A234-EDA719A4617B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C5D6DFF-06C2-485F-A234-EDA719A4617B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C5D6DFF-06C2-485F-A234-EDA719A4617B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FE9B834-EEF6-4D65-8EE8-B085997B1F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FE9B834-EEF6-4D65-8EE8-B085997B1F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FE9B834-EEF6-4D65-8EE8-B085997B1F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FE9B834-EEF6-4D65-8EE8-B085997B1F26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B89C9075-3B0D-400B-82E7-58CCD1292E57} = {A4956394-4BE4-4C5A-BDD3-59F439A1FD98}
+		{DD768216-F614-4E9E-BF91-CB860FADE8A7} = {8254CDF2-DB64-4ED2-8305-85CB3461710E}
+		{BB17014F-CBC4-4426-80AA-3EE8F3CE80D6} = {8254CDF2-DB64-4ED2-8305-85CB3461710E}
+		{3C5D6DFF-06C2-485F-A234-EDA719A4617B} = {8254CDF2-DB64-4ED2-8305-85CB3461710E}
+		{7FE9B834-EEF6-4D65-8EE8-B085997B1F26} = {8254CDF2-DB64-4ED2-8305-85CB3461710E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2698E1E7-D253-457B-AF1B-6754123E0A11}

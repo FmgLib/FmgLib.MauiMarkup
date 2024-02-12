@@ -24,7 +24,7 @@
 		<AssemblyFileVersion>8.0.6</AssemblyFileVersion>
 		<PackageVersion>8.0.6</PackageVersion>
 		<FileVersion>8.0.6</FileVersion>
-		<PackageTags>xamarin,xamarin.forms,net,maui,netmaui,markup,csharpformarkup,csharp,csharpmarkup,xaml,mobile,android,ios,macos,windows,views,skiasharp,animated,material</PackageTags>
+		<PackageTags>xamarin,xamarin.forms,net,maui,netmaui,markup,csharpformarkup,csharp,csharpmarkup,xaml,mobile,android,ios,macos,windows,views,skiasharp,animated</PackageTags>
 		<Configurations>Debug;Release</Configurations>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	</PropertyGroup>

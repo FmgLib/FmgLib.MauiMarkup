@@ -6,8 +6,8 @@ namespace FmgLib.MauiMarkup.SkiaSharp;
 public static partial class SKConfettiPathShapeExtension
 {
     public static T PathFmg<T>(this T self,
-    SKPath path)
-    where T : SKConfettiPathShape
+        SKPath path)
+        where T : SKConfettiPathShape
     {
         self.SetValue(SKConfettiPathShape.PathProperty, path);
         return self;

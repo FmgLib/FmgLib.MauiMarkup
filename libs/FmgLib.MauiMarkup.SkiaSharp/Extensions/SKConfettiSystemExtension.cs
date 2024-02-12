@@ -1,5 +1,4 @@
 ﻿using SkiaSharp.Extended.UI.Controls;
-using System.Windows.Input;
 
 namespace FmgLib.MauiMarkup.SkiaSharp;
 

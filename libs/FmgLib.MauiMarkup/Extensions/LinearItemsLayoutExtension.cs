@@ -1,7 +1,6 @@
 ﻿namespace FmgLib.MauiMarkup;
 
 
-
 public static partial class LinearItemsLayoutExtension
 {
     public static T ItemSpacingFmg<T>(this T self,

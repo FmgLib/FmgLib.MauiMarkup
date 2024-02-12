@@ -81,4 +81,12 @@
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.*" />
         <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.86" />
     </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\libs\FmgLib.MauiMarkup.Core\FmgLib.MauiMarkup.Core.csproj" />
+      <ProjectReference Include="..\..\libs\FmgLib.MauiMarkup.SkiaSharp\FmgLib.MauiMarkup.SkiaSharp.csproj" />
+      <ProjectReference Include="..\..\libs\FmgLib.MauiMarkup.UraniumUI\FmgLib.MauiMarkup.UraniumUI.csproj" />
+      <ProjectReference Include="..\..\libs\FmgLib.MauiMarkup.Views\FmgLib.MauiMarkup.Views.csproj" />
+      <ProjectReference Include="..\..\libs\FmgLib.MauiMarkup\FmgLib.MauiMarkup.csproj" />
+    </ItemGroup>
 </Project>

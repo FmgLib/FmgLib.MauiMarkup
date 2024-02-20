@@ -19,6 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup", "libs\F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FmgLib.MauiMarkup.Maps", "libs\FmgLib.MauiMarkup.Maps\FmgLib.MauiMarkup.Maps.csproj", "{65DA67C6-871B-49FD-9E0E-BAFA57B44C8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FmgLib.MauiMarkup.SkiaSharp", "libs\FmgLib.MauiMarkup.SkiaSharp\FmgLib.MauiMarkup.SkiaSharp.csproj", "{C973364F-74D0-4CAA-B5BA-E546CB2BEC44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FE0466FD-1CF3-4D08-B3B2-B6E0EB476831}"
+	ProjectSection(SolutionItems) = preProject
+		TODO.txt = TODO.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +58,10 @@ Global
 		{65DA67C6-871B-49FD-9E0E-BAFA57B44C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65DA67C6-871B-49FD-9E0E-BAFA57B44C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65DA67C6-871B-49FD-9E0E-BAFA57B44C8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C973364F-74D0-4CAA-B5BA-E546CB2BEC44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C973364F-74D0-4CAA-B5BA-E546CB2BEC44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C973364F-74D0-4CAA-B5BA-E546CB2BEC44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C973364F-74D0-4CAA-B5BA-E546CB2BEC44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +73,7 @@ Global
 		{3C5D6DFF-06C2-485F-A234-EDA719A4617B} = {8254CDF2-DB64-4ED2-8305-85CB3461710E}
 		{7FE9B834-EEF6-4D65-8EE8-B085997B1F26} = {8254CDF2-DB64-4ED2-8305-85CB3461710E}
 		{65DA67C6-871B-49FD-9E0E-BAFA57B44C8E} = {8254CDF2-DB64-4ED2-8305-85CB3461710E}
+		{C973364F-74D0-4CAA-B5BA-E546CB2BEC44} = {8254CDF2-DB64-4ED2-8305-85CB3461710E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2698E1E7-D253-457B-AF1B-6754123E0A11}

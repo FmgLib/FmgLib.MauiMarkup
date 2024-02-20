@@ -19,7 +19,7 @@ public partial class MyPopup : Popup
                     .MarginFmg(10)
                     .ChildrenFmg(
                         new SKLottieView()
-                        .SKSourceFmg(new SKFileLottieImageSource { File = "completed.json" })
+                        .SKSourceFmg(new SKFileLottieImageSource.FileFmg("completed.json"))
                         .RepeatCountFmg(-1)
                         .HeightRequestFmg(250)
                         .WidthRequestFmg(200),

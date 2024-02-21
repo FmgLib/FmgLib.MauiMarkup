@@ -8,9 +8,9 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<PackageId>FmgLib.MauiMarkup.MediaElement</PackageId>
-		<Summary>FmgLib.MauiMarkup.MediaElement with C# Markup classes and fluent helper methods.(CommunityToolkit.Maui.MediaElement)</Summary>
-		<Title>FmgLib.MauiMarkup.MediaElement</Title>
+		<PackageId>FmgLib.MauiMarkup.MediaElements</PackageId>
+		<Summary>FmgLib.MauiMarkup.MediaElements with C# Markup classes and fluent helper methods.(CommunityToolkit.Maui.MediaElement)</Summary>
+		<Title>FmgLib.MauiMarkup.MediaElements</Title>
 		<Version>8.0.6</Version>
 		<Authors>FmgYazılım</Authors>
 		<Company>Fmg Yazılım</Company>

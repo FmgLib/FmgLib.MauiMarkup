@@ -1,7 +1,5 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-
-
 public static partial class ShellSectionExtension
 {
     public static T CurrentItemFmg<T>(this T self,

@@ -1,6 +1,5 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-
 public static partial class GridItemsLayoutExtension
 {
     public static T SpanFmg<T>(this T self,

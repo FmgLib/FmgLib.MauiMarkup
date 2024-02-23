@@ -1,3 +1,5 @@
+[![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup/)
+
 ```csharp
 
 using Microsoft.Maui.Layouts;

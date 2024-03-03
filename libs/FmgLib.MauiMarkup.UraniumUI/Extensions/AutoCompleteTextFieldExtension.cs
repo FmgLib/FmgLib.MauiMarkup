@@ -161,4 +161,36 @@ public static partial class AutoCompleteTextFieldExtension
         configure(context).Build();
         return self;
     }
+
+    public static T ThresholdFmg<T>(this T self,
+        int threshold)
+        where T : AutoCompleteTextField
+    {
+        self.SetValue(AutoCompleteTextField.ThresholdProperty, threshold);
+        return self;
+    }
+
+    public static T ThresholdFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+        where T : AutoCompleteTextField
+    {
+        var context = new PropertyContext<int>(self, AutoCompleteTextField.ThresholdProperty);
+        configure(context).Build();
+        return self;
+    }
+
+    public static SettersContext<T> ThresholdFmg<T>(this SettersContext<T> self,
+        int threshold)
+        where T : AutoCompleteTextField
+    {
+        self.XamlSetters.Add(new Setter { Property = AutoCompleteTextField.ThresholdProperty, Value = threshold });
+        return self;
+    }
+
+    public static SettersContext<T> ThresholdFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+        where T : AutoCompleteTextField
+    {
+        var context = new PropertySettersContext<int>(self.XamlSetters, AutoCompleteTextField.ThresholdProperty);
+        configure(context).Build();
+        return self;
+    }
 }

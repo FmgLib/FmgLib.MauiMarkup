@@ -1,6 +1,4 @@
-﻿using Microsoft.Maui.Controls;
-using SimpleToolkit.Core;
-using SimpleToolkit.SimpleShell;
+﻿using SimpleToolkit.SimpleShell;
 using SimpleToolkit.SimpleShell.Transitions;
 
 namespace FmgLib.MauiMarkup.SimpleToolkit;

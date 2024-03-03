@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Windows.Input;
 using UraniumUI.Material.Controls;
 
 namespace FmgLib.MauiMarkup.UraniumUI;
@@ -258,6 +259,66 @@ public static partial class TabViewExtension
     {
         var context = new PropertySettersContext<TabItem>(self.XamlSetters, TabView.SelectedTabProperty);
         configure(context).Build();
+        return self;
+    }
+
+    public static T CurrentItemChangedCommandFmg<T>(this T self, ICommand command) where T : TabView
+    {
+        self.SetValue(TabView.CurrentItemChangedCommandProperty, command);
+        return self;
+    }
+
+    public static T CurrentItemChangedCommandFmg<T>(this T self, Func<PropertyContext<ICommand>, IPropertyBuilder<ICommand>> configure) where T : TabView
+    {
+        PropertyContext<ICommand> arg = new PropertyContext<ICommand>(self, TabView.CurrentItemChangedCommandProperty);
+        configure(arg).Build();
+        return self;
+    }
+
+    public static SettersContext<T> CurrentItemChangedCommandFmg<T>(this SettersContext<T> self, ICommand command) where T : TabView
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = TabView.CurrentItemChangedCommandProperty,
+            Value = command
+        });
+        return self;
+    }
+
+    public static SettersContext<T> CurrentItemChangedCommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ICommand>, IPropertySettersBuilder<ICommand>> configure) where T : TabView
+    {
+        PropertySettersContext<ICommand> arg = new PropertySettersContext<ICommand>(self.XamlSetters, TabView.CurrentItemChangedCommandProperty);
+        configure(arg).Build();
+        return self;
+    }
+
+    public static T SelectedTabChangedCommandFmg<T>(this T self, ICommand command) where T : TabView
+    {
+        self.SetValue(TabView.SelectedTabChangedCommandProperty, command);
+        return self;
+    }
+
+    public static T SelectedTabChangedCommandFmg<T>(this T self, Func<PropertyContext<ICommand>, IPropertyBuilder<ICommand>> configure) where T : TabView
+    {
+        PropertyContext<ICommand> arg = new PropertyContext<ICommand>(self, TabView.SelectedTabChangedCommandProperty);
+        configure(arg).Build();
+        return self;
+    }
+
+    public static SettersContext<T> SelectedTabChangedCommandFmg<T>(this SettersContext<T> self, ICommand command) where T : TabView
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = TabView.SelectedTabChangedCommandProperty,
+            Value = command
+        });
+        return self;
+    }
+
+    public static SettersContext<T> SelectedTabChangedCommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ICommand>, IPropertySettersBuilder<ICommand>> configure) where T : TabView
+    {
+        PropertySettersContext<ICommand> arg = new PropertySettersContext<ICommand>(self.XamlSetters, TabView.SelectedTabChangedCommandProperty);
+        configure(arg).Build();
         return self;
     }
 }

@@ -37,7 +37,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="nuget.png" />
+		<None Include="nuget.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 
 </Project>

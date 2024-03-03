@@ -11,6 +11,7 @@
 | `FmgLib.MauiMarkup.UraniumUI` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.UraniumUI?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.UraniumUI/) |
 | `FmgLib.MauiMarkup.ZXing` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.ZXing?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.ZXing/) |
 | `FmgLib.MauiMarkup.SimpleToolkit` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.SimpleToolkit?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.SimpleToolkit/) |
+| `FmgLib.MauiMarkup.DataGrid` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.DataGrid?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.DataGrid/) |
 
 ```csharp
 

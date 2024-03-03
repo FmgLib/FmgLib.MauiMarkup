@@ -1,4 +1,16 @@
-[![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup/)
+### Free .NET Libraries by FmgLib
+
+| NuGet Package | Link |
+|--------------|------|
+| `FmgLib.MauiMarkup` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup/) |
+| `FmgLib.MauiMarkup.Core` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.Core?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.Core/) |
+| `FmgLib.MauiMarkup.Views` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.Views?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.Views/) |
+| `FmgLib.MauiMarkup.Maps` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.Maps?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.Maps/) |
+| `FmgLib.MauiMarkup.SkiaSharp` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.SkiaSharp?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.SkiaSharp/) |
+| `FmgLib.MauiMarkup.MediaElements` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.MediaElements?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.MediaElements/) |
+| `FmgLib.MauiMarkup.UraniumUI` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.UraniumUI?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.UraniumUI/) |
+| `FmgLib.MauiMarkup.ZXing` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.ZXing?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.ZXing/) |
+| `FmgLib.MauiMarkup.SimpleToolkit` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.SimpleToolkit?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.SimpleToolkit/) |
 
 ```csharp
 

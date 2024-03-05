@@ -32,26 +32,26 @@ public static partial class DataGridColumnExtension
         return self;
     }
 
-    public static DataGridColumn DataGridColumnitleFmg(this DataGridColumn self, string title)
+    public static DataGridColumn TitleFmg(this DataGridColumn self, string title)
     {
         self.SetValue(DataGridColumn.TitleProperty, title);
         return self;
     }
 
-    public static DataGridColumn DataGridColumnitleFmg(this DataGridColumn self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static DataGridColumn TitleFmg(this DataGridColumn self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
     {
         var context = new PropertyContext<string>(self, DataGridColumn.TitleProperty);
         configure(context).Build();
         return self;
     }
 
-    public static SettersContext<DataGridColumn> DataGridColumnitleFmg(this SettersContext<DataGridColumn> self, string title)
+    public static SettersContext<DataGridColumn> TitleFmg(this SettersContext<DataGridColumn> self, string title)
     {
         self.XamlSetters.Add(new Setter { Property = DataGridColumn.TitleProperty, Value = title });
         return self;
     }
 
-    public static SettersContext<DataGridColumn> DataGridColumnitleFmg(this SettersContext<DataGridColumn> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<DataGridColumn> TitleFmg(this SettersContext<DataGridColumn> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, DataGridColumn.TitleProperty);
         configure(context).Build();

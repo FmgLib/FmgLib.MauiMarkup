@@ -11,7 +11,7 @@
 		<PackageId>FmgLib.MauiMarkup.DataGrid</PackageId>
 		<Summary>FmgLib.MauiMarkup.DataGrid with C# Markup classes and fluent helper methods.(akgul.Maui.DataGrid)</Summary>
 		<Title>FmgLib.MauiMarkup.DataGrid</Title>
-		<Version>8.0.7</Version>
+		<Version>8.0.7.1</Version>
 		<Authors>FmgYazılım</Authors>
 		<Company>Fmg Yazılım</Company>
 		<Copyright>©2024</Copyright>
@@ -20,10 +20,10 @@
 		<UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
 		<Description>C# Code Markup Library for .NET MAUI (akgul.Maui.DataGrid)</Description>
 		<PackageIcon>nuget.png</PackageIcon>
-		<AssemblyVersion>8.0.7</AssemblyVersion>
-		<AssemblyFileVersion>8.0.7</AssemblyFileVersion>
-		<PackageVersion>8.0.7</PackageVersion>
-		<FileVersion>8.0.7</FileVersion>
+		<AssemblyVersion>8.0.7.1</AssemblyVersion>
+		<AssemblyFileVersion>8.0.7.1</AssemblyFileVersion>
+		<PackageVersion>8.0.7.1</PackageVersion>
+		<FileVersion>8.0.7.1</FileVersion>
 		<PackageTags>xamarin,xamarin.forms,net,maui,netmaui,markup,csharpformarkup,csharp,csharpmarkup,xaml,mobile,android,ios,macos,windows,datagrid,mauidatagrid,grid</PackageTags>
 		<Configurations>Debug;Release</Configurations>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>

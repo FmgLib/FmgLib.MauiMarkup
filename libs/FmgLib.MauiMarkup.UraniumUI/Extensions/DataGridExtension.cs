@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.ObjectModel;
 using UraniumUI.Material.Controls;
 
 namespace FmgLib.MauiMarkup.UraniumUI;
@@ -290,6 +291,36 @@ public static partial class DataGridExtension
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, DataGrid.EmptyViewTemplateProperty);
         configure(context).Build();
+        return self;
+    }
+
+    public static T ColumnsFmg<T>(this T self, IList<DataGridColumn> collection) where T : DataGrid
+    {
+        self.SetValue(DataGrid.ColumnsProperty, collection);
+        return self;
+    }
+
+    public static T ColumnsFmg<T>(this T self, Func<PropertyContext<IList<DataGridColumn>>, IPropertyBuilder<IList<DataGridColumn>>> configure) where T : DataGrid
+    {
+        PropertyContext<IList<DataGridColumn>> arg = new PropertyContext<IList<DataGridColumn>>(self, DataGrid.ColumnsProperty);
+        configure(arg).Build();
+        return self;
+    }
+
+    public static SettersContext<T> ColumnsFmg<T>(this SettersContext<T> self, IList<DataGridColumn> collection) where T : DataGrid
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = DataGrid.ColumnsProperty,
+            Value = collection
+        });
+        return self;
+    }
+
+    public static SettersContext<T> ColumnsFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<IList<DataGridColumn>>, IPropertySettersBuilder<IList<DataGridColumn>>> configure) where T : DataGrid
+    {
+        PropertySettersContext<IList<DataGridColumn>> arg = new PropertySettersContext<IList<DataGridColumn>>(self.XamlSetters, DataGrid.ColumnsProperty);
+        configure(arg).Build();
         return self;
     }
 }

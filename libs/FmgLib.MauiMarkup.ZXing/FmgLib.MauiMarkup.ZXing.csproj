@@ -11,7 +11,7 @@
 		<PackageId>FmgLib.MauiMarkup.ZXing</PackageId>
 		<Summary>FmgLib.MauiMarkup.ZXing with C# Markup classes and fluent helper methods.(ZXing.Net.Maui.Controls)</Summary>
 		<Title>FmgLib.MauiMarkup.ZXing</Title>
-		<Version>8.0.7</Version>
+		<Version>8.0.14</Version>
 		<Authors>FmgYazılım</Authors>
 		<Company>Fmg Yazılım</Company>
 		<Copyright>©2024</Copyright>
@@ -20,20 +20,19 @@
 		<UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
 		<Description>C# Code Markup Library for .NET MAUI (ZXing.Net.Maui.Controls)</Description>
 		<PackageIcon>nuget.png</PackageIcon>
-		<AssemblyVersion>8.0.7</AssemblyVersion>
-		<AssemblyFileVersion>8.0.7</AssemblyFileVersion>
-		<PackageVersion>8.0.7</PackageVersion>
-		<FileVersion>8.0.7</FileVersion>
+		<AssemblyVersion>8.0.14</AssemblyVersion>
+		<AssemblyFileVersion>8.0.14</AssemblyFileVersion>
+		<PackageVersion>8.0.14</PackageVersion>
+		<FileVersion>8.0.14</FileVersion>
 		<PackageTags>xamarin,xamarin.forms,net,maui,netmaui,markup,csharpformarkup,csharp,csharpmarkup,xaml,mobile,android,ios,macos,windows,zxing,barcode</PackageTags>
 		<Configurations>Debug;Release</Configurations>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.7" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.7" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.14" />
 		<PackageReference Include="ZXing.Net.Maui.Controls" Version="0.4.0" />
-		<PackageReference Include="FmgLib.MauiMarkup.Core" Version="8.0.7" />
+		<PackageReference Include="FmgLib.MauiMarkup.Core" Version="8.0.14" />
 	</ItemGroup>
 
 	<ItemGroup>

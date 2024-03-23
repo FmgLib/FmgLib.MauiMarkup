@@ -11,7 +11,7 @@
 		<PackageId>FmgLib.MauiMarkup.SkiaSharp</PackageId>
 		<Summary>FmgLib.MauiMarkup.SkiaSharp with C# Markup classes and fluent helper methods.(SkiaSharp.Extended.UI.Maui)</Summary>
 		<Title>FmgLib.MauiMarkup</Title>
-		<Version>8.0.7</Version>
+		<Version>8.0.14</Version>
 		<Authors>FmgYazılım</Authors>
 		<Company>Fmg Yazılım</Company>
 		<Copyright>©2024</Copyright>
@@ -20,27 +20,23 @@
 		<UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
 		<Description>C# Code Markup Library for .NET MAUI (SkiaSharp.Extended.UI.Maui)</Description>
 		<PackageIcon>nuget.png</PackageIcon>
-		<AssemblyVersion>8.0.7</AssemblyVersion>
-		<AssemblyFileVersion>8.0.7</AssemblyFileVersion>
-		<PackageVersion>8.0.7</PackageVersion>
-		<FileVersion>8.0.7</FileVersion>
+		<AssemblyVersion>8.0.14</AssemblyVersion>
+		<AssemblyFileVersion>8.0.14</AssemblyFileVersion>
+		<PackageVersion>8.0.14</PackageVersion>
+		<FileVersion>8.0.14</FileVersion>
 		<PackageTags>xamarin,xamarin.forms,net,maui,netmaui,markup,csharpformarkup,csharp,csharpmarkup,xaml,mobile,android,ios,macos,windows,views,skiasharp,animated</PackageTags>
 		<Configurations>Debug;Release</Configurations>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="FmgLib.MauiMarkup.Core" Version="8.0.7" />
-		<PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.86" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.7" />
+		<PackageReference Include="FmgLib.MauiMarkup.Core" Version="8.0.14" />
+		<PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.92" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.14" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<None Include="nuget.png" Pack="true" PackagePath="" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.7" />
 	</ItemGroup>
 
 </Project>

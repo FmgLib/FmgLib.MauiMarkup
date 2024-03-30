@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Maui.Behaviors;
 using CommunityToolkit.Maui.Core;
+using CommunityToolkit.Maui.Views;
 using System.Runtime.Versioning;
 
 namespace FmgLib.MauiMarkup.Views;
@@ -63,6 +64,36 @@ public static partial class StatusBarBehaviorExtension
     public static SettersContext<T> StatusBarStyleFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<StatusBarStyle>, IPropertySettersBuilder<StatusBarStyle>> configure) where T : StatusBarBehavior
     {
         PropertySettersContext<StatusBarStyle> arg = new PropertySettersContext<StatusBarStyle>(self.XamlSetters, StatusBarBehavior.StatusBarStyleProperty);
+        configure(arg).Build();
+        return self;
+    }
+
+    public static T ApplyOnFmg<T>(this T self, StatusBarApplyOn applyOn) where T : StatusBarBehavior
+    {
+        self.SetValue(StatusBarBehavior.ApplyOnProperty, applyOn);
+        return self;
+    }
+
+    public static T ApplyOnFmg<T>(this T self, Func<PropertyContext<StatusBarApplyOn>, IPropertyBuilder<StatusBarApplyOn>> configure) where T : StatusBarBehavior
+    {
+        PropertyContext<StatusBarApplyOn> arg = new PropertyContext<StatusBarApplyOn>(self, StatusBarBehavior.ApplyOnProperty);
+        configure(arg).Build();
+        return self;
+    }
+
+    public static SettersContext<T> ApplyOnFmg<T>(this SettersContext<T> self, StatusBarApplyOn applyOn) where T : StatusBarBehavior
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = StatusBarBehavior.ApplyOnProperty,
+            Value = applyOn
+        });
+        return self;
+    }
+
+    public static SettersContext<T> ApplyOnFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<StatusBarApplyOn>, IPropertySettersBuilder<StatusBarApplyOn>> configure) where T : StatusBarBehavior
+    {
+        PropertySettersContext<StatusBarApplyOn> arg = new PropertySettersContext<StatusBarApplyOn>(self.XamlSetters, StatusBarBehavior.ApplyOnProperty);
         configure(arg).Build();
         return self;
     }

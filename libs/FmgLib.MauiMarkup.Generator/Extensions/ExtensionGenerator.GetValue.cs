@@ -1,8 +1,3 @@
-//
-// MIT License
-// Copyright Pawel Krzywdzinski
-//
-
 namespace FmgLib.MauiMarkup.Generator.Extensions
 {
     public partial class ExtensionGenerator

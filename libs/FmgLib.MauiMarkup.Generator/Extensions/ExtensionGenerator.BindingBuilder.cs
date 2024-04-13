@@ -1,14 +1,7 @@
-//
-// MIT License
-// Copyright Pawel Krzywdzinski
-//
-
 namespace FmgLib.MauiMarkup.Generator.Extensions
 {
     public partial class ExtensionGenerator
     {
-        // binding builder
-
         void GenerateExtensionMethod_BindablePropertyBuilder(PropertyInfo info)
         {
             if (mainSymbol.IsSealed)

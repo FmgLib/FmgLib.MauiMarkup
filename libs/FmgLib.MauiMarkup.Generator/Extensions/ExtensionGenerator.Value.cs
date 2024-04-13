@@ -1,21 +1,7 @@
-//
-// MIT License
-// Copyright Pawel Krzywdzinski
-//
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using Microsoft.CodeAnalysis;
-
 namespace FmgLib.MauiMarkup.Generator.Extensions
 {
     public partial class ExtensionGenerator
     {
-        // value
-
         void GenerateExtensionMethod_Value(PropertyInfo info)
         {
             if (mainSymbol.IsSealed)

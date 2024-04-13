@@ -6,16 +6,8 @@
 	  <BuildOutputTargetFolder>analyzers</BuildOutputTargetFolder>
 	  <IsRoslynComponent>True</IsRoslynComponent>
 	  <EnforceExtendedAnalyzerRules>True</EnforceExtendedAnalyzerRules>
-	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	  <PackageId>FmgLib.MauiMarkup.Generator</PackageId>
-	  <Title>Route Generator for .NET apps</Title>
 	  <Version>1.0.6</Version>
-	  <Authors>FmgLib</Authors>
-	  <Description>Automatically generates route names for navigation based on a class name convention for .NET applications</Description>
-	  <PackageProjectUrl>https://github.com/FmgLib/FmgLib.MauiMarkup</PackageProjectUrl>
-	  <RepositoryUrl>https://github.com/FmgLib/FmgLib.MauiMarkup</RepositoryUrl>
-	  <PackageTags>dotnet;maui;xamarin;forms;shell;navigation;route;routes;page;pages;routing;generator;</PackageTags>
-	  <PackageIcon>nuget.png</PackageIcon>
   </PropertyGroup>
 
 

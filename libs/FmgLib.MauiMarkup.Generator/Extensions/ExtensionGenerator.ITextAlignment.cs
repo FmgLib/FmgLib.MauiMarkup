@@ -1,9 +1,4 @@
-﻿//
-// MIT License
-// Copyright Pawel Krzywdzinski
-//
-
-using Microsoft.CodeAnalysis;
+﻿using Microsoft.CodeAnalysis;
 
 namespace FmgLib.MauiMarkup.Generator.Extensions
 {

@@ -1,8 +1,3 @@
-//
-// MIT License
-// Copyright Pawel Krzywdzinski
-//
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,9 +31,9 @@ namespace FmgLib.MauiMarkup.Generator.Extensions
 
             if (BindablePropertyName == null)
             {
-                if (BindableProperties != null) IsBindableProperty = BindableProperties.Contains(propertyName);
+                if (BindableProperties != null) IsBindableProperty = BindableProperties.Contains(propertyName + "Property");
                 accessedWith = PropertySymbol.IsStatic ? $"{MainSymbol.ToDisplayString()}" : "self";
-                BindablePropertyName = $"{MainSymbol.ToDisplayString()}.{propertyName}Property";
+                BindablePropertyName = $"{MainSymbol.ToDisplayString()}.{propertyName}";
             }
             else
                 IsBindableObject = true;

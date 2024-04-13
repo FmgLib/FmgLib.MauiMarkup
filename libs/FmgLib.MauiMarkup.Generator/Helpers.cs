@@ -1,17 +1,18 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace FmgLib.MauiMarkup;
 
 public static class Helpers
 {
     static readonly string[] keywords = { "class", "switch", "event" };
-    public static string[] NotGenerateList = { "this[]", "Handler", "LogicalChildren" };
+    public static List<string> NotGenerateList = new() { "this[]", "Handler", "LogicalChildren" };
 
 
     public static string ToCamelCase(this string text)

@@ -32,7 +32,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TODO.txt = TODO.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FmgLib.MauiMarkup.DataGrid", "libs\FmgLib.MauiMarkup.DataGrid\FmgLib.MauiMarkup.DataGrid.csproj", "{9823A67A-1423-451A-A5AB-61DFD6D16C36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup.DataGrid", "libs\FmgLib.MauiMarkup.DataGrid\FmgLib.MauiMarkup.DataGrid.csproj", "{9823A67A-1423-451A-A5AB-61DFD6D16C36}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup.Generator", "libs\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.csproj", "{AEEB75B9-A082-4E0E-B55B-EC20F2542A0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneratedExam", "sample\GeneratedExam\GeneratedExam.csproj", "{61CFBCD6-A21C-46CA-8264-5F21A0467F18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8E033618-BADE-4A6C-AC14-56EF722D8F61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FmgLib.MauiMarkup.Generator.Test", "tests\FmgLib.MauiMarkup.Generator.Test\FmgLib.MauiMarkup.Generator.Test.csproj", "{57DB4E88-894E-46B4-A6FA-6BD3630BEB4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,6 +94,18 @@ Global
 		{9823A67A-1423-451A-A5AB-61DFD6D16C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9823A67A-1423-451A-A5AB-61DFD6D16C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9823A67A-1423-451A-A5AB-61DFD6D16C36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEEB75B9-A082-4E0E-B55B-EC20F2542A0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEEB75B9-A082-4E0E-B55B-EC20F2542A0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEEB75B9-A082-4E0E-B55B-EC20F2542A0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEEB75B9-A082-4E0E-B55B-EC20F2542A0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61CFBCD6-A21C-46CA-8264-5F21A0467F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61CFBCD6-A21C-46CA-8264-5F21A0467F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61CFBCD6-A21C-46CA-8264-5F21A0467F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61CFBCD6-A21C-46CA-8264-5F21A0467F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57DB4E88-894E-46B4-A6FA-6BD3630BEB4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57DB4E88-894E-46B4-A6FA-6BD3630BEB4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57DB4E88-894E-46B4-A6FA-6BD3630BEB4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57DB4E88-894E-46B4-A6FA-6BD3630BEB4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +122,9 @@ Global
 		{65DA67C6-871B-49FD-9E0E-BAFA57B44C8E} = {8254CDF2-DB64-4ED2-8305-85CB3461710E}
 		{C973364F-74D0-4CAA-B5BA-E546CB2BEC44} = {8254CDF2-DB64-4ED2-8305-85CB3461710E}
 		{9823A67A-1423-451A-A5AB-61DFD6D16C36} = {8254CDF2-DB64-4ED2-8305-85CB3461710E}
+		{AEEB75B9-A082-4E0E-B55B-EC20F2542A0C} = {8254CDF2-DB64-4ED2-8305-85CB3461710E}
+		{61CFBCD6-A21C-46CA-8264-5F21A0467F18} = {A4956394-4BE4-4C5A-BDD3-59F439A1FD98}
+		{57DB4E88-894E-46B4-A6FA-6BD3630BEB4B} = {8E033618-BADE-4A6C-AC14-56EF722D8F61}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2698E1E7-D253-457B-AF1B-6754123E0A11}

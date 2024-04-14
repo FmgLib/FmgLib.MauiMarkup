@@ -4,7 +4,7 @@
 
 public static partial class HtmlWebViewSourceExtension
 {
-    public static T BaseUrlFmg<T>(this T self,
+    public static T BaseUrl<T>(this T self,
         string baseUrl)
         where T : HtmlWebViewSource
     {
@@ -12,7 +12,7 @@ public static partial class HtmlWebViewSourceExtension
         return self;
     }
     
-    public static T BaseUrlFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T BaseUrl<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : HtmlWebViewSource
     {
         var context = new PropertyContext<string>(self, HtmlWebViewSource.BaseUrlProperty);
@@ -20,7 +20,7 @@ public static partial class HtmlWebViewSourceExtension
         return self;
     }
     
-    public static SettersContext<T> BaseUrlFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> BaseUrl<T>(this SettersContext<T> self,
         string baseUrl)
         where T : HtmlWebViewSource
     {
@@ -28,7 +28,7 @@ public static partial class HtmlWebViewSourceExtension
         return self;
     }
     
-    public static SettersContext<T> BaseUrlFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> BaseUrl<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : HtmlWebViewSource
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, HtmlWebViewSource.BaseUrlProperty);
@@ -36,7 +36,7 @@ public static partial class HtmlWebViewSourceExtension
         return self;
     }
     
-    public static T HtmlFmg<T>(this T self,
+    public static T Html<T>(this T self,
         string html)
         where T : HtmlWebViewSource
     {
@@ -44,7 +44,7 @@ public static partial class HtmlWebViewSourceExtension
         return self;
     }
     
-    public static T HtmlFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T Html<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : HtmlWebViewSource
     {
         var context = new PropertyContext<string>(self, HtmlWebViewSource.HtmlProperty);
@@ -52,7 +52,7 @@ public static partial class HtmlWebViewSourceExtension
         return self;
     }
     
-    public static SettersContext<T> HtmlFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Html<T>(this SettersContext<T> self,
         string html)
         where T : HtmlWebViewSource
     {
@@ -60,7 +60,7 @@ public static partial class HtmlWebViewSourceExtension
         return self;
     }
     
-    public static SettersContext<T> HtmlFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> Html<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : HtmlWebViewSource
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, HtmlWebViewSource.HtmlProperty);

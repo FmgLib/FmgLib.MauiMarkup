@@ -4,7 +4,7 @@
 
 public static partial class TableViewExtension
 {
-    public static T HasUnevenRowsFmg<T>(this T self,
+    public static T HasUnevenRows<T>(this T self,
         bool hasUnevenRows)
         where T : TableView
     {
@@ -12,7 +12,7 @@ public static partial class TableViewExtension
         return self;
     }
     
-    public static T HasUnevenRowsFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T HasUnevenRows<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : TableView
     {
         var context = new PropertyContext<bool>(self, TableView.HasUnevenRowsProperty);
@@ -20,7 +20,7 @@ public static partial class TableViewExtension
         return self;
     }
     
-    public static SettersContext<T> HasUnevenRowsFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> HasUnevenRows<T>(this SettersContext<T> self,
         bool hasUnevenRows)
         where T : TableView
     {
@@ -28,7 +28,7 @@ public static partial class TableViewExtension
         return self;
     }
     
-    public static SettersContext<T> HasUnevenRowsFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> HasUnevenRows<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : TableView
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, TableView.HasUnevenRowsProperty);
@@ -36,7 +36,7 @@ public static partial class TableViewExtension
         return self;
     }
     
-    public static T IntentFmg<T>(this T self,
+    public static T Intent<T>(this T self,
         TableIntent intent)
         where T : TableView
     {
@@ -44,7 +44,7 @@ public static partial class TableViewExtension
         return self;
     }
     
-    public static T RootFmg<T>(this T self,
+    public static T Root<T>(this T self,
         IList<TableSection> root)
         where T : TableView
     {
@@ -53,7 +53,7 @@ public static partial class TableViewExtension
         return self;
     }
 
-    public static T RootFmg<T>(this T self,
+    public static T Root<T>(this T self,
         params TableSection[] root)
         where T : TableView
     {
@@ -62,7 +62,7 @@ public static partial class TableViewExtension
         return self;
     }
     
-    public static T RowHeightFmg<T>(this T self,
+    public static T RowHeight<T>(this T self,
         int rowHeight)
         where T : TableView
     {
@@ -70,7 +70,7 @@ public static partial class TableViewExtension
         return self;
     }
     
-    public static T RowHeightFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+    public static T RowHeight<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
         where T : TableView
     {
         var context = new PropertyContext<int>(self, TableView.RowHeightProperty);
@@ -78,7 +78,7 @@ public static partial class TableViewExtension
         return self;
     }
     
-    public static SettersContext<T> RowHeightFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> RowHeight<T>(this SettersContext<T> self,
         int rowHeight)
         where T : TableView
     {
@@ -86,7 +86,7 @@ public static partial class TableViewExtension
         return self;
     }
     
-    public static SettersContext<T> RowHeightFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+    public static SettersContext<T> RowHeight<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
         where T : TableView
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, TableView.RowHeightProperty);
@@ -94,7 +94,7 @@ public static partial class TableViewExtension
         return self;
     }
     
-    public static T ModelFmg<T>(this T self,
+    public static T Model<T>(this T self,
         Microsoft.Maui.Controls.Internals.TableModel model)
         where T : TableView
     {
@@ -102,14 +102,14 @@ public static partial class TableViewExtension
         return self;
     }
     
-    public static T OnModelChangedFmg<T>(this T self, EventHandler handler)
+    public static T OnModelChanged<T>(this T self, EventHandler handler)
         where T : TableView
     {
         self.ModelChanged += handler;
         return self;
     }
     
-    public static T OnModelChangedFmg<T>(this T self, Action<T> action)
+    public static T OnModelChanged<T>(this T self, Action<T> action)
         where T : TableView
     {
         self.ModelChanged += (o, arg) => action(self);

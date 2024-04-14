@@ -4,7 +4,7 @@
 
 public static partial class ShapeExtension
 {
-    public static T FillFmg<T>(this T self,
+    public static T Fill<T>(this T self,
         Brush fill)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -12,7 +12,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static T FillFmg<T>(this T self, Func<PropertyContext<Brush>, IPropertyBuilder<Brush>> configure)
+    public static T Fill<T>(this T self, Func<PropertyContext<Brush>, IPropertyBuilder<Brush>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertyContext<Brush>(self, Microsoft.Maui.Controls.Shapes.Shape.FillProperty);
@@ -20,7 +20,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> FillFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Fill<T>(this SettersContext<T> self,
         Brush fill)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -28,7 +28,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> FillFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush>, IPropertySettersBuilder<Brush>> configure)
+    public static SettersContext<T> Fill<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush>, IPropertySettersBuilder<Brush>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertySettersContext<Brush>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.Shape.FillProperty);
@@ -36,7 +36,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static T StrokeFmg<T>(this T self,
+    public static T Stroke<T>(this T self,
         Brush stroke)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -44,7 +44,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static T StrokeFmg<T>(this T self, Func<PropertyContext<Brush>, IPropertyBuilder<Brush>> configure)
+    public static T Stroke<T>(this T self, Func<PropertyContext<Brush>, IPropertyBuilder<Brush>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertyContext<Brush>(self, Microsoft.Maui.Controls.Shapes.Shape.StrokeProperty);
@@ -52,7 +52,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Stroke<T>(this SettersContext<T> self,
         Brush stroke)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -60,7 +60,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush>, IPropertySettersBuilder<Brush>> configure)
+    public static SettersContext<T> Stroke<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush>, IPropertySettersBuilder<Brush>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertySettersContext<Brush>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.Shape.StrokeProperty);
@@ -68,7 +68,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static T StrokeThicknessFmg<T>(this T self,
+    public static T StrokeThickness<T>(this T self,
         double strokeThickness)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -76,7 +76,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static T StrokeThicknessFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T StrokeThickness<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.Shapes.Shape.StrokeThicknessProperty);
@@ -84,7 +84,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeThicknessFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> StrokeThickness<T>(this SettersContext<T> self,
         double strokeThickness)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -92,7 +92,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeThicknessFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> StrokeThickness<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.Shape.StrokeThicknessProperty);
@@ -100,7 +100,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static Task<bool> AnimateStrokeThicknessToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateStrokeThicknessTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         double fromValue = self.StrokeThickness;
@@ -109,7 +109,7 @@ public static partial class ShapeExtension
         return Transformations.AnimateAsync<double>(self, "AnimateStrokeThicknessTo", transform, callback, length, easing);
     }
     
-    public static T StrokeDashArrayFmg<T>(this T self,
+    public static T StrokeDashArray<T>(this T self,
         IList<double> strokeDashArray)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -118,7 +118,7 @@ public static partial class ShapeExtension
         return self;
     }
 
-    public static T StrokeDashArrayFmg<T>(this T self,
+    public static T StrokeDashArray<T>(this T self,
         params double[] strokeDashArray)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -127,7 +127,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static T StrokeDashArrayFmg<T>(this T self, Func<PropertyContext<DoubleCollection>, IPropertyBuilder<DoubleCollection>> configure)
+    public static T StrokeDashArray<T>(this T self, Func<PropertyContext<DoubleCollection>, IPropertyBuilder<DoubleCollection>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertyContext<DoubleCollection>(self, Microsoft.Maui.Controls.Shapes.Shape.StrokeDashArrayProperty);
@@ -135,7 +135,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static T StrokeDashOffsetFmg<T>(this T self,
+    public static T StrokeDashOffset<T>(this T self,
         double strokeDashOffset)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -143,7 +143,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static T StrokeDashOffsetFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T StrokeDashOffset<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.Shapes.Shape.StrokeDashOffsetProperty);
@@ -151,7 +151,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeDashOffsetFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> StrokeDashOffset<T>(this SettersContext<T> self,
         double strokeDashOffset)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -159,7 +159,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeDashOffsetFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> StrokeDashOffset<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.Shape.StrokeDashOffsetProperty);
@@ -167,7 +167,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static Task<bool> AnimateStrokeDashOffsetToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateStrokeDashOffsetTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         double fromValue = self.StrokeDashOffset;
@@ -176,7 +176,7 @@ public static partial class ShapeExtension
         return Transformations.AnimateAsync<double>(self, "AnimateStrokeDashOffsetTo", transform, callback, length, easing);
     }
     
-    public static T StrokeLineCapFmg<T>(this T self,
+    public static T StrokeLineCap<T>(this T self,
         Microsoft.Maui.Controls.Shapes.PenLineCap strokeLineCap)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -184,7 +184,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static T StrokeLineCapFmg<T>(this T self, Func<PropertyContext<Microsoft.Maui.Controls.Shapes.PenLineCap>, IPropertyBuilder<Microsoft.Maui.Controls.Shapes.PenLineCap>> configure)
+    public static T StrokeLineCap<T>(this T self, Func<PropertyContext<Microsoft.Maui.Controls.Shapes.PenLineCap>, IPropertyBuilder<Microsoft.Maui.Controls.Shapes.PenLineCap>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertyContext<Microsoft.Maui.Controls.Shapes.PenLineCap>(self, Microsoft.Maui.Controls.Shapes.Shape.StrokeLineCapProperty);
@@ -192,7 +192,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeLineCapFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> StrokeLineCap<T>(this SettersContext<T> self,
         Microsoft.Maui.Controls.Shapes.PenLineCap strokeLineCap)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -200,7 +200,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeLineCapFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Controls.Shapes.PenLineCap>, IPropertySettersBuilder<Microsoft.Maui.Controls.Shapes.PenLineCap>> configure)
+    public static SettersContext<T> StrokeLineCap<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Controls.Shapes.PenLineCap>, IPropertySettersBuilder<Microsoft.Maui.Controls.Shapes.PenLineCap>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertySettersContext<Microsoft.Maui.Controls.Shapes.PenLineCap>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.Shape.StrokeLineCapProperty);
@@ -208,7 +208,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static T StrokeLineJoinFmg<T>(this T self,
+    public static T StrokeLineJoin<T>(this T self,
         Microsoft.Maui.Controls.Shapes.PenLineJoin strokeLineJoin)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -216,7 +216,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static T StrokeLineJoinFmg<T>(this T self, Func<PropertyContext<Microsoft.Maui.Controls.Shapes.PenLineJoin>, IPropertyBuilder<Microsoft.Maui.Controls.Shapes.PenLineJoin>> configure)
+    public static T StrokeLineJoin<T>(this T self, Func<PropertyContext<Microsoft.Maui.Controls.Shapes.PenLineJoin>, IPropertyBuilder<Microsoft.Maui.Controls.Shapes.PenLineJoin>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertyContext<Microsoft.Maui.Controls.Shapes.PenLineJoin>(self, Microsoft.Maui.Controls.Shapes.Shape.StrokeLineJoinProperty);
@@ -224,7 +224,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeLineJoinFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> StrokeLineJoin<T>(this SettersContext<T> self,
         Microsoft.Maui.Controls.Shapes.PenLineJoin strokeLineJoin)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -232,7 +232,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeLineJoinFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Controls.Shapes.PenLineJoin>, IPropertySettersBuilder<Microsoft.Maui.Controls.Shapes.PenLineJoin>> configure)
+    public static SettersContext<T> StrokeLineJoin<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Controls.Shapes.PenLineJoin>, IPropertySettersBuilder<Microsoft.Maui.Controls.Shapes.PenLineJoin>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertySettersContext<Microsoft.Maui.Controls.Shapes.PenLineJoin>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.Shape.StrokeLineJoinProperty);
@@ -240,7 +240,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static T StrokeMiterLimitFmg<T>(this T self,
+    public static T StrokeMiterLimit<T>(this T self,
         double strokeMiterLimit)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -248,7 +248,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static T StrokeMiterLimitFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T StrokeMiterLimit<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.Shapes.Shape.StrokeMiterLimitProperty);
@@ -256,7 +256,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeMiterLimitFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> StrokeMiterLimit<T>(this SettersContext<T> self,
         double strokeMiterLimit)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -264,7 +264,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeMiterLimitFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> StrokeMiterLimit<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.Shape.StrokeMiterLimitProperty);
@@ -272,7 +272,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static Task<bool> AnimateStrokeMiterLimitToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateStrokeMiterLimitTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         double fromValue = self.StrokeMiterLimit;
@@ -281,7 +281,7 @@ public static partial class ShapeExtension
         return Transformations.AnimateAsync<double>(self, "AnimateStrokeMiterLimitTo", transform, callback, length, easing);
     }
     
-    public static T AspectFmg<T>(this T self,
+    public static T Aspect<T>(this T self,
         Stretch aspect)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -289,7 +289,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static T AspectFmg<T>(this T self, Func<PropertyContext<Stretch>, IPropertyBuilder<Stretch>> configure)
+    public static T Aspect<T>(this T self, Func<PropertyContext<Stretch>, IPropertyBuilder<Stretch>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertyContext<Stretch>(self, Microsoft.Maui.Controls.Shapes.Shape.AspectProperty);
@@ -297,7 +297,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> AspectFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Aspect<T>(this SettersContext<T> self,
         Stretch aspect)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
@@ -305,7 +305,7 @@ public static partial class ShapeExtension
         return self;
     }
     
-    public static SettersContext<T> AspectFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Stretch>, IPropertySettersBuilder<Stretch>> configure)
+    public static SettersContext<T> Aspect<T>(this SettersContext<T> self, Func<PropertySettersContext<Stretch>, IPropertySettersBuilder<Stretch>> configure)
         where T : Microsoft.Maui.Controls.Shapes.Shape
     {
         var context = new PropertySettersContext<Stretch>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.Shape.AspectProperty);

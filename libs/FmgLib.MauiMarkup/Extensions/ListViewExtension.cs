@@ -4,7 +4,7 @@
 
 public static partial class ListViewExtension
 {
-    public static T FooterFmg<T>(this T self,
+    public static T Footer<T>(this T self,
         object footer)
         where T : ListView
     {
@@ -12,7 +12,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T FooterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T Footer<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : ListView
     {
         var context = new PropertyContext<object>(self, ListView.FooterProperty);
@@ -20,7 +20,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> FooterFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Footer<T>(this SettersContext<T> self,
         object footer)
         where T : ListView
     {
@@ -28,7 +28,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> FooterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> Footer<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, ListView.FooterProperty);
@@ -36,7 +36,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T FooterTemplateFmg<T>(this T self,
+    public static T FooterTemplate<T>(this T self,
         DataTemplate footerTemplate)
         where T : ListView
     {
@@ -44,7 +44,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T FooterTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T FooterTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : ListView
     {
         var context = new PropertyContext<DataTemplate>(self, ListView.FooterTemplateProperty);
@@ -52,7 +52,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> FooterTemplateFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FooterTemplate<T>(this SettersContext<T> self,
         DataTemplate footerTemplate)
         where T : ListView
     {
@@ -60,7 +60,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> FooterTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> FooterTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, ListView.FooterTemplateProperty);
@@ -68,14 +68,14 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T FooterTemplateFmg<T>(this T self, Func<object> loadTemplate)
+    public static T FooterTemplate<T>(this T self, Func<object> loadTemplate)
         where T : ListView
     {
         self.SetValue(ListView.FooterTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static T GroupDisplayBindingFmg<T>(this T self,
+    public static T GroupDisplayBinding<T>(this T self,
         BindingBase groupDisplayBinding)
         where T : ListView
     {
@@ -83,7 +83,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T GroupHeaderTemplateFmg<T>(this T self,
+    public static T GroupHeaderTemplate<T>(this T self,
         DataTemplate groupHeaderTemplate)
         where T : ListView
     {
@@ -91,7 +91,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T GroupHeaderTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T GroupHeaderTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : ListView
     {
         var context = new PropertyContext<DataTemplate>(self, ListView.GroupHeaderTemplateProperty);
@@ -99,7 +99,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> GroupHeaderTemplateFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> GroupHeaderTemplate<T>(this SettersContext<T> self,
         DataTemplate groupHeaderTemplate)
         where T : ListView
     {
@@ -107,7 +107,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> GroupHeaderTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> GroupHeaderTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, ListView.GroupHeaderTemplateProperty);
@@ -115,14 +115,14 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T GroupHeaderTemplateFmg<T>(this T self, Func<object> loadTemplate)
+    public static T GroupHeaderTemplate<T>(this T self, Func<object> loadTemplate)
         where T : ListView
     {
         self.SetValue(ListView.GroupHeaderTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static T GroupShortNameBindingFmg<T>(this T self,
+    public static T GroupShortNameBinding<T>(this T self,
         BindingBase groupShortNameBinding)
         where T : ListView
     {
@@ -130,7 +130,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T HasUnevenRowsFmg<T>(this T self,
+    public static T HasUnevenRows<T>(this T self,
         bool hasUnevenRows)
         where T : ListView
     {
@@ -138,7 +138,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T HasUnevenRowsFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T HasUnevenRows<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : ListView
     {
         var context = new PropertyContext<bool>(self, ListView.HasUnevenRowsProperty);
@@ -146,7 +146,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> HasUnevenRowsFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> HasUnevenRows<T>(this SettersContext<T> self,
         bool hasUnevenRows)
         where T : ListView
     {
@@ -154,7 +154,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> HasUnevenRowsFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> HasUnevenRows<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, ListView.HasUnevenRowsProperty);
@@ -162,7 +162,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T HeaderFmg<T>(this T self,
+    public static T Header<T>(this T self,
         object header)
         where T : ListView
     {
@@ -170,7 +170,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T HeaderFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T Header<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : ListView
     {
         var context = new PropertyContext<object>(self, ListView.HeaderProperty);
@@ -178,7 +178,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> HeaderFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Header<T>(this SettersContext<T> self,
         object header)
         where T : ListView
     {
@@ -186,7 +186,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> HeaderFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> Header<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, ListView.HeaderProperty);
@@ -194,7 +194,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T HeaderTemplateFmg<T>(this T self,
+    public static T HeaderTemplate<T>(this T self,
         DataTemplate headerTemplate)
         where T : ListView
     {
@@ -202,7 +202,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T HeaderTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T HeaderTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : ListView
     {
         var context = new PropertyContext<DataTemplate>(self, ListView.HeaderTemplateProperty);
@@ -210,7 +210,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> HeaderTemplateFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> HeaderTemplate<T>(this SettersContext<T> self,
         DataTemplate headerTemplate)
         where T : ListView
     {
@@ -218,7 +218,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> HeaderTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> HeaderTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, ListView.HeaderTemplateProperty);
@@ -226,14 +226,14 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T HeaderTemplateFmg<T>(this T self, Func<object> loadTemplate)
+    public static T HeaderTemplate<T>(this T self, Func<object> loadTemplate)
         where T : ListView
     {
         self.SetValue(ListView.HeaderTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static T IsGroupingEnabledFmg<T>(this T self,
+    public static T IsGroupingEnabled<T>(this T self,
         bool isGroupingEnabled)
         where T : ListView
     {
@@ -241,7 +241,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T IsGroupingEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsGroupingEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : ListView
     {
         var context = new PropertyContext<bool>(self, ListView.IsGroupingEnabledProperty);
@@ -249,7 +249,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsGroupingEnabledFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsGroupingEnabled<T>(this SettersContext<T> self,
         bool isGroupingEnabled)
         where T : ListView
     {
@@ -257,7 +257,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsGroupingEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsGroupingEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, ListView.IsGroupingEnabledProperty);
@@ -265,7 +265,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T IsPullToRefreshEnabledFmg<T>(this T self,
+    public static T IsPullToRefreshEnabled<T>(this T self,
         bool isPullToRefreshEnabled)
         where T : ListView
     {
@@ -273,7 +273,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T IsPullToRefreshEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsPullToRefreshEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : ListView
     {
         var context = new PropertyContext<bool>(self, ListView.IsPullToRefreshEnabledProperty);
@@ -281,7 +281,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsPullToRefreshEnabledFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsPullToRefreshEnabled<T>(this SettersContext<T> self,
         bool isPullToRefreshEnabled)
         where T : ListView
     {
@@ -289,7 +289,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsPullToRefreshEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsPullToRefreshEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, ListView.IsPullToRefreshEnabledProperty);
@@ -297,7 +297,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T IsRefreshingFmg<T>(this T self,
+    public static T IsRefreshing<T>(this T self,
         bool isRefreshing)
         where T : ListView
     {
@@ -305,7 +305,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T IsRefreshingFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsRefreshing<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : ListView
     {
         var context = new PropertyContext<bool>(self, ListView.IsRefreshingProperty);
@@ -313,7 +313,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsRefreshingFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsRefreshing<T>(this SettersContext<T> self,
         bool isRefreshing)
         where T : ListView
     {
@@ -321,7 +321,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsRefreshingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsRefreshing<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, ListView.IsRefreshingProperty);
@@ -329,7 +329,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T RefreshCommandFmg<T>(this T self,
+    public static T RefreshCommand<T>(this T self,
         System.Windows.Input.ICommand refreshCommand)
         where T : ListView
     {
@@ -337,7 +337,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T RefreshCommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T RefreshCommand<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : ListView
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, ListView.RefreshCommandProperty);
@@ -345,7 +345,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> RefreshCommandFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> RefreshCommand<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand refreshCommand)
         where T : ListView
     {
@@ -353,7 +353,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> RefreshCommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> RefreshCommand<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, ListView.RefreshCommandProperty);
@@ -361,7 +361,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T RowHeightFmg<T>(this T self,
+    public static T RowHeight<T>(this T self,
         int rowHeight)
         where T : ListView
     {
@@ -369,7 +369,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T RowHeightFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+    public static T RowHeight<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
         where T : ListView
     {
         var context = new PropertyContext<int>(self, ListView.RowHeightProperty);
@@ -377,7 +377,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> RowHeightFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> RowHeight<T>(this SettersContext<T> self,
         int rowHeight)
         where T : ListView
     {
@@ -385,7 +385,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> RowHeightFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+    public static SettersContext<T> RowHeight<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, ListView.RowHeightProperty);
@@ -393,7 +393,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T SelectedItemFmg<T>(this T self,
+    public static T SelectedItem<T>(this T self,
         object selectedItem)
         where T : ListView
     {
@@ -401,7 +401,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T SelectedItemFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T SelectedItem<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : ListView
     {
         var context = new PropertyContext<object>(self, ListView.SelectedItemProperty);
@@ -409,7 +409,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> SelectedItemFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> SelectedItem<T>(this SettersContext<T> self,
         object selectedItem)
         where T : ListView
     {
@@ -417,7 +417,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> SelectedItemFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> SelectedItem<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, ListView.SelectedItemProperty);
@@ -425,7 +425,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T SelectionModeFmg<T>(this T self,
+    public static T SelectionMode<T>(this T self,
         ListViewSelectionMode selectionMode)
         where T : ListView
     {
@@ -433,7 +433,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T SelectionModeFmg<T>(this T self, Func<PropertyContext<ListViewSelectionMode>, IPropertyBuilder<ListViewSelectionMode>> configure)
+    public static T SelectionMode<T>(this T self, Func<PropertyContext<ListViewSelectionMode>, IPropertyBuilder<ListViewSelectionMode>> configure)
         where T : ListView
     {
         var context = new PropertyContext<ListViewSelectionMode>(self, ListView.SelectionModeProperty);
@@ -441,7 +441,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> SelectionModeFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> SelectionMode<T>(this SettersContext<T> self,
         ListViewSelectionMode selectionMode)
         where T : ListView
     {
@@ -449,7 +449,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> SelectionModeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ListViewSelectionMode>, IPropertySettersBuilder<ListViewSelectionMode>> configure)
+    public static SettersContext<T> SelectionMode<T>(this SettersContext<T> self, Func<PropertySettersContext<ListViewSelectionMode>, IPropertySettersBuilder<ListViewSelectionMode>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<ListViewSelectionMode>(self.XamlSetters, ListView.SelectionModeProperty);
@@ -457,7 +457,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T SeparatorColorFmg<T>(this T self,
+    public static T SeparatorColor<T>(this T self,
         Color separatorColor)
         where T : ListView
     {
@@ -465,7 +465,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T SeparatorColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T SeparatorColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : ListView
     {
         var context = new PropertyContext<Color>(self, ListView.SeparatorColorProperty);
@@ -473,7 +473,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> SeparatorColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> SeparatorColor<T>(this SettersContext<T> self,
         Color separatorColor)
         where T : ListView
     {
@@ -481,7 +481,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> SeparatorColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> SeparatorColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, ListView.SeparatorColorProperty);
@@ -489,7 +489,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static Task<bool> AnimateSeparatorColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateSeparatorColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : ListView
     {
         Color fromValue = self.SeparatorColor;
@@ -498,7 +498,7 @@ public static partial class ListViewExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateSeparatorColorTo", transform, callback, length, easing);
     }
     
-    public static T RefreshControlColorFmg<T>(this T self,
+    public static T RefreshControlColor<T>(this T self,
         Color refreshControlColor)
         where T : ListView
     {
@@ -506,7 +506,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T RefreshControlColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T RefreshControlColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : ListView
     {
         var context = new PropertyContext<Color>(self, ListView.RefreshControlColorProperty);
@@ -514,7 +514,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> RefreshControlColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> RefreshControlColor<T>(this SettersContext<T> self,
         Color refreshControlColor)
         where T : ListView
     {
@@ -522,7 +522,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> RefreshControlColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> RefreshControlColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, ListView.RefreshControlColorProperty);
@@ -530,7 +530,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static Task<bool> AnimateRefreshControlColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateRefreshControlColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : ListView
     {
         Color fromValue = self.RefreshControlColor;
@@ -539,7 +539,7 @@ public static partial class ListViewExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateRefreshControlColorTo", transform, callback, length, easing);
     }
     
-    public static T SeparatorVisibilityFmg<T>(this T self,
+    public static T SeparatorVisibility<T>(this T self,
         SeparatorVisibility separatorVisibility)
         where T : ListView
     {
@@ -547,7 +547,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T SeparatorVisibilityFmg<T>(this T self, Func<PropertyContext<SeparatorVisibility>, IPropertyBuilder<SeparatorVisibility>> configure)
+    public static T SeparatorVisibility<T>(this T self, Func<PropertyContext<SeparatorVisibility>, IPropertyBuilder<SeparatorVisibility>> configure)
         where T : ListView
     {
         var context = new PropertyContext<SeparatorVisibility>(self, ListView.SeparatorVisibilityProperty);
@@ -555,7 +555,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> SeparatorVisibilityFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> SeparatorVisibility<T>(this SettersContext<T> self,
         SeparatorVisibility separatorVisibility)
         where T : ListView
     {
@@ -563,7 +563,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> SeparatorVisibilityFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<SeparatorVisibility>, IPropertySettersBuilder<SeparatorVisibility>> configure)
+    public static SettersContext<T> SeparatorVisibility<T>(this SettersContext<T> self, Func<PropertySettersContext<SeparatorVisibility>, IPropertySettersBuilder<SeparatorVisibility>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<SeparatorVisibility>(self.XamlSetters, ListView.SeparatorVisibilityProperty);
@@ -571,7 +571,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T HorizontalScrollBarVisibilityFmg<T>(this T self,
+    public static T HorizontalScrollBarVisibility<T>(this T self,
         ScrollBarVisibility horizontalScrollBarVisibility)
         where T : ListView
     {
@@ -579,7 +579,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T HorizontalScrollBarVisibilityFmg<T>(this T self, Func<PropertyContext<ScrollBarVisibility>, IPropertyBuilder<ScrollBarVisibility>> configure)
+    public static T HorizontalScrollBarVisibility<T>(this T self, Func<PropertyContext<ScrollBarVisibility>, IPropertyBuilder<ScrollBarVisibility>> configure)
         where T : ListView
     {
         var context = new PropertyContext<ScrollBarVisibility>(self, ListView.HorizontalScrollBarVisibilityProperty);
@@ -587,7 +587,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalScrollBarVisibilityFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> HorizontalScrollBarVisibility<T>(this SettersContext<T> self,
         ScrollBarVisibility horizontalScrollBarVisibility)
         where T : ListView
     {
@@ -595,7 +595,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalScrollBarVisibilityFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollBarVisibility>, IPropertySettersBuilder<ScrollBarVisibility>> configure)
+    public static SettersContext<T> HorizontalScrollBarVisibility<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollBarVisibility>, IPropertySettersBuilder<ScrollBarVisibility>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<ScrollBarVisibility>(self.XamlSetters, ListView.HorizontalScrollBarVisibilityProperty);
@@ -603,7 +603,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T VerticalScrollBarVisibilityFmg<T>(this T self,
+    public static T VerticalScrollBarVisibility<T>(this T self,
         ScrollBarVisibility verticalScrollBarVisibility)
         where T : ListView
     {
@@ -611,7 +611,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T VerticalScrollBarVisibilityFmg<T>(this T self, Func<PropertyContext<ScrollBarVisibility>, IPropertyBuilder<ScrollBarVisibility>> configure)
+    public static T VerticalScrollBarVisibility<T>(this T self, Func<PropertyContext<ScrollBarVisibility>, IPropertyBuilder<ScrollBarVisibility>> configure)
         where T : ListView
     {
         var context = new PropertyContext<ScrollBarVisibility>(self, ListView.VerticalScrollBarVisibilityProperty);
@@ -619,7 +619,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalScrollBarVisibilityFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> VerticalScrollBarVisibility<T>(this SettersContext<T> self,
         ScrollBarVisibility verticalScrollBarVisibility)
         where T : ListView
     {
@@ -627,7 +627,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalScrollBarVisibilityFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollBarVisibility>, IPropertySettersBuilder<ScrollBarVisibility>> configure)
+    public static SettersContext<T> VerticalScrollBarVisibility<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollBarVisibility>, IPropertySettersBuilder<ScrollBarVisibility>> configure)
         where T : ListView
     {
         var context = new PropertySettersContext<ScrollBarVisibility>(self.XamlSetters, ListView.VerticalScrollBarVisibilityProperty);
@@ -635,7 +635,7 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T RefreshAllowedFmg<T>(this T self,
+    public static T RefreshAllowed<T>(this T self,
         bool refreshAllowed)
         where T : ListView
     {
@@ -643,98 +643,98 @@ public static partial class ListViewExtension
         return self;
     }
     
-    public static T OnItemAppearingFmg<T>(this T self, EventHandler<ItemVisibilityEventArgs> handler)
+    public static T OnItemAppearing<T>(this T self, EventHandler<ItemVisibilityEventArgs> handler)
         where T : ListView
     {
         self.ItemAppearing += handler;
         return self;
     }
     
-    public static T OnItemAppearingFmg<T>(this T self, Action<T> action)
+    public static T OnItemAppearing<T>(this T self, Action<T> action)
         where T : ListView
     {
         self.ItemAppearing += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnItemDisappearingFmg<T>(this T self, EventHandler<ItemVisibilityEventArgs> handler)
+    public static T OnItemDisappearing<T>(this T self, EventHandler<ItemVisibilityEventArgs> handler)
         where T : ListView
     {
         self.ItemDisappearing += handler;
         return self;
     }
     
-    public static T OnItemDisappearingFmg<T>(this T self, Action<T> action)
+    public static T OnItemDisappearing<T>(this T self, Action<T> action)
         where T : ListView
     {
         self.ItemDisappearing += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnItemSelectedFmg<T>(this T self, EventHandler<SelectedItemChangedEventArgs> handler)
+    public static T OnItemSelected<T>(this T self, EventHandler<SelectedItemChangedEventArgs> handler)
         where T : ListView
     {
         self.ItemSelected += handler;
         return self;
     }
     
-    public static T OnItemSelectedFmg<T>(this T self, Action<T> action)
+    public static T OnItemSelected<T>(this T self, Action<T> action)
         where T : ListView
     {
         self.ItemSelected += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnItemTappedFmg<T>(this T self, EventHandler<ItemTappedEventArgs> handler)
+    public static T OnItemTapped<T>(this T self, EventHandler<ItemTappedEventArgs> handler)
         where T : ListView
     {
         self.ItemTapped += handler;
         return self;
     }
     
-    public static T OnItemTappedFmg<T>(this T self, Action<T> action)
+    public static T OnItemTapped<T>(this T self, Action<T> action)
         where T : ListView
     {
         self.ItemTapped += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnScrolledFmg<T>(this T self, EventHandler<ScrolledEventArgs> handler)
+    public static T OnScrolled<T>(this T self, EventHandler<ScrolledEventArgs> handler)
         where T : ListView
     {
         self.Scrolled += handler;
         return self;
     }
     
-    public static T OnScrolledFmg<T>(this T self, Action<T> action)
+    public static T OnScrolled<T>(this T self, Action<T> action)
         where T : ListView
     {
         self.Scrolled += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnRefreshingFmg<T>(this T self, EventHandler handler)
+    public static T OnRefreshing<T>(this T self, EventHandler handler)
         where T : ListView
     {
         self.Refreshing += handler;
         return self;
     }
     
-    public static T OnRefreshingFmg<T>(this T self, Action<T> action)
+    public static T OnRefreshing<T>(this T self, Action<T> action)
         where T : ListView
     {
         self.Refreshing += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnScrollToRequestedFmg<T>(this T self, EventHandler<ScrollToRequestedEventArgs> handler)
+    public static T OnScrollToRequested<T>(this T self, EventHandler<ScrollToRequestedEventArgs> handler)
         where T : ListView
     {
         self.ScrollToRequested += handler;
         return self;
     }
     
-    public static T OnScrollToRequestedFmg<T>(this T self, Action<T> action)
+    public static T OnScrollToRequested<T>(this T self, Action<T> action)
         where T : ListView
     {
         self.ScrollToRequested += (o, arg) => action(self);

@@ -2,35 +2,35 @@
 
 public static partial class BindingExtension
 {
-    public static Binding ConverterFmg(this Binding self,
+    public static Binding Converter(this Binding self,
         IValueConverter converter)
     {
         self.Converter = converter;
         return self;
     }
     
-    public static Binding ConverterParameterFmg(this Binding self,
+    public static Binding ConverterParameter(this Binding self,
         object converterParameter)
     {
         self.ConverterParameter = converterParameter;
         return self;
     }
     
-    public static Binding PathFmg(this Binding self,
+    public static Binding Path(this Binding self,
         string path)
     {
         self.Path = path;
         return self;
     }
     
-    public static Binding SourceFmg(this Binding self,
+    public static Binding Source(this Binding self,
         object source)
     {
         self.Source = source;
         return self;
     }
     
-    public static Binding UpdateSourceEventNameFmg(this Binding self,
+    public static Binding UpdateSourceEventName(this Binding self,
         string updateSourceEventName)
     {
         self.UpdateSourceEventName = updateSourceEventName;

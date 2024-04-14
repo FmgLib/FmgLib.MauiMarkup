@@ -4,7 +4,7 @@
 
 public static partial class FormattedStringExtension
 {
-    public static T SpansFmg<T>(this T self,
+    public static T Spans<T>(this T self,
         IList<Span> spans)
         where T : FormattedString
     {
@@ -13,7 +13,7 @@ public static partial class FormattedStringExtension
         return self;
     }
 
-    public static T SpansFmg<T>(this T self,
+    public static T Spans<T>(this T self,
         params Span[] spans)
         where T : FormattedString
     {

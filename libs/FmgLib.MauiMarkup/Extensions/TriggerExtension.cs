@@ -4,14 +4,14 @@
 
 public static partial class TriggerExtension
 {
-    public static Trigger PropertyFmg(this Trigger self,
+    public static Trigger Property(this Trigger self,
         BindableProperty property)
     {
         self.Property = property;
         return self;
     }
     
-    public static Trigger SettersFmg(this Trigger self,
+    public static Trigger Setters(this Trigger self,
         IList<Setter> setters)
     {
         foreach (var item in setters)
@@ -19,7 +19,7 @@ public static partial class TriggerExtension
         return self;
     }
 
-    public static Trigger SettersFmg(this Trigger self,
+    public static Trigger Setters(this Trigger self,
         params Setter[] setters)
     {
         foreach (var item in setters)
@@ -27,7 +27,7 @@ public static partial class TriggerExtension
         return self;
     }
     
-    public static Trigger ValueFmg(this Trigger self,
+    public static Trigger Value(this Trigger self,
         object value)
     {
         self.Value = value;

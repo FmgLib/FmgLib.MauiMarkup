@@ -110,12 +110,12 @@ public class Style<T> : IEnumerable where T : BindableObject
 
     public void Add(VisualStateGroup group)
     {
-        mauiStyle.GetVisualStateGroupListFmg().Add(group);
+        mauiStyle.GetVisualStateGroupList().Add(group);
     }
 
     public void Add(VisualState visualState)
     {
-        mauiStyle.GetVisualStateGroupListFmg().GetCommonStatesVisualStateGroupFmg().States.Add(visualState);
+        mauiStyle.GetVisualStateGroupList().GetCommonStatesVisualStateGroup().States.Add(visualState);
     }
 
     IEnumerator IEnumerable.GetEnumerator()

@@ -2,7 +2,7 @@
 
 public static partial class EntryCellExtension
 {
-    public static T HorizontalTextAlignmentFmg<T>(this T self,
+    public static T HorizontalTextAlignment<T>(this T self,
         TextAlignment horizontalTextAlignment)
         where T : EntryCell
     {
@@ -10,7 +10,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static T HorizontalTextAlignmentFmg<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
+    public static T HorizontalTextAlignment<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
         where T : EntryCell
     {
         var context = new PropertyContext<TextAlignment>(self, EntryCell.HorizontalTextAlignmentProperty);
@@ -18,7 +18,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalTextAlignmentFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> HorizontalTextAlignment<T>(this SettersContext<T> self,
         TextAlignment horizontalTextAlignment)
         where T : EntryCell
     {
@@ -26,7 +26,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalTextAlignmentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
+    public static SettersContext<T> HorizontalTextAlignment<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
         where T : EntryCell
     {
         var context = new PropertySettersContext<TextAlignment>(self.XamlSetters, EntryCell.HorizontalTextAlignmentProperty);
@@ -34,7 +34,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static T VerticalTextAlignmentFmg<T>(this T self,
+    public static T VerticalTextAlignment<T>(this T self,
         TextAlignment verticalTextAlignment)
         where T : EntryCell
     {
@@ -42,7 +42,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static T VerticalTextAlignmentFmg<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
+    public static T VerticalTextAlignment<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
         where T : EntryCell
     {
         var context = new PropertyContext<TextAlignment>(self, EntryCell.VerticalTextAlignmentProperty);
@@ -50,7 +50,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalTextAlignmentFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> VerticalTextAlignment<T>(this SettersContext<T> self,
         TextAlignment verticalTextAlignment)
         where T : EntryCell
     {
@@ -58,7 +58,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalTextAlignmentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
+    public static SettersContext<T> VerticalTextAlignment<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
         where T : EntryCell
     {
         var context = new PropertySettersContext<TextAlignment>(self.XamlSetters, EntryCell.VerticalTextAlignmentProperty);
@@ -66,7 +66,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static T KeyboardFmg<T>(this T self,
+    public static T Keyboard<T>(this T self,
         Microsoft.Maui.Keyboard keyboard)
         where T : EntryCell
     {
@@ -74,7 +74,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static T KeyboardFmg<T>(this T self, Func<PropertyContext<Microsoft.Maui.Keyboard>, IPropertyBuilder<Microsoft.Maui.Keyboard>> configure)
+    public static T Keyboard<T>(this T self, Func<PropertyContext<Microsoft.Maui.Keyboard>, IPropertyBuilder<Microsoft.Maui.Keyboard>> configure)
         where T : EntryCell
     {
         var context = new PropertyContext<Microsoft.Maui.Keyboard>(self, EntryCell.KeyboardProperty);
@@ -82,7 +82,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static SettersContext<T> KeyboardFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Keyboard<T>(this SettersContext<T> self,
         Microsoft.Maui.Keyboard keyboard)
         where T : EntryCell
     {
@@ -90,7 +90,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static SettersContext<T> KeyboardFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Keyboard>, IPropertySettersBuilder<Microsoft.Maui.Keyboard>> configure)
+    public static SettersContext<T> Keyboard<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Keyboard>, IPropertySettersBuilder<Microsoft.Maui.Keyboard>> configure)
         where T : EntryCell
     {
         var context = new PropertySettersContext<Microsoft.Maui.Keyboard>(self.XamlSetters, EntryCell.KeyboardProperty);
@@ -98,7 +98,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static T LabelFmg<T>(this T self,
+    public static T Label<T>(this T self,
         string label)
         where T : EntryCell
     {
@@ -106,7 +106,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static T LabelFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T Label<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : EntryCell
     {
         var context = new PropertyContext<string>(self, EntryCell.LabelProperty);
@@ -114,7 +114,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static SettersContext<T> LabelFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Label<T>(this SettersContext<T> self,
         string label)
         where T : EntryCell
     {
@@ -122,7 +122,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static SettersContext<T> LabelFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> Label<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : EntryCell
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, EntryCell.LabelProperty);
@@ -130,7 +130,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static T LabelColorFmg<T>(this T self,
+    public static T LabelColor<T>(this T self,
         Color labelColor)
         where T : EntryCell
     {
@@ -138,7 +138,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static T LabelColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T LabelColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : EntryCell
     {
         var context = new PropertyContext<Color>(self, EntryCell.LabelColorProperty);
@@ -146,7 +146,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static SettersContext<T> LabelColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> LabelColor<T>(this SettersContext<T> self,
         Color labelColor)
         where T : EntryCell
     {
@@ -154,7 +154,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static SettersContext<T> LabelColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> LabelColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : EntryCell
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, EntryCell.LabelColorProperty);
@@ -162,7 +162,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static T PlaceholderFmg<T>(this T self,
+    public static T Placeholder<T>(this T self,
         string placeholder)
         where T : EntryCell
     {
@@ -170,7 +170,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static T PlaceholderFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T Placeholder<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : EntryCell
     {
         var context = new PropertyContext<string>(self, EntryCell.PlaceholderProperty);
@@ -178,7 +178,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static SettersContext<T> PlaceholderFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Placeholder<T>(this SettersContext<T> self,
         string placeholder)
         where T : EntryCell
     {
@@ -186,7 +186,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static SettersContext<T> PlaceholderFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> Placeholder<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : EntryCell
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, EntryCell.PlaceholderProperty);
@@ -194,7 +194,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static T TextFmg<T>(this T self,
+    public static T Text<T>(this T self,
         string text)
         where T : EntryCell
     {
@@ -202,7 +202,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static T TextFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T Text<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : EntryCell
     {
         var context = new PropertyContext<string>(self, EntryCell.TextProperty);
@@ -210,7 +210,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static SettersContext<T> TextFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Text<T>(this SettersContext<T> self,
         string text)
         where T : EntryCell
     {
@@ -218,7 +218,7 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static SettersContext<T> TextFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> Text<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : EntryCell
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, EntryCell.TextProperty);
@@ -226,14 +226,14 @@ public static partial class EntryCellExtension
         return self;
     }
     
-    public static T OnCompletedFmg<T>(this T self, EventHandler handler)
+    public static T OnCompleted<T>(this T self, EventHandler handler)
         where T : EntryCell
     {
         self.Completed += handler;
         return self;
     }
     
-    public static T OnCompletedFmg<T>(this T self, Action<T> action)
+    public static T OnCompleted<T>(this T self, Action<T> action)
         where T : EntryCell
     {
         self.Completed += (o, arg) => action(self);
@@ -241,21 +241,21 @@ public static partial class EntryCellExtension
     }
     
 
-    public static T TextCenterHorizontalFmg<T>(this T self)
+    public static T TextCenterHorizontal<T>(this T self)
         where T : EntryCell
     {
         self.SetValue(EntryCell.HorizontalTextAlignmentProperty, TextAlignment.Center);
         return self;
     }
 
-    public static T TextCenterVerticalFmg<T>(this T self)
+    public static T TextCenterVertical<T>(this T self)
         where T : EntryCell
     {
         self.SetValue(EntryCell.VerticalTextAlignmentProperty, TextAlignment.Center);
         return self;
     }
 
-    public static T TextCenterFmg<T>(this T self)
+    public static T TextCenter<T>(this T self)
         where T : EntryCell
     {
         self.SetValue(EntryCell.HorizontalTextAlignmentProperty, TextAlignment.Center);
@@ -263,21 +263,21 @@ public static partial class EntryCellExtension
         return self;
     }
 
-    public static T TextTopFmg<T>(this T self)
+    public static T TextTop<T>(this T self)
         where T : EntryCell
     {
         self.SetValue(EntryCell.VerticalTextAlignmentProperty, TextAlignment.Start);
         return self;
     }
 
-    public static T TextBottomFmg<T>(this T self)
+    public static T TextBottom<T>(this T self)
         where T : EntryCell, Microsoft.Maui.ITextAlignment
     {
         self.SetValue(EntryCell.VerticalTextAlignmentProperty, TextAlignment.End);
         return self;
     }
 
-    public static T TextTopStartFmg<T>(this T self)
+    public static T TextTopStart<T>(this T self)
         where T : EntryCell
     {
         self.SetValue(EntryCell.VerticalTextAlignmentProperty, TextAlignment.Start);
@@ -285,7 +285,7 @@ public static partial class EntryCellExtension
         return self;
     }
 
-    public static T TextBottomStartFmg<T>(this T self)
+    public static T TextBottomStart<T>(this T self)
         where T : EntryCell
     {
         self.SetValue(EntryCell.VerticalTextAlignmentProperty, TextAlignment.End);
@@ -293,7 +293,7 @@ public static partial class EntryCellExtension
         return self;
     }
 
-    public static T TextTopEndFmg<T>(this T self)
+    public static T TextTopEnd<T>(this T self)
         where T : EntryCell
     {
         self.SetValue(EntryCell.VerticalTextAlignmentProperty, TextAlignment.Start);
@@ -301,7 +301,7 @@ public static partial class EntryCellExtension
         return self;
     }
 
-    public static T TextBottomEndFmg<T>(this T self)
+    public static T TextBottomEnd<T>(this T self)
         where T : EntryCell
     {
         self.SetValue(EntryCell.VerticalTextAlignmentProperty, TextAlignment.End);
@@ -309,14 +309,14 @@ public static partial class EntryCellExtension
         return self;
     }
 
-    public static T TextStartFmg<T>(this T self)
+    public static T TextStart<T>(this T self)
         where T : EntryCell
     {
         self.SetValue(EntryCell.HorizontalTextAlignmentProperty, TextAlignment.Start);
         return self;
     }
 
-    public static T TextEndFmg<T>(this T self)
+    public static T TextEnd<T>(this T self)
         where T : EntryCell
     {
         self.SetValue(EntryCell.HorizontalTextAlignmentProperty, TextAlignment.End);

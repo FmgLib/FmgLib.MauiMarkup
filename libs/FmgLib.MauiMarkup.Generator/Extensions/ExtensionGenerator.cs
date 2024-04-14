@@ -118,7 +118,7 @@ builder.AppendLine($@"
         //.Where(e => e.Kind == SymbolKind.Event && e.DeclaredAccessibility == Accessibility.Public && !e.IsStatic && !Helpers.IsSymbolDeprecated(e));
 
         foreach (var prop in properties)
-            GenerateExtensionMethod(prop as IPropertySymbol, bindablePropertyNames);
+            GenerateExtensionMethodForBindableFromInterface(prop as IPropertySymbol);
 
         foreach (var @event in events)
             GenerateEventMethod(@event);
@@ -170,10 +170,12 @@ builder.AppendLine($@"
 
     void GenerateExtensionMethodForBindableFromInterface(IPropertySymbol propertySymbol, string bindablePropertyName = null)
     {
+        var propertyName = propertySymbol.Name.Split(new[] { "." }, StringSplitOptions.None).Last();
+        propertyName = propertyName.Equals("class", StringComparison.Ordinal) ? "@class" : propertyName;
         var info = new PropertyInfo
         {
             MainSymbol = mainSymbol,
-            BindablePropertyName = bindablePropertyName,
+            BindablePropertyName = $"{mainSymbol.ToDisplayString()}.{propertySymbol.Name}Property",
             PropertySymbol = propertySymbol,
             IsBindableProperty = true,
             IsBindableObject = true

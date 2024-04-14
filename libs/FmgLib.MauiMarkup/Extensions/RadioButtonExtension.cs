@@ -4,7 +4,7 @@
 
 public static partial class RadioButtonExtension
 {
-    public static T ContentFmg<T>(this T self,
+    public static T Content<T>(this T self,
         object content)
         where T : RadioButton
     {
@@ -12,7 +12,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T ContentFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T Content<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : RadioButton
     {
         var context = new PropertyContext<object>(self, RadioButton.ContentProperty);
@@ -20,7 +20,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> ContentFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Content<T>(this SettersContext<T> self,
         object content)
         where T : RadioButton
     {
@@ -28,7 +28,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> ContentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> Content<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : RadioButton
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, RadioButton.ContentProperty);
@@ -36,7 +36,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T ValueFmg<T>(this T self,
+    public static T Value<T>(this T self,
         object value)
         where T : RadioButton
     {
@@ -44,7 +44,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T ValueFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T Value<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : RadioButton
     {
         var context = new PropertyContext<object>(self, RadioButton.ValueProperty);
@@ -52,7 +52,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> ValueFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Value<T>(this SettersContext<T> self,
         object value)
         where T : RadioButton
     {
@@ -60,7 +60,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> ValueFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> Value<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : RadioButton
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, RadioButton.ValueProperty);
@@ -68,7 +68,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T IsCheckedFmg<T>(this T self,
+    public static T IsChecked<T>(this T self,
         bool isChecked)
         where T : RadioButton
     {
@@ -76,7 +76,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T IsCheckedFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsChecked<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : RadioButton
     {
         var context = new PropertyContext<bool>(self, RadioButton.IsCheckedProperty);
@@ -84,7 +84,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> IsCheckedFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsChecked<T>(this SettersContext<T> self,
         bool isChecked)
         where T : RadioButton
     {
@@ -92,7 +92,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> IsCheckedFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsChecked<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : RadioButton
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, RadioButton.IsCheckedProperty);
@@ -100,7 +100,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T GroupNameFmg<T>(this T self,
+    public static T GroupName<T>(this T self,
         string groupName)
         where T : RadioButton
     {
@@ -108,7 +108,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T GroupNameFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T GroupName<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : RadioButton
     {
         var context = new PropertyContext<string>(self, RadioButton.GroupNameProperty);
@@ -116,7 +116,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> GroupNameFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> GroupName<T>(this SettersContext<T> self,
         string groupName)
         where T : RadioButton
     {
@@ -124,7 +124,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> GroupNameFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> GroupName<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : RadioButton
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, RadioButton.GroupNameProperty);
@@ -132,7 +132,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T TextColorFmg<T>(this T self,
+    public static T TextColor<T>(this T self,
         Color textColor)
         where T : RadioButton
     {
@@ -140,7 +140,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T TextColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T TextColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : RadioButton
     {
         var context = new PropertyContext<Color>(self, RadioButton.TextColorProperty);
@@ -148,7 +148,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextColor<T>(this SettersContext<T> self,
         Color textColor)
         where T : RadioButton
     {
@@ -156,7 +156,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> TextColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : RadioButton
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, RadioButton.TextColorProperty);
@@ -164,7 +164,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static Task<bool> AnimateTextColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateTextColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : RadioButton
     {
         Color fromValue = self.TextColor;
@@ -173,7 +173,7 @@ public static partial class RadioButtonExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateTextColorTo", transform, callback, length, easing);
     }
     
-    public static T CharacterSpacingFmg<T>(this T self,
+    public static T CharacterSpacing<T>(this T self,
         double characterSpacing)
         where T : RadioButton
     {
@@ -181,7 +181,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T CharacterSpacingFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T CharacterSpacing<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : RadioButton
     {
         var context = new PropertyContext<double>(self, RadioButton.CharacterSpacingProperty);
@@ -189,7 +189,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CharacterSpacingFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CharacterSpacing<T>(this SettersContext<T> self,
         double characterSpacing)
         where T : RadioButton
     {
@@ -197,7 +197,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CharacterSpacingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> CharacterSpacing<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : RadioButton
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, RadioButton.CharacterSpacingProperty);
@@ -205,7 +205,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static Task<bool> AnimateCharacterSpacingToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateCharacterSpacingTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : RadioButton
     {
         double fromValue = self.CharacterSpacing;
@@ -214,7 +214,7 @@ public static partial class RadioButtonExtension
         return Transformations.AnimateAsync<double>(self, "AnimateCharacterSpacingTo", transform, callback, length, easing);
     }
     
-    public static T TextTransformFmg<T>(this T self,
+    public static T TextTransform<T>(this T self,
         TextTransform textTransform)
         where T : RadioButton
     {
@@ -222,7 +222,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T TextTransformFmg<T>(this T self, Func<PropertyContext<TextTransform>, IPropertyBuilder<TextTransform>> configure)
+    public static T TextTransform<T>(this T self, Func<PropertyContext<TextTransform>, IPropertyBuilder<TextTransform>> configure)
         where T : RadioButton
     {
         var context = new PropertyContext<TextTransform>(self, RadioButton.TextTransformProperty);
@@ -230,7 +230,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> TextTransformFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextTransform<T>(this SettersContext<T> self,
         TextTransform textTransform)
         where T : RadioButton
     {
@@ -238,7 +238,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> TextTransformFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextTransform>, IPropertySettersBuilder<TextTransform>> configure)
+    public static SettersContext<T> TextTransform<T>(this SettersContext<T> self, Func<PropertySettersContext<TextTransform>, IPropertySettersBuilder<TextTransform>> configure)
         where T : RadioButton
     {
         var context = new PropertySettersContext<TextTransform>(self.XamlSetters, RadioButton.TextTransformProperty);
@@ -246,7 +246,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T FontAttributesFmg<T>(this T self,
+    public static T FontAttributes<T>(this T self,
         FontAttributes fontAttributes)
         where T : RadioButton
     {
@@ -254,7 +254,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T FontAttributesFmg<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
+    public static T FontAttributes<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
         where T : RadioButton
     {
         var context = new PropertyContext<FontAttributes>(self, RadioButton.FontAttributesProperty);
@@ -262,7 +262,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self,
         FontAttributes fontAttributes)
         where T : RadioButton
     {
@@ -270,7 +270,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
+    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
         where T : RadioButton
     {
         var context = new PropertySettersContext<FontAttributes>(self.XamlSetters, RadioButton.FontAttributesProperty);
@@ -278,7 +278,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T FontFamilyFmg<T>(this T self,
+    public static T FontFamily<T>(this T self,
         string fontFamily)
         where T : RadioButton
     {
@@ -286,7 +286,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T FontFamilyFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T FontFamily<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : RadioButton
     {
         var context = new PropertyContext<string>(self, RadioButton.FontFamilyProperty);
@@ -294,7 +294,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self,
         string fontFamily)
         where T : RadioButton
     {
@@ -302,7 +302,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : RadioButton
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, RadioButton.FontFamilyProperty);
@@ -310,7 +310,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T FontSizeFmg<T>(this T self,
+    public static T FontSize<T>(this T self,
         double fontSize)
         where T : RadioButton
     {
@@ -318,7 +318,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T FontSizeFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T FontSize<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : RadioButton
     {
         var context = new PropertyContext<double>(self, RadioButton.FontSizeProperty);
@@ -326,7 +326,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontSize<T>(this SettersContext<T> self,
         double fontSize)
         where T : RadioButton
     {
@@ -334,7 +334,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> FontSize<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : RadioButton
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, RadioButton.FontSizeProperty);
@@ -342,7 +342,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static Task<bool> AnimateFontSizeToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateFontSizeTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : RadioButton
     {
         double fromValue = self.FontSize;
@@ -351,7 +351,7 @@ public static partial class RadioButtonExtension
         return Transformations.AnimateAsync<double>(self, "AnimateFontSizeTo", transform, callback, length, easing);
     }
     
-    public static T FontAutoScalingEnabledFmg<T>(this T self,
+    public static T FontAutoScalingEnabled<T>(this T self,
         bool fontAutoScalingEnabled)
         where T : RadioButton
     {
@@ -359,7 +359,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T FontAutoScalingEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T FontAutoScalingEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : RadioButton
     {
         var context = new PropertyContext<bool>(self, RadioButton.FontAutoScalingEnabledProperty);
@@ -367,7 +367,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self,
         bool fontAutoScalingEnabled)
         where T : RadioButton
     {
@@ -375,7 +375,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : RadioButton
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, RadioButton.FontAutoScalingEnabledProperty);
@@ -383,7 +383,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T BorderWidthFmg<T>(this T self,
+    public static T BorderWidth<T>(this T self,
         double borderWidth)
         where T : RadioButton
     {
@@ -391,7 +391,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T BorderWidthFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T BorderWidth<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : RadioButton
     {
         var context = new PropertyContext<double>(self, RadioButton.BorderWidthProperty);
@@ -399,7 +399,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> BorderWidthFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> BorderWidth<T>(this SettersContext<T> self,
         double borderWidth)
         where T : RadioButton
     {
@@ -407,7 +407,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> BorderWidthFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> BorderWidth<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : RadioButton
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, RadioButton.BorderWidthProperty);
@@ -415,7 +415,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static Task<bool> AnimateBorderWidthToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateBorderWidthTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : RadioButton
     {
         double fromValue = self.BorderWidth;
@@ -424,7 +424,7 @@ public static partial class RadioButtonExtension
         return Transformations.AnimateAsync<double>(self, "AnimateBorderWidthTo", transform, callback, length, easing);
     }
     
-    public static T BorderColorFmg<T>(this T self,
+    public static T BorderColor<T>(this T self,
         Color borderColor)
         where T : RadioButton
     {
@@ -432,7 +432,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T BorderColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T BorderColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : RadioButton
     {
         var context = new PropertyContext<Color>(self, RadioButton.BorderColorProperty);
@@ -440,7 +440,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> BorderColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> BorderColor<T>(this SettersContext<T> self,
         Color borderColor)
         where T : RadioButton
     {
@@ -448,7 +448,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> BorderColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> BorderColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : RadioButton
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, RadioButton.BorderColorProperty);
@@ -456,7 +456,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static Task<bool> AnimateBorderColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateBorderColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : RadioButton
     {
         Color fromValue = self.BorderColor;
@@ -465,7 +465,7 @@ public static partial class RadioButtonExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateBorderColorTo", transform, callback, length, easing);
     }
     
-    public static T CornerRadiusFmg<T>(this T self,
+    public static T CornerRadius<T>(this T self,
         int cornerRadius)
         where T : RadioButton
     {
@@ -473,7 +473,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T CornerRadiusFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+    public static T CornerRadius<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
         where T : RadioButton
     {
         var context = new PropertyContext<int>(self, RadioButton.CornerRadiusProperty);
@@ -481,7 +481,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CornerRadiusFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CornerRadius<T>(this SettersContext<T> self,
         int cornerRadius)
         where T : RadioButton
     {
@@ -489,7 +489,7 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CornerRadiusFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+    public static SettersContext<T> CornerRadius<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
         where T : RadioButton
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, RadioButton.CornerRadiusProperty);
@@ -497,14 +497,14 @@ public static partial class RadioButtonExtension
         return self;
     }
     
-    public static T OnCheckedChangedFmg<T>(this T self, EventHandler<CheckedChangedEventArgs> handler)
+    public static T OnCheckedChanged<T>(this T self, EventHandler<CheckedChangedEventArgs> handler)
         where T : RadioButton
     {
         self.CheckedChanged += handler;
         return self;
     }
     
-    public static T OnCheckedChangedFmg<T>(this T self, Action<T> action)
+    public static T OnCheckedChanged<T>(this T self, Action<T> action)
         where T : RadioButton
     {
         self.CheckedChanged += (o, arg) => action(self);

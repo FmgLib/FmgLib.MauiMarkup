@@ -4,7 +4,7 @@
 
 public static partial class ImageCellExtension
 {
-    public static T ImageSourceFmg<T>(this T self,
+    public static T ImageSource<T>(this T self,
         ImageSource imageSource)
         where T : ImageCell
     {
@@ -12,7 +12,7 @@ public static partial class ImageCellExtension
         return self;
     }
     
-    public static T ImageSourceFmg<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
+    public static T ImageSource<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
         where T : ImageCell
     {
         var context = new PropertyContext<ImageSource>(self, ImageCell.ImageSourceProperty);
@@ -20,7 +20,7 @@ public static partial class ImageCellExtension
         return self;
     }
     
-    public static SettersContext<T> ImageSourceFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> ImageSource<T>(this SettersContext<T> self,
         ImageSource imageSource)
         where T : ImageCell
     {
@@ -28,7 +28,7 @@ public static partial class ImageCellExtension
         return self;
     }
     
-    public static SettersContext<T> ImageSourceFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
+    public static SettersContext<T> ImageSource<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
         where T : ImageCell
     {
         var context = new PropertySettersContext<ImageSource>(self.XamlSetters, ImageCell.ImageSourceProperty);

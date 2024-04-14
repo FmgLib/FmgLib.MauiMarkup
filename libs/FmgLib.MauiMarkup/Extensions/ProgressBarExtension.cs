@@ -4,7 +4,7 @@
 
 public static partial class ProgressBarExtension
 {
-    public static T ProgressColorFmg<T>(this T self,
+    public static T ProgressColor<T>(this T self,
         Color progressColor)
         where T : ProgressBar
     {
@@ -12,7 +12,7 @@ public static partial class ProgressBarExtension
         return self;
     }
     
-    public static T ProgressColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T ProgressColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : ProgressBar
     {
         var context = new PropertyContext<Color>(self, ProgressBar.ProgressColorProperty);
@@ -20,7 +20,7 @@ public static partial class ProgressBarExtension
         return self;
     }
     
-    public static SettersContext<T> ProgressColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> ProgressColor<T>(this SettersContext<T> self,
         Color progressColor)
         where T : ProgressBar
     {
@@ -28,7 +28,7 @@ public static partial class ProgressBarExtension
         return self;
     }
     
-    public static SettersContext<T> ProgressColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> ProgressColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : ProgressBar
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, ProgressBar.ProgressColorProperty);
@@ -36,7 +36,7 @@ public static partial class ProgressBarExtension
         return self;
     }
     
-    public static Task<bool> AnimateProgressColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateProgressColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : ProgressBar
     {
         Color fromValue = self.ProgressColor;
@@ -45,7 +45,7 @@ public static partial class ProgressBarExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateProgressColorTo", transform, callback, length, easing);
     }
     
-    public static T ProgressFmg<T>(this T self,
+    public static T Progress<T>(this T self,
         double progress)
         where T : ProgressBar
     {
@@ -53,7 +53,7 @@ public static partial class ProgressBarExtension
         return self;
     }
     
-    public static T ProgressFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T Progress<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : ProgressBar
     {
         var context = new PropertyContext<double>(self, ProgressBar.ProgressProperty);
@@ -61,7 +61,7 @@ public static partial class ProgressBarExtension
         return self;
     }
     
-    public static SettersContext<T> ProgressFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Progress<T>(this SettersContext<T> self,
         double progress)
         where T : ProgressBar
     {
@@ -69,7 +69,7 @@ public static partial class ProgressBarExtension
         return self;
     }
     
-    public static SettersContext<T> ProgressFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> Progress<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : ProgressBar
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, ProgressBar.ProgressProperty);
@@ -77,7 +77,7 @@ public static partial class ProgressBarExtension
         return self;
     }
     
-    public static Task<bool> AnimateProgressToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateProgressTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : ProgressBar
     {
         double fromValue = self.Progress;

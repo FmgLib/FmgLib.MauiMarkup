@@ -2,7 +2,7 @@
 
 public static partial class BindingBaseExtension
 {
-    public static T ModeFmg<T>(this T self,
+    public static T Mode<T>(this T self,
         BindingMode mode)
         where T : BindingBase
     {
@@ -10,7 +10,7 @@ public static partial class BindingBaseExtension
         return self;
     }
     
-    public static T StringFormatFmg<T>(this T self,
+    public static T StringFormat<T>(this T self,
         string stringFormat)
         where T : BindingBase
     {
@@ -18,7 +18,7 @@ public static partial class BindingBaseExtension
         return self;
     }
     
-    public static T TargetNullValueFmg<T>(this T self,
+    public static T TargetNullValue<T>(this T self,
         object targetNullValue)
         where T : BindingBase
     {
@@ -26,7 +26,7 @@ public static partial class BindingBaseExtension
         return self;
     }
     
-    public static T FallbackValueFmg<T>(this T self,
+    public static T FallbackValue<T>(this T self,
         object fallbackValue)
         where T : BindingBase
     {

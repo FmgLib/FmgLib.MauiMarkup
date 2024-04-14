@@ -2,7 +2,7 @@
 
 public static partial class FlyoutPageExtension
 {
-    public static T DetailFmg<T>(this T self,
+    public static T Detail<T>(this T self,
         Page detail)
         where T : FlyoutPage
     {
@@ -10,7 +10,7 @@ public static partial class FlyoutPageExtension
         return self;
     }
     
-    public static T IsGestureEnabledFmg<T>(this T self,
+    public static T IsGestureEnabled<T>(this T self,
         bool isGestureEnabled)
         where T : FlyoutPage
     {
@@ -18,7 +18,7 @@ public static partial class FlyoutPageExtension
         return self;
     }
     
-    public static T IsGestureEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsGestureEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : FlyoutPage
     {
         var context = new PropertyContext<bool>(self, FlyoutPage.IsGestureEnabledProperty);
@@ -26,7 +26,7 @@ public static partial class FlyoutPageExtension
         return self;
     }
     
-    public static SettersContext<T> IsGestureEnabledFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsGestureEnabled<T>(this SettersContext<T> self,
         bool isGestureEnabled)
         where T : FlyoutPage
     {
@@ -34,7 +34,7 @@ public static partial class FlyoutPageExtension
         return self;
     }
     
-    public static SettersContext<T> IsGestureEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsGestureEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : FlyoutPage
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, FlyoutPage.IsGestureEnabledProperty);
@@ -42,7 +42,7 @@ public static partial class FlyoutPageExtension
         return self;
     }
     
-    public static T IsPresentedFmg<T>(this T self,
+    public static T IsPresented<T>(this T self,
         bool isPresented)
         where T : FlyoutPage
     {
@@ -50,7 +50,7 @@ public static partial class FlyoutPageExtension
         return self;
     }
     
-    public static T IsPresentedFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsPresented<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : FlyoutPage
     {
         var context = new PropertyContext<bool>(self, FlyoutPage.IsPresentedProperty);
@@ -58,7 +58,7 @@ public static partial class FlyoutPageExtension
         return self;
     }
     
-    public static SettersContext<T> IsPresentedFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsPresented<T>(this SettersContext<T> self,
         bool isPresented)
         where T : FlyoutPage
     {
@@ -66,7 +66,7 @@ public static partial class FlyoutPageExtension
         return self;
     }
     
-    public static SettersContext<T> IsPresentedFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsPresented<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : FlyoutPage
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, FlyoutPage.IsPresentedProperty);
@@ -74,7 +74,7 @@ public static partial class FlyoutPageExtension
         return self;
     }
     
-    public static T FlyoutFmg<T>(this T self,
+    public static T Flyout<T>(this T self,
         Page flyout)
         where T : FlyoutPage
     {
@@ -82,7 +82,7 @@ public static partial class FlyoutPageExtension
         return self;
     }
     
-    public static T FlyoutLayoutBehaviorFmg<T>(this T self,
+    public static T FlyoutLayoutBehavior<T>(this T self,
         FlyoutLayoutBehavior flyoutLayoutBehavior)
         where T : FlyoutPage
     {
@@ -90,7 +90,7 @@ public static partial class FlyoutPageExtension
         return self;
     }
     
-    public static T FlyoutLayoutBehaviorFmg<T>(this T self, Func<PropertyContext<FlyoutLayoutBehavior>, IPropertyBuilder<FlyoutLayoutBehavior>> configure)
+    public static T FlyoutLayoutBehavior<T>(this T self, Func<PropertyContext<FlyoutLayoutBehavior>, IPropertyBuilder<FlyoutLayoutBehavior>> configure)
         where T : FlyoutPage
     {
         var context = new PropertyContext<FlyoutLayoutBehavior>(self, FlyoutPage.FlyoutLayoutBehaviorProperty);
@@ -98,7 +98,7 @@ public static partial class FlyoutPageExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutLayoutBehaviorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutLayoutBehavior<T>(this SettersContext<T> self,
         FlyoutLayoutBehavior flyoutLayoutBehavior)
         where T : FlyoutPage
     {
@@ -106,7 +106,7 @@ public static partial class FlyoutPageExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutLayoutBehaviorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<FlyoutLayoutBehavior>, IPropertySettersBuilder<FlyoutLayoutBehavior>> configure)
+    public static SettersContext<T> FlyoutLayoutBehavior<T>(this SettersContext<T> self, Func<PropertySettersContext<FlyoutLayoutBehavior>, IPropertySettersBuilder<FlyoutLayoutBehavior>> configure)
         where T : FlyoutPage
     {
         var context = new PropertySettersContext<FlyoutLayoutBehavior>(self.XamlSetters, FlyoutPage.FlyoutLayoutBehaviorProperty);
@@ -114,28 +114,28 @@ public static partial class FlyoutPageExtension
         return self;
     }
     
-    public static T OnIsPresentedChangedFmg<T>(this T self, EventHandler handler)
+    public static T OnIsPresentedChanged<T>(this T self, EventHandler handler)
         where T : FlyoutPage
     {
         self.IsPresentedChanged += handler;
         return self;
     }
     
-    public static T OnIsPresentedChangedFmg<T>(this T self, Action<T> action)
+    public static T OnIsPresentedChanged<T>(this T self, Action<T> action)
         where T : FlyoutPage
     {
         self.IsPresentedChanged += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnBackButtonPressedFmg<T>(this T self, EventHandler<BackButtonPressedEventArgs> handler)
+    public static T OnBackButtonPressed<T>(this T self, EventHandler<BackButtonPressedEventArgs> handler)
         where T : FlyoutPage
     {
         self.BackButtonPressed += handler;
         return self;
     }
     
-    public static T OnBackButtonPressedFmg<T>(this T self, Action<T> action)
+    public static T OnBackButtonPressed<T>(this T self, Action<T> action)
         where T : FlyoutPage
     {
         self.BackButtonPressed += (o, arg) => action(self);

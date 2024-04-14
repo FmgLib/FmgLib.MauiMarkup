@@ -3,7 +3,7 @@
 
 public static partial class ButtonExtension
 {
-    public static T PaddingFmg<T>(this T self,
+    public static T Padding<T>(this T self,
         Thickness padding)
         where T : Button
     {
@@ -11,7 +11,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T PaddingFmg<T>(this T self, Func<PropertyContext<Thickness>, IPropertyBuilder<Thickness>> configure)
+    public static T Padding<T>(this T self, Func<PropertyContext<Thickness>, IPropertyBuilder<Thickness>> configure)
         where T : Button
     {
         var context = new PropertyContext<Thickness>(self, Button.PaddingProperty);
@@ -19,7 +19,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> PaddingFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Padding<T>(this SettersContext<T> self,
         Thickness padding)
         where T : Button
     {
@@ -27,7 +27,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> PaddingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Thickness>, IPropertySettersBuilder<Thickness>> configure)
+    public static SettersContext<T> Padding<T>(this SettersContext<T> self, Func<PropertySettersContext<Thickness>, IPropertySettersBuilder<Thickness>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<Thickness>(self.XamlSetters, Button.PaddingProperty);
@@ -35,7 +35,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T LineBreakModeFmg<T>(this T self,
+    public static T LineBreakMode<T>(this T self,
         LineBreakMode lineBreakMode)
         where T : Button
     {
@@ -43,7 +43,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T LineBreakModeFmg<T>(this T self, Func<PropertyContext<LineBreakMode>, IPropertyBuilder<LineBreakMode>> configure)
+    public static T LineBreakMode<T>(this T self, Func<PropertyContext<LineBreakMode>, IPropertyBuilder<LineBreakMode>> configure)
         where T : Button
     {
         var context = new PropertyContext<LineBreakMode>(self, Button.LineBreakModeProperty);
@@ -51,7 +51,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> LineBreakModeFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> LineBreakMode<T>(this SettersContext<T> self,
         LineBreakMode lineBreakMode)
         where T : Button
     {
@@ -59,7 +59,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> LineBreakModeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<LineBreakMode>, IPropertySettersBuilder<LineBreakMode>> configure)
+    public static SettersContext<T> LineBreakMode<T>(this SettersContext<T> self, Func<PropertySettersContext<LineBreakMode>, IPropertySettersBuilder<LineBreakMode>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<LineBreakMode>(self.XamlSetters, Button.LineBreakModeProperty);
@@ -67,7 +67,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T BorderColorFmg<T>(this T self,
+    public static T BorderColor<T>(this T self,
         Color borderColor)
         where T : Button
     {
@@ -75,7 +75,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T BorderColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T BorderColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : Button
     {
         var context = new PropertyContext<Color>(self, Button.BorderColorProperty);
@@ -83,7 +83,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> BorderColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> BorderColor<T>(this SettersContext<T> self,
         Color borderColor)
         where T : Button
     {
@@ -91,7 +91,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> BorderColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> BorderColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, Button.BorderColorProperty);
@@ -99,7 +99,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static Task<bool> AnimateBorderColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateBorderColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : Button
     {
         Color fromValue = self.BorderColor;
@@ -108,7 +108,7 @@ public static partial class ButtonExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateBorderColorTo", transform, callback, length, easing);
     }
     
-    public static T CornerRadiusFmg<T>(this T self,
+    public static T CornerRadius<T>(this T self,
         int cornerRadius)
         where T : Button
     {
@@ -116,7 +116,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T CornerRadiusFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+    public static T CornerRadius<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
         where T : Button
     {
         var context = new PropertyContext<int>(self, Button.CornerRadiusProperty);
@@ -124,7 +124,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CornerRadiusFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CornerRadius<T>(this SettersContext<T> self,
         int cornerRadius)
         where T : Button
     {
@@ -132,7 +132,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CornerRadiusFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+    public static SettersContext<T> CornerRadius<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, Button.CornerRadiusProperty);
@@ -140,7 +140,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T BorderWidthFmg<T>(this T self,
+    public static T BorderWidth<T>(this T self,
         double borderWidth)
         where T : Button
     {
@@ -148,7 +148,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T BorderWidthFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T BorderWidth<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Button
     {
         var context = new PropertyContext<double>(self, Button.BorderWidthProperty);
@@ -156,7 +156,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> BorderWidthFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> BorderWidth<T>(this SettersContext<T> self,
         double borderWidth)
         where T : Button
     {
@@ -164,7 +164,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> BorderWidthFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> BorderWidth<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Button.BorderWidthProperty);
@@ -172,7 +172,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static Task<bool> AnimateBorderWidthToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateBorderWidthTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Button
     {
         double fromValue = self.BorderWidth;
@@ -181,7 +181,7 @@ public static partial class ButtonExtension
         return Transformations.AnimateAsync<double>(self, "AnimateBorderWidthTo", transform, callback, length, easing);
     }
     
-    public static T ContentLayoutFmg<T>(this T self,
+    public static T ContentLayout<T>(this T self,
         Button.ButtonContentLayout contentLayout)
         where T : Button
     {
@@ -189,7 +189,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T ContentLayoutFmg<T>(this T self, Func<PropertyContext<Button.ButtonContentLayout>, IPropertyBuilder<Button.ButtonContentLayout>> configure)
+    public static T ContentLayout<T>(this T self, Func<PropertyContext<Button.ButtonContentLayout>, IPropertyBuilder<Button.ButtonContentLayout>> configure)
         where T : Button
     {
         var context = new PropertyContext<Button.ButtonContentLayout>(self, Button.ContentLayoutProperty);
@@ -197,7 +197,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> ContentLayoutFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> ContentLayout<T>(this SettersContext<T> self,
         Button.ButtonContentLayout contentLayout)
         where T : Button
     {
@@ -205,7 +205,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> ContentLayoutFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Button.ButtonContentLayout>, IPropertySettersBuilder<Button.ButtonContentLayout>> configure)
+    public static SettersContext<T> ContentLayout<T>(this SettersContext<T> self, Func<PropertySettersContext<Button.ButtonContentLayout>, IPropertySettersBuilder<Button.ButtonContentLayout>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<Button.ButtonContentLayout>(self.XamlSetters, Button.ContentLayoutProperty);
@@ -213,7 +213,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T CommandFmg<T>(this T self,
+    public static T Command<T>(this T self,
         System.Windows.Input.ICommand command)
         where T : Button
     {
@@ -221,7 +221,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T CommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T Command<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : Button
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, Button.CommandProperty);
@@ -229,7 +229,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CommandFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Command<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand command)
         where T : Button
     {
@@ -237,7 +237,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> Command<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, Button.CommandProperty);
@@ -245,7 +245,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T CommandParameterFmg<T>(this T self,
+    public static T CommandParameter<T>(this T self,
         object commandParameter)
         where T : Button
     {
@@ -253,7 +253,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T CommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T CommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : Button
     {
         var context = new PropertyContext<object>(self, Button.CommandParameterProperty);
@@ -261,7 +261,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CommandParameterFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CommandParameter<T>(this SettersContext<T> self,
         object commandParameter)
         where T : Button
     {
@@ -269,7 +269,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> CommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, Button.CommandParameterProperty);
@@ -277,7 +277,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T ImageSourceFmg<T>(this T self,
+    public static T ImageSource<T>(this T self,
         ImageSource imageSource)
         where T : Button
     {
@@ -285,7 +285,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T ImageSourceFmg<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
+    public static T ImageSource<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
         where T : Button
     {
         var context = new PropertyContext<ImageSource>(self, Button.ImageSourceProperty);
@@ -293,7 +293,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> ImageSourceFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> ImageSource<T>(this SettersContext<T> self,
         ImageSource imageSource)
         where T : Button
     {
@@ -301,7 +301,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> ImageSourceFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
+    public static SettersContext<T> ImageSource<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<ImageSource>(self.XamlSetters, Button.ImageSourceProperty);
@@ -309,7 +309,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T TextFmg<T>(this T self,
+    public static T Text<T>(this T self,
         string text)
         where T : Button
     {
@@ -317,7 +317,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T TextFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T Text<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : Button
     {
         var context = new PropertyContext<string>(self, Button.TextProperty);
@@ -325,7 +325,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> TextFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Text<T>(this SettersContext<T> self,
         string text)
         where T : Button
     {
@@ -333,7 +333,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> TextFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> Text<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, Button.TextProperty);
@@ -341,7 +341,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T TextColorFmg<T>(this T self,
+    public static T TextColor<T>(this T self,
         Color textColor)
         where T : Button
     {
@@ -349,7 +349,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T TextColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T TextColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : Button
     {
         var context = new PropertyContext<Color>(self, Button.TextColorProperty);
@@ -357,7 +357,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextColor<T>(this SettersContext<T> self,
         Color textColor)
         where T : Button
     {
@@ -365,7 +365,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> TextColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, Button.TextColorProperty);
@@ -373,7 +373,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static Task<bool> AnimateTextColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateTextColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : Button
     {
         Color fromValue = self.TextColor;
@@ -382,7 +382,7 @@ public static partial class ButtonExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateTextColorTo", transform, callback, length, easing);
     }
     
-    public static T CharacterSpacingFmg<T>(this T self,
+    public static T CharacterSpacing<T>(this T self,
         double characterSpacing)
         where T : Button
     {
@@ -390,7 +390,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T CharacterSpacingFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T CharacterSpacing<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Button
     {
         var context = new PropertyContext<double>(self, Button.CharacterSpacingProperty);
@@ -398,7 +398,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CharacterSpacingFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CharacterSpacing<T>(this SettersContext<T> self,
         double characterSpacing)
         where T : Button
     {
@@ -406,7 +406,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CharacterSpacingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> CharacterSpacing<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Button.CharacterSpacingProperty);
@@ -414,7 +414,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static Task<bool> AnimateCharacterSpacingToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateCharacterSpacingTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Button
     {
         double fromValue = self.CharacterSpacing;
@@ -423,7 +423,7 @@ public static partial class ButtonExtension
         return Transformations.AnimateAsync<double>(self, "AnimateCharacterSpacingTo", transform, callback, length, easing);
     }
     
-    public static T FontAttributesFmg<T>(this T self,
+    public static T FontAttributes<T>(this T self,
         FontAttributes fontAttributes)
         where T : Button
     {
@@ -431,7 +431,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T FontAttributesFmg<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
+    public static T FontAttributes<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
         where T : Button
     {
         var context = new PropertyContext<FontAttributes>(self, Button.FontAttributesProperty);
@@ -439,7 +439,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self,
         FontAttributes fontAttributes)
         where T : Button
     {
@@ -447,7 +447,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
+    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<FontAttributes>(self.XamlSetters, Button.FontAttributesProperty);
@@ -455,7 +455,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T FontFamilyFmg<T>(this T self,
+    public static T FontFamily<T>(this T self,
         string fontFamily)
         where T : Button
     {
@@ -463,7 +463,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T FontFamilyFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T FontFamily<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : Button
     {
         var context = new PropertyContext<string>(self, Button.FontFamilyProperty);
@@ -471,7 +471,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self,
         string fontFamily)
         where T : Button
     {
@@ -479,7 +479,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, Button.FontFamilyProperty);
@@ -487,7 +487,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T FontSizeFmg<T>(this T self,
+    public static T FontSize<T>(this T self,
         double fontSize)
         where T : Button
     {
@@ -495,7 +495,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T FontSizeFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T FontSize<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Button
     {
         var context = new PropertyContext<double>(self, Button.FontSizeProperty);
@@ -503,7 +503,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontSize<T>(this SettersContext<T> self,
         double fontSize)
         where T : Button
     {
@@ -511,7 +511,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> FontSize<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Button.FontSizeProperty);
@@ -519,7 +519,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static Task<bool> AnimateFontSizeToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateFontSizeTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Button
     {
         double fromValue = self.FontSize;
@@ -528,7 +528,7 @@ public static partial class ButtonExtension
         return Transformations.AnimateAsync<double>(self, "AnimateFontSizeTo", transform, callback, length, easing);
     }
     
-    public static T FontAutoScalingEnabledFmg<T>(this T self,
+    public static T FontAutoScalingEnabled<T>(this T self,
         bool fontAutoScalingEnabled)
         where T : Button
     {
@@ -536,7 +536,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T FontAutoScalingEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T FontAutoScalingEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Button
     {
         var context = new PropertyContext<bool>(self, Button.FontAutoScalingEnabledProperty);
@@ -544,7 +544,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self,
         bool fontAutoScalingEnabled)
         where T : Button
     {
@@ -552,7 +552,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Button.FontAutoScalingEnabledProperty);
@@ -560,7 +560,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T TextTransformFmg<T>(this T self,
+    public static T TextTransform<T>(this T self,
         TextTransform textTransform)
         where T : Button
     {
@@ -568,7 +568,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T TextTransformFmg<T>(this T self, Func<PropertyContext<TextTransform>, IPropertyBuilder<TextTransform>> configure)
+    public static T TextTransform<T>(this T self, Func<PropertyContext<TextTransform>, IPropertyBuilder<TextTransform>> configure)
         where T : Button
     {
         var context = new PropertyContext<TextTransform>(self, Button.TextTransformProperty);
@@ -576,7 +576,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> TextTransformFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextTransform<T>(this SettersContext<T> self,
         TextTransform textTransform)
         where T : Button
     {
@@ -584,7 +584,7 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static SettersContext<T> TextTransformFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextTransform>, IPropertySettersBuilder<TextTransform>> configure)
+    public static SettersContext<T> TextTransform<T>(this SettersContext<T> self, Func<PropertySettersContext<TextTransform>, IPropertySettersBuilder<TextTransform>> configure)
         where T : Button
     {
         var context = new PropertySettersContext<TextTransform>(self.XamlSetters, Button.TextTransformProperty);
@@ -592,42 +592,42 @@ public static partial class ButtonExtension
         return self;
     }
     
-    public static T OnClickedFmg<T>(this T self, EventHandler handler)
+    public static T OnClicked<T>(this T self, EventHandler handler)
         where T : Button
     {
         self.Clicked += handler;
         return self;
     }
     
-    public static T OnClickedFmg<T>(this T self, Action<T> action)
+    public static T OnClicked<T>(this T self, Action<T> action)
         where T : Button
     {
         self.Clicked += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnPressedFmg<T>(this T self, EventHandler handler)
+    public static T OnPressed<T>(this T self, EventHandler handler)
         where T : Button
     {
         self.Pressed += handler;
         return self;
     }
     
-    public static T OnPressedFmg<T>(this T self, Action<T> action)
+    public static T OnPressed<T>(this T self, Action<T> action)
         where T : Button
     {
         self.Pressed += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnReleasedFmg<T>(this T self, EventHandler handler)
+    public static T OnReleased<T>(this T self, EventHandler handler)
         where T : Button
     {
         self.Released += handler;
         return self;
     }
     
-    public static T OnReleasedFmg<T>(this T self, Action<T> action)
+    public static T OnReleased<T>(this T self, Action<T> action)
         where T : Button
     {
         self.Released += (o, arg) => action(self);

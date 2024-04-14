@@ -4,7 +4,7 @@
 
 public static partial class ScrollViewExtension
 {
-    public static T LayoutAreaOverrideFmg<T>(this T self,
+    public static T LayoutAreaOverride<T>(this T self,
         Rect layoutAreaOverride)
         where T : ScrollView
     {
@@ -12,7 +12,7 @@ public static partial class ScrollViewExtension
         return self;
     }
     
-    public static T ContentFmg<T>(this T self,
+    public static T Content<T>(this T self,
         View content)
         where T : ScrollView
     {
@@ -20,7 +20,7 @@ public static partial class ScrollViewExtension
         return self;
     }
     
-    public static T OrientationFmg<T>(this T self,
+    public static T Orientation<T>(this T self,
         ScrollOrientation orientation)
         where T : ScrollView
     {
@@ -28,7 +28,7 @@ public static partial class ScrollViewExtension
         return self;
     }
     
-    public static T OrientationFmg<T>(this T self, Func<PropertyContext<ScrollOrientation>, IPropertyBuilder<ScrollOrientation>> configure)
+    public static T Orientation<T>(this T self, Func<PropertyContext<ScrollOrientation>, IPropertyBuilder<ScrollOrientation>> configure)
         where T : ScrollView
     {
         var context = new PropertyContext<ScrollOrientation>(self, ScrollView.OrientationProperty);
@@ -36,7 +36,7 @@ public static partial class ScrollViewExtension
         return self;
     }
     
-    public static SettersContext<T> OrientationFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Orientation<T>(this SettersContext<T> self,
         ScrollOrientation orientation)
         where T : ScrollView
     {
@@ -44,7 +44,7 @@ public static partial class ScrollViewExtension
         return self;
     }
     
-    public static SettersContext<T> OrientationFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollOrientation>, IPropertySettersBuilder<ScrollOrientation>> configure)
+    public static SettersContext<T> Orientation<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollOrientation>, IPropertySettersBuilder<ScrollOrientation>> configure)
         where T : ScrollView
     {
         var context = new PropertySettersContext<ScrollOrientation>(self.XamlSetters, ScrollView.OrientationProperty);
@@ -52,7 +52,7 @@ public static partial class ScrollViewExtension
         return self;
     }
     
-    public static T HorizontalScrollBarVisibilityFmg<T>(this T self,
+    public static T HorizontalScrollBarVisibility<T>(this T self,
         ScrollBarVisibility horizontalScrollBarVisibility)
         where T : ScrollView
     {
@@ -60,7 +60,7 @@ public static partial class ScrollViewExtension
         return self;
     }
     
-    public static T HorizontalScrollBarVisibilityFmg<T>(this T self, Func<PropertyContext<ScrollBarVisibility>, IPropertyBuilder<ScrollBarVisibility>> configure)
+    public static T HorizontalScrollBarVisibility<T>(this T self, Func<PropertyContext<ScrollBarVisibility>, IPropertyBuilder<ScrollBarVisibility>> configure)
         where T : ScrollView
     {
         var context = new PropertyContext<ScrollBarVisibility>(self, ScrollView.HorizontalScrollBarVisibilityProperty);
@@ -68,7 +68,7 @@ public static partial class ScrollViewExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalScrollBarVisibilityFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> HorizontalScrollBarVisibility<T>(this SettersContext<T> self,
         ScrollBarVisibility horizontalScrollBarVisibility)
         where T : ScrollView
     {
@@ -76,7 +76,7 @@ public static partial class ScrollViewExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalScrollBarVisibilityFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollBarVisibility>, IPropertySettersBuilder<ScrollBarVisibility>> configure)
+    public static SettersContext<T> HorizontalScrollBarVisibility<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollBarVisibility>, IPropertySettersBuilder<ScrollBarVisibility>> configure)
         where T : ScrollView
     {
         var context = new PropertySettersContext<ScrollBarVisibility>(self.XamlSetters, ScrollView.HorizontalScrollBarVisibilityProperty);
@@ -84,7 +84,7 @@ public static partial class ScrollViewExtension
         return self;
     }
     
-    public static T VerticalScrollBarVisibilityFmg<T>(this T self,
+    public static T VerticalScrollBarVisibility<T>(this T self,
         ScrollBarVisibility verticalScrollBarVisibility)
         where T : ScrollView
     {
@@ -92,7 +92,7 @@ public static partial class ScrollViewExtension
         return self;
     }
     
-    public static T VerticalScrollBarVisibilityFmg<T>(this T self, Func<PropertyContext<ScrollBarVisibility>, IPropertyBuilder<ScrollBarVisibility>> configure)
+    public static T VerticalScrollBarVisibility<T>(this T self, Func<PropertyContext<ScrollBarVisibility>, IPropertyBuilder<ScrollBarVisibility>> configure)
         where T : ScrollView
     {
         var context = new PropertyContext<ScrollBarVisibility>(self, ScrollView.VerticalScrollBarVisibilityProperty);
@@ -100,7 +100,7 @@ public static partial class ScrollViewExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalScrollBarVisibilityFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> VerticalScrollBarVisibility<T>(this SettersContext<T> self,
         ScrollBarVisibility verticalScrollBarVisibility)
         where T : ScrollView
     {
@@ -108,7 +108,7 @@ public static partial class ScrollViewExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalScrollBarVisibilityFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollBarVisibility>, IPropertySettersBuilder<ScrollBarVisibility>> configure)
+    public static SettersContext<T> VerticalScrollBarVisibility<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollBarVisibility>, IPropertySettersBuilder<ScrollBarVisibility>> configure)
         where T : ScrollView
     {
         var context = new PropertySettersContext<ScrollBarVisibility>(self.XamlSetters, ScrollView.VerticalScrollBarVisibilityProperty);
@@ -116,28 +116,28 @@ public static partial class ScrollViewExtension
         return self;
     }
     
-    public static T OnScrollToRequestedFmg<T>(this T self, EventHandler<ScrollToRequestedEventArgs> handler)
+    public static T OnScrollToRequested<T>(this T self, EventHandler<ScrollToRequestedEventArgs> handler)
         where T : ScrollView
     {
         self.ScrollToRequested += handler;
         return self;
     }
     
-    public static T OnScrollToRequestedFmg<T>(this T self, Action<T> action)
+    public static T OnScrollToRequested<T>(this T self, Action<T> action)
         where T : ScrollView
     {
         self.ScrollToRequested += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnScrolledFmg<T>(this T self, EventHandler<ScrolledEventArgs> handler)
+    public static T OnScrolled<T>(this T self, EventHandler<ScrolledEventArgs> handler)
         where T : ScrollView
     {
         self.Scrolled += handler;
         return self;
     }
     
-    public static T OnScrolledFmg<T>(this T self, Action<T> action)
+    public static T OnScrolled<T>(this T self, Action<T> action)
         where T : ScrollView
     {
         self.Scrolled += (o, arg) => action(self);

@@ -3,7 +3,7 @@
 
 public static partial class FlexLayoutExtension
 {
-    public static T DirectionFmg<T>(this T self,
+    public static T Direction<T>(this T self,
         Microsoft.Maui.Layouts.FlexDirection direction)
         where T : FlexLayout
     {
@@ -11,7 +11,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static T DirectionFmg<T>(this T self, Func<PropertyContext<Microsoft.Maui.Layouts.FlexDirection>, IPropertyBuilder<Microsoft.Maui.Layouts.FlexDirection>> configure)
+    public static T Direction<T>(this T self, Func<PropertyContext<Microsoft.Maui.Layouts.FlexDirection>, IPropertyBuilder<Microsoft.Maui.Layouts.FlexDirection>> configure)
         where T : FlexLayout
     {
         var context = new PropertyContext<Microsoft.Maui.Layouts.FlexDirection>(self, FlexLayout.DirectionProperty);
@@ -19,7 +19,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> DirectionFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Direction<T>(this SettersContext<T> self,
         Microsoft.Maui.Layouts.FlexDirection direction)
         where T : FlexLayout
     {
@@ -27,7 +27,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> DirectionFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Layouts.FlexDirection>, IPropertySettersBuilder<Microsoft.Maui.Layouts.FlexDirection>> configure)
+    public static SettersContext<T> Direction<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Layouts.FlexDirection>, IPropertySettersBuilder<Microsoft.Maui.Layouts.FlexDirection>> configure)
         where T : FlexLayout
     {
         var context = new PropertySettersContext<Microsoft.Maui.Layouts.FlexDirection>(self.XamlSetters, FlexLayout.DirectionProperty);
@@ -35,7 +35,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static T JustifyContentFmg<T>(this T self,
+    public static T JustifyContent<T>(this T self,
         Microsoft.Maui.Layouts.FlexJustify justifyContent)
         where T : FlexLayout
     {
@@ -43,7 +43,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static T JustifyContentFmg<T>(this T self, Func<PropertyContext<Microsoft.Maui.Layouts.FlexJustify>, IPropertyBuilder<Microsoft.Maui.Layouts.FlexJustify>> configure)
+    public static T JustifyContent<T>(this T self, Func<PropertyContext<Microsoft.Maui.Layouts.FlexJustify>, IPropertyBuilder<Microsoft.Maui.Layouts.FlexJustify>> configure)
         where T : FlexLayout
     {
         var context = new PropertyContext<Microsoft.Maui.Layouts.FlexJustify>(self, FlexLayout.JustifyContentProperty);
@@ -51,7 +51,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> JustifyContentFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> JustifyContent<T>(this SettersContext<T> self,
         Microsoft.Maui.Layouts.FlexJustify justifyContent)
         where T : FlexLayout
     {
@@ -59,7 +59,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> JustifyContentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Layouts.FlexJustify>, IPropertySettersBuilder<Microsoft.Maui.Layouts.FlexJustify>> configure)
+    public static SettersContext<T> JustifyContent<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Layouts.FlexJustify>, IPropertySettersBuilder<Microsoft.Maui.Layouts.FlexJustify>> configure)
         where T : FlexLayout
     {
         var context = new PropertySettersContext<Microsoft.Maui.Layouts.FlexJustify>(self.XamlSetters, FlexLayout.JustifyContentProperty);
@@ -67,7 +67,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static T AlignContentFmg<T>(this T self,
+    public static T AlignContent<T>(this T self,
         Microsoft.Maui.Layouts.FlexAlignContent alignContent)
         where T : FlexLayout
     {
@@ -75,7 +75,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static T AlignContentFmg<T>(this T self, Func<PropertyContext<Microsoft.Maui.Layouts.FlexAlignContent>, IPropertyBuilder<Microsoft.Maui.Layouts.FlexAlignContent>> configure)
+    public static T AlignContent<T>(this T self, Func<PropertyContext<Microsoft.Maui.Layouts.FlexAlignContent>, IPropertyBuilder<Microsoft.Maui.Layouts.FlexAlignContent>> configure)
         where T : FlexLayout
     {
         var context = new PropertyContext<Microsoft.Maui.Layouts.FlexAlignContent>(self, FlexLayout.AlignContentProperty);
@@ -83,7 +83,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> AlignContentFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> AlignContent<T>(this SettersContext<T> self,
         Microsoft.Maui.Layouts.FlexAlignContent alignContent)
         where T : FlexLayout
     {
@@ -91,7 +91,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> AlignContentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Layouts.FlexAlignContent>, IPropertySettersBuilder<Microsoft.Maui.Layouts.FlexAlignContent>> configure)
+    public static SettersContext<T> AlignContent<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Layouts.FlexAlignContent>, IPropertySettersBuilder<Microsoft.Maui.Layouts.FlexAlignContent>> configure)
         where T : FlexLayout
     {
         var context = new PropertySettersContext<Microsoft.Maui.Layouts.FlexAlignContent>(self.XamlSetters, FlexLayout.AlignContentProperty);
@@ -99,7 +99,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static T AlignItemsFmg<T>(this T self,
+    public static T AlignItems<T>(this T self,
         Microsoft.Maui.Layouts.FlexAlignItems alignItems)
         where T : FlexLayout
     {
@@ -107,7 +107,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static T AlignItemsFmg<T>(this T self, Func<PropertyContext<Microsoft.Maui.Layouts.FlexAlignItems>, IPropertyBuilder<Microsoft.Maui.Layouts.FlexAlignItems>> configure)
+    public static T AlignItems<T>(this T self, Func<PropertyContext<Microsoft.Maui.Layouts.FlexAlignItems>, IPropertyBuilder<Microsoft.Maui.Layouts.FlexAlignItems>> configure)
         where T : FlexLayout
     {
         var context = new PropertyContext<Microsoft.Maui.Layouts.FlexAlignItems>(self, FlexLayout.AlignItemsProperty);
@@ -115,7 +115,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> AlignItemsFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> AlignItems<T>(this SettersContext<T> self,
         Microsoft.Maui.Layouts.FlexAlignItems alignItems)
         where T : FlexLayout
     {
@@ -123,7 +123,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> AlignItemsFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Layouts.FlexAlignItems>, IPropertySettersBuilder<Microsoft.Maui.Layouts.FlexAlignItems>> configure)
+    public static SettersContext<T> AlignItems<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Layouts.FlexAlignItems>, IPropertySettersBuilder<Microsoft.Maui.Layouts.FlexAlignItems>> configure)
         where T : FlexLayout
     {
         var context = new PropertySettersContext<Microsoft.Maui.Layouts.FlexAlignItems>(self.XamlSetters, FlexLayout.AlignItemsProperty);
@@ -131,7 +131,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static T PositionFmg<T>(this T self,
+    public static T Position<T>(this T self,
         Microsoft.Maui.Layouts.FlexPosition position)
         where T : FlexLayout
     {
@@ -139,7 +139,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static T PositionFmg<T>(this T self, Func<PropertyContext<Microsoft.Maui.Layouts.FlexPosition>, IPropertyBuilder<Microsoft.Maui.Layouts.FlexPosition>> configure)
+    public static T Position<T>(this T self, Func<PropertyContext<Microsoft.Maui.Layouts.FlexPosition>, IPropertyBuilder<Microsoft.Maui.Layouts.FlexPosition>> configure)
         where T : FlexLayout
     {
         var context = new PropertyContext<Microsoft.Maui.Layouts.FlexPosition>(self, FlexLayout.PositionProperty);
@@ -147,7 +147,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> PositionFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Position<T>(this SettersContext<T> self,
         Microsoft.Maui.Layouts.FlexPosition position)
         where T : FlexLayout
     {
@@ -155,7 +155,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> PositionFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Layouts.FlexPosition>, IPropertySettersBuilder<Microsoft.Maui.Layouts.FlexPosition>> configure)
+    public static SettersContext<T> Position<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Layouts.FlexPosition>, IPropertySettersBuilder<Microsoft.Maui.Layouts.FlexPosition>> configure)
         where T : FlexLayout
     {
         var context = new PropertySettersContext<Microsoft.Maui.Layouts.FlexPosition>(self.XamlSetters, FlexLayout.PositionProperty);
@@ -163,7 +163,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static T WrapFmg<T>(this T self,
+    public static T Wrap<T>(this T self,
         Microsoft.Maui.Layouts.FlexWrap wrap)
         where T : FlexLayout
     {
@@ -171,7 +171,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static T WrapFmg<T>(this T self, Func<PropertyContext<Microsoft.Maui.Layouts.FlexWrap>, IPropertyBuilder<Microsoft.Maui.Layouts.FlexWrap>> configure)
+    public static T Wrap<T>(this T self, Func<PropertyContext<Microsoft.Maui.Layouts.FlexWrap>, IPropertyBuilder<Microsoft.Maui.Layouts.FlexWrap>> configure)
         where T : FlexLayout
     {
         var context = new PropertyContext<Microsoft.Maui.Layouts.FlexWrap>(self, FlexLayout.WrapProperty);
@@ -179,7 +179,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> WrapFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Wrap<T>(this SettersContext<T> self,
         Microsoft.Maui.Layouts.FlexWrap wrap)
         where T : FlexLayout
     {
@@ -187,7 +187,7 @@ public static partial class FlexLayoutExtension
         return self;
     }
     
-    public static SettersContext<T> WrapFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Layouts.FlexWrap>, IPropertySettersBuilder<Microsoft.Maui.Layouts.FlexWrap>> configure)
+    public static SettersContext<T> Wrap<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Layouts.FlexWrap>, IPropertySettersBuilder<Microsoft.Maui.Layouts.FlexWrap>> configure)
         where T : FlexLayout
     {
         var context = new PropertySettersContext<Microsoft.Maui.Layouts.FlexWrap>(self.XamlSetters, FlexLayout.WrapProperty);

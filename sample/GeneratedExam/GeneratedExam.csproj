@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FmgLib.MauiMarkup" Version="8.0.14" />
+    <PackageReference Include="FmgLib.MauiMarkup.Generator" Version="1.0.14" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.20" />
+    <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0" />
+    <PackageReference Include="ZXing.Net.Maui.Controls" Version="0.4.0" />
+  </ItemGroup>
+
+</Project>

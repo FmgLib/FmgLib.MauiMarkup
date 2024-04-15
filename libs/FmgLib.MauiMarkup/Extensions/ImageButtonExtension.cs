@@ -4,7 +4,7 @@
 
 public static partial class ImageButtonExtension
 {
-    public static T BorderColorFmg<T>(this T self,
+    public static T BorderColor<T>(this T self,
         Color borderColor)
         where T : ImageButton
     {
@@ -12,7 +12,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T BorderColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T BorderColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : ImageButton
     {
         var context = new PropertyContext<Color>(self, ImageButton.BorderColorProperty);
@@ -20,7 +20,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> BorderColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> BorderColor<T>(this SettersContext<T> self,
         Color borderColor)
         where T : ImageButton
     {
@@ -28,7 +28,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> BorderColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> BorderColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : ImageButton
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, ImageButton.BorderColorProperty);
@@ -36,7 +36,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static Task<bool> AnimateBorderColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateBorderColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : ImageButton
     {
         Color fromValue = self.BorderColor;
@@ -45,7 +45,7 @@ public static partial class ImageButtonExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateBorderColorTo", transform, callback, length, easing);
     }
     
-    public static T CornerRadiusFmg<T>(this T self,
+    public static T CornerRadius<T>(this T self,
         int cornerRadius)
         where T : ImageButton
     {
@@ -53,7 +53,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T CornerRadiusFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+    public static T CornerRadius<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
         where T : ImageButton
     {
         var context = new PropertyContext<int>(self, ImageButton.CornerRadiusProperty);
@@ -61,7 +61,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CornerRadiusFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CornerRadius<T>(this SettersContext<T> self,
         int cornerRadius)
         where T : ImageButton
     {
@@ -69,7 +69,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CornerRadiusFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+    public static SettersContext<T> CornerRadius<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
         where T : ImageButton
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, ImageButton.CornerRadiusProperty);
@@ -77,7 +77,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T BorderWidthFmg<T>(this T self,
+    public static T BorderWidth<T>(this T self,
         double borderWidth)
         where T : ImageButton
     {
@@ -85,7 +85,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T BorderWidthFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T BorderWidth<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : ImageButton
     {
         var context = new PropertyContext<double>(self, ImageButton.BorderWidthProperty);
@@ -93,7 +93,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> BorderWidthFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> BorderWidth<T>(this SettersContext<T> self,
         double borderWidth)
         where T : ImageButton
     {
@@ -101,7 +101,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> BorderWidthFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> BorderWidth<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : ImageButton
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, ImageButton.BorderWidthProperty);
@@ -109,7 +109,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static Task<bool> AnimateBorderWidthToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateBorderWidthTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : ImageButton
     {
         double fromValue = self.BorderWidth;
@@ -118,7 +118,7 @@ public static partial class ImageButtonExtension
         return Transformations.AnimateAsync<double>(self, "AnimateBorderWidthTo", transform, callback, length, easing);
     }
     
-    public static T AspectFmg<T>(this T self,
+    public static T Aspect<T>(this T self,
         Aspect aspect)
         where T : ImageButton
     {
@@ -126,7 +126,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T AspectFmg<T>(this T self, Func<PropertyContext<Aspect>, IPropertyBuilder<Aspect>> configure)
+    public static T Aspect<T>(this T self, Func<PropertyContext<Aspect>, IPropertyBuilder<Aspect>> configure)
         where T : ImageButton
     {
         var context = new PropertyContext<Aspect>(self, ImageButton.AspectProperty);
@@ -134,7 +134,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> AspectFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Aspect<T>(this SettersContext<T> self,
         Aspect aspect)
         where T : ImageButton
     {
@@ -142,7 +142,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> AspectFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Aspect>, IPropertySettersBuilder<Aspect>> configure)
+    public static SettersContext<T> Aspect<T>(this SettersContext<T> self, Func<PropertySettersContext<Aspect>, IPropertySettersBuilder<Aspect>> configure)
         where T : ImageButton
     {
         var context = new PropertySettersContext<Aspect>(self.XamlSetters, ImageButton.AspectProperty);
@@ -150,7 +150,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T IsOpaqueFmg<T>(this T self,
+    public static T IsOpaque<T>(this T self,
         bool isOpaque)
         where T : ImageButton
     {
@@ -158,7 +158,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T IsOpaqueFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsOpaque<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : ImageButton
     {
         var context = new PropertyContext<bool>(self, ImageButton.IsOpaqueProperty);
@@ -166,7 +166,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> IsOpaqueFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsOpaque<T>(this SettersContext<T> self,
         bool isOpaque)
         where T : ImageButton
     {
@@ -174,7 +174,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> IsOpaqueFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsOpaque<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : ImageButton
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, ImageButton.IsOpaqueProperty);
@@ -182,7 +182,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T CommandFmg<T>(this T self,
+    public static T Command<T>(this T self,
         System.Windows.Input.ICommand command)
         where T : ImageButton
     {
@@ -190,7 +190,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T CommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T Command<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : ImageButton
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, ImageButton.CommandProperty);
@@ -198,7 +198,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CommandFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Command<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand command)
         where T : ImageButton
     {
@@ -206,7 +206,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> Command<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : ImageButton
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, ImageButton.CommandProperty);
@@ -214,7 +214,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T CommandParameterFmg<T>(this T self,
+    public static T CommandParameter<T>(this T self,
         object commandParameter)
         where T : ImageButton
     {
@@ -222,7 +222,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T CommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T CommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : ImageButton
     {
         var context = new PropertyContext<object>(self, ImageButton.CommandParameterProperty);
@@ -230,7 +230,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CommandParameterFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CommandParameter<T>(this SettersContext<T> self,
         object commandParameter)
         where T : ImageButton
     {
@@ -238,7 +238,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> CommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> CommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : ImageButton
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, ImageButton.CommandParameterProperty);
@@ -246,7 +246,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T SourceFmg<T>(this T self,
+    public static T Source<T>(this T self,
         ImageSource source)
         where T : ImageButton
     {
@@ -254,7 +254,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T SourceFmg<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
+    public static T Source<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
         where T : ImageButton
     {
         var context = new PropertyContext<ImageSource>(self, ImageButton.SourceProperty);
@@ -262,7 +262,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> SourceFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Source<T>(this SettersContext<T> self,
         ImageSource source)
         where T : ImageButton
     {
@@ -270,7 +270,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> SourceFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
+    public static SettersContext<T> Source<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
         where T : ImageButton
     {
         var context = new PropertySettersContext<ImageSource>(self.XamlSetters, ImageButton.SourceProperty);
@@ -278,7 +278,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T PaddingFmg<T>(this T self,
+    public static T Padding<T>(this T self,
         Thickness padding)
         where T : ImageButton
     {
@@ -286,7 +286,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T PaddingFmg<T>(this T self, Func<PropertyContext<Thickness>, IPropertyBuilder<Thickness>> configure)
+    public static T Padding<T>(this T self, Func<PropertyContext<Thickness>, IPropertyBuilder<Thickness>> configure)
         where T : ImageButton
     {
         var context = new PropertyContext<Thickness>(self, ImageButton.PaddingProperty);
@@ -294,7 +294,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> PaddingFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Padding<T>(this SettersContext<T> self,
         Thickness padding)
         where T : ImageButton
     {
@@ -302,7 +302,7 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static SettersContext<T> PaddingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Thickness>, IPropertySettersBuilder<Thickness>> configure)
+    public static SettersContext<T> Padding<T>(this SettersContext<T> self, Func<PropertySettersContext<Thickness>, IPropertySettersBuilder<Thickness>> configure)
         where T : ImageButton
     {
         var context = new PropertySettersContext<Thickness>(self.XamlSetters, ImageButton.PaddingProperty);
@@ -310,42 +310,42 @@ public static partial class ImageButtonExtension
         return self;
     }
     
-    public static T OnClickedFmg<T>(this T self, EventHandler handler)
+    public static T OnClicked<T>(this T self, EventHandler handler)
         where T : ImageButton
     {
         self.Clicked += handler;
         return self;
     }
     
-    public static T OnClickedFmg<T>(this T self, Action<T> action)
+    public static T OnClicked<T>(this T self, Action<T> action)
         where T : ImageButton
     {
         self.Clicked += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnPressedFmg<T>(this T self, EventHandler handler)
+    public static T OnPressed<T>(this T self, EventHandler handler)
         where T : ImageButton
     {
         self.Pressed += handler;
         return self;
     }
     
-    public static T OnPressedFmg<T>(this T self, Action<T> action)
+    public static T OnPressed<T>(this T self, Action<T> action)
         where T : ImageButton
     {
         self.Pressed += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnReleasedFmg<T>(this T self, EventHandler handler)
+    public static T OnReleased<T>(this T self, EventHandler handler)
         where T : ImageButton
     {
         self.Released += handler;
         return self;
     }
     
-    public static T OnReleasedFmg<T>(this T self, Action<T> action)
+    public static T OnReleased<T>(this T self, Action<T> action)
         where T : ImageButton
     {
         self.Released += (o, arg) => action(self);

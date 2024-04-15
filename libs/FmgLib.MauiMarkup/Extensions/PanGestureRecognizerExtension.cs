@@ -4,7 +4,7 @@
 
 public static partial class PanGestureRecognizerExtension
 {
-    public static T TouchPointsFmg<T>(this T self,
+    public static T TouchPoints<T>(this T self,
         int touchPoints)
         where T : PanGestureRecognizer
     {
@@ -12,7 +12,7 @@ public static partial class PanGestureRecognizerExtension
         return self;
     }
     
-    public static T TouchPointsFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+    public static T TouchPoints<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
         where T : PanGestureRecognizer
     {
         var context = new PropertyContext<int>(self, PanGestureRecognizer.TouchPointsProperty);
@@ -20,7 +20,7 @@ public static partial class PanGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> TouchPointsFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> TouchPoints<T>(this SettersContext<T> self,
         int touchPoints)
         where T : PanGestureRecognizer
     {
@@ -28,7 +28,7 @@ public static partial class PanGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> TouchPointsFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+    public static SettersContext<T> TouchPoints<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
         where T : PanGestureRecognizer
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, PanGestureRecognizer.TouchPointsProperty);
@@ -36,14 +36,14 @@ public static partial class PanGestureRecognizerExtension
         return self;
     }
     
-    public static T OnPanUpdatedFmg<T>(this T self, EventHandler<PanUpdatedEventArgs> handler)
+    public static T OnPanUpdated<T>(this T self, EventHandler<PanUpdatedEventArgs> handler)
         where T : PanGestureRecognizer
     {
         self.PanUpdated += handler;
         return self;
     }
     
-    public static T OnPanUpdatedFmg<T>(this T self, Action<T> action)
+    public static T OnPanUpdated<T>(this T self, Action<T> action)
         where T : PanGestureRecognizer
     {
         self.PanUpdated += (o, arg) => action(self);

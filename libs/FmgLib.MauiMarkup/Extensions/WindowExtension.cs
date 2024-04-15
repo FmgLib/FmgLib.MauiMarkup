@@ -4,7 +4,7 @@
 
 public static partial class WindowExtension
 {
-    public static T TitleFmg<T>(this T self,
+    public static T Title<T>(this T self,
         string? title)
         where T : Window
     {
@@ -12,7 +12,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T TitleFmg<T>(this T self, Func<PropertyContext<string?>, IPropertyBuilder<string?>> configure)
+    public static T Title<T>(this T self, Func<PropertyContext<string?>, IPropertyBuilder<string?>> configure)
         where T : Window
     {
         var context = new PropertyContext<string?>(self, Window.TitleProperty);
@@ -20,7 +20,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> TitleFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Title<T>(this SettersContext<T> self,
         string? title)
         where T : Window
     {
@@ -28,7 +28,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> TitleFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string?>, IPropertySettersBuilder<string?>> configure)
+    public static SettersContext<T> Title<T>(this SettersContext<T> self, Func<PropertySettersContext<string?>, IPropertySettersBuilder<string?>> configure)
         where T : Window
     {
         var context = new PropertySettersContext<string?>(self.XamlSetters, Window.TitleProperty);
@@ -36,7 +36,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T PageFmg<T>(this T self,
+    public static T Page<T>(this T self,
         Page? page)
         where T : Window
     {
@@ -44,7 +44,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T PageFmg<T>(this T self, Func<PropertyContext<Page?>, IPropertyBuilder<Page?>> configure)
+    public static T Page<T>(this T self, Func<PropertyContext<Page?>, IPropertyBuilder<Page?>> configure)
         where T : Window
     {
         var context = new PropertyContext<Page?>(self, Window.PageProperty);
@@ -52,7 +52,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> PageFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Page<T>(this SettersContext<T> self,
         Page? page)
         where T : Window
     {
@@ -60,7 +60,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> PageFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Page?>, IPropertySettersBuilder<Page?>> configure)
+    public static SettersContext<T> Page<T>(this SettersContext<T> self, Func<PropertySettersContext<Page?>, IPropertySettersBuilder<Page?>> configure)
         where T : Window
     {
         var context = new PropertySettersContext<Page?>(self.XamlSetters, Window.PageProperty);
@@ -68,7 +68,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T XFmg<T>(this T self,
+    public static T X<T>(this T self,
         double x)
         where T : Window
     {
@@ -76,7 +76,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T XFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T X<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertyContext<double>(self, Window.XProperty);
@@ -84,7 +84,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> XFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> X<T>(this SettersContext<T> self,
         double x)
         where T : Window
     {
@@ -92,7 +92,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> XFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> X<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Window.XProperty);
@@ -100,7 +100,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T YFmg<T>(this T self,
+    public static T Y<T>(this T self,
         double y)
         where T : Window
     {
@@ -108,7 +108,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T YFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T Y<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertyContext<double>(self, Window.YProperty);
@@ -116,7 +116,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> YFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Y<T>(this SettersContext<T> self,
         double y)
         where T : Window
     {
@@ -124,7 +124,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> YFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> Y<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Window.YProperty);
@@ -132,7 +132,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T WidthFmg<T>(this T self,
+    public static T Width<T>(this T self,
         double width)
         where T : Window
     {
@@ -140,7 +140,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T WidthFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T Width<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertyContext<double>(self, Window.WidthProperty);
@@ -148,7 +148,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> WidthFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Width<T>(this SettersContext<T> self,
         double width)
         where T : Window
     {
@@ -156,7 +156,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> WidthFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> Width<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Window.WidthProperty);
@@ -164,7 +164,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T HeightFmg<T>(this T self,
+    public static T Height<T>(this T self,
         double height)
         where T : Window
     {
@@ -172,7 +172,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T HeightFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T Height<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertyContext<double>(self, Window.HeightProperty);
@@ -180,7 +180,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> HeightFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Height<T>(this SettersContext<T> self,
         double height)
         where T : Window
     {
@@ -188,7 +188,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> HeightFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> Height<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Window.HeightProperty);
@@ -196,7 +196,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T MaximumWidthFmg<T>(this T self,
+    public static T MaximumWidth<T>(this T self,
         double maximumWidth)
         where T : Window
     {
@@ -204,7 +204,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T MaximumWidthFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T MaximumWidth<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertyContext<double>(self, Window.MaximumWidthProperty);
@@ -212,7 +212,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> MaximumWidthFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> MaximumWidth<T>(this SettersContext<T> self,
         double maximumWidth)
         where T : Window
     {
@@ -220,7 +220,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> MaximumWidthFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> MaximumWidth<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Window.MaximumWidthProperty);
@@ -228,7 +228,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T MaximumHeightFmg<T>(this T self,
+    public static T MaximumHeight<T>(this T self,
         double maximumHeight)
         where T : Window
     {
@@ -236,7 +236,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T MaximumHeightFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T MaximumHeight<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertyContext<double>(self, Window.MaximumHeightProperty);
@@ -244,7 +244,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> MaximumHeightFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> MaximumHeight<T>(this SettersContext<T> self,
         double maximumHeight)
         where T : Window
     {
@@ -252,7 +252,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> MaximumHeightFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> MaximumHeight<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Window.MaximumHeightProperty);
@@ -260,7 +260,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T MinimumWidthFmg<T>(this T self,
+    public static T MinimumWidth<T>(this T self,
         double minimumWidth)
         where T : Window
     {
@@ -268,7 +268,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T MinimumWidthFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T MinimumWidth<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertyContext<double>(self, Window.MinimumWidthProperty);
@@ -276,7 +276,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> MinimumWidthFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> MinimumWidth<T>(this SettersContext<T> self,
         double minimumWidth)
         where T : Window
     {
@@ -284,7 +284,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> MinimumWidthFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> MinimumWidth<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Window.MinimumWidthProperty);
@@ -292,7 +292,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T MinimumHeightFmg<T>(this T self,
+    public static T MinimumHeight<T>(this T self,
         double minimumHeight)
         where T : Window
     {
@@ -300,7 +300,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T MinimumHeightFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T MinimumHeight<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertyContext<double>(self, Window.MinimumHeightProperty);
@@ -308,7 +308,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> MinimumHeightFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> MinimumHeight<T>(this SettersContext<T> self,
         double minimumHeight)
         where T : Window
     {
@@ -316,7 +316,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> MinimumHeightFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> MinimumHeight<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Window
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Window.MinimumHeightProperty);
@@ -324,7 +324,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T FlowDirectionFmg<T>(this T self,
+    public static T FlowDirection<T>(this T self,
         FlowDirection flowDirection)
         where T : Window
     {
@@ -332,7 +332,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T FlowDirectionFmg<T>(this T self, Func<PropertyContext<FlowDirection>, IPropertyBuilder<FlowDirection>> configure)
+    public static T FlowDirection<T>(this T self, Func<PropertyContext<FlowDirection>, IPropertyBuilder<FlowDirection>> configure)
         where T : Window
     {
         var context = new PropertyContext<FlowDirection>(self, Window.FlowDirectionProperty);
@@ -340,7 +340,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> FlowDirectionFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlowDirection<T>(this SettersContext<T> self,
         FlowDirection flowDirection)
         where T : Window
     {
@@ -348,7 +348,7 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static SettersContext<T> FlowDirectionFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<FlowDirection>, IPropertySettersBuilder<FlowDirection>> configure)
+    public static SettersContext<T> FlowDirection<T>(this SettersContext<T> self, Func<PropertySettersContext<FlowDirection>, IPropertySettersBuilder<FlowDirection>> configure)
         where T : Window
     {
         var context = new PropertySettersContext<FlowDirection>(self.XamlSetters, Window.FlowDirectionProperty);
@@ -356,196 +356,196 @@ public static partial class WindowExtension
         return self;
     }
     
-    public static T OnSizeChangedFmg<T>(this T self, EventHandler? handler)
+    public static T OnSizeChanged<T>(this T self, EventHandler? handler)
         where T : Window
     {
         self.SizeChanged += handler;
         return self;
     }
     
-    public static T OnSizeChangedFmg<T>(this T self, Action<T> action)
+    public static T OnSizeChanged<T>(this T self, Action<T> action)
         where T : Window
     {
         self.SizeChanged += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnModalPoppedFmg<T>(this T self, EventHandler<ModalPoppedEventArgs>? handler)
+    public static T OnModalPopped<T>(this T self, EventHandler<ModalPoppedEventArgs>? handler)
         where T : Window
     {
         self.ModalPopped += handler;
         return self;
     }
     
-    public static T OnModalPoppedFmg<T>(this T self, Action<T> action)
+    public static T OnModalPopped<T>(this T self, Action<T> action)
         where T : Window
     {
         self.ModalPopped += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnModalPoppingFmg<T>(this T self, EventHandler<ModalPoppingEventArgs>? handler)
+    public static T OnModalPopping<T>(this T self, EventHandler<ModalPoppingEventArgs>? handler)
         where T : Window
     {
         self.ModalPopping += handler;
         return self;
     }
     
-    public static T OnModalPoppingFmg<T>(this T self, Action<T> action)
+    public static T OnModalPopping<T>(this T self, Action<T> action)
         where T : Window
     {
         self.ModalPopping += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnModalPushedFmg<T>(this T self, EventHandler<ModalPushedEventArgs>? handler)
+    public static T OnModalPushed<T>(this T self, EventHandler<ModalPushedEventArgs>? handler)
         where T : Window
     {
         self.ModalPushed += handler;
         return self;
     }
     
-    public static T OnModalPushedFmg<T>(this T self, Action<T> action)
+    public static T OnModalPushed<T>(this T self, Action<T> action)
         where T : Window
     {
         self.ModalPushed += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnModalPushingFmg<T>(this T self, EventHandler<ModalPushingEventArgs>? handler)
+    public static T OnModalPushing<T>(this T self, EventHandler<ModalPushingEventArgs>? handler)
         where T : Window
     {
         self.ModalPushing += handler;
         return self;
     }
     
-    public static T OnModalPushingFmg<T>(this T self, Action<T> action)
+    public static T OnModalPushing<T>(this T self, Action<T> action)
         where T : Window
     {
         self.ModalPushing += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnPopCanceledFmg<T>(this T self, EventHandler? handler)
+    public static T OnPopCanceled<T>(this T self, EventHandler? handler)
         where T : Window
     {
         self.PopCanceled += handler;
         return self;
     }
     
-    public static T OnPopCanceledFmg<T>(this T self, Action<T> action)
+    public static T OnPopCanceled<T>(this T self, Action<T> action)
         where T : Window
     {
         self.PopCanceled += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnCreatedFmg<T>(this T self, EventHandler? handler)
+    public static T OnCreated<T>(this T self, EventHandler? handler)
         where T : Window
     {
         self.Created += handler;
         return self;
     }
     
-    public static T OnCreatedFmg<T>(this T self, Action<T> action)
+    public static T OnCreated<T>(this T self, Action<T> action)
         where T : Window
     {
         self.Created += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnResumedFmg<T>(this T self, EventHandler? handler)
+    public static T OnResumed<T>(this T self, EventHandler? handler)
         where T : Window
     {
         self.Resumed += handler;
         return self;
     }
     
-    public static T OnResumedFmg<T>(this T self, Action<T> action)
+    public static T OnResumed<T>(this T self, Action<T> action)
         where T : Window
     {
         self.Resumed += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnActivatedFmg<T>(this T self, EventHandler? handler)
+    public static T OnActivated<T>(this T self, EventHandler? handler)
         where T : Window
     {
         self.Activated += handler;
         return self;
     }
     
-    public static T OnActivatedFmg<T>(this T self, Action<T> action)
+    public static T OnActivated<T>(this T self, Action<T> action)
         where T : Window
     {
         self.Activated += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnDeactivatedFmg<T>(this T self, EventHandler? handler)
+    public static T OnDeactivated<T>(this T self, EventHandler? handler)
         where T : Window
     {
         self.Deactivated += handler;
         return self;
     }
     
-    public static T OnDeactivatedFmg<T>(this T self, Action<T> action)
+    public static T OnDeactivated<T>(this T self, Action<T> action)
         where T : Window
     {
         self.Deactivated += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnStoppedFmg<T>(this T self, EventHandler? handler)
+    public static T OnStopped<T>(this T self, EventHandler? handler)
         where T : Window
     {
         self.Stopped += handler;
         return self;
     }
     
-    public static T OnStoppedFmg<T>(this T self, Action<T> action)
+    public static T OnStopped<T>(this T self, Action<T> action)
         where T : Window
     {
         self.Stopped += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnDestroyingFmg<T>(this T self, EventHandler? handler)
+    public static T OnDestroying<T>(this T self, EventHandler? handler)
         where T : Window
     {
         self.Destroying += handler;
         return self;
     }
     
-    public static T OnDestroyingFmg<T>(this T self, Action<T> action)
+    public static T OnDestroying<T>(this T self, Action<T> action)
         where T : Window
     {
         self.Destroying += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnBackgroundingFmg<T>(this T self, EventHandler<BackgroundingEventArgs>? handler)
+    public static T OnBackgrounding<T>(this T self, EventHandler<BackgroundingEventArgs>? handler)
         where T : Window
     {
         self.Backgrounding += handler;
         return self;
     }
     
-    public static T OnBackgroundingFmg<T>(this T self, Action<T> action)
+    public static T OnBackgrounding<T>(this T self, Action<T> action)
         where T : Window
     {
         self.Backgrounding += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnDisplayDensityChangedFmg<T>(this T self, EventHandler<DisplayDensityChangedEventArgs>? handler)
+    public static T OnDisplayDensityChanged<T>(this T self, EventHandler<DisplayDensityChangedEventArgs>? handler)
         where T : Window
     {
         self.DisplayDensityChanged += handler;
         return self;
     }
     
-    public static T OnDisplayDensityChangedFmg<T>(this T self, Action<T> action)
+    public static T OnDisplayDensityChanged<T>(this T self, Action<T> action)
         where T : Window
     {
         self.DisplayDensityChanged += (o, arg) => action(self);

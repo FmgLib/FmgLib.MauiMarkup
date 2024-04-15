@@ -4,7 +4,7 @@
 
 public static partial class UrlWebViewSourceExtension
 {
-    public static T UrlFmg<T>(this T self,
+    public static T Url<T>(this T self,
         string url)
         where T : UrlWebViewSource
     {
@@ -12,7 +12,7 @@ public static partial class UrlWebViewSourceExtension
         return self;
     }
     
-    public static T UrlFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T Url<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : UrlWebViewSource
     {
         var context = new PropertyContext<string>(self, UrlWebViewSource.UrlProperty);
@@ -20,7 +20,7 @@ public static partial class UrlWebViewSourceExtension
         return self;
     }
     
-    public static SettersContext<T> UrlFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Url<T>(this SettersContext<T> self,
         string url)
         where T : UrlWebViewSource
     {
@@ -28,7 +28,7 @@ public static partial class UrlWebViewSourceExtension
         return self;
     }
     
-    public static SettersContext<T> UrlFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> Url<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : UrlWebViewSource
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, UrlWebViewSource.UrlProperty);

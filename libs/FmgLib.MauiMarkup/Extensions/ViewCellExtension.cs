@@ -4,7 +4,7 @@
 
 public static partial class ViewCellExtension
 {
-    public static T ViewFmg<T>(this T self,
+    public static T View<T>(this T self,
         View view)
         where T : ViewCell
     {

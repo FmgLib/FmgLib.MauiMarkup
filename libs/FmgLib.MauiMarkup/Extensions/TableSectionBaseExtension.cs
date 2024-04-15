@@ -4,7 +4,7 @@
 
 public static partial class TableSectionBaseExtension
 {
-    public static T TitleFmg<T>(this T self,
+    public static T Title<T>(this T self,
         string title)
         where T : TableSectionBase
     {
@@ -12,7 +12,7 @@ public static partial class TableSectionBaseExtension
         return self;
     }
     
-    public static T TitleFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T Title<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : TableSectionBase
     {
         var context = new PropertyContext<string>(self, TableSectionBase.TitleProperty);
@@ -20,7 +20,7 @@ public static partial class TableSectionBaseExtension
         return self;
     }
     
-    public static SettersContext<T> TitleFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Title<T>(this SettersContext<T> self,
         string title)
         where T : TableSectionBase
     {
@@ -28,7 +28,7 @@ public static partial class TableSectionBaseExtension
         return self;
     }
     
-    public static SettersContext<T> TitleFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> Title<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : TableSectionBase
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, TableSectionBase.TitleProperty);
@@ -36,7 +36,7 @@ public static partial class TableSectionBaseExtension
         return self;
     }
     
-    public static T TextColorFmg<T>(this T self,
+    public static T TextColor<T>(this T self,
         Color textColor)
         where T : TableSectionBase
     {
@@ -44,7 +44,7 @@ public static partial class TableSectionBaseExtension
         return self;
     }
     
-    public static T TextColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T TextColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : TableSectionBase
     {
         var context = new PropertyContext<Color>(self, TableSectionBase.TextColorProperty);
@@ -52,7 +52,7 @@ public static partial class TableSectionBaseExtension
         return self;
     }
     
-    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> TextColor<T>(this SettersContext<T> self,
         Color textColor)
         where T : TableSectionBase
     {
@@ -60,7 +60,7 @@ public static partial class TableSectionBaseExtension
         return self;
     }
     
-    public static SettersContext<T> TextColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> TextColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : TableSectionBase
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, TableSectionBase.TextColorProperty);

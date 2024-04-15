@@ -4,7 +4,7 @@
 
 public static partial class SwipeItemViewExtension
 {
-    public static T CommandFmg<T>(this T self,
+    public static T Command<T>(this T self,
         System.Windows.Input.ICommand command)
         where T : SwipeItemView
     {
@@ -12,7 +12,7 @@ public static partial class SwipeItemViewExtension
         return self;
     }
     
-    public static T CommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T Command<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : SwipeItemView
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, SwipeItemView.CommandProperty);
@@ -20,7 +20,7 @@ public static partial class SwipeItemViewExtension
         return self;
     }
     
-    public static SettersContext<T> CommandFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Command<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand command)
         where T : SwipeItemView
     {
@@ -28,7 +28,7 @@ public static partial class SwipeItemViewExtension
         return self;
     }
     
-    public static SettersContext<T> CommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> Command<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : SwipeItemView
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, SwipeItemView.CommandProperty);
@@ -36,7 +36,7 @@ public static partial class SwipeItemViewExtension
         return self;
     }
     
-    public static T CommandParameterFmg<T>(this T self,
+    public static T CommandParameter<T>(this T self,
         object commandParameter)
         where T : SwipeItemView
     {
@@ -44,7 +44,7 @@ public static partial class SwipeItemViewExtension
         return self;
     }
     
-    public static T CommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T CommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : SwipeItemView
     {
         var context = new PropertyContext<object>(self, SwipeItemView.CommandParameterProperty);
@@ -52,7 +52,7 @@ public static partial class SwipeItemViewExtension
         return self;
     }
     
-    public static SettersContext<T> CommandParameterFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CommandParameter<T>(this SettersContext<T> self,
         object commandParameter)
         where T : SwipeItemView
     {
@@ -60,7 +60,7 @@ public static partial class SwipeItemViewExtension
         return self;
     }
     
-    public static SettersContext<T> CommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> CommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : SwipeItemView
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, SwipeItemView.CommandParameterProperty);
@@ -68,14 +68,14 @@ public static partial class SwipeItemViewExtension
         return self;
     }
     
-    public static T OnInvokedFmg<T>(this T self, EventHandler<EventArgs> handler)
+    public static T OnInvoked<T>(this T self, EventHandler<EventArgs> handler)
         where T : SwipeItemView
     {
         self.Invoked += handler;
         return self;
     }
     
-    public static T OnInvokedFmg<T>(this T self, Action<T> action)
+    public static T OnInvoked<T>(this T self, Action<T> action)
         where T : SwipeItemView
     {
         self.Invoked += (o, arg) => action(self);

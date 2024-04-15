@@ -4,7 +4,7 @@
 
 public static partial class RefreshViewExtension
 {
-    public static T IsRefreshingFmg<T>(this T self,
+    public static T IsRefreshing<T>(this T self,
         bool isRefreshing)
         where T : RefreshView
     {
@@ -12,7 +12,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static T IsRefreshingFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsRefreshing<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : RefreshView
     {
         var context = new PropertyContext<bool>(self, RefreshView.IsRefreshingProperty);
@@ -20,7 +20,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsRefreshingFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsRefreshing<T>(this SettersContext<T> self,
         bool isRefreshing)
         where T : RefreshView
     {
@@ -28,7 +28,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsRefreshingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsRefreshing<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : RefreshView
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, RefreshView.IsRefreshingProperty);
@@ -36,7 +36,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static T CommandFmg<T>(this T self,
+    public static T Command<T>(this T self,
         System.Windows.Input.ICommand command)
         where T : RefreshView
     {
@@ -44,7 +44,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static T CommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T Command<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : RefreshView
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, RefreshView.CommandProperty);
@@ -52,7 +52,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static SettersContext<T> CommandFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Command<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand command)
         where T : RefreshView
     {
@@ -60,7 +60,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static SettersContext<T> CommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> Command<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : RefreshView
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, RefreshView.CommandProperty);
@@ -68,7 +68,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static T CommandParameterFmg<T>(this T self,
+    public static T CommandParameter<T>(this T self,
         object commandParameter)
         where T : RefreshView
     {
@@ -76,7 +76,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static T CommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T CommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : RefreshView
     {
         var context = new PropertyContext<object>(self, RefreshView.CommandParameterProperty);
@@ -84,7 +84,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static SettersContext<T> CommandParameterFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CommandParameter<T>(this SettersContext<T> self,
         object commandParameter)
         where T : RefreshView
     {
@@ -92,7 +92,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static SettersContext<T> CommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> CommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : RefreshView
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, RefreshView.CommandParameterProperty);
@@ -100,7 +100,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static T RefreshColorFmg<T>(this T self,
+    public static T RefreshColor<T>(this T self,
         Color refreshColor)
         where T : RefreshView
     {
@@ -108,7 +108,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static T RefreshColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T RefreshColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : RefreshView
     {
         var context = new PropertyContext<Color>(self, RefreshView.RefreshColorProperty);
@@ -116,7 +116,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static SettersContext<T> RefreshColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> RefreshColor<T>(this SettersContext<T> self,
         Color refreshColor)
         where T : RefreshView
     {
@@ -124,7 +124,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static SettersContext<T> RefreshColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> RefreshColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : RefreshView
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, RefreshView.RefreshColorProperty);
@@ -132,7 +132,7 @@ public static partial class RefreshViewExtension
         return self;
     }
     
-    public static Task<bool> AnimateRefreshColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateRefreshColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : RefreshView
     {
         Color fromValue = self.RefreshColor;
@@ -141,14 +141,14 @@ public static partial class RefreshViewExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateRefreshColorTo", transform, callback, length, easing);
     }
     
-    public static T OnRefreshingFmg<T>(this T self, EventHandler handler)
+    public static T OnRefreshing<T>(this T self, EventHandler handler)
         where T : RefreshView
     {
         self.Refreshing += handler;
         return self;
     }
     
-    public static T OnRefreshingFmg<T>(this T self, Action<T> action)
+    public static T OnRefreshing<T>(this T self, Action<T> action)
         where T : RefreshView
     {
         self.Refreshing += (o, arg) => action(self);

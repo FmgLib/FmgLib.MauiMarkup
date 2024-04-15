@@ -4,7 +4,7 @@
 
 public static partial class ShellGroupItemExtension
 {
-    public static T FlyoutDisplayOptionsFmg<T>(this T self,
+    public static T FlyoutDisplayOptions<T>(this T self,
         FlyoutDisplayOptions flyoutDisplayOptions)
         where T : ShellGroupItem
     {
@@ -12,7 +12,7 @@ public static partial class ShellGroupItemExtension
         return self;
     }
     
-    public static T FlyoutDisplayOptionsFmg<T>(this T self, Func<PropertyContext<FlyoutDisplayOptions>, IPropertyBuilder<FlyoutDisplayOptions>> configure)
+    public static T FlyoutDisplayOptions<T>(this T self, Func<PropertyContext<FlyoutDisplayOptions>, IPropertyBuilder<FlyoutDisplayOptions>> configure)
         where T : ShellGroupItem
     {
         var context = new PropertyContext<FlyoutDisplayOptions>(self, ShellGroupItem.FlyoutDisplayOptionsProperty);
@@ -20,7 +20,7 @@ public static partial class ShellGroupItemExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutDisplayOptionsFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FlyoutDisplayOptions<T>(this SettersContext<T> self,
         FlyoutDisplayOptions flyoutDisplayOptions)
         where T : ShellGroupItem
     {
@@ -28,7 +28,7 @@ public static partial class ShellGroupItemExtension
         return self;
     }
     
-    public static SettersContext<T> FlyoutDisplayOptionsFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<FlyoutDisplayOptions>, IPropertySettersBuilder<FlyoutDisplayOptions>> configure)
+    public static SettersContext<T> FlyoutDisplayOptions<T>(this SettersContext<T> self, Func<PropertySettersContext<FlyoutDisplayOptions>, IPropertySettersBuilder<FlyoutDisplayOptions>> configure)
         where T : ShellGroupItem
     {
         var context = new PropertySettersContext<FlyoutDisplayOptions>(self.XamlSetters, ShellGroupItem.FlyoutDisplayOptionsProperty);

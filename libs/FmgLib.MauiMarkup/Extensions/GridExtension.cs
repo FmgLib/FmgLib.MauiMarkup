@@ -2,7 +2,7 @@
 
 public static partial class GridExtension
 {
-    public static T RowDefinitionsFmg<T>(this T self, Action<RowDefinitionBuilder> configure) where T : Grid
+    public static T RowDefinitions<T>(this T self, Action<RowDefinitionBuilder> configure) where T : Grid
     {
         RowDefinitionBuilder rowDefinitionBuilder = new RowDefinitionBuilder();
         configure(rowDefinitionBuilder);
@@ -14,7 +14,7 @@ public static partial class GridExtension
         return self;
     }
 
-    public static T ColumnDefinitionsFmg<T>(this T self, Action<ColumnDefinitionBuilder> configure) where T : Grid
+    public static T ColumnDefinitions<T>(this T self, Action<ColumnDefinitionBuilder> configure) where T : Grid
     {
         ColumnDefinitionBuilder columnDefinitionBuilder = new ColumnDefinitionBuilder();
         configure(columnDefinitionBuilder);
@@ -26,21 +26,21 @@ public static partial class GridExtension
         return self;
     }
 
-    public static T SpacingFmg<T>(this T self, double columnSpacing, double rowSpacing) where T : Grid
+    public static T Spacing<T>(this T self, double columnSpacing, double rowSpacing) where T : Grid
     {
         self.SetValue(Grid.ColumnSpacingProperty, columnSpacing);
         self.SetValue(Grid.RowSpacingProperty, rowSpacing);
         return self;
     }
 
-    public static T SpacingFmg<T>(this T self, double spacing) where T : Grid
+    public static T Spacing<T>(this T self, double spacing) where T : Grid
     {
         self.SetValue(Grid.ColumnSpacingProperty, spacing);
         self.SetValue(Grid.RowSpacingProperty, spacing);
         return self;
     }
 
-    public static T ColumnDefinitionsFmg<T>(this T self, IList<ColumnDefinition> columnDefinitions) where T : Grid
+    public static T ColumnDefinitions<T>(this T self, IList<ColumnDefinition> columnDefinitions) where T : Grid
     {
         foreach (ColumnDefinition columnDefinition in columnDefinitions)
         {
@@ -50,7 +50,7 @@ public static partial class GridExtension
         return self;
     }
 
-    public static T ColumnDefinitionsFmg<T>(this T self, params ColumnDefinition[] columnDefinitions) where T : Grid
+    public static T ColumnDefinitions<T>(this T self, params ColumnDefinition[] columnDefinitions) where T : Grid
     {
         foreach (ColumnDefinition item in columnDefinitions)
         {
@@ -60,14 +60,14 @@ public static partial class GridExtension
         return self;
     }
 
-    public static T ColumnDefinitionsFmg<T>(this T self, Func<PropertyContext<ColumnDefinitionCollection>, IPropertyBuilder<ColumnDefinitionCollection>> configure) where T : Grid
+    public static T ColumnDefinitions<T>(this T self, Func<PropertyContext<ColumnDefinitionCollection>, IPropertyBuilder<ColumnDefinitionCollection>> configure) where T : Grid
     {
         PropertyContext<ColumnDefinitionCollection> arg = new PropertyContext<ColumnDefinitionCollection>(self, Grid.ColumnDefinitionsProperty);
         configure(arg).Build();
         return self;
     }
 
-    public static T RowDefinitionsFmg<T>(this T self, IList<RowDefinition> rowDefinitions) where T : Grid
+    public static T RowDefinitions<T>(this T self, IList<RowDefinition> rowDefinitions) where T : Grid
     {
         foreach (RowDefinition rowDefinition in rowDefinitions)
         {
@@ -77,7 +77,7 @@ public static partial class GridExtension
         return self;
     }
 
-    public static T RowDefinitionsFmg<T>(this T self, params RowDefinition[] rowDefinitions) where T : Grid
+    public static T RowDefinitions<T>(this T self, params RowDefinition[] rowDefinitions) where T : Grid
     {
         foreach (RowDefinition item in rowDefinitions)
         {
@@ -87,27 +87,27 @@ public static partial class GridExtension
         return self;
     }
 
-    public static T RowDefinitionsFmg<T>(this T self, Func<PropertyContext<RowDefinitionCollection>, IPropertyBuilder<RowDefinitionCollection>> configure) where T : Grid
+    public static T RowDefinitions<T>(this T self, Func<PropertyContext<RowDefinitionCollection>, IPropertyBuilder<RowDefinitionCollection>> configure) where T : Grid
     {
         PropertyContext<RowDefinitionCollection> arg = new PropertyContext<RowDefinitionCollection>(self, Grid.RowDefinitionsProperty);
         configure(arg).Build();
         return self;
     }
 
-    public static T RowSpacingFmg<T>(this T self, double rowSpacing) where T : Grid
+    public static T RowSpacing<T>(this T self, double rowSpacing) where T : Grid
     {
         self.SetValue(Grid.RowSpacingProperty, rowSpacing);
         return self;
     }
 
-    public static T RowSpacingFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure) where T : Grid
+    public static T RowSpacing<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure) where T : Grid
     {
         PropertyContext<double> arg = new PropertyContext<double>(self, Grid.RowSpacingProperty);
         configure(arg).Build();
         return self;
     }
 
-    public static SettersContext<T> RowSpacingFmg<T>(this SettersContext<T> self, double rowSpacing) where T : Grid
+    public static SettersContext<T> RowSpacing<T>(this SettersContext<T> self, double rowSpacing) where T : Grid
     {
         self.XamlSetters.Add(new Setter
         {
@@ -117,14 +117,14 @@ public static partial class GridExtension
         return self;
     }
 
-    public static SettersContext<T> RowSpacingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure) where T : Grid
+    public static SettersContext<T> RowSpacing<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure) where T : Grid
     {
         PropertySettersContext<double> arg = new PropertySettersContext<double>(self.XamlSetters, Grid.RowSpacingProperty);
         configure(arg).Build();
         return self;
     }
 
-    public static Task<bool> AnimateRowSpacingToFmg<T>(this T self, double value, uint length = 250u, Easing? easing = null) where T : Grid
+    public static Task<bool> AnimateRowSpacingTo<T>(this T self, double value, uint length = 250u, Easing? easing = null) where T : Grid
     {
         T self2 = self;
         double fromValue = self2.RowSpacing;
@@ -134,20 +134,20 @@ public static partial class GridExtension
         }, element: self2, name: "AnimateRowSpacingTo", length: length, easing: easing);
     }
 
-    public static T ColumnSpacingFmg<T>(this T self, double columnSpacing) where T : Grid
+    public static T ColumnSpacing<T>(this T self, double columnSpacing) where T : Grid
     {
         self.SetValue(Grid.ColumnSpacingProperty, columnSpacing);
         return self;
     }
 
-    public static T ColumnSpacingFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure) where T : Grid
+    public static T ColumnSpacing<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure) where T : Grid
     {
         PropertyContext<double> arg = new PropertyContext<double>(self, Grid.ColumnSpacingProperty);
         configure(arg).Build();
         return self;
     }
 
-    public static SettersContext<T> ColumnSpacingFmg<T>(this SettersContext<T> self, double columnSpacing) where T : Grid
+    public static SettersContext<T> ColumnSpacing<T>(this SettersContext<T> self, double columnSpacing) where T : Grid
     {
         self.XamlSetters.Add(new Setter
         {
@@ -157,14 +157,14 @@ public static partial class GridExtension
         return self;
     }
 
-    public static SettersContext<T> ColumnSpacingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure) where T : Grid
+    public static SettersContext<T> ColumnSpacing<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure) where T : Grid
     {
         PropertySettersContext<double> arg = new PropertySettersContext<double>(self.XamlSetters, Grid.ColumnSpacingProperty);
         configure(arg).Build();
         return self;
     }
 
-    public static Task<bool> AnimateColumnSpacingToFmg<T>(this T self, double value, uint length = 250u, Easing? easing = null) where T : Grid
+    public static Task<bool> AnimateColumnSpacingTo<T>(this T self, double value, uint length = 250u, Easing? easing = null) where T : Grid
     {
         T self2 = self;
         double fromValue = self2.ColumnSpacing;

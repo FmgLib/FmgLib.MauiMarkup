@@ -4,7 +4,7 @@
 
 public static partial class ScaleTransformExtension
 {
-    public static T ScaleXFmg<T>(this T self,
+    public static T ScaleX<T>(this T self,
         double scaleX)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
@@ -12,7 +12,7 @@ public static partial class ScaleTransformExtension
         return self;
     }
     
-    public static T ScaleXFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T ScaleX<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
         var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.Shapes.ScaleTransform.ScaleXProperty);
@@ -20,7 +20,7 @@ public static partial class ScaleTransformExtension
         return self;
     }
     
-    public static SettersContext<T> ScaleXFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> ScaleX<T>(this SettersContext<T> self,
         double scaleX)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
@@ -28,7 +28,7 @@ public static partial class ScaleTransformExtension
         return self;
     }
     
-    public static SettersContext<T> ScaleXFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> ScaleX<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.ScaleTransform.ScaleXProperty);
@@ -36,7 +36,7 @@ public static partial class ScaleTransformExtension
         return self;
     }
     
-    public static T ScaleYFmg<T>(this T self,
+    public static T ScaleY<T>(this T self,
         double scaleY)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
@@ -44,7 +44,7 @@ public static partial class ScaleTransformExtension
         return self;
     }
     
-    public static T ScaleYFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T ScaleY<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
         var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.Shapes.ScaleTransform.ScaleYProperty);
@@ -52,7 +52,7 @@ public static partial class ScaleTransformExtension
         return self;
     }
     
-    public static SettersContext<T> ScaleYFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> ScaleY<T>(this SettersContext<T> self,
         double scaleY)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
@@ -60,7 +60,7 @@ public static partial class ScaleTransformExtension
         return self;
     }
     
-    public static SettersContext<T> ScaleYFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> ScaleY<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.ScaleTransform.ScaleYProperty);
@@ -68,7 +68,7 @@ public static partial class ScaleTransformExtension
         return self;
     }
     
-    public static T CenterXFmg<T>(this T self,
+    public static T CenterX<T>(this T self,
         double centerX)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
@@ -76,7 +76,7 @@ public static partial class ScaleTransformExtension
         return self;
     }
     
-    public static T CenterXFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T CenterX<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
         var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.Shapes.ScaleTransform.CenterXProperty);
@@ -84,7 +84,7 @@ public static partial class ScaleTransformExtension
         return self;
     }
     
-    public static SettersContext<T> CenterXFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CenterX<T>(this SettersContext<T> self,
         double centerX)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
@@ -92,7 +92,7 @@ public static partial class ScaleTransformExtension
         return self;
     }
     
-    public static SettersContext<T> CenterXFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> CenterX<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.ScaleTransform.CenterXProperty);
@@ -100,7 +100,7 @@ public static partial class ScaleTransformExtension
         return self;
     }
     
-    public static T CenterYFmg<T>(this T self,
+    public static T CenterY<T>(this T self,
         double centerY)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
@@ -108,7 +108,7 @@ public static partial class ScaleTransformExtension
         return self;
     }
     
-    public static T CenterYFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T CenterY<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
         var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.Shapes.ScaleTransform.CenterYProperty);
@@ -116,7 +116,7 @@ public static partial class ScaleTransformExtension
         return self;
     }
     
-    public static SettersContext<T> CenterYFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CenterY<T>(this SettersContext<T> self,
         double centerY)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
@@ -124,7 +124,7 @@ public static partial class ScaleTransformExtension
         return self;
     }
     
-    public static SettersContext<T> CenterYFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> CenterY<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.ScaleTransform
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.ScaleTransform.CenterYProperty);

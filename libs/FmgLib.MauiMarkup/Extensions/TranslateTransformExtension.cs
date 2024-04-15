@@ -4,7 +4,7 @@
 
 public static partial class TranslateTransformExtension
 {
-    public static T XFmg<T>(this T self,
+    public static T X<T>(this T self,
         double x)
         where T : Microsoft.Maui.Controls.Shapes.TranslateTransform
     {
@@ -12,7 +12,7 @@ public static partial class TranslateTransformExtension
         return self;
     }
     
-    public static T XFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T X<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.TranslateTransform
     {
         var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.Shapes.TranslateTransform.XProperty);
@@ -20,7 +20,7 @@ public static partial class TranslateTransformExtension
         return self;
     }
     
-    public static SettersContext<T> XFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> X<T>(this SettersContext<T> self,
         double x)
         where T : Microsoft.Maui.Controls.Shapes.TranslateTransform
     {
@@ -28,7 +28,7 @@ public static partial class TranslateTransformExtension
         return self;
     }
     
-    public static SettersContext<T> XFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> X<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.TranslateTransform
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.TranslateTransform.XProperty);
@@ -36,7 +36,7 @@ public static partial class TranslateTransformExtension
         return self;
     }
     
-    public static T YFmg<T>(this T self,
+    public static T Y<T>(this T self,
         double y)
         where T : Microsoft.Maui.Controls.Shapes.TranslateTransform
     {
@@ -44,7 +44,7 @@ public static partial class TranslateTransformExtension
         return self;
     }
     
-    public static T YFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T Y<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.TranslateTransform
     {
         var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.Shapes.TranslateTransform.YProperty);
@@ -52,7 +52,7 @@ public static partial class TranslateTransformExtension
         return self;
     }
     
-    public static SettersContext<T> YFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Y<T>(this SettersContext<T> self,
         double y)
         where T : Microsoft.Maui.Controls.Shapes.TranslateTransform
     {
@@ -60,7 +60,7 @@ public static partial class TranslateTransformExtension
         return self;
     }
     
-    public static SettersContext<T> YFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> Y<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Microsoft.Maui.Controls.Shapes.TranslateTransform
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.TranslateTransform.YProperty);

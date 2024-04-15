@@ -4,7 +4,7 @@
 
 public static partial class LineSegmentExtension
 {
-    public static T PointFmg<T>(this T self,
+    public static T Point<T>(this T self,
         Point point)
         where T : Microsoft.Maui.Controls.Shapes.LineSegment
     {
@@ -12,7 +12,7 @@ public static partial class LineSegmentExtension
         return self;
     }
     
-    public static T PointFmg<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
+    public static T Point<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
         where T : Microsoft.Maui.Controls.Shapes.LineSegment
     {
         var context = new PropertyContext<Point>(self, Microsoft.Maui.Controls.Shapes.LineSegment.PointProperty);
@@ -20,7 +20,7 @@ public static partial class LineSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> PointFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Point<T>(this SettersContext<T> self,
         Point point)
         where T : Microsoft.Maui.Controls.Shapes.LineSegment
     {
@@ -28,7 +28,7 @@ public static partial class LineSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> PointFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
+    public static SettersContext<T> Point<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
         where T : Microsoft.Maui.Controls.Shapes.LineSegment
     {
         var context = new PropertySettersContext<Point>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.LineSegment.PointProperty);

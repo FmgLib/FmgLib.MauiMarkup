@@ -2,7 +2,7 @@
 
 public static partial class DropGestureRecognizerExtension
 {
-    public static T AllowDropFmg<T>(this T self,
+    public static T AllowDrop<T>(this T self,
         bool allowDrop)
         where T : DropGestureRecognizer
     {
@@ -10,7 +10,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static T AllowDropFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T AllowDrop<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : DropGestureRecognizer
     {
         var context = new PropertyContext<bool>(self, DropGestureRecognizer.AllowDropProperty);
@@ -18,7 +18,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> AllowDropFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> AllowDrop<T>(this SettersContext<T> self,
         bool allowDrop)
         where T : DropGestureRecognizer
     {
@@ -26,7 +26,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> AllowDropFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> AllowDrop<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : DropGestureRecognizer
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, DropGestureRecognizer.AllowDropProperty);
@@ -34,7 +34,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static T DragOverCommandFmg<T>(this T self,
+    public static T DragOverCommand<T>(this T self,
         System.Windows.Input.ICommand dragOverCommand)
         where T : DropGestureRecognizer
     {
@@ -42,7 +42,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static T DragOverCommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T DragOverCommand<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : DropGestureRecognizer
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, DropGestureRecognizer.DragOverCommandProperty);
@@ -50,7 +50,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> DragOverCommandFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> DragOverCommand<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand dragOverCommand)
         where T : DropGestureRecognizer
     {
@@ -58,7 +58,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> DragOverCommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> DragOverCommand<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : DropGestureRecognizer
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, DropGestureRecognizer.DragOverCommandProperty);
@@ -66,7 +66,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static T DragOverCommandParameterFmg<T>(this T self,
+    public static T DragOverCommandParameter<T>(this T self,
         object dragOverCommandParameter)
         where T : DropGestureRecognizer
     {
@@ -74,7 +74,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static T DragOverCommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T DragOverCommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : DropGestureRecognizer
     {
         var context = new PropertyContext<object>(self, DropGestureRecognizer.DragOverCommandParameterProperty);
@@ -82,7 +82,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> DragOverCommandParameterFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> DragOverCommandParameter<T>(this SettersContext<T> self,
         object dragOverCommandParameter)
         where T : DropGestureRecognizer
     {
@@ -90,7 +90,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> DragOverCommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> DragOverCommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : DropGestureRecognizer
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, DropGestureRecognizer.DragOverCommandParameterProperty);
@@ -98,7 +98,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static T DragLeaveCommandFmg<T>(this T self,
+    public static T DragLeaveCommand<T>(this T self,
         System.Windows.Input.ICommand dragLeaveCommand)
         where T : DropGestureRecognizer
     {
@@ -106,7 +106,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static T DragLeaveCommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T DragLeaveCommand<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : DropGestureRecognizer
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, DropGestureRecognizer.DragLeaveCommandProperty);
@@ -114,7 +114,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> DragLeaveCommandFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> DragLeaveCommand<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand dragLeaveCommand)
         where T : DropGestureRecognizer
     {
@@ -122,7 +122,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> DragLeaveCommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> DragLeaveCommand<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : DropGestureRecognizer
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, DropGestureRecognizer.DragLeaveCommandProperty);
@@ -130,7 +130,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static T DragLeaveCommandParameterFmg<T>(this T self,
+    public static T DragLeaveCommandParameter<T>(this T self,
         object dragLeaveCommandParameter)
         where T : DropGestureRecognizer
     {
@@ -138,7 +138,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static T DragLeaveCommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T DragLeaveCommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : DropGestureRecognizer
     {
         var context = new PropertyContext<object>(self, DropGestureRecognizer.DragLeaveCommandParameterProperty);
@@ -146,7 +146,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> DragLeaveCommandParameterFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> DragLeaveCommandParameter<T>(this SettersContext<T> self,
         object dragLeaveCommandParameter)
         where T : DropGestureRecognizer
     {
@@ -154,7 +154,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> DragLeaveCommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> DragLeaveCommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : DropGestureRecognizer
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, DropGestureRecognizer.DragLeaveCommandParameterProperty);
@@ -162,7 +162,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static T DropCommandFmg<T>(this T self,
+    public static T DropCommand<T>(this T self,
         System.Windows.Input.ICommand dropCommand)
         where T : DropGestureRecognizer
     {
@@ -170,7 +170,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static T DropCommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T DropCommand<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : DropGestureRecognizer
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, DropGestureRecognizer.DropCommandProperty);
@@ -178,7 +178,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> DropCommandFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> DropCommand<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand dropCommand)
         where T : DropGestureRecognizer
     {
@@ -186,7 +186,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> DropCommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> DropCommand<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : DropGestureRecognizer
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, DropGestureRecognizer.DropCommandProperty);
@@ -194,7 +194,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static T DropCommandParameterFmg<T>(this T self,
+    public static T DropCommandParameter<T>(this T self,
         object dropCommandParameter)
         where T : DropGestureRecognizer
     {
@@ -202,7 +202,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static T DropCommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T DropCommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : DropGestureRecognizer
     {
         var context = new PropertyContext<object>(self, DropGestureRecognizer.DropCommandParameterProperty);
@@ -210,7 +210,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> DropCommandParameterFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> DropCommandParameter<T>(this SettersContext<T> self,
         object dropCommandParameter)
         where T : DropGestureRecognizer
     {
@@ -218,7 +218,7 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static SettersContext<T> DropCommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> DropCommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : DropGestureRecognizer
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, DropGestureRecognizer.DropCommandParameterProperty);
@@ -226,42 +226,42 @@ public static partial class DropGestureRecognizerExtension
         return self;
     }
     
-    public static T OnDragLeaveFmg<T>(this T self, EventHandler<DragEventArgs> handler)
+    public static T OnDragLeave<T>(this T self, EventHandler<DragEventArgs> handler)
         where T : DropGestureRecognizer
     {
         self.DragLeave += handler;
         return self;
     }
     
-    public static T OnDragLeaveFmg<T>(this T self, Action<T> action)
+    public static T OnDragLeave<T>(this T self, Action<T> action)
         where T : DropGestureRecognizer
     {
         self.DragLeave += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnDragOverFmg<T>(this T self, EventHandler<DragEventArgs> handler)
+    public static T OnDragOver<T>(this T self, EventHandler<DragEventArgs> handler)
         where T : DropGestureRecognizer
     {
         self.DragOver += handler;
         return self;
     }
     
-    public static T OnDragOverFmg<T>(this T self, Action<T> action)
+    public static T OnDragOver<T>(this T self, Action<T> action)
         where T : DropGestureRecognizer
     {
         self.DragOver += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnDropFmg<T>(this T self, EventHandler<DropEventArgs> handler)
+    public static T OnDrop<T>(this T self, EventHandler<DropEventArgs> handler)
         where T : DropGestureRecognizer
     {
         self.Drop += handler;
         return self;
     }
     
-    public static T OnDropFmg<T>(this T self, Action<T> action)
+    public static T OnDrop<T>(this T self, Action<T> action)
         where T : DropGestureRecognizer
     {
         self.Drop += (o, arg) => action(self);

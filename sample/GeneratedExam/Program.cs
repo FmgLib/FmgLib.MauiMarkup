@@ -1,6 +1,9 @@
 ﻿
-//using FmgLib.MauiMarkup;
+using FmgLib.MauiMarkup;
 //new ZXing.Net.Maui.Controls.CameraView().Height(20);
+
+using SkiaSharp.Extended.UI.Controls;
 
 Console.WriteLine($" dosyası oluşturuldu.");
 
+//new SKLottieViewExtension().RepeatCount(10).RepeatMode(SKLottieRepeatMode.Reverse).IsComplete()

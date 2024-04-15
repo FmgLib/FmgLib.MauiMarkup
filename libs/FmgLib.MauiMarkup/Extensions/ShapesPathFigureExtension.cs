@@ -1,4 +1,4 @@
-﻿namespace FmgLib.MauiMarkup.Extensions;
+﻿namespace FmgLib.MauiMarkup;
 
 public static partial class ShapesPathFigureExtension
 {

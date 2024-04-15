@@ -3,13 +3,14 @@
 namespace GeneratedExam;
 
 [MauiMarkup(typeof(ZXing.Net.Maui.Controls.BarcodeGeneratorView))]
-public class BarcodeGeneratorView
-{
-}
+public class MyBarcodeGeneratorView { }
 
 [MauiMarkup(typeof(ZXing.Net.Maui.Controls.CameraView))]
-public class CameraView { }
+public class MyCameraView { }
 
 
 [MauiMarkup(typeof(ZXing.Net.Maui.Controls.CameraBarcodeReaderView))]
-public class CameraBarcodeReaderView { }
+public class MyCameraBarcodeReaderView { }
+
+[MauiMarkup(typeof(SkiaSharp.Extended.UI.Controls.SKLottieView))]
+public class MySkLottieView { }

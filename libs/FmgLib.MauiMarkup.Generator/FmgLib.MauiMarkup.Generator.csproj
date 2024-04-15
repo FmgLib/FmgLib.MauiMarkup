@@ -7,7 +7,7 @@
 	  <IsRoslynComponent>True</IsRoslynComponent>
 	  <EnforceExtendedAnalyzerRules>True</EnforceExtendedAnalyzerRules>
 	  <PackageId>FmgLib.MauiMarkup.Generator</PackageId>
-	  <Version>1.0.11</Version>
+	  <Version>1.0.14</Version>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 

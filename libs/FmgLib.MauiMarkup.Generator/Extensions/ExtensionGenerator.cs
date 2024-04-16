@@ -12,6 +12,7 @@ public partial class ExtensionGenerator
     readonly INamedTypeSymbol mainSymbol;
     readonly bool isBindableObject;
     readonly bool isVisualElement;
+    bool isGeneratedExtension = false;
 
     StringBuilder builder;
 
@@ -23,7 +24,7 @@ public partial class ExtensionGenerator
         this.isVisualElement = Helpers.IsVisualElement(mainSymbol);
     }
 
-    public (string,string) Build()
+    public (string,string,bool) Build()
     {
         builder = new StringBuilder();
         builder.AppendLine("//");
@@ -35,7 +36,7 @@ public partial class ExtensionGenerator
 
         builder.AppendLine();
 
-        return ($"{mainSymbol.ContainingNamespace.ToDisplayString()}.{Helpers.GetNormalizedFileName(mainSymbol)}.g.cs", builder.ToString());
+        return ($"{mainSymbol.ContainingNamespace.ToDisplayString()}.{Helpers.GetNormalizedFileName(mainSymbol)}.g.cs", builder.ToString(), isGeneratedExtension);
     }
 
     void GenerateExtensionNameSpace()
@@ -191,7 +192,7 @@ builder.AppendLine($@"
 
             if (info.propertyTypeName.Contains("DataTemplate"))
                 GenerateExtensionMethod_DataTemplate(info);
-
+            isGeneratedExtension = true;
             //if (attachedInterfacesAttribute != null)
             //    GenerateExtensionMethod_GetValue(info);
         }
@@ -238,7 +239,7 @@ builder.AppendLine($@"
                     if (info.propertyTypeName.Equals("Microsoft.Maui.Graphics.Color"))
                         GenerateExtensionMethod_AnimateTo(info, "ColorTransform");
                 }
-                Helpers.NotGenerateList.Add(info.propertyName);
+                isGeneratedExtension = true;
             }
             else if (isGenericIList &&
                 info.PropertySymbol.GetMethod != null &&
@@ -249,7 +250,7 @@ builder.AppendLine($@"
                 if (info.IsBindableProperty)
                     GenerateExtensionMethod_BindablePropertyBuilder(info);
 
-                Helpers.NotGenerateList.Add(info.propertyName);
+                isGeneratedExtension = true;
             }
         }
     }

@@ -37,6 +37,7 @@ namespace FmgLib.MauiMarkup.Generator.Extensions
                     GenerateEventMethodHandler_Normal(eventSymbol);
                     GenerateEventMethodNoArgs_Normal(eventSymbol);
                 }
+                isGeneratedExtension = true;
             }
         }
 

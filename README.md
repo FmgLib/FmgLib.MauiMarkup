@@ -13,6 +13,151 @@
 | `FmgLib.MauiMarkup.ZXing` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.ZXing?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.ZXing/) |
 | `FmgLib.MauiMarkup.SimpleToolkit` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.SimpleToolkit?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.SimpleToolkit/) |
 
+
+
+# **FmgLib.MauiMarkup**
+
+FmgLib.MauiMarkup is a specialized library crafted for .NET MAUI. This library allows you to code directly in C# without the necessity of employing XAML language. It provides developers with a straightforward and flexible approach to building user interfaces using C# code. With FmgLib.MauiMarkup, you can now develop application interfaces in a code-focused manner, avoiding the complexities of dealing with XAML files. This library accelerates your development process while enabling you to write more readable and manageable code.
+
+FmgLib.MauiMarkup provides extension methods for all properties provided for a View on the XAML side.
+
+For example:
+
+If we were to write XAML code for the Image class, it would look like this:
+```xaml
+<Image
+    Source="dotnet_bot.png"
+    HeightRequest="100"
+    WidthRequest="150"
+    Grid.Row="0"
+    Grid.Column="1"
+    Grid.RowSpan="2"
+    Opacity=".8" />
+```
+
+The C# equivalent with the help of FmgLib.MauiMarkup would be as follows:
+```csharp
+new Image()
+.Source("dotnet_bot.png")
+.Row(0)
+.Column(1)
+.RowSpan(2)
+.SizeRequest(150,100)
+.Opacity(.8)
+```
+
+Similarly, we can see this for other Views. Let's write a few sample codes as an example:
+```csharp
+new Label()
+.Text("fmglib.mauimarkup")
+.FontSize(12)
+.Row(1)
+.TextColor(Colors.Green)
+.FontAttributes(FontAttributes.Bold)
+.Margin(new Thickness(5,3,0,5))
+```
+
+```csharp
+this
+.BackgroundImageSourceFmg("background.jpg")
+.ContentFmg(
+    new StackLayout()
+    .CenterFmg()
+    .ChildrenFmg(
+        new ActivityIndicator()
+        .IsRunningFmg(true)
+        .HeightRequestFmg(70)
+        .WidthRequestFmg(70)
+        .CenterFmg()
+        .InvokeOnElementFmg(ai => ai.Loaded += CheckLogin(sender, e))
+    )
+);
+```
+
+## Extensions for 3rd Party Controls
+
+FmgLib.MauiMarkup library can also generate extension methods for controls from third-party libraries. To achieve this, you should utilize the MauiMarkupAttribute provided by FmgLib.MauiMarkup.
+
+Simply specify the control for which you want to create extension methods as `[MauiMarkup(typeof(YourControl))]`.
+
+The constructor method of the `MauiMarkup()` attribute automatically generates extension methods for BindableProperties and Events found within the type provided as an argument. **You can provide a minimum of 1 and a maximum of 5 types inside the constructor method.** *Multiple MauiMarkup attributes can be added to a single class.*
+
+Let's look at an example:
+
+```csharp
+using FmgLib.MauiMarkup;
+
+namespace GeneratedExam;
+
+[MauiMarkup(typeof(ZXing.Net.Maui.Controls.BarcodeGeneratorView))]
+public class MyBarcodeGeneratorView { }
+
+[MauiMarkup(typeof(ZXing.Net.Maui.Controls.CameraView))]
+public class MyCameraView { }
+
+
+[MauiMarkup(typeof(ZXing.Net.Maui.Controls.CameraBarcodeReaderView))]
+public class MyCameraBarcodeReaderView { }
+
+[MauiMarkup(typeof(SkiaSharp.Extended.UI.Controls.SKLottieView))]
+public class MySkLottieView { }
+
+```
+
+Or instead of dealing with it like this, it can be used like this:
+
+```csharp
+
+using Microsoft.Extensions.Logging;
+using FmgLib.MauiMarkup;
+using SkiaSharp.Extended.UI.Controls;
+using ZXing.Net.Maui.Controls;
+using UraniumUI.Material.Controls;
+namespace MauiApp1
+{
+    [MauiMarkup(typeof(CameraView))]
+    [MauiMarkup(typeof(SKLottieView), typeof(SKFileLottieImageSource), typeof(DataGrid))]
+    [MauiMarkup(typeof(SKConfettiView), typeof(BarcodeGeneratorView),typeof(InputField),typeof(EditorField),typeof(TextField))]
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                });
+
+#if DEBUG
+    		builder.Logging.AddDebug();
+#endif
+            return builder.Build();
+        }
+    }
+}
+```
+
+For example, let's write the sample code for the **TextField and SKLottieView Controls**:
+
+```csharp
+new TextField()
+.Title("Password")
+.TitleColor(Colors.LightGray)
+.AccentColor(Colors.CadetBlue)
+.TextColor(Colors.White)
+.IsPassword(true),
+
+new SKLottieView()
+.Source(new SKFileLottieImageSource().File("iconapp.json"))
+.RepeatCount(-1)
+.HeightRequest(250)
+.WidthRequest(250)
+```
+
+**Genral Example Code:**
 ```csharp
 
 using Microsoft.Maui.Layouts;
@@ -29,282 +174,282 @@ public partial class HomePage : BasePage<HomePageViewModel>
     public override void Build()
     {
         this
-        .ContentFmg(
+        .Content(
             new VerticalStackLayout()
-            .PaddingFmg(10)
-            .ChildrenFmg(
+            .Padding(10)
+            .Children(
                 new SearchBar()
-                .PlaceholderFmg("Ürünlerde Ara.")
-                .MarginFmg(10)
-                .AssignFmg(out var search)
-                .SearchCommandFmg(BindingContext.SearchCommand)
-                .BindFmg(SearchBar.SearchCommandParameterProperty, "Text", source: search),
+                .Placeholder("Ürünlerde Ara.")
+                .Margin(10)
+                .Assign(out var search)
+                .SearchCommand(BindingContext.SearchCommand)
+                .Bind(SearchBar.SearchCommandParameterProperty, "Text", source: search),
 
                 new Frame()
-                .CornerRadiusFmg(15)
-                .BackgroundColorFmg(Colors.Blue)
-                .BorderColorFmg(Colors.Blue)
-                .HeightRequestFmg(150)
-                .MarginFmg(new Thickness(15,7))
-                .PaddingFmg(0)
-                .ContentFmg(
+                .CornerRadius(15)
+                .BackgroundColor(Colors.Blue)
+                .BorderColor(Colors.Blue)
+                .HeightRequest(150)
+                .Margin(new Thickness(15,7))
+                .Padding(0)
+                .Content(
                     new Grid()
-                    .ColumnDefinitionsFmg(e => e.Star(5).Star(5))
-                    .RowDefinitionsFmg(e => e.Star(5).Star(5))
-                    .ChildrenFmg(
+                    .ColumnDefinitions(e => e.Star(5).Star(5))
+                    .RowDefinitions(e => e.Star(5).Star(5))
+                    .Children(
                         new Frame()
-                        .RowFmg(0)
-                        .ColumnFmg(0)
-                        .MarginFmg(new Thickness(0,20,0,0))
-                        .PaddingFmg(0)
-                        .CornerRadiusFmg(0)
-                        .BackgroundColorFmg(Colors.DarkBlue)
-                        .BorderColorFmg(Colors.DarkBlue)
-                        .ContentFmg(
+                        .Row(0)
+                        .Column(0)
+                        .Margin(new Thickness(0,20,0,0))
+                        .Padding(0)
+                        .CornerRadius(0)
+                        .BackgroundColor(Colors.DarkBlue)
+                        .BorderColor(Colors.DarkBlue)
+                        .Content(
                             new Label()
-                            .TextFmg("%50 İndirim")
-                            .TextColorFmg(Colors.White)
-                            .FontAttributesFmg(FontAttributes.Bold)
-                            .FontSizeFmg(20)
-                            .CenterFmg()
+                            .Text("%50 İndirim")
+                            .TextColor(Colors.White)
+                            .FontAttributes(FontAttributes.Bold)
+                            .FontSize(20)
+                            .Center()
                         ),
 
                         new Label()
-                        .TextFmg("Tüm Unlu Mamüllerde her gün saat 21:00'dan sonra!")
-                        .FontSizeFmg(12)
-                        .RowFmg(1)
-                        .ColumnFmg(0)
-                        .TextColorFmg(Colors.White)
-                        .FontAttributesFmg(FontAttributes.Italic)
-                        .MarginFmg(new Thickness(10,3,0,0)),
+                        .Text("Tüm Unlu Mamüllerde her gün saat 21:00'dan sonra!")
+                        .FontSize(12)
+                        .Row(1)
+                        .Column(0)
+                        .TextColor(Colors.White)
+                        .FontAttributes(FontAttributes.Italic)
+                        .Margin(new Thickness(10,3,0,0)),
 
                         new Image()
-                        .SourceFmg("white_bread.png")
-                        .RowFmg(0)
-                        .ColumnFmg(1)
-                        .RowSpanFmg(2)
-                        .SizeRequestFmg(150,100)
-                        .OpacityFmg(.8)
+                        .Source("white_board.png")
+                        .Row(0)
+                        .Column(1)
+                        .RowSpan(2)
+                        .SizeRequest(150,100)
+                        .Opacity(.8)
                     )
                 ),
 
                 new Grid()
-                .ColumnDefinitionsFmg(e => e.Star(7).Star(3))
-                .FillHorizontalFmg()
-                .PaddingFmg(10)
-                .ChildrenFmg(
+                .ColumnDefinitions(e => e.Star(7).Star(3))
+                .FillHorizontal()
+                .Padding(10)
+                .Children(
                     new Label()
-                    .TextFmg("Son Ürünler")
-                    .FontAttributesFmg(FontAttributes.Bold)
-                    .FontSizeFmg(18)
-                    .CenterVerticalFmg()
-                    .ColumnFmg(0)
-                    .AlignStartFmg(),
+                    .Text("Son Ürünler")
+                    .FontAttributes(FontAttributes.Bold)
+                    .FontSize(18)
+                    .CenterVertical()
+                    .Column(0)
+                    .AlignStart(),
 
 
                     new Label()
-                    .TextFmg("Tümünü Gör")
-                    .FontSizeFmg(15)
-                    .CenterVerticalFmg()
-                    .ColumnFmg(1)
-                    .AlignEndFmg()
-                    .TextDecorationsFmg(TextDecorations.Underline)
-                    .GestureRecognizersFmg(
+                    .Text("Tümünü Gör")
+                    .FontSize(15)
+                    .CenterVertical()
+                    .Column(1)
+                    .AlignEnd()
+                    .TextDecorations(TextDecorations.Underline)
+                    .GestureRecognizers(
                         new TapGestureRecognizer()
-                        .CommandFmg(BindingContext.GotoAllProductsCommand)
+                        .Command(BindingContext.GotoAllProductsCommand)
                     )
                 ),
 
                 new CollectionView()
-                .SelectionModeFmg(SelectionMode.None)
-                .BindFmg(CollectionView.ItemsSourceProperty, "Products")
-                .ItemsLayoutFmg(new LinearItemsLayout(ItemsLayoutOrientation.Horizontal).ItemSpacingFmg(10))
-                .EmptyViewFmg(
+                .SelectionMode(SelectionMode.None)
+                .Bind(CollectionView.ItemsSourceProperty, "Products")
+                .ItemsLayout(new LinearItemsLayout(ItemsLayoutOrientation.Horizontal).ItemSpacing(10))
+                .EmptyView(
                     new VerticalStackLayout()
-                    .ChildrenFmg(
+                    .Children(
                         new Label()
-                        .TextFmg("Kayıt Yoktur.")
-                        .TextColorFmg(Colors.Red)
-                        .FontAttributesFmg(FontAttributes.Bold)
-                        .FontSizeFmg(18)
+                        .Text("Kayıt Yoktur.")
+                        .TextColor(Colors.Red)
+                        .FontAttributes(FontAttributes.Bold)
+                        .FontSize(18)
                     )
-                    .CenterFmg()
+                    .Center()
                 )
-                .ItemTemplateFmg(() =>
+                .ItemTemplate(() =>
                     new Frame()
-                    .CornerRadiusFmg(15)
-                    .BorderColorFmg(Colors.LightGray)
-                    .BackgroundColorFmg(Colors.LightGray)
-                    .MinimumHeightRequestFmg(200)
-                    .MaximumWidthRequestFmg(200)
-                    .PaddingFmg(5)
-                    .ContentFmg(
+                    .CornerRadius(15)
+                    .BorderColor(Colors.LightGray)
+                    .BackgroundColor(Colors.LightGray)
+                    .MinimumHeightRequest(200)
+                    .MaximumWidthRequest(200)
+                    .Padding(5)
+                    .Content(
                         new Grid()
-                        .RowDefinitionsFmg(e => e.Star(1).Star(6).Star(2).Star(1))
-                        .PaddingFmg(5)
-                        .ChildrenFmg(
+                        .RowDefinitions(e => e.Star(1).Star(6).Star(2).Star(1))
+                        .Padding(5)
+                        .Children(
                             new Grid()
-                            .RowFmg(0)
-                            .ColumnDefinitionsFmg(e => e.Star(6).Star(4))
-                            .ChildrenFmg(
+                            .Row(0)
+                            .ColumnDefinitions(e => e.Star(6).Star(4))
+                            .Children(
                                 new ImageButton()
-                                .BindFmg(ImageButton.SourceProperty, nameof(ProductVM.IsFavorite), converter: new BoolToFavoriteImageConverter())
-                                .BackgroundColorFmg(Colors.Transparent)
-                                .AlignStartFmg()
-                                .SizeRequestFmg(30, 30)
-                                .CommandFmg(BindingContext.ChangeFavoriteCommand)
-                                .BindFmg(ImageButton.CommandParameterProperty, "."),
+                                .Bind(ImageButton.SourceProperty, nameof(ProductVM.IsFavorite), converter: new BoolToFavoriteImageConverter())
+                                .BackgroundColor(Colors.Transparent)
+                                .AlignStart()
+                                .SizeRequest(30, 30)
+                                .Command(BindingContext.ChangeFavoriteCommand)
+                                .Bind(ImageButton.CommandParameterProperty, "."),
 
                                 new Frame()
-                                .CornerRadiusFmg(20)
-                                .HeightRequestFmg(25)
-                                .WidthRequestFmg(50)
-                                .PaddingFmg(0)
-                                .BackgroundColorFmg(Colors.Red)
-                                .BorderColorFmg(Colors.Red)
-                                .ColumnFmg(1)
-                                .BindFmg(Microsoft.Maui.Controls.Frame.IsVisibleProperty, nameof(ProductVM.IsDiscount))
-                                .ContentFmg(
+                                .CornerRadius(20)
+                                .HeightRequest(25)
+                                .WidthRequest(50)
+                                .Padding(0)
+                                .BackgroundColor(Colors.Red)
+                                .BorderColor(Colors.Red)
+                                .Column(1)
+                                .Bind(Microsoft.Maui.Controls.Frame.IsVisibleProperty, nameof(ProductVM.IsDiscount))
+                                .Content(
                                     new Label()
-                                    .BindFmg(Label.TextProperty, nameof(ProductVM.DiscountRate))
-                                    .FontSizeFmg(11)
-                                    .FontAttributesFmg(FontAttributes.Bold)
-                                    .TextColorFmg(Colors.White)
-                                    .CenterFmg()
+                                    .Bind(Label.TextProperty, nameof(ProductVM.DiscountRate))
+                                    .FontSize(11)
+                                    .FontAttributes(FontAttributes.Bold)
+                                    .TextColor(Colors.White)
+                                    .Center()
                                 )
                             ),
 
                             new Image()
-                            .BindFmg(Image.SourceProperty, nameof(ProductVM.Image))
-                            .SizeRequestFmg(80,80)
-                            .RowFmg(1)
-                            .CenterHorizontalFmg(),
+                            .Bind(Image.SourceProperty, nameof(ProductVM.Image))
+                            .SizeRequest(80,80)
+                            .Row(1)
+                            .CenterHorizontal(),
 
                             new VerticalStackLayout()
-                            .RowFmg(2)
-                            .ChildrenFmg(
+                            .Row(2)
+                            .Children(
                                 new Label()
-                                .BindFmg(Label.TextProperty, nameof(ProductVM.Name))
-                                .FontAttributesFmg(FontAttributes.Bold)
-                                .FontSizeFmg(11)
-                                .AlignStartFmg()
-                                .LineBreakModeFmg(LineBreakMode.TailTruncation)
-                                .FontAutoScalingEnabledFmg(true),
+                                .Bind(Label.TextProperty, nameof(ProductVM.Name))
+                                .FontAttributes(FontAttributes.Bold)
+                                .FontSize(11)
+                                .AlignStart()
+                                .LineBreakMode(LineBreakMode.TailTruncation)
+                                .FontAutoScalingEnabled(true),
 
                                 new HorizontalStackLayout()
-                                .SpacingFmg(2)
-                                .ChildrenFmg(
+                                .Spacing(2)
+                                .Children(
                                     new Label()
-                                    .BindFmg(Label.TextProperty, nameof(ProductVM.Price))
-                                    .BindFmg(Label.TextDecorationsProperty, nameof(ProductVM.IsDiscount), converter: new BoolToTextDecorationConverter())
-                                    .BindFmg(Label.FontSizeProperty, nameof(ProductVM.IsDiscount), converter: new BoolToFontSizeConverter())
-                                    .FontAttributesFmg(FontAttributes.Bold)
-                                    .CenterVerticalFmg(),
+                                    .Bind(Label.TextProperty, nameof(ProductVM.Price))
+                                    .Bind(Label.TextDecorationsProperty, nameof(ProductVM.IsDiscount), converter: new BoolToTextDecorationConverter())
+                                    .Bind(Label.FontSizeProperty, nameof(ProductVM.IsDiscount), converter: new BoolToFontSizeConverter())
+                                    .FontAttributes(FontAttributes.Bold)
+                                    .CenterVertical(),
 
                                     new Label()
-                                    .TextColorFmg(Colors.Red)
-                                    .FontAttributesFmg(FontAttributes.Bold)
-                                    .CenterVerticalFmg()
-                                    .BindFmg(Label.IsVisibleProperty, nameof(ProductVM.IsDiscount))
-                                    .BindFmg(Label.TextProperty, nameof(ProductVM.DiscountPrice)),
+                                    .TextColor(Colors.Red)
+                                    .FontAttributes(FontAttributes.Bold)
+                                    .CenterVertical()
+                                    .Bind(Label.IsVisibleProperty, nameof(ProductVM.IsDiscount))
+                                    .Bind(Label.TextProperty, nameof(ProductVM.DiscountPrice)),
 
                                     new Label()
-                                    .TextFmg("/")
-                                    .FontSizeFmg(10)
-                                    .CenterVerticalFmg()
-                                    .TextColorFmg(Colors.DarkSlateGray),
+                                    .Text("/")
+                                    .FontSize(10)
+                                    .CenterVertical()
+                                    .TextColor(Colors.DarkSlateGray),
 
                                     new Label()
-                                    .FontSizeFmg(10)
-                                    .CenterVerticalFmg()
-                                    .TextColorFmg(Colors.DarkSlateGray)
-                                    .BindFmg(Label.TextProperty, nameof(ProductVM.Unit))
+                                    .FontSize(10)
+                                    .CenterVertical()
+                                    .TextColor(Colors.DarkSlateGray)
+                                    .Bind(Label.TextProperty, nameof(ProductVM.Unit))
                                 )
                             ),
 
                             new Button()
-                            .RowFmg(3)
-                            .MarginFmg(new Thickness(0,5,0,0))
-                            .PaddingFmg(0)
-                            .TextFmg("Sepete Ekle")
-                            .BackgroundColorFmg(Colors.Green)
-                            .FontSizeFmg(12)
-                            .FontAttributesFmg(FontAttributes.Bold)
-                            .CenterHorizontalFmg()
-                            .HeightRequestFmg(35)
-                            .WidthRequestFmg(100)
-                            .CommandFmg(BindingContext.AddProductBasketCommand)
-                            .BindFmg(Button.CommandParameterProperty, ".")
+                            .Row(3)
+                            .Margin(new Thickness(0,5,0,0))
+                            .Padding(0)
+                            .Text("Sepete Ekle")
+                            .BackgroundColor(Colors.Green)
+                            .FontSize(12)
+                            .FontAttributes(FontAttributes.Bold)
+                            .CenterHorizontal()
+                            .HeightRequest(35)
+                            .WidthRequest(100)
+                            .Command(BindingContext.AddProductBasketCommand)
+                            .Bind(Button.CommandParameterProperty, ".")
                         )
                     )
                 ),
 
                 new Grid()
-                .ColumnDefinitionsFmg(e => e.Star(7).Star(3))
-                .FillHorizontalFmg()
-                .PaddingFmg(10)
-                .ChildrenFmg(
+                .ColumnDefinitions(e => e.Star(7).Star(3))
+                .FillHorizontal()
+                .Padding(10)
+                .Children(
                     new Label()
-                    .TextFmg("Kategoriler")
-                    .FontAttributesFmg(FontAttributes.Bold)
-                    .FontSizeFmg(18)
-                    .CenterVerticalFmg()
-                    .ColumnFmg(0)
-                    .AlignStartFmg(),
+                    .Text("Kategoriler")
+                    .FontAttributes(FontAttributes.Bold)
+                    .FontSize(18)
+                    .CenterVertical()
+                    .Column(0)
+                    .AlignStart(),
 
 
                     new Label()
-                    .TextFmg("Tümünü Gör")
-                    .FontSizeFmg(15)
-                    .CenterVerticalFmg()
-                    .ColumnFmg(1)
-                    .AlignEndFmg()
-                    .TextDecorationsFmg(TextDecorations.Underline)
-                    .GestureRecognizersFmg(
+                    .Text("Tümünü Gör")
+                    .FontSize(15)
+                    .CenterVertical()
+                    .Column(1)
+                    .AlignEnd()
+                    .TextDecorations(TextDecorations.Underline)
+                    .GestureRecognizers(
                         new TapGestureRecognizer()
-                        .CommandFmg(BindingContext.GotoAllCategoriesCommand)
+                        .Command(BindingContext.GotoAllCategoriesCommand)
                     )
                 ),
 
                 new FlexLayout()
-                .ItemsSourcesFmg(BindingContext.Categories)
-                .AssignFmg(out var flex)
-                .WrapFmg(FlexWrap.Wrap)
-                .FlexBasisFmg(FlexBasis.Auto)
-                .ItemTemplatesFmg(new DataTemplate(() => 
+                .ItemsSources(BindingContext.Categories)
+                .Assign(out var flex)
+                .Wrap(FlexWrap.Wrap)
+                .FlexBasis(FlexBasis.Auto)
+                .ItemTemplates(new DataTemplate(() => 
                     new Frame()
-                    .CornerRadiusFmg(15)
-                    .BorderColorFmg(Colors.LightGray)
-                    .BackgroundColorFmg(Colors.LightGray)
-                    .MinimumHeightRequestFmg(30)
-                    .WidthRequestFmg(180)
-                    .PaddingFmg(0)
-                    .MarginFmg(new Thickness(1,0,5,5))
-                    .FlexBasisFmg(FlexBasis.Auto)
-                    .ContentFmg(
+                    .CornerRadius(15)
+                    .BorderColor(Colors.LightGray)
+                    .BackgroundColor(Colors.LightGray)
+                    .MinimumHeightRequest(30)
+                    .WidthRequest(180)
+                    .Padding(0)
+                    .Margin(new Thickness(1,0,5,5))
+                    .FlexBasis(FlexBasis.Auto)
+                    .Content(
                         new Grid()
-                        .ColumnDefinitionsFmg(e => e.Star(3).Star(7))
-                        .PaddingFmg(5)
-                        .ChildrenFmg(
+                        .ColumnDefinitions(e => e.Star(3).Star(7))
+                        .Padding(5)
+                        .Children(
                             new Image()
-                            .BindFmg(Image.SourceProperty, nameof(SubCategoryVM.Icon))
-                            .SizeRequestFmg(30,30)
-                            .ColumnFmg(0)
-                            .CenterVerticalFmg(),
+                            .Bind(Image.SourceProperty, nameof(SubCategoryVM.Icon))
+                            .SizeRequest(30,30)
+                            .Column(0)
+                            .CenterVertical(),
 
                             new Label()
-                            .BindFmg(Label.TextProperty, nameof(SubCategoryVM.Name))
-                            .TextColorFmg(Colors.CornflowerBlue)
-                            .FontAttributesFmg(FontAttributes.Bold)
-                            .FontSizeFmg(12)
-                            .ColumnFmg(1)
-                            .FontAutoScalingEnabledFmg(true)
-                            .CenterVerticalFmg()
+                            .Bind(Label.TextProperty, nameof(SubCategoryVM.Name))
+                            .TextColor(Colors.CornflowerBlue)
+                            .FontAttributes(FontAttributes.Bold)
+                            .FontSize(12)
+                            .Column(1)
+                            .FontAutoScalingEnabled(true)
+                            .CenterVertical()
                         )
                     )
                 ))
             )
-            .FillHorizontalFmg()
+            .FillHorizontal()
         );
     }
 }

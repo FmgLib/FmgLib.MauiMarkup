@@ -42,17 +42,17 @@ new Label()
 
 ```csharp
 this
-.BackgroundImageSourceFmg("background.jpg")
-.ContentFmg(
+.BackgroundImageSource("background.jpg")
+.Content(
     new StackLayout()
-    .CenterFmg()
-    .ChildrenFmg(
+    .Center()
+    .Children(
         new ActivityIndicator()
-        .IsRunningFmg(true)
-        .HeightRequestFmg(70)
-        .WidthRequestFmg(70)
-        .CenterFmg()
-        .InvokeOnElementFmg(ai => ai.Loaded += CheckLogin(sender, e))
+        .IsRunning(true)
+        .HeightRequest(70)
+        .WidthRequest(70)
+        .Center()
+        .InvokeOnElement(ai => ai.Loaded += CheckLogin(sender, e))
     )
 );
 ```

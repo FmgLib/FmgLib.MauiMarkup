@@ -17,20 +17,28 @@ public class SourceGenerator : ISourceGenerator
             //BuildExtensions(context, classToMarkup);
             INamedTypeSymbol generatorTypeSymbol = context.Compilation.GetTypeByMetadataName(classToMarkup).EnsureNotNull();
 
-            var mauiMarkupAttribute = generatorTypeSymbol.GetAttributes()
-                .First(_ => _.AttributeClass.EnsureNotNull().Name == "MauiMarkupAttribute" || _.AttributeClass.EnsureNotNull().Name == "MauiMarkup");
+            var mauiMarkupAttributes = generatorTypeSymbol
+                .GetAttributes()
+                .Where(_ => _.AttributeClass.EnsureNotNull().Name == "MauiMarkupAttribute" || _.AttributeClass.EnsureNotNull().Name == "MauiMarkup")
+                .ToList();
 
-            if (mauiMarkupAttribute.ConstructorArguments.Length == 0)
+            foreach (var mauiMarkupAttribute in mauiMarkupAttributes)
             {
-                throw new InvalidOperationException("Invalid MauiMarkupAttribute arguments");
+                if (mauiMarkupAttribute.ConstructorArguments.Length == 0)
+                {
+                    throw new InvalidOperationException("Invalid MauiMarkupAttribute arguments");
+                }
+                foreach (var item in mauiMarkupAttribute.ConstructorArguments)
+                {
+                    var typeMetadataName = ((ISymbol)item.Value.EnsureNotNull()).GetFullyQualifiedName();
+                    var typeToMauiMarkup = context.Compilation.GetTypeByMetadataName(typeMetadataName).EnsureNotNull();
+
+                    var result = new ExtensionGenerator(context, typeToMauiMarkup).Build();
+
+                    if (result.Item3)
+                        context.AddSource(result.Item1, result.Item2);
+                }
             }
-
-            var typeMetadataName = ((ISymbol)mauiMarkupAttribute.ConstructorArguments[0].Value.EnsureNotNull()).GetFullyQualifiedName();
-            var typeToMauiMarkup = context.Compilation.FindNamedType(typeMetadataName).EnsureNotNull();
-
-            var result = new ExtensionGenerator(context, typeToMauiMarkup).Build();
-
-            context.AddSource(result.Item1, result.Item2);
         }
     }
 
@@ -44,15 +52,18 @@ using System;
 
 namespace FmgLib.MauiMarkup
 {
-    [AttributeUsage(AttributeTargets.Class)]
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
     internal class MauiMarkupAttribute : Attribute
     {
-        public MauiMarkupAttribute(Type nativeControlType) 
-        {
-            NativeControlType = nativeControlType;
-        }
+        public MauiMarkupAttribute(Type nativeControlType) { }
 
-        public Type NativeControlType { get; }
+        public MauiMarkupAttribute(Type nativeControlType1, Type nativeControlType2) { }
+
+        public MauiMarkupAttribute(Type nativeControlType1, Type nativeControlType2, Type nativeControlType3) { }
+
+        public MauiMarkupAttribute(Type nativeControlType1, Type nativeControlType2, Type nativeControlType3, Type nativeControlType4) { }
+
+        public MauiMarkupAttribute(Type nativeControlType1, Type nativeControlType2, Type nativeControlType3, Type nativeControlType4, Type nativeControlType5) { }
     }
 }
 "));

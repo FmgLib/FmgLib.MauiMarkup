@@ -42,7 +42,7 @@ public sealed class PropertyThemeBuilder<T> : IPropertyBuilder<T>
         return isSet;
     }
 
-    public PropertyThemeBuilder<T> DefaultFmg(T value)
+    public PropertyThemeBuilder<T> Default(T value)
     {
         if (!defaultIsSet)
         {
@@ -53,7 +53,7 @@ public sealed class PropertyThemeBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyThemeBuilder<T> DefaultFmg(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyThemeBuilder<T> Default(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!defaultIsSet)
         {
@@ -64,7 +64,7 @@ public sealed class PropertyThemeBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyThemeBuilder<T> OnLightFmg(T value)
+    public PropertyThemeBuilder<T> OnLight(T value)
     {
         if (!isSet)
         {
@@ -80,7 +80,7 @@ public sealed class PropertyThemeBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyThemeBuilder<T> OnLightFmg(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyThemeBuilder<T> OnLight(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet)
         {
@@ -94,7 +94,7 @@ public sealed class PropertyThemeBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyThemeBuilder<T> OnDarkFmg(T value)
+    public PropertyThemeBuilder<T> OnDark(T value)
     {
         if (!isSet)
         {
@@ -110,7 +110,7 @@ public sealed class PropertyThemeBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyThemeBuilder<T> OnDarkFmg(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyThemeBuilder<T> OnDark(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet)
         {

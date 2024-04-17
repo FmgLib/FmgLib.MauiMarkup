@@ -1,4 +1,147 @@
-﻿```csharp
+﻿# **FmgLib.MauiMarkup**
+
+FmgLib.MauiMarkup is a specialized library crafted for .NET MAUI. This library allows you to code directly in C# without the necessity of employing XAML language. It provides developers with a straightforward and flexible approach to building user interfaces using C# code. With FmgLib.MauiMarkup, you can now develop application interfaces in a code-focused manner, avoiding the complexities of dealing with XAML files. This library accelerates your development process while enabling you to write more readable and manageable code.
+
+FmgLib.MauiMarkup provides extension methods for all properties provided for a View on the XAML side.
+
+For example:
+
+If we were to write XAML code for the Image class, it would look like this:
+```xaml
+<Image
+    Source="dotnet_bot.png"
+    HeightRequest="100"
+    WidthRequest="150"
+    Grid.Row="0"
+    Grid.Column="1"
+    Grid.RowSpan="2"
+    Opacity=".8" />
+```
+
+The C# equivalent with the help of FmgLib.MauiMarkup would be as follows:
+```csharp
+new Image()
+.Source("dotnet_bot.png")
+.Row(0)
+.Column(1)
+.RowSpan(2)
+.SizeRequest(150,100)
+.Opacity(.8)
+```
+
+Similarly, we can see this for other Views. Let's write a few sample codes as an example:
+```csharp
+new Label()
+.Text("fmglib.mauimarkup")
+.FontSize(12)
+.Row(1)
+.TextColor(Colors.Green)
+.FontAttributes(FontAttributes.Bold)
+.Margin(new Thickness(5,3,0,5))
+```
+
+```csharp
+this
+.BackgroundImageSourceFmg("background.jpg")
+.ContentFmg(
+    new StackLayout()
+    .CenterFmg()
+    .ChildrenFmg(
+        new ActivityIndicator()
+        .IsRunningFmg(true)
+        .HeightRequestFmg(70)
+        .WidthRequestFmg(70)
+        .CenterFmg()
+        .InvokeOnElementFmg(ai => ai.Loaded += CheckLogin(sender, e))
+    )
+);
+```
+
+## Extensions for 3rd Party Controls
+
+FmgLib.MauiMarkup library can also generate extension methods for controls from third-party libraries. To achieve this, you should utilize the MauiMarkupAttribute provided by FmgLib.MauiMarkup.
+
+Simply specify the control for which you want to create extension methods as `[MauiMarkup(typeof(YourControl))]`.
+
+The constructor method of the `MauiMarkup()` attribute automatically generates extension methods for BindableProperties and Events found within the type provided as an argument. **You can provide a minimum of 1 and a maximum of 5 types inside the constructor method.** *Multiple MauiMarkup attributes can be added to a single class.*
+
+Let's look at an example:
+
+```csharp
+using FmgLib.MauiMarkup;
+
+namespace GeneratedExam;
+
+[MauiMarkup(typeof(ZXing.Net.Maui.Controls.BarcodeGeneratorView))]
+public class MyBarcodeGeneratorView { }
+
+[MauiMarkup(typeof(ZXing.Net.Maui.Controls.CameraView))]
+public class MyCameraView { }
+
+
+[MauiMarkup(typeof(ZXing.Net.Maui.Controls.CameraBarcodeReaderView))]
+public class MyCameraBarcodeReaderView { }
+
+[MauiMarkup(typeof(SkiaSharp.Extended.UI.Controls.SKLottieView))]
+public class MySkLottieView { }
+
+```
+
+Or instead of dealing with it like this, it can be used like this:
+
+```csharp
+
+using Microsoft.Extensions.Logging;
+using FmgLib.MauiMarkup;
+using SkiaSharp.Extended.UI.Controls;
+using ZXing.Net.Maui.Controls;
+using UraniumUI.Material.Controls;
+namespace MauiApp1
+{
+    [MauiMarkup(typeof(CameraView))]
+    [MauiMarkup(typeof(SKLottieView), typeof(SKFileLottieImageSource), typeof(DataGrid))]
+    [MauiMarkup(typeof(SKConfettiView), typeof(BarcodeGeneratorView),typeof(InputField),typeof(EditorField),typeof(TextField))]
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                });
+
+#if DEBUG
+    		builder.Logging.AddDebug();
+#endif
+            return builder.Build();
+        }
+    }
+}
+```
+
+For example, let's write the sample code for the **TextField and SKLottieView Controls**:
+
+```csharp
+new TextField()
+.Title("Password")
+.TitleColor(Colors.LightGray)
+.AccentColor(Colors.CadetBlue)
+.TextColor(Colors.White)
+.IsPassword(true),
+
+new SKLottieView()
+.Source(new SKFileLottieImageSource().File("iconapp.json"))
+.RepeatCount(-1)
+.HeightRequest(250)
+.WidthRequest(250)
+```
+
+**Genral Example Code:**
+```csharp
 
 using Microsoft.Maui.Layouts;
 using FmgLib.MauiMarkup;
@@ -64,7 +207,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                         .Margin(new Thickness(10,3,0,0)),
 
                         new Image()
-                        .Source("white_bread.png")
+                        .Source("white_board.png")
                         .Row(0)
                         .Column(1)
                         .RowSpan(2)

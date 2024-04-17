@@ -25,5 +25,5 @@ public sealed class PropertyDynamicResourcesBuilder<T> : IPropertyBuilder<T>
         return false;
     }
 
-    public PropertyDynamicResourcesBuilder<T> DynamicResourceFmg(string key) { this.key = key; return this; }
+    public PropertyDynamicResourcesBuilder<T> DynamicResource(string key) { this.key = key; return this; }
 }

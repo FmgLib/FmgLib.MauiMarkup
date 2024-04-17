@@ -2,7 +2,7 @@
 
 public static partial class GradientBrushExtension
 {
-    public static T GradientStopsFmg<T>(this T self,
+    public static T GradientStops<T>(this T self,
         IList<GradientStop> gradientStops)
         where T : GradientBrush
     {
@@ -11,7 +11,7 @@ public static partial class GradientBrushExtension
         return self;
     }
 
-    public static T GradientStopsFmg<T>(this T self,
+    public static T GradientStops<T>(this T self,
         params GradientStop[] gradientStops)
         where T : GradientBrush
     {
@@ -20,7 +20,7 @@ public static partial class GradientBrushExtension
         return self;
     }
     
-    public static T GradientStopsFmg<T>(this T self, Func<PropertyContext<GradientStopCollection>, IPropertyBuilder<GradientStopCollection>> configure)
+    public static T GradientStops<T>(this T self, Func<PropertyContext<GradientStopCollection>, IPropertyBuilder<GradientStopCollection>> configure)
         where T : GradientBrush
     {
         var context = new PropertyContext<GradientStopCollection>(self, GradientBrush.GradientStopsProperty);
@@ -28,14 +28,14 @@ public static partial class GradientBrushExtension
         return self;
     }
     
-    public static T OnInvalidateGradientBrushRequestedFmg<T>(this T self, EventHandler handler)
+    public static T OnInvalidateGradientBrushRequested<T>(this T self, EventHandler handler)
         where T : GradientBrush
     {
         self.InvalidateGradientBrushRequested += handler;
         return self;
     }
     
-    public static T OnInvalidateGradientBrushRequestedFmg<T>(this T self, Action<T> action)
+    public static T OnInvalidateGradientBrushRequested<T>(this T self, Action<T> action)
         where T : GradientBrush
     {
         self.InvalidateGradientBrushRequested += (o, arg) => action(self);

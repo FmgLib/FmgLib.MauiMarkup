@@ -4,7 +4,7 @@
 
 public static partial class LinearGradientBrushExtension
 {
-    public static T StartPointFmg<T>(this T self,
+    public static T StartPoint<T>(this T self,
         Point startPoint)
         where T : LinearGradientBrush
     {
@@ -12,7 +12,7 @@ public static partial class LinearGradientBrushExtension
         return self;
     }
     
-    public static T StartPointFmg<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
+    public static T StartPoint<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
         where T : LinearGradientBrush
     {
         var context = new PropertyContext<Point>(self, LinearGradientBrush.StartPointProperty);
@@ -20,7 +20,7 @@ public static partial class LinearGradientBrushExtension
         return self;
     }
     
-    public static SettersContext<T> StartPointFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> StartPoint<T>(this SettersContext<T> self,
         Point startPoint)
         where T : LinearGradientBrush
     {
@@ -28,7 +28,7 @@ public static partial class LinearGradientBrushExtension
         return self;
     }
     
-    public static SettersContext<T> StartPointFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
+    public static SettersContext<T> StartPoint<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
         where T : LinearGradientBrush
     {
         var context = new PropertySettersContext<Point>(self.XamlSetters, LinearGradientBrush.StartPointProperty);
@@ -36,7 +36,7 @@ public static partial class LinearGradientBrushExtension
         return self;
     }
     
-    public static T EndPointFmg<T>(this T self,
+    public static T EndPoint<T>(this T self,
         Point endPoint)
         where T : LinearGradientBrush
     {
@@ -44,7 +44,7 @@ public static partial class LinearGradientBrushExtension
         return self;
     }
     
-    public static T EndPointFmg<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
+    public static T EndPoint<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
         where T : LinearGradientBrush
     {
         var context = new PropertyContext<Point>(self, LinearGradientBrush.EndPointProperty);
@@ -52,7 +52,7 @@ public static partial class LinearGradientBrushExtension
         return self;
     }
     
-    public static SettersContext<T> EndPointFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> EndPoint<T>(this SettersContext<T> self,
         Point endPoint)
         where T : LinearGradientBrush
     {
@@ -60,7 +60,7 @@ public static partial class LinearGradientBrushExtension
         return self;
     }
     
-    public static SettersContext<T> EndPointFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
+    public static SettersContext<T> EndPoint<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
         where T : LinearGradientBrush
     {
         var context = new PropertySettersContext<Point>(self.XamlSetters, LinearGradientBrush.EndPointProperty);

@@ -2,7 +2,7 @@
 
 public static partial class BezierSegmentExtension
 {
-    public static T Point1Fmg<T>(this T self,
+    public static T Point1<T>(this T self,
         Point point1)
         where T : Microsoft.Maui.Controls.Shapes.BezierSegment
     {
@@ -10,7 +10,7 @@ public static partial class BezierSegmentExtension
         return self;
     }
     
-    public static T Point1Fmg<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
+    public static T Point1<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
         where T : Microsoft.Maui.Controls.Shapes.BezierSegment
     {
         var context = new PropertyContext<Point>(self, Microsoft.Maui.Controls.Shapes.BezierSegment.Point1Property);
@@ -18,7 +18,7 @@ public static partial class BezierSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> Point1Fmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Point1<T>(this SettersContext<T> self,
         Point point1)
         where T : Microsoft.Maui.Controls.Shapes.BezierSegment
     {
@@ -26,7 +26,7 @@ public static partial class BezierSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> Point1Fmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
+    public static SettersContext<T> Point1<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
         where T : Microsoft.Maui.Controls.Shapes.BezierSegment
     {
         var context = new PropertySettersContext<Point>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.BezierSegment.Point1Property);
@@ -34,7 +34,7 @@ public static partial class BezierSegmentExtension
         return self;
     }
     
-    public static T Point2Fmg<T>(this T self,
+    public static T Point2<T>(this T self,
         Point point2)
         where T : Microsoft.Maui.Controls.Shapes.BezierSegment
     {
@@ -42,7 +42,7 @@ public static partial class BezierSegmentExtension
         return self;
     }
     
-    public static T Point2Fmg<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
+    public static T Point2<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
         where T : Microsoft.Maui.Controls.Shapes.BezierSegment
     {
         var context = new PropertyContext<Point>(self, Microsoft.Maui.Controls.Shapes.BezierSegment.Point2Property);
@@ -50,7 +50,7 @@ public static partial class BezierSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> Point2Fmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Point2<T>(this SettersContext<T> self,
         Point point2)
         where T : Microsoft.Maui.Controls.Shapes.BezierSegment
     {
@@ -58,7 +58,7 @@ public static partial class BezierSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> Point2Fmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
+    public static SettersContext<T> Point2<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
         where T : Microsoft.Maui.Controls.Shapes.BezierSegment
     {
         var context = new PropertySettersContext<Point>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.BezierSegment.Point2Property);
@@ -66,7 +66,7 @@ public static partial class BezierSegmentExtension
         return self;
     }
     
-    public static T Point3Fmg<T>(this T self,
+    public static T Point3<T>(this T self,
         Point point3)
         where T : Microsoft.Maui.Controls.Shapes.BezierSegment
     {
@@ -74,7 +74,7 @@ public static partial class BezierSegmentExtension
         return self;
     }
     
-    public static T Point3Fmg<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
+    public static T Point3<T>(this T self, Func<PropertyContext<Point>, IPropertyBuilder<Point>> configure)
         where T : Microsoft.Maui.Controls.Shapes.BezierSegment
     {
         var context = new PropertyContext<Point>(self, Microsoft.Maui.Controls.Shapes.BezierSegment.Point3Property);
@@ -82,7 +82,7 @@ public static partial class BezierSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> Point3Fmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Point3<T>(this SettersContext<T> self,
         Point point3)
         where T : Microsoft.Maui.Controls.Shapes.BezierSegment
     {
@@ -90,7 +90,7 @@ public static partial class BezierSegmentExtension
         return self;
     }
     
-    public static SettersContext<T> Point3Fmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
+    public static SettersContext<T> Point3<T>(this SettersContext<T> self, Func<PropertySettersContext<Point>, IPropertySettersBuilder<Point>> configure)
         where T : Microsoft.Maui.Controls.Shapes.BezierSegment
     {
         var context = new PropertySettersContext<Point>(self.XamlSetters, Microsoft.Maui.Controls.Shapes.BezierSegment.Point3Property);

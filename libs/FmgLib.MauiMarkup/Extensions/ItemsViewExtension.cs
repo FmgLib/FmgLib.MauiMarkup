@@ -4,7 +4,7 @@
 
 public static partial class ItemsViewExtension
 {
-    public static T EmptyViewFmg<T>(this T self,
+    public static T EmptyView<T>(this T self,
         object emptyView)
         where T : ItemsView
     {
@@ -12,7 +12,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T EmptyViewFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T EmptyView<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : ItemsView
     {
         var context = new PropertyContext<object>(self, ItemsView.EmptyViewProperty);
@@ -20,7 +20,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> EmptyViewFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> EmptyView<T>(this SettersContext<T> self,
         object emptyView)
         where T : ItemsView
     {
@@ -28,7 +28,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> EmptyViewFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> EmptyView<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : ItemsView
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, ItemsView.EmptyViewProperty);
@@ -36,7 +36,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T EmptyViewTemplateFmg<T>(this T self,
+    public static T EmptyViewTemplate<T>(this T self,
         DataTemplate emptyViewTemplate)
         where T : ItemsView
     {
@@ -44,7 +44,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T EmptyViewTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T EmptyViewTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : ItemsView
     {
         var context = new PropertyContext<DataTemplate>(self, ItemsView.EmptyViewTemplateProperty);
@@ -52,7 +52,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> EmptyViewTemplateFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> EmptyViewTemplate<T>(this SettersContext<T> self,
         DataTemplate emptyViewTemplate)
         where T : ItemsView
     {
@@ -60,7 +60,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> EmptyViewTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> EmptyViewTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : ItemsView
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, ItemsView.EmptyViewTemplateProperty);
@@ -68,14 +68,14 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T EmptyViewTemplateFmg<T>(this T self, Func<object> loadTemplate)
+    public static T EmptyViewTemplate<T>(this T self, Func<object> loadTemplate)
         where T : ItemsView
     {
         self.SetValue(ItemsView.EmptyViewTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static T ItemsSourceFmg<T>(this T self,
+    public static T ItemsSource<T>(this T self,
         System.Collections.IEnumerable itemsSource)
         where T : ItemsView
     {
@@ -83,7 +83,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T ItemsSourceFmg<T>(this T self, Func<PropertyContext<System.Collections.IEnumerable>, IPropertyBuilder<System.Collections.IEnumerable>> configure)
+    public static T ItemsSource<T>(this T self, Func<PropertyContext<System.Collections.IEnumerable>, IPropertyBuilder<System.Collections.IEnumerable>> configure)
         where T : ItemsView
     {
         var context = new PropertyContext<System.Collections.IEnumerable>(self, ItemsView.ItemsSourceProperty);
@@ -91,7 +91,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> ItemsSourceFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> ItemsSource<T>(this SettersContext<T> self,
         System.Collections.IEnumerable itemsSource)
         where T : ItemsView
     {
@@ -99,7 +99,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> ItemsSourceFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Collections.IEnumerable>, IPropertySettersBuilder<System.Collections.IEnumerable>> configure)
+    public static SettersContext<T> ItemsSource<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Collections.IEnumerable>, IPropertySettersBuilder<System.Collections.IEnumerable>> configure)
         where T : ItemsView
     {
         var context = new PropertySettersContext<System.Collections.IEnumerable>(self.XamlSetters, ItemsView.ItemsSourceProperty);
@@ -107,7 +107,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T RemainingItemsThresholdReachedCommandFmg<T>(this T self,
+    public static T RemainingItemsThresholdReachedCommand<T>(this T self,
         System.Windows.Input.ICommand remainingItemsThresholdReachedCommand)
         where T : ItemsView
     {
@@ -115,7 +115,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T RemainingItemsThresholdReachedCommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T RemainingItemsThresholdReachedCommand<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : ItemsView
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, ItemsView.RemainingItemsThresholdReachedCommandProperty);
@@ -123,7 +123,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> RemainingItemsThresholdReachedCommandFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> RemainingItemsThresholdReachedCommand<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand remainingItemsThresholdReachedCommand)
         where T : ItemsView
     {
@@ -131,7 +131,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> RemainingItemsThresholdReachedCommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> RemainingItemsThresholdReachedCommand<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : ItemsView
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, ItemsView.RemainingItemsThresholdReachedCommandProperty);
@@ -139,7 +139,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T RemainingItemsThresholdReachedCommandParameterFmg<T>(this T self,
+    public static T RemainingItemsThresholdReachedCommandParameter<T>(this T self,
         object remainingItemsThresholdReachedCommandParameter)
         where T : ItemsView
     {
@@ -147,7 +147,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T RemainingItemsThresholdReachedCommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T RemainingItemsThresholdReachedCommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : ItemsView
     {
         var context = new PropertyContext<object>(self, ItemsView.RemainingItemsThresholdReachedCommandParameterProperty);
@@ -155,7 +155,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> RemainingItemsThresholdReachedCommandParameterFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> RemainingItemsThresholdReachedCommandParameter<T>(this SettersContext<T> self,
         object remainingItemsThresholdReachedCommandParameter)
         where T : ItemsView
     {
@@ -163,7 +163,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> RemainingItemsThresholdReachedCommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> RemainingItemsThresholdReachedCommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : ItemsView
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, ItemsView.RemainingItemsThresholdReachedCommandParameterProperty);
@@ -171,7 +171,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T HorizontalScrollBarVisibilityFmg<T>(this T self,
+    public static T HorizontalScrollBarVisibility<T>(this T self,
         ScrollBarVisibility horizontalScrollBarVisibility)
         where T : ItemsView
     {
@@ -179,7 +179,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T HorizontalScrollBarVisibilityFmg<T>(this T self, Func<PropertyContext<ScrollBarVisibility>, IPropertyBuilder<ScrollBarVisibility>> configure)
+    public static T HorizontalScrollBarVisibility<T>(this T self, Func<PropertyContext<ScrollBarVisibility>, IPropertyBuilder<ScrollBarVisibility>> configure)
         where T : ItemsView
     {
         var context = new PropertyContext<ScrollBarVisibility>(self, ItemsView.HorizontalScrollBarVisibilityProperty);
@@ -187,7 +187,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalScrollBarVisibilityFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> HorizontalScrollBarVisibility<T>(this SettersContext<T> self,
         ScrollBarVisibility horizontalScrollBarVisibility)
         where T : ItemsView
     {
@@ -195,7 +195,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalScrollBarVisibilityFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollBarVisibility>, IPropertySettersBuilder<ScrollBarVisibility>> configure)
+    public static SettersContext<T> HorizontalScrollBarVisibility<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollBarVisibility>, IPropertySettersBuilder<ScrollBarVisibility>> configure)
         where T : ItemsView
     {
         var context = new PropertySettersContext<ScrollBarVisibility>(self.XamlSetters, ItemsView.HorizontalScrollBarVisibilityProperty);
@@ -203,7 +203,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T VerticalScrollBarVisibilityFmg<T>(this T self,
+    public static T VerticalScrollBarVisibility<T>(this T self,
         ScrollBarVisibility verticalScrollBarVisibility)
         where T : ItemsView
     {
@@ -211,7 +211,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T VerticalScrollBarVisibilityFmg<T>(this T self, Func<PropertyContext<ScrollBarVisibility>, IPropertyBuilder<ScrollBarVisibility>> configure)
+    public static T VerticalScrollBarVisibility<T>(this T self, Func<PropertyContext<ScrollBarVisibility>, IPropertyBuilder<ScrollBarVisibility>> configure)
         where T : ItemsView
     {
         var context = new PropertyContext<ScrollBarVisibility>(self, ItemsView.VerticalScrollBarVisibilityProperty);
@@ -219,7 +219,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalScrollBarVisibilityFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> VerticalScrollBarVisibility<T>(this SettersContext<T> self,
         ScrollBarVisibility verticalScrollBarVisibility)
         where T : ItemsView
     {
@@ -227,7 +227,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalScrollBarVisibilityFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollBarVisibility>, IPropertySettersBuilder<ScrollBarVisibility>> configure)
+    public static SettersContext<T> VerticalScrollBarVisibility<T>(this SettersContext<T> self, Func<PropertySettersContext<ScrollBarVisibility>, IPropertySettersBuilder<ScrollBarVisibility>> configure)
         where T : ItemsView
     {
         var context = new PropertySettersContext<ScrollBarVisibility>(self.XamlSetters, ItemsView.VerticalScrollBarVisibilityProperty);
@@ -235,7 +235,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T RemainingItemsThresholdFmg<T>(this T self,
+    public static T RemainingItemsThreshold<T>(this T self,
         int remainingItemsThreshold)
         where T : ItemsView
     {
@@ -243,7 +243,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T RemainingItemsThresholdFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+    public static T RemainingItemsThreshold<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
         where T : ItemsView
     {
         var context = new PropertyContext<int>(self, ItemsView.RemainingItemsThresholdProperty);
@@ -251,7 +251,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> RemainingItemsThresholdFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> RemainingItemsThreshold<T>(this SettersContext<T> self,
         int remainingItemsThreshold)
         where T : ItemsView
     {
@@ -259,7 +259,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> RemainingItemsThresholdFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+    public static SettersContext<T> RemainingItemsThreshold<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
         where T : ItemsView
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, ItemsView.RemainingItemsThresholdProperty);
@@ -267,7 +267,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T ItemTemplateFmg<T>(this T self,
+    public static T ItemTemplate<T>(this T self,
         DataTemplate itemTemplate)
         where T : ItemsView
     {
@@ -275,7 +275,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T ItemTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T ItemTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : ItemsView
     {
         var context = new PropertyContext<DataTemplate>(self, ItemsView.ItemTemplateProperty);
@@ -283,7 +283,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> ItemTemplateFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> ItemTemplate<T>(this SettersContext<T> self,
         DataTemplate itemTemplate)
         where T : ItemsView
     {
@@ -291,7 +291,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> ItemTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> ItemTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : ItemsView
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, ItemsView.ItemTemplateProperty);
@@ -299,14 +299,14 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T ItemTemplateFmg<T>(this T self, Func<object> loadTemplate)
+    public static T ItemTemplate<T>(this T self, Func<object> loadTemplate)
         where T : ItemsView
     {
         self.SetValue(ItemsView.ItemTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static T ItemsUpdatingScrollModeFmg<T>(this T self,
+    public static T ItemsUpdatingScrollMode<T>(this T self,
         ItemsUpdatingScrollMode itemsUpdatingScrollMode)
         where T : ItemsView
     {
@@ -314,7 +314,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T ItemsUpdatingScrollModeFmg<T>(this T self, Func<PropertyContext<ItemsUpdatingScrollMode>, IPropertyBuilder<ItemsUpdatingScrollMode>> configure)
+    public static T ItemsUpdatingScrollMode<T>(this T self, Func<PropertyContext<ItemsUpdatingScrollMode>, IPropertyBuilder<ItemsUpdatingScrollMode>> configure)
         where T : ItemsView
     {
         var context = new PropertyContext<ItemsUpdatingScrollMode>(self, ItemsView.ItemsUpdatingScrollModeProperty);
@@ -322,7 +322,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> ItemsUpdatingScrollModeFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> ItemsUpdatingScrollMode<T>(this SettersContext<T> self,
         ItemsUpdatingScrollMode itemsUpdatingScrollMode)
         where T : ItemsView
     {
@@ -330,7 +330,7 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> ItemsUpdatingScrollModeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ItemsUpdatingScrollMode>, IPropertySettersBuilder<ItemsUpdatingScrollMode>> configure)
+    public static SettersContext<T> ItemsUpdatingScrollMode<T>(this SettersContext<T> self, Func<PropertySettersContext<ItemsUpdatingScrollMode>, IPropertySettersBuilder<ItemsUpdatingScrollMode>> configure)
         where T : ItemsView
     {
         var context = new PropertySettersContext<ItemsUpdatingScrollMode>(self.XamlSetters, ItemsView.ItemsUpdatingScrollModeProperty);
@@ -338,42 +338,42 @@ public static partial class ItemsViewExtension
         return self;
     }
     
-    public static T OnScrollToRequestedFmg<T>(this T self, EventHandler<ScrollToRequestEventArgs> handler)
+    public static T OnScrollToRequested<T>(this T self, EventHandler<ScrollToRequestEventArgs> handler)
         where T : ItemsView
     {
         self.ScrollToRequested += handler;
         return self;
     }
     
-    public static T OnScrollToRequestedFmg<T>(this T self, Action<T> action)
+    public static T OnScrollToRequested<T>(this T self, Action<T> action)
         where T : ItemsView
     {
         self.ScrollToRequested += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnScrolledFmg<T>(this T self, EventHandler<ItemsViewScrolledEventArgs> handler)
+    public static T OnScrolled<T>(this T self, EventHandler<ItemsViewScrolledEventArgs> handler)
         where T : ItemsView
     {
         self.Scrolled += handler;
         return self;
     }
     
-    public static T OnScrolledFmg<T>(this T self, Action<T> action)
+    public static T OnScrolled<T>(this T self, Action<T> action)
         where T : ItemsView
     {
         self.Scrolled += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnRemainingItemsThresholdReachedFmg<T>(this T self, EventHandler handler)
+    public static T OnRemainingItemsThresholdReached<T>(this T self, EventHandler handler)
         where T : ItemsView
     {
         self.RemainingItemsThresholdReached += handler;
         return self;
     }
     
-    public static T OnRemainingItemsThresholdReachedFmg<T>(this T self, Action<T> action)
+    public static T OnRemainingItemsThresholdReached<T>(this T self, Action<T> action)
         where T : ItemsView
     {
         self.RemainingItemsThresholdReached += (o, arg) => action(self);

@@ -4,14 +4,14 @@
 
 public static partial class VisualStateExtension
 {
-    public static VisualState NameFmg(this VisualState self,
+    public static VisualState Name(this VisualState self,
         string name)
     {
         self.Name = name;
         return self;
     }
     
-    public static VisualState SettersFmg(this VisualState self,
+    public static VisualState Setters(this VisualState self,
         IList<Setter> setters)
     {
         foreach (var item in setters)
@@ -19,7 +19,7 @@ public static partial class VisualStateExtension
         return self;
     }
 
-    public static VisualState SettersFmg(this VisualState self,
+    public static VisualState Setters(this VisualState self,
         params Setter[] setters)
     {
         foreach (var item in setters)
@@ -27,7 +27,7 @@ public static partial class VisualStateExtension
         return self;
     }
 
-    public static T TargetNameFmg<T>(this T self, string targetName)
+    public static T TargetName<T>(this T self, string targetName)
             where T : IList<Setter>
     {
         foreach (var setter in self)
@@ -35,7 +35,7 @@ public static partial class VisualStateExtension
         return self;
     }
 
-    public static VisualState StateTriggersFmg(this VisualState self,
+    public static VisualState StateTriggers(this VisualState self,
         IList<StateTriggerBase> stateTriggers)
     {
         foreach (var item in stateTriggers)
@@ -43,7 +43,7 @@ public static partial class VisualStateExtension
         return self;
     }
 
-    public static VisualState StateTriggersFmg(this VisualState self,
+    public static VisualState StateTriggers(this VisualState self,
         params StateTriggerBase[] stateTriggers)
     {
         foreach (var item in stateTriggers)
@@ -51,7 +51,7 @@ public static partial class VisualStateExtension
         return self;
     }
     
-    public static VisualState TargetTypeFmg(this VisualState self,
+    public static VisualState TargetType(this VisualState self,
         Type targetType)
     {
         self.TargetType = targetType;

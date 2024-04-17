@@ -36,7 +36,7 @@ public sealed class PropertySettersThemeBuilder<T> : IPropertySettersBuilder<T>
     }
 
 
-    public PropertySettersThemeBuilder<T> DefaultFmg(T value)
+    public PropertySettersThemeBuilder<T> Default(T value)
     {
         if (!defaultIsSet)
         {
@@ -46,7 +46,7 @@ public sealed class PropertySettersThemeBuilder<T> : IPropertySettersBuilder<T>
         return this;
     }
 
-    public PropertySettersThemeBuilder<T> DefaultFmg(Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
+    public PropertySettersThemeBuilder<T> Default(Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
     {
         if (!defaultIsSet)
         {
@@ -57,7 +57,7 @@ public sealed class PropertySettersThemeBuilder<T> : IPropertySettersBuilder<T>
     }
 
 
-    public PropertySettersThemeBuilder<T> OnLightFmg(T value)
+    public PropertySettersThemeBuilder<T> OnLight(T value)
     {
         if (!isSet && Application.Current?.RequestedTheme == AppTheme.Light)
         {
@@ -68,7 +68,7 @@ public sealed class PropertySettersThemeBuilder<T> : IPropertySettersBuilder<T>
         return this;
     }
 
-    public PropertySettersThemeBuilder<T> OnLightFmg(Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
+    public PropertySettersThemeBuilder<T> OnLight(Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
     {
         if (!isSet && Application.Current?.RequestedTheme == AppTheme.Light)
             isSet = configure(Context).Build();
@@ -76,7 +76,7 @@ public sealed class PropertySettersThemeBuilder<T> : IPropertySettersBuilder<T>
     }
 
 
-    public PropertySettersThemeBuilder<T> OnDarkFmg(T value)
+    public PropertySettersThemeBuilder<T> OnDark(T value)
     {
         if (!isSet && Application.Current?.RequestedTheme == AppTheme.Dark)
         {
@@ -87,7 +87,7 @@ public sealed class PropertySettersThemeBuilder<T> : IPropertySettersBuilder<T>
         return this;
     }
 
-    public PropertySettersThemeBuilder<T> OnDarkFmg(Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
+    public PropertySettersThemeBuilder<T> OnDark(Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
     {
         if (!isSet && Application.Current?.RequestedTheme == AppTheme.Dark)
             isSet = configure(Context).Build();

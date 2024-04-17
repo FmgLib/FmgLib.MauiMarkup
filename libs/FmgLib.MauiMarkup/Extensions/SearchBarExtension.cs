@@ -4,7 +4,7 @@
 
 public static partial class SearchBarExtension
 {
-    public static T CancelButtonColorFmg<T>(this T self,
+    public static T CancelButtonColor<T>(this T self,
         Color cancelButtonColor)
         where T : SearchBar
     {
@@ -12,7 +12,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T CancelButtonColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T CancelButtonColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : SearchBar
     {
         var context = new PropertyContext<Color>(self, SearchBar.CancelButtonColorProperty);
@@ -20,7 +20,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> CancelButtonColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CancelButtonColor<T>(this SettersContext<T> self,
         Color cancelButtonColor)
         where T : SearchBar
     {
@@ -28,7 +28,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> CancelButtonColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> CancelButtonColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : SearchBar
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, SearchBar.CancelButtonColorProperty);
@@ -36,7 +36,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static Task<bool> AnimateCancelButtonColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateCancelButtonColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : SearchBar
     {
         Color fromValue = self.CancelButtonColor;
@@ -45,7 +45,7 @@ public static partial class SearchBarExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateCancelButtonColorTo", transform, callback, length, easing);
     }
     
-    public static T HorizontalTextAlignmentFmg<T>(this T self,
+    public static T HorizontalTextAlignment<T>(this T self,
         TextAlignment horizontalTextAlignment)
         where T : SearchBar
     {
@@ -53,7 +53,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T HorizontalTextAlignmentFmg<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
+    public static T HorizontalTextAlignment<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
         where T : SearchBar
     {
         var context = new PropertyContext<TextAlignment>(self, SearchBar.HorizontalTextAlignmentProperty);
@@ -61,7 +61,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalTextAlignmentFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> HorizontalTextAlignment<T>(this SettersContext<T> self,
         TextAlignment horizontalTextAlignment)
         where T : SearchBar
     {
@@ -69,7 +69,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> HorizontalTextAlignmentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
+    public static SettersContext<T> HorizontalTextAlignment<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
         where T : SearchBar
     {
         var context = new PropertySettersContext<TextAlignment>(self.XamlSetters, SearchBar.HorizontalTextAlignmentProperty);
@@ -77,7 +77,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T VerticalTextAlignmentFmg<T>(this T self,
+    public static T VerticalTextAlignment<T>(this T self,
         TextAlignment verticalTextAlignment)
         where T : SearchBar
     {
@@ -85,7 +85,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T VerticalTextAlignmentFmg<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
+    public static T VerticalTextAlignment<T>(this T self, Func<PropertyContext<TextAlignment>, IPropertyBuilder<TextAlignment>> configure)
         where T : SearchBar
     {
         var context = new PropertyContext<TextAlignment>(self, SearchBar.VerticalTextAlignmentProperty);
@@ -93,7 +93,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalTextAlignmentFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> VerticalTextAlignment<T>(this SettersContext<T> self,
         TextAlignment verticalTextAlignment)
         where T : SearchBar
     {
@@ -101,7 +101,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> VerticalTextAlignmentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
+    public static SettersContext<T> VerticalTextAlignment<T>(this SettersContext<T> self, Func<PropertySettersContext<TextAlignment>, IPropertySettersBuilder<TextAlignment>> configure)
         where T : SearchBar
     {
         var context = new PropertySettersContext<TextAlignment>(self.XamlSetters, SearchBar.VerticalTextAlignmentProperty);
@@ -109,7 +109,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T SearchCommandFmg<T>(this T self,
+    public static T SearchCommand<T>(this T self,
         System.Windows.Input.ICommand searchCommand)
         where T : SearchBar
     {
@@ -117,7 +117,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T SearchCommandFmg<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
+    public static T SearchCommand<T>(this T self, Func<PropertyContext<System.Windows.Input.ICommand>, IPropertyBuilder<System.Windows.Input.ICommand>> configure)
         where T : SearchBar
     {
         var context = new PropertyContext<System.Windows.Input.ICommand>(self, SearchBar.SearchCommandProperty);
@@ -125,7 +125,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> SearchCommandFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> SearchCommand<T>(this SettersContext<T> self,
         System.Windows.Input.ICommand searchCommand)
         where T : SearchBar
     {
@@ -133,7 +133,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> SearchCommandFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
+    public static SettersContext<T> SearchCommand<T>(this SettersContext<T> self, Func<PropertySettersContext<System.Windows.Input.ICommand>, IPropertySettersBuilder<System.Windows.Input.ICommand>> configure)
         where T : SearchBar
     {
         var context = new PropertySettersContext<System.Windows.Input.ICommand>(self.XamlSetters, SearchBar.SearchCommandProperty);
@@ -141,7 +141,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T SearchCommandParameterFmg<T>(this T self,
+    public static T SearchCommandParameter<T>(this T self,
         object searchCommandParameter)
         where T : SearchBar
     {
@@ -149,7 +149,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T SearchCommandParameterFmg<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
+    public static T SearchCommandParameter<T>(this T self, Func<PropertyContext<object>, IPropertyBuilder<object>> configure)
         where T : SearchBar
     {
         var context = new PropertyContext<object>(self, SearchBar.SearchCommandParameterProperty);
@@ -157,7 +157,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> SearchCommandParameterFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> SearchCommandParameter<T>(this SettersContext<T> self,
         object searchCommandParameter)
         where T : SearchBar
     {
@@ -165,7 +165,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> SearchCommandParameterFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
+    public static SettersContext<T> SearchCommandParameter<T>(this SettersContext<T> self, Func<PropertySettersContext<object>, IPropertySettersBuilder<object>> configure)
         where T : SearchBar
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, SearchBar.SearchCommandParameterProperty);
@@ -173,7 +173,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T FontAttributesFmg<T>(this T self,
+    public static T FontAttributes<T>(this T self,
         FontAttributes fontAttributes)
         where T : SearchBar
     {
@@ -181,7 +181,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T FontAttributesFmg<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
+    public static T FontAttributes<T>(this T self, Func<PropertyContext<FontAttributes>, IPropertyBuilder<FontAttributes>> configure)
         where T : SearchBar
     {
         var context = new PropertyContext<FontAttributes>(self, SearchBar.FontAttributesProperty);
@@ -189,7 +189,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self,
         FontAttributes fontAttributes)
         where T : SearchBar
     {
@@ -197,7 +197,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> FontAttributesFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
+    public static SettersContext<T> FontAttributes<T>(this SettersContext<T> self, Func<PropertySettersContext<FontAttributes>, IPropertySettersBuilder<FontAttributes>> configure)
         where T : SearchBar
     {
         var context = new PropertySettersContext<FontAttributes>(self.XamlSetters, SearchBar.FontAttributesProperty);
@@ -205,7 +205,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T IsTextPredictionEnabledFmg<T>(this T self,
+    public static T IsTextPredictionEnabled<T>(this T self,
         bool isTextPredictionEnabled)
         where T : SearchBar
     {
@@ -213,7 +213,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T IsTextPredictionEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsTextPredictionEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : SearchBar
     {
         var context = new PropertyContext<bool>(self, SearchBar.IsTextPredictionEnabledProperty);
@@ -221,7 +221,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> IsTextPredictionEnabledFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsTextPredictionEnabled<T>(this SettersContext<T> self,
         bool isTextPredictionEnabled)
         where T : SearchBar
     {
@@ -229,7 +229,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> IsTextPredictionEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsTextPredictionEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : SearchBar
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, SearchBar.IsTextPredictionEnabledProperty);
@@ -237,7 +237,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T CursorPositionFmg<T>(this T self,
+    public static T CursorPosition<T>(this T self,
         int cursorPosition)
         where T : SearchBar
     {
@@ -245,7 +245,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T CursorPositionFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+    public static T CursorPosition<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
         where T : SearchBar
     {
         var context = new PropertyContext<int>(self, SearchBar.CursorPositionProperty);
@@ -253,7 +253,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> CursorPositionFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CursorPosition<T>(this SettersContext<T> self,
         int cursorPosition)
         where T : SearchBar
     {
@@ -261,7 +261,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> CursorPositionFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+    public static SettersContext<T> CursorPosition<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
         where T : SearchBar
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, SearchBar.CursorPositionProperty);
@@ -269,7 +269,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T SelectionLengthFmg<T>(this T self,
+    public static T SelectionLength<T>(this T self,
         int selectionLength)
         where T : SearchBar
     {
@@ -277,7 +277,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T SelectionLengthFmg<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
+    public static T SelectionLength<T>(this T self, Func<PropertyContext<int>, IPropertyBuilder<int>> configure)
         where T : SearchBar
     {
         var context = new PropertyContext<int>(self, SearchBar.SelectionLengthProperty);
@@ -285,7 +285,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> SelectionLengthFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> SelectionLength<T>(this SettersContext<T> self,
         int selectionLength)
         where T : SearchBar
     {
@@ -293,7 +293,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> SelectionLengthFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
+    public static SettersContext<T> SelectionLength<T>(this SettersContext<T> self, Func<PropertySettersContext<int>, IPropertySettersBuilder<int>> configure)
         where T : SearchBar
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, SearchBar.SelectionLengthProperty);
@@ -301,7 +301,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T FontFamilyFmg<T>(this T self,
+    public static T FontFamily<T>(this T self,
         string fontFamily)
         where T : SearchBar
     {
@@ -309,7 +309,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T FontFamilyFmg<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T FontFamily<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : SearchBar
     {
         var context = new PropertyContext<string>(self, SearchBar.FontFamilyProperty);
@@ -317,7 +317,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self,
         string fontFamily)
         where T : SearchBar
     {
@@ -325,7 +325,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> FontFamilyFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> FontFamily<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : SearchBar
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, SearchBar.FontFamilyProperty);
@@ -333,7 +333,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T FontSizeFmg<T>(this T self,
+    public static T FontSize<T>(this T self,
         double fontSize)
         where T : SearchBar
     {
@@ -341,7 +341,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T FontSizeFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T FontSize<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : SearchBar
     {
         var context = new PropertyContext<double>(self, SearchBar.FontSizeProperty);
@@ -349,7 +349,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontSize<T>(this SettersContext<T> self,
         double fontSize)
         where T : SearchBar
     {
@@ -357,7 +357,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> FontSizeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> FontSize<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : SearchBar
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, SearchBar.FontSizeProperty);
@@ -365,7 +365,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static Task<bool> AnimateFontSizeToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateFontSizeTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : SearchBar
     {
         double fromValue = self.FontSize;
@@ -374,7 +374,7 @@ public static partial class SearchBarExtension
         return Transformations.AnimateAsync<double>(self, "AnimateFontSizeTo", transform, callback, length, easing);
     }
     
-    public static T FontAutoScalingEnabledFmg<T>(this T self,
+    public static T FontAutoScalingEnabled<T>(this T self,
         bool fontAutoScalingEnabled)
         where T : SearchBar
     {
@@ -382,7 +382,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T FontAutoScalingEnabledFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T FontAutoScalingEnabled<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : SearchBar
     {
         var context = new PropertyContext<bool>(self, SearchBar.FontAutoScalingEnabledProperty);
@@ -390,7 +390,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self,
         bool fontAutoScalingEnabled)
         where T : SearchBar
     {
@@ -398,7 +398,7 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static SettersContext<T> FontAutoScalingEnabledFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> FontAutoScalingEnabled<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : SearchBar
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, SearchBar.FontAutoScalingEnabledProperty);
@@ -406,14 +406,14 @@ public static partial class SearchBarExtension
         return self;
     }
     
-    public static T OnSearchButtonPressedFmg<T>(this T self, EventHandler handler)
+    public static T OnSearchButtonPressed<T>(this T self, EventHandler handler)
         where T : SearchBar
     {
         self.SearchButtonPressed += handler;
         return self;
     }
     
-    public static T OnSearchButtonPressedFmg<T>(this T self, Action<T> action)
+    public static T OnSearchButtonPressed<T>(this T self, Action<T> action)
         where T : SearchBar
     {
         self.SearchButtonPressed += (o, arg) => action(self);
@@ -421,21 +421,21 @@ public static partial class SearchBarExtension
     }
     
 
-    public static T TextCenterHorizontalFmg<T>(this T self)
+    public static T TextCenterHorizontal<T>(this T self)
         where T : SearchBar
     {
         self.SetValue(SearchBar.HorizontalTextAlignmentProperty, TextAlignment.Center);
         return self;
     }
 
-    public static T TextCenterVerticalFmg<T>(this T self)
+    public static T TextCenterVertical<T>(this T self)
         where T : SearchBar
     {
         self.SetValue(SearchBar.VerticalTextAlignmentProperty, TextAlignment.Center);
         return self;
     }
 
-    public static T TextCenterFmg<T>(this T self)
+    public static T TextCenter<T>(this T self)
         where T : SearchBar
     {
         self.SetValue(SearchBar.HorizontalTextAlignmentProperty, TextAlignment.Center);
@@ -443,21 +443,21 @@ public static partial class SearchBarExtension
         return self;
     }
 
-    public static T TextTopFmg<T>(this T self)
+    public static T TextTop<T>(this T self)
         where T : SearchBar
     {
         self.SetValue(SearchBar.VerticalTextAlignmentProperty, TextAlignment.Start);
         return self;
     }
 
-    public static T TextBottomFmg<T>(this T self)
+    public static T TextBottom<T>(this T self)
         where T : SearchBar, Microsoft.Maui.ITextAlignment
     {
         self.SetValue(SearchBar.VerticalTextAlignmentProperty, TextAlignment.End);
         return self;
     }
 
-    public static T TextTopStartFmg<T>(this T self)
+    public static T TextTopStart<T>(this T self)
         where T : SearchBar
     {
         self.SetValue(SearchBar.VerticalTextAlignmentProperty, TextAlignment.Start);
@@ -465,7 +465,7 @@ public static partial class SearchBarExtension
         return self;
     }
 
-    public static T TextBottomStartFmg<T>(this T self)
+    public static T TextBottomStart<T>(this T self)
         where T : SearchBar
     {
         self.SetValue(SearchBar.VerticalTextAlignmentProperty, TextAlignment.End);
@@ -473,7 +473,7 @@ public static partial class SearchBarExtension
         return self;
     }
 
-    public static T TextTopEndFmg<T>(this T self)
+    public static T TextTopEnd<T>(this T self)
         where T : SearchBar
     {
         self.SetValue(SearchBar.VerticalTextAlignmentProperty, TextAlignment.Start);
@@ -481,7 +481,7 @@ public static partial class SearchBarExtension
         return self;
     }
 
-    public static T TextBottomEndFmg<T>(this T self)
+    public static T TextBottomEnd<T>(this T self)
         where T : SearchBar
     {
         self.SetValue(SearchBar.VerticalTextAlignmentProperty, TextAlignment.End);
@@ -489,14 +489,14 @@ public static partial class SearchBarExtension
         return self;
     }
 
-    public static T TextStartFmg<T>(this T self)
+    public static T TextStart<T>(this T self)
         where T : SearchBar
     {
         self.SetValue(SearchBar.HorizontalTextAlignmentProperty, TextAlignment.Start);
         return self;
     }
 
-    public static T TextEndFmg<T>(this T self)
+    public static T TextEnd<T>(this T self)
         where T : SearchBar
     {
         self.SetValue(SearchBar.HorizontalTextAlignmentProperty, TextAlignment.End);

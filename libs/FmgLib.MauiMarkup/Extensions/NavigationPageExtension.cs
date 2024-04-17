@@ -4,7 +4,7 @@
 
 public static partial class NavigationPageExtension
 {
-    public static T BarBackgroundColorFmg<T>(this T self,
+    public static T BarBackgroundColor<T>(this T self,
         Color barBackgroundColor)
         where T : NavigationPage
     {
@@ -12,7 +12,7 @@ public static partial class NavigationPageExtension
         return self;
     }
     
-    public static T BarBackgroundColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T BarBackgroundColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : NavigationPage
     {
         var context = new PropertyContext<Color>(self, NavigationPage.BarBackgroundColorProperty);
@@ -20,7 +20,7 @@ public static partial class NavigationPageExtension
         return self;
     }
     
-    public static SettersContext<T> BarBackgroundColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> BarBackgroundColor<T>(this SettersContext<T> self,
         Color barBackgroundColor)
         where T : NavigationPage
     {
@@ -28,7 +28,7 @@ public static partial class NavigationPageExtension
         return self;
     }
     
-    public static SettersContext<T> BarBackgroundColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> BarBackgroundColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : NavigationPage
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, NavigationPage.BarBackgroundColorProperty);
@@ -36,7 +36,7 @@ public static partial class NavigationPageExtension
         return self;
     }
     
-    public static Task<bool> AnimateBarBackgroundColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateBarBackgroundColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : NavigationPage
     {
         Color fromValue = self.BarBackgroundColor;
@@ -45,7 +45,7 @@ public static partial class NavigationPageExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateBarBackgroundColorTo", transform, callback, length, easing);
     }
     
-    public static T BarBackgroundFmg<T>(this T self,
+    public static T BarBackground<T>(this T self,
         Brush barBackground)
         where T : NavigationPage
     {
@@ -53,7 +53,7 @@ public static partial class NavigationPageExtension
         return self;
     }
     
-    public static T BarBackgroundFmg<T>(this T self, Func<PropertyContext<Brush>, IPropertyBuilder<Brush>> configure)
+    public static T BarBackground<T>(this T self, Func<PropertyContext<Brush>, IPropertyBuilder<Brush>> configure)
         where T : NavigationPage
     {
         var context = new PropertyContext<Brush>(self, NavigationPage.BarBackgroundProperty);
@@ -61,7 +61,7 @@ public static partial class NavigationPageExtension
         return self;
     }
     
-    public static SettersContext<T> BarBackgroundFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> BarBackground<T>(this SettersContext<T> self,
         Brush barBackground)
         where T : NavigationPage
     {
@@ -69,7 +69,7 @@ public static partial class NavigationPageExtension
         return self;
     }
     
-    public static SettersContext<T> BarBackgroundFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush>, IPropertySettersBuilder<Brush>> configure)
+    public static SettersContext<T> BarBackground<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush>, IPropertySettersBuilder<Brush>> configure)
         where T : NavigationPage
     {
         var context = new PropertySettersContext<Brush>(self.XamlSetters, NavigationPage.BarBackgroundProperty);
@@ -77,7 +77,7 @@ public static partial class NavigationPageExtension
         return self;
     }
     
-    public static T BarTextColorFmg<T>(this T self,
+    public static T BarTextColor<T>(this T self,
         Color barTextColor)
         where T : NavigationPage
     {
@@ -85,7 +85,7 @@ public static partial class NavigationPageExtension
         return self;
     }
     
-    public static T BarTextColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T BarTextColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : NavigationPage
     {
         var context = new PropertyContext<Color>(self, NavigationPage.BarTextColorProperty);
@@ -93,7 +93,7 @@ public static partial class NavigationPageExtension
         return self;
     }
     
-    public static SettersContext<T> BarTextColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> BarTextColor<T>(this SettersContext<T> self,
         Color barTextColor)
         where T : NavigationPage
     {
@@ -101,7 +101,7 @@ public static partial class NavigationPageExtension
         return self;
     }
     
-    public static SettersContext<T> BarTextColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> BarTextColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : NavigationPage
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, NavigationPage.BarTextColorProperty);
@@ -109,7 +109,7 @@ public static partial class NavigationPageExtension
         return self;
     }
     
-    public static Task<bool> AnimateBarTextColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateBarTextColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : NavigationPage
     {
         Color fromValue = self.BarTextColor;
@@ -118,42 +118,42 @@ public static partial class NavigationPageExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateBarTextColorTo", transform, callback, length, easing);
     }
     
-    public static T OnPoppedFmg<T>(this T self, EventHandler<NavigationEventArgs> handler)
+    public static T OnPopped<T>(this T self, EventHandler<NavigationEventArgs> handler)
         where T : NavigationPage
     {
         self.Popped += handler;
         return self;
     }
     
-    public static T OnPoppedFmg<T>(this T self, Action<T> action)
+    public static T OnPopped<T>(this T self, Action<T> action)
         where T : NavigationPage
     {
         self.Popped += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnPoppedToRootFmg<T>(this T self, EventHandler<NavigationEventArgs> handler)
+    public static T OnPoppedToRoot<T>(this T self, EventHandler<NavigationEventArgs> handler)
         where T : NavigationPage
     {
         self.PoppedToRoot += handler;
         return self;
     }
     
-    public static T OnPoppedToRootFmg<T>(this T self, Action<T> action)
+    public static T OnPoppedToRoot<T>(this T self, Action<T> action)
         where T : NavigationPage
     {
         self.PoppedToRoot += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnPushedFmg<T>(this T self, EventHandler<NavigationEventArgs> handler)
+    public static T OnPushed<T>(this T self, EventHandler<NavigationEventArgs> handler)
         where T : NavigationPage
     {
         self.Pushed += handler;
         return self;
     }
     
-    public static T OnPushedFmg<T>(this T self, Action<T> action)
+    public static T OnPushed<T>(this T self, Action<T> action)
         where T : NavigationPage
     {
         self.Pushed += (o, arg) => action(self);

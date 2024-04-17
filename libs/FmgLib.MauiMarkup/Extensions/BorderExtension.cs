@@ -3,7 +3,7 @@
 
 public static partial class BorderExtension
 {
-    public static T ContentFmg<T>(this T self,
+    public static T Content<T>(this T self,
         View? content)
         where T : Border
     {
@@ -11,7 +11,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T ContentFmg<T>(this T self, Func<PropertyContext<View?>, IPropertyBuilder<View?>> configure)
+    public static T Content<T>(this T self, Func<PropertyContext<View?>, IPropertyBuilder<View?>> configure)
         where T : Border
     {
         var context = new PropertyContext<View?>(self, Border.ContentProperty);
@@ -19,7 +19,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> ContentFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Content<T>(this SettersContext<T> self,
         View? content)
         where T : Border
     {
@@ -27,7 +27,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> ContentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<View?>, IPropertySettersBuilder<View?>> configure)
+    public static SettersContext<T> Content<T>(this SettersContext<T> self, Func<PropertySettersContext<View?>, IPropertySettersBuilder<View?>> configure)
         where T : Border
     {
         var context = new PropertySettersContext<View?>(self.XamlSetters, Border.ContentProperty);
@@ -35,7 +35,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T PaddingFmg<T>(this T self,
+    public static T Padding<T>(this T self,
         Thickness padding)
         where T : Border
     {
@@ -43,7 +43,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T PaddingFmg<T>(this T self, Func<PropertyContext<Thickness>, IPropertyBuilder<Thickness>> configure)
+    public static T Padding<T>(this T self, Func<PropertyContext<Thickness>, IPropertyBuilder<Thickness>> configure)
         where T : Border
     {
         var context = new PropertyContext<Thickness>(self, Border.PaddingProperty);
@@ -51,7 +51,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> PaddingFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Padding<T>(this SettersContext<T> self,
         Thickness padding)
         where T : Border
     {
@@ -59,7 +59,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> PaddingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Thickness>, IPropertySettersBuilder<Thickness>> configure)
+    public static SettersContext<T> Padding<T>(this SettersContext<T> self, Func<PropertySettersContext<Thickness>, IPropertySettersBuilder<Thickness>> configure)
         where T : Border
     {
         var context = new PropertySettersContext<Thickness>(self.XamlSetters, Border.PaddingProperty);
@@ -67,7 +67,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T StrokeShapeFmg<T>(this T self,
+    public static T StrokeShape<T>(this T self,
         IShape? strokeShape)
         where T : Border
     {
@@ -75,7 +75,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T StrokeShapeFmg<T>(this T self, Func<PropertyContext<IShape?>, IPropertyBuilder<IShape?>> configure)
+    public static T StrokeShape<T>(this T self, Func<PropertyContext<IShape?>, IPropertyBuilder<IShape?>> configure)
         where T : Border
     {
         var context = new PropertyContext<IShape?>(self, Border.StrokeShapeProperty);
@@ -83,7 +83,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeShapeFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> StrokeShape<T>(this SettersContext<T> self,
         IShape? strokeShape)
         where T : Border
     {
@@ -91,7 +91,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeShapeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<IShape?>, IPropertySettersBuilder<IShape?>> configure)
+    public static SettersContext<T> StrokeShape<T>(this SettersContext<T> self, Func<PropertySettersContext<IShape?>, IPropertySettersBuilder<IShape?>> configure)
         where T : Border
     {
         var context = new PropertySettersContext<IShape?>(self.XamlSetters, Border.StrokeShapeProperty);
@@ -99,7 +99,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T StrokeFmg<T>(this T self,
+    public static T Stroke<T>(this T self,
         Brush? stroke)
         where T : Border
     {
@@ -107,7 +107,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T StrokeFmg<T>(this T self, Func<PropertyContext<Brush?>, IPropertyBuilder<Brush?>> configure)
+    public static T Stroke<T>(this T self, Func<PropertyContext<Brush?>, IPropertyBuilder<Brush?>> configure)
         where T : Border
     {
         var context = new PropertyContext<Brush?>(self, Border.StrokeProperty);
@@ -115,7 +115,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Stroke<T>(this SettersContext<T> self,
         Brush? stroke)
         where T : Border
     {
@@ -123,7 +123,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush?>, IPropertySettersBuilder<Brush?>> configure)
+    public static SettersContext<T> Stroke<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush?>, IPropertySettersBuilder<Brush?>> configure)
         where T : Border
     {
         var context = new PropertySettersContext<Brush?>(self.XamlSetters, Border.StrokeProperty);
@@ -131,7 +131,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T StrokeThicknessFmg<T>(this T self,
+    public static T StrokeThickness<T>(this T self,
         double strokeThickness)
         where T : Border
     {
@@ -139,7 +139,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T StrokeThicknessFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T StrokeThickness<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Border
     {
         var context = new PropertyContext<double>(self, Border.StrokeThicknessProperty);
@@ -147,7 +147,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeThicknessFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> StrokeThickness<T>(this SettersContext<T> self,
         double strokeThickness)
         where T : Border
     {
@@ -155,7 +155,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeThicknessFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> StrokeThickness<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Border
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Border.StrokeThicknessProperty);
@@ -163,7 +163,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static Task<bool> AnimateStrokeThicknessToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateStrokeThicknessTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Border
     {
         double fromValue = self.StrokeThickness;
@@ -172,7 +172,7 @@ public static partial class BorderExtension
         return Transformations.AnimateAsync<double>(self, "AnimateStrokeThicknessTo", transform, callback, length, easing);
     }
     
-    public static T StrokeDashArrayFmg<T>(this T self,
+    public static T StrokeDashArray<T>(this T self,
         IList<double> strokeDashArray)
         where T : Border
     {
@@ -181,7 +181,7 @@ public static partial class BorderExtension
         return self;
     }
 
-    public static T StrokeDashArrayFmg<T>(this T self,
+    public static T StrokeDashArray<T>(this T self,
         params double[] strokeDashArray)
         where T : Border
     {
@@ -190,7 +190,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T StrokeDashArrayFmg<T>(this T self, Func<PropertyContext<DoubleCollection?>, IPropertyBuilder<DoubleCollection?>> configure)
+    public static T StrokeDashArray<T>(this T self, Func<PropertyContext<DoubleCollection?>, IPropertyBuilder<DoubleCollection?>> configure)
         where T : Border
     {
         var context = new PropertyContext<DoubleCollection?>(self, Border.StrokeDashArrayProperty);
@@ -198,7 +198,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T StrokeDashOffsetFmg<T>(this T self,
+    public static T StrokeDashOffset<T>(this T self,
         double strokeDashOffset)
         where T : Border
     {
@@ -206,7 +206,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T StrokeDashOffsetFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T StrokeDashOffset<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Border
     {
         var context = new PropertyContext<double>(self, Border.StrokeDashOffsetProperty);
@@ -214,7 +214,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeDashOffsetFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> StrokeDashOffset<T>(this SettersContext<T> self,
         double strokeDashOffset)
         where T : Border
     {
@@ -222,7 +222,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeDashOffsetFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> StrokeDashOffset<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Border
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Border.StrokeDashOffsetProperty);
@@ -230,7 +230,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static Task<bool> AnimateStrokeDashOffsetToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateStrokeDashOffsetTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Border
     {
         double fromValue = self.StrokeDashOffset;
@@ -239,7 +239,7 @@ public static partial class BorderExtension
         return Transformations.AnimateAsync<double>(self, "AnimateStrokeDashOffsetTo", transform, callback, length, easing);
     }
     
-    public static T StrokeLineCapFmg<T>(this T self,
+    public static T StrokeLineCap<T>(this T self,
         Microsoft.Maui.Controls.Shapes.PenLineCap strokeLineCap)
         where T : Border
     {
@@ -247,7 +247,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T StrokeLineCapFmg<T>(this T self, Func<PropertyContext<Microsoft.Maui.Controls.Shapes.PenLineCap>, IPropertyBuilder<Microsoft.Maui.Controls.Shapes.PenLineCap>> configure)
+    public static T StrokeLineCap<T>(this T self, Func<PropertyContext<Microsoft.Maui.Controls.Shapes.PenLineCap>, IPropertyBuilder<Microsoft.Maui.Controls.Shapes.PenLineCap>> configure)
         where T : Border
     {
         var context = new PropertyContext<Microsoft.Maui.Controls.Shapes.PenLineCap>(self, Border.StrokeLineCapProperty);
@@ -255,7 +255,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeLineCapFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> StrokeLineCap<T>(this SettersContext<T> self,
         Microsoft.Maui.Controls.Shapes.PenLineCap strokeLineCap)
         where T : Border
     {
@@ -263,7 +263,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeLineCapFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Controls.Shapes.PenLineCap>, IPropertySettersBuilder<Microsoft.Maui.Controls.Shapes.PenLineCap>> configure)
+    public static SettersContext<T> StrokeLineCap<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Controls.Shapes.PenLineCap>, IPropertySettersBuilder<Microsoft.Maui.Controls.Shapes.PenLineCap>> configure)
         where T : Border
     {
         var context = new PropertySettersContext<Microsoft.Maui.Controls.Shapes.PenLineCap>(self.XamlSetters, Border.StrokeLineCapProperty);
@@ -271,7 +271,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T StrokeLineJoinFmg<T>(this T self,
+    public static T StrokeLineJoin<T>(this T self,
         Microsoft.Maui.Controls.Shapes.PenLineJoin strokeLineJoin)
         where T : Border
     {
@@ -279,7 +279,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T StrokeLineJoinFmg<T>(this T self, Func<PropertyContext<Microsoft.Maui.Controls.Shapes.PenLineJoin>, IPropertyBuilder<Microsoft.Maui.Controls.Shapes.PenLineJoin>> configure)
+    public static T StrokeLineJoin<T>(this T self, Func<PropertyContext<Microsoft.Maui.Controls.Shapes.PenLineJoin>, IPropertyBuilder<Microsoft.Maui.Controls.Shapes.PenLineJoin>> configure)
         where T : Border
     {
         var context = new PropertyContext<Microsoft.Maui.Controls.Shapes.PenLineJoin>(self, Border.StrokeLineJoinProperty);
@@ -287,7 +287,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeLineJoinFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> StrokeLineJoin<T>(this SettersContext<T> self,
         Microsoft.Maui.Controls.Shapes.PenLineJoin strokeLineJoin)
         where T : Border
     {
@@ -295,7 +295,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeLineJoinFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Controls.Shapes.PenLineJoin>, IPropertySettersBuilder<Microsoft.Maui.Controls.Shapes.PenLineJoin>> configure)
+    public static SettersContext<T> StrokeLineJoin<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Controls.Shapes.PenLineJoin>, IPropertySettersBuilder<Microsoft.Maui.Controls.Shapes.PenLineJoin>> configure)
         where T : Border
     {
         var context = new PropertySettersContext<Microsoft.Maui.Controls.Shapes.PenLineJoin>(self.XamlSetters, Border.StrokeLineJoinProperty);
@@ -303,7 +303,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T StrokeMiterLimitFmg<T>(this T self,
+    public static T StrokeMiterLimit<T>(this T self,
         double strokeMiterLimit)
         where T : Border
     {
@@ -311,7 +311,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static T StrokeMiterLimitFmg<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    public static T StrokeMiterLimit<T>(this T self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
         where T : Border
     {
         var context = new PropertyContext<double>(self, Border.StrokeMiterLimitProperty);
@@ -319,7 +319,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeMiterLimitFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> StrokeMiterLimit<T>(this SettersContext<T> self,
         double strokeMiterLimit)
         where T : Border
     {
@@ -327,7 +327,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static SettersContext<T> StrokeMiterLimitFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+    public static SettersContext<T> StrokeMiterLimit<T>(this SettersContext<T> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
         where T : Border
     {
         var context = new PropertySettersContext<double>(self.XamlSetters, Border.StrokeMiterLimitProperty);
@@ -335,7 +335,7 @@ public static partial class BorderExtension
         return self;
     }
     
-    public static Task<bool> AnimateStrokeMiterLimitToFmg<T>(this T self, double value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateStrokeMiterLimitTo<T>(this T self, double value, uint length = 250, Easing? easing = null)
         where T : Border
     {
         double fromValue = self.StrokeMiterLimit;

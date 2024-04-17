@@ -4,7 +4,7 @@
 
 public static partial class ImageExtension
 {
-    public static T AspectFmg<T>(this T self,
+    public static T Aspect<T>(this T self,
         Aspect aspect)
         where T : Image
     {
@@ -12,7 +12,7 @@ public static partial class ImageExtension
         return self;
     }
     
-    public static T AspectFmg<T>(this T self, Func<PropertyContext<Aspect>, IPropertyBuilder<Aspect>> configure)
+    public static T Aspect<T>(this T self, Func<PropertyContext<Aspect>, IPropertyBuilder<Aspect>> configure)
         where T : Image
     {
         var context = new PropertyContext<Aspect>(self, Image.AspectProperty);
@@ -20,7 +20,7 @@ public static partial class ImageExtension
         return self;
     }
     
-    public static SettersContext<T> AspectFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Aspect<T>(this SettersContext<T> self,
         Aspect aspect)
         where T : Image
     {
@@ -28,7 +28,7 @@ public static partial class ImageExtension
         return self;
     }
     
-    public static SettersContext<T> AspectFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Aspect>, IPropertySettersBuilder<Aspect>> configure)
+    public static SettersContext<T> Aspect<T>(this SettersContext<T> self, Func<PropertySettersContext<Aspect>, IPropertySettersBuilder<Aspect>> configure)
         where T : Image
     {
         var context = new PropertySettersContext<Aspect>(self.XamlSetters, Image.AspectProperty);
@@ -36,7 +36,7 @@ public static partial class ImageExtension
         return self;
     }
     
-    public static T IsOpaqueFmg<T>(this T self,
+    public static T IsOpaque<T>(this T self,
         bool isOpaque)
         where T : Image
     {
@@ -44,7 +44,7 @@ public static partial class ImageExtension
         return self;
     }
     
-    public static T IsOpaqueFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsOpaque<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Image
     {
         var context = new PropertyContext<bool>(self, Image.IsOpaqueProperty);
@@ -52,7 +52,7 @@ public static partial class ImageExtension
         return self;
     }
     
-    public static SettersContext<T> IsOpaqueFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsOpaque<T>(this SettersContext<T> self,
         bool isOpaque)
         where T : Image
     {
@@ -60,7 +60,7 @@ public static partial class ImageExtension
         return self;
     }
     
-    public static SettersContext<T> IsOpaqueFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsOpaque<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Image
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Image.IsOpaqueProperty);
@@ -68,7 +68,7 @@ public static partial class ImageExtension
         return self;
     }
     
-    public static T IsAnimationPlayingFmg<T>(this T self,
+    public static T IsAnimationPlaying<T>(this T self,
         bool isAnimationPlaying)
         where T : Image
     {
@@ -76,7 +76,7 @@ public static partial class ImageExtension
         return self;
     }
     
-    public static T IsAnimationPlayingFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsAnimationPlaying<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Image
     {
         var context = new PropertyContext<bool>(self, Image.IsAnimationPlayingProperty);
@@ -84,7 +84,7 @@ public static partial class ImageExtension
         return self;
     }
     
-    public static SettersContext<T> IsAnimationPlayingFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsAnimationPlaying<T>(this SettersContext<T> self,
         bool isAnimationPlaying)
         where T : Image
     {
@@ -92,7 +92,7 @@ public static partial class ImageExtension
         return self;
     }
     
-    public static SettersContext<T> IsAnimationPlayingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsAnimationPlaying<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Image
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Image.IsAnimationPlayingProperty);
@@ -100,7 +100,7 @@ public static partial class ImageExtension
         return self;
     }
     
-    public static T SourceFmg<T>(this T self,
+    public static T Source<T>(this T self,
         ImageSource source)
         where T : Image
     {
@@ -108,7 +108,7 @@ public static partial class ImageExtension
         return self;
     }
     
-    public static T SourceFmg<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
+    public static T Source<T>(this T self, Func<PropertyContext<ImageSource>, IPropertyBuilder<ImageSource>> configure)
         where T : Image
     {
         var context = new PropertyContext<ImageSource>(self, Image.SourceProperty);
@@ -116,7 +116,7 @@ public static partial class ImageExtension
         return self;
     }
     
-    public static SettersContext<T> SourceFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Source<T>(this SettersContext<T> self,
         ImageSource source)
         where T : Image
     {
@@ -124,7 +124,7 @@ public static partial class ImageExtension
         return self;
     }
     
-    public static SettersContext<T> SourceFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
+    public static SettersContext<T> Source<T>(this SettersContext<T> self, Func<PropertySettersContext<ImageSource>, IPropertySettersBuilder<ImageSource>> configure)
         where T : Image
     {
         var context = new PropertySettersContext<ImageSource>(self.XamlSetters, Image.SourceProperty);

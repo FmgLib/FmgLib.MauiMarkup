@@ -2,7 +2,7 @@
 
 public static partial class GroupableItemsViewExtension
 {
-    public static T IsGroupedFmg<T>(this T self,
+    public static T IsGrouped<T>(this T self,
         bool isGrouped)
         where T : GroupableItemsView
     {
@@ -10,7 +10,7 @@ public static partial class GroupableItemsViewExtension
         return self;
     }
     
-    public static T IsGroupedFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsGrouped<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : GroupableItemsView
     {
         var context = new PropertyContext<bool>(self, GroupableItemsView.IsGroupedProperty);
@@ -18,7 +18,7 @@ public static partial class GroupableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsGroupedFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsGrouped<T>(this SettersContext<T> self,
         bool isGrouped)
         where T : GroupableItemsView
     {
@@ -26,7 +26,7 @@ public static partial class GroupableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> IsGroupedFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsGrouped<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : GroupableItemsView
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, GroupableItemsView.IsGroupedProperty);
@@ -34,7 +34,7 @@ public static partial class GroupableItemsViewExtension
         return self;
     }
     
-    public static T GroupHeaderTemplateFmg<T>(this T self,
+    public static T GroupHeaderTemplate<T>(this T self,
         DataTemplate groupHeaderTemplate)
         where T : GroupableItemsView
     {
@@ -42,7 +42,7 @@ public static partial class GroupableItemsViewExtension
         return self;
     }
     
-    public static T GroupHeaderTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T GroupHeaderTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : GroupableItemsView
     {
         var context = new PropertyContext<DataTemplate>(self, GroupableItemsView.GroupHeaderTemplateProperty);
@@ -50,7 +50,7 @@ public static partial class GroupableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> GroupHeaderTemplateFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> GroupHeaderTemplate<T>(this SettersContext<T> self,
         DataTemplate groupHeaderTemplate)
         where T : GroupableItemsView
     {
@@ -58,7 +58,7 @@ public static partial class GroupableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> GroupHeaderTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> GroupHeaderTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : GroupableItemsView
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, GroupableItemsView.GroupHeaderTemplateProperty);
@@ -66,14 +66,14 @@ public static partial class GroupableItemsViewExtension
         return self;
     }
     
-    public static T GroupHeaderTemplateFmg<T>(this T self, Func<object> loadTemplate)
+    public static T GroupHeaderTemplate<T>(this T self, Func<object> loadTemplate)
         where T : GroupableItemsView
     {
         self.SetValue(GroupableItemsView.GroupHeaderTemplateProperty, new DataTemplate(loadTemplate));
         return self;
     }
     
-    public static T GroupFooterTemplateFmg<T>(this T self,
+    public static T GroupFooterTemplate<T>(this T self,
         DataTemplate groupFooterTemplate)
         where T : GroupableItemsView
     {
@@ -81,7 +81,7 @@ public static partial class GroupableItemsViewExtension
         return self;
     }
     
-    public static T GroupFooterTemplateFmg<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
+    public static T GroupFooterTemplate<T>(this T self, Func<PropertyContext<DataTemplate>, IPropertyBuilder<DataTemplate>> configure)
         where T : GroupableItemsView
     {
         var context = new PropertyContext<DataTemplate>(self, GroupableItemsView.GroupFooterTemplateProperty);
@@ -89,7 +89,7 @@ public static partial class GroupableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> GroupFooterTemplateFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> GroupFooterTemplate<T>(this SettersContext<T> self,
         DataTemplate groupFooterTemplate)
         where T : GroupableItemsView
     {
@@ -97,7 +97,7 @@ public static partial class GroupableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> GroupFooterTemplateFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
+    public static SettersContext<T> GroupFooterTemplate<T>(this SettersContext<T> self, Func<PropertySettersContext<DataTemplate>, IPropertySettersBuilder<DataTemplate>> configure)
         where T : GroupableItemsView
     {
         var context = new PropertySettersContext<DataTemplate>(self.XamlSetters, GroupableItemsView.GroupFooterTemplateProperty);
@@ -105,7 +105,7 @@ public static partial class GroupableItemsViewExtension
         return self;
     }
     
-    public static T GroupFooterTemplateFmg<T>(this T self, Func<object> loadTemplate)
+    public static T GroupFooterTemplate<T>(this T self, Func<object> loadTemplate)
         where T : GroupableItemsView
     {
         self.SetValue(GroupableItemsView.GroupFooterTemplateProperty, new DataTemplate(loadTemplate));

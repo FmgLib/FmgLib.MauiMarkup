@@ -4,7 +4,7 @@
 
 public static partial class LayoutExtension
 {
-    public static T ChildrenFmg<T>(this T self,
+    public static T Children<T>(this T self,
         IList<Microsoft.Maui.IView> children)
         where T : Layout
     {
@@ -13,7 +13,7 @@ public static partial class LayoutExtension
         return self;
     }
 
-    public static T ChildrenFmg<T>(this T self,
+    public static T Children<T>(this T self,
         params Microsoft.Maui.IView[] children)
         where T : Layout
     {
@@ -22,7 +22,7 @@ public static partial class LayoutExtension
         return self;
     }
     
-    public static T IsClippedToBoundsFmg<T>(this T self,
+    public static T IsClippedToBounds<T>(this T self,
         bool isClippedToBounds)
         where T : Layout
     {
@@ -30,7 +30,7 @@ public static partial class LayoutExtension
         return self;
     }
     
-    public static T IsClippedToBoundsFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T IsClippedToBounds<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Layout
     {
         var context = new PropertyContext<bool>(self, Layout.IsClippedToBoundsProperty);
@@ -38,7 +38,7 @@ public static partial class LayoutExtension
         return self;
     }
     
-    public static SettersContext<T> IsClippedToBoundsFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> IsClippedToBounds<T>(this SettersContext<T> self,
         bool isClippedToBounds)
         where T : Layout
     {
@@ -46,7 +46,7 @@ public static partial class LayoutExtension
         return self;
     }
     
-    public static SettersContext<T> IsClippedToBoundsFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsClippedToBounds<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Layout
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Layout.IsClippedToBoundsProperty);
@@ -54,7 +54,7 @@ public static partial class LayoutExtension
         return self;
     }
     
-    public static T PaddingFmg<T>(this T self,
+    public static T Padding<T>(this T self,
         Thickness padding)
         where T : Layout
     {
@@ -62,7 +62,7 @@ public static partial class LayoutExtension
         return self;
     }
     
-    public static T PaddingFmg<T>(this T self, Func<PropertyContext<Thickness>, IPropertyBuilder<Thickness>> configure)
+    public static T Padding<T>(this T self, Func<PropertyContext<Thickness>, IPropertyBuilder<Thickness>> configure)
         where T : Layout
     {
         var context = new PropertyContext<Thickness>(self, Layout.PaddingProperty);
@@ -70,7 +70,7 @@ public static partial class LayoutExtension
         return self;
     }
     
-    public static SettersContext<T> PaddingFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Padding<T>(this SettersContext<T> self,
         Thickness padding)
         where T : Layout
     {
@@ -78,7 +78,7 @@ public static partial class LayoutExtension
         return self;
     }
     
-    public static SettersContext<T> PaddingFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Thickness>, IPropertySettersBuilder<Thickness>> configure)
+    public static SettersContext<T> Padding<T>(this SettersContext<T> self, Func<PropertySettersContext<Thickness>, IPropertySettersBuilder<Thickness>> configure)
         where T : Layout
     {
         var context = new PropertySettersContext<Thickness>(self.XamlSetters, Layout.PaddingProperty);
@@ -86,7 +86,7 @@ public static partial class LayoutExtension
         return self;
     }
     
-    public static T IgnoreSafeAreaFmg<T>(this T self,
+    public static T IgnoreSafeArea<T>(this T self,
         bool ignoreSafeArea)
         where T : Layout
     {
@@ -94,7 +94,7 @@ public static partial class LayoutExtension
         return self;
     }
     
-    public static T CascadeInputTransparentFmg<T>(this T self,
+    public static T CascadeInputTransparent<T>(this T self,
         bool cascadeInputTransparent)
         where T : Layout
     {
@@ -102,7 +102,7 @@ public static partial class LayoutExtension
         return self;
     }
     
-    public static T CascadeInputTransparentFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T CascadeInputTransparent<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Layout
     {
         var context = new PropertyContext<bool>(self, Layout.CascadeInputTransparentProperty);
@@ -110,7 +110,7 @@ public static partial class LayoutExtension
         return self;
     }
     
-    public static SettersContext<T> CascadeInputTransparentFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CascadeInputTransparent<T>(this SettersContext<T> self,
         bool cascadeInputTransparent)
         where T : Layout
     {
@@ -118,7 +118,7 @@ public static partial class LayoutExtension
         return self;
     }
     
-    public static SettersContext<T> CascadeInputTransparentFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> CascadeInputTransparent<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Layout
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Layout.CascadeInputTransparentProperty);

@@ -4,7 +4,7 @@
 
 public static partial class TriggerBaseExtension
 {
-    public static T EnterActionsFmg<T>(this T self,
+    public static T EnterActions<T>(this T self,
         IList<TriggerAction> enterActions)
         where T : TriggerBase
     {
@@ -13,7 +13,7 @@ public static partial class TriggerBaseExtension
         return self;
     }
 
-    public static T EnterActionsFmg<T>(this T self,
+    public static T EnterActions<T>(this T self,
         params TriggerAction[] enterActions)
         where T : TriggerBase
     {
@@ -22,7 +22,7 @@ public static partial class TriggerBaseExtension
         return self;
     }
     
-    public static T ExitActionsFmg<T>(this T self,
+    public static T ExitActions<T>(this T self,
         IList<TriggerAction> exitActions)
         where T : TriggerBase
     {
@@ -31,7 +31,7 @@ public static partial class TriggerBaseExtension
         return self;
     }
 
-    public static T ExitActionsFmg<T>(this T self,
+    public static T ExitActions<T>(this T self,
         params TriggerAction[] exitActions)
         where T : TriggerBase
     {

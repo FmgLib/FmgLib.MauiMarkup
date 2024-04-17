@@ -2,7 +2,7 @@
 
 public static partial class GestureElementExtension
 {
-    public static T GestureRecognizersFmg<T>(this T self,
+    public static T GestureRecognizers<T>(this T self,
         IList<IGestureRecognizer> gestureRecognizers)
         where T : GestureElement
     {
@@ -11,7 +11,7 @@ public static partial class GestureElementExtension
         return self;
     }
 
-    public static T GestureRecognizersFmg<T>(this T self,
+    public static T GestureRecognizers<T>(this T self,
         params IGestureRecognizer[] gestureRecognizers)
         where T : GestureElement
     {

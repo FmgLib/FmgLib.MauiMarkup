@@ -2,7 +2,7 @@
 
 public static partial class GraphicsViewExtension
 {
-    public static T DrawableFmg<T>(this T self,
+    public static T Drawable<T>(this T self,
         IDrawable drawable)
         where T : GraphicsView
     {
@@ -10,7 +10,7 @@ public static partial class GraphicsViewExtension
         return self;
     }
     
-    public static T DrawableFmg<T>(this T self, Func<PropertyContext<IDrawable>, IPropertyBuilder<IDrawable>> configure)
+    public static T Drawable<T>(this T self, Func<PropertyContext<IDrawable>, IPropertyBuilder<IDrawable>> configure)
         where T : GraphicsView
     {
         var context = new PropertyContext<IDrawable>(self, GraphicsView.DrawableProperty);
@@ -18,7 +18,7 @@ public static partial class GraphicsViewExtension
         return self;
     }
     
-    public static SettersContext<T> DrawableFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> Drawable<T>(this SettersContext<T> self,
         IDrawable drawable)
         where T : GraphicsView
     {
@@ -26,7 +26,7 @@ public static partial class GraphicsViewExtension
         return self;
     }
     
-    public static SettersContext<T> DrawableFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<IDrawable>, IPropertySettersBuilder<IDrawable>> configure)
+    public static SettersContext<T> Drawable<T>(this SettersContext<T> self, Func<PropertySettersContext<IDrawable>, IPropertySettersBuilder<IDrawable>> configure)
         where T : GraphicsView
     {
         var context = new PropertySettersContext<IDrawable>(self.XamlSetters, GraphicsView.DrawableProperty);
@@ -34,98 +34,98 @@ public static partial class GraphicsViewExtension
         return self;
     }
     
-    public static T OnStartHoverInteractionFmg<T>(this T self, EventHandler<TouchEventArgs> handler)
+    public static T OnStartHoverInteraction<T>(this T self, EventHandler<TouchEventArgs> handler)
         where T : GraphicsView
     {
         self.StartHoverInteraction += handler;
         return self;
     }
     
-    public static T OnStartHoverInteractionFmg<T>(this T self, Action<T> action)
+    public static T OnStartHoverInteraction<T>(this T self, Action<T> action)
         where T : GraphicsView
     {
         self.StartHoverInteraction += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnMoveHoverInteractionFmg<T>(this T self, EventHandler<TouchEventArgs> handler)
+    public static T OnMoveHoverInteraction<T>(this T self, EventHandler<TouchEventArgs> handler)
         where T : GraphicsView
     {
         self.MoveHoverInteraction += handler;
         return self;
     }
     
-    public static T OnMoveHoverInteractionFmg<T>(this T self, Action<T> action)
+    public static T OnMoveHoverInteraction<T>(this T self, Action<T> action)
         where T : GraphicsView
     {
         self.MoveHoverInteraction += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnEndHoverInteractionFmg<T>(this T self, EventHandler handler)
+    public static T OnEndHoverInteraction<T>(this T self, EventHandler handler)
         where T : GraphicsView
     {
         self.EndHoverInteraction += handler;
         return self;
     }
     
-    public static T OnEndHoverInteractionFmg<T>(this T self, Action<T> action)
+    public static T OnEndHoverInteraction<T>(this T self, Action<T> action)
         where T : GraphicsView
     {
         self.EndHoverInteraction += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnStartInteractionFmg<T>(this T self, EventHandler<TouchEventArgs> handler)
+    public static T OnStartInteraction<T>(this T self, EventHandler<TouchEventArgs> handler)
         where T : GraphicsView
     {
         self.StartInteraction += handler;
         return self;
     }
     
-    public static T OnStartInteractionFmg<T>(this T self, Action<T> action)
+    public static T OnStartInteraction<T>(this T self, Action<T> action)
         where T : GraphicsView
     {
         self.StartInteraction += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnDragInteractionFmg<T>(this T self, EventHandler<TouchEventArgs> handler)
+    public static T OnDragInteraction<T>(this T self, EventHandler<TouchEventArgs> handler)
         where T : GraphicsView
     {
         self.DragInteraction += handler;
         return self;
     }
     
-    public static T OnDragInteractionFmg<T>(this T self, Action<T> action)
+    public static T OnDragInteraction<T>(this T self, Action<T> action)
         where T : GraphicsView
     {
         self.DragInteraction += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnEndInteractionFmg<T>(this T self, EventHandler<TouchEventArgs> handler)
+    public static T OnEndInteraction<T>(this T self, EventHandler<TouchEventArgs> handler)
         where T : GraphicsView
     {
         self.EndInteraction += handler;
         return self;
     }
     
-    public static T OnEndInteractionFmg<T>(this T self, Action<T> action)
+    public static T OnEndInteraction<T>(this T self, Action<T> action)
         where T : GraphicsView
     {
         self.EndInteraction += (o, arg) => action(self);
         return self;
     }
     
-    public static T OnCancelInteractionFmg<T>(this T self, EventHandler handler)
+    public static T OnCancelInteraction<T>(this T self, EventHandler handler)
         where T : GraphicsView
     {
         self.CancelInteraction += handler;
         return self;
     }
     
-    public static T OnCancelInteractionFmg<T>(this T self, Action<T> action)
+    public static T OnCancelInteraction<T>(this T self, Action<T> action)
         where T : GraphicsView
     {
         self.CancelInteraction += (o, arg) => action(self);

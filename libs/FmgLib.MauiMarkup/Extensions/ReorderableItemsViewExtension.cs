@@ -4,7 +4,7 @@
 
 public static partial class ReorderableItemsViewExtension
 {
-    public static T CanMixGroupsFmg<T>(this T self,
+    public static T CanMixGroups<T>(this T self,
         bool canMixGroups)
         where T : ReorderableItemsView
     {
@@ -12,7 +12,7 @@ public static partial class ReorderableItemsViewExtension
         return self;
     }
     
-    public static T CanMixGroupsFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T CanMixGroups<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : ReorderableItemsView
     {
         var context = new PropertyContext<bool>(self, ReorderableItemsView.CanMixGroupsProperty);
@@ -20,7 +20,7 @@ public static partial class ReorderableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> CanMixGroupsFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CanMixGroups<T>(this SettersContext<T> self,
         bool canMixGroups)
         where T : ReorderableItemsView
     {
@@ -28,7 +28,7 @@ public static partial class ReorderableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> CanMixGroupsFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> CanMixGroups<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : ReorderableItemsView
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, ReorderableItemsView.CanMixGroupsProperty);
@@ -36,7 +36,7 @@ public static partial class ReorderableItemsViewExtension
         return self;
     }
     
-    public static T CanReorderItemsFmg<T>(this T self,
+    public static T CanReorderItems<T>(this T self,
         bool canReorderItems)
         where T : ReorderableItemsView
     {
@@ -44,7 +44,7 @@ public static partial class ReorderableItemsViewExtension
         return self;
     }
     
-    public static T CanReorderItemsFmg<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T CanReorderItems<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : ReorderableItemsView
     {
         var context = new PropertyContext<bool>(self, ReorderableItemsView.CanReorderItemsProperty);
@@ -52,7 +52,7 @@ public static partial class ReorderableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> CanReorderItemsFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> CanReorderItems<T>(this SettersContext<T> self,
         bool canReorderItems)
         where T : ReorderableItemsView
     {
@@ -60,7 +60,7 @@ public static partial class ReorderableItemsViewExtension
         return self;
     }
     
-    public static SettersContext<T> CanReorderItemsFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> CanReorderItems<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : ReorderableItemsView
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, ReorderableItemsView.CanReorderItemsProperty);
@@ -68,14 +68,14 @@ public static partial class ReorderableItemsViewExtension
         return self;
     }
     
-    public static T OnReorderCompletedFmg<T>(this T self, EventHandler handler)
+    public static T OnReorderCompleted<T>(this T self, EventHandler handler)
         where T : ReorderableItemsView
     {
         self.ReorderCompleted += handler;
         return self;
     }
     
-    public static T OnReorderCompletedFmg<T>(this T self, Action<T> action)
+    public static T OnReorderCompleted<T>(this T self, Action<T> action)
         where T : ReorderableItemsView
     {
         self.ReorderCompleted += (o, arg) => action(self);

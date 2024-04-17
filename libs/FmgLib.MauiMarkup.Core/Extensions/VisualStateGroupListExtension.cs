@@ -2,7 +2,7 @@
 
 public static class VisualStateGroupListExtension
 {
-    public static VisualStateGroup GetCommonStatesVisualStateGroupFmg(this VisualStateGroupList self)
+    public static VisualStateGroup GetCommonStatesVisualStateGroup(this VisualStateGroupList self)
     {
         VisualStateGroup visualStateGroup = self.FirstOrDefault((VisualStateGroup e) => e.Name.Equals("CommonStates"));
         if (visualStateGroup == null)
@@ -17,8 +17,8 @@ public static class VisualStateGroupListExtension
         return visualStateGroup;
     }
 
-    public static void AddFmg(this VisualStateGroupList self, VisualState visualState)
+    public static void Add(this VisualStateGroupList self, VisualState visualState)
     {
-        self.GetCommonStatesVisualStateGroupFmg().States.Add(visualState);
+        self.GetCommonStatesVisualStateGroup().States.Add(visualState);
     }
 }

@@ -4,7 +4,7 @@
 
 public static partial class TabbedPageExtension
 {
-    public static T BarBackgroundColorFmg<T>(this T self,
+    public static T BarBackgroundColor<T>(this T self,
         Color barBackgroundColor)
         where T : TabbedPage
     {
@@ -12,7 +12,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static T BarBackgroundColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T BarBackgroundColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : TabbedPage
     {
         var context = new PropertyContext<Color>(self, TabbedPage.BarBackgroundColorProperty);
@@ -20,7 +20,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static SettersContext<T> BarBackgroundColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> BarBackgroundColor<T>(this SettersContext<T> self,
         Color barBackgroundColor)
         where T : TabbedPage
     {
@@ -28,7 +28,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static SettersContext<T> BarBackgroundColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> BarBackgroundColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : TabbedPage
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, TabbedPage.BarBackgroundColorProperty);
@@ -36,7 +36,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static Task<bool> AnimateBarBackgroundColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateBarBackgroundColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : TabbedPage
     {
         Color fromValue = self.BarBackgroundColor;
@@ -45,7 +45,7 @@ public static partial class TabbedPageExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateBarBackgroundColorTo", transform, callback, length, easing);
     }
     
-    public static T BarBackgroundFmg<T>(this T self,
+    public static T BarBackground<T>(this T self,
         Brush barBackground)
         where T : TabbedPage
     {
@@ -53,7 +53,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static T BarBackgroundFmg<T>(this T self, Func<PropertyContext<Brush>, IPropertyBuilder<Brush>> configure)
+    public static T BarBackground<T>(this T self, Func<PropertyContext<Brush>, IPropertyBuilder<Brush>> configure)
         where T : TabbedPage
     {
         var context = new PropertyContext<Brush>(self, TabbedPage.BarBackgroundProperty);
@@ -61,7 +61,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static SettersContext<T> BarBackgroundFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> BarBackground<T>(this SettersContext<T> self,
         Brush barBackground)
         where T : TabbedPage
     {
@@ -69,7 +69,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static SettersContext<T> BarBackgroundFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush>, IPropertySettersBuilder<Brush>> configure)
+    public static SettersContext<T> BarBackground<T>(this SettersContext<T> self, Func<PropertySettersContext<Brush>, IPropertySettersBuilder<Brush>> configure)
         where T : TabbedPage
     {
         var context = new PropertySettersContext<Brush>(self.XamlSetters, TabbedPage.BarBackgroundProperty);
@@ -77,7 +77,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static T BarTextColorFmg<T>(this T self,
+    public static T BarTextColor<T>(this T self,
         Color barTextColor)
         where T : TabbedPage
     {
@@ -85,7 +85,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static T BarTextColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T BarTextColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : TabbedPage
     {
         var context = new PropertyContext<Color>(self, TabbedPage.BarTextColorProperty);
@@ -93,7 +93,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static SettersContext<T> BarTextColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> BarTextColor<T>(this SettersContext<T> self,
         Color barTextColor)
         where T : TabbedPage
     {
@@ -101,7 +101,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static SettersContext<T> BarTextColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> BarTextColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : TabbedPage
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, TabbedPage.BarTextColorProperty);
@@ -109,7 +109,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static Task<bool> AnimateBarTextColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateBarTextColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : TabbedPage
     {
         Color fromValue = self.BarTextColor;
@@ -118,7 +118,7 @@ public static partial class TabbedPageExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateBarTextColorTo", transform, callback, length, easing);
     }
     
-    public static T UnselectedTabColorFmg<T>(this T self,
+    public static T UnselectedTabColor<T>(this T self,
         Color unselectedTabColor)
         where T : TabbedPage
     {
@@ -126,7 +126,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static T UnselectedTabColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T UnselectedTabColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : TabbedPage
     {
         var context = new PropertyContext<Color>(self, TabbedPage.UnselectedTabColorProperty);
@@ -134,7 +134,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static SettersContext<T> UnselectedTabColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> UnselectedTabColor<T>(this SettersContext<T> self,
         Color unselectedTabColor)
         where T : TabbedPage
     {
@@ -142,7 +142,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static SettersContext<T> UnselectedTabColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> UnselectedTabColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : TabbedPage
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, TabbedPage.UnselectedTabColorProperty);
@@ -150,7 +150,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static Task<bool> AnimateUnselectedTabColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateUnselectedTabColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : TabbedPage
     {
         Color fromValue = self.UnselectedTabColor;
@@ -159,7 +159,7 @@ public static partial class TabbedPageExtension
         return Transformations.AnimateAsync<Color>(self, "AnimateUnselectedTabColorTo", transform, callback, length, easing);
     }
     
-    public static T SelectedTabColorFmg<T>(this T self,
+    public static T SelectedTabColor<T>(this T self,
         Color selectedTabColor)
         where T : TabbedPage
     {
@@ -167,7 +167,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static T SelectedTabColorFmg<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+    public static T SelectedTabColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
         where T : TabbedPage
     {
         var context = new PropertyContext<Color>(self, TabbedPage.SelectedTabColorProperty);
@@ -175,7 +175,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static SettersContext<T> SelectedTabColorFmg<T>(this SettersContext<T> self,
+    public static SettersContext<T> SelectedTabColor<T>(this SettersContext<T> self,
         Color selectedTabColor)
         where T : TabbedPage
     {
@@ -183,7 +183,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static SettersContext<T> SelectedTabColorFmg<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+    public static SettersContext<T> SelectedTabColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
         where T : TabbedPage
     {
         var context = new PropertySettersContext<Color>(self.XamlSetters, TabbedPage.SelectedTabColorProperty);
@@ -191,7 +191,7 @@ public static partial class TabbedPageExtension
         return self;
     }
     
-    public static Task<bool> AnimateSelectedTabColorToFmg<T>(this T self, Color value, uint length = 250, Easing? easing = null)
+    public static Task<bool> AnimateSelectedTabColorTo<T>(this T self, Color value, uint length = 250, Easing? easing = null)
         where T : TabbedPage
     {
         Color fromValue = self.SelectedTabColor;

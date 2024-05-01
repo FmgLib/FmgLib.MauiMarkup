@@ -5,6 +5,7 @@
 | `FmgLib.MauiMarkup` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup/) |
 | `FmgLib.MauiMarkup.Core` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.Core?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.Core/) |
 | `FmgLib.MauiMarkup.Generator` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.Generator?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.Generator/) |
+| `FmgLib.MauiMarkup.Template` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.Template?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.Template/) |
 
 
 

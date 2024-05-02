@@ -11,7 +11,7 @@
 		<PackageId>FmgLib.MauiMarkup.Core</PackageId>
 		<Summary>FmgLib.MauiMarkup with C# Markup classes and fluent helper methods</Summary>
 		<Title>FmgLib.MauiMarkup.Core</Title>
-		<Version>8.1.1</Version>
+		<Version>8.2.0</Version>
 		<Authors>FmgYazılım</Authors>
 		<Company>Fmg Yazılım</Company>
 		<Copyright>©2024</Copyright>
@@ -24,6 +24,7 @@
 		<Configurations>Debug;Release</Configurations>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -31,6 +32,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<None Include="LICENSE" Pack="true" PackagePath="" />
 		<None Include="nuget.png" Pack="true" PackagePath="" />
 		<None Include="README.md" Pack="true" PackagePath="" />
 	</ItemGroup>

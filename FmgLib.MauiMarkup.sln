@@ -29,6 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup.SkiaSharp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FE0466FD-1CF3-4D08-B3B2-B6E0EB476831}"
 	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
 		TODO.txt = TODO.txt
 	EndProjectSection
 EndProject
@@ -40,7 +41,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneratedExam", "sample\Gen
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8E033618-BADE-4A6C-AC14-56EF722D8F61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FmgLib.MauiMarkup.Generator.Test", "tests\FmgLib.MauiMarkup.Generator.Test\FmgLib.MauiMarkup.Generator.Test.csproj", "{57DB4E88-894E-46B4-A6FA-6BD3630BEB4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup.Generator.Test", "tests\FmgLib.MauiMarkup.Generator.Test\FmgLib.MauiMarkup.Generator.Test.csproj", "{57DB4E88-894E-46B4-A6FA-6BD3630BEB4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

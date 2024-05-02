@@ -45,7 +45,7 @@ namespace FmgLib.MauiMarkup.Generator.Extensions
         void GenerateEventMethodHandler_Sealed(IEventSymbol eventSymbol)
         {
             builder.Append($@"
-        public static {mainSymbol.ToDisplayString()} On{eventSymbol.Name}(this {mainSymbol.ToDisplayString()} self, {GetActionWithArgsParameters(eventSymbol)} handler)
+        public static {mainSymbol.ToDisplayString()} On{eventSymbol.Name}(this {mainSymbol.ToDisplayString()} self, {((INamedTypeSymbol)eventSymbol.Type).ToDisplayString()} handler)
         {{
             self.{eventSymbol.Name} += handler;
             return self;
@@ -88,6 +88,7 @@ namespace FmgLib.MauiMarkup.Generator.Extensions
         ");
         }
 
+        /*
         private string GetActionWithArgsParameters(IEventSymbol ev)
         {
             //object?, <#= genericArgs.Length > 0 ? genericArgs[0].GetFullyQualifiedName().ToResevedWordFullTypeName() : "EventArgs" #>
@@ -100,5 +101,6 @@ namespace FmgLib.MauiMarkup.Generator.Extensions
             return $"{invokeMember.Parameters[0].Type.GetFullyQualifiedName()}, {invokeMember.Parameters[1].Type.GetFullyQualifiedName()}";
 
         }
+        */
     }
 }

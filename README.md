@@ -15,7 +15,7 @@ FmgLib.MauiMarkup is a specialized library crafted for .NET MAUI. This library a
 
 FmgLib.MauiMarkup provides extension methods for all properties provided for a View on the XAML side.
 
-- Visit FmgLib.MauiMarkup [Documentation](https://www.nuget.org/packages/FmgLib.MauiMarkup/)
+- Visit FmgLib.MauiMarkup [Documentation](https://fmgyazilim.com/en/fmglibmauimarkup/)
 
 # Getting Started
 

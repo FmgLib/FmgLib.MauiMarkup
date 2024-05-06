@@ -24,6 +24,7 @@
 		<Configurations>Debug;Release</Configurations>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -32,6 +33,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<None Include="LICENSE" Pack="true" PackagePath="" />
 		<None Include="nuget.png" Pack="true" PackagePath="" />
 		<None Include="README.md" Pack="true" PackagePath="" />
 	</ItemGroup>

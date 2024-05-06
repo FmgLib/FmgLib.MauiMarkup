@@ -19,6 +19,7 @@
 	  <Description>C# Code Markup Library for .NET MAUI</Description>
 	  <PackageIcon>nuget.png</PackageIcon>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
 	  <PackageTags>xamarin,xamarin.forms,net,maui,netmaui,markup,csharpformarkup,csharp,csharpmarkup,xaml,mobile,android,ios,macos,windows,noxaml</PackageTags>
   </PropertyGroup>
 
@@ -27,6 +28,7 @@
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.9.2" />
 	</ItemGroup>
 	<ItemGroup>
+		<None Include="LICENSE" Pack="true" PackagePath="" />
 		<None Include="nuget.png" Pack="true" PackagePath="" />
 		<None Include="README.md" Pack="true" PackagePath="" />
 	</ItemGroup>

@@ -45,7 +45,7 @@ namespace FmgLib.MauiMarkup.Generator.Extensions
         void GenerateEventMethodHandler_Sealed(IEventSymbol eventSymbol)
         {
             builder.Append($@"
-        public static {mainSymbol.ToDisplayString()} On{eventSymbol.Name}(this {mainSymbol.ToDisplayString()} self, {GetActionWithArgsParameters(eventSymbol)} handler)
+        public static {mainSymbol.ToDisplayString()} On{eventSymbol.Name}(this {mainSymbol.ToDisplayString()} self, {((INamedTypeSymbol)eventSymbol.Type).ToDisplayString()} handler)
         {{
             self.{eventSymbol.Name} += handler;
             return self;
@@ -67,27 +67,32 @@ namespace FmgLib.MauiMarkup.Generator.Extensions
 
         void GenerateEventMethodNoArgs_Sealed(IEventSymbol eventSymbol)
         {
-            builder.Append($@"
+            var parameterCount = ((INamedTypeSymbol)eventSymbol.Type).DelegateInvokeMethod.Parameters.Length;
+            if (parameterCount <= 2)
+                builder.Append($@"
         public static {mainSymbol.ToDisplayString()} On{eventSymbol.Name}(this {mainSymbol.ToDisplayString()} self, System.Action<{mainSymbol.ToDisplayString()}> action)
         {{
-            self.{eventSymbol.Name} += (o, arg) => action(self);
+            {(parameterCount == 2 ? $"self.{eventSymbol.Name} += (o, arg) => action(self);" : parameterCount == 1 ? $"self.{eventSymbol.Name} += (o) => action(self);" : parameterCount == 0 ? $"self.{eventSymbol.Name} += () => action(self);" : string.Empty)}
             return self;
         }}
-        ");
+            ");
         }
 
         void GenerateEventMethodNoArgs_Normal(IEventSymbol eventSymbol)
         {
-            builder.Append($@"
+            var parameterCount = ((INamedTypeSymbol)eventSymbol.Type).DelegateInvokeMethod.Parameters.Length;
+            if (parameterCount <= 2)
+                builder.Append($@"
         public static T On{eventSymbol.Name}<T>(this T self, System.Action<T> action)
             where T : {mainSymbol.ToDisplayString()}
         {{
-            self.{eventSymbol.Name} += (o, arg) => action(self);
+            {(parameterCount == 2 ? $"self.{eventSymbol.Name} += (o, arg) => action(self);" : parameterCount == 1 ? $"self.{eventSymbol.Name} += (o) => action(self);" : parameterCount == 0 ? $"self.{eventSymbol.Name} += () => action(self);" : string.Empty)}
             return self;
         }}
-        ");
+            ");
         }
 
+        /*
         private string GetActionWithArgsParameters(IEventSymbol ev)
         {
             //object?, <#= genericArgs.Length > 0 ? genericArgs[0].GetFullyQualifiedName().ToResevedWordFullTypeName() : "EventArgs" #>
@@ -100,5 +105,6 @@ namespace FmgLib.MauiMarkup.Generator.Extensions
             return $"{invokeMember.Parameters[0].Type.GetFullyQualifiedName()}, {invokeMember.Parameters[1].Type.GetFullyQualifiedName()}";
 
         }
+        */
     }
 }

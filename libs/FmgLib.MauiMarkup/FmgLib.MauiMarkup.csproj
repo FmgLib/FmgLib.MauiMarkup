@@ -11,7 +11,7 @@
 		<PackageId>FmgLib.MauiMarkup</PackageId>
 		<Summary>FmgLib.MauiMarkup with C# Markup classes and fluent helper methods</Summary>
 		<Title>FmgLib.MauiMarkup</Title>
-		<Version>8.2.2</Version>
+		<Version>8.2.3-prev1.0.0</Version>
 		<Authors>FmgYazılım</Authors>
 		<Company>Fmg Yazılım</Company>
 		<Copyright>©2024</Copyright>
@@ -28,8 +28,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="FmgLib.MauiMarkup.Core" Version="8.2.2" />
-		<PackageReference Include="FmgLib.MauiMarkup.Generator" Version="1.3.0" />
+		<PackageReference Include="FmgLib.MauiMarkup.Generator" Version="1.4.0-prev1.0.0" />
+		<PackageReference Include="FmgLib.MauiMarkup.Core" Version="8.2.3-prev1.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>

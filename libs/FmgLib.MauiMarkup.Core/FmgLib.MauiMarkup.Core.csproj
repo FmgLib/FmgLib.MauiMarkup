@@ -11,7 +11,7 @@
 		<PackageId>FmgLib.MauiMarkup.Core</PackageId>
 		<Summary>FmgLib.MauiMarkup with C# Markup classes and fluent helper methods</Summary>
 		<Title>FmgLib.MauiMarkup.Core</Title>
-		<Version>8.2.2</Version>
+		<Version>8.2.3-prev1.0.0</Version>
 		<Authors>FmgYazılım</Authors>
 		<Company>Fmg Yazılım</Company>
 		<Copyright>©2024</Copyright>

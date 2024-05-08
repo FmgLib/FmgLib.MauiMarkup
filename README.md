@@ -1,4 +1,4 @@
-### Free .NET Libraries by FmgLib.MauiMakrup
+### Free .NET MAUI Libraries by FmgLib.MauiMakrup
 
 | NuGet Package | Link |
 |--------------|------|

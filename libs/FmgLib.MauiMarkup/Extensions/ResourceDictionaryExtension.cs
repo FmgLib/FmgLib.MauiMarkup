@@ -2,14 +2,14 @@
 
 public static partial class ResourceDictionaryExtension
 {
-    public static ResourceDictionary Add(this ResourceDictionary dic, string key, object value)
+    public static ResourceDictionary AddResource(this ResourceDictionary dic, string key, object value)
     {
         dic.Add(key, value);
 
         return dic;
     }
 
-    public static ResourceDictionary Remove(this ResourceDictionary dic, string key)
+    public static ResourceDictionary RemoveResource(this ResourceDictionary dic, string key)
     {
         dic.Remove(key);
 

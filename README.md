@@ -1,9 +1,16 @@
-### Free .NET MAUI Libraries by FmgLib.MauiMakrup
+### Free .NET MAUI Libraries by FmgLib
 
 | NuGet Package | Link |
 |--------------|------|
 | `FmgLib.MauiMarkup` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup/) |
 | `FmgLib.MauiMarkup.Template` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.Template?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.Template/) |
+
+
+### Free .NET MAUI Project Templates by FmgLib
+
+| Template | Link |
+|--------------|------|
+| `FmgLib .NET MAUI Markup App` | [![Visual Studio Marketplace](https://img.shields.io/visual-studio-marketplace/r/FmgLib.FmgLibMauiMarkupTemplate)](https://marketplace.visualstudio.com/items?itemName=FmgLib.FmgLibMauiMarkupTemplate&ssr=false#overview) [![Visual Studio Marketplace](https://img.shields.io/visual-studio-marketplace/i/FmgLib.FmgLibMauiMarkupTemplate)](https://marketplace.visualstudio.com/items?itemName=FmgLib.FmgLibMauiMarkupTemplate&ssr=false#overview)|
 
 
 

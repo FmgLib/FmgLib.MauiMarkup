@@ -4,8 +4,8 @@ public abstract class FmgLibContentPage : ContentPage, IFmgLibHotReload
 {
     protected FmgLibContentPage()
     {
-        Build();
         FmgLibHotReloadHandler.UpdateApplicationEvent += ReloadUI;
+        Build();
     }
 
     public abstract void Build();
@@ -25,8 +25,8 @@ public abstract class FmgLibContentPage<TViewModel> : FmgLibContentPage, IFmgLib
 
     protected FmgLibContentPage(TViewModel viewModel)
     {
-        Build();
         base.BindingContext = viewModel;
         FmgLibHotReloadHandler.UpdateApplicationEvent += ReloadUI;
+        Build();
     }
 }

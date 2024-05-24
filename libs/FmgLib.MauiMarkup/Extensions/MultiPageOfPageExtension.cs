@@ -132,6 +132,16 @@ public static partial class MultiPageOfPageExtension
             self.Children.Add(item);
         return self;
     }
+
+    public static T Children<T>(this T self,
+        Func<Page[]> configure)
+        where T : MultiPage<Page>
+    {
+        var children = configure();
+        foreach (var item in children)
+            self.Children.Add(item);
+        return self;
+    }
     
     public static T OnCurrentPageChanged<T>(this T self, EventHandler handler)
         where T : MultiPage<Page>

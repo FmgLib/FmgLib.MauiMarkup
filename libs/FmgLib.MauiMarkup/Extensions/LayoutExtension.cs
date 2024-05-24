@@ -21,6 +21,16 @@ public static partial class LayoutExtension
             self.Children.Add(item);
         return self;
     }
+
+    public static T Children<T>(this T self,
+        Func<Microsoft.Maui.IView[]> configure)
+        where T : Layout
+    {
+        var children = configure();
+        foreach (var item in children)
+            self.Children.Add(item);
+        return self;
+    }
     
     public static T IsClippedToBounds<T>(this T self,
         bool isClippedToBounds)

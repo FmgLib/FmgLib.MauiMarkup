@@ -234,6 +234,16 @@ public static partial class PageExtension
         return self;
     }
 
+    public static T InternalChildren<T>(this T self,
+        Func<Element[]> configure)
+        where T : Page
+    {
+        var internalChildren = configure();
+        foreach (var item in internalChildren)
+            self.InternalChildren.Add(item);
+        return self;
+    }
+
     public static T OnNavigatedTo<T>(this T self, EventHandler<NavigatedToEventArgs> handler)
         where T : Page
     {

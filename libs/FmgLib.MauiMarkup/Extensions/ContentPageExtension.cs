@@ -8,6 +8,13 @@ public static partial class ContentPageExtension
         return self;
     }
 
+    public static T Content<T>(this T self, Func<View> configure) where T : ContentPage
+    {
+        var content = configure();
+        self.SetValue(ContentPage.ContentProperty, content);
+        return self;
+    }
+
     public static T Content<T>(this T self, Func<PropertyContext<View>, IPropertyBuilder<View>> configure) where T : ContentPage
     {
         PropertyContext<View> arg = new PropertyContext<View>(self, ContentPage.ContentProperty);

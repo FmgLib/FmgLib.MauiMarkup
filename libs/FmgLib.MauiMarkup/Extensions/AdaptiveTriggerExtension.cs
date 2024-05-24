@@ -2,56 +2,76 @@
 
 public static partial class AdaptiveTriggerExtension
 {
-    public static AdaptiveTrigger MinWindowHeight(this AdaptiveTrigger self, double minWindowHeight)
+    public static Microsoft.Maui.Controls.AdaptiveTrigger MinWindowHeight(this Microsoft.Maui.Controls.AdaptiveTrigger self,
+        double minWindowHeight)
     {
-        self.SetValue(AdaptiveTrigger.MinWindowHeightProperty, minWindowHeight);
+        self.SetValue(Microsoft.Maui.Controls.AdaptiveTrigger.MinWindowHeightProperty, minWindowHeight);
         return self;
     }
-    
-    public static AdaptiveTrigger MinWindowHeight(this AdaptiveTrigger self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+
+    public static Microsoft.Maui.Controls.AdaptiveTrigger MinWindowHeight(this Microsoft.Maui.Controls.AdaptiveTrigger self,
+        Func<double> configure)
     {
-        var context = new PropertyContext<double>(self, AdaptiveTrigger.MinWindowHeightProperty);
+        var minWindowHeight = configure();
+        self.SetValue(Microsoft.Maui.Controls.AdaptiveTrigger.MinWindowHeightProperty, minWindowHeight);
+        return self;
+    }
+
+    public static Microsoft.Maui.Controls.AdaptiveTrigger MinWindowHeight(this Microsoft.Maui.Controls.AdaptiveTrigger self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    {
+        var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.AdaptiveTrigger.MinWindowHeightProperty);
         configure(context).Build();
         return self;
     }
-    
-    public static SettersContext<AdaptiveTrigger> MinWindowHeight(this SettersContext<AdaptiveTrigger> self, double minWindowHeight)
+
+    public static SettersContext<Microsoft.Maui.Controls.AdaptiveTrigger> MinWindowHeight(this SettersContext<Microsoft.Maui.Controls.AdaptiveTrigger> self,
+        double minWindowHeight)
     {
-        self.XamlSetters.Add(new Setter { Property = AdaptiveTrigger.MinWindowHeightProperty, Value = minWindowHeight });
+        self.XamlSetters.Add(new Setter { Property = Microsoft.Maui.Controls.AdaptiveTrigger.MinWindowHeightProperty, Value = minWindowHeight });
         return self;
     }
-    
-    public static SettersContext<AdaptiveTrigger> MinWindowHeight(this SettersContext<AdaptiveTrigger> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+
+    public static SettersContext<Microsoft.Maui.Controls.AdaptiveTrigger> MinWindowHeight(this SettersContext<Microsoft.Maui.Controls.AdaptiveTrigger> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
     {
-        var context = new PropertySettersContext<double>(self.XamlSetters, AdaptiveTrigger.MinWindowHeightProperty);
+        var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.AdaptiveTrigger.MinWindowHeightProperty);
         configure(context).Build();
         return self;
     }
-    
-    public static AdaptiveTrigger MinWindowWidth(this AdaptiveTrigger self, double minWindowWidth)
+
+    public static Microsoft.Maui.Controls.AdaptiveTrigger MinWindowWidth(this Microsoft.Maui.Controls.AdaptiveTrigger self,
+        double minWindowWidth)
     {
-        self.SetValue(AdaptiveTrigger.MinWindowWidthProperty, minWindowWidth);
+        self.SetValue(Microsoft.Maui.Controls.AdaptiveTrigger.MinWindowWidthProperty, minWindowWidth);
         return self;
     }
-    
-    public static AdaptiveTrigger MinWindowWidth(this AdaptiveTrigger self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+
+    public static Microsoft.Maui.Controls.AdaptiveTrigger MinWindowWidth(this Microsoft.Maui.Controls.AdaptiveTrigger self,
+        Func<double> configure)
     {
-        var context = new PropertyContext<double>(self, AdaptiveTrigger.MinWindowWidthProperty);
+        var minWindowWidth = configure();
+        self.SetValue(Microsoft.Maui.Controls.AdaptiveTrigger.MinWindowWidthProperty, minWindowWidth);
+        return self;
+    }
+
+    public static Microsoft.Maui.Controls.AdaptiveTrigger MinWindowWidth(this Microsoft.Maui.Controls.AdaptiveTrigger self, Func<PropertyContext<double>, IPropertyBuilder<double>> configure)
+    {
+        var context = new PropertyContext<double>(self, Microsoft.Maui.Controls.AdaptiveTrigger.MinWindowWidthProperty);
         configure(context).Build();
         return self;
     }
-    
-    public static SettersContext<AdaptiveTrigger> MinWindowWidth(this SettersContext<AdaptiveTrigger> self, double minWindowWidth)
+
+    public static SettersContext<Microsoft.Maui.Controls.AdaptiveTrigger> MinWindowWidth(this SettersContext<Microsoft.Maui.Controls.AdaptiveTrigger> self,
+        double minWindowWidth)
     {
-        self.XamlSetters.Add(new Setter { Property = AdaptiveTrigger.MinWindowWidthProperty, Value = minWindowWidth });
+        self.XamlSetters.Add(new Setter { Property = Microsoft.Maui.Controls.AdaptiveTrigger.MinWindowWidthProperty, Value = minWindowWidth });
         return self;
     }
-    
-    public static SettersContext<AdaptiveTrigger> MinWindowWidth(this SettersContext<AdaptiveTrigger> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
+
+    public static SettersContext<Microsoft.Maui.Controls.AdaptiveTrigger> MinWindowWidth(this SettersContext<Microsoft.Maui.Controls.AdaptiveTrigger> self, Func<PropertySettersContext<double>, IPropertySettersBuilder<double>> configure)
     {
-        var context = new PropertySettersContext<double>(self.XamlSetters, AdaptiveTrigger.MinWindowWidthProperty);
+        var context = new PropertySettersContext<double>(self.XamlSetters, Microsoft.Maui.Controls.AdaptiveTrigger.MinWindowWidthProperty);
         configure(context).Build();
         return self;
     }
-    
+
 }

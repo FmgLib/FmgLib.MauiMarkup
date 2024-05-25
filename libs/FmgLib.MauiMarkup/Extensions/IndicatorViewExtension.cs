@@ -37,6 +37,15 @@ public static partial class IndicatorViewExtension
     }
     
     public static T IndicatorLayout<T>(this T self,
+        Func<IBindableLayout> configure)
+        where T : IndicatorView
+    {
+        var indicatorLayout = configure();
+        self.IndicatorLayout = indicatorLayout;
+        return self;
+    }
+    
+    public static T IndicatorLayout<T>(this T self,
         IBindableLayout indicatorLayout)
         where T : IndicatorView
     {
@@ -137,6 +146,15 @@ public static partial class IndicatorViewExtension
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, IndicatorView.MaximumVisibleProperty);
         configure(context).Build();
+        return self;
+    }
+    
+    public static T IndicatorTemplate<T>(this T self,
+        Func<DataTemplate> configure)
+        where T : IndicatorView
+    {
+        var indicatorTemplate = configure();
+        self.SetValue(IndicatorView.IndicatorTemplateProperty, indicatorTemplate);
         return self;
     }
     

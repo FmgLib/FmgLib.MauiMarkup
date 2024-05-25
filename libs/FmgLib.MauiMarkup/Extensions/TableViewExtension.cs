@@ -61,6 +61,16 @@ public static partial class TableViewExtension
             self.Root.Add(item);
         return self;
     }
+
+    public static T Root<T>(this T self,
+        Func<TableSection[]> configure)
+        where T : TableView
+    {
+        var root = configure();
+        foreach (var item in root)
+            self.Root.Add(item);
+        return self;
+    }
     
     public static T RowHeight<T>(this T self,
         int rowHeight)

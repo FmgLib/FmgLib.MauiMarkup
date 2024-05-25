@@ -19,6 +19,15 @@ public static partial class PolylineExtension
             self.Points.Add(item);
         return self;
     }
+
+    public static Microsoft.Maui.Controls.Shapes.Polyline Points(this Microsoft.Maui.Controls.Shapes.Polyline self,
+        Func<Point[]> configure)
+    {
+        var points = configure();
+        foreach (var item in points)
+            self.Points.Add(item);
+        return self;
+    }
     
     public static Microsoft.Maui.Controls.Shapes.Polyline Points(this Microsoft.Maui.Controls.Shapes.Polyline self, Func<PropertyContext<PointCollection>, IPropertyBuilder<PointCollection>> configure)
     {

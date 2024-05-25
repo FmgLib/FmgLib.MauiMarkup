@@ -19,6 +19,15 @@ public static partial class PathGeometryExtension
             self.Figures.Add(item);
         return self;
     }
+
+    public static Microsoft.Maui.Controls.Shapes.PathGeometry Figures(this Microsoft.Maui.Controls.Shapes.PathGeometry self,
+        Func<Microsoft.Maui.Controls.Shapes.PathFigure[]> configure)
+    {
+        var figures = configure();
+        foreach (var item in figures)
+            self.Figures.Add(item);
+        return self;
+    }
     
     public static Microsoft.Maui.Controls.Shapes.PathGeometry Figures(this Microsoft.Maui.Controls.Shapes.PathGeometry self, Func<PropertyContext<Microsoft.Maui.Controls.Shapes.PathFigureCollection>, IPropertyBuilder<Microsoft.Maui.Controls.Shapes.PathFigureCollection>> configure)
     {

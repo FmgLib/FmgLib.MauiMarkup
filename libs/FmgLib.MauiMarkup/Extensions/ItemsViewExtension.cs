@@ -5,6 +5,15 @@
 public static partial class ItemsViewExtension
 {
     public static T EmptyView<T>(this T self,
+        Func<object> configure)
+        where T : ItemsView
+    {
+        var emptyView = configure();
+        self.SetValue(ItemsView.EmptyViewProperty, emptyView);
+        return self;
+    }
+
+    public static T EmptyView<T>(this T self,
         object emptyView)
         where T : ItemsView
     {
@@ -33,6 +42,15 @@ public static partial class ItemsViewExtension
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, ItemsView.EmptyViewProperty);
         configure(context).Build();
+        return self;
+    }
+    
+    public static T EmptyViewTemplate<T>(this T self,
+        Func<DataTemplate> configure)
+        where T : ItemsView
+    {
+        var emptyViewTemplate = configure();
+        self.SetValue(ItemsView.EmptyViewTemplateProperty, emptyViewTemplate);
         return self;
     }
     
@@ -72,6 +90,15 @@ public static partial class ItemsViewExtension
         where T : ItemsView
     {
         self.SetValue(ItemsView.EmptyViewTemplateProperty, new DataTemplate(loadTemplate));
+        return self;
+    }
+    
+    public static T ItemsSource<T>(this T self,
+        Func<System.Collections.IEnumerable> configure)
+        where T : ItemsView
+    {
+        var itemsSource = configure();
+        self.SetValue(ItemsView.ItemsSourceProperty, itemsSource);
         return self;
     }
     
@@ -264,6 +291,15 @@ public static partial class ItemsViewExtension
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, ItemsView.RemainingItemsThresholdProperty);
         configure(context).Build();
+        return self;
+    }
+    
+    public static T ItemTemplate<T>(this T self,
+        Func<DataTemplate> configure)
+        where T : ItemsView
+    {
+        var itemTemplate = configure();
+        self.SetValue(ItemsView.ItemTemplateProperty, itemTemplate);
         return self;
     }
     

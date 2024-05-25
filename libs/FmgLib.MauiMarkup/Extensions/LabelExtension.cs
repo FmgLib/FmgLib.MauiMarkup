@@ -37,6 +37,15 @@ public static partial class LabelExtension
     }
     
     public static T FormattedText<T>(this T self,
+        Func<FormattedString> configure)
+        where T : Label
+    {
+        var formattedText = configure();
+        self.SetValue(Label.FormattedTextProperty, formattedText);
+        return self;
+    }
+    
+    public static T FormattedText<T>(this T self,
         FormattedString formattedText)
         where T : Label
     {

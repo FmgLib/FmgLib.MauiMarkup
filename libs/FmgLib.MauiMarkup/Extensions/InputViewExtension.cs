@@ -69,6 +69,15 @@ public static partial class InputViewExtension
     }
     
     public static T Keyboard<T>(this T self,
+        Func<Microsoft.Maui.Keyboard> configure)
+        where T : InputView
+    {
+        var keyboard = configure();
+        self.SetValue(InputView.KeyboardProperty, keyboard);
+        return self;
+    }
+    
+    public static T Keyboard<T>(this T self,
         Microsoft.Maui.Keyboard keyboard)
         where T : InputView
     {

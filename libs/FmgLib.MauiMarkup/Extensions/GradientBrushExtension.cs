@@ -19,6 +19,16 @@ public static partial class GradientBrushExtension
             self.GradientStops.Add(item);
         return self;
     }
+
+    public static T GradientStops<T>(this T self,
+        Func<GradientStop[]> configure)
+        where T : GradientBrush
+    {
+        var gradientStops = configure();
+        foreach (var item in gradientStops)
+            self.GradientStops.Add(item);
+        return self;
+    }
     
     public static T GradientStops<T>(this T self, Func<PropertyContext<GradientStopCollection>, IPropertyBuilder<GradientStopCollection>> configure)
         where T : GradientBrush

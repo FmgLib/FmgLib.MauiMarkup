@@ -26,6 +26,15 @@ public static partial class TriggerExtension
             self.Setters.Add(item);
         return self;
     }
+
+    public static Trigger Setters(this Trigger self,
+        Func<Setter[]> configure)
+    {
+        var setters = configure();
+        foreach (var item in setters)
+            self.Setters.Add(item);
+        return self;
+    }
     
     public static Trigger Value(this Trigger self,
         object value)

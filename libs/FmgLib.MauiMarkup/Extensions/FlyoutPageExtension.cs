@@ -9,6 +9,14 @@ public static partial class FlyoutPageExtension
         self.Detail = detail;
         return self;
     }
+    public static T Detail<T>(this T self,
+        Func<Page> configure)
+        where T : FlyoutPage
+    {
+        var detail = configure();
+        self.Detail = detail;
+        return self;
+    }
     
     public static T IsGestureEnabled<T>(this T self,
         bool isGestureEnabled)
@@ -78,6 +86,15 @@ public static partial class FlyoutPageExtension
         Page flyout)
         where T : FlyoutPage
     {
+        self.Flyout = flyout;
+        return self;
+    }
+    
+    public static T Flyout<T>(this T self,
+        Func<Page> configure)
+        where T : FlyoutPage
+    {
+        var flyout = configure();
         self.Flyout = flyout;
         return self;
     }

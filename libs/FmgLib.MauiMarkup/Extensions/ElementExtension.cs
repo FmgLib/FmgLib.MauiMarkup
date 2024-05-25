@@ -1,4 +1,6 @@
-﻿namespace FmgLib.MauiMarkup;
+﻿using Microsoft.Maui.Graphics;
+
+namespace FmgLib.MauiMarkup;
 
 public static partial class ElementExtension
 {
@@ -83,6 +85,16 @@ public static partial class ElementExtension
             self.Effects.Add(item);
         return self;
     }
+
+    public static T Effects<T>(this T self,
+        Func<Effect[]> configure)
+        where T : Element
+    {
+        var effects = configure();
+        foreach (var item in effects)
+            self.Effects.Add(item);
+        return self;
+    }
     
     public static T StyleId<T>(this T self,
         string styleId)
@@ -100,10 +112,28 @@ public static partial class ElementExtension
         return self;
     }
     
+    public static T Parent<T>(this T self,
+        Func<Element> configure)
+        where T : Element
+    {
+        var parent = configure();
+        self.Parent = parent;
+        return self;
+    }
+    
     public static T EffectControlProvider<T>(this T self,
         IEffectControlProvider effectControlProvider)
         where T : Element
     {
+        self.EffectControlProvider = effectControlProvider;
+        return self;
+    }
+    
+    public static T EffectControlProvider<T>(this T self,
+        Func<IEffectControlProvider> configure)
+        where T : Element
+    {
+        var effectControlProvider = configure();
         self.EffectControlProvider = effectControlProvider;
         return self;
     }
@@ -224,6 +254,15 @@ public static partial class ElementExtension
        MenuFlyout contextFlyout)
        where T : Element
     {
+        self.SetValue(FlyoutBase.ContextFlyoutProperty, contextFlyout);
+        return self;
+    }
+
+    public static T ContextFlyout<T>(this T self,
+       Func<MenuFlyout> configure)
+       where T : Element
+    {
+        var contextFlyout = configure();
         self.SetValue(FlyoutBase.ContextFlyoutProperty, contextFlyout);
         return self;
     }

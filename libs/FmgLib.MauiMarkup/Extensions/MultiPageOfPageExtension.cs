@@ -5,6 +5,15 @@
 public static partial class MultiPageOfPageExtension
 {
     public static T ItemsSource<T>(this T self,
+        Func<System.Collections.IEnumerable> configure)
+        where T : MultiPage<Page>
+    {
+        var itemsSource = configure();
+        self.SetValue(MultiPage<Page>.ItemsSourceProperty, itemsSource);
+        return self;
+    }
+
+    public static T ItemsSource<T>(this T self,
         System.Collections.IEnumerable itemsSource)
         where T : MultiPage<Page>
     {
@@ -33,6 +42,15 @@ public static partial class MultiPageOfPageExtension
     {
         var context = new PropertySettersContext<System.Collections.IEnumerable>(self.XamlSetters, MultiPage<Page>.ItemsSourceProperty);
         configure(context).Build();
+        return self;
+    }
+    
+    public static T ItemTemplate<T>(this T self,
+        Func<DataTemplate> configure)
+        where T : MultiPage<Page>
+    {
+        var itemTemplate = configure();
+        self.SetValue(MultiPage<Page>.ItemTemplateProperty, itemTemplate);
         return self;
     }
     
@@ -76,6 +94,15 @@ public static partial class MultiPageOfPageExtension
     }
     
     public static T SelectedItem<T>(this T self,
+        Func<object> configure)
+        where T : MultiPage<Page>
+    {
+        var selectedItem = configure();
+        self.SetValue(MultiPage<Page>.SelectedItemProperty, selectedItem);
+        return self;
+    }
+    
+    public static T SelectedItem<T>(this T self,
         object selectedItem)
         where T : MultiPage<Page>
     {
@@ -108,6 +135,15 @@ public static partial class MultiPageOfPageExtension
     }
     
     public static T CurrentPage<T>(this T self,
+        Func<Page> configure)
+        where T : MultiPage<Page>
+    {
+        var currentPage = configure();
+        self.CurrentPage = currentPage;
+        return self;
+    }
+    
+    public static T CurrentPage<T>(this T self,
         Page currentPage)
         where T : MultiPage<Page>
     {
@@ -128,6 +164,16 @@ public static partial class MultiPageOfPageExtension
         params Page[] children)
         where T : MultiPage<Page>
     {
+        foreach (var item in children)
+            self.Children.Add(item);
+        return self;
+    }
+
+    public static T Children<T>(this T self,
+        Func<Page[]> configure)
+        where T : MultiPage<Page>
+    {
+        var children = configure();
         foreach (var item in children)
             self.Children.Add(item);
         return self;

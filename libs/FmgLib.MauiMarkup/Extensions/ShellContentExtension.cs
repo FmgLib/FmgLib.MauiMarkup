@@ -3,6 +3,15 @@
 public static partial class ShellContentExtension
 {
     public static T Content<T>(this T self,
+        Func<object> configure)
+        where T : Microsoft.Maui.Controls.ShellContent
+    {
+        var content = configure();
+        self.SetValue(Microsoft.Maui.Controls.ShellContent.ContentProperty, content);
+        return self;
+    }
+
+    public static T Content<T>(this T self,
         object content)
         where T : Microsoft.Maui.Controls.ShellContent
     {
@@ -70,6 +79,25 @@ public static partial class ShellContentExtension
         where T : Microsoft.Maui.Controls.ShellContent
     {
         self.SetValue(Microsoft.Maui.Controls.ShellContent.ContentTemplateProperty, new DataTemplate(loadTemplate));
+        return self;
+    }
+
+    public static T MenuItems<T>(this T self,
+        Func<MenuItem[]> configure)
+        where T : Microsoft.Maui.Controls.ShellContent
+    {
+        var menuItems = configure();
+        foreach (var item in menuItems)
+            self.MenuItems.Add(item);
+        return self;
+    }
+
+    public static T MenuItems<T>(this T self,
+        params MenuItem[] menuItems)
+        where T : Microsoft.Maui.Controls.ShellContent
+    {
+        foreach (var item in menuItems)
+            self.MenuItems.Add(item);
         return self;
     }
 

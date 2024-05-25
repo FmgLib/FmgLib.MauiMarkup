@@ -53,6 +53,16 @@ public static partial class SelectableItemsViewExtension
             self.SelectedItems.Add(item);
         return self;
     }
+
+    public static T SelectedItems<T>(this T self,
+        Func<object[]> configure)
+        where T : SelectableItemsView
+    {
+        var selectedItems = configure();
+        foreach (var item in selectedItems)
+            self.SelectedItems.Add(item);
+        return self;
+    }
     
     public static T SelectedItems<T>(this T self, Func<PropertyContext<IList<object>>, IPropertyBuilder<IList<object>>> configure)
         where T : SelectableItemsView

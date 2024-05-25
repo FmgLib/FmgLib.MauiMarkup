@@ -99,5 +99,21 @@ public static partial class ApplicationExtension
         self.RequestedThemeChanged += (o, arg) => action(self);
         return self;
     }
+    public static T MainPage<T>(this T self, Page? mainPage) where T : Application
+    {
+        self.MainPage = mainPage;
+        return self;
+    }
 
+    public static T Resources<T>(this T self, ResourceDictionary resources) where T : Application
+    {
+        self.Resources = resources;
+        return self;
+    }
+
+    public static T UserAppTheme<T>(this T self, AppTheme userAppTheme) where T : Application
+    {
+        self.UserAppTheme = userAppTheme;
+        return self;
+    }
 }

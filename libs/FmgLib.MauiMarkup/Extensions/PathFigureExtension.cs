@@ -19,6 +19,15 @@ public static partial class PathFigureExtension
             self.Segments.Add(item);
         return self;
     }
+
+    public static Microsoft.Maui.Controls.Shapes.PathFigure Segments(this Microsoft.Maui.Controls.Shapes.PathFigure self,
+        Func<Microsoft.Maui.Controls.Shapes.PathSegment[]> configure)
+    {
+        var segments = configure();
+        foreach (var item in segments)
+            self.Segments.Add(item);
+        return self;
+    }
     
     public static Microsoft.Maui.Controls.Shapes.PathFigure Segments(this Microsoft.Maui.Controls.Shapes.PathFigure self, Func<PropertyContext<Microsoft.Maui.Controls.Shapes.PathSegmentCollection>, IPropertyBuilder<Microsoft.Maui.Controls.Shapes.PathSegmentCollection>> configure)
     {

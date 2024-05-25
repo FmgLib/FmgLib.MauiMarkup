@@ -5,6 +5,15 @@
 public static partial class RadioButtonExtension
 {
     public static T Content<T>(this T self,
+        Func<object> configure)
+        where T : RadioButton
+    {
+        var content = configure();
+        self.SetValue(RadioButton.ContentProperty, content);
+        return self;
+    }
+
+    public static T Content<T>(this T self,
         object content)
         where T : RadioButton
     {

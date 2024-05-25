@@ -3,6 +3,15 @@
 public static partial class GraphicsViewExtension
 {
     public static T Drawable<T>(this T self,
+        Func<IDrawable> configure)
+        where T : GraphicsView
+    {
+        var drawable = configure();
+        self.SetValue(GraphicsView.DrawableProperty, drawable);
+        return self;
+    }
+
+    public static T Drawable<T>(this T self,
         IDrawable drawable)
         where T : GraphicsView
     {

@@ -17,6 +17,15 @@ public static partial class EventTriggerExtension
             self.Actions.Add(item);
         return self;
     }
+
+    public static EventTrigger Actions(this EventTrigger self,
+        Func<TriggerAction[]> configure)
+    {
+        var actions = configure();
+        foreach (var item in actions)
+            self.Actions.Add(item);
+        return self;
+    }
     
     public static EventTrigger Event(this EventTrigger self,
         string @event)

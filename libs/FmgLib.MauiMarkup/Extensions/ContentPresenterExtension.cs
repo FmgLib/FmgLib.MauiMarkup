@@ -3,35 +3,44 @@
 public static partial class ContentPresenterExtension
 {
     public static T Content<T>(this T self,
-        View content)
-        where T : ContentPresenter
+            Microsoft.Maui.Controls.View content)
+            where T : Microsoft.Maui.Controls.ContentPresenter
     {
-        self.SetValue(ContentPresenter.ContentProperty, content);
+        self.SetValue(Microsoft.Maui.Controls.ContentPresenter.ContentProperty, content);
         return self;
     }
-    
-    public static T Content<T>(this T self, Func<PropertyContext<View>, IPropertyBuilder<View>> configure)
-        where T : ContentPresenter
+
+    public static T Content<T>(this T self,
+        Func<Microsoft.Maui.Controls.View> configure)
+        where T : Microsoft.Maui.Controls.ContentPresenter
     {
-        var context = new PropertyContext<View>(self, ContentPresenter.ContentProperty);
+        var content = configure();
+        self.SetValue(Microsoft.Maui.Controls.ContentPresenter.ContentProperty, content);
+        return self;
+    }
+
+    public static T Content<T>(this T self, Func<PropertyContext<Microsoft.Maui.Controls.View>, IPropertyBuilder<Microsoft.Maui.Controls.View>> configure)
+        where T : Microsoft.Maui.Controls.ContentPresenter
+    {
+        var context = new PropertyContext<Microsoft.Maui.Controls.View>(self, Microsoft.Maui.Controls.ContentPresenter.ContentProperty);
         configure(context).Build();
         return self;
     }
-    
+
     public static SettersContext<T> Content<T>(this SettersContext<T> self,
-        View content)
-        where T : ContentPresenter
+        Microsoft.Maui.Controls.View content)
+        where T : Microsoft.Maui.Controls.ContentPresenter
     {
-        self.XamlSetters.Add(new Setter { Property = ContentPresenter.ContentProperty, Value = content });
+        self.XamlSetters.Add(new Setter { Property = Microsoft.Maui.Controls.ContentPresenter.ContentProperty, Value = content });
         return self;
     }
-    
-    public static SettersContext<T> Content<T>(this SettersContext<T> self, Func<PropertySettersContext<View>, IPropertySettersBuilder<View>> configure)
-        where T : ContentPresenter
+
+    public static SettersContext<T> Content<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Controls.View>, IPropertySettersBuilder<Microsoft.Maui.Controls.View>> configure)
+        where T : Microsoft.Maui.Controls.ContentPresenter
     {
-        var context = new PropertySettersContext<View>(self.XamlSetters, ContentPresenter.ContentProperty);
+        var context = new PropertySettersContext<Microsoft.Maui.Controls.View>(self.XamlSetters, Microsoft.Maui.Controls.ContentPresenter.ContentProperty);
         configure(context).Build();
         return self;
     }
-    
+
 }

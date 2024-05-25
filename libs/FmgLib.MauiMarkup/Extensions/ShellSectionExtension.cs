@@ -51,6 +51,16 @@ public static partial class ShellSectionExtension
             self.Items.Add(item);
         return self;
     }
+
+    public static T Items<T>(this T self,
+        Func<ShellContent[]> configure)
+        where T : ShellSection
+    {
+        var items = configure();
+        foreach (var item in items)
+            self.Items.Add(item);
+        return self;
+    }
     
     public static T Items<T>(this T self, Func<PropertyContext<IList<ShellContent>>, IPropertyBuilder<IList<ShellContent>>> configure)
         where T : ShellSection

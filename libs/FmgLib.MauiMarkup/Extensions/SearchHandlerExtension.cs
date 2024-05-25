@@ -5,6 +5,15 @@
 public static partial class SearchHandlerExtension
 {
     public static T Keyboard<T>(this T self,
+        Func<Microsoft.Maui.Keyboard> configure)
+        where T : SearchHandler
+    {
+        var keyboard = configure();
+        self.SetValue(SearchHandler.KeyboardProperty, keyboard);
+        return self;
+    }
+
+    public static T Keyboard<T>(this T self,
         Microsoft.Maui.Keyboard keyboard)
         where T : SearchHandler
     {

@@ -4,6 +4,13 @@ namespace FmgLib.MauiMarkup;
 
 public static partial class VisualElementExtension
 {
+    public static T SizeRequest<T>(this T self, double widthAndHeightRequest) where T : VisualElement
+    {
+        self.SetValue(VisualElement.WidthRequestProperty, widthAndHeightRequest);
+        self.SetValue(VisualElement.HeightRequestProperty, widthAndHeightRequest);
+        return self;
+    }
+
     public static T SizeRequest<T>(this T self, double widthRequest, double heightRequest) where T : VisualElement
     {
         self.SetValue(VisualElement.WidthRequestProperty, widthRequest);

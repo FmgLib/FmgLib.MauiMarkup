@@ -5,6 +5,15 @@
 public static partial class StructuredItemsViewExtension
 {
     public static T Header<T>(this T self,
+        Func<object> configure)
+        where T : StructuredItemsView
+    {
+        var header = configure();
+        self.SetValue(StructuredItemsView.HeaderProperty, header);
+        return self;
+    }
+
+    public static T Header<T>(this T self,
         object header)
         where T : StructuredItemsView
     {
@@ -72,6 +81,15 @@ public static partial class StructuredItemsViewExtension
         where T : StructuredItemsView
     {
         self.SetValue(StructuredItemsView.HeaderTemplateProperty, new DataTemplate(loadTemplate));
+        return self;
+    }
+    
+    public static T Footer<T>(this T self,
+        Func<object> configure)
+        where T : StructuredItemsView
+    {
+        var footer = configure();
+        self.SetValue(StructuredItemsView.FooterProperty, footer);
         return self;
     }
     

@@ -1,7 +1,6 @@
 ﻿namespace FmgLib.MauiMarkup;
 
 
-
 public static partial class WebViewExtension
 {
     public static T Cookies<T>(this T self,
@@ -98,5 +97,3 @@ public static partial class WebViewExtension
     
 }
 
-#pragma warning restore CS8601
-#nullable restore

@@ -1,7 +1,5 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-
-
 public static partial class LabelExtension
 {
     public static T TextTransform<T>(this T self,
@@ -33,6 +31,15 @@ public static partial class LabelExtension
     {
         var context = new PropertySettersContext<TextTransform>(self.XamlSetters, Label.TextTransformProperty);
         configure(context).Build();
+        return self;
+    }
+    
+    public static T FormattedText<T>(this T self,
+        Func<FormattedString> configure)
+        where T : Label
+    {
+        var formattedText = configure();
+        self.SetValue(Label.FormattedTextProperty, formattedText);
         return self;
     }
     
@@ -632,6 +639,54 @@ public static partial class LabelExtension
     {
         self.SetValue(Label.VerticalTextAlignmentProperty, TextAlignment.End);
         self.SetValue(Label.HorizontalTextAlignmentProperty, TextAlignment.Start);
+        return self;
+    }
+
+    public static T TextTopCenterH<T>(this T self)
+        where T : Label
+    {
+        self.SetValue(Label.VerticalTextAlignmentProperty, TextAlignment.Start);
+        self.SetValue(Label.HorizontalTextAlignmentProperty, TextAlignment.Center);
+        return self;
+    }
+
+    public static T TextBottomCenterH<T>(this T self)
+        where T : Label
+    {
+        self.SetValue(Label.VerticalTextAlignmentProperty, TextAlignment.End);
+        self.SetValue(Label.HorizontalTextAlignmentProperty, TextAlignment.Center);
+        return self;
+    }
+
+    public static T TextCenterVEnd<T>(this T self)
+        where T : Label
+    {
+        self.SetValue(Label.VerticalTextAlignmentProperty, TextAlignment.Start);
+        self.SetValue(Label.HorizontalTextAlignmentProperty, TextAlignment.End);
+        return self;
+    }
+
+    public static T TextCenterVStart<T>(this T self)
+        where T : Label
+    {
+        self.SetValue(Label.VerticalTextAlignmentProperty, TextAlignment.End);
+        self.SetValue(Label.HorizontalTextAlignmentProperty, TextAlignment.End);
+        return self;
+    }
+
+    public static T AlignText<T>(this T self, TextAlignment vertical, TextAlignment horizontal)
+        where T : Label
+    {
+        self.SetValue(Label.VerticalTextAlignmentProperty, vertical);
+        self.SetValue(Label.HorizontalTextAlignmentProperty, horizontal);
+        return self;
+    }
+
+    public static SettersContext<T> AlignText<T>(this SettersContext<T> self, TextAlignment vertical, TextAlignment horizontal)
+        where T : Label
+    {
+        self.XamlSetters.Add(new Setter { Property = Label.VerticalTextAlignmentProperty, Value = vertical });
+        self.XamlSetters.Add(new Setter { Property = Label.HorizontalTextAlignmentProperty, Value = horizontal });
         return self;
     }
 

@@ -5,6 +5,15 @@
 public static partial class ListViewExtension
 {
     public static T Footer<T>(this T self,
+        Func<object> configure)
+        where T : ListView
+    {
+        var footer = configure();
+        self.SetValue(ListView.FooterProperty, footer);
+        return self;
+    }
+
+    public static T Footer<T>(this T self,
         object footer)
         where T : ListView
     {
@@ -33,6 +42,15 @@ public static partial class ListViewExtension
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, ListView.FooterProperty);
         configure(context).Build();
+        return self;
+    }
+    
+    public static T FooterTemplate<T>(this T self,
+        Func<DataTemplate> configure)
+        where T : ListView
+    {
+        var footerTemplate = configure();
+        self.SetValue(ListView.FooterTemplateProperty, footerTemplate);
         return self;
     }
     
@@ -76,10 +94,28 @@ public static partial class ListViewExtension
     }
     
     public static T GroupDisplayBinding<T>(this T self,
+        Func<BindingBase> configure)
+        where T : ListView
+    {
+        var groupDisplayBinding = configure();
+        self.GroupDisplayBinding = groupDisplayBinding;
+        return self;
+    }
+    
+    public static T GroupDisplayBinding<T>(this T self,
         BindingBase groupDisplayBinding)
         where T : ListView
     {
         self.GroupDisplayBinding = groupDisplayBinding;
+        return self;
+    }
+    
+    public static T GroupHeaderTemplate<T>(this T self,
+        Func<DataTemplate> configure)
+        where T : ListView
+    {
+        var groupHeaderTemplate = configure();
+        self.SetValue(ListView.GroupHeaderTemplateProperty, groupHeaderTemplate);
         return self;
     }
     
@@ -119,6 +155,15 @@ public static partial class ListViewExtension
         where T : ListView
     {
         self.SetValue(ListView.GroupHeaderTemplateProperty, new DataTemplate(loadTemplate));
+        return self;
+    }
+    
+    public static T GroupShortNameBinding<T>(this T self,
+        Func<BindingBase> configure)
+        where T : ListView
+    {
+        var groupShortNameBinding = configure();
+        self.GroupShortNameBinding = groupShortNameBinding;
         return self;
     }
     
@@ -163,6 +208,15 @@ public static partial class ListViewExtension
     }
     
     public static T Header<T>(this T self,
+        Func<object> configure)
+        where T : ListView
+    {
+        var header = configure();
+        self.SetValue(ListView.HeaderProperty, header);
+        return self;
+    }
+    
+    public static T Header<T>(this T self,
         object header)
         where T : ListView
     {
@@ -191,6 +245,15 @@ public static partial class ListViewExtension
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, ListView.HeaderProperty);
         configure(context).Build();
+        return self;
+    }
+    
+    public static T HeaderTemplate<T>(this T self,
+        Func<DataTemplate> configure)
+        where T : ListView
+    {
+        var headerTemplate = configure();
+        self.SetValue(ListView.HeaderTemplateProperty, headerTemplate);
         return self;
     }
     
@@ -390,6 +453,15 @@ public static partial class ListViewExtension
     {
         var context = new PropertySettersContext<int>(self.XamlSetters, ListView.RowHeightProperty);
         configure(context).Build();
+        return self;
+    }
+    
+    public static T SelectedItem<T>(this T self,
+        Func<object> configure)
+        where T : ListView
+    {
+        var selectedItem = configure();
+        self.SetValue(ListView.SelectedItemProperty, selectedItem);
         return self;
     }
     

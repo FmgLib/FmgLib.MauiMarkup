@@ -1,7 +1,5 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-
-
 public static partial class WindowExtension
 {
     public static T Title<T>(this T self,
@@ -33,6 +31,15 @@ public static partial class WindowExtension
     {
         var context = new PropertySettersContext<string?>(self.XamlSetters, Window.TitleProperty);
         configure(context).Build();
+        return self;
+    }
+    
+    public static T Page<T>(this T self,
+        Func<Page?> configure)
+        where T : Window
+    {
+        var page = configure();
+        self.SetValue(Window.PageProperty, page);
         return self;
     }
     

@@ -21,5 +21,15 @@ public static partial class FormattedStringExtension
             self.Spans.Add(item);
         return self;
     }
+
+    public static T Spans<T>(this T self,
+        Func<Span[]> configure)
+        where T : FormattedString
+    {
+        var spans = configure();
+        foreach (var item in spans)
+            self.Spans.Add(item);
+        return self;
+    }
     
 }

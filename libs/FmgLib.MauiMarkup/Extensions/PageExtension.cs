@@ -182,6 +182,16 @@ public static partial class PageExtension
         return self;
     }
 
+    public static T ToolbarItems<T>(this T self,
+        Func<ToolbarItem[]> configure)
+        where T : Page
+    {
+        var toolbarItems = configure();
+        foreach (var item in toolbarItems)
+            self.ToolbarItems.Add(item);
+        return self;
+    }
+
     public static T MenuBarItems<T>(this T self,
         IList<MenuBarItem> menuBarItems)
         where T : Page
@@ -195,6 +205,16 @@ public static partial class PageExtension
         params MenuBarItem[] menuBarItems)
         where T : Page
     {
+        foreach (var item in menuBarItems)
+            self.MenuBarItems.Add(item);
+        return self;
+    }
+
+    public static T MenuBarItems<T>(this T self,
+        Func<MenuBarItem[]> configure)
+        where T : Page
+    {
+        var menuBarItems = configure();
         foreach (var item in menuBarItems)
             self.MenuBarItems.Add(item);
         return self;
@@ -229,6 +249,16 @@ public static partial class PageExtension
         params Element[] internalChildren)
         where T : Page
     {
+        foreach (var item in internalChildren)
+            self.InternalChildren.Add(item);
+        return self;
+    }
+
+    public static T InternalChildren<T>(this T self,
+        Func<Element[]> configure)
+        where T : Page
+    {
+        var internalChildren = configure();
         foreach (var item in internalChildren)
             self.InternalChildren.Add(item);
         return self;

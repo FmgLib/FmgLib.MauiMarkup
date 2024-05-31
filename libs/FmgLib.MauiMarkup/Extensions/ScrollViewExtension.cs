@@ -20,6 +20,15 @@ public static partial class ScrollViewExtension
         return self;
     }
     
+    public static T Content<T>(this T self,
+        Func<View> configure)
+        where T : ScrollView
+    {
+        var content = configure();
+        self.Content = content;
+        return self;
+    }
+    
     public static T Orientation<T>(this T self,
         ScrollOrientation orientation)
         where T : ScrollView

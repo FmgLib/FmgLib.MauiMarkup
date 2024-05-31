@@ -74,6 +74,15 @@ public static partial class EntryCellExtension
         return self;
     }
     
+    public static T Keyboard<T>(this T self,
+        Func<Microsoft.Maui.Keyboard> configure)
+        where T : EntryCell
+    {
+        var keyboard = configure();
+        self.SetValue(EntryCell.KeyboardProperty, keyboard);
+        return self;
+    }
+    
     public static T Keyboard<T>(this T self, Func<PropertyContext<Microsoft.Maui.Keyboard>, IPropertyBuilder<Microsoft.Maui.Keyboard>> configure)
         where T : EntryCell
     {

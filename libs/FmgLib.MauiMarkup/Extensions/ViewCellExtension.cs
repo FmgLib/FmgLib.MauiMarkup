@@ -11,5 +11,14 @@ public static partial class ViewCellExtension
         self.View = view;
         return self;
     }
+
+    public static T View<T>(this T self,
+        Func<View> configure)
+        where T : ViewCell
+    {
+        var view = configure();
+        self.View = view;
+        return self;
+    }
     
 }

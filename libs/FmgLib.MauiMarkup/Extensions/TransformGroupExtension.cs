@@ -19,6 +19,15 @@ public static partial class TransformGroupExtension
             self.Children.Add(item);
         return self;
     }
+
+    public static Microsoft.Maui.Controls.Shapes.TransformGroup Children(this Microsoft.Maui.Controls.Shapes.TransformGroup self,
+        Func<Microsoft.Maui.Controls.Shapes.Transform[]> configure)
+    {
+        var children = configure();
+        foreach (var item in children)
+            self.Children.Add(item);
+        return self;
+    }
     
     public static Microsoft.Maui.Controls.Shapes.TransformGroup Children(this Microsoft.Maui.Controls.Shapes.TransformGroup self, Func<PropertyContext<Microsoft.Maui.Controls.Shapes.TransformCollection>, IPropertyBuilder<Microsoft.Maui.Controls.Shapes.TransformCollection>> configure)
     {

@@ -19,6 +19,15 @@ public static partial class PolygonExtension
             self.Points.Add(item);
         return self;
     }
+
+    public static Microsoft.Maui.Controls.Shapes.Polygon Points(this Microsoft.Maui.Controls.Shapes.Polygon self,
+        Func<Point[]> configure)
+    {
+        var points = configure();
+        foreach (var item in points)
+            self.Points.Add(item);
+        return self;
+    }
     
     public static Microsoft.Maui.Controls.Shapes.Polygon Points(this Microsoft.Maui.Controls.Shapes.Polygon self, Func<PropertyContext<PointCollection>, IPropertyBuilder<PointCollection>> configure)
     {

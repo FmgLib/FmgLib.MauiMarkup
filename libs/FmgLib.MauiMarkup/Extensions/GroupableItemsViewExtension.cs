@@ -35,6 +35,15 @@ public static partial class GroupableItemsViewExtension
     }
     
     public static T GroupHeaderTemplate<T>(this T self,
+        Func<DataTemplate> configure)
+        where T : GroupableItemsView
+    {
+        var groupHeaderTemplate = configure();
+        self.SetValue(GroupableItemsView.GroupHeaderTemplateProperty, groupHeaderTemplate);
+        return self;
+    }
+    
+    public static T GroupHeaderTemplate<T>(this T self,
         DataTemplate groupHeaderTemplate)
         where T : GroupableItemsView
     {
@@ -70,6 +79,15 @@ public static partial class GroupableItemsViewExtension
         where T : GroupableItemsView
     {
         self.SetValue(GroupableItemsView.GroupHeaderTemplateProperty, new DataTemplate(loadTemplate));
+        return self;
+    }
+    
+    public static T GroupFooterTemplate<T>(this T self,
+        Func<DataTemplate> configure)
+        where T : GroupableItemsView
+    {
+        var groupFooterTemplate = configure();
+        self.SetValue(GroupableItemsView.GroupFooterTemplateProperty, groupFooterTemplate);
         return self;
     }
     

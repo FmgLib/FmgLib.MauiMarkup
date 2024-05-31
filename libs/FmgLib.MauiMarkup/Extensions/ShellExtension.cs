@@ -384,6 +384,15 @@ public static partial class ShellExtension
     }
     
     public static T FlyoutHeader<T>(this T self,
+        Func<object> configure)
+        where T : Shell
+    {
+        var flyoutHeader = configure();
+        self.SetValue(Shell.FlyoutHeaderProperty, flyoutHeader);
+        return self;
+    }
+    
+    public static T FlyoutHeader<T>(this T self,
         object flyoutHeader)
         where T : Shell
     {
@@ -412,6 +421,15 @@ public static partial class ShellExtension
     {
         var context = new PropertySettersContext<object>(self.XamlSetters, Shell.FlyoutHeaderProperty);
         configure(context).Build();
+        return self;
+    }
+    
+    public static T FlyoutFooter<T>(this T self,
+        Func<object> configure)
+        where T : Shell
+    {
+        var flyoutFooter = configure();
+        self.SetValue(Shell.FlyoutFooterProperty, flyoutFooter);
         return self;
     }
     
@@ -606,6 +624,16 @@ public static partial class ShellExtension
             self.Items.Add(item);
         return self;
     }
+
+    public static T Items<T>(this T self,
+        Func<ShellItem[]> configure)
+        where T : Shell
+    {
+        var items = configure();
+        foreach (var item in items)
+            self.Items.Add(item);
+        return self;
+    }
     
     public static T Items<T>(this T self, Func<PropertyContext<IList<ShellItem>>, IPropertyBuilder<IList<ShellItem>>> configure)
         where T : Shell
@@ -690,6 +718,15 @@ public static partial class ShellExtension
         where T : Shell
     {
         self.SetValue(Shell.MenuItemTemplateProperty, new DataTemplate(loadTemplate));
+        return self;
+    }
+    
+    public static T FlyoutContent<T>(this T self,
+        Func<object> configure)
+        where T : Shell
+    {
+        var flyoutContent = configure();
+        self.SetValue(Shell.FlyoutContentProperty, flyoutContent);
         return self;
     }
     

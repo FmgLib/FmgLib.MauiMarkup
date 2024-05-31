@@ -5,6 +5,15 @@
 public static partial class ItemsViewOfCellExtension
 {
     public static T ItemsSource<T>(this T self,
+        Func<System.Collections.IEnumerable> configure)
+        where T : ItemsView<Cell>
+    {
+        var itemsSource = configure();
+        self.SetValue(ItemsView<Cell>.ItemsSourceProperty, itemsSource);
+        return self;
+    }
+
+    public static T ItemsSource<T>(this T self,
         System.Collections.IEnumerable itemsSource)
         where T : ItemsView<Cell>
     {

@@ -92,6 +92,20 @@ public static partial class ViewExtension
         return self;
     }
 
+    public static T AlignTopCenterH<T>(this T self) where T : View
+    {
+        self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Start);
+        self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Center);
+        return self;
+    }
+
+    public static T AlignTopFillH<T>(this T self) where T : View
+    {
+        self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Start);
+        self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Fill);
+        return self;
+    }
+
     public static T AlignBottom<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.End);
@@ -109,6 +123,62 @@ public static partial class ViewExtension
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.End);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.End);
+        return self;
+    }
+
+    public static T AlignBottomCenterH<T>(this T self) where T : View
+    {
+        self.SetValue(View.VerticalOptionsProperty, LayoutOptions.End);
+        self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Center);
+        return self;
+    }
+
+    public static T AlignBottomFillH<T>(this T self) where T : View
+    {
+        self.SetValue(View.VerticalOptionsProperty, LayoutOptions.End);
+        self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Fill);
+        return self;
+    }
+
+    public static T AlignCenterVStart<T>(this T self) where T : View
+    {
+        self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Center);
+        self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Start);
+        return self;
+    }
+
+    public static T AlignCenterVEnd<T>(this T self) where T : View
+    {
+        self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Center);
+        self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.End);
+        return self;
+    }
+
+    public static T AlignCenterVFillH<T>(this T self) where T : View
+    {
+        self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Center);
+        self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Fill);
+        return self;
+    }
+
+    public static T AlignFillVStart<T>(this T self) where T : View
+    {
+        self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Fill);
+        self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Start);
+        return self;
+    }
+
+    public static T AlignFillVEnd<T>(this T self) where T : View
+    {
+        self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Fill);
+        self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.End);
+        return self;
+    }
+
+    public static T AlignFillVCenterH<T>(this T self) where T : View
+    {
+        self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Fill);
+        self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Center);
         return self;
     }
 
@@ -140,6 +210,13 @@ public static partial class ViewExtension
     {
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Fill);
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Fill);
+        return self;
+    }
+
+    public static T AlignLayout<T>(this T self, LayoutOptions vertical, LayoutOptions horizontal) where T : View
+    {
+        self.SetValue(View.HorizontalOptionsProperty, horizontal);
+        self.SetValue(View.VerticalOptionsProperty, vertical);
         return self;
     }
 
@@ -363,6 +440,156 @@ public static partial class ViewExtension
         return self;
     }
 
+    public static SettersContext<T> AlignTopCenterH<T>(this SettersContext<T> self) where T : View
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.VerticalOptionsProperty,
+            Value = LayoutOptions.Start
+        });
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.HorizontalOptionsProperty,
+            Value = LayoutOptions.Center
+        });
+        return self;
+    }
+
+    public static SettersContext<T> AlignTopFillH<T>(this SettersContext<T> self) where T : View
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.VerticalOptionsProperty,
+            Value = LayoutOptions.Start
+        });
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.HorizontalOptionsProperty,
+            Value = LayoutOptions.Fill
+        });
+        return self;
+    }
+
+    public static SettersContext<T> AlignBottomCenterH<T>(this SettersContext<T> self) where T : View
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.VerticalOptionsProperty,
+            Value = LayoutOptions.End
+        });
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.HorizontalOptionsProperty,
+            Value = LayoutOptions.Center
+        });
+        return self;
+    }
+
+    public static SettersContext<T> AlignBottomFillH<T>(this SettersContext<T> self) where T : View
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.VerticalOptionsProperty,
+            Value = LayoutOptions.End
+        });
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.HorizontalOptionsProperty,
+            Value = LayoutOptions.Fill
+        });
+        return self;
+    }
+
+    public static SettersContext<T> AlignCenterVStart<T>(this SettersContext<T> self) where T : View
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.VerticalOptionsProperty,
+            Value = LayoutOptions.Center
+        });
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.HorizontalOptionsProperty,
+            Value = LayoutOptions.Start
+        });
+        return self;
+    }
+
+    public static SettersContext<T> AlignCenterVEnd<T>(this SettersContext<T> self) where T : View
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.VerticalOptionsProperty,
+            Value = LayoutOptions.Center
+        });
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.HorizontalOptionsProperty,
+            Value = LayoutOptions.End
+        });
+        return self;
+    }
+
+    public static SettersContext<T> AlignCenterVFillH<T>(this SettersContext<T> self) where T : View
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.VerticalOptionsProperty,
+            Value = LayoutOptions.Center
+        });
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.HorizontalOptionsProperty,
+            Value = LayoutOptions.Fill
+        });
+        return self;
+    }
+
+    public static SettersContext<T> AlignFillVStart<T>(this SettersContext<T> self) where T : View
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.VerticalOptionsProperty,
+            Value = LayoutOptions.Fill
+        });
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.HorizontalOptionsProperty,
+            Value = LayoutOptions.Start
+        });
+        return self;
+    }
+
+    public static SettersContext<T> AlignFillVEnd<T>(this SettersContext<T> self) where T : View
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.VerticalOptionsProperty,
+            Value = LayoutOptions.Fill
+        });
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.HorizontalOptionsProperty,
+            Value = LayoutOptions.End
+        });
+        return self;
+    }
+
+    public static SettersContext<T> AlignFillVCenterH<T>(this SettersContext<T> self) where T : View
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.VerticalOptionsProperty,
+            Value = LayoutOptions.Fill
+        });
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.HorizontalOptionsProperty,
+            Value = LayoutOptions.Center
+        });
+        return self;
+    }
+
     public static SettersContext<T> FillHorizontal<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
@@ -398,6 +625,21 @@ public static partial class ViewExtension
         return self;
     }
 
+    public static SettersContext<T> AlignLayout<T>(this SettersContext<T> self, LayoutOptions vertical, LayoutOptions horizontal) where T : View
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.HorizontalOptionsProperty,
+            Value = horizontal
+        });
+        self.XamlSetters.Add(new Setter
+        {
+            Property = View.VerticalOptionsProperty,
+            Value = vertical
+        });
+        return self;
+    }
+
     public static T GestureRecognizers<T>(this T self, IList<IGestureRecognizer> gestureRecognizers) where T : View
     {
         foreach (IGestureRecognizer gestureRecognizer in gestureRecognizers)
@@ -410,6 +652,17 @@ public static partial class ViewExtension
 
     public static T GestureRecognizers<T>(this T self, params IGestureRecognizer[] gestureRecognizers) where T : View
     {
+        foreach (IGestureRecognizer item in gestureRecognizers)
+        {
+            self.GestureRecognizers.Add(item);
+        }
+
+        return self;
+    }
+
+    public static T GestureRecognizers<T>(this T self, Func<IGestureRecognizer[]> configure) where T : View
+    {
+        var gestureRecognizers = configure();
         foreach (IGestureRecognizer item in gestureRecognizers)
         {
             self.GestureRecognizers.Add(item);

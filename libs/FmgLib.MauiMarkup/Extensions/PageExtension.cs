@@ -100,6 +100,24 @@ public static partial class PageExtension
         return self;
     }
 
+    public static T Padding<T>(this T self, double horizontalSize, double verticalSize) where T : Page
+    {
+        self.SetValue(Page.PaddingProperty, new Thickness(horizontalSize, verticalSize));
+        return self;
+    }
+
+    public static T Padding<T>(this T self, double left, double top, double right, double bottom) where T : Page
+    {
+        self.SetValue(Page.PaddingProperty, new Thickness(left, top, right, bottom));
+        return self;
+    }
+
+    public static T Padding<T>(this T self, object _ = null, double left = 0.0, double top = 0.0, double right = 0.0, double bottom = 0.0) where T : Page
+    {
+        self.SetValue(Page.PaddingProperty, new Thickness(left, top, right, bottom));
+        return self;
+    }
+
     public static T Padding<T>(this T self,
         Thickness padding)
         where T : Page

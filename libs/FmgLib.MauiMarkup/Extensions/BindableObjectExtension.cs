@@ -127,13 +127,6 @@ public static partial class BindableObjectExtension
         return self;
     }
 
-    public static T Bind<T>(this T self, BindableProperty property, string sourcePath, BindingMode mode = BindingMode.Default, IValueConverter converter = null, string converterParameter = null, string stringFormat = null, object source = null) where T : BindableObject
-    {
-        self.SetBinding(property, new Binding(sourcePath, mode, converter, converterParameter, stringFormat, source));
-
-        return self;
-    }
-
     public static T BindTemplatedParent<T>(this T self, BindableProperty property, string sourcePath, BindingMode mode = BindingMode.Default, IValueConverter converter = null, string converterParameter = null, string stringFormat = null) where T : BindableObject
     {
         self.SetBinding(property, new Binding(sourcePath, mode, converter, converterParameter, stringFormat, RelativeBindingSource.TemplatedParent));

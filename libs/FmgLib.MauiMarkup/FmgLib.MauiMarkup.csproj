@@ -19,10 +19,10 @@
 		<RepositoryUrl>https://github.com/FmgLib/FmgLib.MauiMarkup</RepositoryUrl>
 		<UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
 		<Description>C# Code Markup Library for .NET MAUI</Description>
-		<PackageIcon>nuget.png</PackageIcon>
 		<PackageTags>xamarin,xamarin.forms,net,maui,netmaui,markup,csharpformarkup,csharp,csharpmarkup,xaml,mobile,android,ios,macos,windows,noxaml</PackageTags>
 		<Configurations>Debug;Release</Configurations>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageIcon>nuget.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	</PropertyGroup>

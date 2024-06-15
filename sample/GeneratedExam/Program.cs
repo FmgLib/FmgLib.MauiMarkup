@@ -6,4 +6,4 @@ using SkiaSharp.Extended.UI.Controls;
 
 Console.WriteLine($" dosyası oluşturuldu.");
 
-//new SKLottieViewExtension().RepeatCount(10).RepeatMode(SKLottieRepeatMode.Reverse).IsComplete()
+new SKLottieView().RepeatCount(10).RepeatMode(SKLottieRepeatMode.Reverse);

@@ -8,14 +8,13 @@ using SwipeItem = DevExpress.Maui.CollectionView.SwipeItem;
 namespace MyFinance;
 
 
-[MauiMarkup(typeof(StatusBarBehavior), typeof(TextEdit), typeof(TextEditBase), typeof(EditBase), typeof(ComboBoxEdit))]
-[MauiMarkup(typeof(PasswordEdit), typeof(CheckEdit), typeof(DXPopup), typeof(ComboBoxEditBase), typeof(ItemsEditBase))]
-[MauiMarkup(typeof(DXImage), typeof(DXButton), typeof(DXViewBase), typeof(DXBorder), typeof(DXContentPresenterBase))]
-[MauiMarkup(typeof(DXContentPresenter), typeof(DXCollectionView), typeof(CartesianChart), typeof(TabView), typeof(TabViewItem))]
-[MauiMarkup(typeof(TabItem), typeof(DXButtonBase), typeof(ShimmerView), typeof(DXCollectionViewBase), typeof(SwipeContainer))]
-[MauiMarkup(typeof(SwipeItem), typeof(DateEdit), typeof(CalendarHeaderAppearance), typeof(CalendarDayCellAppearance), typeof(CalendarSelectableCellAppearance))]
-[MauiMarkup(typeof(DateEditActualAppearance), typeof(MultilineEdit), typeof(SimpleButton), typeof(DXStackLayout), typeof(DXLayoutBase))]
-[MauiMarkup(typeof(SwipeItemBase))]
+[MauiMarkup(typeof(StatusBarBehavior), typeof(TextEdit), typeof(TextEditBase), typeof(EditBase), typeof(ComboBoxEdit),
+    typeof(SwipeItemBase), typeof(PasswordEdit), typeof(CheckEdit), typeof(DXPopup), typeof(ComboBoxEditBase), typeof(ItemsEditBase),
+    typeof(DXImage), typeof(DXButton), typeof(DXViewBase), typeof(DXBorder), typeof(DXContentPresenterBase), typeof(DXContentPresenter),
+    typeof(DXCollectionView), typeof(CartesianChart), typeof(TabView), typeof(TabViewItem), typeof(TabItem), typeof(DXButtonBase),
+    typeof(ShimmerView), typeof(DXCollectionViewBase), typeof(SwipeContainer), typeof(SwipeItem), typeof(DateEdit), typeof(SimpleButton),
+    typeof(CalendarHeaderAppearance), typeof(CalendarDayCellAppearance), typeof(CalendarSelectableCellAppearance), typeof(MultilineEdit),
+    typeof(DateEditActualAppearance), typeof(DXStackLayout), typeof(DXLayoutBase))]
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()

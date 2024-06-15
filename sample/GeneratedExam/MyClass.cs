@@ -9,8 +9,5 @@ public class MyBarcodeGeneratorView { }
 public class MyCameraView { }
 
 
-[MauiMarkup(typeof(ZXing.Net.Maui.Controls.CameraBarcodeReaderView))]
-public class MyCameraBarcodeReaderView { }
-
-[MauiMarkup(typeof(SkiaSharp.Extended.UI.Controls.SKLottieView))]
+[MauiMarkup(typeof(SkiaSharp.Extended.UI.Controls.SKLottieView), typeof(ZXing.Net.Maui.Controls.CameraBarcodeReaderView))]
 public class MySkLottieView { }

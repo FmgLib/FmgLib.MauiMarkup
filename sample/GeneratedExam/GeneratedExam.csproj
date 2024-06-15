@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FmgLib.MauiMarkup" Version="8.0.14" />
-    <PackageReference Include="FmgLib.MauiMarkup.Generator" Version="1.0.14" />
+    <PackageReference Include="FmgLib.MauiMarkup" Version="8.5.0" />
     <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.20" />
     <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0" />
     <PackageReference Include="ZXing.Net.Maui.Controls" Version="0.4.0" />

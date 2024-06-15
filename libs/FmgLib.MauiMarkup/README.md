@@ -63,7 +63,7 @@ FmgLib.MauiMarkup library can also generate extension methods for controls from 
 
 Simply specify the control for which you want to create extension methods as `[MauiMarkup(typeof(YourControl))]`.
 
-The constructor method of the `MauiMarkup()` attribute automatically generates extension methods for BindableProperties and Events found within the type provided as an argument. **You can provide a minimum of 1 and a maximum of 5 types inside the constructor method.** *Multiple MauiMarkup attributes can be added to a single class.*
+The constructor method of the `MauiMarkup()` attribute automatically generates extension methods for BindableProperties and Events found within the type provided as an argument. **You can provide a minimum of 1 type inside the constructor method, and there is no maximum limit.** *Multiple MauiMarkup attributes can be added to a single class.*
 
 Let's look at an example:
 

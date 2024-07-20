@@ -1,8 +1,9 @@
 ### Free .NET MAUI Libraries by FmgLib
 
-| NuGet Package | Link | Last Commit |
+
+| NuGet Package | Link | Repo Info |
 |--------------|------|-------|
-| `FmgLib.MauiMarkup` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup/) | [![GitHub last-commit](https://img.shields.io/github/last-commit/FmgLib/FmgLib.MauiMarkup?style=flat-square)](https://github.com/FmgLib/FmgLib.MauiMarkup/commits) |
+| `FmgLib.MauiMarkup` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup/) | [![GitHub Stars](https://img.shields.io/github/stars/FmgLib/FmgLib.MauiMarkup?style=flat-square&color=blue)](https://github.com/FmgLib/FmgLib.MauiMarkup/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/FmgLib/FmgLib.MauiMarkup?style=flat-square&color=green)](https://github.com/FmgLib/FmgLib.MauiMarkup/forks) [![GitHub last-commit](https://img.shields.io/github/last-commit/FmgLib/FmgLib.MauiMarkup?style=flat-square)](https://github.com/FmgLib/FmgLib.MauiMarkup/commits) |
 | `FmgLib.MauiMarkup.Template` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.Template?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.Template/) | - |
 
 
@@ -110,7 +111,7 @@ FmgLib.MauiMarkup library can also generate extension methods for controls from 
 
 Simply specify the control for which you want to create extension methods as `[MauiMarkup(typeof(YourControl))]`.
 
-The constructor method of the `MauiMarkup()` attribute automatically generates extension methods for BindableProperties and Events found within the type provided as an argument. **You can provide a minimum of 1 and a maximum of 5 types inside the constructor method.** *Multiple MauiMarkup attributes can be added to a single class.*
+The constructor method of the `MauiMarkup()` attribute automatically generates extension methods for BindableProperties and Events found within the type provided as an argument. **You can provide a minimum of 1 type inside the constructor method, and there is no maximum limit.** *Multiple MauiMarkup attributes can be added to a single class.*
 
 Let's look at an example:
 

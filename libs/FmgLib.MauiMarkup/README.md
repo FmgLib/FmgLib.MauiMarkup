@@ -85,6 +85,9 @@ public class MyCameraBarcodeReaderView { }
 [MauiMarkup(typeof(SkiaSharp.Extended.UI.Controls.SKLottieView))]
 public class MySkLottieView { }
 
+[MauiMarkup(typeof(InputKit.Shared.Controls.FormView))]
+public class MyFormView { }
+
 ```
 
 Or instead of dealing with it like this, it can be used like this:
@@ -122,6 +125,57 @@ namespace MauiApp1
     }
 }
 ```
+
+With the **MauiMarkupAttachedPropAttribute**, you can easily create extension methods for **AttachedProperties** within Control classes from third-party libraries.
+**The constructor's first parameter takes the type of the Control class, the second parameter takes the name of the AttachedProperty, the third parameter takes the value type that the AttachedProperty can accept, and the fourth parameter takes the type to which the AttachedProperty will be applied.**
+
+Example usage:
+
+```csharp
+[MauiMarkupAttachedProp(typeof(InputKit.Shared.Controls.FormView), nameof(InputKit.Shared.Controls.FormView.IsSubmitButtonProperty), typeof(bool), typeof(Button))]
+[MauiMarkup(typeof(InputKit.Shared.Controls.FormView))]
+public class MyFormView { }
+```
+OR
+```csharp
+
+using Microsoft.Extensions.Logging;
+using FmgLib.MauiMarkup;
+
+namespace MauiApp1
+{
+    [MauiMarkupAttachedProp(typeof(InputKit.Shared.Controls.FormView), nameof(InputKit.Shared.Controls.FormView.IsSubmitButtonProperty), typeof(bool), typeof(Button))]
+    [MauiMarkup(typeof(InputKit.Shared.Controls.FormView))]
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                });
+
+#if DEBUG
+    		builder.Logging.AddDebug();
+#endif
+            return builder.Build();
+        }
+    }
+}
+```
+
+The usage of the AttachedProperty in the Button class will be as follows:
+```csharp
+new Button()
+.Text("Login")
+.FontAttributes(Bold)
+.IsSubmitButton(true)
+```
+
 
 For example, let's write the sample code for the **TextField and SKLottieView Controls**:
 

@@ -495,10 +495,10 @@ public static partial class PickerExtension
         self.SelectedIndexChanged += (o, arg) => action(self);
         return self;
     }
-    
+
 
     public static T TextCenterHorizontal<T>(this T self)
-        where T : Picker
+    where T : Picker
     {
         self.SetValue(Picker.HorizontalTextAlignmentProperty, TextAlignment.Center);
         return self;
@@ -549,6 +549,54 @@ public static partial class PickerExtension
         return self;
     }
 
+    public static T TextTopCenterH<T>(this T self)
+        where T : Picker
+    {
+        self.SetValue(Picker.VerticalTextAlignmentProperty, TextAlignment.Start);
+        self.SetValue(Picker.HorizontalTextAlignmentProperty, TextAlignment.Center);
+        return self;
+    }
+
+    public static T TextBottomCenterH<T>(this T self)
+        where T : Picker
+    {
+        self.SetValue(Picker.VerticalTextAlignmentProperty, TextAlignment.End);
+        self.SetValue(Picker.HorizontalTextAlignmentProperty, TextAlignment.Center);
+        return self;
+    }
+
+    public static T TextCenterVEnd<T>(this T self)
+        where T : Picker
+    {
+        self.SetValue(Picker.VerticalTextAlignmentProperty, TextAlignment.Start);
+        self.SetValue(Picker.HorizontalTextAlignmentProperty, TextAlignment.End);
+        return self;
+    }
+
+    public static T TextCenterVStart<T>(this T self)
+        where T : Picker
+    {
+        self.SetValue(Picker.VerticalTextAlignmentProperty, TextAlignment.End);
+        self.SetValue(Picker.HorizontalTextAlignmentProperty, TextAlignment.End);
+        return self;
+    }
+
+    public static T AlignText<T>(this T self, TextAlignment vertical, TextAlignment horizontal)
+        where T : Picker
+    {
+        self.SetValue(Picker.VerticalTextAlignmentProperty, vertical);
+        self.SetValue(Picker.HorizontalTextAlignmentProperty, horizontal);
+        return self;
+    }
+
+    public static SettersContext<T> AlignText<T>(this SettersContext<T> self, TextAlignment vertical, TextAlignment horizontal)
+        where T : Picker
+    {
+        self.XamlSetters.Add(new Setter { Property = Picker.VerticalTextAlignmentProperty, Value = vertical });
+        self.XamlSetters.Add(new Setter { Property = Picker.HorizontalTextAlignmentProperty, Value = horizontal });
+        return self;
+    }
+
     public static T TextTopEnd<T>(this T self)
         where T : Picker
     {
@@ -579,5 +627,4 @@ public static partial class PickerExtension
         return self;
     }
 
-    
 }

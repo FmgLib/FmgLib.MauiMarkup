@@ -419,10 +419,10 @@ public static partial class SearchBarExtension
         self.SearchButtonPressed += (o, arg) => action(self);
         return self;
     }
-    
+
 
     public static T TextCenterHorizontal<T>(this T self)
-        where T : SearchBar
+    where T : SearchBar
     {
         self.SetValue(SearchBar.HorizontalTextAlignmentProperty, TextAlignment.Center);
         return self;
@@ -473,6 +473,54 @@ public static partial class SearchBarExtension
         return self;
     }
 
+    public static T TextTopCenterH<T>(this T self)
+        where T : SearchBar
+    {
+        self.SetValue(SearchBar.VerticalTextAlignmentProperty, TextAlignment.Start);
+        self.SetValue(SearchBar.HorizontalTextAlignmentProperty, TextAlignment.Center);
+        return self;
+    }
+
+    public static T TextBottomCenterH<T>(this T self)
+        where T : SearchBar
+    {
+        self.SetValue(SearchBar.VerticalTextAlignmentProperty, TextAlignment.End);
+        self.SetValue(SearchBar.HorizontalTextAlignmentProperty, TextAlignment.Center);
+        return self;
+    }
+
+    public static T TextCenterVEnd<T>(this T self)
+        where T : SearchBar
+    {
+        self.SetValue(SearchBar.VerticalTextAlignmentProperty, TextAlignment.Start);
+        self.SetValue(SearchBar.HorizontalTextAlignmentProperty, TextAlignment.End);
+        return self;
+    }
+
+    public static T TextCenterVStart<T>(this T self)
+        where T : SearchBar
+    {
+        self.SetValue(SearchBar.VerticalTextAlignmentProperty, TextAlignment.End);
+        self.SetValue(SearchBar.HorizontalTextAlignmentProperty, TextAlignment.End);
+        return self;
+    }
+
+    public static T AlignText<T>(this T self, TextAlignment vertical, TextAlignment horizontal)
+        where T : SearchBar
+    {
+        self.SetValue(SearchBar.VerticalTextAlignmentProperty, vertical);
+        self.SetValue(SearchBar.HorizontalTextAlignmentProperty, horizontal);
+        return self;
+    }
+
+    public static SettersContext<T> AlignText<T>(this SettersContext<T> self, TextAlignment vertical, TextAlignment horizontal)
+        where T : SearchBar
+    {
+        self.XamlSetters.Add(new Setter { Property = SearchBar.VerticalTextAlignmentProperty, Value = vertical });
+        self.XamlSetters.Add(new Setter { Property = SearchBar.HorizontalTextAlignmentProperty, Value = horizontal });
+        return self;
+    }
+
     public static T TextTopEnd<T>(this T self)
         where T : SearchBar
     {
@@ -503,5 +551,4 @@ public static partial class SearchBarExtension
         return self;
     }
 
-    
 }

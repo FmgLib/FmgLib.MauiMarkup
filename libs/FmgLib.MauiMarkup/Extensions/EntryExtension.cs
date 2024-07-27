@@ -472,10 +472,10 @@ public static partial class EntryExtension
         self.Completed += (o, arg) => action(self);
         return self;
     }
-    
+
 
     public static T TextCenterHorizontal<T>(this T self)
-        where T : Entry
+    where T : Entry
     {
         self.SetValue(Entry.HorizontalTextAlignmentProperty, TextAlignment.Center);
         return self;
@@ -526,6 +526,54 @@ public static partial class EntryExtension
         return self;
     }
 
+    public static T TextTopCenterH<T>(this T self)
+        where T : Entry
+    {
+        self.SetValue(Entry.VerticalTextAlignmentProperty, TextAlignment.Start);
+        self.SetValue(Entry.HorizontalTextAlignmentProperty, TextAlignment.Center);
+        return self;
+    }
+
+    public static T TextBottomCenterH<T>(this T self)
+        where T : Entry
+    {
+        self.SetValue(Entry.VerticalTextAlignmentProperty, TextAlignment.End);
+        self.SetValue(Entry.HorizontalTextAlignmentProperty, TextAlignment.Center);
+        return self;
+    }
+
+    public static T TextCenterVEnd<T>(this T self)
+        where T : Entry
+    {
+        self.SetValue(Entry.VerticalTextAlignmentProperty, TextAlignment.Start);
+        self.SetValue(Entry.HorizontalTextAlignmentProperty, TextAlignment.End);
+        return self;
+    }
+
+    public static T TextCenterVStart<T>(this T self)
+        where T : Entry
+    {
+        self.SetValue(Entry.VerticalTextAlignmentProperty, TextAlignment.End);
+        self.SetValue(Entry.HorizontalTextAlignmentProperty, TextAlignment.End);
+        return self;
+    }
+
+    public static T AlignText<T>(this T self, TextAlignment vertical, TextAlignment horizontal)
+        where T : Entry
+    {
+        self.SetValue(Entry.VerticalTextAlignmentProperty, vertical);
+        self.SetValue(Entry.HorizontalTextAlignmentProperty, horizontal);
+        return self;
+    }
+
+    public static SettersContext<T> AlignText<T>(this SettersContext<T> self, TextAlignment vertical, TextAlignment horizontal)
+        where T : Entry
+    {
+        self.XamlSetters.Add(new Setter { Property = Entry.VerticalTextAlignmentProperty, Value = vertical });
+        self.XamlSetters.Add(new Setter { Property = Entry.HorizontalTextAlignmentProperty, Value = horizontal });
+        return self;
+    }
+
     public static T TextTopEnd<T>(this T self)
         where T : Entry
     {
@@ -556,5 +604,4 @@ public static partial class EntryExtension
         return self;
     }
 
-    
 }

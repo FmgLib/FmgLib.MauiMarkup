@@ -47,6 +47,13 @@ public static class BindableLayoutExtensions
         return layout;
     }
 
+    public static T ItemsSources<T>(this T layout, Func<PropertyContext<IEnumerable>, IPropertyBuilder<IEnumerable>> configure) where T : BindableObject, Microsoft.Maui.ILayout
+    {
+        var context = new PropertyContext<IEnumerable>(layout, BindableLayout.ItemsSourceProperty);
+        configure(context).Build();
+        return layout;
+    }
+
     public static T ItemTemplates<T>(this T layout, DataTemplate template) where T : BindableObject, Microsoft.Maui.ILayout
     {
         BindableLayout.SetItemTemplate(layout, template);

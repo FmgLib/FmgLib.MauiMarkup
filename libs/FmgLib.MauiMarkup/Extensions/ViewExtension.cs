@@ -78,28 +78,28 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static T AlignTopStart<T>(this T self) where T : View
+    public static T AlignTopLeft<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Start);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Start);
         return self;
     }
 
-    public static T AlignTopEnd<T>(this T self) where T : View
+    public static T AlignTopRight<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Start);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.End);
         return self;
     }
 
-    public static T AlignTopCenterH<T>(this T self) where T : View
+    public static T AlignTopCenter<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Start);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Center);
         return self;
     }
 
-    public static T AlignTopFillH<T>(this T self) where T : View
+    public static T AlignTopFill<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Start);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Fill);
@@ -112,83 +112,83 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static T AlignBottomStart<T>(this T self) where T : View
+    public static T AlignBottomLeft<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.End);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Start);
         return self;
     }
 
-    public static T AlignBottomEnd<T>(this T self) where T : View
+    public static T AlignBottomRight<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.End);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.End);
         return self;
     }
 
-    public static T AlignBottomCenterH<T>(this T self) where T : View
+    public static T AlignBottomCenter<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.End);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Center);
         return self;
     }
 
-    public static T AlignBottomFillH<T>(this T self) where T : View
+    public static T AlignBottomFill<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.End);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Fill);
         return self;
     }
 
-    public static T AlignCenterVStart<T>(this T self) where T : View
+    public static T AlignCenterLeft<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Center);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Start);
         return self;
     }
 
-    public static T AlignCenterVEnd<T>(this T self) where T : View
+    public static T AlignCenterRight<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Center);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.End);
         return self;
     }
 
-    public static T AlignCenterVFillH<T>(this T self) where T : View
+    public static T AlignCenterFill<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Center);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Fill);
         return self;
     }
 
-    public static T AlignFillVStart<T>(this T self) where T : View
+    public static T AlignFillLeft<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Fill);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Start);
         return self;
     }
 
-    public static T AlignFillVEnd<T>(this T self) where T : View
+    public static T AlignFillRight<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Fill);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.End);
         return self;
     }
 
-    public static T AlignFillVCenterH<T>(this T self) where T : View
+    public static T AlignFillCenter<T>(this T self) where T : View
     {
         self.SetValue(View.VerticalOptionsProperty, LayoutOptions.Fill);
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Center);
         return self;
     }
 
-    public static T AlignStart<T>(this T self) where T : View
+    public static T AlignLeft<T>(this T self) where T : View
     {
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.Start);
         return self;
     }
 
-    public static T AlignEnd<T>(this T self) where T : View
+    public static T AlignRight<T>(this T self) where T : View
     {
         self.SetValue(View.HorizontalOptionsProperty, LayoutOptions.End);
         return self;
@@ -350,7 +350,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignTopStart<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignTopLeft<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
@@ -365,7 +365,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignTopEnd<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignTopRight<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
@@ -390,7 +390,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignBottomStart<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignBottomLeft<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
@@ -405,7 +405,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignBottomEnd<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignBottomRight<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
@@ -420,7 +420,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignStart<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignLeft<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
@@ -430,7 +430,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignEnd<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignRight<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
@@ -440,7 +440,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignTopCenterH<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignTopCenter<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
@@ -455,7 +455,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignTopFillH<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignTopFill<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
@@ -470,7 +470,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignBottomCenterH<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignBottomCenter<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
@@ -485,7 +485,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignBottomFillH<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignBottomFill<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
@@ -500,7 +500,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignCenterVStart<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignCenterLeft<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
@@ -515,7 +515,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignCenterVEnd<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignCenterRight<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
@@ -530,7 +530,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignCenterVFillH<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignCenterFill<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
@@ -545,7 +545,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignFillVStart<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignFillLeft<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
@@ -560,7 +560,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignFillVEnd<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignFillRight<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {
@@ -575,7 +575,7 @@ public static partial class ViewExtension
         return self;
     }
 
-    public static SettersContext<T> AlignFillVCenterH<T>(this SettersContext<T> self) where T : View
+    public static SettersContext<T> AlignFillCenter<T>(this SettersContext<T> self) where T : View
     {
         self.XamlSetters.Add(new Setter
         {

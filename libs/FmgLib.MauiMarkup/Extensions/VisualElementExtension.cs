@@ -18,6 +18,21 @@ public static partial class VisualElementExtension
         return self;
     }
 
+    public static SettersContext<T> SizeRequest<T>(this SettersContext<T> self, double widthAndHeightRequest) where T : VisualElement
+    {
+        self.XamlSetters.Add(new Setter
+        {
+            Property = VisualElement.WidthRequestProperty,
+            Value = widthAndHeightRequest
+        });
+        self.XamlSetters.Add(new Setter
+        {
+            Property = VisualElement.HeightRequestProperty,
+            Value = widthAndHeightRequest
+        });
+        return self;
+    }
+
     public static SettersContext<T> SizeRequest<T>(this SettersContext<T> self, double widthRequest, double heightRequest) where T : VisualElement
     {
         self.XamlSetters.Add(new Setter

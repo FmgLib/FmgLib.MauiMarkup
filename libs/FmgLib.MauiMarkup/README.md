@@ -227,7 +227,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                 .BackgroundColor(Colors.Blue)
                 .BorderColor(Colors.Blue)
                 .HeightRequest(150)
-                .Margin(new Thickness(15,7))
+                .Margin(15,7)
                 .Padding(0)
                 .Content(
                     new Grid()
@@ -237,7 +237,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                         new Frame()
                         .Row(0)
                         .Column(0)
-                        .Margin(new Thickness(0,20,0,0))
+                        .Margin(0,20,0,0)
                         .Padding(0)
                         .CornerRadius(0)
                         .BackgroundColor(Colors.DarkBlue)
@@ -258,7 +258,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                         .Column(0)
                         .TextColor(Colors.White)
                         .FontAttributes(FontAttributes.Italic)
-                        .Margin(new Thickness(10,3,0,0)),
+                        .Margin(10,3,0,0),
 
                         new Image()
                         .Source("white_board.png")

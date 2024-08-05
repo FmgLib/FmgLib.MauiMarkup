@@ -227,7 +227,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                 .BackgroundColor(Colors.Blue)
                 .BorderColor(Colors.Blue)
                 .HeightRequest(150)
-                .Margin(new Thickness(15,7))
+                .Margin(15,7)
                 .Padding(0)
                 .Content(
                     new Grid()
@@ -237,7 +237,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                         new Frame()
                         .Row(0)
                         .Column(0)
-                        .Margin(new Thickness(0,20,0,0))
+                        .Margin(0,20,0,0)
                         .Padding(0)
                         .CornerRadius(0)
                         .BackgroundColor(Colors.DarkBlue)
@@ -258,7 +258,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                         .Column(0)
                         .TextColor(Colors.White)
                         .FontAttributes(FontAttributes.Italic)
-                        .Margin(new Thickness(10,3,0,0)),
+                        .Margin(10,3,0,0),
 
                         new Image()
                         .Source("white_board.png")
@@ -281,7 +281,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                     .FontSize(18)
                     .CenterVertical()
                     .Column(0)
-                    .AlignStart(),
+                    .AlignLeft(),
 
 
                     new Label()
@@ -289,7 +289,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                     .FontSize(15)
                     .CenterVertical()
                     .Column(1)
-                    .AlignEnd()
+                    .AlignRight()
                     .TextDecorations(TextDecorations.Underline)
                     .GestureRecognizers(
                         new TapGestureRecognizer()
@@ -332,7 +332,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                                 new ImageButton()
                                 .Bind(ImageButton.SourceProperty, nameof(ProductVM.IsFavorite), converter: new BoolToFavoriteImageConverter())
                                 .BackgroundColor(Colors.Transparent)
-                                .AlignStart()
+                                .AlignLeft()
                                 .SizeRequest(30, 30)
                                 .Command(BindingContext.ChangeFavoriteCommand)
                                 .Bind(ImageButton.CommandParameterProperty, "."),
@@ -369,7 +369,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                                 .Bind(Label.TextProperty, nameof(ProductVM.Name))
                                 .FontAttributes(FontAttributes.Bold)
                                 .FontSize(11)
-                                .AlignStart()
+                                .AlignLeft()
                                 .LineBreakMode(LineBreakMode.TailTruncation)
                                 .FontAutoScalingEnabled(true),
 
@@ -432,7 +432,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                     .FontSize(18)
                     .CenterVertical()
                     .Column(0)
-                    .AlignStart(),
+                    .AlignLeft(),
 
 
                     new Label()
@@ -440,7 +440,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                     .FontSize(15)
                     .CenterVertical()
                     .Column(1)
-                    .AlignEnd()
+                    .AlignRight()
                     .TextDecorations(TextDecorations.Underline)
                     .GestureRecognizers(
                         new TapGestureRecognizer()

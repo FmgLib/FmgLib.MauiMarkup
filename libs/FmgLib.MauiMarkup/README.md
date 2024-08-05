@@ -281,7 +281,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                     .FontSize(18)
                     .CenterVertical()
                     .Column(0)
-                    .AlignStart(),
+                    .AlignLeft(),
 
 
                     new Label()
@@ -289,7 +289,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                     .FontSize(15)
                     .CenterVertical()
                     .Column(1)
-                    .AlignEnd()
+                    .AlignRight()
                     .TextDecorations(TextDecorations.Underline)
                     .GestureRecognizers(
                         new TapGestureRecognizer()
@@ -332,7 +332,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                                 new ImageButton()
                                 .Bind(ImageButton.SourceProperty, nameof(ProductVM.IsFavorite), converter: new BoolToFavoriteImageConverter())
                                 .BackgroundColor(Colors.Transparent)
-                                .AlignStart()
+                                .AlignLeft()
                                 .SizeRequest(30, 30)
                                 .Command(BindingContext.ChangeFavoriteCommand)
                                 .Bind(ImageButton.CommandParameterProperty, "."),
@@ -369,7 +369,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                                 .Bind(Label.TextProperty, nameof(ProductVM.Name))
                                 .FontAttributes(FontAttributes.Bold)
                                 .FontSize(11)
-                                .AlignStart()
+                                .AlignLeft()
                                 .LineBreakMode(LineBreakMode.TailTruncation)
                                 .FontAutoScalingEnabled(true),
 
@@ -432,7 +432,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                     .FontSize(18)
                     .CenterVertical()
                     .Column(0)
-                    .AlignStart(),
+                    .AlignLeft(),
 
 
                     new Label()
@@ -440,7 +440,7 @@ public partial class HomePage : BasePage<HomePageViewModel>
                     .FontSize(15)
                     .CenterVertical()
                     .Column(1)
-                    .AlignEnd()
+                    .AlignRight()
                     .TextDecorations(TextDecorations.Underline)
                     .GestureRecognizers(
                         new TapGestureRecognizer()

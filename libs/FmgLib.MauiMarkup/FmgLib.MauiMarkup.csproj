@@ -36,7 +36,4 @@
 		<None Include="nuget.png" Pack="true" PackagePath="" />
 		<None Include="README.md" Pack="true" PackagePath="" />
 	</ItemGroup>
-	<ItemGroup>
-		<None Include="C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator\bin\Release\netstandard2.0\FmgLib.MauiMarkup.Generator.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
-	</ItemGroup>
 </Project>

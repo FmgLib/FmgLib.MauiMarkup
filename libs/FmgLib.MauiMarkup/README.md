@@ -173,7 +173,7 @@ The usage of the AttachedProperty in the Button class will be as follows:
 new Button()
 .Text("Login")
 .FontAttributes(Bold)
-.IsSubmitButton(true)
+.FormViewIsSubmitButton(true)
 ```
 
 

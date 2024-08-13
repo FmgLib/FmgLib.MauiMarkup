@@ -861,7 +861,7 @@ public static partial class PageExtension
     }
 
 
-    public static T HasNavigationBar<T>(this T self,
+    public static T NavigationPageHasNavigationBar<T>(this T self,
             bool hasNavigationBar)
             where T : Microsoft.Maui.Controls.Page
     {
@@ -869,7 +869,7 @@ public static partial class PageExtension
         return self;
     }
 
-    public static T HasNavigationBar<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
+    public static T NavigationPageHasNavigationBar<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
         where T : Microsoft.Maui.Controls.Page
     {
         var context = new PropertyContext<bool>(self, Microsoft.Maui.Controls.NavigationPage.HasNavigationBarProperty);
@@ -877,7 +877,7 @@ public static partial class PageExtension
         return self;
     }
 
-    public static SettersContext<T> HasNavigationBar<T>(this SettersContext<T> self,
+    public static SettersContext<T> NavigationPageHasNavigationBar<T>(this SettersContext<T> self,
         bool hasNavigationBar)
         where T : Microsoft.Maui.Controls.Page
     {
@@ -885,7 +885,7 @@ public static partial class PageExtension
         return self;
     }
 
-    public static SettersContext<T> HasNavigationBar<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> NavigationPageHasNavigationBar<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
         where T : Microsoft.Maui.Controls.Page
     {
         var context = new PropertySettersContext<bool>(self.XamlSetters, Microsoft.Maui.Controls.NavigationPage.HasNavigationBarProperty);
@@ -893,7 +893,7 @@ public static partial class PageExtension
         return self;
     }
 
-    public static T BackButtonTitle<T>(this T self,
+    public static T NavigationPageBackButtonTitle<T>(this T self,
             string backButtonTitle)
             where T : Microsoft.Maui.Controls.Page
     {
@@ -901,7 +901,7 @@ public static partial class PageExtension
         return self;
     }
 
-    public static T BackButtonTitle<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
+    public static T NavigationPageBackButtonTitle<T>(this T self, Func<PropertyContext<string>, IPropertyBuilder<string>> configure)
         where T : Microsoft.Maui.Controls.Page
     {
         var context = new PropertyContext<string>(self, Microsoft.Maui.Controls.NavigationPage.BackButtonTitleProperty);
@@ -909,7 +909,7 @@ public static partial class PageExtension
         return self;
     }
 
-    public static SettersContext<T> BackButtonTitle<T>(this SettersContext<T> self,
+    public static SettersContext<T> NavigationPageBackButtonTitle<T>(this SettersContext<T> self,
         string backButtonTitle)
         where T : Microsoft.Maui.Controls.Page
     {
@@ -917,7 +917,7 @@ public static partial class PageExtension
         return self;
     }
 
-    public static SettersContext<T> BackButtonTitle<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
+    public static SettersContext<T> NavigationPageBackButtonTitle<T>(this SettersContext<T> self, Func<PropertySettersContext<string>, IPropertySettersBuilder<string>> configure)
         where T : Microsoft.Maui.Controls.Page
     {
         var context = new PropertySettersContext<string>(self.XamlSetters, Microsoft.Maui.Controls.NavigationPage.BackButtonTitleProperty);

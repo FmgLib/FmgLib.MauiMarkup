@@ -35,6 +35,19 @@ public static class BindableLayoutExtensions
         return view;
     }
 
+    public static T BindableLayoutEmptyView<T>(this T layout, IEnumerable source) where T : BindableObject, Microsoft.Maui.ILayout
+    {
+        BindableLayout.SetEmptyView(layout, source);
+        return layout;
+    }
+
+    public static T BindableLayoutEmptyView<T>(this T layout, Func<PropertyContext<IEnumerable>, IPropertyBuilder<IEnumerable>> configure) where T : BindableObject, Microsoft.Maui.ILayout
+    {
+        var context = new PropertyContext<IEnumerable>(layout, BindableLayout.EmptyViewProperty);
+        configure(context).Build();
+        return layout;
+    }
+
     public static T BindableLayoutEmptyViewTemplate<T>(this T layout, DataTemplate template) where T : BindableObject, Microsoft.Maui.ILayout
     {
         BindableLayout.SetEmptyViewTemplate(layout, template);
@@ -57,6 +70,12 @@ public static class BindableLayoutExtensions
     public static T BindableLayoutItemTemplate<T>(this T layout, DataTemplate template) where T : BindableObject, Microsoft.Maui.ILayout
     {
         BindableLayout.SetItemTemplate(layout, template);
+        return layout;
+    }
+
+    public static T BindableItemTemplateSelector<T>(this T layout, DataTemplateSelector templateSelector) where T : BindableObject, Microsoft.Maui.ILayout
+    {
+        BindableLayout.SetItemTemplateSelector(layout, templateSelector);
         return layout;
     }
 }

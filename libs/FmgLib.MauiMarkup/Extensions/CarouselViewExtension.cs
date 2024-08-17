@@ -605,6 +605,12 @@ public static partial class CarouselViewExtension
         return self;
     }
 
+    public static T IndicatorView<T>(this T self, Microsoft.Maui.Controls.IndicatorView indicatorView) where T : Microsoft.Maui.Controls.CarouselView
+    {
+        self.IndicatorView = indicatorView;
+        return self;
+    }
+
     public static T OnCurrentItemChanged<T>(this T self, System.EventHandler<Microsoft.Maui.Controls.CurrentItemChangedEventArgs> handler)
         where T : Microsoft.Maui.Controls.CarouselView
     {

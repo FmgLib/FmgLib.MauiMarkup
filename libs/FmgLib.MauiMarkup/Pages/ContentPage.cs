@@ -1,10 +1,16 @@
-﻿namespace FmgLib.MauiMarkup;
+﻿using System.Diagnostics;
+
+namespace FmgLib.MauiMarkup;
 
 public abstract class FmgLibContentPage : ContentPage, IFmgLibHotReload
 {
     protected FmgLibContentPage()
     {
-        FmgLibHotReloadHandler.UpdateApplicationEvent += ReloadUI;
+        if (Debugger.IsAttached)
+        {
+            FmgLibHotReloadHandler.UpdateApplicationEvent += ReloadUI;
+        }
+
         Build();
     }
 
@@ -26,7 +32,12 @@ public abstract class FmgLibContentPage<TViewModel> : FmgLibContentPage, IFmgLib
     protected FmgLibContentPage(TViewModel viewModel)
     {
         base.BindingContext = viewModel;
-        FmgLibHotReloadHandler.UpdateApplicationEvent += ReloadUI;
+
+        if (Debugger.IsAttached)
+        {
+            FmgLibHotReloadHandler.UpdateApplicationEvent += ReloadUI;
+        }
+
         Build();
     }
 }

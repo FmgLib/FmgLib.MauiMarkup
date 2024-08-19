@@ -1035,7 +1035,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
-### .NET built-in Hot-Reload
+# .NET built-in Hot-Reload
 
 Additionally, the FmgLib.MauiMarkup library includes hot reload support to make the development process faster and more efficient.
 

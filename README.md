@@ -1035,6 +1035,53 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
+### .NET built-in Hot-Reload
+
+Additionally, the FmgLib.MauiMarkup library includes hot reload support to make the development process faster and more efficient.
+
+If you want to enhance your page with fast reload, your page needs to implement the IFmgLibHotReload interface. Then, you should trigger the this.InitializeHotReload(); function within the constructor.
+
+And you can write your design code inside the `Build()` method to enhance it with fast reload.
+
+Example usage is as follows:
+
+```csharp
+public partial class ExamplePage : ContentPage, IFmgLibHotReload
+{
+    public ExamplePage()
+    {
+        this.InitializeHotReload();
+    }
+    public void Build()
+    {
+        this
+        .Content(
+            new Label()
+            .Text("FmgLib.MauiMarkup")
+            .CharacterSpacing(2)
+            .FontSize(30)
+            .FontAttributes(Italic)
+            .TextColor(Green)
+            .TextCenter()
+        );
+    }
+}
+```
+
+And here is the definition of the `NumericValidationTriggerAction` class:
+
+```csharp
+public class NumericValidationTriggerAction : TriggerAction<Entry>
+{
+    protected override void Invoke(Entry entry)
+    {
+        double result;
+        bool isValid = Double.TryParse(entry.Text, out result);
+        entry.TextColor = isValid ? Colors.Black : Colors.Red;
+    }
+}
+```
+
 # Extensions for 3rd Party Controls
 
 FmgLib.MauiMarkup library can also generate extension methods for controls from third-party libraries. To achieve this, you should utilize the `MauiMarkupAttribute` provided by FmgLib.MauiMarkup.

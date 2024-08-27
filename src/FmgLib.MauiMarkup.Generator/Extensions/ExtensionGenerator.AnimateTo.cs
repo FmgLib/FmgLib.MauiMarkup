@@ -1,0 +1,26 @@
+namespace FmgLib.MauiMarkup.Generator.Extensions;
+
+public partial class ExtensionGenerator
+{
+    void GenerateExtensionMethod_AnimateTo(PropInfo info, string transformationName)
+    {
+
+        if (mainSymbol.IsSealed)
+            builder.Append($@"
+    public static Task<bool> Animate{info.propertyName}To(this {info.MainSymbolName} self, {info.propertyTypeName} value, uint length = 250, Easing? easing = null)");
+        else
+            builder.Append($@"
+    public static Task<bool> Animate{info.propertyName}To<T>(this T self, {info.propertyTypeName} value, uint length = 250, Easing? easing = null)
+        where T : {info.MainSymbolName}");
+
+
+        builder.Append($@"
+    {{
+        {info.propertyTypeName} fromValue = self.{info.propertyName};
+        var transform = (double t) => Transformations.{transformationName}(fromValue, value, t);
+        var callback = ({info.propertyTypeName} actValue) => {{ self.{info.propertyName} = actValue; }};
+        return Transformations.AnimateAsync<{info.propertyTypeName}>(self, ""Animate{info.propertyName}To"", transform, callback, length, easing);
+    }}
+    ");
+    }
+}

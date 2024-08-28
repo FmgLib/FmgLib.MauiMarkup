@@ -94,20 +94,22 @@ public static partial class {className}
             .Cast<IFieldSymbol>()
             .ToList();
 
-        var properties = propertiesMap
-            .Where(_ => !_.IsReadOnly && !(_.SetMethod == null || _.SetMethod?.DeclaredAccessibility == Accessibility.Protected || _.SetMethod?.DeclaredAccessibility == Accessibility.Private))
-            .ToList();
-
-        var readOnlyListProperties = propertiesMap
-            .Where(_ => _.IsReadOnly &&
-                (_.Type.Name == nameof(IEnumerable) || _.Type.AllInterfaces.Any(e => e.Name == nameof(IEnumerable))))
-            .ToList();
-
         bindablePropertyNames = fieldesMap
             .Where(_ => _.Type.GetFullyQualifiedName().Equals("Microsoft.Maui.Controls.BindableProperty") &&
                 _.IsStatic)
             .Select(_ => _.Name.Replace("PropertyKey", "").Replace("Property", ""))
             .ToList();
+
+        var properties = propertiesMap
+            .Where(_ => (!_.IsReadOnly && !(_.SetMethod == null || _.SetMethod?.DeclaredAccessibility == Accessibility.Protected || _.SetMethod?.DeclaredAccessibility == Accessibility.Private)) || bindablePropertyNames.Any(e => e.Equals(_.Name)))
+            .ToList();
+
+        var readOnlyListProperties = propertiesMap
+            .Where(_ => _.IsReadOnly &&
+                ((_.Type.Name == nameof(IEnumerable) || _.Type.AllInterfaces.Any(e => e.Name == nameof(IEnumerable))) && !_.Type.Name.Equals(nameof(String), StringComparison.InvariantCultureIgnoreCase)))
+            .ToList();
+
+        
 
          var events = mainSymbol
             .GetMembers()

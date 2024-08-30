@@ -8,7 +8,7 @@ on:
     - develop
 
 env:
-  PROJECT_PATH: 'libs\FmgLib.MauiMarkup\FmgLib.MauiMarkup.csproj'
+  PROJECT_PATH: 'src\FmgLib.MauiMarkup\FmgLib.MauiMarkup.csproj'
   PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}\output
 
 jobs:

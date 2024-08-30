@@ -1,4 +1,5 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using FluentAssertions;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.Collections.Immutable;
@@ -54,20 +55,23 @@ using DevExpress.Maui.Editors;
 using DevExpress.Maui.CollectionView;
 using DevExpress.Maui.Core;
 using DevExpress.Maui;
+using PanCardView;
+using SkiaSharp.Views.Maui.Controls.Hosting;
+using SkiaSharp.Extended.UI.Controls;
 
 namespace ConsoleApp1;
 
 //[MauiMarkupAttachedProp(typeof(FormView), nameof(FormView.IsSubmitButtonProperty), typeof(bool), typeof(Button))]
-[MauiMarkup(typeof(Button), typeof(FormView), typeof(DataGrid), typeof(TextField), typeof(PickerField), typeof(InputField), typeof(InputKit.Shared.Controls.CheckBox))]
-[MauiMarkup(typeof(StatusBarBehavior), typeof(TextEdit), typeof(TextEditBase), typeof(EditBase), typeof(ComboBoxEdit))]
-[MauiMarkup(typeof(PasswordEdit), typeof(CheckEdit), typeof(DXPopup), typeof(ComboBoxEditBase), typeof(ItemsEditBase))]
-[MauiMarkup(typeof(DXImage), typeof(DXButton), typeof(DXViewBase), typeof(DXBorder), typeof(DXContentPresenterBase))]
-[MauiMarkup(typeof(DXContentPresenter), typeof(DXCollectionView), typeof(CartesianChart), typeof(DevExpress.Maui.Controls.TabView), typeof(TabViewItem))]
-[MauiMarkup(typeof(DevExpress.Maui.Controls.TabItem), typeof(DXButtonBase), typeof(ShimmerView), typeof(DXCollectionViewBase), typeof(SwipeContainer))]
-[MauiMarkup(typeof(SwipeItem), typeof(DateEdit), typeof(CalendarHeaderAppearance), typeof(CalendarDayCellAppearance), typeof(CalendarSelectableCellAppearance))]
-[MauiMarkup(typeof(DateEditActualAppearance), typeof(MultilineEdit), typeof(SimpleButton), typeof(DXStackLayout), typeof(DXLayoutBase))]
-[MauiMarkup(typeof(SwipeItemBase))]
-//[MauiMarkup(typeof(DataGrid))]
+//[MauiMarkup(typeof(Button), typeof(FormView), typeof(DataGrid), typeof(TextField), typeof(PickerField), typeof(InputField), typeof(InputKit.Shared.Controls.CheckBox))]
+//[MauiMarkup(typeof(StatusBarBehavior), typeof(TextEdit), typeof(TextEditBase), typeof(EditBase), typeof(ComboBoxEdit))]
+//[MauiMarkup(typeof(PasswordEdit), typeof(CheckEdit), typeof(DXPopup), typeof(ComboBoxEditBase), typeof(ItemsEditBase))]
+//[MauiMarkup(typeof(DXImage), typeof(DXButton), typeof(DXViewBase), typeof(DXBorder), typeof(DXContentPresenterBase))]
+//[MauiMarkup(typeof(DXContentPresenter), typeof(DXCollectionView), typeof(CartesianChart), typeof(DevExpress.Maui.Controls.TabView), typeof(TabViewItem))]
+//[MauiMarkup(typeof(DevExpress.Maui.Controls.TabItem), typeof(DXButtonBase), typeof(ShimmerView), typeof(DXCollectionViewBase), typeof(SwipeContainer))]
+//[MauiMarkup(typeof(SwipeItem), typeof(DateEdit), typeof(CalendarHeaderAppearance), typeof(CalendarDayCellAppearance), typeof(CalendarSelectableCellAppearance))]
+//[MauiMarkup(typeof(DateEditActualAppearance), typeof(MultilineEdit), typeof(SimpleButton), typeof(DXStackLayout), typeof(DXLayoutBase))]
+//[MauiMarkup(typeof(CardsView), typeof(VisualStateGroup))]
+[MauiMarkup(typeof(SKLottieView),typeof(SKFileLottieImageSource), typeof(SKAnimatedSurfaceView))]
 public class FileName
 { }";
 
@@ -107,7 +111,12 @@ public class FileName
             @$"{rootPath}\DLLs\SkiaSharp.Views.Maui.Core.dll",
             @$"{rootPath}\DLLs\Microsoft.Maui.Controls.Compatibility.dll",
             @$"{rootPath}\DLLs\CommunityToolkit.Maui.Core.dll",
-            @$"{rootPath}\DLLs\CommunityToolkit.Maui.dll"
+            @$"{rootPath}\DLLs\CommunityToolkit.Maui.dll",
+            @$"{rootPath}\DLLs\PanCardView.dll",
+            @$"{rootPath}\DLLs\SkiaSharp.Extended.dll",
+            @$"{rootPath}\DLLs\SkiaSharp.Extended.UI.dll",
+            @$"{rootPath}\DLLs\SkiaSharp.SceneGraph.dll",
+            @$"{rootPath}\DLLs\SkiaSharp.Skottie.dll"
         };
 
         var (compilation, diagnostics) = CreateCompilation(source, additionalReferences);
@@ -118,11 +127,9 @@ public class FileName
         driver = (CSharpGeneratorDriver)driver.RunGeneratorsAndUpdateCompilation(compilation, out var outputCompilation, out var diagnostics2);
 
         var generatedDiagnostics = outputCompilation.GetDiagnostics();
-        //Assert.IsEmpty(generatedDiagnostics.Where(d => d.Severity == DiagnosticSeverity.Error));
 
         var runResult = driver.GetRunResult();
 
-        //Assert.AreEqual(2, runResult.GeneratedTrees.Length); // Attribute and the generated class
-        //Assert.IsEmpty(runResult.Diagnostics.Where(d => d.Severity == DiagnosticSeverity.Error));
+        runResult.GeneratedTrees.Should().HaveCountGreaterThanOrEqualTo(2);
     }
 }

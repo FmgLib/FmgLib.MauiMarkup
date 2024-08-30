@@ -1,20 +1,3 @@
-### Free .NET MAUI Libraries by FmgLib
-
-
-| NuGet Package | Link | Repo Info |
-|--------------|------|-------|
-| `FmgLib.MauiMarkup` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup/) | [![GitHub Stars](https://img.shields.io/github/stars/FmgLib/FmgLib.MauiMarkup?style=flat-square&color=blue)](https://github.com/FmgLib/FmgLib.MauiMarkup/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/FmgLib/FmgLib.MauiMarkup?style=flat-square&color=green)](https://github.com/FmgLib/FmgLib.MauiMarkup/forks) [![GitHub last-commit](https://img.shields.io/github/last-commit/FmgLib/FmgLib.MauiMarkup?style=flat-square)](https://github.com/FmgLib/FmgLib.MauiMarkup/commits) |
-| `FmgLib.MauiMarkup.Template` | [![NuGet](https://buildstats.info/nuget/FmgLib.MauiMarkup.Template?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.Template/) | - |
-
-
-### Free .NET MAUI Project Templates by FmgLib
-
-| Template | Link |
-|--------------|------|
-| `FmgLib .NET MAUI Markup App` | [![Visual Studio Marketplace](https://img.shields.io/visual-studio-marketplace/r/FmgLib.FmgLibMauiMarkupTemplate)](https://marketplace.visualstudio.com/items?itemName=FmgLib.FmgLibMauiMarkupTemplate&ssr=false#overview) [![Visual Studio Marketplace](https://img.shields.io/visual-studio-marketplace/i/FmgLib.FmgLibMauiMarkupTemplate)](https://marketplace.visualstudio.com/items?itemName=FmgLib.FmgLibMauiMarkupTemplate&ssr=false#overview)|
-
-
-
 # Getting Started
 
 ### Creating a new FmgLib.MauiMarkup project from CLI
@@ -132,7 +115,6 @@ This would set the `AbsoluteLayout.LayoutBounds` attached property to the specif
 
  | Maui bağlı özelliği | FmgLib.MauiMarkup metodu |
  |-|-|
- |`Shell.ItemTemplate`|`ShellItemTemplate()`|
  |`FlyoutBase.ContextFlyout`|`ContextFlyout()`|
  |`Grid.Column`|`Column()`|
  |`Grid.Row`|`Row()`|
@@ -148,7 +130,7 @@ This would set the `AbsoluteLayout.LayoutBounds` attached property to the specif
  |`BindableLayout.ItemTemplate`|`BindableLayoutItemTemplate()`|
  |`BindableLayout.TemplateSelector`|`BindableItemTemplateSelector()`|
  |`Shell.PresentationMode`|`ShellPresentationMode()`|
- |`ShellBackgroundColor`|`ShellBackgroundColor()`|
+ |`Shell.BackgroundColor`|`ShellBackgroundColor()`|
  |`Shell.ForegroundColor`|`ShellForegroundColor()`|
  |`Shell.TitleColor`|`ShellTitleColor()`|
  |`Shell.DisabledColor`|`ShellDisabledColor()`|
@@ -156,8 +138,27 @@ This would set the `AbsoluteLayout.LayoutBounds` attached property to the specif
  |`Shell.NavBarHasShadow`|`ShellNavBarHasShadow()`|
  |`Shell.NavBarIsVisible`|`ShellNavBarIsVisible()`|
  |`Shell.TitleView`|`ShellTitleView()`|
+ |`Shell.TabBarBackgroundColor`|`ShellTabBarBackgroundColor()`|
+ |`Shell.TabBarForegroundColor`|`ShellTabBarForegroundColor()`|
+ |`Shell.TabBarTitleColor`|`ShellTabBarTitleColor()`|
+ |`Shell.TabBarDisabledColor`|`ShellTabBarDisabledColor()`|
+ |`Shell.TabBarUnselectedColor`|`ShellTabBarUnselectedColor()`|
+ |`Shell.TabBarIsVisible`|`ShellTabBarIsVisible()`|
+ |`Shell.FlyoutBackdrop`|`ShellFlyoutBackdrop()`|
+ |`Shell.FlyoutBehavior`|`ShellFlyoutBehavior()`|
+ |`Shell.FlyoutHeight`|`ShellFlyoutHeight()`|
+ |`Shell.FlyoutWidth`|`ShellFlyoutWidth()`|
+ |`Shell.FlyoutItemIsVisible`|`ShellFlyoutItemIsVisible()`|
+ |`Shell.BackButtonBehavior`|`ShellBackButtonBehavior()`|
+ |`Shell.ItemTemplate`|`ShellItemTemplate()`|
+ |`Shell.MenuItemTemplate`|`ShellMenuItemTemplate()`|
+ |`Shell.SearchHandler`|`ShellSearchHandler()`|
  |`NavigationPage.HasNavigationBar`|`NavigationPageHasNavigationBar()`|
  |`NavigationPage.BackButtonTitle`|`NavigationPageBackButtonTitle()`|
+ |`NavigationPage.HasBackButton`|`NavigationPageHasBackButton()`|
+ |`NavigationPage.IconColor`|`NavigationPageIconColor()`|
+ |`NavigationPage.TitleIconImageSource`|`NavigationPageTitleIconImageSource()`|
+ |`NavigationPage.TitleView`|`NavigationPageTitleView()`|
  |`SemanticProperties.Hint`|`SemanticHint()`|
  |`SemanticProperties.Description`|`SemanticDescription()`|
  |`SemanticProperties.HeadingLevel`|`SemanticHeadingLevel()`|

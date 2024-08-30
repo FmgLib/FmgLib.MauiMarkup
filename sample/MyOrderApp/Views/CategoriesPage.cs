@@ -61,7 +61,7 @@ public partial class CategoriesPage : BasePage<CategoriesPageViewModel>
                                     .Source("chevron.png")
                                     .SizeRequest(25,25)
                                     .Column(1)
-                                    .AlignEnd()
+                                    .AlignBottomRight()
                                     .Assign(out var image)
                                     .Triggers(
                                         new MultiTrigger(typeof(Image))

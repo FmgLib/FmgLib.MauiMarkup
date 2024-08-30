@@ -115,7 +115,6 @@ This would set the `AbsoluteLayout.LayoutBounds` attached property to the specif
 
  | Maui bağlı özelliği | FmgLib.MauiMarkup metodu |
  |-|-|
- |`Shell.ItemTemplate`|`ShellItemTemplate()`|
  |`FlyoutBase.ContextFlyout`|`ContextFlyout()`|
  |`Grid.Column`|`Column()`|
  |`Grid.Row`|`Row()`|
@@ -131,7 +130,7 @@ This would set the `AbsoluteLayout.LayoutBounds` attached property to the specif
  |`BindableLayout.ItemTemplate`|`BindableLayoutItemTemplate()`|
  |`BindableLayout.TemplateSelector`|`BindableItemTemplateSelector()`|
  |`Shell.PresentationMode`|`ShellPresentationMode()`|
- |`ShellBackgroundColor`|`ShellBackgroundColor()`|
+ |`Shell.BackgroundColor`|`ShellBackgroundColor()`|
  |`Shell.ForegroundColor`|`ShellForegroundColor()`|
  |`Shell.TitleColor`|`ShellTitleColor()`|
  |`Shell.DisabledColor`|`ShellDisabledColor()`|
@@ -139,8 +138,27 @@ This would set the `AbsoluteLayout.LayoutBounds` attached property to the specif
  |`Shell.NavBarHasShadow`|`ShellNavBarHasShadow()`|
  |`Shell.NavBarIsVisible`|`ShellNavBarIsVisible()`|
  |`Shell.TitleView`|`ShellTitleView()`|
+ |`Shell.TabBarBackgroundColor`|`ShellTabBarBackgroundColor()`|
+ |`Shell.TabBarForegroundColor`|`ShellTabBarForegroundColor()`|
+ |`Shell.TabBarTitleColor`|`ShellTabBarTitleColor()`|
+ |`Shell.TabBarDisabledColor`|`ShellTabBarDisabledColor()`|
+ |`Shell.TabBarUnselectedColor`|`ShellTabBarUnselectedColor()`|
+ |`Shell.TabBarIsVisible`|`ShellTabBarIsVisible()`|
+ |`Shell.FlyoutBackdrop`|`ShellFlyoutBackdrop()`|
+ |`Shell.FlyoutBehavior`|`ShellFlyoutBehavior()`|
+ |`Shell.FlyoutHeight`|`ShellFlyoutHeight()`|
+ |`Shell.FlyoutWidth`|`ShellFlyoutWidth()`|
+ |`Shell.FlyoutItemIsVisible`|`ShellFlyoutItemIsVisible()`|
+ |`Shell.BackButtonBehavior`|`ShellBackButtonBehavior()`|
+ |`Shell.ItemTemplate`|`ShellItemTemplate()`|
+ |`Shell.MenuItemTemplate`|`ShellMenuItemTemplate()`|
+ |`Shell.SearchHandler`|`ShellSearchHandler()`|
  |`NavigationPage.HasNavigationBar`|`NavigationPageHasNavigationBar()`|
  |`NavigationPage.BackButtonTitle`|`NavigationPageBackButtonTitle()`|
+ |`NavigationPage.HasBackButton`|`NavigationPageHasBackButton()`|
+ |`NavigationPage.IconColor`|`NavigationPageIconColor()`|
+ |`NavigationPage.TitleIconImageSource`|`NavigationPageTitleIconImageSource()`|
+ |`NavigationPage.TitleView`|`NavigationPageTitleView()`|
  |`SemanticProperties.Hint`|`SemanticHint()`|
  |`SemanticProperties.Description`|`SemanticDescription()`|
  |`SemanticProperties.HeadingLevel`|`SemanticHeadingLevel()`|

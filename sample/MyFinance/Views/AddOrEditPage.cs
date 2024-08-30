@@ -31,7 +31,7 @@ public partial class AddOrEditPage(AddOrEditPageViewModel viewModel) : FmgLibCon
                 .PickerButtonAreaTemplate(() => 
                     new HorizontalStackLayout()
                     .Margin(10)
-                    .AlignBottomEnd()
+                    .AlignBottomRight()
                     .Spacing(10)
                     .Children(
                         new Button()
@@ -57,7 +57,7 @@ public partial class AddOrEditPage(AddOrEditPageViewModel viewModel) : FmgLibCon
 
                 new CheckEdit()
                 .Label("Gelir")
-                .AlignStart()
+                .AlignLeft()
                 .IsChecked(e => e.Path("OperationItem.IsIncome")),
 
                 new Button()

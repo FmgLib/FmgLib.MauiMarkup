@@ -2,7 +2,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -50,8 +49,6 @@ public partial class ExtensionGenerator
 
         builder.AppendLine();
 
-        File.WriteAllText($"C:\\Users\\gonul\\source\\repos\\ConsoleApp2\\ConsoleApp2\\generated\\{mainSymbol.ContainingNamespace.ToDisplayString()}.{Helpers.GetNormalizedFileName(mainSymbol)}{(attachedModel != null ? "Attached" : "")}.g.cs", builder.ToString());
-
         return ($"{mainSymbol.ContainingNamespace.ToDisplayString()}.{Helpers.GetNormalizedFileName(mainSymbol)}{(attachedModel != null ? "Attached" : "")}", builder.ToString(), isGeneratedExtension);
     }
 
@@ -79,6 +76,7 @@ public static partial class {className}
 
         var propertiesMap = mainSymbol
             .GetMembers()
+            .Where(_ => (_.ContainingType is INamedTypeSymbol namedTypeSymbol) && namedTypeSymbol.GetFullyQualifiedName() == mainSymbol.GetFullyQualifiedName())
             .Where(_ => _.Kind == SymbolKind.Property &&
                 _.DeclaredAccessibility == Accessibility.Public &&
                 !_.GetAttributes().Any(_ => _.AttributeClass.EnsureNotNull().Name == "ObsoleteAttribute" || _.AttributeClass.EnsureNotNull().Name == "Obsolete"))
@@ -88,6 +86,7 @@ public static partial class {className}
 
         var fieldesMap = mainSymbol
             .GetMembers()
+            .Where(_ => (_.ContainingType is INamedTypeSymbol namedTypeSymbol) && namedTypeSymbol.GetFullyQualifiedName() == mainSymbol.GetFullyQualifiedName())
             .Where(_ => _.Kind == SymbolKind.Field &&
                 _.DeclaredAccessibility == Accessibility.Public &&
                 !_.GetAttributes().Any(_ => _.AttributeClass.EnsureNotNull().Name == "ObsoleteAttribute" || _.AttributeClass.EnsureNotNull().Name == "Obsolete"))
@@ -106,7 +105,10 @@ public static partial class {className}
 
         var readOnlyListProperties = propertiesMap
             .Where(_ => _.IsReadOnly &&
-                ((_.Type.Name == nameof(IEnumerable) || _.Type.AllInterfaces.Any(e => e.Name == nameof(IEnumerable))) && !_.Type.Name.Equals(nameof(String), StringComparison.InvariantCultureIgnoreCase)))
+                !bindablePropertyNames.Any(e => e.Equals(_.Name, StringComparison.InvariantCultureIgnoreCase)) &&
+                (_.Type.Name.Contains(nameof(IList)) || _.Type.AllInterfaces.Any(e => e.Name.Contains(nameof(IList))) || _.Type.Name.Contains(nameof(ICollection)) || _.Type.AllInterfaces.Any(e => e.Name.Contains(nameof(ICollection)))) &&
+                _.Type.AllInterfaces.Any(e => e.Name.Contains(nameof(IEnumerable))) &&
+                !_.Type.Name.Equals(nameof(String), StringComparison.InvariantCultureIgnoreCase))
             .ToList();
 
         

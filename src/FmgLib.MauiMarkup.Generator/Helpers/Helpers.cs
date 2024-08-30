@@ -152,10 +152,4 @@ public static class Helpers
             return false;
         }
     }
-
-    public static string GetContentPropertyNameFor(INamedTypeSymbol symbol)
-    {
-        var attributeData = symbol.GetAttributes().FirstOrDefault(e => e.AttributeClass.Name.Equals("ContentPropertyAttribute"));
-        return attributeData != null ? (string)attributeData.ConstructorArguments[0].Value : null;
-    }
 }

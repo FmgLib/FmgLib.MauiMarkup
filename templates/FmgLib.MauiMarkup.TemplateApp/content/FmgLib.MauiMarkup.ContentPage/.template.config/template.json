@@ -3,7 +3,7 @@
   "author": "FmgLib",
   "classifications": [ "MAUI", "Android", "iOS", "macOS", "Mac Catalyst", "WinUI", "Tizen", "C#", "Code" ],
   "identity": "FmgLib.MauiMarkup.Templates.MauiMarkupContentPage",
-  "groupIdentity": "FmgLib.MauiMarkup.Templates.Resources",
+  "groupIdentity": "FmgLib.MauiMarkup.Templates.Page",
   "name": ".NET MAUI FmgLibContentPage (C#)",
   "shortName": "fmglibcontentpage",
   "tags": {

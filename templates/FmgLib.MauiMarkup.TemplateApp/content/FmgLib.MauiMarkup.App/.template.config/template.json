@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "FmgLib",
+  "classifications": [ "MAUI", "Android", "iOS", "macOS", "Windows", "Mac Catalyst", "Tizen" ],
+  "identity": "FmgLibMauiMarkupApp",
+  "name": ".NET MAUI Markup App",
+  "shortName": "fmglib-mauimarkup-app",
+  "description": "C# Markup (No XAML) template for .NET MAUI application with Hotreload process.",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "groupIdentity": "FmgLibMauiMarkupApp",
+  "sourceName": "FmgLib.MauiMarkup.App",
+  "preferNameDirectory": true,
+  "guids": [
+    "e0cd07a0-669f-49cf-bda8-9f77d0c5ca77"
+  ]
+}

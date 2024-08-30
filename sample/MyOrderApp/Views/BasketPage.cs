@@ -72,14 +72,14 @@ public partial class BasketPage : BasePage<BasketPageViewModel>
                                     //.Bind(Label.TextProperty, "Product.Name")
                                     .FontSize(11)
                                     .FontAttributes(FontAttributes.Italic)
-                                    .AlignStart()
+                                    .AlignTopLeft()
                                     .LineBreakMode(LineBreakMode.TailTruncation),
 
                                     new Frame()
                                     .BorderColor(Colors.DarkGray)
                                     .HeightRequest(50)
                                     .WidthRequest(120)
-                                    .AlignStart()
+                                    .AlignTopLeft()
                                     .Padding(0)
                                     .Content(
                                         new HorizontalStackLayout()
@@ -128,7 +128,7 @@ public partial class BasketPage : BasePage<BasketPageViewModel>
                                 new VerticalStackLayout()
                                 .Spacing(20)
                                 .Column(2)
-                                .AlignEnd()
+                                .AlignBottomRight()
                                 .Children(
                                     new Image()
                                     .Source("remove.png")
@@ -178,7 +178,7 @@ public partial class BasketPage : BasePage<BasketPageViewModel>
                         //.Bind(Label.TextProperty, nameof(BindingContext.TotalProductPrice))
                         .Column(1)
                         .Row(0)
-                        .AlignEnd(),
+                        .AlignBottomRight(),
 
                         new Label()
                         .Text("KDV")
@@ -190,7 +190,7 @@ public partial class BasketPage : BasePage<BasketPageViewModel>
                         //.Bind(Label.TextProperty, nameof(BindingContext.TotalKdv))
                         .Column(1)
                         .Row(1)
-                        .AlignEnd(),
+                        .AlignBottomRight(),
 
                         new Label()
                         .Text("TOPLAM")
@@ -206,7 +206,7 @@ public partial class BasketPage : BasePage<BasketPageViewModel>
                         .FontSize(16)
                         .Column(1)
                         .Row(2)
-                        .AlignEnd(),
+                        .AlignBottomRight(),
 
                         new Button()
                         .Text("SİPARİŞ ET")

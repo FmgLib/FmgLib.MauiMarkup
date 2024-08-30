@@ -7,20 +7,19 @@ public partial class MainPage(MainPageViewModel viewModel) : FmgLibContentPage<M
     public override void Build()
     {
         this
-        .Content(() =>
-        {
-            return new Grid()
+        .Content(
+            new Grid()
             .RowDefinitions(e => e.Star(.8).Star(1.2).Star(1.2).Star(6.8))
             .Spacing(15)
-            .Margin(20, 20, 20, 10)
+            .Margin(20,20,20,10)
             .Children(
                 new HorizontalStackLayout()
-                .AlignStart()
+                .AlignLeft()
                 .Spacing(5)
                 .Children(
                     new DXImage()
                     .Source("profile.png")
-                    .SizeRequest(60, 60),
+                    .SizeRequest(60,60),
 
                     new VerticalStackLayout()
                     .CenterVertical()
@@ -48,7 +47,7 @@ public partial class MainPage(MainPageViewModel viewModel) : FmgLibContentPage<M
                     new Grid()
                     .RowDefinitions(e => e.Star().Star())
                     .ColumnDefinitions(e => e.Star(7).Star(3))
-                    .Spacing(10, 3)
+                    .Spacing(10,3)
                     .Children(
                         new Label()
                         .Text(e => e.Path("TotalBalance"))
@@ -61,7 +60,7 @@ public partial class MainPage(MainPageViewModel viewModel) : FmgLibContentPage<M
                         .TextColor(Green)
                         .FontSize(12)
                         .Column(1)
-                        .AlignBottomEnd(),
+                        .AlignBottomRight(),
 
                         new Label()
                         .Text(e => e.Path("TotalExpense"))
@@ -69,7 +68,7 @@ public partial class MainPage(MainPageViewModel viewModel) : FmgLibContentPage<M
                         .FontSize(12)
                         .Column(1)
                         .Row(1)
-                        .AlignTopEnd()
+                        .AlignTopRight()
                     )
                 ),
 
@@ -123,7 +122,7 @@ public partial class MainPage(MainPageViewModel viewModel) : FmgLibContentPage<M
                         .FontAttributes(Bold)
                         .TextColor(Black)
                         .Text("Son 10 İşlem ")
-                        .AlignEnd(),
+                        .AlignRight(),
 
                         new Border()
                         .StrokeThickness(1)
@@ -141,7 +140,7 @@ public partial class MainPage(MainPageViewModel viewModel) : FmgLibContentPage<M
                             .Children(
                                 new DXImage()
                                 .Source(e => e.Path("Icon"))
-                                .SizeRequest(30, 30)
+                                .SizeRequest(30,30)
                                 .RowSpan(2),
 
                                 new Label()
@@ -165,7 +164,7 @@ public partial class MainPage(MainPageViewModel viewModel) : FmgLibContentPage<M
                                 .TextColor(DarkGray)
                                 .FontSize(10)
                                 .Column(2)
-                                .AlignBottomEnd(),
+                                .AlignBottomRight(),
 
                                 new Label()
                                 .Text(e => e.Path("Amount"))
@@ -173,12 +172,12 @@ public partial class MainPage(MainPageViewModel viewModel) : FmgLibContentPage<M
                                 .FontSize(12)
                                 .Column(2)
                                 .Row(1)
-                                .AlignTopEnd()
+                                .AlignTopRight()
                             )
                         )
                     )
                 )
-            );
-        });
+            )
+        );
     }
 }

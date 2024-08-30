@@ -72,7 +72,7 @@ public partial class ProductsPage : BasePage<ProductsPageViewModel>
                                     new ImageButton()
                                     .Source(e => e.Path(nameof(ProductVM.IsFavorite)).Converter(new BoolToFavoriteImageConverter()))
                                     .BackgroundColor(Colors.Transparent)
-                                    .AlignStart()
+                                    .AlignTopLeft()
                                     .SizeRequest(30, 30)
                                     .Command(BindingContext.ChangeFavoriteCommand)
                                     .CommandParameter(e => e.Path(".")),
@@ -110,7 +110,7 @@ public partial class ProductsPage : BasePage<ProductsPageViewModel>
                                     .Text(e => e.Path(nameof(ProductVM.Name)))
                                     .FontAttributes(FontAttributes.Bold)
                                     .FontSize(11)
-                                    .AlignStart()
+                                    .AlignTopLeft()
                                     .LineBreakMode(LineBreakMode.TailTruncation)
                                     .FontAutoScalingEnabled(true),
 

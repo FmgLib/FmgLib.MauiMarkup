@@ -72,7 +72,7 @@ public partial class LoginPage(LoginPageViewModel viewModel) : FmgLibContentPage
                     .Children(
                         new CheckEdit()
                         .Label("Remember for 30 days")
-                        .AlignStart()
+                        .AlignLeft()
                         .IsChecked(e => e.Path("Login.IsRememberMe")),
 
                          new Label()
@@ -81,7 +81,7 @@ public partial class LoginPage(LoginPageViewModel viewModel) : FmgLibContentPage
                          .TextDecorations(Underline)
                          .TextCenterVertical()
                          .Column(1)
-                         .AlignEnd()
+                         .AlignRight()
                     )
                 ),
 

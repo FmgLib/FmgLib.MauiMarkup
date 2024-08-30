@@ -35,7 +35,7 @@ public partial class ChartPage(ChartPageViewModel viewModel) : FmgLibContentPage
                         .TextColor(Green)
                         .FontSize(12)
                         .Column(1)
-                        .AlignBottomEnd(),
+                        .AlignBottomRight(),
 
                         new Label()
                         .Text(e => e.Path("TotalExpense"))
@@ -43,7 +43,7 @@ public partial class ChartPage(ChartPageViewModel viewModel) : FmgLibContentPage
                         .FontSize(12)
                         .Column(1)
                         .Row(1)
-                        .AlignTopEnd()
+                        .AlignTopRight()
                     )
                 ),
 

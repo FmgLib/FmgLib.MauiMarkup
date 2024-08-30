@@ -72,7 +72,7 @@ public partial class FavoritesPage : BasePage<FavoritesPageViewModel>
                                     .Source(e => e.Path(nameof(ProductVM.IsFavorite)).Converter(new BoolToFavoriteImageConverter()))
                                     //.Bind(ImageButton.SourceProperty, nameof(ProductVM.IsFavorite), converter: new BoolToFavoriteImageConverter())
                                     .BackgroundColor(Colors.Transparent)
-                                    .AlignStart()
+                                    .AlignTopLeft()
                                     .SizeRequest(30, 30)
                                     .Command(BindingContext.ChangeFavoriteCommand)
                                     //.Bind(ImageButton.CommandParameterProperty, ".")
@@ -115,7 +115,7 @@ public partial class FavoritesPage : BasePage<FavoritesPageViewModel>
                                     //.Bind(Label.TextProperty, nameof(ProductVM.Name))
                                     .FontAttributes(FontAttributes.Bold)
                                     .FontSize(11)
-                                    .AlignStart()
+                                    .AlignTopLeft()
                                     .LineBreakMode(LineBreakMode.TailTruncation)
                                     .FontAutoScalingEnabled(true),
 

@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "FmgLib",
+  "classifications": [ "MAUI", "Android", "iOS", "macOS", "Mac Catalyst", "WinUI", "Tizen", "C#", "Code" ],
+  "identity": "FmgLib.MauiMarkup.Templates.MauiMarkupContentView",
+  "groupIdentity": "FmgLib.MauiMarkup.Templates.View",
+  "name": ".NET MAUI FmgLibContentView (C#)",
+  "shortName": "fmglibcontentview",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "primaryOutputs": [
+    {
+      "path": "NewContent1.cs"
+    }
+  ],
+  "postActions": [
+    {
+      "id": "openInEditor",
+      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "description": "Opens NewContent1.cs in the editor.",
+      "manualInstructions": [],
+      "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
+      "args": {
+        "files": "0"
+      },
+      "continueOnError": true
+    }
+  ],
+  "sourceName": "NewContent1",
+  "defaultName": "NewContent1",
+  "symbols": {
+    "namespace": {
+      "description": "namespace for the generated code",
+      "replaces": "MauiApp1",
+      "type": "parameter"
+    }
+  }
+}

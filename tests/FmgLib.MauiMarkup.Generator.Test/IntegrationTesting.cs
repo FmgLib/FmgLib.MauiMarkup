@@ -33,6 +33,7 @@ public class IntegrationTesting
     [Test]
     public void TestSourceGenerator()
     {
+        var rootPath = AppDomain.CurrentDomain.BaseDirectory;
         var source = @"
 using InputKit.Shared.Controls;
 using UraniumUI.Material.Controls;
@@ -72,41 +73,41 @@ public class FileName
 
         var additionalReferences = new[]
         {
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\FmgLib.MauiMarkup.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\InputKit.Maui.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\Microsoft.Extensions.Configuration.Abstractions.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\Microsoft.Extensions.Configuration.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\Microsoft.Extensions.DependencyInjection.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\Microsoft.Extensions.Logging.Abstractions.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\Microsoft.Extensions.Logging.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\Microsoft.Extensions.Options.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\Microsoft.Extensions.Primitives.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\Microsoft.Maui.Controls.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\Microsoft.Maui.Controls.Xaml.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\Microsoft.Maui.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\Microsoft.Maui.Essentials.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\Microsoft.Maui.Graphics.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\Plainer.Maui.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\UraniumUI.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\UraniumUI.Material.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\DevExpress.Data.v23.2.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\DevExpress.Maui.CollectionView.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\DevExpress.Maui.Controls.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\DevExpress.Maui.Core.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\DevExpress.Maui.Editors.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\LiveChartsCore.Behaviours.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\LiveChartsCore.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\LiveChartsCore.SkiaSharpView.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\LiveChartsCore.SkiaSharpView.Maui.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\SkiaSharp.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\SkiaSharp.HarfBuzz.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\SkiaSharp.Views.Maui.Controls.Compatibility.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\SkiaSharp.Views.Maui.Controls.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\SkiaSharp.Views.Maui.Core.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\Microsoft.Maui.Controls.Compatibility.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\CommunityToolkit.Maui.Core.dll",
-            @"C:\Users\gonul\source\repos\FmgLib\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.Test\DLLs\CommunityToolkit.Maui.dll"
+            @$"{rootPath}\DLLs\FmgLib.MauiMarkup.dll",
+            @$"{rootPath}\DLLs\InputKit.Maui.dll",
+            @$"{rootPath}\DLLs\Microsoft.Extensions.Configuration.Abstractions.dll",
+            @$"{rootPath}\DLLs\Microsoft.Extensions.Configuration.dll",
+            @$"{rootPath}\DLLs\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+            @$"{rootPath}\DLLs\Microsoft.Extensions.DependencyInjection.dll",
+            @$"{rootPath}\DLLs\Microsoft.Extensions.Logging.Abstractions.dll",
+            @$"{rootPath}\DLLs\Microsoft.Extensions.Logging.dll",
+            @$"{rootPath}\DLLs\Microsoft.Extensions.Options.dll",
+            @$"{rootPath}\DLLs\Microsoft.Extensions.Primitives.dll",
+            @$"{rootPath}\DLLs\Microsoft.Maui.Controls.dll",
+            @$"{rootPath}\DLLs\Microsoft.Maui.Controls.Xaml.dll",
+            @$"{rootPath}\DLLs\Microsoft.Maui.dll",
+            @$"{rootPath}\DLLs\Microsoft.Maui.Essentials.dll",
+            @$"{rootPath}\DLLs\Microsoft.Maui.Graphics.dll",
+            @$"{rootPath}\DLLs\Plainer.Maui.dll",
+            @$"{rootPath}\DLLs\UraniumUI.dll",
+            @$"{rootPath}\DLLs\UraniumUI.Material.dll",
+            @$"{rootPath}\DLLs\DevExpress.Data.v23.2.dll",
+            @$"{rootPath}\DLLs\DevExpress.Maui.CollectionView.dll",
+            @$"{rootPath}\DLLs\DevExpress.Maui.Controls.dll",
+            @$"{rootPath}\DLLs\DevExpress.Maui.Core.dll",
+            @$"{rootPath}\DLLs\DevExpress.Maui.Editors.dll",
+            @$"{rootPath}\DLLs\LiveChartsCore.Behaviours.dll",
+            @$"{rootPath}\DLLs\LiveChartsCore.dll",
+            @$"{rootPath}\DLLs\LiveChartsCore.SkiaSharpView.dll",
+            @$"{rootPath}\DLLs\LiveChartsCore.SkiaSharpView.Maui.dll",
+            @$"{rootPath}\DLLs\SkiaSharp.dll",
+            @$"{rootPath}\DLLs\SkiaSharp.HarfBuzz.dll",
+            @$"{rootPath}\DLLs\SkiaSharp.Views.Maui.Controls.Compatibility.dll",
+            @$"{rootPath}\DLLs\SkiaSharp.Views.Maui.Controls.dll",
+            @$"{rootPath}\DLLs\SkiaSharp.Views.Maui.Core.dll",
+            @$"{rootPath}\DLLs\Microsoft.Maui.Controls.Compatibility.dll",
+            @$"{rootPath}\DLLs\CommunityToolkit.Maui.Core.dll",
+            @$"{rootPath}\DLLs\CommunityToolkit.Maui.dll"
         };
 
         var (compilation, diagnostics) = CreateCompilation(source, additionalReferences);

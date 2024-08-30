@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup.Template", "FmgLib.MauiMarkup.Template.csproj", "{EA409E2D-9390-43ED-8C43-BB585D6A3900}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{AE82BA15-2CEB-410A-80D5-031D4E2657DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup.App", "content\FmgLib.MauiMarkup.App\FmgLib.MauiMarkup.App.csproj", "{82ED8918-F73B-4270-8B4E-360999EE9EDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FmgLib.MauiMarkup.ContentPage", "FmgLib.MauiMarkup.ContentPage", "{087B98B8-967D-42ED-ADF3-DF4FA1F35C83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA409E2D-9390-43ED-8C43-BB585D6A3900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA409E2D-9390-43ED-8C43-BB585D6A3900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA409E2D-9390-43ED-8C43-BB585D6A3900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA409E2D-9390-43ED-8C43-BB585D6A3900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82ED8918-F73B-4270-8B4E-360999EE9EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82ED8918-F73B-4270-8B4E-360999EE9EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82ED8918-F73B-4270-8B4E-360999EE9EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82ED8918-F73B-4270-8B4E-360999EE9EDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{82ED8918-F73B-4270-8B4E-360999EE9EDB} = {AE82BA15-2CEB-410A-80D5-031D4E2657DD}
+		{087B98B8-967D-42ED-ADF3-DF4FA1F35C83} = {AE82BA15-2CEB-410A-80D5-031D4E2657DD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDAE1BF9-11D3-41C8-A50E-C9DB9F20357C}
+	EndGlobalSection
+EndGlobal

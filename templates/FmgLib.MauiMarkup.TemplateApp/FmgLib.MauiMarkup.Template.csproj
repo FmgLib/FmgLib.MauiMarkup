@@ -4,11 +4,11 @@
 		<!-- The package metadata. Fill in the properties marked as TODO below -->
 		<!-- Follow the instructions on https://learn.microsoft.com/en-us/nuget/create-packages/package-authoring-best-practices -->
 		<PackageId>FmgLib.MauiMarkup.Template</PackageId>
-		<PackageVersion>3.2.5</PackageVersion>
+		<PackageVersion>3.3.0</PackageVersion>
 		<Title>FmgLib.MauiMarkup.Template</Title>
 		<Authors>FmgYazılım</Authors>
-		<Description>C# Markup (No XAML) template for .NET MAUI application with Hotreload process.</Description>
-		<PackageTags>MAUI,Android,iOS,macOS,Windows,MacCatalyst,Tizen,fmglib,mauimarkup,toolkit,mvvm,extension,template,app,mobile,desktop,xamarin,xamarin.forms,net,maui,netmaui,markup,csharpformarkup,csharp,csharpmarkup,xaml,mobile,android,ios,macos,windows,noxaml</PackageTags>
+		<Description>C# Markup (No XAML) templates for .NET MAUI application with Hotreload process.</Description>
+		<PackageTags>MAUI,Android,iOS,macOS,Windows,MacCatalyst,Tizen,fmglib,mauimarkup,toolkit,mvvm,extension,template,app,mobile,desktop,xamarin,xamarin.forms,net,maui,netmaui,markup,csharpformarkup,csharp,csharpmarkup,xaml,mobile,android,ios,macos,windows,noxaml,fmglib</PackageTags>
 		<PackageProjectUrl>https://fmgyazilim.com/</PackageProjectUrl>
 
 		<PackageType>Template</PackageType>

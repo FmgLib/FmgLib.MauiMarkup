@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup.Generator
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FmgLib.MauiMarkup.Generator.Test", "tests\FmgLib.MauiMarkup.Generator.Test\FmgLib.MauiMarkup.Generator.Test.csproj", "{DAC53472-0370-4B41-8A21-ECB0B8BD660C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMauiMarkupApp", "sample\MyMauiMarkupApp\MyMauiMarkupApp.csproj", "{830B4B22-FECA-43A5-A445-AE439DE88762}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,12 @@ Global
 		{DAC53472-0370-4B41-8A21-ECB0B8BD660C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAC53472-0370-4B41-8A21-ECB0B8BD660C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAC53472-0370-4B41-8A21-ECB0B8BD660C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{830B4B22-FECA-43A5-A445-AE439DE88762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{830B4B22-FECA-43A5-A445-AE439DE88762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{830B4B22-FECA-43A5-A445-AE439DE88762}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{830B4B22-FECA-43A5-A445-AE439DE88762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{830B4B22-FECA-43A5-A445-AE439DE88762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{830B4B22-FECA-43A5-A445-AE439DE88762}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +80,7 @@ Global
 		{D2A04B78-1200-47E4-8DD4-F36BBB31B323} = {9F405AEA-B646-47DD-A094-B4DA5F087273}
 		{A0F9BAC1-D4D6-4ADB-9CA5-F536FCA0F06D} = {9F405AEA-B646-47DD-A094-B4DA5F087273}
 		{DAC53472-0370-4B41-8A21-ECB0B8BD660C} = {8E033618-BADE-4A6C-AC14-56EF722D8F61}
+		{830B4B22-FECA-43A5-A445-AE439DE88762} = {A4956394-4BE4-4C5A-BDD3-59F439A1FD98}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2698E1E7-D253-457B-AF1B-6754123E0A11}

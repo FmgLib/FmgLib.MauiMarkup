@@ -8,6 +8,7 @@ on:
     - develop
 
 env:
+  SOLUTION_PATH: './FmgLib.MauiMarkup.sln'
   PROJECT_PATH: 'src\FmgLib.MauiMarkup\FmgLib.MauiMarkup.csproj'
   PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}\output
 
@@ -24,8 +25,17 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: 'Restore package'
-      run: dotnet restore ${{ env.PROJECT_PATH }}
+    - name: Install MAUI workload
+      run: dotnet workload install maui
 
-    - name: 'Build project'
-      run: dotnet build ${{ env.PROJECT_PATH }} --no-restore --configuration Release
+    - name: Clean output directory
+      run: dotnet clean ${{ env.SOLUTION_PATH }} -c Release
+
+    - name: Build the solution
+      run: dotnet build ${{ env.SOLUTION_PATH }} -c Release
+
+    # - name: 'Restore package'
+    #   run: dotnet restore ${{ env.PROJECT_PATH }}
+
+    # - name: 'Build project'
+    #   run: dotnet build ${{ env.PROJECT_PATH }} --no-restore --configuration Release

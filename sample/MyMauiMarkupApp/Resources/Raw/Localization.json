@@ -1,0 +1,10 @@
+﻿{
+  "Hello": {
+    "tr-TR": "Merhaba Dünya!",
+    "en-US": "Hello World!"
+  },
+  "Msg": {
+    "tr-TR": "FmgLib .NET MAUI Markup App hoşgeldiniz",
+    "en-US": "Welcome to FmgLib .NET MAUI Markup App"
+  }
+}

@@ -1426,6 +1426,13 @@ new Label()
 ``` 
 in the code.
 
+To change the current language, you can proceed as follows:
+```csharp
+Translator.Instance.ChangeCulture(CultureInfo.GetCultureInfo("en-US"));
+//OR
+Translator.Instance.ChangeCulture(CultureInfo.GetCultureInfo("tr-TR"));
+```
+
 
 # General Example Code
 

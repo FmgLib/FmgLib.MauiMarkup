@@ -113,7 +113,7 @@ This would set the `AbsoluteLayout.LayoutBounds` attached property to the specif
 
 ## Attached properties list
 
- | Maui bağlı özelliği | FmgLib.MauiMarkup metodu |
+ | Maui Attached Prop | FmgLib.MauiMarkup method |
  |-|-|
  |`FlyoutBase.ContextFlyout`|`ContextFlyout()`|
  |`Grid.Column`|`Column()`|

@@ -71,7 +71,8 @@ namespace ConsoleApp1;
 //[MauiMarkup(typeof(SwipeItem), typeof(DateEdit), typeof(CalendarHeaderAppearance), typeof(CalendarDayCellAppearance), typeof(CalendarSelectableCellAppearance))]
 //[MauiMarkup(typeof(DateEditActualAppearance), typeof(MultilineEdit), typeof(SimpleButton), typeof(DXStackLayout), typeof(DXLayoutBase))]
 //[MauiMarkup(typeof(CardsView), typeof(VisualStateGroup))]
-[MauiMarkup(typeof(SKLottieView),typeof(SKFileLottieImageSource), typeof(SKAnimatedSurfaceView))]
+//[MauiMarkup(typeof(SKLottieView),typeof(SKFileLottieImageSource), typeof(SKAnimatedSurfaceView))]
+[MauiMarkup(typeof(KeyboardAccelerator))]
 public class FileName
 { }";
 

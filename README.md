@@ -573,7 +573,6 @@ new Grid()
 	            .Text("Paste")
 	            .OnClicked(e => Console.WriteLine("Paste")),
 	            new MenuFlyoutSubItem()
-	            .Text("Background color")
 	            {
 	                new MenuFlyoutItem()
 	                .Text("Blue")
@@ -585,6 +584,7 @@ new Grid()
 	                .Text("Black")
 	                .OnClicked(e => grid.BackgroundColor = Colors.Black)
 	            }
+	            .Text("Background color")
 	        }
         )
 )
@@ -602,30 +602,40 @@ public class MenuPage : ContentPage
         this.MenuBarItems(new MenuBarItem[]
         {
             new MenuBarItem()
-            .Text("My Menu")
             {
                 new MenuFlyoutItem()
 		            .Text("Exit")
                     .OnClicked(e => Application.Current.Quit()),
-            },
+            }
+            .Text("My Menu"),
             new MenuBarItem()
-            .Text("Edit")
             {
                 new MenuFlyoutItem()
 		            .Text("Copy")
-                    .OnClicked(e => Console.WriteLine("Copy")),
+                    .OnClicked(e => Console.WriteLine("Copy"))
+                    .KeyboardAccelerators(
+                        new KeyboardAccelerator()
+                        .Key("C")
+                        .Modifiers(KeyboardAcceleratorModifiers.Ctrl)
+                    ),
                 new MenuFlyoutItem()
 		            .Text("Paste")
-                    .OnClicked(e => Console.WriteLine("Paste")),
-            },
+                    .OnClicked(e => Console.WriteLine("Paste"))
+                    .KeyboardAccelerators(
+                        new KeyboardAccelerator()
+                        .Key("V")
+                        .Modifiers(KeyboardAcceleratorModifiers.Ctrl)
+                    ),
+            }
+            .Text("Edit"),
             new MenuBarItem()
-            .Text("Theme")
             {
                 new MenuFlyoutItem()
 	                .Text("Blue")
                     .OnClicked(e => this.BackgroundColor = Colors.Blue),
                 ...
             }
+            .Text("Theme")
         });
 
         ...

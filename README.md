@@ -1,4 +1,4 @@
-# Getting Started
+﻿# Getting Started
 
 ### Creating a new FmgLib.MauiMarkup project from CLI
 
@@ -113,15 +113,17 @@ This would set the `AbsoluteLayout.LayoutBounds` attached property to the specif
 
 ## Attached properties list
 
- | Maui bağlı özelliği | FmgLib.MauiMarkup metodu |
+ | Maui Attached Prop | FmgLib.MauiMarkup method |
  |-|-|
  |`FlyoutBase.ContextFlyout`|`ContextFlyout()`|
  |`Grid.Column`|`Column()`|
  |`Grid.Row`|`Row()`|
  |`Grid.ColumnSpan`|`ColumnSpan()`|
  |`Grid.RowSpan`|`RowSpan()`|
- ||`Span(column, row)`|
+ |`Grid.ColumnSpan`+`Grid.RowSpan`|`Span(column, row)`|
  |`VisualStateManager.VisualStateGroups`|`VisualStateGroups()`|
+ |`RadioButtonGroup.GroupName`|`RadioButtonGroupGroupName()`|
+ |`RadioButtonGroup.SelectedValue`|`RadioButtonGroupSelectedValue()`|
  |`AbsoluteLayout.LayoutFlags`|`AbsoluteLayoutFlags()`|
  |`AbsoluteLayout.LayoutBounds`|`AbsoluteLayoutBounds()`|
  |`BindableLayout.EmptyView`|`BindableLayoutEmptyView()`|
@@ -1355,6 +1357,82 @@ new Button()
 .FontAttributes(Bold)
 .FormViewIsSubmitButton(true)
 ```
+
+# Localization
+
+In the MauiProgram.cs file,
+```CSharp
+builder
+    .UseMauiApp<App>()
+    .UseMauiMarkupLocalization();
+```
+should be added.
+
+In your main project you should have a language file of type json. The translation will be read from this file and imported.
+If you do not specify the path to the file(s) in the parameter ( 
+```CSharp
+builder
+    .UseMauiApp<App>()
+    .UseMauiMarkupLocalization();
+  //.UseMauiMarkupLocalization(defaultLang:"en-US"); // or
+  //.UseMauiMarkupLocalization(defaultLang:"en-US", "Loc1.json", "Loc2.json"); // or
+```
+), will look for a json file named `Localization.json` in the home directory.
+
+if you give one or more parameters like
+```CSharp
+builder
+    .UseMauiApp<App>()
+    .UseMauiMarkupLocalization("Localization1.json", "Localization2.json", "/Languages/Temp1.json");
+```
+
+it will read json files in given file paths.
+
+**The critical point here is to select ```Build Action: MauiAsset``` for json files.**
+
+Proper json format:
+
+```json
+{
+  "Hello": {
+    "tr-TR": "Merhaba Dünya!",
+    "en-US": "Hello World!"
+  },
+  "Msg": {
+    "tr-TR": "Deneme amaçlı yapılmıştır.",
+    "en-US": "It was made for testing purposes."
+  }
+}
+```
+
+Instead of 'keyWord' keywords, you can use any word or phrase(s) you want. You don't have any Regex limitations.
+
+You can also change the 'tr-TR' and 'en-US' language keys with words or sentences as you wish. But it is recommended to use expressions such as 'en-US', 'tr-TR', 'fr-FR'.
+
+You can simply use 
+```CSharp
+new Label()
+.Text(e => e.Translate("Hello"))
+.FontSize(32)
+.CenterHorizontal()
+.SemanticHeadingLevel(SemanticHeadingLevel.Level1),
+
+new Label()
+.Text(e => e.Translate("Msg"))
+.FontSize(18)
+.CenterHorizontal()
+.SemanticDescription(e => e.Translate("Msg"))
+.SemanticHeadingLevel(SemanticHeadingLevel.Level1)
+``` 
+in the code.
+
+To change the current language, you can proceed as follows:
+```csharp
+Translator.Instance.ChangeCulture(CultureInfo.GetCultureInfo("en-US"));
+//OR
+Translator.Instance.ChangeCulture(CultureInfo.GetCultureInfo("tr-TR"));
+```
+
 
 # General Example Code
 

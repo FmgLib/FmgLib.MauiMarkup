@@ -6,6 +6,9 @@ public static class PropertyContextExtension
     public static PropertyBindingBuilder<T> Path<T>(this PropertyContext<T> self, string path)
         => new PropertyBindingBuilder<T>(self).Path(path);
 
+    public static PropertyMultiBindingBuilder<T> Bindings<T>(this PropertyContext<T> self, params BindingBase[] bindings)
+        => new PropertyMultiBindingBuilder<T>(self).Bindings(bindings);
+
     public static PropertyIdiomBuilder<T> OnPhone<T>(this PropertyContext<T> self, T value)
         => new PropertyIdiomBuilder<T>(self).OnPhone(value);
 

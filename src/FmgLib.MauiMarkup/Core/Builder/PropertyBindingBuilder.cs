@@ -45,6 +45,10 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
 
     private object source;
 
+    private object fallbackValue;
+
+    private object targetNullValue;
+
     public PropertyContext<T> Context { get; set; }
 
     public PropertyBindingBuilder(PropertyContext<T> context)
@@ -56,7 +60,11 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
     {
         if (path != null)
         {
-            Context.BindableObject.SetBinding(Context.Property, new Binding(path, bindingMode, converter, converterParameter, stringFormat, source));
+            Context.BindableObject.SetBinding(Context.Property, new Binding(path, bindingMode, converter, converterParameter, stringFormat, source)
+            {
+                FallbackValue = fallbackValue,
+                TargetNullValue = targetNullValue
+            });
             return true;
         }
 
@@ -96,6 +104,18 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
     public PropertyBindingBuilder<T> Source(object source)
     {
         this.source = source;
+        return this;
+    }
+
+    public PropertyBindingBuilder<T> FallbackValue(object fallbackValue)
+    {
+        this.fallbackValue = fallbackValue;
+        return this;
+    }
+
+    public PropertyBindingBuilder<T> TargetNullValue(object targetNullValue)
+    {
+        this.targetNullValue = targetNullValue;
         return this;
     }
 

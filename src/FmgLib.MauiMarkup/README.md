@@ -698,6 +698,59 @@ In this example, the text property of the label is bound to the `Value` property
 
 You can also bind a property to an object that is not part of the visual tree. This is useful when you have a separate data source, such as a model or a view model, that you want to bind to a visual element.
 
+# Property MultiBinding
+You can easily use multibinding with FmgLib.MauiMarkup. You can add as many BindingBases as you want with the e.Bindings(...) method.
+
+Example usage is as follows:
+```csharp
+public partial class MainPage : ContentPage, IFmgLibHotReload
+{
+    private readonly MainPageViewModel viewModel;
+    public MainPage()
+    {
+        viewModel = new MainPageViewModel();
+        this.InitializeHotReload();
+    }
+
+    public void Build()
+    {
+        this
+        .BindingContext(viewModel)
+        .Content(
+            new VerticalStackLayout()
+            .Spacing(20)
+            .Children(
+                new CheckBox()
+                .IsChecked(e => 
+                    e.Bindings(
+                        new Binding().Path("Employee.IsOver16"),
+                        new Binding().Path("Employee.HasPassedTest"),
+                        new Binding().Path("Employee.IsSuspended").Converter(new InverterConverter())
+                    )
+                    .Converter(new AllTrueMultiConverter())
+                    .FallbackValue("Is Error.")
+                    .TargetNullValue("Is Null.")
+                ),
+
+                new Label()
+                .Text(e => 
+                    e.Bindings(
+                        new Binding().Path("Employee.Id"),
+                        new Binding().Path("Employee.Name"),
+                        new Binding().Path("Employee.IsSuspended")
+                    )
+                    .StringFormat("{0} : {1} : {2}")
+                    .FallbackValue("Is Error.")
+                    .TargetNullValue("Is Null.")
+                )
+            )
+        );
+    }
+}
+
+```
+
+
 # Shell Application
 
 Here's an example of a simple shell-based application:

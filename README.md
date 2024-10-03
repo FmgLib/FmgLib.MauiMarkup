@@ -1101,6 +1101,20 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
+And here is the definition of the `NumericValidationTriggerAction` class:
+
+```csharp
+public class NumericValidationTriggerAction : TriggerAction<Entry>
+{
+    protected override void Invoke(Entry entry)
+    {
+        double result;
+        bool isValid = Double.TryParse(entry.Text, out result);
+        entry.TextColor = isValid ? Colors.Black : Colors.Red;
+    }
+}
+```
+
 # .NET built-in Hot-Reload
 
 Additionally, the FmgLib.MauiMarkup library includes hot reload support to make the development process faster and more efficient.
@@ -1130,20 +1144,6 @@ public partial class ExamplePage : ContentPage, IFmgLibHotReload
             .TextColor(Green)
             .TextCenter()
         );
-    }
-}
-```
-
-And here is the definition of the `NumericValidationTriggerAction` class:
-
-```csharp
-public class NumericValidationTriggerAction : TriggerAction<Entry>
-{
-    protected override void Invoke(Entry entry)
-    {
-        double result;
-        bool isValid = Double.TryParse(entry.Text, out result);
-        entry.TextColor = isValid ? Colors.Black : Colors.Red;
     }
 }
 ```

@@ -2,6 +2,12 @@
 
 public static class PropertySettersContextExtension
 {
+    public static PropertySettersBindingBuilder<T> Path<T>(this PropertySettersContext<T> self, string path)
+        => new PropertySettersBindingBuilder<T>(self).Path(path);
+
+    public static PropertySettersMultiBindingBuilder<T> Bindings<T>(this PropertySettersContext<T> self, params BindingBase[] bindings)
+        => new PropertySettersMultiBindingBuilder<T>(self).Bindings(bindings);
+
     public static PropertySettersIdiomBuilder<T> OnPhone<T>(this PropertySettersContext<T> self, T value)
         => new PropertySettersIdiomBuilder<T>(self).OnPhone(value);
 
@@ -73,4 +79,7 @@ public static class PropertySettersContextExtension
 
     public static PropertySettersThemeBuilder<T> OnDark<T>(this PropertySettersContext<T> self, Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
         => new PropertySettersThemeBuilder<T>(self).OnDark(configure);
+
+    public static PropertySettersDynamicResourcesBuilder<T> DynamicResource<T>(this PropertySettersContext<T> self, string key)
+        => new PropertySettersDynamicResourcesBuilder<T>(self).DynamicResource(key);
 }

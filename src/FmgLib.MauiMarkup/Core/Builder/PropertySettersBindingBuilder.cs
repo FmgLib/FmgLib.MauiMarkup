@@ -2,7 +2,7 @@
 
 namespace FmgLib.MauiMarkup;
 
-public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
+public sealed class PropertySettersBindingBuilder<T> : IPropertySettersBuilder<T>
 {
     public class ValueConverter : IValueConverter
     {
@@ -49,9 +49,9 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
 
     private object targetNullValue;
 
-    public PropertyContext<T> Context { get; set; }
+    public PropertySettersContext<T> Context { get; set; }
 
-    public PropertyBindingBuilder(PropertyContext<T> context)
+    public PropertySettersBindingBuilder(PropertySettersContext<T> context)
     {
         Context = context;
     }
@@ -60,64 +60,70 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
     {
         if (path != null)
         {
-            Context.BindableObject.SetBinding(Context.Property, new Binding(path, bindingMode, converter, converterParameter, stringFormat, source)
-                                                                .FallbackValue(fallbackValue)
-                                                                .TargetNullValue(targetNullValue));
+            Context.XamlSetters.Add(
+                new Setter
+                {
+                    Property = Context.Property,
+                    Value = new Binding(path, bindingMode, converter, converterParameter, stringFormat, source)
+                            .FallbackValue(fallbackValue)
+                            .TargetNullValue(targetNullValue)
+                }
+            );
             return true;
         }
 
         return false;
     }
 
-    public PropertyBindingBuilder<T> Path(string path)
+    public PropertySettersBindingBuilder<T> Path(string path)
     {
         this.path = path;
         return this;
     }
 
-    public PropertyBindingBuilder<T> StringFormat(string stringFormat)
+    public PropertySettersBindingBuilder<T> StringFormat(string stringFormat)
     {
         this.stringFormat = stringFormat;
         return this;
     }
 
-    public PropertyBindingBuilder<T> BindingMode(BindingMode bindingMode)
+    public PropertySettersBindingBuilder<T> BindingMode(BindingMode bindingMode)
     {
         this.bindingMode = bindingMode;
         return this;
     }
 
-    public PropertyBindingBuilder<T> Converter(IValueConverter converter)
+    public PropertySettersBindingBuilder<T> Converter(IValueConverter converter)
     {
         this.converter = converter;
         return this;
     }
 
-    public PropertyBindingBuilder<T> Parameter(string converterParameter)
+    public PropertySettersBindingBuilder<T> Parameter(string converterParameter)
     {
         this.converterParameter = converterParameter;
         return this;
     }
 
-    public PropertyBindingBuilder<T> Source(object source)
+    public PropertySettersBindingBuilder<T> Source(object source)
     {
         this.source = source;
         return this;
     }
 
-    public PropertyBindingBuilder<T> FallbackValue(object fallbackValue)
+    public PropertySettersBindingBuilder<T> FallbackValue(object fallbackValue)
     {
         this.fallbackValue = fallbackValue;
         return this;
     }
 
-    public PropertyBindingBuilder<T> TargetNullValue(object targetNullValue)
+    public PropertySettersBindingBuilder<T> TargetNullValue(object targetNullValue)
     {
         this.targetNullValue = targetNullValue;
         return this;
     }
 
-    public PropertyBindingBuilder<T> Convert<Q>(Func<Q, T> convert)
+    public PropertySettersBindingBuilder<T> Convert<Q>(Func<Q, T> convert)
     {
         if (valueConverter == null)
         {
@@ -129,7 +135,7 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyBindingBuilder<T> ConvertBack<Q>(Func<T, Q> convert)
+    public PropertySettersBindingBuilder<T> ConvertBack<Q>(Func<T, Q> convert)
     {
         if (valueConverter == null)
         {

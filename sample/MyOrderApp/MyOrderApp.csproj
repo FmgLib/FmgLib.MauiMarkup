@@ -69,10 +69,9 @@
 		<None Remove="Resources\Images\white_bread.png" />
 		<None Remove="Resources\Raw\completed.json" />
 	</ItemGroup>
+	
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\FmgLib.MauiMarkup\FmgLib.MauiMarkup.csproj" />
-	</ItemGroup>
-	<ItemGroup>
+		<PackageReference Include="FmgLib.MauiMarkup" Version="8.*" />
 		<PackageReference Include="AutoMapper" Version="13.0.1" />
 		<PackageReference Include="LiteDB" Version="5.0.20" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.*" Condition="'$(Configuration)' == 'Debug'" />

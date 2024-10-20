@@ -1,4 +1,6 @@
-﻿namespace FmgLib.MauiMarkup;
+﻿using Microsoft.Maui.Controls.StyleSheets;
+
+namespace FmgLib.MauiMarkup;
 
 public static partial class ApplicationExtension
 {
@@ -109,15 +111,6 @@ public static partial class ApplicationExtension
     public static T Resources<T>(this T self, ResourceDictionary resources) where T : Application
     {
         self.Resources = resources;
-        return self;
-    }
-
-    public static T MergedResources<T>(this T self, params ResourceDictionary[] resources) where T : Application
-    {
-        foreach (var resource in resources)
-        {
-            self.Resources.MergedDictionaries.Add(resource);
-        }
         return self;
     }
 

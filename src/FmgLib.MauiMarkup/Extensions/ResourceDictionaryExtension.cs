@@ -2,17 +2,75 @@
 
 public static partial class ResourceDictionaryExtension
 {
-    public static ResourceDictionary AddResource(this ResourceDictionary dic, string key, object value)
+    public static T AddResource<T>(this T self, string key, object value) where T : Microsoft.Maui.Controls.ResourceDictionary
     {
-        dic.Add(key, value);
+        self.Add(key, value);
 
-        return dic;
+        return self;
     }
 
-    public static ResourceDictionary RemoveResource(this ResourceDictionary dic, string key)
+    public static T AddResource<T>(this T self, Style style) where T : Microsoft.Maui.Controls.ResourceDictionary
     {
-        dic.Remove(key);
+        self.Add(style);
 
-        return dic;
+        return self;
+    }
+
+    public static T AddResource<T>(this T self, Microsoft.Maui.Controls.StyleSheets.StyleSheet styleSheet) where T : Microsoft.Maui.Controls.ResourceDictionary
+    {
+        self.Add(styleSheet);
+
+        return self;
+    }
+
+    public static T AddResource<T>(this T self, string strStyleSheet) where T : Microsoft.Maui.Controls.ResourceDictionary
+    {
+        self.Add(Microsoft.Maui.Controls.StyleSheets.StyleSheet.FromReader(new StringReader(strStyleSheet)));
+
+        return self;
+    }
+
+    public static T AddResource<T>(this T self, ResourceDictionary mergedResourceDictionary) where T : Microsoft.Maui.Controls.ResourceDictionary
+    {
+        self.Add(mergedResourceDictionary);
+
+        return self;
+    }
+
+    public static T RemoveResource<T>(this T self, string key) where T : Microsoft.Maui.Controls.ResourceDictionary
+    {
+        self.Remove(key);
+
+        return self;
+    }
+
+    public static T MergedResources<T>(this T self, params ResourceDictionary[] resources) where T : Microsoft.Maui.Controls.ResourceDictionary
+    {
+        foreach (var resource in resources)
+        {
+            self.MergedDictionaries.Add(resource);
+        }
+        return self;
+    }
+
+    public static T MergedResources<T>(this T self, IList<ResourceDictionary> resources) where T : Microsoft.Maui.Controls.ResourceDictionary
+    {
+        foreach (var resource in resources)
+        {
+            self.MergedDictionaries.Add(resource);
+        }
+        return self;
+    }
+
+    public static T Source<T>(this T self, Uri uri) where T : Microsoft.Maui.Controls.ResourceDictionary
+    {
+        self.Source = uri;
+        return self;
+    }
+
+    public static T Source<T>(this T self, string url) where T : Microsoft.Maui.Controls.ResourceDictionary
+    {
+        self.Source = new Uri(url);
+        return self;
     }
 }

@@ -765,7 +765,7 @@ public partial class App : Application
         this.MainPage(
 	        new Shell()
 	        .ItemTemplate(() => new ShellItemTemplate())
-            .Resources(AppResources.Default)
+            .Resources(new ResourceDictionary().MergedDictionaries(AppStyles.Default))
 	        .Items(
 				new FlyoutItem()
 				.FlyoutDisplayOptions(FlyoutDisplayOptions.AsMultipleItems)

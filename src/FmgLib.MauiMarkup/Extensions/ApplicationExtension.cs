@@ -126,4 +126,10 @@ public static partial class ApplicationExtension
         self.UserAppTheme = userAppTheme;
         return self;
     }
+
+    public static T AccentColor<T>(this T self, Color accentColor) where T : Application
+    {
+        Application.AccentColor = accentColor;
+        return self;
+    }
 }

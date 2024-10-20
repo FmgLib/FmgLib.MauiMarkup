@@ -1,4 +1,6 @@
-﻿namespace FmgLib.MauiMarkup;
+﻿using Microsoft.Maui.Controls.StyleSheets;
+
+namespace FmgLib.MauiMarkup;
 
 public static partial class ApplicationExtension
 {
@@ -99,6 +101,7 @@ public static partial class ApplicationExtension
         self.RequestedThemeChanged += (o, arg) => action(self);
         return self;
     }
+
     public static T MainPage<T>(this T self, Page? mainPage) where T : Application
     {
         self.MainPage = mainPage;
@@ -114,6 +117,12 @@ public static partial class ApplicationExtension
     public static T UserAppTheme<T>(this T self, AppTheme userAppTheme) where T : Application
     {
         self.UserAppTheme = userAppTheme;
+        return self;
+    }
+
+    public static T AccentColor<T>(this T self, Color accentColor) where T : Application
+    {
+        Application.AccentColor = accentColor;
         return self;
     }
 }

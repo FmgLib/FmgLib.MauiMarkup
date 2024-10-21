@@ -5,7 +5,7 @@ public partial class App : Application
     public App()
     {
         this
-        .Resources(new ResourceDictionary().MergedResources(AppStyles.Default))
+        .Resources(new ResourceDictionary().MergedDictionaries(AppStyles.Default))
         .MainPage(new AppShell());
     }
 }

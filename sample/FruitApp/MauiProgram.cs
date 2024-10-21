@@ -11,6 +11,7 @@ public static class MauiProgram
         builder
             .UseMauiApp<App>()
             .UseAcrylicView()
+            .UseFmgLibMauiMarkup()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -25,6 +26,6 @@ public static class MauiProgram
             .AddSingleton<App>()
             .AddScoped<MainPage>();
 
-        return builder.Build();
+        return builder.Build().InitializeBuilds();
     }
 }

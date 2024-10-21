@@ -1,8 +1,6 @@
-﻿using FmgLib.MauiMarkup;
+﻿namespace FruitApp;
 
-namespace FruitApp;
-
-public partial class MainPage : FmgLibContentPage
+public partial class MainPage : ContentPage//, IFmgLibHotReload
 {
     public List<FruitInformation> PapayaInfo { get; set; }
 
@@ -10,9 +8,10 @@ public partial class MainPage : FmgLibContentPage
     {
         LoadData();
         this.BindingContext = this;
+        //this.InitializeHotReload();
     }
 
-    public override void Build()
+    public void Build()
     {
         this
         .Background(
@@ -23,6 +22,7 @@ public partial class MainPage : FmgLibContentPage
                 new GradientStop().Offset(1.0f).Color(Color.FromArgb("#FCBC03"))
             )
         )
+        //.BackgroundColor(Red)
         .Content(
             new Grid()
             .Margin(25)

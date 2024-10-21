@@ -44,7 +44,7 @@ public static partial class ResourceDictionaryExtension
         return self;
     }
 
-    public static T MergedResources<T>(this T self, params ResourceDictionary[] resources) where T : Microsoft.Maui.Controls.ResourceDictionary
+    public static T MergedDictionaries<T>(this T self, params ResourceDictionary[] resources) where T : Microsoft.Maui.Controls.ResourceDictionary
     {
         foreach (var resource in resources)
         {
@@ -53,7 +53,7 @@ public static partial class ResourceDictionaryExtension
         return self;
     }
 
-    public static T MergedResources<T>(this T self, IList<ResourceDictionary> resources) where T : Microsoft.Maui.Controls.ResourceDictionary
+    public static T MergedDictionaries<T>(this T self, IList<ResourceDictionary> resources) where T : Microsoft.Maui.Controls.ResourceDictionary
     {
         foreach (var resource in resources)
         {

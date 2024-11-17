@@ -100,7 +100,7 @@ public static partial class {className}
             .ToList();
 
         var properties = propertiesMap
-            .Where(_ => (!_.IsReadOnly && !(_.SetMethod == null || _.SetMethod?.DeclaredAccessibility == Accessibility.Protected || _.SetMethod?.DeclaredAccessibility == Accessibility.Private)) || bindablePropertyNames.Any(e => e.Equals(_.Name)))
+            .Where(_ => (!_.IsReadOnly && !(_.SetMethod == null || _.SetMethod?.DeclaredAccessibility == Accessibility.Protected || _.SetMethod?.DeclaredAccessibility == Accessibility.Private || _.SetMethod?.DeclaredAccessibility == Accessibility.Internal)) || bindablePropertyNames.Any(e => e.Equals(_.Name)))
             .ToList();
 
         var readOnlyListProperties = propertiesMap

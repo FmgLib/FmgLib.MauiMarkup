@@ -1,4 +1,6 @@
-﻿namespace MyMauiMarkupApp;
+﻿using MyMauiMarkupApp.Resources;
+
+namespace MyMauiMarkupApp;
 
 public static class MauiProgram
 {
@@ -8,6 +10,7 @@ public static class MauiProgram
         builder
             .UseMauiApp<App>()
             .UseMauiMarkupLocalization("en-US")
+            .UseMauiMarkupLocalizationWithResx(AppResources.ResourceManager, "en-US")
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

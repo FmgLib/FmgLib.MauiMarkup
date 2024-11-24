@@ -1,4 +1,23 @@
-﻿# Getting Started
+﻿# FmgLib.MauiMarkup
+
+### Free .NET Libraries by FmgLib.MauiMakrup
+
+| NuGet Package | Link | Repo Info |
+|--------------|------|-------|
+| `FmgLib.MauiMarkup` | [![NuGet](https://img.shields.io/nuget/v/FmgLib.MauiMarkup?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup/) ![NuGet Downloads](https://img.shields.io/nuget/dt/FmgLib.MauiMarkup.svg) | [![GitHub Stars](https://img.shields.io/github/stars/FmgLib/FmgLib.MauiMarkup?style=flat-square&color=blue)](https://github.com/FmgLib/FmgLib.MauiMarkup/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/FmgLib/FmgLib.MauiMarkup?style=flat-square&color=green)](https://github.com/FmgLib/FmgLib.MauiMarkup/forks) [![GitHub last-commit](https://img.shields.io/github/last-commit/FmgLib/FmgLib.MauiMarkup?style=flat-square)](https://github.com/FmgLib/FmgLib.MauiMarkup/commits) |
+| `FmgLib.MauiMarkup.Template` | [![NuGet](https://img.shields.io/nuget/v/FmgLib.MauiMarkup.Template?includePreReleases=true)](https://www.nuget.org/packages/FmgLib.MauiMarkup.Template/) ![NuGet Downloads](https://img.shields.io/nuget/dt/FmgLib.MauiMarkup.Template.svg) | - |
+
+<br>
+
+FmgLib.MauiMarkup is a specialized library crafted for .NET MAUI. This library allows you to code directly in C# without the necessity of employing XAML language. It provides developers with a straightforward and flexible approach to building user interfaces using C# code. With FmgLib.MauiMarkup, you can now develop application interfaces in a code-focused manner, avoiding the complexities of dealing with XAML files. This library accelerates your development process while enabling you to write more readable and manageable code.
+
+FmgLib.MauiMarkup provides extension methods for all properties provided for a View on the XAML side.
+
+<br>
+<br>
+
+<details>
+    <summary><b>Getting Started<b></summary>
 
 ### Creating a new FmgLib.MauiMarkup project from CLI
 
@@ -8,7 +27,6 @@ FmgLib provides a project template to start a new project with FmgLib.MauiMarkup
 ```bash
 dotnet new install FmgLib.MauiMarkup.Template
 ```
-
 
 **Create a new project:**
 
@@ -24,8 +42,10 @@ Install the [FmgLib.MauiMarkup](https://www.nuget.org/packages/FmgLib.MauiMarkup
 ```bash
 dotnet add package FmgLib.MauiMarkup
 ```
+</details>
 
-# XAML to FmgLib.MauiMarkup(C#)
+<details>
+    <summary><b>XAML to FmgLib.MauiMarkup(C#)<b></summary>
 
 If we were to write XAML code for the Image class, it would look like this:
 ```xaml
@@ -77,8 +97,10 @@ this
     )
 );
 ```
+</details>
 
-# How to assign object references
+<details>
+    <summary><b>How to assign object references<b></summary>
 
 There are two main ways to assign objects in `FmgLib.MauiMarkup`: 
 
@@ -98,8 +120,10 @@ Button btnOk;
 new Button()
 .Assign(out btnOk);
 ```
+</details>
 
-# Attached properties
+<details>
+    <summary><b>Attached properties<b></summary>
 
 Attached properties are properties that are defined on a type but are intended to be used with instances of other types. In `FmgLib.MauiMarkup`, attached properties are matched with attached property fluent methods, allowing you to set their values in a more readable and fluent manner.
 
@@ -171,7 +195,9 @@ This would set the `AbsoluteLayout.LayoutBounds` attached property to the specif
  |`AutomationProperties.LabeledBy`|`AutomationLabeledBy()`|
  |`ToolTipProperties.Text`|`ToolTipPropertiesText()`|
 
-# Behaviors
+</details>
+<details>
+    <summary><b>Behaviors<b></summary>
 
 In `FmgLib.MauiMarkup`, you can add functionality to user interface controls using behaviors. Behaviors allow you to add functionality to controls without having to subclass them.
 
@@ -181,8 +207,9 @@ You can add a behavior to a control by using the `Behaviors` method and passing 
 new Entry().Text("Click Item")
   .Behaviors(new YourCustomBehaviors());
 ```
-
-# Binding Converters
+</details>
+<details>
+    <summary><b>Binding Converters<b></summary>
 
 This code is an example of how to use binding converters in `FmgLib.MauiMarkup`. 
 
@@ -216,8 +243,10 @@ public class CustomPage : ContentPage
     }
 }
 ```
+</details>
 
-# Event handlers
+<details>
+    <summary><b>Event handlers<b></summary>
 
 In Maui, you can add functionality to user interface controls by handling events. For each `EventHandler` in a `FmgLib.MauiMarkup` class, a fluent helper method is generated to make it easier to attach an event handler to the control.
 
@@ -271,8 +300,10 @@ new Button()
 ``` 
 
 This makes it easy to attach event handlers to controls in a concise and readable way.
+</details>
 
-# Gesture Recognizers
+<details>
+    <summary><b>Gesture Recognizers<b></summary>
 
 The following gesture recognizers are available:
 
@@ -398,8 +429,10 @@ public class PointerGesturePage : ContentPage
     }
 }
 ```
+</details>
 
-# Gradients
+<details>
+    <summary><b>Gradients<b></summary>
 
 `FmgLib.MauiMarkup` provides a way to create visual effects using gradient brushes in curly braces. There are two defined types of gradient brushes: 
 
@@ -426,8 +459,11 @@ new Border()
 	)
 )
 ```
+</details>
 
-# Grid Definition
+<details>
+    <summary><b>Grid Definition<b></summary>
+
 
 The `Grid` element allows you to create complex, multi-row and multi-column layout using Row and Column definitions. You can define the number and size of the rows and columns using the `RowDefinitions` and `ColumnDefinitions` methods, respectively.
 
@@ -478,7 +514,12 @@ new Grid()
 )
 ```
 
-# ITextAlignment interface extension methods
+</details>
+
+<details>
+    <summary><b>ITextAlignment interface extension methods<b></summary>
+
+# 
 
 In `FmgLib.MauiMarkup`, all classes that implement the `ITextAlignment` interface get the following extension methods:
 
@@ -509,7 +550,10 @@ new Label().TextCenter()
 
 This example centers the text both horizontally and vertically within the label's containing element.
 
-# Layout options
+</details>
+
+<details>
+    <summary><b>Layout options<b></summary>
 
 In `FmgLib.MauiMarkup`, you can layout every view in their container using the following extension methods:
 
@@ -552,7 +596,12 @@ new StackLayout()
 
 This example centers a Label inside a `StackLayout` container. You can use the same method with other container views, and with any view that you want to lay out within its containing element.
 
-# Menus in FmgLib.MauiMarkup
+</details>
+
+
+<details>
+    <summary><b>Menus in FmgLib.MauiMarkup<b></summary>
+
 
 ### Context menu
 
@@ -643,7 +692,11 @@ public class MenuPage : ContentPage
 }
 ```
 
-# Properties and Fluent Methods
+</details>
+
+<details>
+    <summary><b>Properties and Fluent Methods<b></summary>
+
 
 `FmgLib.MauiMarkup` provides a convenient way to set properties for UI elements by matching properties with fluent helper methods. This makes it easier and more readable to define the interface of your application.
 
@@ -667,7 +720,10 @@ new Label()
     .TextColor(e => e.OnLight(Colors.Black).OnDark(Colors.Teal))
 ```
 
-# Property Bindings
+</details>
+
+<details>
+    <summary><b>Property Bindings<b></summary>
 
 `FmgLib.MauiMarkup` provides a simple way to bind properties of an element to a source, so that when the source changes, the property changes as well. You can bind a property by using the fluent method e.g. `Text()`, `TextColor()` etc. and then using lambda call the method `Path()` to specify the property you want to bind to.
 
@@ -698,7 +754,11 @@ In this example, the text property of the label is bound to the `Value` property
 
 You can also bind a property to an object that is not part of the visual tree. This is useful when you have a separate data source, such as a model or a view model, that you want to bind to a visual element.
 
-# Property MultiBinding
+</details>
+
+<details>
+    <summary><b>Property MultiBinding<b></summary>
+
 You can easily use multibinding with FmgLib.MauiMarkup. You can add as many BindingBases as you want with the e.Bindings(...) method.
 
 Example usage is as follows:
@@ -750,8 +810,10 @@ public partial class MainPage : ContentPage, IFmgLibHotReload
 
 ```
 
+</details>
 
-# Shell Application
+<details>
+    <summary><b>Shell Application<b></summary>
 
 Here's an example of a simple shell-based application:
 
@@ -823,7 +885,11 @@ public class ShellItemTemplate : ContentView
 }
 ```
 
-# Application Styling
+</details>
+
+<details>
+    <summary><b>Application Styling<b></summary>
+
 
 `FmgLib.MauiMarkup` provides a way to define the styles of elements using the `Style<T>` class. Here's an example of how to define the style of a button:
 
@@ -920,7 +986,11 @@ new ResourceDictionary
 };
 ```
 
-# User defined extension methods
+</details>
+
+<details>
+    <summary><b>User defined extension methods<b></summary>
+
 
 In `FmgLib:mauiMarkup`, you can create your own extension methods by defining a static method within a static class.
 
@@ -994,7 +1064,10 @@ new Style<Label>(e => e
 
 or use in an animation context.
 
-# Triggers
+</details>
+
+<details>
+    <summary><b>Triggers<b></summary>
 
 Triggers allow you to set properties in response to certain conditions or events.
 
@@ -1115,7 +1188,10 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
-# .NET built-in Hot-Reload
+</details>
+
+<details>
+    <summary><b>.NET built-in Hot-Reload<b></summary>
 
 Additionally, the FmgLib.MauiMarkup library includes hot reload support to make the development process faster and more efficient.
 
@@ -1148,7 +1224,11 @@ public partial class ExamplePage : ContentPage, IFmgLibHotReload
 }
 ```
 
-# Extensions for 3rd Party Controls
+</details>
+
+<details>
+    <summary><b>Extensions for 3rd Party Controls<b></summary>
+
 
 FmgLib.MauiMarkup library can also generate extension methods for controls from third-party libraries. To achieve this, you should utilize the `MauiMarkupAttribute` provided by FmgLib.MauiMarkup.
 
@@ -1421,7 +1501,11 @@ new Button()
 .FormViewIsSubmitButton(true)
 ```
 
-# Localization
+</details>
+
+<details>
+    <summary><b>Localization (Json File)<b></summary>
+
 
 In the MauiProgram.cs file,
 ```CSharp
@@ -1446,7 +1530,7 @@ if you give one or more parameters like
 ```CSharp
 builder
     .UseMauiApp<App>()
-    .UseMauiMarkupLocalization("Localization1.json", "Localization2.json", "/Languages/Temp1.json");
+    .UseMauiMarkupLocalization(filePaths: "Localization1.json", "Localization2.json", "/Languages/Temp1.json");
 ```
 
 it will read json files in given file paths.
@@ -1472,6 +1556,9 @@ Instead of 'keyWord' keywords, you can use any word or phrase(s) you want. You d
 
 You can also change the 'tr-TR' and 'en-US' language keys with words or sentences as you wish. But it is recommended to use expressions such as 'en-US', 'tr-TR', 'fr-FR'.
 
+You can change the language of the system with the following statement: `Translator.Instance.ChangeCulture(CultureInfo.GetCultureInfo("en-US"));`
+
+
 You can simply use 
 ```CSharp
 new Label()
@@ -1485,12 +1572,92 @@ new Label()
 .FontSize(18)
 .CenterHorizontal()
 .SemanticDescription(e => e.Translate("Msg"))
-.SemanticHeadingLevel(SemanticHeadingLevel.Level1)
+.SemanticHeadingLevel(SemanticHeadingLevel.Level1),
+
+new VerticalStackLayout()
+.Center()
+.Children(
+    new RadioButton()
+    .IsChecked(Translator.Instance.CurrentCulture.Name == "tr-TR")
+    .Content("tr-TR")
+    .OnCheckedChanged((sender, e) =>
+    {
+        Translator.Instance.ChangeCulture(CultureInfo.GetCultureInfo("tr-TR"));
+    }),
+    new RadioButton()
+    .IsChecked(Translator.Instance.CurrentCulture.Name == "en-US")
+    .Content("en-US")
+    .OnCheckedChanged((sender, e) =>
+    {
+        Translator.Instance.ChangeCulture(CultureInfo.GetCultureInfo("en-US"));
+    })
+)
 ``` 
 in the code.
 
+</details>
 
-# General Example Code
+<details>
+    <summary><b>Localization (Resx File)<b></summary>
+
+
+In the MauiProgram.cs file,
+```CSharp
+builder
+    .UseMauiApp<App>()
+    .UseMauiMarkupLocalizationWithResx(AppResources.ResourceManager);
+    // .UseMauiMarkupLocalizationWithResx(AppResources.ResourceManager, "en-US"); // set default lang
+```
+should be added.
+
+You should have source files with the extension resx in your project. The translation will be read from this file and imported.
+Then, in **MauiProgram.cs**, pass your `ResourceManager` value as a parameter to `UseMauiMarkupLocalizationWithResx`.
+
+
+You can also change the 'tr-TR' and 'en-US' language keys with words or sentences as you wish. But it is recommended to use expressions such as 'en-US', 'tr-TR', 'fr-FR'.
+
+You can change the language of the system with the following statement: `TranslatorResx.Instance.ChangeCulture(CultureInfo.GetCultureInfo("en-US"));`
+
+You can simply use 
+```CSharp
+new Label()
+.Text(e => e.TranslateResx("Hello"))
+.FontSize(32)
+.CenterHorizontal()
+.SemanticHeadingLevel(SemanticHeadingLevel.Level1),
+
+new Label()
+.Text(e => e.TranslateResx(nameof(AppResource.Msg)))
+.FontSize(18)
+.CenterHorizontal()
+.SemanticDescription(e => e.TranslateResx("Msg"))
+.SemanticHeadingLevel(SemanticHeadingLevel.Level1),
+
+new VerticalStackLayout()
+.Center()
+.Children(
+    new RadioButton()
+    .IsChecked(TranslatorResx.Instance.CurrentCulture.Name == "tr-TR")
+    .Content("tr-TR")
+    .OnCheckedChanged((sender, e) =>
+    {
+        TranslatorResx.Instance.ChangeCulture(CultureInfo.GetCultureInfo("tr-TR"));
+    }),
+    new RadioButton()
+    .IsChecked(TranslatorResx.Instance.CurrentCulture.Name == "en-US")
+    .Content("en-US")
+    .OnCheckedChanged((sender, e) =>
+    {
+        TranslatorResx.Instance.ChangeCulture(CultureInfo.GetCultureInfo("en-US"));
+    })
+)
+``` 
+in the code.
+
+</details>
+
+<details>
+    <summary><b>General Example Code<b></summary>
 
 ```csharp
 
@@ -1789,3 +1956,4 @@ public partial class HomePage : BasePage<HomePageViewModel>
 }
 
 ```
+</details>

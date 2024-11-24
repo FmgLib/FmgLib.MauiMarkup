@@ -19,6 +19,8 @@ FmgLib.MauiMarkup provides extension methods for all properties provided for a V
 <details>
     <summary><b>Getting Started<b></summary>
 
+<br>
+<br>
 ### Creating a new FmgLib.MauiMarkup project from CLI
 
 FmgLib provides a project template to start a new project with FmgLib.MauiMarkup.
@@ -42,11 +44,15 @@ Install the [FmgLib.MauiMarkup](https://www.nuget.org/packages/FmgLib.MauiMarkup
 ```bash
 dotnet add package FmgLib.MauiMarkup
 ```
+
+<br>
 </details>
 
 <details>
     <summary><b>XAML to FmgLib.MauiMarkup(C#)<b></summary>
 
+<br>
+<br>
 If we were to write XAML code for the Image class, it would look like this:
 ```xaml
 <Image
@@ -97,11 +103,15 @@ this
     )
 );
 ```
+
+<br>
 </details>
 
 <details>
     <summary><b>How to assign object references<b></summary>
 
+<br>
+<br>
 There are two main ways to assign objects in `FmgLib.MauiMarkup`: 
 
 - using the `Assign` method,
@@ -120,11 +130,15 @@ Button btnOk;
 new Button()
 .Assign(out btnOk);
 ```
+
+<br>
 </details>
 
 <details>
     <summary><b>Attached properties<b></summary>
 
+<br>
+<br>
 Attached properties are properties that are defined on a type but are intended to be used with instances of other types. In `FmgLib.MauiMarkup`, attached properties are matched with attached property fluent methods, allowing you to set their values in a more readable and fluent manner.
 
 For example, if you want to set the `AbsoluteLayout.LayoutBounds` attached property on a Border object, you would create an instance of Border and then use the `AbsoluteLayoutBounds` fluent method to set its value, like this:
@@ -199,6 +213,8 @@ This would set the `AbsoluteLayout.LayoutBounds` attached property to the specif
 <details>
     <summary><b>Behaviors<b></summary>
 
+<br>
+<br>
 In `FmgLib.MauiMarkup`, you can add functionality to user interface controls using behaviors. Behaviors allow you to add functionality to controls without having to subclass them.
 
 You can add a behavior to a control by using the `Behaviors` method and passing in an instance of the behavior class. For example:
@@ -207,10 +223,14 @@ You can add a behavior to a control by using the `Behaviors` method and passing 
 new Entry().Text("Click Item")
   .Behaviors(new YourCustomBehaviors());
 ```
+
+<br>
 </details>
 <details>
     <summary><b>Binding Converters<b></summary>
 
+<br>
+<br>
 This code is an example of how to use binding converters in `FmgLib.MauiMarkup`. 
 
 A `CollectionView` is defined and for each item in the `MyNumbers` list, a label is created with text equal to the value of the item. The `BackgroundColor` property of the label is bound to the item using the `Convert` method, which takes in a function that converts the value of the item (an integer) to a color. In this case, the function checks if the number is even or odd, and returns either `Colors.Green` or `Colors.Yellow` based on the result.
@@ -243,11 +263,15 @@ public class CustomPage : ContentPage
     }
 }
 ```
+
+<br>
 </details>
 
 <details>
     <summary><b>Event handlers<b></summary>
 
+<br>
+<br>
 In Maui, you can add functionality to user interface controls by handling events. For each `EventHandler` in a `FmgLib.MauiMarkup` class, a fluent helper method is generated to make it easier to attach an event handler to the control.
 
 For example, in the case of the `Clicked` event handler in the `Button` class, two fluent methods are generated:
@@ -300,11 +324,15 @@ new Button()
 ``` 
 
 This makes it easy to attach event handlers to controls in a concise and readable way.
+
+<br>
 </details>
 
 <details>
     <summary><b>Gesture Recognizers<b></summary>
 
+<br>
+<br>
 The following gesture recognizers are available:
 
 - `TapGestureRecognizer`
@@ -429,11 +457,15 @@ public class PointerGesturePage : ContentPage
     }
 }
 ```
+
+<br>
 </details>
 
 <details>
     <summary><b>Gradients<b></summary>
-
+    
+<br>
+<br>
 `FmgLib.MauiMarkup` provides a way to create visual effects using gradient brushes in curly braces. There are two defined types of gradient brushes: 
 
 - LinearGradientBrush 
@@ -459,12 +491,15 @@ new Border()
 	)
 )
 ```
+
+<br>
 </details>
 
 <details>
     <summary><b>Grid Definition<b></summary>
-
-
+    
+<br>
+<br>
 The `Grid` element allows you to create complex, multi-row and multi-column layout using Row and Column definitions. You can define the number and size of the rows and columns using the `RowDefinitions` and `ColumnDefinitions` methods, respectively.
 
 You can set the position of a child element within the grid using the `Row()`, `Column()`, `ColumnSpan()`, and `RowSpan()` methods. These methods match the attached properties `Grid.Row`, `Grid.Column`, `Grid.ColumnSpan`, and `Grid.RowSpan`, respectively.
@@ -514,12 +549,14 @@ new Grid()
 )
 ```
 
+<br>
 </details>
 
 <details>
     <summary><b>ITextAlignment interface extension methods<b></summary>
 
-# 
+<br>
+<br>
 
 In `FmgLib.MauiMarkup`, all classes that implement the `ITextAlignment` interface get the following extension methods:
 
@@ -550,6 +587,7 @@ new Label().TextCenter()
 
 This example centers the text both horizontally and vertically within the label's containing element.
 
+<br>
 </details>
 
 <details>
@@ -602,6 +640,8 @@ This example centers a Label inside a `StackLayout` container. You can use the s
 <details>
     <summary><b>Menus in FmgLib.MauiMarkup<b></summary>
 
+<br>
+<br>
 
 ### Context menu
 
@@ -692,12 +732,14 @@ public class MenuPage : ContentPage
 }
 ```
 
+<br>
 </details>
 
 <details>
     <summary><b>Properties and Fluent Methods<b></summary>
 
-
+<br>
+<br>
 `FmgLib.MauiMarkup` provides a convenient way to set properties for UI elements by matching properties with fluent helper methods. This makes it easier and more readable to define the interface of your application.
 
 Here is an example of using fluent methods to set properties on a `Label`:
@@ -720,11 +762,14 @@ new Label()
     .TextColor(e => e.OnLight(Colors.Black).OnDark(Colors.Teal))
 ```
 
+<br>
 </details>
 
 <details>
     <summary><b>Property Bindings<b></summary>
 
+<br>
+<br>
 `FmgLib.MauiMarkup` provides a simple way to bind properties of an element to a source, so that when the source changes, the property changes as well. You can bind a property by using the fluent method e.g. `Text()`, `TextColor()` etc. and then using lambda call the method `Path()` to specify the property you want to bind to.
 
 
@@ -754,11 +799,14 @@ In this example, the text property of the label is bound to the `Value` property
 
 You can also bind a property to an object that is not part of the visual tree. This is useful when you have a separate data source, such as a model or a view model, that you want to bind to a visual element.
 
+<br>
 </details>
 
 <details>
     <summary><b>Property MultiBinding<b></summary>
 
+<br>
+<br>
 You can easily use multibinding with FmgLib.MauiMarkup. You can add as many BindingBases as you want with the e.Bindings(...) method.
 
 Example usage is as follows:
@@ -810,11 +858,14 @@ public partial class MainPage : ContentPage, IFmgLibHotReload
 
 ```
 
+<br>
 </details>
 
 <details>
     <summary><b>Shell Application<b></summary>
 
+<br>
+<br>
 Here's an example of a simple shell-based application:
 
 ```csharp
@@ -885,12 +936,14 @@ public class ShellItemTemplate : ContentView
 }
 ```
 
+<br>
 </details>
 
 <details>
     <summary><b>Application Styling<b></summary>
 
-
+<br>
+<br>
 `FmgLib.MauiMarkup` provides a way to define the styles of elements using the `Style<T>` class. Here's an example of how to define the style of a button:
 
 ```csharp
@@ -986,12 +1039,14 @@ new ResourceDictionary
 };
 ```
 
+<br>
 </details>
 
 <details>
     <summary><b>User defined extension methods<b></summary>
 
-
+<br>
+<br>
 In `FmgLib:mauiMarkup`, you can create your own extension methods by defining a static method within a static class.
 
 Here's an example of extension methods that set a label font size:
@@ -1064,11 +1119,14 @@ new Style<Label>(e => e
 
 or use in an animation context.
 
+<br>
 </details>
 
 <details>
     <summary><b>Triggers<b></summary>
 
+<br>
+<br>
 Triggers allow you to set properties in response to certain conditions or events.
 
 ### Property Triggers
@@ -1188,11 +1246,14 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
+<br>
 </details>
 
 <details>
     <summary><b>.NET built-in Hot-Reload<b></summary>
 
+<br>
+<br>
 Additionally, the FmgLib.MauiMarkup library includes hot reload support to make the development process faster and more efficient.
 
 If you want to enhance your page with fast reload, your page needs to implement the IFmgLibHotReload interface. Then, you should trigger the this.InitializeHotReload(); function within the constructor.
@@ -1224,12 +1285,14 @@ public partial class ExamplePage : ContentPage, IFmgLibHotReload
 }
 ```
 
+<br>
 </details>
 
 <details>
     <summary><b>Extensions for 3rd Party Controls<b></summary>
-
-
+    
+<br>
+<br>
 FmgLib.MauiMarkup library can also generate extension methods for controls from third-party libraries. To achieve this, you should utilize the `MauiMarkupAttribute` provided by FmgLib.MauiMarkup.
 
 Simply specify the control for which you want to create extension methods as `[MauiMarkup(typeof(YourControl))]`.
@@ -1501,12 +1564,14 @@ new Button()
 .FormViewIsSubmitButton(true)
 ```
 
+<br>
 </details>
 
 <details>
     <summary><b>Localization (Json File)<b></summary>
 
-
+<br>
+<br>
 In the MauiProgram.cs file,
 ```CSharp
 builder
@@ -1595,12 +1660,14 @@ new VerticalStackLayout()
 ``` 
 in the code.
 
+<br>
 </details>
 
 <details>
     <summary><b>Localization (Resx File)<b></summary>
-
-
+    
+<br>
+<br>
 In the MauiProgram.cs file,
 ```CSharp
 builder
@@ -1654,11 +1721,14 @@ new VerticalStackLayout()
 ``` 
 in the code.
 
+<br>
 </details>
 
 <details>
     <summary><b>General Example Code<b></summary>
 
+<br>
+<br>
 ```csharp
 
 using Microsoft.Maui.Layouts;

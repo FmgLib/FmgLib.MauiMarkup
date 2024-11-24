@@ -217,7 +217,8 @@ public static partial class {className}
                             namedListType.BaseType.TypeArguments.Length == 1)
                     typeName = namedListType.BaseType.TypeArguments[0].ToDisplayString();
 
-                GenerateExtensionMethod_ContentProp_List(info, typeName);
+                if (!string.IsNullOrEmpty(typeName))
+                    GenerateExtensionMethod_ContentProp_List(info, typeName);
             }
             else
             {

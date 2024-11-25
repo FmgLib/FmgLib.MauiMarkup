@@ -1,4 +1,5 @@
 ﻿using Microsoft.CodeAnalysis;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -109,23 +110,24 @@ public static partial class {className}
                 (_.Type.Name.Contains(nameof(IList)) || _.Type.AllInterfaces.Any(e => e.Name.Contains(nameof(IList))) || _.Type.Name.Contains(nameof(ICollection)) || _.Type.AllInterfaces.Any(e => e.Name.Contains(nameof(ICollection)))) &&
                 _.Type.AllInterfaces.Any(e => e.Name.Contains(nameof(IEnumerable))) &&
                 !_.Type.Name.Equals(nameof(String), StringComparison.InvariantCultureIgnoreCase))
+            .Where(_ => _.Type.Name.Contains(nameof(ICollection)) || _.Type.AllInterfaces.Any(e => e.Name.Contains(nameof(ICollection))) || !(_.Type.Name.Contains("IReadOnlyList") || _.Type.AllInterfaces.Any(e => e.Name.Contains("IReadOnlyList"))))
+            .Where(_ => !(_.Type.Name.StartsWith("ReadOnlyObservableCollection") || _.Type.Name.StartsWith("ReadOnlyCollection") || _.Type.Name.StartsWith("ReadOnlyDictionary") || (_.Type.BaseType != null && (_.Type.BaseType.Name.StartsWith("ReadOnlyObservableCollection") || _.Type.BaseType.Name.StartsWith("ReadOnlyCollection") || _.Type.BaseType.Name.StartsWith("ReadOnlyDictionary")))))
             .ToList();
 
-        
 
-         var events = mainSymbol
-            .GetMembers()
-            .Where(_ => _.Kind == SymbolKind.Event)
-            .Where(_ => _.DeclaredAccessibility == Accessibility.Public)
-            .Cast<IEventSymbol>()
-            .Where(_ => !_.Name.Contains('.'))
-            .Where(_ => (_.ContainingType is INamedTypeSymbol namedTypeSymbol) && namedTypeSymbol.GetFullyQualifiedName() == mainSymbol.GetFullyQualifiedName())
-            .Where(_ => !_.GetAttributes().Any(_ => _.AttributeClass.EnsureNotNull().Equals(editorBrowsableAttribute, SymbolEqualityComparer.Default)))
-            .Where(_ => !_.GetAttributes().Any(_ => _.AttributeClass.EnsureNotNull().Name == "ObsoleteAttribute" || _.AttributeClass.EnsureNotNull().Name == "Obsolete"))
-            .GroupBy(_ => _.Name, StringComparer.OrdinalIgnoreCase)
-            .Select(_ => _.First())
-            .OrderBy(_ => _.Name)
-            .ToArray();
+        var events = mainSymbol
+           .GetMembers()
+           .Where(_ => _.Kind == SymbolKind.Event)
+           .Where(_ => _.DeclaredAccessibility == Accessibility.Public)
+           .Cast<IEventSymbol>()
+           .Where(_ => !_.Name.Contains('.'))
+           .Where(_ => (_.ContainingType is INamedTypeSymbol namedTypeSymbol) && namedTypeSymbol.GetFullyQualifiedName() == mainSymbol.GetFullyQualifiedName())
+           .Where(_ => !_.GetAttributes().Any(_ => _.AttributeClass.EnsureNotNull().Equals(editorBrowsableAttribute, SymbolEqualityComparer.Default)))
+           .Where(_ => !_.GetAttributes().Any(_ => _.AttributeClass.EnsureNotNull().Name == "ObsoleteAttribute" || _.AttributeClass.EnsureNotNull().Name == "Obsolete"))
+           .GroupBy(_ => _.Name, StringComparer.OrdinalIgnoreCase)
+           .Select(_ => _.First())
+           .OrderBy(_ => _.Name)
+           .ToArray();
 
         if (attachedModel == null)
         {
@@ -243,7 +245,7 @@ public static partial class {className}
                         GenerateExtensionMethod_AnimateTo(info, "ColorTransform");
                 }
             }
-            
+
             isGeneratedExtension = true;
         }
     }

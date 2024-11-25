@@ -1,6 +1,8 @@
 ﻿using System.Globalization;
 using System.Reflection;
 
+using MyMauiMarkupApp.Resources;
+
 namespace MyMauiMarkupApp;
 
 public partial class MainPage : ContentPage, IFmgLibHotReload
@@ -31,10 +33,23 @@ public partial class MainPage : ContentPage, IFmgLibHotReload
                         .SemanticHeadingLevel(SemanticHeadingLevel.Level1),
 
                         new Label()
+                        .Text(e => e.TranslateResx(nameof(AppResources.hello)))
+                        .FontSize(32)
+                        .CenterHorizontal()
+                        .SemanticHeadingLevel(SemanticHeadingLevel.Level1),
+
+                        new Label()
                         .Text(e => e.Translate("Msg"))
                         .FontSize(18)
                         .CenterHorizontal()
                         .SemanticDescription(e => e.Translate("Msg"))
+                        .SemanticHeadingLevel(SemanticHeadingLevel.Level1),
+
+                        new Label()
+                        .Text(e => e.Translate("Msg"))
+                        .FontSize(18)
+                        .CenterHorizontal()
+                        .SemanticDescription(e => e.TranslateResx("Msg"))
                         .SemanticHeadingLevel(SemanticHeadingLevel.Level1),
 
 
@@ -47,6 +62,7 @@ public partial class MainPage : ContentPage, IFmgLibHotReload
                             .OnCheckedChanged((sender, e) =>
                             {
                                 Translator.Instance.ChangeCulture(CultureInfo.GetCultureInfo("tr-TR"));
+                                TranslatorResx.Instance.ChangeCulture(CultureInfo.GetCultureInfo("tr-TR"));
                             }),
                             new RadioButton()
                             .IsChecked(Translator.Instance.CurrentCulture.Name == "en-US")
@@ -54,6 +70,7 @@ public partial class MainPage : ContentPage, IFmgLibHotReload
                             .OnCheckedChanged((sender, e) =>
                             {
                                 Translator.Instance.ChangeCulture(CultureInfo.GetCultureInfo("en-US"));
+                                TranslatorResx.Instance.ChangeCulture(CultureInfo.GetCultureInfo("en-US"));
                             })
                         ),
 

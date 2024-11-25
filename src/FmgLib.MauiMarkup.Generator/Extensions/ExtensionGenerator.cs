@@ -110,7 +110,7 @@ public static partial class {className}
                 (_.Type.Name.Contains(nameof(IList)) || _.Type.AllInterfaces.Any(e => e.Name.Contains(nameof(IList))) || _.Type.Name.Contains(nameof(ICollection)) || _.Type.AllInterfaces.Any(e => e.Name.Contains(nameof(ICollection)))) &&
                 _.Type.AllInterfaces.Any(e => e.Name.Contains(nameof(IEnumerable))) &&
                 !_.Type.Name.Equals(nameof(String), StringComparison.InvariantCultureIgnoreCase))
-            .Where(_ => !(_.Type.Name.Contains("IReadOnlyList") || _.Type.AllInterfaces.Any(e => e.Name.Contains("IReadOnlyList"))))
+            .Where(_ => _.Type.Name.Contains(nameof(ICollection)) || _.Type.AllInterfaces.Any(e => e.Name.Contains(nameof(ICollection))) || !(_.Type.Name.Contains("IReadOnlyList") || _.Type.AllInterfaces.Any(e => e.Name.Contains("IReadOnlyList"))))
             .ToList();
 
 

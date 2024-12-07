@@ -14,7 +14,7 @@ public partial class ExtensionGenerator
     {
         var tail = info.propertyTypeName.EndsWith("?") ? "?" : "";
         builder.Append($@"
-    public static {info.MainSymbolName} {info.propertyName}(this {info.MainSymbolName} self,
+    public static {info.MainSymbolName} {info.methodName}(this {info.MainSymbolName} self,
         IList<{elementTypeName}> {info.camelCaseName})
     {{
         foreach (var item in {info.camelCaseName})
@@ -22,7 +22,7 @@ public partial class ExtensionGenerator
         return self;
     }}
 
-    public static {info.MainSymbolName} {info.propertyName}(this {info.MainSymbolName} self,
+    public static {info.MainSymbolName} {info.methodName}(this {info.MainSymbolName} self,
         params {elementTypeName}[] {info.camelCaseName})
     {{
         foreach (var item in {info.camelCaseName})

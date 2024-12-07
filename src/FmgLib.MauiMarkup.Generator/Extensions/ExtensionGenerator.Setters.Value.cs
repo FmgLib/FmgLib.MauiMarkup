@@ -13,7 +13,7 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_Setters_Sealed(PropInfo info)
     {
         builder.Append($@"
-    public static SettersContext<{info.MainSymbolName}> {info.propertyName}(this SettersContext<{info.MainSymbolName}> self,
+    public static SettersContext<{info.MainSymbolName}> {info.methodName}(this SettersContext<{info.MainSymbolName}> self,
         {info.propertyTypeName} {info.camelCaseName})
     {{
         self.XamlSetters.Add(new Setter {{ Property = {info.BindablePropertyName}, Value = {info.camelCaseName} }});
@@ -25,7 +25,7 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_Setters_Normal(PropInfo info)
     {
         builder.Append($@"
-    public static SettersContext<T> {info.propertyName}<T>(this SettersContext<T> self,
+    public static SettersContext<T> {info.methodName}<T>(this SettersContext<T> self,
         {info.propertyTypeName} {info.camelCaseName})
         where T : {info.MainSymbolName}
     {{

@@ -1,5 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace FmgLib.MauiMarkup;
@@ -12,13 +13,14 @@ public class PropInfo
     public string BindablePropertyName { get; set; }
 
     public string propertyName;
+    public string methodName;
     public string propertyTypeName;
     public string accessedWith;
     public string camelCaseName;
     public string valueAssignmentString;
     public string dataTemplateAssignmentString;
 
-    public void Build()
+    public void Build(List<string> redefinedProperties = null)
     {
         propertyName = PropertySymbol.Name.Split(new[] { "." }, StringSplitOptions.None).Last();
         propertyName = propertyName.Equals("class", StringComparison.Ordinal) ? "@class" : propertyName;
@@ -40,5 +42,6 @@ public class PropInfo
             $@"self.SetValue({BindablePropertyName}, new DataTemplate(loadTemplate));" :
             $@"{accessedWith}.{propertyName} = new DataTemplate(loadTemplate);";
 
+        methodName = redefinedProperties == null || redefinedProperties.Count <= 0 || !redefinedProperties.Any(e => e == propertyName) ? propertyName : propertyName + "New";
     }
 }

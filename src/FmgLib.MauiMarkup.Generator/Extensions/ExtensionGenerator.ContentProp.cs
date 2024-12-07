@@ -23,14 +23,14 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_ContentProp_Single_Sealed(PropInfo info)
     {
         builder.Append($@"
-    public static {info.MainSymbolName} {info.propertyName}_ContentProp(this {info.MainSymbolName} self,
+    public static {info.MainSymbolName} {info.methodName}_ContentProp(this {info.MainSymbolName} self,
         {info.propertyTypeName} {info.camelCaseName})
     {{
         self.{info.propertyName} = {info.camelCaseName};
         return self;
     }}
 
-    public static {info.MainSymbolName} {info.propertyName}_ContentProp(this {info.MainSymbolName} self,
+    public static {info.MainSymbolName} {info.methodName}_ContentProp(this {info.MainSymbolName} self,
         Func<{info.propertyTypeName}> configure)
     {{
         var {info.camelCaseName} = configure();
@@ -43,7 +43,7 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_ContentProp_Single_Normal(PropInfo info)
     {
         builder.Append($@"
-    public static T {info.propertyName}_ContentProp<T>(this T self,
+    public static T {info.methodName}_ContentProp<T>(this T self,
         {info.propertyTypeName} {info.camelCaseName})
         where T : {info.MainSymbolName}
     {{
@@ -51,7 +51,7 @@ public partial class ExtensionGenerator
         return self;
     }}
 
-    public static T {info.propertyName}_ContentProp<T>(this T self,
+    public static T {info.methodName}_ContentProp<T>(this T self,
         Func<{info.propertyTypeName}> configure)
         where T : {info.MainSymbolName}
     {{
@@ -68,7 +68,7 @@ public partial class ExtensionGenerator
     {
         var tail = info.propertyTypeName.EndsWith("?") ? "?" : "";
         builder.Append($@"
-    public static {info.MainSymbolName} {(string.IsNullOrEmpty(fluentMethodName) ? info.propertyName : fluentMethodName)}(this {info.MainSymbolName} self,
+    public static {info.MainSymbolName} {(string.IsNullOrEmpty(fluentMethodName) ? info.methodName : fluentMethodName)}(this {info.MainSymbolName} self,
         IList<{elementTypeName}> {info.camelCaseName})
     {{
         foreach (var item in {info.camelCaseName})
@@ -76,7 +76,7 @@ public partial class ExtensionGenerator
         return self;
     }}
 
-    public static {info.MainSymbolName} {(string.IsNullOrEmpty(fluentMethodName) ? info.propertyName : fluentMethodName)}(this {info.MainSymbolName} self,
+    public static {info.MainSymbolName} {(string.IsNullOrEmpty(fluentMethodName) ? info.methodName : fluentMethodName)}(this {info.MainSymbolName} self,
         params {elementTypeName}[] {info.camelCaseName})
     {{
         foreach (var item in {info.camelCaseName})
@@ -84,7 +84,7 @@ public partial class ExtensionGenerator
         return self;
     }}
 
-    public static {info.MainSymbolName} {(string.IsNullOrEmpty(fluentMethodName) ? info.propertyName : fluentMethodName)}(this {info.MainSymbolName} self,
+    public static {info.MainSymbolName} {(string.IsNullOrEmpty(fluentMethodName) ? info.methodName : fluentMethodName)}(this {info.MainSymbolName} self,
         Func<{elementTypeName}[]> configure)
     {{
         var {info.camelCaseName} = configure();
@@ -99,7 +99,7 @@ public partial class ExtensionGenerator
     {
         var tail = info.propertyTypeName.EndsWith("?") ? "?" : "";
         builder.Append($@"
-    public static T {(string.IsNullOrEmpty(fluentMethodName) ? info.propertyName : fluentMethodName)}<T>(this T self,
+    public static T {(string.IsNullOrEmpty(fluentMethodName) ? info.methodName : fluentMethodName)}<T>(this T self,
         IList<{elementTypeName}> {info.camelCaseName})
         where T : {info.MainSymbolName}
     {{
@@ -108,7 +108,7 @@ public partial class ExtensionGenerator
         return self;
     }}
 
-    public static T {(string.IsNullOrEmpty(fluentMethodName) ? info.propertyName : fluentMethodName)}<T>(this T self,
+    public static T {(string.IsNullOrEmpty(fluentMethodName) ? info.methodName : fluentMethodName)}<T>(this T self,
         params {elementTypeName}[] {info.camelCaseName})
         where T : {info.MainSymbolName}
     {{
@@ -117,7 +117,7 @@ public partial class ExtensionGenerator
         return self;
     }}
 
-    public static T {(string.IsNullOrEmpty(fluentMethodName) ? info.propertyName : fluentMethodName)}<T>(this T self,
+    public static T {(string.IsNullOrEmpty(fluentMethodName) ? info.methodName : fluentMethodName)}<T>(this T self,
         Func<{elementTypeName}[]> configure)
         where T : {info.MainSymbolName}
     {{

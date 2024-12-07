@@ -1299,6 +1299,10 @@ Simply specify the control for which you want to create extension methods as `[M
 
 The constructor method of the `MauiMarkup()` attribute automatically generates extension methods for BindableProperties and Events found within the type provided as an argument. **You can provide a minimum of 1 type inside the constructor method, and there is no maximum limit.** **Multiple MauiMarkup attributes can be added to a single class.**
 
+**NOTE: Suppose that if a property inherited from base classes has been redefined with the `new` keyword in the class where you want to create a Fluent Method, the name of the new Fluent Method will be `PropertyName + New`.**
+
+For example, since the **Background** property in the **SfAvatarView** class is redefined with `new` and is the same as the **Background** in **VisualElement**, to prevent errors, the Fluent Method name for the **Background** property of the **SfAvatarView** class will be `BackgroundNew`.
+
 Let's look at an example:
 
 ```csharp

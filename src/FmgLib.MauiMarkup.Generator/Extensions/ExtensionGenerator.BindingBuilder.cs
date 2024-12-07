@@ -13,7 +13,7 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_BindablePropertyBuilder_Sealed(PropInfo info)
     {
         builder.Append($@"
-    public static {info.MainSymbolName} {info.propertyName}(this {info.MainSymbolName} self, Func<PropertyContext<{info.propertyTypeName}>, IPropertyBuilder<{info.propertyTypeName}>> configure)
+    public static {info.MainSymbolName} {info.methodName}(this {info.MainSymbolName} self, Func<PropertyContext<{info.propertyTypeName}>, IPropertyBuilder<{info.propertyTypeName}>> configure)
     {{
         var context = new PropertyContext<{info.propertyTypeName}>(self, {info.BindablePropertyName});
         configure(context).Build();
@@ -25,7 +25,7 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_BindablePropertyBuilder_Normal(PropInfo info)
     {
         builder.Append($@"
-    public static T {info.propertyName}<T>(this T self, Func<PropertyContext<{info.propertyTypeName}>, IPropertyBuilder<{info.propertyTypeName}>> configure)
+    public static T {info.methodName}<T>(this T self, Func<PropertyContext<{info.propertyTypeName}>, IPropertyBuilder<{info.propertyTypeName}>> configure)
         where T : {info.MainSymbolName}
     {{
         var context = new PropertyContext<{info.propertyTypeName}>(self, {info.BindablePropertyName});

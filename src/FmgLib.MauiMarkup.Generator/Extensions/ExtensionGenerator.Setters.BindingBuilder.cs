@@ -13,7 +13,7 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_SettersBuilder_Sealed(PropInfo info)
     {
         builder.Append($@"
-    public static SettersContext<{info.MainSymbolName}> {info.propertyName}(this SettersContext<{info.MainSymbolName}> self, Func<PropertySettersContext<{info.propertyTypeName}>, IPropertySettersBuilder<{info.propertyTypeName}>> configure)
+    public static SettersContext<{info.MainSymbolName}> {info.methodName}(this SettersContext<{info.MainSymbolName}> self, Func<PropertySettersContext<{info.propertyTypeName}>, IPropertySettersBuilder<{info.propertyTypeName}>> configure)
     {{
         var context = new PropertySettersContext<{info.propertyTypeName}>(self.XamlSetters, {info.BindablePropertyName});
         configure(context).Build();
@@ -25,7 +25,7 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_SettersBuilder_Normal(PropInfo info)
     {
         builder.Append($@"
-    public static SettersContext<T> {info.propertyName}<T>(this SettersContext<T> self, Func<PropertySettersContext<{info.propertyTypeName}>, IPropertySettersBuilder<{info.propertyTypeName}>> configure)
+    public static SettersContext<T> {info.methodName}<T>(this SettersContext<T> self, Func<PropertySettersContext<{info.propertyTypeName}>, IPropertySettersBuilder<{info.propertyTypeName}>> configure)
         where T : {info.MainSymbolName}
     {{
         var context = new PropertySettersContext<{info.propertyTypeName}>(self.XamlSetters, {info.BindablePropertyName});

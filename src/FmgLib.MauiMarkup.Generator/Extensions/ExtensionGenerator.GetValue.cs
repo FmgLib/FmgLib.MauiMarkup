@@ -13,7 +13,7 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_GetValue_Sealed(PropInfo info)
     {
         builder.Append($@"
-    public static {info.propertyTypeName} Get{info.propertyName}Value<T>(this {info.MainSymbolName} self)
+    public static {info.propertyTypeName} Get{info.methodName}Value<T>(this {info.MainSymbolName} self)
     {{
         return ({info.propertyTypeName})self.GetValue({info.BindablePropertyName});
     }}
@@ -23,7 +23,7 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_GetValue_Normal(PropInfo info)
     {
         builder.Append($@"
-    public static {info.propertyTypeName} Get{info.propertyName}Value<T>(this T self)
+    public static {info.propertyTypeName} Get{info.methodName}Value<T>(this T self)
         where T : {info.MainSymbolName}
     {{
         return ({info.propertyTypeName})self.GetValue({info.BindablePropertyName});

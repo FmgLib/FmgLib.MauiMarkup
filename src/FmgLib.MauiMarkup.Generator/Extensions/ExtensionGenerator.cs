@@ -18,6 +18,7 @@ public partial class ExtensionGenerator
     readonly AttachedModel attachedModel = null;
     IPropertySymbol childProp;
     List<string> bindablePropertyNames;
+    List<string> redefinedProperties;
 
     StringBuilder builder;
 
@@ -85,7 +86,36 @@ public static partial class {className}
             .Cast<IPropertySymbol>()
             .ToList();
 
-        var fieldesMap = mainSymbol
+        redefinedProperties = mainSymbol
+            .GetMembers()
+            .Where(_ => (_.ContainingType is INamedTypeSymbol namedTypeSymbol) && namedTypeSymbol.GetFullyQualifiedName() == mainSymbol.GetFullyQualifiedName())
+            .Where(_ => _.Kind == SymbolKind.Property &&
+                _.DeclaredAccessibility == Accessibility.Public &&
+                !_.GetAttributes().Any(_ => _.AttributeClass.EnsureNotNull().Name == "ObsoleteAttribute" || _.AttributeClass.EnsureNotNull().Name == "Obsolete"))
+            .OfType<IPropertySymbol>()
+            .Where(property =>
+            {
+                var isDefinedInDerived = property.ContainingType.Equals(mainSymbol, SymbolEqualityComparer.Default);
+
+                var baseType = property.ContainingType.BaseType;
+                while (baseType != null)
+                {
+                    var baseProperty = baseType.GetMembers(property.Name)
+                        .OfType<IPropertySymbol>()
+                        .FirstOrDefault();
+
+                    if (baseProperty != null)
+                        return isDefinedInDerived && !property.IsOverride;
+
+                    baseType = baseType.BaseType;
+                }
+
+                return false;
+            })
+            .Select(e => e.Name)
+            .ToList();
+
+        var fieldsMap = mainSymbol
             .GetMembers()
             .Where(_ => (_.ContainingType is INamedTypeSymbol namedTypeSymbol) && namedTypeSymbol.GetFullyQualifiedName() == mainSymbol.GetFullyQualifiedName())
             .Where(_ => _.Kind == SymbolKind.Field &&
@@ -94,7 +124,7 @@ public static partial class {className}
             .Cast<IFieldSymbol>()
             .ToList();
 
-        bindablePropertyNames = fieldesMap
+        bindablePropertyNames = fieldsMap
             .Where(_ => _.Type.GetFullyQualifiedName().Equals("Microsoft.Maui.Controls.BindableProperty") &&
                 _.IsStatic)
             .Select(_ => _.Name.Replace("PropertyKey", "").Replace("Property", ""))
@@ -201,7 +231,7 @@ public static partial class {className}
             PropertySymbol = propertySymbol,
             IsBindableProperty = bindablePropertyNames.Any(_ => _.Equals(propertySymbol.Name))
         };
-        info.Build();
+        info.Build(redefinedProperties);
 
         if (!Helpers.NotGenerateList.Contains(info.propertyName))
         {

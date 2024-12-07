@@ -13,14 +13,14 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_Value_Sealed(PropInfo info)
     {
         builder.Append($@"
-    public static {info.MainSymbolName} {info.propertyName}(this {info.MainSymbolName} self,
+    public static {info.MainSymbolName} {info.methodName}(this {info.MainSymbolName} self,
         {info.propertyTypeName} {info.camelCaseName})
     {{
         {info.valueAssignmentString}
         return self;
     }}
 
-    public static {info.MainSymbolName} {info.propertyName}(this {info.MainSymbolName} self,
+    public static {info.MainSymbolName} {info.methodName}(this {info.MainSymbolName} self,
         Func<{info.propertyTypeName}> configure)
     {{
         var {info.camelCaseName} = configure();
@@ -35,7 +35,7 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_Value_Normal(PropInfo info)
     {
         builder.Append($@"
-    public static T {info.propertyName}<T>(this T self,
+    public static T {info.methodName}<T>(this T self,
         {info.propertyTypeName} {info.camelCaseName})
         where T : {info.MainSymbolName}
     {{
@@ -43,7 +43,7 @@ public partial class ExtensionGenerator
         return self;
     }}
 
-    public static T {info.propertyName}<T>(this T self,
+    public static T {info.methodName}<T>(this T self,
         Func<{info.propertyTypeName}> configure)
         where T : {info.MainSymbolName}
     {{

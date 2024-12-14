@@ -12,7 +12,7 @@ env:
   GENERATOR_PROJECT_PATH: 'src\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.csproj'
   MAIN_PROJECT_PATH: 'src\FmgLib.MauiMarkup\FmgLib.MauiMarkup.csproj'
   PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}\output
-  NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+  NUGET_API_KEY: ${{ secrets.NUGET_AUTH_TOKEN }}
 
 jobs:
   deploy:

@@ -150,6 +150,33 @@
 	  <None Update="DLLs\SkiaSharp.Views.Maui.Core.dll">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
+	  <None Update="DLLs\Syncfusion.Licensing.dll">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="DLLs\Syncfusion.Maui.Core.dll">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="DLLs\Syncfusion.Maui.Data.dll">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="DLLs\Syncfusion.Maui.DataGrid.dll">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="DLLs\Syncfusion.Maui.DataSource.dll">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="DLLs\Syncfusion.Maui.GridCommon.dll">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="DLLs\Syncfusion.Maui.Inputs.dll">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="DLLs\Syncfusion.Maui.ListView.dll">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="DLLs\Syncfusion.Maui.PullToRefresh.dll">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	  <None Update="DLLs\UraniumUI.dll">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>

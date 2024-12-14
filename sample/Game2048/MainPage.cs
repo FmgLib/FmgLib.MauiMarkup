@@ -65,7 +65,7 @@ public partial class MainPage : FmgLibContentPage<MainPageViewModel>
                     .Children(
                         new Label().Style(WhiteLabelStyle).Text("Score"),
                         new Grid().Children(
-                            new Label().Style(WhiteLabelStyle).Text(e => e.Path("Score")),
+                            new Label().Style(WhiteLabelStyle)/*.Text(e => e.Path("Score"))*/.Bind(Label.TextProperty, getter: static (MainPageViewModel vm) => vm.Score),
                             new Label().Assign(out AddedScoreLabel).IsVisible(false).Style(WhiteLabelStyle).Text(e => e.Path("AddedScore"))
                         )
                     ),

@@ -5,12 +5,14 @@ on:
   push:
     branches:
     - master
+    - develop
 
 env:
   SOLUTION_PATH: './FmgLib.MauiMarkup.sln'
-  PROJECT_PATH: 'src\FmgLib.MauiMarkup\FmgLib.MauiMarkup.csproj'
+  GENERATOR_PROJECT_PATH: 'src\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.csproj'
+  MAIN_PROJECT_PATH: 'src\FmgLib.MauiMarkup\FmgLib.MauiMarkup.csproj'
   PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}\output
-  NUGET_API_KEY: ${{ secrets.NUGET_AUTH_TOKEN }}
+  NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
 
 jobs:
   deploy:
@@ -28,14 +30,16 @@ jobs:
     - name: Install MAUI workload
       run: dotnet workload install maui
 
-    - name: Clean output directory
+    - name: Clean solution
       run: dotnet clean ${{ env.SOLUTION_PATH }} -c Release
 
-    - name: Build the solution
-      run: dotnet build ${{ env.SOLUTION_PATH }} -c Release
+    - name: Build Generator Project
+      run: dotnet build ${{ env.GENERATOR_PROJECT_PATH }} -c Release
 
-    - name: Pack NuGet package
-      run: dotnet pack ${{ env.PROJECT_PATH }} -c Release --no-build -o ${{ env.PACKAGE_OUTPUT_DIRECTORY }}
+    - name: Build and Pack Main Project
+      run: |
+        dotnet build ${{ env.MAIN_PROJECT_PATH }} -c Release
+        dotnet pack ${{ env.MAIN_PROJECT_PATH }} -c Release --no-build -o ${{ env.PACKAGE_OUTPUT_DIRECTORY }}
 
     - name: Push to NuGet
       run: |

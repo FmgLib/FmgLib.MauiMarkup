@@ -72,7 +72,7 @@ namespace ConsoleApp1;
 //[MauiMarkup(typeof(DateEditActualAppearance), typeof(MultilineEdit), typeof(SimpleButton), typeof(DXStackLayout), typeof(DXLayoutBase))]
 //[MauiMarkup(typeof(CardsView), typeof(VisualStateGroup))]
 //[MauiMarkup(typeof(SKLottieView),typeof(SKFileLottieImageSource), typeof(SKAnimatedSurfaceView))]
-[MauiMarkup(typeof(KeyboardAccelerator))]
+[MauiMarkup(typeof(Syncfusion.Maui.Core.SfAvatarView))]
 public class FileName
 { }";
 
@@ -117,7 +117,16 @@ public class FileName
             @$"{rootPath}\DLLs\SkiaSharp.Extended.dll",
             @$"{rootPath}\DLLs\SkiaSharp.Extended.UI.dll",
             @$"{rootPath}\DLLs\SkiaSharp.SceneGraph.dll",
-            @$"{rootPath}\DLLs\SkiaSharp.Skottie.dll"
+            @$"{rootPath}\DLLs\SkiaSharp.Skottie.dll",
+            @$"{rootPath}\DLLs\Syncfusion.Licensing.dll",
+            @$"{rootPath}\DLLs\Syncfusion.Maui.Core.dll",
+            @$"{rootPath}\DLLs\Syncfusion.Maui.Data.dll",
+            @$"{rootPath}\DLLs\Syncfusion.Maui.DataGrid.dll",
+            @$"{rootPath}\DLLs\Syncfusion.Maui.DataSource.dll",
+            @$"{rootPath}\DLLs\Syncfusion.Maui.GridCommon.dll",
+            @$"{rootPath}\DLLs\Syncfusion.Maui.Inputs.dll",
+            @$"{rootPath}\DLLs\Syncfusion.Maui.ListView.dll",
+            @$"{rootPath}\DLLs\Syncfusion.Maui.PullToRefresh.dll"
         };
 
         var (compilation, diagnostics) = CreateCompilation(source, additionalReferences);

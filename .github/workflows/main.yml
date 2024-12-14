@@ -5,12 +5,12 @@ on:
   push:
     branches:
     - master
-    - develop
 
 env:
   SOLUTION_PATH: './FmgLib.MauiMarkup.sln'
   PROJECT_PATH: 'src\FmgLib.MauiMarkup\FmgLib.MauiMarkup.csproj'
   PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}\output
+  NUGET_API_KEY: ${{ secrets.NUGET_AUTH_TOKEN }}
 
 jobs:
   deploy:
@@ -34,8 +34,12 @@ jobs:
     - name: Build the solution
       run: dotnet build ${{ env.SOLUTION_PATH }} -c Release
 
-    # - name: 'Restore package'
-    #   run: dotnet restore ${{ env.PROJECT_PATH }}
+    - name: Pack NuGet package
+      run: dotnet pack ${{ env.PROJECT_PATH }} -c Release --no-build -o ${{ env.PACKAGE_OUTPUT_DIRECTORY }}
 
-    # - name: 'Build project'
-    #   run: dotnet build ${{ env.PROJECT_PATH }} --no-restore --configuration Release
+    - name: Push to NuGet
+      run: |
+        $nupkgFiles = Get-ChildItem -Path "${{ env.PACKAGE_OUTPUT_DIRECTORY }}" -Filter "*.nupkg"
+        foreach ($file in $nupkgFiles) {
+          dotnet nuget push $file.FullName -k ${{ env.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate
+        }

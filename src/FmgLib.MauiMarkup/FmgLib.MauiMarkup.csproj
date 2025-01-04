@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
+		<TargetFramework>net9.0</TargetFramework>
 		<UseMaui>true</UseMaui>
 		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -12,7 +12,7 @@
 		<PackageId>FmgLib.MauiMarkup</PackageId>
 		<Summary>FmgLib.MauiMarkup with C# Markup classes and fluent helper methods</Summary>
 		<Title>FmgLib.MauiMarkup</Title>
-		<Version>8.8.9</Version>
+		<Version>9.0.0-pre1.0.0</Version>
 		<Authors>FmgYazılım</Authors>
 		<Company>Fmg Yazılım</Company>
 		<Copyright>©2024</Copyright>
@@ -29,7 +29,7 @@
 	</PropertyGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.83" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.21" />
 	</ItemGroup>
 
 	<ItemGroup>

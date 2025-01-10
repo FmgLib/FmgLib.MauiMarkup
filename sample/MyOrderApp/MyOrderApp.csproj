@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net8.0-android</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('osx'))">$(TargetFrameworks);net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0</TargetFrameworks>
-		<!-- <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-tizen</TargetFrameworks> -->
-		<TargetFrameworks>$(TargetFrameworks);net8.0</TargetFrameworks>
-		<OutputType Condition="'$(TargetFramework)' != 'net8.0'">Exe</OutputType>
+		<TargetFrameworks>net9.0-android</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('osx'))">$(TargetFrameworks);net9.0-ios;net9.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-ios;net9.0-maccatalyst;net9.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-tizen</TargetFrameworks> -->
+		<TargetFrameworks>$(TargetFrameworks);net9.0</TargetFrameworks>
+		<OutputType Condition="'$(TargetFramework)' != 'net9.0'">Exe</OutputType>
 
 		<!-- .NET MAUI -->
 		<UseMaui>true</UseMaui>
@@ -69,16 +69,20 @@
 		<None Remove="Resources\Images\white_bread.png" />
 		<None Remove="Resources\Raw\completed.json" />
 	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="13.0.1" />
+		<PackageReference Include="LiteDB" Version="5.0.21" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.*" Condition="'$(Configuration)' == 'Debug'" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.21" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="9.0.21" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="10.0.0" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+		<PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0" />
+	</ItemGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="FmgLib.MauiMarkup" Version="8.*" />
-		<PackageReference Include="AutoMapper" Version="13.0.1" />
-		<PackageReference Include="LiteDB" Version="5.0.20" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.*" Condition="'$(Configuration)' == 'Debug'" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.100" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.100" />
-		<PackageReference Include="CommunityToolkit.Maui" Version="9.0.1" />
-		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
-		<PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0" />
+	  <ProjectReference Include="..\..\src\FmgLib.MauiMarkup.Generator\FmgLib.MauiMarkup.Generator.csproj"  OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+	  <ProjectReference Include="..\..\src\FmgLib.MauiMarkup\FmgLib.MauiMarkup.csproj" />
 	</ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Globalization;
 using System.Resources;
 using FmgLib.MauiMarkup.Localization;
 
@@ -16,5 +17,10 @@ public class TranslatorResx : BaseTranslator, INotifyPropertyChanged
         {
             return ResourceManager.GetString(key, CurrentCulture);
         }
+    }
+
+    public string TranslateString(string key, CultureInfo culture)
+    {
+        return ResourceManager.GetString(key, culture);
     }
 }

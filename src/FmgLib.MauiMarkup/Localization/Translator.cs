@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Globalization;
 using FmgLib.MauiMarkup.Localization;
 
 namespace FmgLib.MauiMarkup;
@@ -13,6 +14,11 @@ public class Translator : BaseTranslator, INotifyPropertyChanged
         {
             return LocalizationData.Data.GetTranslation(key, CurrentCulture.Name);
         }
+    }
+
+    public string TranslateString(string key, CultureInfo culture)
+    {
+        return LocalizationData.Data.GetTranslation(key, culture.Name);
     }
 }
 

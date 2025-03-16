@@ -15,5 +15,26 @@
   "preferNameDirectory": true,
   "guids": [
     "e0cd07a0-669f-49cf-bda8-9f77d0c5ca77"
-  ]
+  ],
+  "symbols":{
+    "Localization":{
+      "type":"parameter",
+      "datatype": "choice",
+      "defaultValue":"None",
+      "choices": [
+        {
+          "choice": "LocalizationJson",
+          "description": "Configure localization with json file by default."
+        },
+        {
+          "choice": "LocalizationResx",
+          "description":"Configure localization with resx file by default."
+        },
+        {
+          "choice": "None",
+          "description":"Configure no localization."
+        }
+      ]
+    }
+  }
 }

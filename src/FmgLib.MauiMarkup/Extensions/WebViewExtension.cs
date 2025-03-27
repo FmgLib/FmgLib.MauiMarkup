@@ -236,4 +236,18 @@ public static partial class WebViewExtension
         return self;
     }
         
+    public static T OnProcessTerminated<T>(this T self, System.EventHandler<WebViewProcessTerminatedEventArgs> handler)
+        where T : WebView
+    {
+        self.ProcessTerminated += handler;
+        return self;
+    }
+    
+    public static T OnProcessTerminated<T>(this T self, System.Action<T> action)
+        where T : WebView
+    {
+        self.ProcessTerminated += (o, arg) => action(self);
+        return self;
+    }
+        
 }

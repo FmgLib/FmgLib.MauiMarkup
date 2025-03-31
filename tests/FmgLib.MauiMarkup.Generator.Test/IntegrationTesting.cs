@@ -74,6 +74,8 @@ namespace ConsoleApp1;
 //[MauiMarkup(typeof(CardsView), typeof(VisualStateGroup))]
 //[MauiMarkup(typeof(SKLottieView),typeof(SKFileLottieImageSource), typeof(SKAnimatedSurfaceView))]
 [MauiMarkup(
+    typeof(Microsoft.Maui.Controls.SelectableItemsView),
+    typeof(Microsoft.Maui.Controls.CompareStateTrigger),
     typeof(Microsoft.Maui.Controls.ActivityIndicator),
     typeof(Microsoft.Maui.Controls.AdaptiveTrigger),
     typeof(Microsoft.Maui.Controls.AppLinkEntry),
@@ -88,7 +90,6 @@ namespace ConsoleApp1;
     typeof(Microsoft.Maui.Controls.Cell),
     typeof(Microsoft.Maui.Controls.CheckBox),
     typeof(Microsoft.Maui.Controls.ClickGestureRecognizer),
-    typeof(Microsoft.Maui.Controls.CompareStateTrigger),
     typeof(Microsoft.Maui.Controls.Compatibility.Layout),
     typeof(Microsoft.Maui.Controls.Shapes.CompositeTransform),
     typeof(Microsoft.Maui.Controls.ColumnDefinition),
@@ -171,7 +172,6 @@ namespace ConsoleApp1;
     typeof(Microsoft.Maui.Controls.ScrollView),
     typeof(Microsoft.Maui.Controls.SearchBar),
     typeof(Microsoft.Maui.Controls.SearchHandler),
-    typeof(Microsoft.Maui.Controls.SelectableItemsView),
     typeof(Microsoft.Maui.Controls.Shadow),
     typeof(Microsoft.Maui.Controls.Shapes.Shape),
     typeof(Microsoft.Maui.Controls.ShellContent),

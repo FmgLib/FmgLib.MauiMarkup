@@ -127,7 +127,7 @@ public static partial class {className}
         bindablePropertyNames = fieldsMap
             .Where(_ => _.Type.GetFullyQualifiedName().Equals("Microsoft.Maui.Controls.BindableProperty") &&
                 _.IsStatic)
-            .Select(_ => _.Name.Replace("PropertyKey", "").Replace("Property", ""))
+            .Select(_ => _.Name.EndsWith("PropertyKey") ? _.Name[..^11] : (_.Name.EndsWith("Property") ? _.Name[..^8] : _.Name))
             .ToList();
 
         var properties = propertiesMap

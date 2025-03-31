@@ -13,9 +13,9 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_BindablePropertyBuilder_Sealed(PropInfo info)
     {
         builder.Append($@"
-    public static {info.MainSymbolName} {info.methodName}(this {info.MainSymbolName} self, Func<PropertyContext<{info.propertyTypeName}>, IPropertyBuilder<{info.propertyTypeName}>> configure)
+    public static {info.MainSymbolName} {info.methodName}(this {info.MainSymbolName} self, Func<PropertyContext<{info.MainSymbolName} , {info.propertyTypeName}>, IPropertyBuilder<{info.MainSymbolName} , {info.propertyTypeName}>> configure)
     {{
-        var context = new PropertyContext<{info.propertyTypeName}>(self, {info.BindablePropertyName});
+        var context = new PropertyContext<{info.MainSymbolName} , {info.propertyTypeName}>(self, {info.BindablePropertyName});
         configure(context).Build();
         return self;
     }}
@@ -25,10 +25,10 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_BindablePropertyBuilder_Normal(PropInfo info)
     {
         builder.Append($@"
-    public static T {info.methodName}<T>(this T self, Func<PropertyContext<{info.propertyTypeName}>, IPropertyBuilder<{info.propertyTypeName}>> configure)
+    public static T {info.methodName}<T>(this T self, Func<PropertyContext<T, {info.propertyTypeName}>, IPropertyBuilder<T, {info.propertyTypeName}>> configure)
         where T : {info.MainSymbolName}
     {{
-        var context = new PropertyContext<{info.propertyTypeName}>(self, {info.BindablePropertyName});
+        var context = new PropertyContext<T, {info.propertyTypeName}>(self, {info.BindablePropertyName});
         configure(context).Build();
         return self;
     }}
@@ -47,9 +47,9 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_BindablePropertyBuilder_Sealed(AttachedFieldInfo info)
     {
         builder.Append($@"
-    public static {info.DeclaringTypeName} {info.propertyName}(this {info.DeclaringTypeName} self, Func<PropertyContext<{info.ReturnTypeName}>, IPropertyBuilder<{info.ReturnTypeName}>> configure)
+    public static {info.DeclaringTypeName} {info.propertyName}(this {info.DeclaringTypeName} self, Func<PropertyContext<{info.DeclaringTypeName}, {info.ReturnTypeName}>, IPropertyBuilder<{info.DeclaringTypeName}, {info.ReturnTypeName}>> configure)
     {{
-        var context = new PropertyContext<{info.propertyTypeName}>(self, {info.BindablePropertyName});
+        var context = new PropertyContext<{info.DeclaringTypeName}, {info.propertyTypeName}>(self, {info.BindablePropertyName});
         configure(context).Build();
         return self;
     }}
@@ -59,10 +59,10 @@ public partial class ExtensionGenerator
     void GenerateExtensionMethod_BindablePropertyBuilder_Normal(AttachedFieldInfo info)
     {
         builder.Append($@"
-    public static T {info.propertyName}<T>(this T self, Func<PropertyContext<{info.ReturnTypeName}>, IPropertyBuilder<{info.ReturnTypeName}>> configure)
+    public static T {info.propertyName}<T>(this T self, Func<PropertyContext<T, {info.ReturnTypeName}>, IPropertyBuilder<T, {info.ReturnTypeName}>> configure)
         where T : {info.DeclaringTypeName}
     {{
-        var context = new PropertyContext<{info.ReturnTypeName}>(self, {info.BindablePropertyName});
+        var context = new PropertyContext<T, {info.ReturnTypeName}>(self, {info.BindablePropertyName});
         configure(context).Build();
         return self;
     }}

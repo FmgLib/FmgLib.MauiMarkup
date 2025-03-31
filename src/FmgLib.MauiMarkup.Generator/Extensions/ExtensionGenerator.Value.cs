@@ -19,16 +19,6 @@ public partial class ExtensionGenerator
         {info.valueAssignmentString}
         return self;
     }}
-
-    public static {info.MainSymbolName} {info.methodName}(this {info.MainSymbolName} self,
-        Func<{info.propertyTypeName}> configure)
-    {{
-        var {info.camelCaseName} = configure();
-        {(info.IsBindableProperty ?
-        $@"self.SetValue({info.BindablePropertyName}, {info.camelCaseName});" :
-        $"{info.accessedWith}.{info.propertyName} = {info.camelCaseName}; ")}
-        return self;
-    }}
     ");
     }
 
@@ -40,17 +30,6 @@ public partial class ExtensionGenerator
         where T : {info.MainSymbolName}
     {{
         {info.valueAssignmentString}
-        return self;
-    }}
-
-    public static T {info.methodName}<T>(this T self,
-        Func<{info.propertyTypeName}> configure)
-        where T : {info.MainSymbolName}
-    {{
-        var {info.camelCaseName} = configure();
-        {(info.IsBindableProperty ?
-        $@"self.SetValue({info.BindablePropertyName}, {info.camelCaseName});" :
-        $"{info.accessedWith}.{info.propertyName} = {info.camelCaseName}; ")}
         return self;
     }}
     ");
@@ -74,14 +53,6 @@ public partial class ExtensionGenerator
         {info.valueAssignmentString}
         return self;
     }}
-
-    public static {info.DeclaringTypeName} {info.propertyName}(this {info.DeclaringTypeName} self,
-        Func<{info.ReturnTypeName}> configure)
-    {{
-        var {info.camelCaseName} = configure();
-        {$@"self.SetValue({info.BindablePropertyName}, {info.camelCaseName});"}
-        return self;
-    }}
     ");
     }
 
@@ -93,15 +64,6 @@ public partial class ExtensionGenerator
         where T : {info.DeclaringTypeName}
     {{
         {info.valueAssignmentString}
-        return self;
-    }}
-
-    public static T {info.propertyName}<T>(this T self,
-        Func<{info.ReturnTypeName}> configure)
-        where T : {info.DeclaringTypeName}
-    {{
-        var {info.camelCaseName} = configure();
-        {$@"self.SetValue({info.BindablePropertyName}, {info.camelCaseName});"}
         return self;
     }}
     ");

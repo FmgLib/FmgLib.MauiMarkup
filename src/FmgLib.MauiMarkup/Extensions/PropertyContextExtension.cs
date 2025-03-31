@@ -5,6 +5,9 @@ public static class PropertyContextExtension
 
     public static PropertyBindingBuilder<T> Path<T>(this PropertyContext<T> self, string path)
         => new PropertyBindingBuilder<T>(self).Path(path);
+    
+    public static PropertyBindingBuilder<T> Compiled<T>(this PropertyContext<T> self, Func<object, T> getter)
+        => new PropertyBindingBuilder<T>(self).Compiled(getter);
 
     public static PropertyMultiBindingBuilder<T> Bindings<T>(this PropertyContext<T> self, params BindingBase[] bindings)
         => new PropertyMultiBindingBuilder<T>(self).Bindings(bindings);

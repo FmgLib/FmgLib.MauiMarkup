@@ -1,12 +1,12 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-public sealed class PropertyDynamicResourcesBuilder<T> : IPropertyBuilder<T>
+public sealed class PropertyDynamicResourcesBuilder<TSource, TProperty> : IPropertyBuilder<TSource, TProperty>
 {
-    public PropertyContext<T> Context { get; set; }
+    public PropertyContext<TSource, TProperty> Context { get; set; }
 
     string key = null;
 
-    public PropertyDynamicResourcesBuilder(PropertyContext<T> context)
+    public PropertyDynamicResourcesBuilder(PropertyContext<TSource, TProperty> context)
     {
         Context = context;
     }
@@ -25,5 +25,5 @@ public sealed class PropertyDynamicResourcesBuilder<T> : IPropertyBuilder<T>
         return false;
     }
 
-    public PropertyDynamicResourcesBuilder<T> DynamicResource(string key) { this.key = key; return this; }
+    public PropertyDynamicResourcesBuilder<TSource, TProperty> DynamicResource(string key) { this.key = key; return this; }
 }

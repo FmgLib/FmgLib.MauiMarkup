@@ -1,10 +1,10 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-public class Setters<T> : List<Setter> where T : BindableObject
+public class Setters<TSource> : List<Setter> where TSource : BindableObject
 	{
-    public Setters(Func<SettersContext<T>, SettersContext<T>> buildSetters)
+    public Setters(Func<SettersContext<TSource>, SettersContext<TSource>> buildSetters)
     {
-        var settersContext = new SettersContext<T>();
+        var settersContext = new SettersContext<TSource>();
         buildSetters(settersContext);
         foreach (var setter in settersContext.XamlSetters)
             this.Add(setter);

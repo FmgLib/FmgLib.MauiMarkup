@@ -1,12 +1,12 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-public sealed class PropertyThemeBuilder<T> : IPropertyBuilder<T>
+public sealed class PropertyThemeBuilder<TSource, TProperty> : IPropertyBuilder<TSource, TProperty>
 {
-    private T newValue;
+    private TProperty newValue;
 
-    private T defaultValue;
+    private TProperty defaultValue;
 
-    private Func<PropertyContext<T>, IPropertyBuilder<T>> defaultConfigure;
+    private Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> defaultConfigure;
 
     private bool isSet;
 
@@ -14,9 +14,9 @@ public sealed class PropertyThemeBuilder<T> : IPropertyBuilder<T>
 
     private bool buildValue;
 
-    public PropertyContext<T> Context { get; set; }
+    public PropertyContext<TSource, TProperty> Context { get; set; }
 
-    public PropertyThemeBuilder(PropertyContext<T> context)
+    public PropertyThemeBuilder(PropertyContext<TSource, TProperty> context)
     {
         Context = context;
     }
@@ -42,7 +42,7 @@ public sealed class PropertyThemeBuilder<T> : IPropertyBuilder<T>
         return isSet;
     }
 
-    public PropertyThemeBuilder<T> Default(T value)
+    public PropertyThemeBuilder<TSource, TProperty> Default(TProperty value)
     {
         if (!defaultIsSet)
         {
@@ -53,7 +53,7 @@ public sealed class PropertyThemeBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyThemeBuilder<T> Default(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyThemeBuilder<TSource, TProperty> Default(Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> configure)
     {
         if (!defaultIsSet)
         {
@@ -64,7 +64,7 @@ public sealed class PropertyThemeBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyThemeBuilder<T> OnLight(T value)
+    public PropertyThemeBuilder<TSource, TProperty> OnLight(TProperty value)
     {
         if (!isSet)
         {
@@ -80,7 +80,7 @@ public sealed class PropertyThemeBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyThemeBuilder<T> OnLight(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyThemeBuilder<TSource, TProperty> OnLight(Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> configure)
     {
         if (!isSet)
         {
@@ -94,7 +94,7 @@ public sealed class PropertyThemeBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyThemeBuilder<T> OnDark(T value)
+    public PropertyThemeBuilder<TSource, TProperty> OnDark(TProperty value)
     {
         if (!isSet)
         {
@@ -110,7 +110,7 @@ public sealed class PropertyThemeBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyThemeBuilder<T> OnDark(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
+    public PropertyThemeBuilder<TSource, TProperty> OnDark(Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> configure)
     {
         if (!isSet)
         {

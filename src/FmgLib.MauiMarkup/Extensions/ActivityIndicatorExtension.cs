@@ -11,19 +11,10 @@ public static partial class ActivityIndicatorExtension
         return self;
     }
 
-    public static T Color<T>(this T self,
-        Func<Microsoft.Maui.Graphics.Color> configure)
+    public static T Color<T>(this T self, Func<PropertyContext<Microsoft.Maui.Controls.ActivityIndicator, Microsoft.Maui.Graphics.Color>, IPropertyBuilder<Microsoft.Maui.Controls.ActivityIndicator, Microsoft.Maui.Graphics.Color>> configure)
         where T : Microsoft.Maui.Controls.ActivityIndicator
     {
-        var color = configure();
-        self.SetValue(Microsoft.Maui.Controls.ActivityIndicator.ColorProperty, color);
-        return self;
-    }
-
-    public static T Color<T>(this T self, Func<PropertyContext<Microsoft.Maui.Graphics.Color>, IPropertyBuilder<Microsoft.Maui.Graphics.Color>> configure)
-        where T : Microsoft.Maui.Controls.ActivityIndicator
-    {
-        var context = new PropertyContext<Microsoft.Maui.Graphics.Color>(self, Microsoft.Maui.Controls.ActivityIndicator.ColorProperty);
+        var context = new PropertyContext<Microsoft.Maui.Controls.ActivityIndicator, Microsoft.Maui.Graphics.Color>(self, Microsoft.Maui.Controls.ActivityIndicator.ColorProperty);
         configure(context).Build();
         return self;
     }
@@ -36,10 +27,10 @@ public static partial class ActivityIndicatorExtension
         return self;
     }
 
-    public static SettersContext<T> Color<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Graphics.Color>, IPropertySettersBuilder<Microsoft.Maui.Graphics.Color>> configure)
+    public static SettersContext<T> Color<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Controls.ActivityIndicator, Microsoft.Maui.Graphics.Color>, IPropertySettersBuilder<Microsoft.Maui.Controls.ActivityIndicator, Microsoft.Maui.Graphics.Color>> configure)
         where T : Microsoft.Maui.Controls.ActivityIndicator
     {
-        var context = new PropertySettersContext<Microsoft.Maui.Graphics.Color>(self.XamlSetters, Microsoft.Maui.Controls.ActivityIndicator.ColorProperty);
+        var context = new PropertySettersContext<Microsoft.Maui.Controls.ActivityIndicator, Microsoft.Maui.Graphics.Color>(self.XamlSetters, Microsoft.Maui.Controls.ActivityIndicator.ColorProperty);
         configure(context).Build();
         return self;
     }
@@ -61,19 +52,10 @@ public static partial class ActivityIndicatorExtension
         return self;
     }
 
-    public static T IsRunning<T>(this T self,
-        Func<bool> configure)
+    public static T IsRunning<T>(this T self, Func<PropertyContext<Microsoft.Maui.Controls.ActivityIndicator, bool>, IPropertyBuilder<Microsoft.Maui.Controls.ActivityIndicator, bool>> configure)
         where T : Microsoft.Maui.Controls.ActivityIndicator
     {
-        var isRunning = configure();
-        self.SetValue(Microsoft.Maui.Controls.ActivityIndicator.IsRunningProperty, isRunning);
-        return self;
-    }
-
-    public static T IsRunning<T>(this T self, Func<PropertyContext<bool>, IPropertyBuilder<bool>> configure)
-        where T : Microsoft.Maui.Controls.ActivityIndicator
-    {
-        var context = new PropertyContext<bool>(self, Microsoft.Maui.Controls.ActivityIndicator.IsRunningProperty);
+        var context = new PropertyContext<Microsoft.Maui.Controls.ActivityIndicator, bool>(self, Microsoft.Maui.Controls.ActivityIndicator.IsRunningProperty);
         configure(context).Build();
         return self;
     }
@@ -86,10 +68,10 @@ public static partial class ActivityIndicatorExtension
         return self;
     }
 
-    public static SettersContext<T> IsRunning<T>(this SettersContext<T> self, Func<PropertySettersContext<bool>, IPropertySettersBuilder<bool>> configure)
+    public static SettersContext<T> IsRunning<T>(this SettersContext<T> self, Func<PropertySettersContext<Microsoft.Maui.Controls.ActivityIndicator, bool>, IPropertySettersBuilder<Microsoft.Maui.Controls.ActivityIndicator, bool>> configure)
         where T : Microsoft.Maui.Controls.ActivityIndicator
     {
-        var context = new PropertySettersContext<bool>(self.XamlSetters, Microsoft.Maui.Controls.ActivityIndicator.IsRunningProperty);
+        var context = new PropertySettersContext<Microsoft.Maui.Controls.ActivityIndicator, bool>(self.XamlSetters, Microsoft.Maui.Controls.ActivityIndicator.IsRunningProperty);
         configure(context).Build();
         return self;
     }

@@ -1,14 +1,15 @@
 ﻿using System.Globalization;
+using Microsoft.Maui.Controls.Internals;
 
 namespace FmgLib.MauiMarkup;
 
-public sealed class PropertySettersBindingBuilder<T> : IPropertySettersBuilder<T>
+public sealed class PropertySettersBindingBuilder<TSource, TProperty> : IPropertySettersBuilder<TSource, TProperty>
 {
     public class ValueConverter : IValueConverter
     {
-        internal Func<object, T> ConvertFunction;
+        internal Func<object, TProperty> ConvertFunction;
 
-        internal Func<T, object> ConvertBackFunction;
+        internal Func<TProperty, object> ConvertBackFunction;
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -24,7 +25,7 @@ public sealed class PropertySettersBindingBuilder<T> : IPropertySettersBuilder<T
         {
             if (value != null && ConvertBackFunction != null)
             {
-                return ConvertBackFunction((T)value);
+                return ConvertBackFunction((TProperty)value);
             }
 
             return null;
@@ -32,6 +33,10 @@ public sealed class PropertySettersBindingBuilder<T> : IPropertySettersBuilder<T
     }
 
     private string path;
+    
+    private Func<TSource, TProperty> getter;
+    
+    private Action<TSource, TProperty> setter;
 
     private BindingMode bindingMode;
 
@@ -43,15 +48,15 @@ public sealed class PropertySettersBindingBuilder<T> : IPropertySettersBuilder<T
 
     private string stringFormat;
 
-    private object source;
+    private TSource source;
 
     private object fallbackValue;
 
     private object targetNullValue;
 
-    public PropertySettersContext<T> Context { get; set; }
+    public PropertySettersContext<TSource, TProperty> Context { get; set; }
 
-    public PropertySettersBindingBuilder(PropertySettersContext<T> context)
+    public PropertySettersBindingBuilder(PropertySettersContext<TSource, TProperty> context)
     {
         Context = context;
     }
@@ -65,8 +70,31 @@ public sealed class PropertySettersBindingBuilder<T> : IPropertySettersBuilder<T
                 {
                     Property = Context.Property,
                     Value = new Binding(path, bindingMode, converter, converterParameter, stringFormat, source)
-                            .FallbackValue(fallbackValue)
-                            .TargetNullValue(targetNullValue)
+                        .FallbackValue(fallbackValue)
+                        .TargetNullValue(targetNullValue)
+                }
+            );
+            return true;
+        }
+        else if (getter != null)
+        {
+            Context.XamlSetters.Add(
+                new Setter
+                {
+                    Property = Context.Property,
+                    Value = new TypedBinding<TSource, TProperty>(getter: bindingContext => (getter(bindingContext), true), setter: setter, handlers: new Tuple<Func<TSource, object>, string>[]
+                    {
+                        new(static source => source, Context.Property.PropertyName)
+                    })
+                    {
+                        Mode = bindingMode,
+                        Converter = converter,
+                        ConverterParameter = converterParameter,
+                        StringFormat = stringFormat,
+                        Source = source,
+                        TargetNullValue = targetNullValue,
+                        FallbackValue = fallbackValue
+                    }//Binding.Create(getter, bindingMode, converter, converterParameter, stringFormat, source, fallbackValue, targetNullValue)
                 }
             );
             return true;
@@ -75,55 +103,67 @@ public sealed class PropertySettersBindingBuilder<T> : IPropertySettersBuilder<T
         return false;
     }
 
-    public PropertySettersBindingBuilder<T> Path(string path)
+    public PropertySettersBindingBuilder<TSource, TProperty> Path(string path)
     {
         this.path = path;
         return this;
     }
+    
+    public PropertySettersBindingBuilder<TSource, TProperty> Compiled(Func<TSource, TProperty> getter)
+    {
+        this.getter = getter;
+        return this;
+    }
 
-    public PropertySettersBindingBuilder<T> StringFormat(string stringFormat)
+    public PropertySettersBindingBuilder<TSource, TProperty> Setter(Action<TSource, TProperty> setter)
+    {
+        this.setter = setter;
+        return this;
+    }
+
+    public PropertySettersBindingBuilder<TSource, TProperty> StringFormat(string stringFormat)
     {
         this.stringFormat = stringFormat;
         return this;
     }
 
-    public PropertySettersBindingBuilder<T> BindingMode(BindingMode bindingMode)
+    public PropertySettersBindingBuilder<TSource, TProperty> BindingMode(BindingMode bindingMode)
     {
         this.bindingMode = bindingMode;
         return this;
     }
 
-    public PropertySettersBindingBuilder<T> Converter(IValueConverter converter)
+    public PropertySettersBindingBuilder<TSource, TProperty> Converter(IValueConverter converter)
     {
         this.converter = converter;
         return this;
     }
 
-    public PropertySettersBindingBuilder<T> Parameter(string converterParameter)
+    public PropertySettersBindingBuilder<TSource, TProperty> Parameter(string converterParameter)
     {
         this.converterParameter = converterParameter;
         return this;
     }
 
-    public PropertySettersBindingBuilder<T> Source(object source)
+    public PropertySettersBindingBuilder<TSource, TProperty> Source(TSource source)
     {
         this.source = source;
         return this;
     }
 
-    public PropertySettersBindingBuilder<T> FallbackValue(object fallbackValue)
+    public PropertySettersBindingBuilder<TSource, TProperty> FallbackValue(object fallbackValue)
     {
         this.fallbackValue = fallbackValue;
         return this;
     }
 
-    public PropertySettersBindingBuilder<T> TargetNullValue(object targetNullValue)
+    public PropertySettersBindingBuilder<TSource, TProperty> TargetNullValue(object targetNullValue)
     {
         this.targetNullValue = targetNullValue;
         return this;
     }
 
-    public PropertySettersBindingBuilder<T> Convert<Q>(Func<Q, T> convert)
+    public PropertySettersBindingBuilder<TSource, TProperty> Convert<Q>(Func<Q, TProperty> convert)
     {
         if (valueConverter == null)
         {
@@ -135,14 +175,14 @@ public sealed class PropertySettersBindingBuilder<T> : IPropertySettersBuilder<T
         return this;
     }
 
-    public PropertySettersBindingBuilder<T> ConvertBack<Q>(Func<T, Q> convert)
+    public PropertySettersBindingBuilder<TSource, TProperty> ConvertBack<Q>(Func<TProperty, Q> convert)
     {
         if (valueConverter == null)
         {
             valueConverter = new ValueConverter();
         }
 
-        valueConverter.ConvertBackFunction = (T e) => convert(e);
+        valueConverter.ConvertBackFunction = (TProperty e) => convert(e);
         converter = valueConverter;
         return this;
     }

@@ -1,8 +1,8 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-public interface IPropertySettersBuilder<T>
+public interface IPropertySettersBuilder<TSource, TProperty>
 {
-    PropertySettersContext<T> Context { get; set; }
+    PropertySettersContext<TSource, TProperty> Context { get; set; }
 
     bool Build()
     {

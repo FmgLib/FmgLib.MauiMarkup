@@ -246,7 +246,7 @@ public static partial class {className}
 
                 else if (propertySymbol.IsReadOnly && propertySymbol.Type is INamedTypeSymbol namedListType &&
                             namedListType.AllInterfaces.Any(e => e.Name == nameof(IEnumerable)) &&
-                            namedListType.BaseType?.TypeArguments.Length == 1)
+                            namedListType.BaseType.TypeArguments.Length == 1)
                     typeName = namedListType.BaseType.TypeArguments[0].ToDisplayString();
 
                 if (!string.IsNullOrEmpty(typeName))

@@ -1,18 +1,18 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-public sealed class PropertySettersPlatformBuilder<TSource, TProperty> : IPropertySettersBuilder<TSource, TProperty>
+public sealed class PropertySettersPlatformBuilder<T> : IPropertySettersBuilder<T>
 {
-    public PropertySettersContext<TSource, TProperty> Context { get; set; }
+    public PropertySettersContext<T> Context { get; set; }
 
-    TProperty newValue;
-    TProperty defaultValue;
-    Func<PropertySettersContext<TSource, TProperty>, IPropertySettersBuilder<TSource, TProperty>> defaultConfigure;
+    T newValue;
+    T defaultValue;
+    Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> defaultConfigure;
 
     bool isSet;
     bool defaultIsSet;
     bool buildValue;
 
-    public PropertySettersPlatformBuilder(PropertySettersContext<TSource, TProperty> context)
+    public PropertySettersPlatformBuilder(PropertySettersContext<T> context)
     {
         Context = context;
     }
@@ -36,7 +36,7 @@ public sealed class PropertySettersPlatformBuilder<TSource, TProperty> : IProper
     }
 
 
-    public PropertySettersPlatformBuilder<TSource, TProperty> Default(TProperty value)
+    public PropertySettersPlatformBuilder<T> Default(T value)
     {
         if (!defaultIsSet)
         {
@@ -46,7 +46,7 @@ public sealed class PropertySettersPlatformBuilder<TSource, TProperty> : IProper
         return this;
     }
 
-    public PropertySettersPlatformBuilder<TSource, TProperty> Default(Func<PropertySettersContext<TSource, TProperty>, IPropertySettersBuilder<TSource, TProperty>> configure)
+    public PropertySettersPlatformBuilder<T> Default(Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
     {
         if (!defaultIsSet)
         {
@@ -57,7 +57,7 @@ public sealed class PropertySettersPlatformBuilder<TSource, TProperty> : IProper
     }
 
 
-    public PropertySettersPlatformBuilder<TSource, TProperty> OnMacCatalyst(TProperty value)
+    public PropertySettersPlatformBuilder<T> OnMacCatalyst(T value)
     {
         if (!isSet && DeviceInfo.Platform == Microsoft.Maui.Devices.DevicePlatform.MacCatalyst)
         {
@@ -68,7 +68,7 @@ public sealed class PropertySettersPlatformBuilder<TSource, TProperty> : IProper
         return this;
     }
 
-    public PropertySettersPlatformBuilder<TSource, TProperty> OnMacCatalyst(Func<PropertySettersContext<TSource, TProperty>, IPropertySettersBuilder<TSource, TProperty>> configure)
+    public PropertySettersPlatformBuilder<T> OnMacCatalyst(Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Platform == Microsoft.Maui.Devices.DevicePlatform.MacCatalyst)
             isSet = configure(Context).Build();
@@ -76,7 +76,7 @@ public sealed class PropertySettersPlatformBuilder<TSource, TProperty> : IProper
     }
 
 
-    public PropertySettersPlatformBuilder<TSource, TProperty> OniOS(TProperty value)
+    public PropertySettersPlatformBuilder<T> OniOS(T value)
     {
         if (!isSet && DeviceInfo.Platform == Microsoft.Maui.Devices.DevicePlatform.iOS)
         {
@@ -87,7 +87,7 @@ public sealed class PropertySettersPlatformBuilder<TSource, TProperty> : IProper
         return this;
     }
 
-    public PropertySettersPlatformBuilder<TSource, TProperty> OniOS(Func<PropertySettersContext<TSource, TProperty>, IPropertySettersBuilder<TSource, TProperty>> configure)
+    public PropertySettersPlatformBuilder<T> OniOS(Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Platform == Microsoft.Maui.Devices.DevicePlatform.iOS)
             isSet = configure(Context).Build();
@@ -95,7 +95,7 @@ public sealed class PropertySettersPlatformBuilder<TSource, TProperty> : IProper
     }
 
 
-    public PropertySettersPlatformBuilder<TSource, TProperty> OnAndroid(TProperty value)
+    public PropertySettersPlatformBuilder<T> OnAndroid(T value)
     {
         if (!isSet && DeviceInfo.Platform == Microsoft.Maui.Devices.DevicePlatform.Android)
         {
@@ -106,7 +106,7 @@ public sealed class PropertySettersPlatformBuilder<TSource, TProperty> : IProper
         return this;
     }
 
-    public PropertySettersPlatformBuilder<TSource, TProperty> OnAndroid(Func<PropertySettersContext<TSource, TProperty>, IPropertySettersBuilder<TSource, TProperty>> configure)
+    public PropertySettersPlatformBuilder<T> OnAndroid(Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Platform == Microsoft.Maui.Devices.DevicePlatform.Android)
             isSet = configure(Context).Build();
@@ -114,7 +114,7 @@ public sealed class PropertySettersPlatformBuilder<TSource, TProperty> : IProper
     }
 
 
-    public PropertySettersPlatformBuilder<TSource, TProperty> OnWinUI(TProperty value)
+    public PropertySettersPlatformBuilder<T> OnWinUI(T value)
     {
         if (!isSet && DeviceInfo.Platform == Microsoft.Maui.Devices.DevicePlatform.WinUI)
         {
@@ -125,7 +125,7 @@ public sealed class PropertySettersPlatformBuilder<TSource, TProperty> : IProper
         return this;
     }
 
-    public PropertySettersPlatformBuilder<TSource, TProperty> OnWinUI(Func<PropertySettersContext<TSource, TProperty>, IPropertySettersBuilder<TSource, TProperty>> configure)
+    public PropertySettersPlatformBuilder<T> OnWinUI(Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Platform == Microsoft.Maui.Devices.DevicePlatform.WinUI)
             isSet = configure(Context).Build();
@@ -133,7 +133,7 @@ public sealed class PropertySettersPlatformBuilder<TSource, TProperty> : IProper
     }
 
 
-    public PropertySettersPlatformBuilder<TSource, TProperty> OnTizen(TProperty value)
+    public PropertySettersPlatformBuilder<T> OnTizen(T value)
     {
         if (!isSet && DeviceInfo.Platform == Microsoft.Maui.Devices.DevicePlatform.Tizen)
         {
@@ -144,7 +144,7 @@ public sealed class PropertySettersPlatformBuilder<TSource, TProperty> : IProper
         return this;
     }
 
-    public PropertySettersPlatformBuilder<TSource, TProperty> OnTizen(Func<PropertySettersContext<TSource, TProperty>, IPropertySettersBuilder<TSource, TProperty>> configure)
+    public PropertySettersPlatformBuilder<T> OnTizen(Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Platform == Microsoft.Maui.Devices.DevicePlatform.Tizen)
             isSet = configure(Context).Build();

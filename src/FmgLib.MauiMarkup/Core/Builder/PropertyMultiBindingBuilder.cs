@@ -1,6 +1,6 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-public sealed class PropertyMultiBindingBuilder<TSource, TProperty> : IPropertyBuilder<TSource, TProperty>
+public sealed class PropertyMultiBindingBuilder<T> : IPropertyBuilder<T>
 {
     private BindingMode bindingMode;
 
@@ -16,9 +16,9 @@ public sealed class PropertyMultiBindingBuilder<TSource, TProperty> : IPropertyB
 
     private object targetNullValue;
 
-    public PropertyContext<TSource, TProperty> Context { get; set; }
+    public PropertyContext<T> Context { get; set; }
 
-    public PropertyMultiBindingBuilder(PropertyContext<TSource, TProperty> context)
+    public PropertyMultiBindingBuilder(PropertyContext<T> context)
     {
         Context = context;
         bindings = new List<BindingBase>();
@@ -44,7 +44,7 @@ public sealed class PropertyMultiBindingBuilder<TSource, TProperty> : IPropertyB
         return false;
     }
 
-    public PropertyMultiBindingBuilder<TSource, TProperty> Bindings(params BindingBase[] bindings)
+    public PropertyMultiBindingBuilder<T> Bindings(params BindingBase[] bindings)
     {
         this.bindings ??= new List<BindingBase>();
         foreach (var binding in bindings)
@@ -52,37 +52,37 @@ public sealed class PropertyMultiBindingBuilder<TSource, TProperty> : IPropertyB
         return this;
     }
 
-    public PropertyMultiBindingBuilder<TSource, TProperty> StringFormat(string stringFormat)
+    public PropertyMultiBindingBuilder<T> StringFormat(string stringFormat)
     {
         this.stringFormat = stringFormat;
         return this;
     }
 
-    public PropertyMultiBindingBuilder<TSource, TProperty> BindingMode(BindingMode bindingMode)
+    public PropertyMultiBindingBuilder<T> BindingMode(BindingMode bindingMode)
     {
         this.bindingMode = bindingMode;
         return this;
     }
 
-    public PropertyMultiBindingBuilder<TSource, TProperty> Converter(IMultiValueConverter converter)
+    public PropertyMultiBindingBuilder<T> Converter(IMultiValueConverter converter)
     {
         this.converter = converter;
         return this;
     }
 
-    public PropertyMultiBindingBuilder<TSource, TProperty> Parameter(string converterParameter)
+    public PropertyMultiBindingBuilder<T> Parameter(string converterParameter)
     {
         this.converterParameter = converterParameter;
         return this;
     }
 
-    public PropertyMultiBindingBuilder<TSource, TProperty> FallbackValue(object fallbackValue)
+    public PropertyMultiBindingBuilder<T> FallbackValue(object fallbackValue)
     {
         this.fallbackValue = fallbackValue;
         return this;
     }
 
-    public PropertyMultiBindingBuilder<TSource, TProperty> TargetNullValue(object targetNullValue)
+    public PropertyMultiBindingBuilder<T> TargetNullValue(object targetNullValue)
     {
         this.targetNullValue = targetNullValue;
         return this;

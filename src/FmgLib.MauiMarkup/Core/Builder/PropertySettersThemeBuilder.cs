@@ -1,18 +1,18 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-public sealed class PropertySettersThemeBuilder<TSource, TProperty> : IPropertySettersBuilder<TSource, TProperty>
+public sealed class PropertySettersThemeBuilder<T> : IPropertySettersBuilder<T>
 {
-    public PropertySettersContext<TSource, TProperty> Context { get; set; }
+    public PropertySettersContext<T> Context { get; set; }
 
-    TProperty newValue;
-    TProperty defaultValue;
-    Func<PropertySettersContext<TSource, TProperty>, IPropertySettersBuilder<TSource, TProperty>> defaultConfigure;
+    T newValue;
+    T defaultValue;
+    Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> defaultConfigure;
 
     bool isSet;
     bool defaultIsSet;
     bool buildValue;
 
-    public PropertySettersThemeBuilder(PropertySettersContext<TSource, TProperty> context)
+    public PropertySettersThemeBuilder(PropertySettersContext<T> context)
     {
         Context = context;
     }
@@ -36,7 +36,7 @@ public sealed class PropertySettersThemeBuilder<TSource, TProperty> : IPropertyS
     }
 
 
-    public PropertySettersThemeBuilder<TSource, TProperty> Default(TProperty value)
+    public PropertySettersThemeBuilder<T> Default(T value)
     {
         if (!defaultIsSet)
         {
@@ -46,7 +46,7 @@ public sealed class PropertySettersThemeBuilder<TSource, TProperty> : IPropertyS
         return this;
     }
 
-    public PropertySettersThemeBuilder<TSource, TProperty> Default(Func<PropertySettersContext<TSource, TProperty>, IPropertySettersBuilder<TSource, TProperty>> configure)
+    public PropertySettersThemeBuilder<T> Default(Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
     {
         if (!defaultIsSet)
         {
@@ -57,7 +57,7 @@ public sealed class PropertySettersThemeBuilder<TSource, TProperty> : IPropertyS
     }
 
 
-    public PropertySettersThemeBuilder<TSource, TProperty> OnLight(TProperty value)
+    public PropertySettersThemeBuilder<T> OnLight(T value)
     {
         if (!isSet && Application.Current?.RequestedTheme == AppTheme.Light)
         {
@@ -68,7 +68,7 @@ public sealed class PropertySettersThemeBuilder<TSource, TProperty> : IPropertyS
         return this;
     }
 
-    public PropertySettersThemeBuilder<TSource, TProperty> OnLight(Func<PropertySettersContext<TSource, TProperty>, IPropertySettersBuilder<TSource, TProperty>> configure)
+    public PropertySettersThemeBuilder<T> OnLight(Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
     {
         if (!isSet && Application.Current?.RequestedTheme == AppTheme.Light)
             isSet = configure(Context).Build();
@@ -76,7 +76,7 @@ public sealed class PropertySettersThemeBuilder<TSource, TProperty> : IPropertyS
     }
 
 
-    public PropertySettersThemeBuilder<TSource, TProperty> OnDark(TProperty value)
+    public PropertySettersThemeBuilder<T> OnDark(T value)
     {
         if (!isSet && Application.Current?.RequestedTheme == AppTheme.Dark)
         {
@@ -87,7 +87,7 @@ public sealed class PropertySettersThemeBuilder<TSource, TProperty> : IPropertyS
         return this;
     }
 
-    public PropertySettersThemeBuilder<TSource, TProperty> OnDark(Func<PropertySettersContext<TSource, TProperty>, IPropertySettersBuilder<TSource, TProperty>> configure)
+    public PropertySettersThemeBuilder<T> OnDark(Func<PropertySettersContext<T>, IPropertySettersBuilder<T>> configure)
     {
         if (!isSet && Application.Current?.RequestedTheme == AppTheme.Dark)
             isSet = configure(Context).Build();

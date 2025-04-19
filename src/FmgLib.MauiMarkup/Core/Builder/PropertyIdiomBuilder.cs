@@ -1,12 +1,12 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-public sealed class PropertyIdiomBuilder<TSource, TProperty> : IPropertyBuilder<TSource, TProperty>
+public sealed class PropertyIdiomBuilder<T> : IPropertyBuilder<T>
 {
-    private TProperty newValue;
+    private T newValue;
 
-    private TProperty defaultValue;
+    private T defaultValue;
 
-    private Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> defaultConfigure;
+    private Func<PropertyContext<T>, IPropertyBuilder<T>> defaultConfigure;
 
     private bool isSet;
 
@@ -14,9 +14,9 @@ public sealed class PropertyIdiomBuilder<TSource, TProperty> : IPropertyBuilder<
 
     private bool buildValue;
 
-    public PropertyContext<TSource, TProperty> Context { get; set; }
+    public PropertyContext<T> Context { get; set; }
 
-    public PropertyIdiomBuilder(PropertyContext<TSource, TProperty> context)
+    public PropertyIdiomBuilder(PropertyContext<T> context)
     {
         Context = context;
     }
@@ -42,7 +42,7 @@ public sealed class PropertyIdiomBuilder<TSource, TProperty> : IPropertyBuilder<
         return isSet;
     }
 
-    public PropertyIdiomBuilder<TSource, TProperty> Default(TProperty value)
+    public PropertyIdiomBuilder<T> Default(T value)
     {
         if (!defaultIsSet)
         {
@@ -53,7 +53,7 @@ public sealed class PropertyIdiomBuilder<TSource, TProperty> : IPropertyBuilder<
         return this;
     }
 
-    public PropertyIdiomBuilder<TSource, TProperty> Default(Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> configure)
+    public PropertyIdiomBuilder<T> Default(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!defaultIsSet)
         {
@@ -64,7 +64,7 @@ public sealed class PropertyIdiomBuilder<TSource, TProperty> : IPropertyBuilder<
         return this;
     }
 
-    public PropertyIdiomBuilder<TSource, TProperty> OnPhone(TProperty value)
+    public PropertyIdiomBuilder<T> OnPhone(T value)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Phone)
         {
@@ -76,7 +76,7 @@ public sealed class PropertyIdiomBuilder<TSource, TProperty> : IPropertyBuilder<
         return this;
     }
 
-    public PropertyIdiomBuilder<TSource, TProperty> OnPhone(Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> configure)
+    public PropertyIdiomBuilder<T> OnPhone(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Phone)
         {
@@ -86,7 +86,7 @@ public sealed class PropertyIdiomBuilder<TSource, TProperty> : IPropertyBuilder<
         return this;
     }
 
-    public PropertyIdiomBuilder<TSource, TProperty> OnTablet(TProperty value)
+    public PropertyIdiomBuilder<T> OnTablet(T value)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Tablet)
         {
@@ -98,7 +98,7 @@ public sealed class PropertyIdiomBuilder<TSource, TProperty> : IPropertyBuilder<
         return this;
     }
 
-    public PropertyIdiomBuilder<TSource, TProperty> OnTablet(Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> configure)
+    public PropertyIdiomBuilder<T> OnTablet(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Tablet)
         {
@@ -108,7 +108,7 @@ public sealed class PropertyIdiomBuilder<TSource, TProperty> : IPropertyBuilder<
         return this;
     }
 
-    public PropertyIdiomBuilder<TSource, TProperty> OnDesktop(TProperty value)
+    public PropertyIdiomBuilder<T> OnDesktop(T value)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Desktop)
         {
@@ -120,7 +120,7 @@ public sealed class PropertyIdiomBuilder<TSource, TProperty> : IPropertyBuilder<
         return this;
     }
 
-    public PropertyIdiomBuilder<TSource, TProperty> OnDesktop(Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> configure)
+    public PropertyIdiomBuilder<T> OnDesktop(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Desktop)
         {
@@ -130,7 +130,7 @@ public sealed class PropertyIdiomBuilder<TSource, TProperty> : IPropertyBuilder<
         return this;
     }
 
-    public PropertyIdiomBuilder<TSource, TProperty> OnTV(TProperty value)
+    public PropertyIdiomBuilder<T> OnTV(T value)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.TV)
         {
@@ -142,7 +142,7 @@ public sealed class PropertyIdiomBuilder<TSource, TProperty> : IPropertyBuilder<
         return this;
     }
 
-    public PropertyIdiomBuilder<TSource, TProperty> OnTV(Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> configure)
+    public PropertyIdiomBuilder<T> OnTV(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.TV)
         {
@@ -152,7 +152,7 @@ public sealed class PropertyIdiomBuilder<TSource, TProperty> : IPropertyBuilder<
         return this;
     }
 
-    public PropertyIdiomBuilder<TSource, TProperty> OnWatch(TProperty value)
+    public PropertyIdiomBuilder<T> OnWatch(T value)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Watch)
         {
@@ -164,7 +164,7 @@ public sealed class PropertyIdiomBuilder<TSource, TProperty> : IPropertyBuilder<
         return this;
     }
 
-    public PropertyIdiomBuilder<TSource, TProperty> OnWatch(Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> configure)
+    public PropertyIdiomBuilder<T> OnWatch(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Idiom == DeviceIdiom.Watch)
         {

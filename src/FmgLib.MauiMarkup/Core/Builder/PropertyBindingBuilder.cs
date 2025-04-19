@@ -2,13 +2,13 @@
 
 namespace FmgLib.MauiMarkup;
 
-public sealed class PropertyBindingBuilder<TSource, TProperty> : IPropertyBuilder<TSource, TProperty>
+public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
 {
     public class ValueConverter : IValueConverter
     {
-        internal Func<object, TProperty> ConvertFunction;
+        internal Func<object, T> ConvertFunction;
 
-        internal Func<TProperty, object> ConvertBackFunction;
+        internal Func<T, object> ConvertBackFunction;
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -24,7 +24,7 @@ public sealed class PropertyBindingBuilder<TSource, TProperty> : IPropertyBuilde
         {
             if (value != null && ConvertBackFunction != null)
             {
-                return ConvertBackFunction((TProperty)value);
+                return ConvertBackFunction((T)value);
             }
 
             return null;
@@ -32,10 +32,6 @@ public sealed class PropertyBindingBuilder<TSource, TProperty> : IPropertyBuilde
     }
 
     private string path;
-    
-    private Func<TSource, TProperty> getter;
-    
-    private Action<TSource, TProperty> setter;
 
     private BindingMode bindingMode;
 
@@ -47,15 +43,15 @@ public sealed class PropertyBindingBuilder<TSource, TProperty> : IPropertyBuilde
 
     private string stringFormat;
 
-    private TSource source;
+    private object source;
 
     private object fallbackValue;
 
     private object targetNullValue;
 
-    public PropertyContext<TSource, TProperty> Context { get; set; }
+    public PropertyContext<T> Context { get; set; }
 
-    public PropertyBindingBuilder(PropertyContext<TSource, TProperty> context)
+    public PropertyBindingBuilder(PropertyContext<T> context)
     {
         Context = context;
     }
@@ -69,90 +65,59 @@ public sealed class PropertyBindingBuilder<TSource, TProperty> : IPropertyBuilde
                                                                 .TargetNullValue(targetNullValue));
             return true;
         }
-        else if (getter != null)
-        {
-            Context.BindableObject.Bind(Context.Property, 
-                getter: getter,
-                setter: setter,
-                handlers: new (Func<TSource, object>, string)[]
-                {
-                    new(static source => source, Context.Property.PropertyName),
-                },
-                mode: bindingMode, 
-                converter: converter, 
-                converterParameter: converterParameter, 
-                stringFormat: stringFormat, 
-                source: source, 
-                fallbackValue: fallbackValue, 
-                targetNullValue: targetNullValue);
-            
-            return true;
-        }
-        
+
         return false;
     }
 
-    public PropertyBindingBuilder<TSource, TProperty> Path(string path)
+    public PropertyBindingBuilder<T> Path(string path)
     {
         this.path = path;
         return this;
     }
 
-    public PropertyBindingBuilder<TSource, TProperty> Compiled(Func<TSource, TProperty> getter)
-    {
-        this.getter = getter;
-        return this;
-    }
-
-    public PropertyBindingBuilder<TSource, TProperty> Setter(Action<TSource, TProperty> setter)
-    {
-        this.setter = setter;
-        return this;
-    }
-
-    public PropertyBindingBuilder<TSource, TProperty> StringFormat(string stringFormat)
+    public PropertyBindingBuilder<T> StringFormat(string stringFormat)
     {
         this.stringFormat = stringFormat;
         return this;
     }
 
-    public PropertyBindingBuilder<TSource, TProperty> BindingMode(BindingMode bindingMode)
+    public PropertyBindingBuilder<T> BindingMode(BindingMode bindingMode)
     {
         this.bindingMode = bindingMode;
         return this;
     }
 
-    public PropertyBindingBuilder<TSource, TProperty> Converter(IValueConverter converter)
+    public PropertyBindingBuilder<T> Converter(IValueConverter converter)
     {
         this.converter = converter;
         return this;
     }
 
-    public PropertyBindingBuilder<TSource, TProperty> Parameter(string converterParameter)
+    public PropertyBindingBuilder<T> Parameter(string converterParameter)
     {
         this.converterParameter = converterParameter;
         return this;
     }
 
-    public PropertyBindingBuilder<TSource, TProperty> Source(TSource source)
+    public PropertyBindingBuilder<T> Source(object source)
     {
         this.source = source;
         return this;
     }
 
-    public PropertyBindingBuilder<TSource, TProperty> FallbackValue(object fallbackValue)
+    public PropertyBindingBuilder<T> FallbackValue(object fallbackValue)
     {
         this.fallbackValue = fallbackValue;
         return this;
     }
 
-    public PropertyBindingBuilder<TSource, TProperty> TargetNullValue(object targetNullValue)
+    public PropertyBindingBuilder<T> TargetNullValue(object targetNullValue)
     {
         this.targetNullValue = targetNullValue;
         return this;
     }
 
-    public PropertyBindingBuilder<TSource, TProperty> Convert<Q>(Func<Q, TProperty> convert)
+    public PropertyBindingBuilder<T> Convert<Q>(Func<Q, T> convert)
     {
         if (valueConverter == null)
         {
@@ -164,14 +129,14 @@ public sealed class PropertyBindingBuilder<TSource, TProperty> : IPropertyBuilde
         return this;
     }
 
-    public PropertyBindingBuilder<TSource, TProperty> ConvertBack<Q>(Func<TProperty, Q> convert)
+    public PropertyBindingBuilder<T> ConvertBack<Q>(Func<T, Q> convert)
     {
         if (valueConverter == null)
         {
             valueConverter = new ValueConverter();
         }
 
-        valueConverter.ConvertBackFunction = (TProperty e) => convert(e);
+        valueConverter.ConvertBackFunction = (T e) => convert(e);
         converter = valueConverter;
         return this;
     }

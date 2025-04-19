@@ -1,6 +1,6 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-public sealed class PropertySettersContext<TSource, TProperty>
+public sealed class PropertySettersContext<T>
 {
     public List<Setter> XamlSetters = new List<Setter>();
 

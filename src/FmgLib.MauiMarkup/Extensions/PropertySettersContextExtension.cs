@@ -4,9 +4,6 @@ public static class PropertySettersContextExtension
 {
     public static PropertySettersBindingBuilder<T> Path<T>(this PropertySettersContext<T> self, string path)
         => new PropertySettersBindingBuilder<T>(self).Path(path);
-    
-    public static PropertySettersBindingBuilder<T> Compiled<T>(this PropertySettersContext<T> self, Func<object, T> getter)
-        => new PropertySettersBindingBuilder<T>(self).Compiled(getter);
 
     public static PropertySettersMultiBindingBuilder<T> Bindings<T>(this PropertySettersContext<T> self, params BindingBase[] bindings)
         => new PropertySettersMultiBindingBuilder<T>(self).Bindings(bindings);

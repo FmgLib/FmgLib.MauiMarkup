@@ -1,12 +1,12 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-public sealed class PropertyPlatformBuilder<TSource, TProperty> : IPropertyBuilder<TSource, TProperty>
+public sealed class PropertyPlatformBuilder<T> : IPropertyBuilder<T>
 {
-    private TProperty newValue;
+    private T newValue;
 
-    private TProperty defaultValue;
+    private T defaultValue;
 
-    private Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> defaultConfigure;
+    private Func<PropertyContext<T>, IPropertyBuilder<T>> defaultConfigure;
 
     private bool isSet;
 
@@ -14,9 +14,9 @@ public sealed class PropertyPlatformBuilder<TSource, TProperty> : IPropertyBuild
 
     private bool buildValue;
 
-    public PropertyContext<TSource, TProperty> Context { get; set; }
+    public PropertyContext<T> Context { get; set; }
 
-    public PropertyPlatformBuilder(PropertyContext<TSource, TProperty> context)
+    public PropertyPlatformBuilder(PropertyContext<T> context)
     {
         Context = context;
     }
@@ -42,7 +42,7 @@ public sealed class PropertyPlatformBuilder<TSource, TProperty> : IPropertyBuild
         return isSet;
     }
 
-    public PropertyPlatformBuilder<TSource, TProperty> Default(TProperty value)
+    public PropertyPlatformBuilder<T> Default(T value)
     {
         if (!defaultIsSet)
         {
@@ -53,7 +53,7 @@ public sealed class PropertyPlatformBuilder<TSource, TProperty> : IPropertyBuild
         return this;
     }
 
-    public PropertyPlatformBuilder<TSource, TProperty> Default(Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> configure)
+    public PropertyPlatformBuilder<T> Default(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!defaultIsSet)
         {
@@ -64,7 +64,7 @@ public sealed class PropertyPlatformBuilder<TSource, TProperty> : IPropertyBuild
         return this;
     }
 
-    public PropertyPlatformBuilder<TSource, TProperty> OnMacCatalyst(TProperty value)
+    public PropertyPlatformBuilder<T> OnMacCatalyst(T value)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.MacCatalyst)
         {
@@ -76,7 +76,7 @@ public sealed class PropertyPlatformBuilder<TSource, TProperty> : IPropertyBuild
         return this;
     }
 
-    public PropertyPlatformBuilder<TSource, TProperty> OnMacCatalyst(Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> configure)
+    public PropertyPlatformBuilder<T> OnMacCatalyst(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.MacCatalyst)
         {
@@ -86,7 +86,7 @@ public sealed class PropertyPlatformBuilder<TSource, TProperty> : IPropertyBuild
         return this;
     }
 
-    public PropertyPlatformBuilder<TSource, TProperty> OniOS(TProperty value)
+    public PropertyPlatformBuilder<T> OniOS(T value)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.iOS)
         {
@@ -98,7 +98,7 @@ public sealed class PropertyPlatformBuilder<TSource, TProperty> : IPropertyBuild
         return this;
     }
 
-    public PropertyPlatformBuilder<TSource, TProperty> OniOS(Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> configure)
+    public PropertyPlatformBuilder<T> OniOS(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.iOS)
         {
@@ -108,7 +108,7 @@ public sealed class PropertyPlatformBuilder<TSource, TProperty> : IPropertyBuild
         return this;
     }
 
-    public PropertyPlatformBuilder<TSource, TProperty> OnAndroid(TProperty value)
+    public PropertyPlatformBuilder<T> OnAndroid(T value)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.Android)
         {
@@ -120,7 +120,7 @@ public sealed class PropertyPlatformBuilder<TSource, TProperty> : IPropertyBuild
         return this;
     }
 
-    public PropertyPlatformBuilder<TSource, TProperty> OnAndroid(Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> configure)
+    public PropertyPlatformBuilder<T> OnAndroid(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.Android)
         {
@@ -130,7 +130,7 @@ public sealed class PropertyPlatformBuilder<TSource, TProperty> : IPropertyBuild
         return this;
     }
 
-    public PropertyPlatformBuilder<TSource, TProperty> OnWinUI(TProperty value)
+    public PropertyPlatformBuilder<T> OnWinUI(T value)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.WinUI)
         {
@@ -142,7 +142,7 @@ public sealed class PropertyPlatformBuilder<TSource, TProperty> : IPropertyBuild
         return this;
     }
 
-    public PropertyPlatformBuilder<TSource, TProperty> OnWinUI(Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> configure)
+    public PropertyPlatformBuilder<T> OnWinUI(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.WinUI)
         {
@@ -152,7 +152,7 @@ public sealed class PropertyPlatformBuilder<TSource, TProperty> : IPropertyBuild
         return this;
     }
 
-    public PropertyPlatformBuilder<TSource, TProperty> OnTizen(TProperty value)
+    public PropertyPlatformBuilder<T> OnTizen(T value)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.Tizen)
         {
@@ -164,7 +164,7 @@ public sealed class PropertyPlatformBuilder<TSource, TProperty> : IPropertyBuild
         return this;
     }
 
-    public PropertyPlatformBuilder<TSource, TProperty> OnTizen(Func<PropertyContext<TSource, TProperty>, IPropertyBuilder<TSource, TProperty>> configure)
+    public PropertyPlatformBuilder<T> OnTizen(Func<PropertyContext<T>, IPropertyBuilder<T>> configure)
     {
         if (!isSet && DeviceInfo.Platform == DevicePlatform.Tizen)
         {

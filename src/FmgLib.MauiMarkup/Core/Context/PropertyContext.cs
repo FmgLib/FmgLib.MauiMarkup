@@ -1,6 +1,6 @@
 ﻿namespace FmgLib.MauiMarkup;
 
-public sealed class PropertyContext<TSource, TProperty>
+public sealed class PropertyContext<T>
 {
     public BindableObject BindableObject { get; set; }
 

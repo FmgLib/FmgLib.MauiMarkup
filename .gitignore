@@ -363,6 +363,3 @@ MigrationBackup/
 FodyWeavers.xsd
 /templates/FmgLib.MauiMarkup.TemplateApp/bin/*
 /templates/FmgLib.MauiMarkup.TemplateApp/obj/*
-.idea/**
-.vscode/**
-.vs/**

@@ -17,10 +17,11 @@ FmgLib.MauiMarkup provides extension methods for all properties provided for a V
 <br>
 
 <details>
-    <summary><b>Getting Started<b></summary>
+    <summary><b>Getting Started</b></summary>
 
 <br>
 <br>
+
 ### Creating a new FmgLib.MauiMarkup project from CLI
 
 FmgLib provides a project template to start a new project with FmgLib.MauiMarkup.
@@ -49,11 +50,12 @@ dotnet add package FmgLib.MauiMarkup
 </details>
 
 <details>
-    <summary><b>XAML to FmgLib.MauiMarkup(C#)<b></summary>
+    <summary><b>XAML to FmgLib.MauiMarkup(C#)</b></summary>
 
 <br>
 <br>
 If we were to write XAML code for the Image class, it would look like this:
+
 ```xaml
 <Image
     Source="dotnet_bot.png"
@@ -66,6 +68,7 @@ If we were to write XAML code for the Image class, it would look like this:
 ```
 
 The C# equivalent with the help of FmgLib.MauiMarkup would be as follows:
+
 ```csharp
 new Image()
 .Source("dotnet_bot.png")
@@ -77,6 +80,7 @@ new Image()
 ```
 
 Similarly, we can see this for other Views. Let's write a few sample codes as an example:
+
 ```csharp
 new Label()
 .Text("fmglib.mauimarkup")
@@ -108,7 +112,7 @@ this
 </details>
 
 <details>
-    <summary><b>How to assign object references<b></summary>
+    <summary><b>How to assign object references</b></summary>
 
 <br>
 <br>
@@ -135,7 +139,7 @@ new Button()
 </details>
 
 <details>
-    <summary><b>Attached properties<b></summary>
+    <summary><b>Attached properties</b></summary>
 
 <br>
 <br>
@@ -211,7 +215,7 @@ This would set the `AbsoluteLayout.LayoutBounds` attached property to the specif
 
 </details>
 <details>
-    <summary><b>Behaviors<b></summary>
+    <summary><b>Behaviors</b></summary>
 
 <br>
 <br>
@@ -227,7 +231,7 @@ new Entry().Text("Click Item")
 <br>
 </details>
 <details>
-    <summary><b>Binding Converters<b></summary>
+    <summary><b>Binding Converters</b></summary>
 
 <br>
 <br>
@@ -268,7 +272,7 @@ public class CustomPage : ContentPage
 </details>
 
 <details>
-    <summary><b>Event handlers<b></summary>
+    <summary><b>Event handlers</b></summary>
 
 <br>
 <br>
@@ -329,7 +333,7 @@ This makes it easy to attach event handlers to controls in a concise and readabl
 </details>
 
 <details>
-    <summary><b>Gesture Recognizers<b></summary>
+    <summary><b>Gesture Recognizers</b></summary>
 
 <br>
 <br>
@@ -462,7 +466,7 @@ public class PointerGesturePage : ContentPage
 </details>
 
 <details>
-    <summary><b>Gradients<b></summary>
+    <summary><b>Gradients</b></summary>
     
 <br>
 <br>
@@ -496,7 +500,7 @@ new Border()
 </details>
 
 <details>
-    <summary><b>Grid Definition<b></summary>
+    <summary><b>Grid Definition</b></summary>
     
 <br>
 <br>
@@ -553,7 +557,7 @@ new Grid()
 </details>
 
 <details>
-    <summary><b>ITextAlignment interface extension methods<b></summary>
+    <summary><b>ITextAlignment interface extension methods</b></summary>
 
 <br>
 <br>
@@ -591,7 +595,7 @@ This example centers the text both horizontally and vertically within the label'
 </details>
 
 <details>
-    <summary><b>Layout options<b></summary>
+    <summary><b>Layout options</b></summary>
 
 In `FmgLib.MauiMarkup`, you can layout every view in their container using the following extension methods:
 
@@ -638,7 +642,7 @@ This example centers a Label inside a `StackLayout` container. You can use the s
 
 
 <details>
-    <summary><b>Menus in FmgLib.MauiMarkup<b></summary>
+    <summary><b>Menus in FmgLib.MauiMarkup</b></summary>
 
 <br>
 <br>
@@ -736,7 +740,7 @@ public class MenuPage : ContentPage
 </details>
 
 <details>
-    <summary><b>Properties and Fluent Methods<b></summary>
+    <summary><b>Properties and Fluent Methods</b></summary>
 
 <br>
 <br>
@@ -766,7 +770,7 @@ new Label()
 </details>
 
 <details>
-    <summary><b>Property Bindings<b></summary>
+    <summary><b>Property Bindings</b></summary>
 
 <br>
 <br>
@@ -803,7 +807,7 @@ You can also bind a property to an object that is not part of the visual tree. T
 </details>
 
 <details>
-    <summary><b>Property MultiBinding<b></summary>
+    <summary><b>Property MultiBinding</b></summary>
 
 <br>
 <br>
@@ -862,7 +866,7 @@ public partial class MainPage : ContentPage, IFmgLibHotReload
 </details>
 
 <details>
-    <summary><b>Shell Application<b></summary>
+    <summary><b>Shell Application</b></summary>
 
 <br>
 <br>
@@ -940,11 +944,12 @@ public class ShellItemTemplate : ContentView
 </details>
 
 <details>
-    <summary><b>Application Styling<b></summary>
+    <summary><b>Application Styling</b></summary>
 
 <br>
-<br>
-`FmgLib.MauiMarkup` provides a way to define the styles of elements using the `Style<T>` class. Here's an example of how to define the style of a button:
+
+`FmgLib.MauiMarkup` provides a way to define the styles of elements using the `Style<T>` class. Here's an example of how to define the style of a button: 
+
 
 ```csharp
 new Style<Button>(e => e
@@ -1039,11 +1044,11 @@ new ResourceDictionary
 };
 ```
 
-<br>
+
 </details>
 
 <details>
-    <summary><b>User defined extension methods<b></summary>
+    <summary><b>User defined extension methods</b></summary>
 
 <br>
 <br>
@@ -1123,7 +1128,7 @@ or use in an animation context.
 </details>
 
 <details>
-    <summary><b>Triggers<b></summary>
+    <summary><b>Triggers</b></summary>
 
 <br>
 <br>
@@ -1250,7 +1255,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 </details>
 
 <details>
-    <summary><b>.NET built-in Hot-Reload<b></summary>
+    <summary><b>.NET built-in Hot-Reload</b></summary>
 
 <br>
 <br>
@@ -1289,7 +1294,7 @@ public partial class ExamplePage : ContentPage, IFmgLibHotReload
 </details>
 
 <details>
-    <summary><b>Extensions for 3rd Party Controls<b></summary>
+    <summary><b>Extensions for 3rd Party Controls</b></summary>
     
 <br>
 <br>
@@ -1572,11 +1577,12 @@ new Button()
 </details>
 
 <details>
-    <summary><b>Localization (Json File)<b></summary>
+    <summary><b>Localization (Json File)</b></summary>
 
 <br>
 <br>
 In the MauiProgram.cs file,
+
 ```CSharp
 builder
     .UseMauiApp<App>()
@@ -1586,6 +1592,7 @@ should be added.
 
 In your main project you should have a language file of type json. The translation will be read from this file and imported.
 If you do not specify the path to the file(s) in the parameter ( 
+
 ```CSharp
 builder
     .UseMauiApp<App>()
@@ -1664,15 +1671,16 @@ new VerticalStackLayout()
 ``` 
 in the code.
 
-<br>
+
 </details>
 
 <details>
-    <summary><b>Localization (Resx File)<b></summary>
+    <summary><b>Localization (Resx File)</b></summary>
     
 <br>
 <br>
 In the MauiProgram.cs file,
+
 ```CSharp
 builder
     .UseMauiApp<App>()
@@ -1725,14 +1733,14 @@ new VerticalStackLayout()
 ``` 
 in the code.
 
-<br>
 </details>
 
 <details>
-    <summary><b>General Example Code<b></summary>
+    <summary><b>General Example Code</b></summary>
 
 <br>
 <br>
+
 ```csharp
 
 using Microsoft.Maui.Layouts;
@@ -2030,4 +2038,5 @@ public partial class HomePage : BasePage<HomePageViewModel>
 }
 
 ```
+
 </details>

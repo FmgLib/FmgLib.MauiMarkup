@@ -173,9 +173,9 @@ public static partial class TypedBindingExtensions
 				fallbackValue);
 	}
 
-	static Func<TBindingContext, TSource> ConvertExpressionToFunc<TBindingContext, TSource>(in Expression<Func<TBindingContext, TSource>> expression) => expression.Compile();
+	public static Func<TBindingContext, TSource> ConvertExpressionToFunc<TBindingContext, TSource>(in Expression<Func<TBindingContext, TSource>> expression) => expression.Compile();
 
-	static string GetMemberName<T>(in Expression<T> expression) => expression.Body switch
+	public static string GetMemberName<T>(in Expression<T> expression) => expression.Body switch
 	{
 		MemberExpression m => m.Member.Name,
 		UnaryExpression u when u.Operand is MemberExpression m => m.Member.Name,

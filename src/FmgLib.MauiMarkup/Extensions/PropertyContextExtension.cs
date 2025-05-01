@@ -1,7 +1,12 @@
-﻿namespace FmgLib.MauiMarkup;
+﻿using System.Linq.Expressions;
+
+namespace FmgLib.MauiMarkup;
 
 public static class PropertyContextExtension
 {
+    
+    public static PropertyBindingBuilder<T> Getter<TContext, T>(this PropertyContext<T> self, Expression<Func<TContext, T>> getter)
+        => new PropertyBindingBuilder<T>(self).Getter<TContext>(getter);
 
     public static PropertyBindingBuilder<T> Path<T>(this PropertyContext<T> self, string path)
         => new PropertyBindingBuilder<T>(self).Path(path);

@@ -1,4 +1,6 @@
 ﻿using System.Globalization;
+using System.Linq.Expressions;
+using Microsoft.Maui.Controls.Internals;
 
 namespace FmgLib.MauiMarkup;
 
@@ -31,6 +33,10 @@ public sealed class PropertySettersBindingBuilder<T> : IPropertySettersBuilder<T
         }
     }
 
+    private Expression<Func<object, T>> getter;
+    
+    private Action<object, T> setter;
+    
     private string path;
 
     private BindingMode bindingMode;
@@ -58,7 +64,30 @@ public sealed class PropertySettersBindingBuilder<T> : IPropertySettersBuilder<T
 
     public bool Build()
     {
-        if (path != null)
+        if (getter != null)
+        {
+            var getterFunc = TypedBindingExtensions.ConvertExpressionToFunc(getter);
+            var handlers = new (Func<object, object?>, string)[]
+                { ((object b) => b, TypedBindingExtensions.GetMemberName(getter)) };
+            Context.XamlSetters.Add(
+                new Setter
+                {
+                    Property = Context.Property,
+                    Value = new TypedBinding<object, T>(bindingContext => (getterFunc(bindingContext), true), setter, handlers.Select(x => x.ToTuple()).ToArray())
+                    {
+                        Mode = bindingMode,
+                        Converter = converter,
+                        ConverterParameter = converterParameter,
+                        StringFormat = stringFormat,
+                        Source = source,
+                        TargetNullValue = targetNullValue,
+                        FallbackValue = fallbackValue
+                    }
+                }
+            );
+            return true;
+        }
+        else if (path != null)
         {
             Context.XamlSetters.Add(
                 new Setter
@@ -73,6 +102,31 @@ public sealed class PropertySettersBindingBuilder<T> : IPropertySettersBuilder<T
         }
 
         return false;
+    }
+    
+    public PropertySettersBindingBuilder<T> Getter<TContext>(Expression<Func<TContext, T>> getter)
+    {
+        var parameter = Expression.Parameter(typeof(object), "obj");
+        var convertedParam = Expression.Convert(parameter, typeof(TContext));
+    
+        var body = getter.Body;
+    
+        var newBody = new ParameterReplacer(getter.Parameters[0], convertedParam).Visit(body);
+    
+        this.getter = Expression.Lambda<Func<object, T>>(newBody, parameter);
+    
+        return this;
+    }
+
+    public PropertySettersBindingBuilder<T> Setter<TContext>(Action<TContext, T> setter)
+    {
+        this.setter = (obj, value) =>
+        {
+            var contextObj = (TContext)obj;
+            setter(contextObj, value);
+        };
+    
+        return this;
     }
 
     public PropertySettersBindingBuilder<T> Path(string path)

@@ -27,4 +27,4 @@ public static class MauiProgram
 
         return builder.Build();
     }
-}
+} 

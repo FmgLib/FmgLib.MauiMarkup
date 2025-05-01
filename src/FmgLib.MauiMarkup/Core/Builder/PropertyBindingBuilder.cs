@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Linq.Expressions;
 
 namespace FmgLib.MauiMarkup;
 
@@ -31,6 +32,10 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
         }
     }
 
+    private Expression<Func<object, T>> getter;
+    
+    private Action<object, T> setter;
+
     private string path;
 
     private BindingMode bindingMode;
@@ -58,7 +63,22 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
 
     public bool Build()
     {
-        if (path != null)
+        if (getter != null)
+        {
+            Context.BindableObject.Bind(Context.Property, 
+                getter: getter, 
+                setter: setter,
+                mode: bindingMode,
+                converter: converter,
+                converterParameter: converterParameter,
+                stringFormat: stringFormat,
+                source: source,
+                targetNullValue: targetNullValue,
+                fallbackValue: fallbackValue);
+            
+            return true;
+        }
+        else if (path != null)
         {
             Context.BindableObject.SetBinding(Context.Property, new Binding(path, bindingMode, converter, converterParameter, stringFormat, source)
                                                                 .FallbackValue(fallbackValue)
@@ -67,6 +87,31 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
         }
 
         return false;
+    }
+
+    public PropertyBindingBuilder<T> Getter<TContext>(Expression<Func<TContext, T>> getter)
+    {
+        var parameter = Expression.Parameter(typeof(object), "obj");
+        var convertedParam = Expression.Convert(parameter, typeof(TContext));
+    
+        var body = getter.Body;
+    
+        var newBody = new ParameterReplacer(getter.Parameters[0], convertedParam).Visit(body);
+    
+        this.getter = Expression.Lambda<Func<object, T>>(newBody, parameter);
+    
+        return this;
+    }
+
+    public PropertyBindingBuilder<T> Setter<TContext>(Action<TContext, T> setter)
+    {
+        this.setter = (obj, value) =>
+        {
+            var contextObj = (TContext)obj;
+            setter(contextObj, value);
+        };
+    
+        return this;
     }
 
     public PropertyBindingBuilder<T> Path(string path)

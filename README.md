@@ -811,6 +811,7 @@ You can also bind a property to an object that is not part of the visual tree. T
 
 <br>
 <br>
+
 You can easily use multibinding with FmgLib.MauiMarkup. You can add as many BindingBases as you want with the e.Bindings(...) method.
 
 Example usage is as follows:
@@ -863,6 +864,102 @@ public partial class MainPage : ContentPage, IFmgLibHotReload
 ```
 
 <br>
+</details>
+
+<details>
+	<summary><b>Compiled Bindings in Code</b></summary>
+
+ <br>
+
+Bindings written in code typically use string paths that are resolved at runtime with reflection, and the overhead of doing this varies from platform to platform. `FmgLib.MauiMarkup` introduces an additional Getter extension method that defines bindings using a Func argument instead of a string path:
+
+```csharp
+// in before
+new Label().Text(e => e.Path("Text"));
+
+// in now
+new Label().Text(e => e.Getter(static (Entry entry) => entry.Text));
+```
+
+This compiled binding approach provides the following benefits:
+  - Improved data binding performance by resolving binding expressions at compile-time rather than runtime.
+  - A better developer troubleshooting experience because invalid bindings are reported as build errors.
+  - Intellisense while editing.
+
+Not all methods can be used to define a compiled binding. The expression must be a simple property access expression. The following examples show valid and invalid binding expressions:
+
+```csharp
+// Valid: Property access
+static (PersonViewModel vm) => vm.Name;
+static (PersonViewModel vm) => vm.Address?.Street;
+
+// Valid: Array and indexer access
+static (PersonViewModel vm) => vm.PhoneNumbers[0];
+static (PersonViewModel vm) => vm.Config["Font"];
+
+// Valid: Casts
+static (Label label) => (label.BindingContext as PersonViewModel).Name;
+static (Label label) => ((PersonViewModel)label.BindingContext).Name;
+
+// Invalid: Method calls
+static (PersonViewModel vm) => vm.GetAddress();
+static (PersonViewModel vm) => vm.Address?.ToString();
+
+// Invalid: Complex expressions
+static (PersonViewModel vm) => vm.Address?.Street + " " + vm.Address?.City;
+static (PersonViewModel vm) => $"Name: {vm.Name}";
+```
+
+You can easily use multibinding with FmgLib.MauiMarkup. You can add as many BindingBases as you want with the e.Bindings(...) method. In addition, .NET MAUI 9 adds a BindingBase.Create method that sets the binding directly on the object with a Func, and returns the binding object instance:
+
+```csharp
+public partial class MainPage : ContentPage, IFmgLibHotReload
+{
+    private readonly MainPageViewModel viewModel;
+    public MainPage()
+    {
+        viewModel = new MainPageViewModel();
+        this.InitializeHotReload();
+    }
+
+    public void Build()
+    {
+        this
+        .BindingContext(viewModel)
+        .Content(
+            new VerticalStackLayout()
+            .Spacing(20)
+            .Children(
+                new CheckBox()
+                .IsChecked(e => 
+                    e.Bindings(
+			Binding.Create(static (MainPageViewModel model) => model.IsOver16, source: RelativeBindingSource.Self),
+		        Binding.Create(static (MainPageViewModel model) => model.HasPassedTest, source: RelativeBindingSource.Self),
+		        Binding.Create(static (MainPageViewModel model) => model.IsSuspended, source: RelativeBindingSource.Self)
+                    )
+                    .Converter(new AllTrueMultiConverter())
+                    .FallbackValue("Is Error.")
+                    .TargetNullValue("Is Null.")
+                ),
+
+                new Label()
+                .Text(e => 
+                    e.Bindings(
+			Binding.Create(static (MainPageViewModel model) => model.Id, source: RelativeBindingSource.Self),
+		        Binding.Create(static (MainPageViewModel model) => model.Name, source: RelativeBindingSource.Self),
+		        Binding.Create(static (MainPageViewModel model) => model.IsSuspended, source: RelativeBindingSource.Self)
+                    )
+                    .StringFormat("{0} : {1} : {2}")
+                    .FallbackValue("Is Error.")
+                    .TargetNullValue("Is Null.")
+                )
+            )
+        );
+    }
+}
+
+```
+ 
 </details>
 
 <details>

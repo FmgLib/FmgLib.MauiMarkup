@@ -16,7 +16,7 @@
 		<Authors>FmgYazılım</Authors>
 		<Company>Fmg Yazılım</Company>
 		<Copyright>©2024</Copyright>
-		<PackageProjectUrl>https://fmgyazilim.com/en/fmglibmauimarkup</PackageProjectUrl>
+		<PackageProjectUrl>https://fmgyazilim.com/en/docs/fmglibmauimarkup</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/FmgLib/FmgLib.MauiMarkup</RepositoryUrl>
 		<UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
 		<Description>C# Code Markup Library for .NET MAUI: FmgLib.MauiMarkup with C# Markup classes and fluent helper methods</Description>

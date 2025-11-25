@@ -13,3 +13,7 @@ dotnet new install FmgLib.MauiMarkup.Template
 ```bash
 dotnet new fmglib-mauimarkup-app -o my-new-project
 ```
+
+Optional parameters:
+- `--netMajor 10|9` (default 10) to pick the .NET/MAUI version and matching package versions.
+- `--includeContent true|false` (default false) to choose between a minimal home page or a richer sample experience.

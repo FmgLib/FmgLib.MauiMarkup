@@ -15,5 +15,33 @@
   "preferNameDirectory": true,
   "guids": [
     "e0cd07a0-669f-49cf-bda8-9f77d0c5ca77"
+  ],
+  "symbols": {
+    "netMajor": {
+      "type": "choice",
+      "description": "Select the target .NET version",
+      "defaultValue": "10",
+      "choices": [
+        { "choice": "10", "description": ".NET 10 (default)" },
+        { "choice": "9", "description": ".NET 9" }
+      ]
+    },
+    "includeContent": {
+      "type": "bool",
+      "description": "Include sample content (extra pages and Shell navigation)",
+      "defaultValue": "false"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!includeContent)",
+          "exclude": [
+            "Samples/**"
+          ]
+        }
+      ]
+    }
   ]
 }

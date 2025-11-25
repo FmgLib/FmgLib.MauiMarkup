@@ -11,6 +11,13 @@ public partial class AppShell : Shell
             .Title("Home")
             .ContentTemplate(() => new MainPage())
             .Route(nameof(MainPage))
+{{#if includeContent}}
+            ,
+            new ShellContent()
+            .Title("Getting Started")
+            .ContentTemplate(() => new Samples.GettingStartedPage())
+            .Route("GettingStarted")
+{{/if}}
         );
     }
 }

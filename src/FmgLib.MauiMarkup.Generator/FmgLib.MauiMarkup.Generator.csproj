@@ -2,7 +2,8 @@
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
-		<LangVersion>13.0</LangVersion>
+		<LangVersion>14.0</LangVersion>
+		<Nullable>enable</Nullable>
 		<BuildOutputTargetFolder>analyzers</BuildOutputTargetFolder>
 		<IsRoslynComponent>True</IsRoslynComponent>
 		<EnforceExtendedAnalyzerRules>True</EnforceExtendedAnalyzerRules>
@@ -21,7 +22,7 @@
 
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.12.0" PrivateAssets="all" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="5.0.0" PrivateAssets="all" />
 		<PackageReference Include="PolySharp" Version="1.15.0" PrivateAssets="all" IncludeAssets="build; analyzers" />
 	</ItemGroup>
 

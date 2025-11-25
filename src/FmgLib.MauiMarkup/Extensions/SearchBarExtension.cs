@@ -4,6 +4,70 @@
 
 public static partial class SearchBarExtension
 {
+    public static T SearchIconColor<T>(this T self,
+        Color searchIconColor)
+        where T : SearchBar
+    {
+        self.SetValue(SearchBar.SearchIconColorProperty, searchIconColor);
+        return self;
+    }
+
+    public static T SearchIconColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+        where T : SearchBar
+    {
+        var context = new PropertyContext<Color>(self, SearchBar.SearchIconColorProperty);
+        configure(context).Build();
+        return self;
+    }
+
+    public static SettersContext<T> SearchIconColor<T>(this SettersContext<T> self,
+        Color searchIconColor)
+        where T : SearchBar
+    {
+        self.XamlSetters.Add(new Setter { Property = SearchBar.SearchIconColorProperty, Value = searchIconColor });
+        return self;
+    }
+
+    public static SettersContext<T> SearchIconColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+        where T : SearchBar
+    {
+        var context = new PropertySettersContext<Color>(self.XamlSetters, SearchBar.SearchIconColorProperty);
+        configure(context).Build();
+        return self;
+    }
+
+    public static T ReturnType<T>(this T self,
+        ReturnType returnType)
+        where T : SearchBar
+    {
+        self.SetValue(SearchBar.ReturnTypeProperty, returnType);
+        return self;
+    }
+
+    public static T ReturnType<T>(this T self, Func<PropertyContext<ReturnType>, IPropertyBuilder<ReturnType>> configure)
+        where T : SearchBar
+    {
+        var context = new PropertyContext<ReturnType>(self, SearchBar.ReturnTypeProperty);
+        configure(context).Build();
+        return self;
+    }
+
+    public static SettersContext<T> ReturnType<T>(this SettersContext<T> self,
+        ReturnType returnType)
+        where T : SearchBar
+    {
+        self.XamlSetters.Add(new Setter { Property = SearchBar.ReturnTypeProperty, Value = returnType });
+        return self;
+    }
+
+    public static SettersContext<T> ReturnType<T>(this SettersContext<T> self, Func<PropertySettersContext<ReturnType>, IPropertySettersBuilder<ReturnType>> configure)
+        where T : SearchBar
+    {
+        var context = new PropertySettersContext<ReturnType>(self.XamlSetters, SearchBar.ReturnTypeProperty);
+        configure(context).Build();
+        return self;
+    }
+
     public static T CancelButtonColor<T>(this T self,
         Color cancelButtonColor)
         where T : SearchBar

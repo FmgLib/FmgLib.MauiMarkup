@@ -97,5 +97,32 @@ public static partial class HybridWebViewExtension
         self.RawMessageReceived += (o, arg) => action(self);
         return self;
     }
-        
+
+    public static T OnWebViewInitializing<T>(this T self, EventHandler<WebViewInitializingEventArgs>? handler)
+        where T : HybridWebView
+    {
+        self.WebViewInitializing += handler;
+        return self;
+    }
+
+    public static T OnWebViewInitializing<T>(this T self, Action<T, WebViewInitializingEventArgs> action)
+        where T : HybridWebView
+    {
+        self.WebViewInitializing += (o, args) => action(self, args);
+        return self;
+    }
+
+    public static T OnWebViewInitialized<T>(this T self, EventHandler<WebViewInitializedEventArgs>? handler)
+        where T : HybridWebView
+    {
+        self.WebViewInitialized += handler;
+        return self;
+    }
+
+    public static T OnWebViewInitialized<T>(this T self, Action<T, WebViewInitializedEventArgs> action)
+        where T : HybridWebView
+    {
+        self.WebViewInitialized += (o, args) => action(self, args);
+        return self;
+    }
 }

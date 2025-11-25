@@ -4,13 +4,6 @@
 
 public static partial class ScrollViewExtension
 {
-    public static T LayoutAreaOverride<T>(this T self,
-        Rect layoutAreaOverride)
-        where T : ScrollView
-    {
-        self.LayoutAreaOverride = layoutAreaOverride;
-        return self;
-    }
     
     public static T Content<T>(this T self,
         View content)

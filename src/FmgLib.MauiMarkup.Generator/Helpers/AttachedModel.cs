@@ -2,11 +2,14 @@
 
 namespace FmgLib.MauiMarkup.Generator.Extensions;
 
-public class AttachedModel
+/// <summary>
+/// Represents the attached property metadata supplied through <c>MauiMarkupAttachedProp</c>.
+/// </summary>
+public sealed class AttachedModel
 {
-    public INamedTypeSymbol MainSymbol { get; set; }
-    public IFieldSymbol FieldSymbol { get; set; }
-    public string PropertyName { get; set; }
-    public string ReturnTypeName { get; set; }
-    public string DeclaringTypeName { get; set; }
+    public INamedTypeSymbol MainSymbol { get; set; } = null!;
+    public IFieldSymbol FieldSymbol { get; set; } = null!;
+    public string PropertyName { get; set; } = null!;
+    public string ReturnTypeName { get; set; } = null!;
+    public string DeclaringTypeName { get; set; } = null!;
 }

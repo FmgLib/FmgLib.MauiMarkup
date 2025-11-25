@@ -4,6 +4,38 @@
 
 public static partial class SwitchExtension
 {
+    public static T OffColor<T>(this T self,
+        Color offColor)
+        where T : Switch
+    {
+        self.SetValue(Switch.OffColorProperty, offColor);
+        return self;
+    }
+
+    public static T OffColor<T>(this T self, Func<PropertyContext<Color>, IPropertyBuilder<Color>> configure)
+        where T : Switch
+    {
+        var context = new PropertyContext<Color>(self, Switch.OffColorProperty);
+        configure(context).Build();
+        return self;
+    }
+
+    public static SettersContext<T> OffColor<T>(this SettersContext<T> self,
+        Color offColor)
+        where T : Switch
+    {
+        self.XamlSetters.Add(new Setter { Property = Switch.OffColorProperty, Value = offColor });
+        return self;
+    }
+
+    public static SettersContext<T> OffColor<T>(this SettersContext<T> self, Func<PropertySettersContext<Color>, IPropertySettersBuilder<Color>> configure)
+        where T : Switch
+    {
+        var context = new PropertySettersContext<Color>(self.XamlSetters, Switch.OffColorProperty);
+        configure(context).Build();
+        return self;
+    }
+
     public static T OnColor<T>(this T self,
         Color onColor)
         where T : Switch

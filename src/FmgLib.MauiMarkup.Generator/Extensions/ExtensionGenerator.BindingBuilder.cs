@@ -49,7 +49,7 @@ public partial class ExtensionGenerator
         builder.Append($@"
     public static {info.DeclaringTypeName} {info.propertyName}(this {info.DeclaringTypeName} self, Func<PropertyContext<{info.ReturnTypeName}>, IPropertyBuilder<{info.ReturnTypeName}>> configure)
     {{
-        var context = new PropertyContext<{info.propertyTypeName}>(self, {info.BindablePropertyName});
+        var context = new PropertyContext<{info.ReturnTypeName}>(self, {info.BindablePropertyName});
         configure(context).Build();
         return self;
     }}

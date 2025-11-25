@@ -1,9 +1,22 @@
-﻿namespace FmgLib.MauiMarkup;
+﻿using System.Threading;
+using System.Threading.Tasks;
+
+namespace FmgLib.MauiMarkup;
 
 
 
 public static partial class SearchHandlerExtension
 {
+    public static Task ShowSoftInputAsync(this SearchHandler self, CancellationToken cancellationToken = default)
+    {
+        return self.ShowSoftInputAsync(cancellationToken);
+    }
+
+    public static Task HideSoftInputAsync(this SearchHandler self, CancellationToken cancellationToken = default)
+    {
+        return self.HideSoftInputAsync(cancellationToken);
+    }
+
     public static T Keyboard<T>(this T self,
         Func<Microsoft.Maui.Keyboard> configure)
         where T : SearchHandler

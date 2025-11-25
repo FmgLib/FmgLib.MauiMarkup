@@ -9,10 +9,13 @@ public partial class ExtensionGenerator
     void GenerateEventMethod(ISymbol @event)
     {
         var eventSymbol = (IEventSymbol)@event;
-        var eventHandler = eventSymbol.AddMethod.Parameters.First();
-        var eventHandlerType = ((INamedTypeSymbol)eventHandler.Type);
 
         var existInBases = false;
+        if (mainSymbol.BaseType is null)
+        {
+            return;
+        }
+
         Helpers.LoopDownToObject(mainSymbol.BaseType, type =>
         {
             existInBases = (type
@@ -67,7 +70,8 @@ public partial class ExtensionGenerator
 
     void GenerateEventMethodNoArgs_Sealed(IEventSymbol eventSymbol)
     {
-        var parameterCount = ((INamedTypeSymbol)eventSymbol.Type).DelegateInvokeMethod.Parameters.Length;
+        var invokeMethod = ((INamedTypeSymbol)eventSymbol.Type).DelegateInvokeMethod;
+        var parameterCount = invokeMethod?.Parameters.Length ?? 0;
         if (parameterCount <= 2)
             builder.Append($@"
     public static {mainSymbol.ToDisplayString()} On{eventSymbol.Name}(this {mainSymbol.ToDisplayString()} self, System.Action<{mainSymbol.ToDisplayString()}> action)
@@ -80,7 +84,8 @@ public partial class ExtensionGenerator
 
     void GenerateEventMethodNoArgs_Normal(IEventSymbol eventSymbol)
     {
-        var parameterCount = ((INamedTypeSymbol)eventSymbol.Type).DelegateInvokeMethod.Parameters.Length;
+        var invokeMethod = ((INamedTypeSymbol)eventSymbol.Type).DelegateInvokeMethod;
+        var parameterCount = invokeMethod?.Parameters.Length ?? 0;
         if (parameterCount <= 2)
             builder.Append($@"
     public static T On{eventSymbol.Name}<T>(this T self, System.Action<T> action)

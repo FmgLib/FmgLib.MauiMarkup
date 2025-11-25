@@ -1,4 +1,6 @@
-﻿using System.Globalization;
+﻿#nullable enable
+
+using System.Globalization;
 using System.Linq.Expressions;
 
 namespace FmgLib.MauiMarkup;
@@ -7,11 +9,11 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
 {
     public class ValueConverter : IValueConverter
     {
-        internal Func<object, T> ConvertFunction;
+        internal Func<object, T>? ConvertFunction;
 
-        internal Func<T, object> ConvertBackFunction;
+        internal Func<T, object>? ConvertBackFunction;
 
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        public object? Convert(object? value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value != null && ConvertFunction != null)
             {
@@ -21,7 +23,7 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
             return null;
         }
 
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        public object? ConvertBack(object? value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value != null && ConvertBackFunction != null)
             {
@@ -32,43 +34,50 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
         }
     }
 
-    private Expression<Func<object, T>> getter;
-    
-    private Action<object, T> setter;
+    private Expression<Func<object, T>>? getter;
 
-    private string path;
+    private Action<object, T>? setter;
 
-    private BindingMode bindingMode;
+    private string? path;
 
-    private IValueConverter converter;
+    private BindingMode _bindingMode = global::Microsoft.Maui.Controls.BindingMode.Default;
 
-    private ValueConverter valueConverter;
+    private IValueConverter? converter;
 
-    private string converterParameter;
+    private ValueConverter? valueConverter;
 
-    private string stringFormat;
+    private object? converterParameter;
 
-    private object source;
+    private string? stringFormat;
 
-    private object fallbackValue;
+    private object? source;
 
-    private object targetNullValue;
+    private object? fallbackValue;
 
-    public PropertyContext<T> Context { get; set; }
+    private object? targetNullValue;
+
+    private PropertyContext<T> _context;
+
+    public PropertyContext<T> Context
+    {
+        get => _context;
+        set => _context = value ?? throw new ArgumentNullException(nameof(value));
+    }
 
     public PropertyBindingBuilder(PropertyContext<T> context)
     {
-        Context = context;
+        _context = context ?? throw new ArgumentNullException(nameof(context));
     }
 
     public bool Build()
     {
         if (getter != null)
         {
-            Context.BindableObject.Bind(Context.Property, 
-                getter: getter, 
+            Context.BindableObject.Bind(
+                Context.Property,
+                getter: getter,
                 setter: setter,
-                mode: bindingMode,
+                mode: _bindingMode,
                 converter: converter,
                 converterParameter: converterParameter,
                 stringFormat: stringFormat,
@@ -78,11 +87,16 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
             
             return true;
         }
-        else if (path != null)
+
+        if (!string.IsNullOrWhiteSpace(path))
         {
-            Context.BindableObject.SetBinding(Context.Property, new Binding(path, bindingMode, converter, converterParameter, stringFormat, source)
-                                                                .FallbackValue(fallbackValue)
-                                                                .TargetNullValue(targetNullValue));
+            var binding = new Binding(path!, _bindingMode, converter, converterParameter, stringFormat, source);
+            if (fallbackValue is not null)
+                binding.FallbackValue = fallbackValue;
+            if (targetNullValue is not null)
+                binding.TargetNullValue = targetNullValue;
+
+            Context.BindableObject.SetBinding(Context.Property, binding);
             return true;
         }
 
@@ -107,8 +121,10 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
     {
         this.setter = (obj, value) =>
         {
-            var contextObj = (TContext)obj;
-            setter(contextObj, value);
+            if (obj is TContext contextObj)
+            {
+                setter(contextObj, value);
+            }
         };
     
         return this;
@@ -128,7 +144,7 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
 
     public PropertyBindingBuilder<T> BindingMode(BindingMode bindingMode)
     {
-        this.bindingMode = bindingMode;
+        _bindingMode = bindingMode;
         return this;
     }
 
@@ -138,7 +154,7 @@ public sealed class PropertyBindingBuilder<T> : IPropertyBuilder<T>
         return this;
     }
 
-    public PropertyBindingBuilder<T> Parameter(string converterParameter)
+    public PropertyBindingBuilder<T> Parameter(object converterParameter)
     {
         this.converterParameter = converterParameter;
         return this;

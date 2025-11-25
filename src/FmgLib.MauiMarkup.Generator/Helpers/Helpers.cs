@@ -6,17 +6,19 @@ using System.Linq;
 
 namespace FmgLib.MauiMarkup;
 
+/// <summary>
+/// Shared helper utilities used by the source generator.
+/// </summary>
 public static class Helpers
 {
-    public static List<string> NotGenerateList = new() { "this[]", "Handler", "LogicalChildren" };
-
+    public static readonly HashSet<string> NotGenerateList = new(StringComparer.Ordinal) { "this[]", "Handler", "LogicalChildren" };
 
     public static string ToCamelCase(this string text)
     {
         if (string.IsNullOrWhiteSpace(text))
             return text;
 
-        return char.ToLowerInvariant(text[0]) + text.Substring(1);
+        return char.ToLowerInvariant(text[0]) + text[1..];
     }
 
     public static INamedTypeSymbol? FindNamedType(this Compilation compilation, string typeMetadataName)
@@ -27,7 +29,7 @@ public static class Helpers
             .Select(compilation.GetAssemblyOrModuleSymbol)
             .OfType<IAssemblySymbol>()
             .Select(assemblySymbol => assemblySymbol.GetTypeByMetadataName(typeMetadataName))
-            .FirstOrDefault(_ => _ != null);
+            .FirstOrDefault(static symbol => symbol is not null);
 
         return typeToMauiMarkup;
     }
@@ -38,85 +40,70 @@ public static class Helpers
     }
 
     public static T EnsureNotNull<T>(this T? value)
-    => value ?? throw new InvalidOperationException();
-
-    public static void LoopDownToObject(INamedTypeSymbol symbol, Func<INamedTypeSymbol, bool> func)
-    {
-        var type = symbol;
-        var endLoop = false;
-        while (!endLoop && type != null && !type.Name.Equals("Object", StringComparison.Ordinal))
-        {
-            endLoop = func(type);
-            type = type.BaseType;
-        }
-    }
+        => value ?? throw new InvalidOperationException();
 
     public static bool IsVisualElement(INamedTypeSymbol symbol)
     {
-        var isNavigableElement = false;
+        return IsDerivedFrom(symbol, "Microsoft.Maui.Controls.VisualElement");
+    }
 
-        LoopDownToObject(symbol, type =>
+    public static bool IsBindableObject(INamedTypeSymbol symbol)
+    {
+        return IsDerivedFrom(symbol, "Microsoft.Maui.Controls.BindableObject");
+    }
+
+    public static void LoopDownToObject(INamedTypeSymbol symbol, Func<INamedTypeSymbol, bool> func)
+    {
+        for (var type = symbol; type != null && type.SpecialType != SpecialType.System_Object; type = type.BaseType)
         {
-            if (type.ToDisplayString().Equals("Microsoft.Maui.Controls.VisualElement")) isNavigableElement = true;
-            return isNavigableElement;
-        });
-
-        return isNavigableElement;
+            if (func(type))
+            {
+                break;
+            }
+        }
     }
 
     public static bool IsBaseImplementationOfInterface(INamedTypeSymbol symbol, string name)
     {
         var count = 0;
-        LoopDownToObject(symbol, type =>
+        for (var type = symbol; type != null && type.SpecialType != SpecialType.System_Object; type = type.BaseType)
         {
-            if (type.Interfaces.Any(e => e.Name.Equals(name))) count++;
-            return false;
-        });
+            if (type.Interfaces.Any(interfaceSymbol => interfaceSymbol.Name.Equals(name, StringComparison.Ordinal)))
+            {
+                count++;
+            }
+        }
 
         return count == 1;
     }
 
     public static string GetNormalizedFileName(INamedTypeSymbol type)
     {
-        var tail = type.IsGenericType ? $".{type.TypeArguments.FirstOrDefault().Name}" : "";
+        var tail = type.IsGenericType ? $".{type.TypeArguments.FirstOrDefault()?.Name}" : string.Empty;
         return $"{type.Name}{tail}";
     }
 
     public static string GetNormalizedClassName(INamedTypeSymbol type)
     {
-        var tail = type.IsGenericType ? $"Of{type.TypeArguments.FirstOrDefault().Name}" : "";
-        var prefix = type.ToDisplayString().Contains(".Shapes.") ? "Shapes" : "";
-        prefix += type.ToDisplayString().Contains(".Compatibility.") ? "Compatibility" : "";
+        var tail = type.IsGenericType ? $"Of{type.TypeArguments.FirstOrDefault()?.Name}" : string.Empty;
+        var fullName = type.ToDisplayString();
+        var prefix = fullName.IndexOf(".Shapes.", StringComparison.Ordinal) >= 0 ? "Shapes" : string.Empty;
+        prefix += fullName.IndexOf(".Compatibility.", StringComparison.Ordinal) >= 0 ? "Compatibility" : string.Empty;
         return $"{prefix}{type.Name}{tail}";
-    }
-
-    public static bool IsBindableObject(INamedTypeSymbol symbol)
-    {
-        var isBindable = false;
-
-        LoopDownToObject(symbol, type =>
-        {
-            if (type.ToDisplayString().Equals("Microsoft.Maui.Controls.BindableObject", StringComparison.Ordinal)) isBindable = true;
-            return isBindable;
-        });
-
-        return isBindable;
     }
 
     public static string? GetFullyQualifiedName(this ClassDeclarationSyntax classDeclarationSyntax)
     {
         if (!TryGetNamespace(classDeclarationSyntax, out string? namespaceName))
         {
-            return null; // or whatever you want to do in this scenario
+            return null;
         }
 
-        //var namespaceName = namespaceDeclarationSyntax!.Name.ToString();
-        return namespaceName + "." + classDeclarationSyntax.Identifier.ToString();
+        return namespaceName + "." + classDeclarationSyntax.Identifier;
     }
 
     public static bool TryGetNamespace(SyntaxNode? syntaxNode, out string? result)
     {
-        // set defaults
         result = null;
 
         if (syntaxNode == null)
@@ -151,5 +138,18 @@ public static class Helpers
         {
             return false;
         }
+    }
+
+    static bool IsDerivedFrom(INamedTypeSymbol symbol, string fullyQualifiedMetadataName)
+    {
+        for (var type = symbol; type != null && type.SpecialType != SpecialType.System_Object; type = type.BaseType)
+        {
+            if (type.GetFullyQualifiedName().Equals(fullyQualifiedMetadataName, StringComparison.Ordinal))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

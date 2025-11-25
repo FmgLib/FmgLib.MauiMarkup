@@ -2,33 +2,35 @@
 using System;
 using System.Linq;
 
-namespace FmgLib.MauiMarkup.Generator.Extensions
+namespace FmgLib.MauiMarkup.Generator.Extensions;
+
+/// <summary>
+/// Stores attached property metadata required during code generation.
+/// </summary>
+public sealed class AttachedFieldInfo
 {
-    partial class AttachedFieldInfo
+    public INamedTypeSymbol MainSymbol { get; set; } = null!;
+    public IFieldSymbol FieldSymbol { get; set; } = null!;
+    public string BindablePropertyName { get; set; } = null!;
+    public string PropertyName { get; set; } = null!;
+    public string ReturnTypeName { get; set; } = null!;
+    public string DeclaringTypeName { get; set; } = null!;
+
+    public string propertyName = null!;
+    public string propertyTypeName = null!;
+    public string camelCaseName = null!;
+    public string symbolTypeName = null!;
+    public string valueAssignmentString = null!;
+    public string dataTemplateAssignmentString = null!;
+
+    public void Build()
     {
-        public INamedTypeSymbol MainSymbol { get; set; }
-        public IFieldSymbol FiledSymbol { get; set; }
-        public string BindablePropertyName { get; set; }
-        public string PropertyName { get; set; }
-        public string ReturnTypeName { get; set; }
-        public string DeclaringTypeName { get; set; }
-
-        public string propertyName;
-        public string propertyTypeName;
-        public string camelCaseName;
-        public string symbolTypeName;
-        public string valueAssignmentString;
-        public string dataTemplateAssignmentString;
-
-        public void Build()
-        {
-            FiledSymbol = MainSymbol.GetMembers(PropertyName).OfType<IFieldSymbol>().FirstOrDefault();
-            symbolTypeName = $"{MainSymbol.ToDisplayString()}";
-            propertyName = BindablePropertyName.Split(new[] { "." }, StringSplitOptions.None)[^2] + PropertyName.Replace("Property", "");
-            propertyTypeName = FiledSymbol.Type.ToDisplayString();
-            camelCaseName = Helpers.ToCamelCase(propertyName);
-            valueAssignmentString = $@"self.SetValue({BindablePropertyName}, {camelCaseName});";
-            dataTemplateAssignmentString = $@"self.SetValue({BindablePropertyName}, new DataTemplate(loadTemplate));";
-        }
+        FieldSymbol = MainSymbol.GetMembers(PropertyName).OfType<IFieldSymbol>().FirstOrDefault();
+        symbolTypeName = $"{MainSymbol.ToDisplayString()}";
+        propertyName = BindablePropertyName.Split(new[] { "." }, StringSplitOptions.None)[^2] + PropertyName.Replace("Property", "");
+        propertyTypeName = ReturnTypeName;
+        camelCaseName = Helpers.ToCamelCase(propertyName);
+        valueAssignmentString = $@"self.SetValue({BindablePropertyName}, {camelCaseName});";
+        dataTemplateAssignmentString = $@"self.SetValue({BindablePropertyName}, new DataTemplate(loadTemplate));";
     }
 }

@@ -5,22 +5,25 @@ using System.Linq;
 
 namespace FmgLib.MauiMarkup;
 
+/// <summary>
+/// Describes property metadata needed to generate fluent extension methods.
+/// </summary>
 public class PropInfo
 {
-    public string MainSymbolName { get; set; }
-    public IPropertySymbol PropertySymbol { get; set; }
+    public string MainSymbolName { get; set; } = null!;
+    public IPropertySymbol PropertySymbol { get; set; } = null!;
     public bool IsBindableProperty { get; set; }
-    public string BindablePropertyName { get; set; }
+    public string BindablePropertyName { get; set; } = null!;
 
-    public string propertyName;
-    public string methodName;
-    public string propertyTypeName;
-    public string accessedWith;
-    public string camelCaseName;
-    public string valueAssignmentString;
-    public string dataTemplateAssignmentString;
+    public string propertyName = null!;
+    public string methodName = null!;
+    public string propertyTypeName = null!;
+    public string accessedWith = null!;
+    public string camelCaseName = null!;
+    public string valueAssignmentString = null!;
+    public string dataTemplateAssignmentString = null!;
 
-    public void Build(List<string> redefinedProperties = null)
+    public void Build(List<string>? redefinedProperties = null)
     {
         propertyName = PropertySymbol.Name.Split(new[] { "." }, StringSplitOptions.None).Last();
         propertyName = propertyName.Equals("class", StringComparison.Ordinal) ? "@class" : propertyName;
@@ -42,6 +45,6 @@ public class PropInfo
             $@"self.SetValue({BindablePropertyName}, new DataTemplate(loadTemplate));" :
             $@"{accessedWith}.{propertyName} = new DataTemplate(loadTemplate);";
 
-        methodName = redefinedProperties == null || redefinedProperties.Count <= 0 || !redefinedProperties.Any(e => e == propertyName) ? propertyName : propertyName + "New";
+        methodName = redefinedProperties == null || redefinedProperties.Count == 0 || !redefinedProperties.Any(e => e == propertyName) ? propertyName : propertyName + "New";
     }
 }

@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net{{netMajor}}.0-android;net{{netMajor}}.0-ios;net{{netMajor}}.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net{{netMajor}}.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFrameworks>netNETMAJOR_VERSION.0-android;netNETMAJOR_VERSION.0-ios;netNETMAJOR_VERSION.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);netNETMAJOR_VERSION.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
-		<!-- <TargetFrameworks>$(TargetFrameworks);net{{netMajor}}.0-tizen</TargetFrameworks> -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);netNETMAJOR_VERSION.0-tizen</TargetFrameworks> -->
 
 		<!-- Note for MacCatalyst:
 		The default runtime is maccatalyst-x64, except in Release config, in which case the default is maccatalyst-x64;maccatalyst-arm64.
@@ -19,6 +19,12 @@
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+<!--#if (NET10)-->
+		<DefineConstants>$(DefineConstants);NET10</DefineConstants>
+<!--#endif-->
+<!--#if (NET9)-->
+		<DefineConstants>$(DefineConstants);NET9</DefineConstants>
+<!--#endif-->
 
 		<!-- Display name -->
 		<ApplicationTitle>FmgLib.MauiMarkup.App</ApplicationTitle>
@@ -67,10 +73,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="FmgLib.MauiMarkup" Version="{{netMajor}}.*" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="{{netMajor}}.*" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="{{netMajor}}.*" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="{{netMajor}}.*" />
+		<PackageReference Include="FmgLib.MauiMarkup" Version="NETMAJOR_VERSION.*" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="NETMAJOR_VERSION.*" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="NETMAJOR_VERSION.*" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="NETMAJOR_VERSION.*" />
 	</ItemGroup>
 
 </Project>

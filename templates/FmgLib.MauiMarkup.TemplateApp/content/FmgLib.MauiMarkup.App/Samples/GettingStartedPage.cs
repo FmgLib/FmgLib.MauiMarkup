@@ -1,5 +1,9 @@
 ﻿using System.Reflection;
 using Microsoft.Maui.Graphics;
+using FmgLib.MauiMarkup;
+using static Microsoft.Maui.Graphics.Colors;
+using static Microsoft.Maui.Controls.FontAttributes;
+using Microsoft.Maui.Controls.Shapes;
 
 namespace FmgLib.MauiMarkup.App.Samples;
 
@@ -13,152 +17,244 @@ public partial class GettingStartedPage : ContentPage, IFmgLibHotReload
     public void Build()
     {
         var version = typeof(MauiApp).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion;
-        var accent = AppColors.Primary;
-        var secondary = Colors.DarkSlateBlue;
+        var accent = "#512BD4".ToColor();
+        var secondary = "#8B5CF6".ToColor();
 
         this
+        .Title("Getting Started")
         .Content(
             new ScrollView()
             .Content(
                 new VerticalStackLayout()
-                .Spacing(22)
-                .Padding(16, 20)
+                .Spacing(24)
+                .Padding(20)
                 .Children(
-                    new Label()
-                    .Text("Welcome to FmgLib MauiMarkup")
-                    .FontSize(30)
-                    .FontAttributes(Bold)
-                    .TextColor(accent)
-                    .SemanticHeadingLevel(SemanticHeadingLevel.Level1),
-
-                    new Label()
-                    .Text("Hands-on sample showing .NET 10 MAUI controls and fluent C# markup.")
-                    .FontSize(16)
-                    .TextColor(Colors.DarkGray),
-
-                    new Grid()
-                    .ColumnDefinitions(e => e.Star().Star())
-                    .RowDefinitions(e => e.Auto().Auto())
-                    .Children(
-                        Card("dotnet", version ?? "n/a", Colors.White, secondary).Row(0).Column(0),
-                        Card("Markup", "Fluent C# UI, no XAML", Colors.White, accent).Row(0).Column(1),
-                        Card("Templates", "Pick .NET 9 or 10 + content", Colors.White, Colors.Teal).Row(1).Column(0),
-                        Card("Controls", "New SearchBar/Picker/HybridWebView APIs", Colors.White, Colors.OrangeRed).Row(1).Column(1)
-                    ),
-
-                    ControlsGallery(accent),
-
-                    new Border()
-                    .Stroke(Colors.LightGray)
-                    .StrokeThickness(1)
-                    .Padding(12)
-                    .Content(
-                        new VerticalStackLayout()
-                        .Spacing(6)
-                        .Children(
-                            new Label().Text("Tips").FontAttributes(Bold),
-                            new Label().Text("• Use Picker.Open()/Close() to control dropdown programmatically."),
-                            new Label().Text("• RefreshView.IsRefreshEnabled toggles pull-to-refresh without disabling content."),
-                            new Label().Text("• HybridWebView adds WebViewInitializing/WebViewInitialized hooks.")
-                        )
-                    )
-                )
-            )
-        );
-    }
-
-    Border Card(string title, string subtitle, Color background, Color accent)
-    {
-        return new Border()
-        .Stroke(accent)
-        .StrokeThickness(1.5)
-        .Background(background)
-        .Padding(12)
-        .Content(
-            new VerticalStackLayout()
-            .Spacing(6)
-            .Children(
-                new Label().Text(title).FontAttributes(Bold).TextColor(accent),
-                new Label().Text(subtitle).TextColor(Colors.DimGray).FontSize(13)
-            )
-        );
-    }
-
-    View ControlsGallery(Color accent)
-    {
-        Picker themePicker = null;
-        RefreshView refreshView = null;
-        HybridWebView hybrid = null;
-
-        return new Border()
-        .Stroke(Colors.LightGray)
-        .StrokeThickness(1)
-        .Padding(14)
-        .Content(
-            new VerticalStackLayout()
-            .Spacing(14)
-            .Children(
-                new Label().Text("Controls gallery").FontAttributes(Bold).FontSize(18),
-
-                new VerticalStackLayout()
-                .Spacing(6)
-                .Children(
-                    new Label().Text("Picker (programmatic open/close)").TextColor(Colors.DarkSlateGray),
-                    new HorizontalStackLayout()
+                    // Welcome Header
+                    new VerticalStackLayout()
                     .Spacing(8)
                     .Children(
-                        new Picker()
-                        .Title("Choose theme")
-                        .ItemsSource(new[] { "System", "Light", "Dark" })
-                        .SelectedIndex(0)
-                        .Assign(out themePicker),
-                        new Button().Text("Open").OnClicked((s, e) => themePicker.Open()),
-                        new Button().Text("Close").OnClicked((s, e) => themePicker.Close())
-                    )
-                ),
+                        new Label()
+                        .Text("Welcome to FmgLib MAUI Markup 🎉")
+                        .FontSize(28)
+                        .FontAttributes(Bold)
+                        .TextColor(accent),
 
-                new VerticalStackLayout()
-                .Spacing(6)
-                .Children(
-                    new Label().Text("RefreshView (enable/disable)").TextColor(Colors.DarkSlateGray),
-                    new RefreshView()
-                    .IsRefreshEnabled(true)
+                        new Label()
+                        .Text("Build beautiful .NET MAUI apps with fluent C# markup - No XAML required!")
+                        .FontSize(15)
+                        .TextColor("#6B7280".ToColor())
+                        .Margin(0, 0, 0, 16)
+                    ),
+
+                    // Feature Cards
+                    new Grid()
+                    .RowDefinitions(e => e.Auto().Auto())
+                    .ColumnDefinitions(e => e.Star().Star())
+                    .RowSpacing(16)
+                    .ColumnSpacing(16)
+                    .Children(
+                        FeatureCard("🎨", "Modern Design", "Beautiful UI components", accent).Row(0).Column(0),
+                        FeatureCard("⚡", "Hot Reload", "Live code updates", secondary).Row(0).Column(1),
+                        FeatureCard("📱", "Cross Platform", "iOS, Android & more", "#EC4899".ToColor()).Row(1).Column(0),
+                        FeatureCard("🚀", "MVVM Ready", "Clean architecture", "#F59E0B".ToColor()).Row(1).Column(1)
+                    ),
+
+                    // Version Info
+                    new Border()
+                    .Padding(16)
+                    .StrokeThickness(1)
+                    .Stroke("#E5E7EB".ToColor())
+                    .BackgroundColor("#F9FAFB".ToColor())
+                    .StrokeShape(new RoundRectangle().CornerRadius(12))
                     .Content(
-                        new StackLayout()
-                        .Spacing(4)
+                        new HorizontalStackLayout()
+                        .Spacing(12)
                         .Children(
-                            new Label().Text("Pull to refresh is enabled").TextColor(accent),
-                            new Label().Text("Toggle to simulate read-only mode.")
+                            new Label()
+                            .Text("ℹ️")
+                            .FontSize(24),
+
+                            new VerticalStackLayout()
+                            .Spacing(4)
+                            .Children(
+                                new Label()
+                                .Text($".NET Version: {version ?? "N/A"}")
+                                .FontSize(14)
+                                .FontAttributes(Bold),
+
+                                new Label()
+                                .Text("Powered by FmgLib.MauiMarkup")
+                                .FontSize(12)
+                                .TextColor(Colors.Gray)
+                            )
+                        )
+                    ),
+
+                    // Sample Pages Section
+                    new VerticalStackLayout()
+                    .Spacing(12)
+                    .Children(
+                        new Label()
+                        .Text("📚 Explore Sample Pages")
+                        .FontSize(20)
+                        .FontAttributes(Bold)
+                        .TextColor("#1F2937".ToColor()),
+
+                        new Label()
+                        .Text("Check out the other pages to see MVVM patterns, animations, and modern UI designs in action!")
+                        .FontSize(14)
+                        .TextColor("#6B7280".ToColor())
+                        .Margin(0, 0, 0, 8),
+
+                        NavigationCard("📊", "Dashboard", "Modern dashboard with gradient cards", accent)
+                        .GestureRecognizers(
+                            new TapGestureRecognizer()
+                            .OnTapped(async (s,e) => await AppShell.Current.GoToAsync(nameof(Samples.Pages.DashboardPage)))
+                        ),
+                        NavigationCard("🛍️", "Products", "MVVM list with search & filter", secondary)
+                        .GestureRecognizers(
+                            new TapGestureRecognizer()
+                            .OnTapped(async (s,e) => await AppShell.Current.GoToAsync(nameof(Samples.Pages.ProductsPage)))
+                        ),
+                        NavigationCard("✨", "Animations", "Smooth UI animations showcase", "#EC4899".ToColor())
+                        .GestureRecognizers(
+                            new TapGestureRecognizer()
+                            .OnTapped(async (s,e) => await AppShell.Current.GoToAsync(nameof(Samples.Pages.AnimationsPage)))
+                        )
+                    ),
+
+                    // Quick Tips
+                    new Border()
+                    .Padding(16)
+                    .StrokeThickness(1)
+                    .Stroke("#E5E7EB".ToColor())
+                    .BackgroundColor(Colors.White)
+                    .StrokeShape(new RoundRectangle().CornerRadius(12))
+                    .Content(
+                        new VerticalStackLayout()
+                        .Spacing(8)
+                        .Children(
+                            new Label()
+                            .Text("💡 Quick Tips")
+                            .FontSize(16)
+                            .FontAttributes(Bold)
+                            .TextColor("#1F2937".ToColor()),
+
+                            TipItem("Use fluent API for clean, readable code"),
+                            TipItem("Hot Reload works with markup changes"),
+                            TipItem("Combine with MVVM for best results"),
+                            TipItem("Explore FmgLib extensions for more power")
                         )
                     )
-                    .Assign(out refreshView),
-                    new Switch().OffColor(Colors.Gray).OnToggled((s, e) => refreshView.IsRefreshEnabled = e.Value).IsToggled(true)
-                ),
-
-                new VerticalStackLayout()
-                .Spacing(6)
-                .Children(
-                    new Label().Text("HybridWebView (init events)").TextColor(Colors.DarkSlateGray),
-                    new HybridWebView()
-                    .HybridRoot("wwwroot")
-                    .OnWebViewInitializing((webview, args) => Console.WriteLine("Initializing HybridWebView"))
-                    .OnWebViewInitialized((webview, args) => Console.WriteLine("HybridWebView initialized"))
-                    .Assign(out hybrid),
-                    new Label().Text("Exceptions from JS bubble to .NET in .NET 10").FontSize(12).TextColor(Colors.DimGray)
-                ),
-
-                new VerticalStackLayout()
-                .Spacing(6)
-                .Children(
-                    new Label().Text("SearchBar (SearchIconColor + ReturnType)").TextColor(Colors.DarkSlateGray),
-                    new SearchBar()
-                    .Placeholder("Try searching")
-                    .SearchIconColor(accent)
-                    .ReturnType(ReturnType.Search)
-                    .SearchCommand(new Command(() => Console.WriteLine("Search executed"))),
-                    new Label().Text("Keyboard helpers: SearchHandler.ShowSoftInputAsync() and HideSoftInputAsync().").FontSize(12).TextColor(Colors.DimGray)
                 )
             )
         );
+    }
+
+    private Border FeatureCard(string icon, string title, string description, Color accentColor)
+    {
+        return new Border()
+            .StrokeThickness(0)
+            .BackgroundColor(accentColor)
+            .StrokeShape(new RoundRectangle().CornerRadius(16))
+            .HeightRequest(120)
+            .Shadow(new Shadow()
+                .Brush(new SolidColorBrush($"#40{accentColor.ToHex().TrimStart('#')}".ToColor()))
+                .Offset(new Point(0, 4))
+                .Radius(8)
+            )
+            .Content(
+                new VerticalStackLayout()
+                .Padding(16)
+                .Spacing(8)
+                .Children(
+                    new Label()
+                    .Text(icon)
+                    .FontSize(32),
+
+                    new Label()
+                    .Text(title)
+                    .FontSize(15)
+                    .FontAttributes(Bold)
+                    .TextColor(Colors.White),
+
+                    new Label()
+                    .Text(description)
+                    .FontSize(12)
+                    .TextColor("#F0F0F0".ToColor())
+                )
+            );
+    }
+
+    private Border NavigationCard(string icon, string title, string description, Color accentColor)
+    {
+        return new Border()
+            .Padding(16)
+            .Margin(0, 4)
+            .StrokeThickness(1)
+            .Stroke("#E5E7EB".ToColor())
+            .BackgroundColor(Colors.White)
+            .StrokeShape(new RoundRectangle().CornerRadius(12))
+            .Content(
+                new Grid()
+                .ColumnDefinitions(e => e.Auto().Star().Auto())
+                .ColumnSpacing(12)
+                .Children(
+                    new Border()
+                    .Column(0)
+                    .WidthRequest(48).HeightRequest(48)
+                    .BackgroundColor($"#20{accentColor.ToHex().TrimStart('#')}".ToColor())
+                    .StrokeThickness(0)
+                    .StrokeShape(new RoundRectangle().CornerRadius(12))
+                    .Content(
+                        new Label()
+                        .Text(icon)
+                        .FontSize(24)
+                        .Center()
+                    ),
+
+                    new VerticalStackLayout()
+                    .Column(1)
+                    .Spacing(4)
+                    .CenterVertical()
+                    .Children(
+                        new Label()
+                        .Text(title)
+                        .FontSize(15)
+                        .FontAttributes(Bold)
+                        .TextColor("#1F2937".ToColor()),
+
+                        new Label()
+                        .Text(description)
+                        .FontSize(13)
+                        .TextColor("#6B7280".ToColor())
+                    ),
+
+                    new Label()
+                    .Column(2)
+                    .Text("→")
+                    .FontSize(24)
+                    .TextColor("#D1D5DB".ToColor())
+                    .CenterVertical()
+                )
+            );
+    }
+
+    private HorizontalStackLayout TipItem(string text)
+    {
+        return new HorizontalStackLayout()
+            .Spacing(8)
+            .Children(
+                new Label()
+                .Text("•")
+                .FontSize(14)
+                .TextColor("#512BD4".ToColor())
+                .FontAttributes(Bold),
+
+                new Label()
+                .Text(text)
+                .FontSize(13)
+                .TextColor("#4B5563".ToColor())
+            );
     }
 }

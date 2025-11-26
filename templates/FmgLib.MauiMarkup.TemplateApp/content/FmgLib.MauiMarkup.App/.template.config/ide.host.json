@@ -1,4 +1,20 @@
 {
   "$schema": "http://json.schemastore.org/vs-2017.3.host",
-  "icon": "icon.ico"
+  "icon": "icon.ico",
+  "symbolInfo": [
+    {
+      "id": "netMajor",
+      "name": {
+        "text": "Framework"
+      },
+      "isVisible": true
+    },
+    {
+      "id": "includeContent",
+      "name": {
+        "text": "Include sample content"
+      },
+      "isVisible": true
+    }
+  ]
 }

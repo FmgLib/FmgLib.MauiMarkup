@@ -1,7 +1,15 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "FmgLib",
-  "classifications": [ "MAUI", "Android", "iOS", "macOS", "Windows", "Mac Catalyst", "Tizen" ],
+  "classifications": [
+    "MAUI",
+    "Android",
+    "iOS",
+    "macOS",
+    "Windows",
+    "Mac Catalyst",
+    "Tizen"
+  ],
   "identity": "FmgLibMauiMarkupApp",
   "name": ".NET MAUI Markup App",
   "shortName": "fmglib-mauimarkup-app",
@@ -18,18 +26,39 @@
   ],
   "symbols": {
     "netMajor": {
-      "type": "choice",
+      "type": "parameter",
+      "datatype": "choice",
+      "displayName": "Framework",
       "description": "Select the target .NET version",
       "defaultValue": "10",
+      "replaces": "NETMAJOR_VERSION",
       "choices": [
-        { "choice": "10", "description": ".NET 10 (default)" },
-        { "choice": "9", "description": ".NET 9" }
+        {
+          "choice": "9",
+          "displayName": ".NET 9.0 (Standard Term Support)",
+          "description": ".NET 9.0 (Standard Term Support)"
+        },
+        {
+          "choice": "10",
+          "displayName": ".NET 10.0 (Long Term Support)",
+          "description": ".NET 10.0 (Long Term Support)"
+        }
       ]
     },
     "includeContent": {
-      "type": "bool",
+      "type": "parameter",
+      "datatype": "bool",
+      "displayName": "Include sample content",
       "description": "Include sample content (extra pages and Shell navigation)",
       "defaultValue": "false"
+    },
+    "NET10": {
+      "type": "computed",
+      "value": "(netMajor == \"10\")"
+    },
+    "NET9": {
+      "type": "computed",
+      "value": "(netMajor == \"9\")"
     }
   },
   "sources": [
